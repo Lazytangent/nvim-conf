@@ -57,6 +57,9 @@ call plug#begin("~/.nvim/plugged")
   Plug 'jiangmiao/auto-pairs'
   Plug 'sheerun/vim-polyglot'
   Plug 'dense-analysis/ale'
+  Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+  Plug 'tpope/vim-surround'
+  Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Config Section
