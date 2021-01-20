@@ -69,7 +69,8 @@ endif
 
 syntax enable
 set background=dark
-colorscheme onedark
+" colorscheme onedark
+colorscheme dracula
 
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeShowHidden = 1
