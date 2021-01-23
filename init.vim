@@ -63,9 +63,9 @@ call plug#begin("~/.nvim/plugged")
 call plug#end()
 
 " Config Section
-if (has("termguicolors"))
-  set termguicolors
-endif
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
 
 syntax enable
 set background=dark
