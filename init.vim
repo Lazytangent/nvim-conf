@@ -77,11 +77,11 @@ call plug#end()
 syntax enable
 " set background=dark
 " colorscheme nord
-" colorscheme onedark
-colorscheme one
-set background=dark
+colorscheme onedark
+" colorscheme one
 " colorscheme atom
 " colorscheme dracula
+set background=dark
 
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeShowHidden = 1
