@@ -65,6 +65,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'tpope/vim-eunuch'
   Plug 'mrdotb/vim-tailwindcss'
   Plug 'arcticicestudio/nord-vim'
+  Plug 'gregsexton/Atom'
 call plug#end()
 
 " Config Section
@@ -76,6 +77,7 @@ syntax enable
 " set background=dark
 " colorscheme nord
 colorscheme onedark
+" colorscheme atom
 " colorscheme dracula
 
 let g:NERDTreeWinPos = "right"
