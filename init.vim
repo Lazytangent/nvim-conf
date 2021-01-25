@@ -53,6 +53,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'joshdick/onedark.vim'
+  Plug 'rakr/vim-one'
   Plug 'prettier/vim-prettier'
   Plug 'plasticboy/vim-markdown'
   Plug 'jiangmiao/auto-pairs'
@@ -76,7 +77,9 @@ call plug#end()
 syntax enable
 " set background=dark
 " colorscheme nord
-colorscheme onedark
+" colorscheme onedark
+colorscheme one
+set background=dark
 " colorscheme atom
 " colorscheme dracula
 
