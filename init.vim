@@ -63,6 +63,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-eunuch'
+  Plug 'mrdotb/vim-tailwindcss'
 call plug#end()
 
 " Config Section
@@ -91,6 +92,9 @@ nnoremap <leader>py :Prettier<cr>
 
 " Vim-Markdown
 let g:markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass' ]
+
+" Vim-TailwindCSS
+nnoremap <leader>tt :set completefunc=tailwind#complete<cr>
 
 " => Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
