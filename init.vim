@@ -64,6 +64,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-eunuch'
   Plug 'mrdotb/vim-tailwindcss'
+  Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Config Section
@@ -72,7 +73,8 @@ call plug#end()
 " endif
 
 syntax enable
-set background=dark
+" set background=dark
+" colorscheme nord
 colorscheme onedark
 " colorscheme dracula
 
