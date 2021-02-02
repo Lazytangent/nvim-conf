@@ -54,7 +54,10 @@ call plug#begin("~/.nvim/plugged")
   Plug 'vim-airline/vim-airline-themes'
   Plug 'joshdick/onedark.vim'
   Plug 'rakr/vim-one'
-  Plug 'prettier/vim-prettier'
+  Plug 'prettier/vim-prettier', {
+    \ 'do': 'npm install',
+    \ 'for': ['javascript', 'typescript', 'css', 'json', 'markdown', 'yaml', 'html', 'python']
+    \ }
   Plug 'plasticboy/vim-markdown'
   Plug 'jiangmiao/auto-pairs'
   Plug 'sheerun/vim-polyglot'
