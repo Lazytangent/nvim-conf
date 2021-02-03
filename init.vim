@@ -105,10 +105,11 @@ let g:markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=j
 nnoremap <leader>tt :set completefunc=tailwind#complete<cr>
 
 " Vim-Ale
-let b:ale_fixers = {
+let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
       \ 'javascript': ['prettier', 'eslint'],
-}
+      \ 'python': ['autopep8', 'yapf'],
+      \}
 
 " => Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
