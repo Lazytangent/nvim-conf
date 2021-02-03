@@ -104,6 +104,12 @@ let g:markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=j
 " Vim-TailwindCSS
 nnoremap <leader>tt :set completefunc=tailwind#complete<cr>
 
+" Vim-Ale
+let b:ale_fixers = {
+      \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \ 'javascript': ['prettier', 'eslint'],
+}
+
 " => Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
