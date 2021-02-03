@@ -70,6 +70,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'mrdotb/vim-tailwindcss'
   Plug 'arcticicestudio/nord-vim'
   Plug 'gregsexton/Atom'
+  Plug 'numirias/semshi', {'do': ':UpdateRemovePlugins'}
 call plug#end()
 
 " Config Section
