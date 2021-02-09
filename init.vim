@@ -112,6 +112,9 @@ let g:ale_fixers = {
       \ 'python': ['autopep8', 'yapf'],
       \}
 
+nnoremap <leader>aF :ALEFix<cr>
+nnoremap <leader>aI :ALEInfo<cr>
+
 " => Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
