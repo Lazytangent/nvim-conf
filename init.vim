@@ -37,6 +37,9 @@ set tabstop=2
 set si
 set wrap
 
+" Disable ALE's LSP to use CoC
+let g:ale_disable_lsp = 1
+
 call plug#begin("~/.nvim/plugged")
   " Plugin Section
   Plug 'dracula/vim'
@@ -44,8 +47,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  " Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  " let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'maxmellon/vim-jsx-pretty'
@@ -77,7 +79,6 @@ call plug#end()
 set termguicolors
 
 syntax enable
-" set background=dark
 " colorscheme nord
 colorscheme onedark
 " colorscheme one
@@ -112,6 +113,13 @@ let g:ale_fixers = {
       \ 'python': ['autopep8', 'yapf'],
       \}
 
+" let g:ale_linters = {
+"       \ 'python': ['pylint', 'flake8', 'pycodestyle']
+"       \}
+
+" Vim-CoC
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+
 nnoremap <leader>aF :ALEFix<cr>
 nnoremap <leader>aI :ALEInfo<cr>
 
@@ -140,21 +148,21 @@ tnoremap <Esc> <C-\><C-n>
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " open terminal on ctrl+n
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-nnoremap <C-n> :call OpenTerminal()<cr>
+" function! OpenTerminal()
+"   split term://bash
+"   resize 10
+" endfunction
+" nnoremap <C-n> :call OpenTerminal()<cr>
 
 " use alt+hjkl to move between split/vsplit panels
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+" tnoremap <A-h> <C-\><C-n><C-w>h
+" tnoremap <A-j> <C-\><C-n><C-w>j
+" tnoremap <A-k> <C-\><C-n><C-w>k
+" tnoremap <A-l> <C-\><C-n><C-w>l
+" nnoremap <A-h> <C-w>h
+" nnoremap <A-j> <C-w>j
+" nnoremap <A-k> <C-w>k
+" nnoremap <A-l> <C-w>l
 
 nnoremap <C-p> :FZF<cr>
 let g:fzf_action = {
