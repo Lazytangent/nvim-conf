@@ -18,7 +18,9 @@ let mapleader = ","
 noremap \ ,
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>gw :Gw<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gp :Gpush<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -152,12 +154,6 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
