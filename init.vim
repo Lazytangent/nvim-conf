@@ -132,6 +132,18 @@ let g:ale_fixers = {
 let g:ale_completion_autoimport = 1
 set omnifunc=ale#completion#OmniFunc
 
+function! SmartInsertCompletion() abort
+  " Use the default CTRL-N in completion menus
+  if pumvisible()
+    return "\<C-n>"
+  endif
+
+  " Exit and re-enter insert mode, and use insert completion
+  return "\<C-c>a\<C-n>"
+endfunction
+
+inoremap <silent> <C-n> <C-R>=SmartInsertCompletion()<cr>
+
 " Vim-CoC
 " let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
