@@ -38,10 +38,10 @@ set si
 set wrap
 
 " Disable ALE's LSP to use CoC
-" let g:ale_disable_lsp = 1
+let g:ale_disable_lsp = 1
 
 " Enable ALE's Completion
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 
 call plug#begin("~/.nvim/plugged")
   " Plugin Section
@@ -50,7 +50,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  " Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'maxmellon/vim-jsx-pretty'
@@ -129,23 +129,23 @@ let g:ale_fixers = {
 " let g:ale_linters = {
 "       \ 'python': ['pylint', 'flake8', 'pycodestyle']
 "       \}
-let g:ale_completion_autoimport = 1
-set omnifunc=ale#completion#OmniFunc
+" let g:ale_completion_autoimport = 1
+" set omnifunc=ale#completion#OmniFunc
 
-function! SmartInsertCompletion() abort
-  " Use the default CTRL-N in completion menus
-  if pumvisible()
-    return "\<C-n>"
-  endif
+" function! SmartInsertCompletion() abort
+"   " Use the default CTRL-N in completion menus
+"   if pumvisible()
+"     return "\<C-n>"
+"   endif
 
-  " Exit and re-enter insert mode, and use insert completion
-  return "\<C-c>a\<C-n>"
-endfunction
+"   " Exit and re-enter insert mode, and use insert completion
+"   return "\<C-c>a\<C-n>"
+" endfunction
 
-inoremap <silent> <C-n> <C-R>=SmartInsertCompletion()<cr>
+" inoremap <silent> <C-n> <C-R>=SmartInsertCompletion()<cr>
 
 " Vim-CoC
-" let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
 nnoremap <leader>aF :ALEFix<cr>
 nnoremap <leader>aI :ALEInfo<cr>
