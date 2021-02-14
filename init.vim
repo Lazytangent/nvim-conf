@@ -73,6 +73,16 @@ call plug#begin("~/.nvim/plugged")
   Plug 'arcticicestudio/nord-vim'
   Plug 'gregsexton/Atom'
   " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+  if has('nvim')
+    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'Shougo/defx.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'Shougo/denite.nvim'
+  endif
+  Plug 'Shougo/deol.nvim'
 call plug#end()
 
 " Config Section
