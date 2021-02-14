@@ -171,5 +171,13 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit'
   \}
 
+if (has("autocmd") && !has("gui_running"))
+  augroup colors
+    autocmd!
+    let s:background = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:background })
+  augroup END
+endif
+
 let $FZF_DEFAULT_COMMAND = 'ag -g "" '
 
