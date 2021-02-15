@@ -86,6 +86,7 @@ call plug#begin("~/.nvim/plugged")
     Plug 'Shougo/denite.nvim'
   endif
   Plug 'Shougo/deol.nvim'
+  Plug 'nvie/vim-flake8'
 call plug#end()
 
 " Config Section
