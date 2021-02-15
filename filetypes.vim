@@ -18,14 +18,7 @@ au FileType python map <buffer> <leader>2 /def
 au FileType python map <buffer> <leader>C ?class 
 au FileType python map <buffer> <leader>D ?def 
 au FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
-au BufNewFile,BufRead *.py
-            \ set tabstop=4
-            \ set softtabstop=4
-            \ set shiftwidth=4
-            \ set textwidth=79
-            \ set expandtab
-            \ set autoindent
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufNewFile,BufRead *.py setl ts=4 sts=4 expandtab autoindent shiftwidth=4 textwidth=79
 
 python3 << EOF
 import os
@@ -38,7 +31,6 @@ if "VIRTUAL_ENV" in os.environ:
     output = pipe.communicate()[0].decode('utf8').splitlines()
     env = dict((line.split("=", 1) for line in output))
     os.environ.update(env)
-
 EOF
 
 """"""""""""""""""""""""""""""
