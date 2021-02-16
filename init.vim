@@ -27,38 +27,46 @@ let g:ale_disable_lsp = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin("~/.nvim/plugged")
   " Plugin Section
+  " Themes
   Plug 'dracula/vim'
-  Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  Plug 'leafgarland/typescript-vim'
-  Plug 'peitalin/vim-jsx-typescript'
-  Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'tpope/vim-commentary'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'joshdick/onedark.vim'
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'gregsexton/Atom'
   Plug 'rakr/vim-one'
+
+  " Languages/Syntax
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'prettier/vim-prettier', {
     \ 'do': 'npm install',
     \ 'for': ['javascript', 'typescript', 'css', 'json', 'markdown', 'yaml', 'html', 'python']
     \ }
-  Plug 'plasticboy/vim-markdown'
-  Plug 'jiangmiao/auto-pairs'
   Plug 'sheerun/vim-polyglot'
   Plug 'dense-analysis/ale'
+  Plug 'mattn/emmet-vim'
+
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
+  Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'mrdotb/vim-tailwindcss'
+  Plug 'nvie/vim-flake8'
+  Plug 'jmcantrell/vim-virtualenv'
+
+  " General Use
+  Plug 'scrooloose/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'tpope/vim-commentary'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
   Plug 'tpope/vim-surround'
-  Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-eunuch'
-  Plug 'mrdotb/vim-tailwindcss'
-  Plug 'arcticicestudio/nord-vim'
-  Plug 'gregsexton/Atom'
-  Plug 'nvie/vim-flake8'
   Plug 'terryma/vim-smooth-scroll'
+
 call plug#end()
 
 " Color Config Section
