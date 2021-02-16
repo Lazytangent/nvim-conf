@@ -74,11 +74,7 @@ call plug#end()
 set termguicolors
 
 syntax enable
-" colorscheme nord
 colorscheme onedark
-" colorscheme one
-" colorscheme atom
-" colorscheme dracula
 set background=dark
 
 " NERDTree
