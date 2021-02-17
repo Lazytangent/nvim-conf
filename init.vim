@@ -113,7 +113,11 @@ let g:ale_fixers = {
 
 " Vim-CoC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-git', 'coc-graphql', 'coc-pyright', 'coc-sql', 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi', 'coc-clangd', 'coc-go']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css',
+      \ 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver',
+      \ 'coc-git', 'coc-graphql', 'coc-pyright', 'coc-sql',
+      \ 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi',
+      \ 'coc-clangd', 'coc-go']
 
 " Vim-Ale Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
