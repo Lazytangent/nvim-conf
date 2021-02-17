@@ -10,6 +10,7 @@ let mapleader = ","
 noremap \ ,
 
 map <leader>w :w!<cr>
+map <leader>wq :wq<cr>
 
 set noshowmode
 set nu
