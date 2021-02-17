@@ -175,5 +175,8 @@ set mouse=n
 " Vim and Git
 nnoremap <leader>gst :Gst<cr>
 
+" Porting in zshrc aliases
+autocmd vimenter * let &shell='/bin/zsh -i'
+
 let $FZF_DEFAULT_COMMAND = 'ag -g "" '
 
