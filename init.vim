@@ -117,7 +117,7 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css',
       \ 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver',
       \ 'coc-git', 'coc-graphql', 'coc-pyright', 'coc-sql',
       \ 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi',
-      \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml'
+      \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml',
       \ 'coc-taxlab', 'coc-tailwindcss', 'coc-spell-checker']
 
 " Vim-Ale Shortcuts
