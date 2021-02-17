@@ -149,16 +149,20 @@ inoremap $q ''<esc>i
 inoremap $e ""<esc>i
 
 " open new split panes to right and below
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set splitright
 set splitbelow
 
 " turn terminal to normal mode with escape
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 tnoremap <Esc> <C-\><C-n>
 
 " start terminal in insert mode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif | :set nospell
 
 " Open fzf search
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <C-p> :FZF<cr>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -166,6 +170,8 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit'
   \}
 
+" ColorScheme Settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if (has("autocmd") && !has("gui_running"))
   augroup colors
     autocmd!
@@ -175,19 +181,22 @@ if (has("autocmd") && !has("gui_running"))
 endif
 
 " Vim-Smooth-Scroll
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <C-u> :call smooth_scroll#up(&scroll, 5, 2)<cr>
 nnoremap <silent> <C-d> :call smooth_scroll#down(&scroll, 5, 2)<cr>
 nnoremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 5, 4)<cr>
 nnoremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 5, 4)<cr>
 
 " Use mouse in Vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=n
 
 " Vim and Git
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>gst :Gst<cr>
 
 " Porting in zshrc aliases
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd vimenter * let &shell='/bin/zsh -i'
 
 let $FZF_DEFAULT_COMMAND = 'ag -g "" '
-
