@@ -18,6 +18,7 @@ set rnu
 set clipboard=unnamed
 set list
 set listchars=tab:▸\ ,trail:▫
+
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 
@@ -94,6 +95,9 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 nnoremap <leader>nm :NERDTreeFocus<cr>
+
+" Vim-Prettier
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>py :Prettier<cr>
 
 " Vim-Markdown
@@ -126,7 +130,7 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css',
 nnoremap <leader>aF :ALEFix<cr>
 nnoremap <leader>aI :ALEInfo<cr>
 
-" => Parenthesis/bracket
+" Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
 vnoremap $2 <esc>`>a]<esc>`<i[<esc>
@@ -136,6 +140,7 @@ vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a`<esc>`<i`<esc>
 
 " Map auto complete of (, ", ', [
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap $1 ()<esc>i
 inoremap $2 []<esc>i
 inoremap $3 {}<esc>i
@@ -151,7 +156,7 @@ set splitbelow
 tnoremap <Esc> <C-\><C-n>
 
 " start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif | :set nospell
 
 " Open fzf search
 nnoremap <C-p> :FZF<cr>
