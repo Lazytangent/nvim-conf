@@ -6,9 +6,6 @@ filetype indent on
 set autoread
 au FocusGained,BufEnter * checktime
 
-let mapleader = ","
-noremap \ ,
-
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>
 nnoremap <leader>gw :Gw<cr>
@@ -30,6 +27,7 @@ else
   set wildignore+=*/.git*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
+set showcmd
 set ruler
 set cmdheight=1
 set hid
