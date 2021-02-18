@@ -45,23 +45,6 @@ set list
 set listchars=tab:▸\ ,trail:▫
 set mouse=n
 
-" Colors and Fonts
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable
-set background=dark
-set termguicolors
-colorscheme onedark
-set encoding=utf8
-set ffs=unix,dos,mac
-
-if (has("autocmd") && !has("gui_running"))
-  augroup colors
-    autocmd!
-    let s:background = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
-    autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:background })
-  augroup END
-endif
-
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup
