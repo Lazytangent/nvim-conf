@@ -144,6 +144,7 @@ set spell
 " Misc.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>m mmHmt:%s/<C-v><cr>//ge<cr>'tzt'm
+noremap <leader>mm :set ff=unix
 map <leader>q :e ~/buffer<cr>
 map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
