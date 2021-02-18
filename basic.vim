@@ -49,7 +49,6 @@ set clipboard=unnamed
 set list
 set listchars=tab:▸\ ,trail:▫
 set mouse=n
-autocmd vimenter * let &shell='/bin/zsh -i'
 
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
