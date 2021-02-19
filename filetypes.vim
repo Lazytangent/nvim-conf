@@ -20,19 +20,6 @@ au FileType python map <buffer> <leader>D ?def
 au FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
 au BufNewFile,BufRead *.py setl ts=4 sts=4 expandtab autoindent shiftwidth=4 textwidth=79
 
-python3 << EOF
-import os
-import subprocess
-
-if "VIRTUAL_ENV" in os.environ:
-    project_base_dir = os.environ["VIRTUAL_ENV"]
-    script = os.path.join(project_base_dir, "bin/activate")
-    pipe = subprocess.Popen(". %s; env" % script, stdout=subprocess.PIPE, shell=True)
-    output = pipe.communicate()[0].decode('utf8').splitlines()
-    env = dict((line.split("=", 1) for line in output))
-    os.environ.update(env)
-EOF
-
 """"""""""""""""""""""""""""""
 " => JavaScript section
 """""""""""""""""""""""""""""""
