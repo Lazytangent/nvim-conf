@@ -44,6 +44,7 @@ set clipboard=unnamed
 set list
 set listchars=tab:▸\ ,trail:▫
 set mouse=n
+set spell
 
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
