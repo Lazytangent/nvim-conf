@@ -5,8 +5,8 @@ nnoremap <leader>wq :wq<cr>
 nnoremap <leader>gw :Gw<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gp :Gpush<cr>
-nnoremap <leader>gps :Git -c push.default=current push
-cnoremap gpsup :Git -c push.default=current push
+nnoremap <leader>gps :Git -c push.default=current push<cr>
+cnoremap gpsup Git -c push.default=current push<cr>
 
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
