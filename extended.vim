@@ -80,7 +80,7 @@ tnoremap <Esc> <C-\><C-n>
 
 " start terminal in insert mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif | :set nospell
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 
 " Shell Commands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
