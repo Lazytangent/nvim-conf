@@ -12,6 +12,7 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
+nnoremap <leader>qa :qa<cr>
 
 " Visual Mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
