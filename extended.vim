@@ -1,5 +1,6 @@
 " Vim-Fugitive Shorthands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>
 nnoremap <leader>gw :Gw<cr>
@@ -13,6 +14,8 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap <leader>qa :qa<cr>
+nnoremap <leader>rnu :set rnu!<cr>
+nnoremap <leader>nnu :set nu!<cr>
 
 " Visual Mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,7 +54,6 @@ set spell
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>m mmHmt:%s/<C-v><cr>//ge<cr>'tzt'm
 noremap <leader>mm :set ff=unix<cr>
-map <leader>q :e ~/buffer<cr>
 map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 

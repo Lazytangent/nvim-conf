@@ -74,7 +74,7 @@ let g:markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=j
 
 " Vim-TailwindCSS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>tt :set completefunc=tailwind#complete<cr>
+nnoremap <leader>tw :set completefunc=tailwind#complete<cr>
 
 " Vim-Ale
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
