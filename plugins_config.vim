@@ -91,7 +91,7 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css',
       \ 'coc-git', 'coc-pyright', 'coc-sql',
       \ 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi',
       \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml',
-      \ 'coc-texlab', 'coc-tailwindcss']
+      \ 'coc-texlab', 'coc-tailwindcss', 'coc-omnisharp']
 
 " Vim-Ale Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
