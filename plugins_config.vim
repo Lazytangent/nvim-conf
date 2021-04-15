@@ -74,7 +74,7 @@ nnoremap <leader>py :Prettier<cr>
 
 " Vim-Markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass' ]
+let g:vim_markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass' ]
 
 " Vim-TailwindCSS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
