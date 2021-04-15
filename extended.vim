@@ -4,7 +4,7 @@ nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>
 nnoremap <leader>gw :Gw<cr>
-nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gp :Gpush<cr>
 nnoremap <leader>gps :Git -c push.default=current push<cr>
 cnoremap gpsup Git -c push.default=current push<cr>
