@@ -46,6 +46,9 @@ set listchars=tab:▸\ ,trail:▫
 set mouse=n
 set spell
 
+set path+=**
+command! MakeTags !ctags -R .
+
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup
