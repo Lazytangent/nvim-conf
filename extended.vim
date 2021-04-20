@@ -87,7 +87,7 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 
 " Shell Commands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cabbr gst Gst
+cabbr gst Git
 
 " Turn persistent undo on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
