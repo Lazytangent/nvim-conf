@@ -3,6 +3,8 @@
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>
+
+nnoremap <leader>gst :Git<cr>
 nnoremap <leader>gw :Gw<cr>
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gp :Git push<cr>
@@ -84,10 +86,6 @@ tnoremap <Esc> <C-\><C-n>
 " start terminal in insert mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-
-" Shell Commands
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cabbr gst Git
 
 " Turn persistent undo on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

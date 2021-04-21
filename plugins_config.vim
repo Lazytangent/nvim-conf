@@ -128,10 +128,6 @@ nnoremap <silent> <C-d> :call smooth_scroll#down(&scroll, 5, 2)<cr>
 nnoremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 5, 4)<cr>
 nnoremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 5, 4)<cr>
 
-" Vim and Git
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>gst :Gst<cr>
-
 " Porting in zshrc aliases
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let $FZF_DEFAULT_COMMAND = 'ag -g "" '
