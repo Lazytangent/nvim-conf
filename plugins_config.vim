@@ -45,6 +45,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'jiangmiao/auto-pairs'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-eunuch'
   Plug 'terryma/vim-smooth-scroll'
