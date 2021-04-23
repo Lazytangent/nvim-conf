@@ -15,6 +15,7 @@ set so=7
 let $LANG='en'
 
 set wildmenu
+set wildmode=longest:full,full
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
   set wildignore+=.git\*,.hg\*,.svn\*
