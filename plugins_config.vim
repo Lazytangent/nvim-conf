@@ -41,9 +41,9 @@ call plug#begin("~/.nvim/plugged")
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-fugitive'
