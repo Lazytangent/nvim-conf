@@ -49,6 +49,10 @@ call plug#begin("~/.nvim/plugged")
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-eunuch'
   Plug 'terryma/vim-smooth-scroll'
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-line'
+  Plug 'christoomey/vim-sort-motion'
+  Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 
