@@ -80,5 +80,6 @@ au BufNewFile,BufReadPost *.md set filetype=markdown
 """"""""""""""""""""""""""""""
 
 au BufNewFile,BufRead /*.rasi setf css
+au BufNewFile,BufRead *.md setlocal textwidth=80
 
 au FileType go :setlocal sw=4 ts=4 sts=4
