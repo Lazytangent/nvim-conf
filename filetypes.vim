@@ -5,7 +5,7 @@ let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
 
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
-au BufNewFile,BufRead *.mako set ft=mako
+au BufNewFile,BufRead *.mako set filetype=mako
 
 " au FileType python map <buffer> F :set foldmethod=indent<cr>
 
@@ -18,7 +18,7 @@ au FileType python map <buffer> <leader>2 /def
 au FileType python map <buffer> <leader>C ?class 
 au FileType python map <buffer> <leader>D ?def 
 au FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
-au BufNewFile,BufRead *.py setl ts=4 sts=4 expandtab autoindent shiftwidth=4 textwidth=79
+au BufNewFile,BufRead *.py setl softtabstop=4 expandtab autoindent shiftwidth=4 textwidth=79
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
@@ -26,12 +26,7 @@ au BufNewFile,BufRead *.py setl ts=4 sts=4 expandtab autoindent shiftwidth=4 tex
 au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
 au FileType javascript setl nocindent
-
-" au FileType javascript imap <C-t> $log();<esc>hi
-au FileType javascript imap <C-a> alert();<esc>hi
-
 au FileType javascript inoremap <buffer> $r return 
-au FileType javascript inoremap <buffer> $f // --- PH<esc>FP2xi
 
 function! JavaScriptFold() 
     setl foldmethod=syntax
@@ -77,6 +72,12 @@ autocmd BufRead *.twig set syntax=html filetype=html
 """"""""""""""""""""""""""""""
 let vim_markdown_folding_disabled = 1
 au FileType markdown setl shiftwidth=4 softtabstop=4 expandtab tabstop=4
+au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufNewFile,BufReadPost *.md set filetype=markdown
+
+
+""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
 
 au BufNewFile,BufRead /*.rasi setf css
 au BufNewFile,BufRead *.md setlocal textwidth=80

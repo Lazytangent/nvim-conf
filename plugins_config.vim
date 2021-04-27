@@ -27,6 +27,10 @@ call plug#begin("~/.nvim/plugged")
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'heavenshell/vim-jsdoc', {
+    \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
+    \ 'do': 'make install'
+    \}
   Plug 'plasticboy/vim-markdown'
   Plug 'mrdotb/vim-tailwindcss'
   Plug 'nvie/vim-flake8'
@@ -37,13 +41,18 @@ call plug#begin("~/.nvim/plugged")
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
   Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-eunuch'
   Plug 'terryma/vim-smooth-scroll'
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-line'
+  Plug 'christoomey/vim-sort-motion'
+  Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 
@@ -70,11 +79,11 @@ nnoremap <leader>py :Prettier<cr>
 
 " Vim-Markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass' ]
+let g:vim_markdown_fenced_languages = [ 'html', 'python', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass' ]
 
 " Vim-TailwindCSS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>tt :set completefunc=tailwind#complete<cr>
+nnoremap <leader>tw :set completefunc=tailwind#complete<cr>
 
 " Vim-Ale
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,7 +100,7 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css',
       \ 'coc-git', 'coc-pyright', 'coc-sql',
       \ 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi',
       \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml',
-      \ 'coc-texlab', 'coc-tailwindcss']
+      \ 'coc-texlab', 'coc-tailwindcss', 'coc-omnisharp']
 
 " Vim-Ale Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -123,10 +132,6 @@ nnoremap <silent> <C-u> :call smooth_scroll#up(&scroll, 5, 2)<cr>
 nnoremap <silent> <C-d> :call smooth_scroll#down(&scroll, 5, 2)<cr>
 nnoremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 5, 4)<cr>
 nnoremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 5, 4)<cr>
-
-" Vim and Git
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>gst :Gst<cr>
 
 " Porting in zshrc aliases
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

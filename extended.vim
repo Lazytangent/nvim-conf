@@ -1,18 +1,25 @@
 " Vim-Fugitive Shorthands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>Q :q!<cr>
+nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>
+
+nnoremap <leader>gst :Git<cr>
 nnoremap <leader>gw :Gw<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gp :Gpush<cr>
+nnoremap <leader>gc :Git commit<cr>
+nnoremap <leader>gp :Git push<cr>
 nnoremap <leader>gps :Git -c push.default=current push<cr>
-cnoremap gpsup Git -c push.default=current push<cr>
+cnoremap gpsup Git -c push.default=current push
+cnoremap Q q!
 
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap <leader>qa :qa<cr>
+nnoremap <leader>rnu :set rnu!<cr>
+nnoremap <leader>nnu :set nu!<cr>
 
 " Visual Mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,7 +58,6 @@ set spell
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>m mmHmt:%s/<C-v><cr>//ge<cr>'tzt'm
 noremap <leader>mm :set ff=unix<cr>
-map <leader>q :e ~/buffer<cr>
 map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 
@@ -82,10 +88,6 @@ tnoremap <Esc> <C-\><C-n>
 " start terminal in insert mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-
-" Shell Commands
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cabbr gst Gst
 
 " Turn persistent undo on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

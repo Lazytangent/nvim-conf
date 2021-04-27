@@ -1,8 +1,7 @@
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set history=500
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 set autoread
 au FocusGained,BufEnter * checktime
 
@@ -15,6 +14,7 @@ set so=7
 let $LANG='en'
 
 set wildmenu
+set wildmode=longest:full,full
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
   set wildignore+=.git\*,.hg\*,.svn\*
@@ -23,9 +23,9 @@ else
 endif
 
 set showcmd
-set ruler
 set cmdheight=1
-set hid
+set ruler
+set hidden
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set ignorecase
@@ -38,18 +38,21 @@ set showmatch
 set mat=2
 set foldcolumn=1
 set noshowmode
-set nu
-set rnu
+set number
+set relativenumber
 set clipboard=unnamed
 set list
 set listchars=tab:▸\ ,trail:▫
 set mouse=n
 set spell
 
+set path+=**
+command! MakeTags !ctags -R .
+
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 
 " Text, tab and indent related
@@ -57,14 +60,13 @@ set noswapfile
 set expandtab
 set smarttab
 set shiftwidth=2
-set tabstop=2
+set tabstop=8
 set softtabstop=2
 
 set lbr
 set tw=500
 
-set ai
-set si
+set autoindent
 set wrap
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
