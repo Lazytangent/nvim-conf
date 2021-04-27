@@ -1,5 +1,6 @@
 " Vim-Fugitive Shorthands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>Q :q!<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>
@@ -9,7 +10,8 @@ nnoremap <leader>gw :Gw<cr>
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gp :Git push<cr>
 nnoremap <leader>gps :Git -c push.default=current push<cr>
-cnoremap gpsup Git -c push.default=current push<cr>
+cnoremap gpsup Git -c push.default=current push
+cnoremap Q q!
 
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
