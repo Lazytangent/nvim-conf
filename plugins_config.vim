@@ -53,8 +53,17 @@ call plug#begin("~/.nvim/plugged")
   Plug 'kana/vim-textobj-line'
   Plug 'christoomey/vim-sort-motion'
   Plug 'michaeljsmith/vim-indent-object'
+  Plug 'vim-test/vim-test'
 
 call plug#end()
+
+" Vim-Test
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent> t<C-n> :TestNearest<cr>
+nmap <silent> t<C-f> :TestFile<cr>
+nmap <silent> t<C-s> :TestSuite<cr>
+nmap <silent> t<C-l> :TestLast<cr>
+nmap <silent> t<C-g> :TestVisit<cr>
 
 " NERDTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
