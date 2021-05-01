@@ -25,7 +25,7 @@ set so=7
 let $LANG='en'
 
 set wildmenu
-set wildmode=longest:full,full
+set wildmode=list:longest,list:full
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
   set wildignore+=.git\*,.hg\*,.svn\*
@@ -51,6 +51,7 @@ set foldcolumn=1
 set noshowmode
 set number
 set relativenumber
+set numberwidth=5
 set clipboard=unnamed
 set list
 set listchars=tab:▸\ ,trail:▫
@@ -66,6 +67,8 @@ command! MakeTags !ctags -R .
 
 nmap j gj
 nmap k gk
+
+map Q gq
 
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
