@@ -8,6 +8,17 @@ au FocusGained,BufEnter * checktime
 let mapleader = ","
 nnoremap \ ,
 
+nnoremap <leader>w :w<cr>
+nnoremap <leader>wq :wq<cr>
+cnoremap Q q!
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+nnoremap <leader>o o<Esc>
+nnoremap <leader>O O<Esc>
+nnoremap <leader>qa :qa<cr>
+nnoremap <leader>rnu :set rnu!<cr>
+nnoremap <leader>nnu :set nu!<cr>
+
 " Vim UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set so=7
@@ -46,8 +57,15 @@ set listchars=tab:▸\ ,trail:▫
 set mouse=n
 set spell
 
+set cursorline
+set foldenable
+set foldlevelstart=10
+
 set path+=**
 command! MakeTags !ctags -R .
+
+nmap j gj
+nmap k gk
 
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -63,11 +81,11 @@ set shiftwidth=2
 set tabstop=8
 set softtabstop=2
 
-set lbr
-set tw=500
+set linebreak
+set textwidth=500
+set wrap
 
 set autoindent
-set wrap
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 

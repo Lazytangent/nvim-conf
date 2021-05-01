@@ -23,6 +23,7 @@ call plug#begin("~/.nvim/plugged")
   Plug 'sheerun/vim-polyglot'
   Plug 'dense-analysis/ale'
   Plug 'mattn/emmet-vim'
+  Plug 'pantharshit00/vim-prisma'
 
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
@@ -109,7 +110,8 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css',
       \ 'coc-git', 'coc-pyright', 'coc-sql',
       \ 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi',
       \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml',
-      \ 'coc-texlab', 'coc-tailwindcss', 'coc-omnisharp']
+      \ 'coc-texlab', 'coc-tailwindcss', 'coc-omnisharp',
+      \ 'coc-prisma']
 
 " Vim-Ale Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
