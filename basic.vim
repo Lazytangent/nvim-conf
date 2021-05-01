@@ -59,8 +59,11 @@ set mouse=n
 set spell
 
 set cursorline
+
 set foldenable
 set foldlevelstart=10
+nnoremap <leader>fu zM<cr>
+nnoremap <leader>uf zR<cr>
 
 set path+=**
 command! MakeTags !ctags -R .
