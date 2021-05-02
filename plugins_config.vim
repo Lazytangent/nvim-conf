@@ -3,16 +3,12 @@ let g:ale_disable_lsp = 1
 
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin("~/.nvim/plugged")
+call plug#begin("~/.config/nvim/plugged")
   " Plugin Section
   " Themes
-  Plug 'dracula/vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'joshdick/onedark.vim'
-  Plug 'arcticicestudio/nord-vim'
-  Plug 'gregsexton/Atom'
-  Plug 'rakr/vim-one'
 
   " Languages/Syntax
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
