@@ -1,42 +1,45 @@
 """"""""""""""""""""""""""""""
+" => Git section
+""""""""""""""""""""""""""""""
+autocmd FileType gitcommit setlocal textwidth=72
+
+""""""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
-au FileType python syn keyword pythonDecorator True None False self
+autocmd FileType python syntax keyword pythonDecorator True None False self
 
-au BufNewFile,BufRead *.jinja set syntax=htmljinja
-au BufNewFile,BufRead *.mako set filetype=mako
+autocmd BufNewFile,BufRead *.jinja set syntax=htmljinja
+autocmd BufNewFile,BufRead *.mako set filetype=mako
 
-" au FileType python map <buffer> F :set foldmethod=indent<cr>
-
-au FileType python inoremap <buffer> $r return 
-au FileType python inoremap <buffer> $i import 
-au FileType python inoremap <buffer> $p print 
-au FileType python inoremap <buffer> $f # --- <esc>a
-au FileType python map <buffer> <leader>1 /class 
-au FileType python map <buffer> <leader>2 /def 
-au FileType python map <buffer> <leader>C ?class 
-au FileType python map <buffer> <leader>D ?def 
-au FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
-au BufNewFile,BufRead *.py setl softtabstop=4 expandtab autoindent shiftwidth=4 textwidth=79
+autocmd FileType python inoremap <buffer> $r return 
+autocmd FileType python inoremap <buffer> $i import 
+autocmd FileType python inoremap <buffer> $p print 
+autocmd FileType python inoremap <buffer> $f # --- <esc>a
+autocmd FileType python map <buffer> <leader>1 /class 
+autocmd FileType python map <buffer> <leader>2 /def 
+autocmd FileType python map <buffer> <leader>C ?class 
+autocmd FileType python map <buffer> <leader>D ?def 
+autocmd FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
+autocmd BufNewFile,BufRead *.py setlocal softtabstop=4 expandtab autoindent shiftwidth=4 textwidth=79
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
 """""""""""""""""""""""""""""""
-au FileType javascript call JavaScriptFold()
-au FileType javascript setl fen
-au FileType javascript setl nocindent
-au FileType javascript inoremap <buffer> $r return 
+autocmd FileType javascript call JavaScriptFold()
+autocmd FileType javascript setlocal fen
+autocmd FileType javascript setlocal nocindent
+autocmd FileType javascript inoremap <buffer> $r return 
 
 function! JavaScriptFold() 
-    setl foldmethod=syntax
-    setl foldlevelstart=1
-    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+    setlocal foldmethod=syntax
+    setlocal foldlevelstart=1
+    syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
 
     function! FoldText()
         return substitute(getline(v:foldstart), '{.*', '{...}', '')
     endfunction
-    setl foldtext=FoldText()
+    setlocal foldtext=FoldText()
 endfunction
 
 
@@ -44,12 +47,12 @@ endfunction
 " => CoffeeScript section
 """""""""""""""""""""""""""""""
 function! CoffeeScriptFold()
-    setl foldmethod=indent
-    setl foldlevelstart=1
+    setlocal foldmethod=indent
+    setlocal foldlevelstart=1
 endfunction
-au FileType coffee call CoffeeScriptFold()
+autocmd FileType coffee call CoffeeScriptFold()
 
-au FileType gitcommit call setpos('.', [0, 1, 1, 0])
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 
 """"""""""""""""""""""""""""""
@@ -61,6 +64,7 @@ if exists('+termguicolors')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
+
 """"""""""""""""""""""""""""""
 " => Twig section
 """"""""""""""""""""""""""""""
@@ -71,15 +75,14 @@ autocmd BufRead *.twig set syntax=html filetype=html
 " => Markdown
 """"""""""""""""""""""""""""""
 let vim_markdown_folding_disabled = 1
-au FileType markdown setl shiftwidth=4 softtabstop=4 expandtab tabstop=4
-au BufRead,BufNewFile *.md setlocal textwidth=80
-au BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd FileType markdown setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 
 """"""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""
+autocmd BufNewFile,BufRead /*.rasi setfiletype css
+autocmd BufNewFile,BufRead *.md setlocal textwidth=80
 
-au BufNewFile,BufRead /*.rasi setf css
-au BufNewFile,BufRead *.md setlocal textwidth=80
-
-au FileType go :setlocal sw=4 ts=4 sts=4
+autocmd FileType go :setlocal shiftwidth=4 softtabstop=4

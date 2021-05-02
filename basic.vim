@@ -3,7 +3,7 @@
 set history=500
 filetype plugin indent on
 set autoread
-au FocusGained,BufEnter * checktime
+autocmd FocusGained,BufEnter * checktime
 
 let mapleader = ","
 nnoremap \ ,
@@ -93,7 +93,7 @@ set wrap
 
 set autoindent
 
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Editing mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
