@@ -105,6 +105,8 @@ let g:ale_fixers = {
       \ 'python': ['autopep8', 'yapf'],
       \}
 
+let g:ale_change_sign_column_color = 1
+
 " Vim-CoC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = ['coc-emmet', 'coc-css',
