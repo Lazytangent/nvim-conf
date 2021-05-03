@@ -11,7 +11,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'joshdick/onedark.vim'
 
   " Languages/Syntax
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
   Plug 'prettier/vim-prettier', {
     \ 'do': 'npm install',
     \ 'for': ['javascript', 'typescript', 'css', 'json', 'markdown', 'yaml', 'html', 'python']
@@ -114,6 +114,16 @@ let g:coc_global_extensions = ['coc-emmet', 'coc-css',
       \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml',
       \ 'coc-texlab', 'coc-tailwindcss', 'coc-omnisharp',
       \ 'coc-prisma']
+
+nmap <silent> [r <Plug>(coc-diagnostic-prev)
+nmap <silent> ]r <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>gr <Plug>(coc-references)
+
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>c :<C-u>CocList commands<cr>
 
 " Vim-Ale Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
