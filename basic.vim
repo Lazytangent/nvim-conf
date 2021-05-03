@@ -57,9 +57,8 @@ set list
 set listchars=tab:▸\ ,trail:▫
 set mouse=n
 set spell
-set textwidth=80
-
 set cursorline
+set modeline
 
 set foldenable
 set foldlevelstart=10
