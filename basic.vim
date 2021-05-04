@@ -124,7 +124,7 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-  autocmd BufWritePre *.ts,*.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+  autocmd BufWritePre *.ts,*.txt,*.js,*.py,*.wiki,*.sh,*.vim :call CleanExtraSpaces()
 endif
 
 " Helper Functions

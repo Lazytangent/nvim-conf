@@ -12,14 +12,14 @@ autocmd FileType python syntax keyword pythonDecorator True None False self
 autocmd BufNewFile,BufRead *.jinja set syntax=htmljinja
 autocmd BufNewFile,BufRead *.mako set filetype=mako
 
-autocmd FileType python inoremap <buffer> $r return 
-autocmd FileType python inoremap <buffer> $i import 
-autocmd FileType python inoremap <buffer> $p print 
+autocmd FileType python inoremap <buffer> $r return
+autocmd FileType python inoremap <buffer> $i import
+autocmd FileType python inoremap <buffer> $p print
 autocmd FileType python inoremap <buffer> $f # --- <esc>a
-autocmd FileType python map <buffer> <leader>1 /class 
-autocmd FileType python map <buffer> <leader>2 /def 
-autocmd FileType python map <buffer> <leader>C ?class 
-autocmd FileType python map <buffer> <leader>D ?def 
+autocmd FileType python map <buffer> <leader>1 /class
+autocmd FileType python map <buffer> <leader>2 /def
+autocmd FileType python map <buffer> <leader>C ?class
+autocmd FileType python map <buffer> <leader>D ?def
 autocmd FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
 autocmd BufNewFile,BufRead *.py setlocal softtabstop=4 expandtab autoindent shiftwidth=4 textwidth=79
 
@@ -29,9 +29,9 @@ autocmd BufNewFile,BufRead *.py setlocal softtabstop=4 expandtab autoindent shif
 autocmd FileType javascript call JavaScriptFold()
 autocmd FileType javascript setlocal fen
 autocmd FileType javascript setlocal nocindent
-autocmd FileType javascript inoremap <buffer> $r return 
+autocmd FileType javascript inoremap <buffer> $r return
 
-function! JavaScriptFold() 
+function! JavaScriptFold()
     setlocal foldmethod=syntax
     setlocal foldlevelstart=1
     syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
