@@ -44,18 +44,6 @@ endfunction
 
 
 """"""""""""""""""""""""""""""
-" => CoffeeScript section
-"""""""""""""""""""""""""""""""
-function! CoffeeScriptFold()
-    setlocal foldmethod=indent
-    setlocal foldlevelstart=1
-endfunction
-autocmd FileType coffee call CoffeeScriptFold()
-
-autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
-
-
-""""""""""""""""""""""""""""""
 " => Shell section
 """"""""""""""""""""""""""""""
 " set termguicolors
