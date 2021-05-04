@@ -24,6 +24,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'yuezk/vim-js'
   Plug 'heavenshell/vim-jsdoc', {
     \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
     \ 'do': 'make install'
