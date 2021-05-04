@@ -6,22 +6,30 @@ set autoread
 autocmd FocusGained,BufEnter * checktime
 
 let mapleader = ","
+let localmapleader = "\\"
 nnoremap \ ,
 
+" Quick Save Commands
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>
 cnoremap Q q!
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+" More things
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap <leader>qa :qa<cr>
+
+" Line numbering shortcuts
 nnoremap <leader>rnu :set rnu!<cr>
 nnoremap <leader>nnu :set nu!<cr>
 
+" Reload vimrc
+nnoremap <localleader>rc :source ~/.config/nvim/init.vim<cr>
+
 " Vim UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set so=7
+set scrolloff=7
 let $LANG='en'
 
 set wildmenu
@@ -54,7 +62,8 @@ set relativenumber
 set numberwidth=5
 set clipboard=unnamed
 set list
-set listchars=tab:▸\ ,trail:▫
+" set listchars=tab:▸\ ,trail:▫
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 set mouse=n
 set spell
 set cursorline
@@ -66,11 +75,21 @@ nnoremap <leader>fu zM<cr>
 nnoremap <leader>uf zR<cr>
 
 set path+=**
-command! MakeTags !ctags -R .
 
+" Tags
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <localleader>ct :!ctags -R .<cr><cr>
+command! MakeTags !ctags -R .
+set tags=./tags,tags;$HOME
+
+" Moving around directories
+nnoremap <localleader>cd :cd %:h<cr>
+
+" Easier movement across wrapped lines
 nmap j gj
 nmap k gk
 
+" Don't go into Ex mode
 map Q gq
 
 " Files, backups and undo
@@ -88,7 +107,6 @@ set tabstop=8
 set softtabstop=2
 
 set linebreak
-set textwidth=500
 set wrap
 
 set autoindent
@@ -106,7 +124,7 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-  autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+  autocmd BufWritePre *.ts,*.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
 " Helper Functions

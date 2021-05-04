@@ -1,3 +1,6 @@
+set textwidth=80
+set formatoptions+=t
+
 " Vim-Fugitive Shorthands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>Q :q!<cr>
@@ -77,7 +80,7 @@ cno $d e ~/Desktop
 cno $j e ./
 cno $c e <C-\>eCurrentFileDir("e")<cr>
 
-" $q is super usefule when browsing on the command line
+" $q is super useful when browsing on the command line
 " it deletes everything until the last slash
 cno $q <C-\>eDeleteTillSlash()<cr>
 
