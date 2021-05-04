@@ -35,6 +35,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'jmcantrell/vim-virtualenv'
 
   " General Use
+  Plug 'jondkinney/dragvisuals.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -57,6 +58,15 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'vim-test/vim-test'
 
 call plug#end()
+
+" Drag Visuals
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:DVB_TrimWS = 1
+
+vmap <expr> <S-H> DVB_Drag('left')
+vmap <expr> <S-L> DVB_Drag('right')
+vmap <expr> <S-J> DVB_Drag('down')
+vmap <expr> <S-K> DVB_Drag('up')
 
 " Vim-Test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
