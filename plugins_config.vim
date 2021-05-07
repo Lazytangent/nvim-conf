@@ -29,6 +29,7 @@ call plug#begin("~/.config/nvim/plugged")
     \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
     \ 'do': 'make install'
     \}
+  Plug 'instant-markdown/vim-instant-markdown', { 'for': 'markdown' }
   Plug 'plasticboy/vim-markdown'
   Plug 'mrdotb/vim-tailwindcss'
   Plug 'nvie/vim-flake8'
@@ -58,6 +59,12 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'vim-test/vim-test'
 
 call plug#end()
+
+" Vim-Instant-Markdown
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:instant_markdown_autostart = 0
+nmap <leader>md :InstantMarkdownPreview<cr>
+nmap <leader>ms :InstantMarkdownStop<cr>
 
 " Drag Visuals
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
