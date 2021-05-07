@@ -33,7 +33,7 @@ set scrolloff=7
 let $LANG='en'
 
 set wildmenu
-set wildmode=longesc:full,list:full
+set wildmode=longest:full,list:full
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
   set wildignore+=.git\*,.hg\*,.svn\*
