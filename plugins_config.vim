@@ -36,6 +36,10 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'jmcantrell/vim-virtualenv'
 
   " General Use
+  Plug 'xolox/vim-misc'
+  Plug 'xolox/vim-easytags'
+  Plug 'preservim/tagbar'
+  Plug 'lervag/vimtex'
   Plug 'jondkinney/dragvisuals.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
@@ -59,6 +63,10 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'vim-test/vim-test'
 
 call plug#end()
+
+" Vim-Airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
 
 " Vim-Instant-Markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
