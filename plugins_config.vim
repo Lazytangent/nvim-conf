@@ -29,7 +29,7 @@ call plug#begin("~/.config/nvim/plugged")
     \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
     \ 'do': 'make install'
     \}
-  Plug 'davinche/godown-vim'
+  Plug 'instant-markdown/vim-instant-markdown'
   Plug 'plasticboy/vim-markdown'
   Plug 'mrdotb/vim-tailwindcss'
   Plug 'nvie/vim-flake8'
@@ -70,8 +70,10 @@ let g:airline_powerline_fonts = 1
 
 " Godown-Vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>md :GodownPreview<cr>
-nmap <leader>ms :GodownKilc<cr>
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_open_to_the_world = 1
+nmap <leader>md :InstantMarkdownPreview<cr>
+nmap <leader>ms :InstantMarkdownStop<cr>
 
 " Drag Visuals
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
