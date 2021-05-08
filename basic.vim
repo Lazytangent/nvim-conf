@@ -64,7 +64,7 @@ set clipboard=unnamed
 set list
 " set listchars=tab:▸\ ,trail:▫
 exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-set mouse=n
+set mouse=a
 set spell
 set cursorline
 set modeline
