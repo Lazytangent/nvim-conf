@@ -29,7 +29,6 @@ call plug#begin("~/.config/nvim/plugged")
     \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
     \ 'do': 'make install'
     \}
-  Plug 'instant-markdown/vim-instant-markdown', { 'for': 'markdown' }
   Plug 'plasticboy/vim-markdown'
   Plug 'mrdotb/vim-tailwindcss'
   Plug 'nvie/vim-flake8'
@@ -68,11 +67,10 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
 
-" Vim-Instant-Markdown
+" Godown-Vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:instant_markdown_autostart = 0
-nmap <leader>md :InstantMarkdownPreview<cr>
-nmap <leader>ms :InstantMarkdownStop<cr>
+nmap <leader>md :GodownPreview<cr>
+nmap <leader>ms :GodownKilc<cr>
 
 " Drag Visuals
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
