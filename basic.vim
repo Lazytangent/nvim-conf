@@ -9,8 +9,6 @@ let mapleader = ","
 let localmapleader = "\\"
 nnoremap \ ,
 
-set shell=bash\ -i
-
 " Quick Save Commands
 nnoremap <leader>w :w<cr>
 nnoremap <leader>wq :wq<cr>

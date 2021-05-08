@@ -29,6 +29,7 @@ call plug#begin("~/.config/nvim/plugged")
     \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
     \ 'do': 'make install'
     \}
+  Plug 'davinche/godown-vim'
   Plug 'plasticboy/vim-markdown'
   Plug 'mrdotb/vim-tailwindcss'
   Plug 'nvie/vim-flake8'
