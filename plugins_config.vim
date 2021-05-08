@@ -9,6 +9,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'joshdick/onedark.vim'
+  Plug 'lewis6991/moonlight.vim'
 
   " Languages/Syntax
   Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
@@ -169,16 +170,6 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
-
-" ColorScheme Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if (has("autocmd") && !has("gui_running"))
-  augroup colors
-    autocmd!
-    let s:background = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
-    autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:background })
-  augroup END
-endif
 
 " Vim-Smooth-Scroll
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
