@@ -80,6 +80,10 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+" Indent-Blankline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indent_blankline_char = "▏"
+
 " Vim-Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
