@@ -12,6 +12,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'lewis6991/moonlight.vim'
 
   " Languages/Syntax
+  Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
   Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
   Plug 'prettier/vim-prettier', {
     \ 'do': 'npm install',
@@ -21,6 +22,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'dense-analysis/ale'
   Plug 'mattn/emmet-vim'
   Plug 'pantharshit00/vim-prisma'
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
@@ -65,11 +67,24 @@ call plug#begin("~/.config/nvim/plugged")
 
 call plug#end()
 
+" Tree-Sitter
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  ignore_install = {},
+  highlight = {
+    enable = true,
+    use_languagetree = true,
+    disable = {},
+  },
+}
+EOF
+
 " Vim-Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
 
-" Godown-Vim
+" Vim-Instant-Markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_open_to_the_world = 1
