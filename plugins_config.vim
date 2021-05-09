@@ -83,6 +83,8 @@ EOF
 " Indent-Blankline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_blankline_char = "▏"
+let g:indent_blankline_show_trailing_blankline_indent = false
+let g:indent_blankline_show_first_indent_level = false
 
 " Vim-Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
