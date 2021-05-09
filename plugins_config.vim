@@ -87,7 +87,9 @@ let g:airline_powerline_fonts = 1
 " Vim-Instant-Markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:instant_markdown_autostart = 0
+let g:instant_markdown_slow = 0
 let g:instant_markdown_open_to_the_world = 1
+let g:instant_markdown_autoscroll = 1
 nmap <leader>md :InstantMarkdownPreview<cr>
 nmap <leader>ms :InstantMarkdownStop<cr>
 
