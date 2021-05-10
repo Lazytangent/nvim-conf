@@ -39,6 +39,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'jmcantrell/vim-virtualenv'
 
   " General Use
+  Plug 'axvr/org.vim'
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-easytags'
   Plug 'preservim/tagbar'
