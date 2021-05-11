@@ -23,6 +23,8 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'mattn/emmet-vim'
   Plug 'pantharshit00/vim-prisma'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'lewis6991/spellsitter.nvim'
 
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
@@ -68,6 +70,24 @@ call plug#begin("~/.config/nvim/plugged")
 
 call plug#end()
 
+" Neovim-LSP
+lua << EOF
+require'lspconfig'.clangd.setup{}
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.jedi_language_server.setup{}
+require'lspconfig'.jsonls.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.vimls.setup{}
+EOF
+
 " Tree-Sitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
@@ -76,8 +96,17 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     use_languagetree = true,
+    additional_vim_regix_highlighting = true,
     disable = {},
   },
+}
+EOF
+
+" Spell-Sitter
+lua << EOF
+require('spellsitter').setup {
+  hl = 'SpellBad',
+  captures = {'comment'}
 }
 EOF
 
