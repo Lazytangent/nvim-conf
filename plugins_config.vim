@@ -13,13 +13,13 @@ call plug#begin("~/.config/nvim/plugged")
 
   " Languages/Syntax
   Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
-  Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
+  " Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
   Plug 'prettier/vim-prettier', {
     \ 'do': 'npm install',
     \ 'for': ['javascript', 'typescript', 'css', 'json', 'markdown', 'yaml', 'html', 'python']
     \ }
-  Plug 'sheerun/vim-polyglot'
-  Plug 'dense-analysis/ale'
+  " Plug 'sheerun/vim-polyglot'
+  " Plug 'dense-analysis/ale'
   Plug 'mattn/emmet-vim'
   Plug 'pantharshit00/vim-prisma'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
@@ -96,7 +96,7 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     use_languagetree = true,
-    additional_vim_regix_highlighting = true,
+    additional_vim_regex_highlighting = true,
     disable = {},
   },
 }
@@ -104,10 +104,6 @@ EOF
 
 " Spell-Sitter
 lua << EOF
-require('spellsitter').setup {
-  hl = 'SpellBad',
-  captures = {'comment'}
-}
 EOF
 
 " Indent-Blankline
@@ -190,23 +186,23 @@ let g:ale_change_sign_column_color = 1
 
 " Vim-CoC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:coc_global_extensions = ['coc-emmet', 'coc-css',
-      \ 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver',
-      \ 'coc-git', 'coc-pyright', 'coc-sql',
-      \ 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi',
-      \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml',
-      \ 'coc-texlab', 'coc-tailwindcss', 'coc-omnisharp',
-      \ 'coc-prisma']
+" let g:coc_global_extensions = ['coc-emmet', 'coc-css',
+"       \ 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver',
+"       \ 'coc-git', 'coc-pyright', 'coc-sql',
+"       \ 'coc-sh', 'coc-yank', 'coc-vimlsp', 'coc-jedi',
+"       \ 'coc-clangd', 'coc-go', 'coc-yaml', 'coc-toml',
+"       \ 'coc-texlab', 'coc-tailwindcss', 'coc-omnisharp',
+"       \ 'coc-prisma']
 
-nmap <silent> [r <Plug>(coc-diagnostic-prev)
-nmap <silent> ]r <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gd <Plug>(coc-definition)
-nmap <silent> <leader>gy <Plug>(coc-type-definition)
-nmap <silent> <leader>gi <Plug>(coc-implementation)
-nmap <silent> <leader>gr <Plug>(coc-references)
+" nmap <silent> [r <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]r <Plug>(coc-diagnostic-next)
+" nmap <silent> <leader>gd <Plug>(coc-definition)
+" nmap <silent> <leader>gy <Plug>(coc-type-definition)
+" nmap <silent> <leader>gi <Plug>(coc-implementation)
+" nmap <silent> <leader>gr <Plug>(coc-references)
 
-nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>c :<C-u>CocList commands<cr>
+" nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+" nnoremap <silent> <space>c :<C-u>CocList commands<cr>
 
 " Vim-Ale Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
