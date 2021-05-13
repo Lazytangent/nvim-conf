@@ -4,7 +4,6 @@ set history=500
 filetype plugin indent on
 set autoread
 autocmd FocusGained,BufEnter * checktime
-set nocompatible
 
 let mapleader = ","
 let localmapleader = "\\"
@@ -77,7 +76,7 @@ nnoremap <leader>uf zR<cr>
 
 set path+=**
 
-" Tags
+"{{{ Tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <localleader>ct :!ctags -R .<cr><cr>
 command! MakeTags !ctags -R .
@@ -93,6 +92,7 @@ nmap k gk
 " Don't go into Ex mode
 map Q gq
 
+" }}}
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup
