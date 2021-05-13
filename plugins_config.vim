@@ -64,7 +64,8 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-heroku'
   Plug 'tpope/vim-dotenv'
-  Plug 'terryma/vim-smooth-scroll'
+  " Plug 'terryma/vim-smooth-scroll'
+  Plug 'psliwka/vim-smoothie'
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-line'
   Plug 'christoomey/vim-sort-motion'
@@ -231,10 +232,11 @@ let g:fzf_action = {
 
 " Vim-Smooth-Scroll
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <C-u> :call smooth_scroll#up(&scroll, 5, 2)<cr>
-nnoremap <silent> <C-d> :call smooth_scroll#down(&scroll, 5, 2)<cr>
-nnoremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 5, 4)<cr>
-nnoremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 5, 4)<cr>
+" nnoremap <silent> <C-u> :call smooth_scroll#up(&scroll, 5, 2)<cr>
+" nnoremap <silent> <C-d> :call smooth_scroll#down(&scroll, 5, 2)<cr>
+" nnoremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 5, 4)<cr>
+" nnoremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 5, 4)<cr>
+let g:smoothie_experimental_mappings = v:true
 
 " Porting in zshrc aliases
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
