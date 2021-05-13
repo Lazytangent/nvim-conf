@@ -4,6 +4,7 @@ set history=500
 filetype plugin indent on
 set autoread
 autocmd FocusGained,BufEnter * checktime
+set nocompatible
 
 let mapleader = ","
 let localmapleader = "\\"

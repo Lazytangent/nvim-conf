@@ -41,7 +41,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Spell Checking
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>ss : setlocal spell!<cr>
+map <leader>ss :setlocal spell!<cr>
 map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
