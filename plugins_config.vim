@@ -41,6 +41,9 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'jmcantrell/vim-virtualenv'
 
   " General Use
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
   Plug 'axvr/org.vim'
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-easytags'
@@ -105,6 +108,13 @@ EOF
 " Spell-Sitter
 lua << EOF
 EOF
+
+" Nvim Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
 " Indent-Blankline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
