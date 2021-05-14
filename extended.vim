@@ -26,7 +26,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<cr>?<C-R>=@/<cr><cr>
 map <silent> <leader><cr> :noh<cr>
 
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
-map <leader>ba :bufdo bd<cr>
+map <leader>ba :%bd\|e#\|bd#<cr>
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
@@ -41,7 +41,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Spell Checking
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>ss : setlocal spell!<cr>
+map <leader>ss :setlocal spell!<cr>
 map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg

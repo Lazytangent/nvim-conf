@@ -6,8 +6,7 @@ let g:ale_disable_lsp = 1
 call plug#begin("~/.config/nvim/plugged")
   " Plugin Section
   " Themes
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'hoob3rt/lualine.nvim'
   Plug 'joshdick/onedark.vim'
   Plug 'lewis6991/moonlight.vim'
 
@@ -18,11 +17,13 @@ call plug#begin("~/.config/nvim/plugged")
     \ 'do': 'npm install',
     \ 'for': ['javascript', 'typescript', 'css', 'json', 'markdown', 'yaml', 'html', 'python']
     \ }
-  Plug 'sheerun/vim-polyglot'
+  " Plug 'sheerun/vim-polyglot'
   Plug 'dense-analysis/ale'
   Plug 'mattn/emmet-vim'
   Plug 'pantharshit00/vim-prisma'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'lewis6991/spellsitter.nvim'
 
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
@@ -39,13 +40,21 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'jmcantrell/vim-virtualenv'
 
   " General Use
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'folke/lsp-colors.nvim'
+  Plug 'folke/trouble.nvim'
+  Plug 'folke/which-key.nvim'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'axvr/org.vim'
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-easytags'
   Plug 'preservim/tagbar'
   Plug 'lervag/vimtex'
   Plug 'jondkinney/dragvisuals.vim'
   Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'jiangmiao/auto-pairs'
@@ -58,7 +67,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-heroku'
   Plug 'tpope/vim-dotenv'
-  Plug 'terryma/vim-smooth-scroll'
+  Plug 'psliwka/vim-smoothie'
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-line'
   Plug 'christoomey/vim-sort-motion'
@@ -66,6 +75,45 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'vim-test/vim-test'
 
 call plug#end()
+
+" Folke plugins
+lua << EOF
+require("trouble").setup {}
+require("which-key").setup {}
+require('key-mappings')
+require("lsp-colors").setup {}
+EOF
+
+" Lualine
+lua << EOF
+require('lualine').setup {
+  options = {
+    theme = "nightfly",
+  },
+  sections = {
+    lualine_c = {{ 'filename', file_status = true, path = 1 }, 'diff'},
+    lualine_z = {'location', { 'diagnostics', sources = {'nvim_lsp', 'coc', 'ale'}, sections = {'error', 'warn', 'info'} }},
+  },
+}
+EOF
+
+" Neovim-LSP
+lua << EOF
+require'lspconfig'.clangd.setup{}
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.jedi_language_server.setup{}
+require'lspconfig'.jsonls.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.vimls.setup{}
+EOF
 
 " Tree-Sitter
 lua << EOF
@@ -75,10 +123,22 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     use_languagetree = true,
+    additional_vim_regex_highlighting = true,
     disable = {},
   },
 }
 EOF
+
+" Spell-Sitter
+lua << EOF
+EOF
+
+" Nvim Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
 " Indent-Blankline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -154,6 +214,7 @@ let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
       \ 'javascript': ['prettier', 'eslint'],
       \ 'python': ['autopep8', 'yapf'],
+      \ 'typescript': ['prettier', 'eslint'],
       \}
 
 let g:ale_change_sign_column_color = 1
@@ -194,10 +255,11 @@ let g:fzf_action = {
 
 " Vim-Smooth-Scroll
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <C-u> :call smooth_scroll#up(&scroll, 5, 2)<cr>
-nnoremap <silent> <C-d> :call smooth_scroll#down(&scroll, 5, 2)<cr>
-nnoremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 5, 4)<cr>
-nnoremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 5, 4)<cr>
+" nnoremap <silent> <C-u> :call smooth_scroll#up(&scroll, 5, 2)<cr>
+" nnoremap <silent> <C-d> :call smooth_scroll#down(&scroll, 5, 2)<cr>
+" nnoremap <silent> <C-b> :call smooth_scroll#up(&scroll*2, 5, 4)<cr>
+" nnoremap <silent> <C-f> :call smooth_scroll#down(&scroll*2, 5, 4)<cr>
+let g:smoothie_experimental_mappings = v:true
 
 " Porting in zshrc aliases
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

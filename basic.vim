@@ -5,9 +5,10 @@ filetype plugin indent on
 set autoread
 autocmd FocusGained,BufEnter * checktime
 
-" Leader setup
+set nocompatible
 let mapleader = ","
-let localmapleader = "\\"
+" nnoremap <Space> <Nop>
+let maplocalleader = "\<Space>"
 nnoremap \ ,
 
 " Quick Save Commands
@@ -26,7 +27,7 @@ nnoremap <leader>rnu :set rnu!<cr>
 nnoremap <leader>nnu :set nu!<cr>
 
 " Reload vimrc
-nnoremap <localleader>rc :source ~/.config/nvim/init.vim<cr>
+nnoremap <localleader>r :source ~/.config/nvim/init.vim<cr>
 
 " Vim UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -77,11 +78,11 @@ nnoremap <leader>uf zR<cr>
 
 set path+=**
 
-" Tags
+"{{{ Tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <localleader>ct :!ctags -R .<cr><cr>
 command! MakeTags !ctags -R .
-set tags=./tags,tags;$HOME
+set tags=./tags;,tags;$HOME
 
 " Moving around directories
 nnoremap <localleader>cd :cd %:h<cr>
@@ -93,6 +94,7 @@ nmap k gk
 " Don't go into Ex mode
 map Q gq
 
+" }}}
 " Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup
@@ -184,3 +186,14 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set splitright
 set splitbelow
+
+" Line movement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <C-k>  :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<cr>``
+nnoremap <silent> <C-j>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<cr>``
+
+inoremap <silent> <C-k>  :<C-O>m`<C-O>:move -2<cr><C-O>``
+inoremap <silent> <C-j>  :<C-O>m`<C-O>:move +1<cr><C-O>``
+
+vnoremap <silent> <C-k>  :<C-U>exec "'<,'>move '<-" . (1+v:count1)<cr>gv
+vnoremap <silent> <C-j>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<cr>gv
