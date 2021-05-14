@@ -5,6 +5,7 @@ filetype plugin indent on
 set autoread
 autocmd FocusGained,BufEnter * checktime
 
+" Leader setup
 let mapleader = ","
 let localmapleader = "\\"
 nnoremap \ ,
