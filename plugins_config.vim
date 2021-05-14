@@ -41,6 +41,9 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'jmcantrell/vim-virtualenv'
 
   " General Use
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'folke/trouble.nvim'
+  Plug 'folke/which-key.nvim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
@@ -73,6 +76,16 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'vim-test/vim-test'
 
 call plug#end()
+
+" Trouble.nvim
+lua << EOF
+require("trouble").setup {}
+EOF
+
+" Which-key
+lua << EOF
+require("which-key").setup {}
+EOF
 
 " Neovim-LSP
 lua << EOF
