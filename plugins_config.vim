@@ -84,7 +84,8 @@ EOF
 
 " Which-key
 lua << EOF
-require("which-key").setup {}
+require("which-key")
+require('key-mappings')
 EOF
 
 " Neovim-LSP

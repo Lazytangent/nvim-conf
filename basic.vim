@@ -6,7 +6,7 @@ set autoread
 autocmd FocusGained,BufEnter * checktime
 
 let mapleader = ","
-let localmapleader = "\\"
+let localmapleader = " "
 nnoremap \ ,
 
 " Quick Save Commands
