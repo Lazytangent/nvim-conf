@@ -5,8 +5,10 @@ filetype plugin indent on
 set autoread
 autocmd FocusGained,BufEnter * checktime
 
+set nocompatible
 let mapleader = ","
-let localmapleader = " "
+nnoremap <Space> <Nop>
+let localmapleader = "\<Space>"
 nnoremap \ ,
 
 " Quick Save Commands
