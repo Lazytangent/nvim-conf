@@ -1,3 +1,5 @@
+require('which-key').setup{}
+
 local mappings = {
   ["<leader>"] = {
     a = {
@@ -114,4 +116,3 @@ local mappings = {
 }
 
 local wk = require('which-key')
-
