@@ -91,7 +91,7 @@ require('lualine').setup {
     theme = "nightfly",
   },
   sections = {
-    lualine_c = {{ 'filename', file_status = true, path = 2 }, 'diff'},
+    lualine_c = {{ 'filename', file_status = true, path = 1 }, 'diff'},
     lualine_z = {'location', { 'diagnostics', sources = {'nvim_lsp', 'coc', 'ale'}, sections = {'error', 'warn', 'info'} }},
   },
 }
