@@ -6,8 +6,7 @@ let g:ale_disable_lsp = 1
 call plug#begin("~/.config/nvim/plugged")
   " Plugin Section
   " Themes
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'hoob3rt/lualine.nvim'
   Plug 'joshdick/onedark.vim'
   Plug 'lewis6991/moonlight.vim'
 
@@ -42,6 +41,8 @@ call plug#begin("~/.config/nvim/plugged")
 
   " General Use
   Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'folke/lsp-colors.nvim'
   Plug 'folke/trouble.nvim'
   Plug 'folke/which-key.nvim'
   Plug 'nvim-lua/popup.nvim'
@@ -54,7 +55,6 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'lervag/vimtex'
   Plug 'jondkinney/dragvisuals.vim'
   Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'jiangmiao/auto-pairs'
@@ -67,7 +67,6 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-heroku'
   Plug 'tpope/vim-dotenv'
-  " Plug 'terryma/vim-smooth-scroll'
   Plug 'psliwka/vim-smoothie'
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-line'
@@ -77,15 +76,25 @@ call plug#begin("~/.config/nvim/plugged")
 
 call plug#end()
 
-" Trouble.nvim
+" Folke plugins
 lua << EOF
 require("trouble").setup {}
+require("which-key").setup {}
+require('key-mappings')
+require("lsp-colors").setup {}
 EOF
 
-" Which-key
+" Lualine
 lua << EOF
-require("which-key")
-require('key-mappings')
+require('lualine').setup {
+  options = {
+    theme = "nightfly",
+  },
+  sections = {
+    lualine_c = {{ 'filename', file_status = true, path = 2 }, 'diff'},
+    lualine_z = {'location', { 'diagnostics', sources = {'nvim_lsp', 'coc', 'ale'}, sections = {'error', 'warn', 'info'} }},
+  },
+}
 EOF
 
 " Neovim-LSP

@@ -7,8 +7,8 @@ autocmd FocusGained,BufEnter * checktime
 
 set nocompatible
 let mapleader = ","
-nnoremap <Space> <Nop>
-let localmapleader = "\<Space>"
+" nnoremap <Space> <Nop>
+let maplocalleader = "\<Space>"
 nnoremap \ ,
 
 " Quick Save Commands
@@ -27,7 +27,7 @@ nnoremap <leader>rnu :set rnu!<cr>
 nnoremap <leader>nnu :set nu!<cr>
 
 " Reload vimrc
-nnoremap <localleader>rc :source ~/.config/nvim/init.vim<cr>
+nnoremap <localleader>r :source ~/.config/nvim/init.vim<cr>
 
 " Vim UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
