@@ -80,7 +80,7 @@ set path+=**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <localleader>ct :!ctags -R .<cr><cr>
 command! MakeTags !ctags -R .
-set tags=./tags,tags;$HOME
+set tags=./tags;,tags;$HOME
 
 " Moving around directories
 nnoremap <localleader>cd :cd %:h<cr>
