@@ -1,4 +1,4 @@
-require('which-key').setup{}
+require("which-key").setup{}
 
 local mappings = {
   ["<leader>"] = {

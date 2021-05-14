@@ -15,7 +15,7 @@ return require("packer").startup(
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'neovim/nvim-lspconfig'
 
-    use 'leafgarland/typscript-vim'
+    use 'leafgarland/typescript-vim'
     use 'peitalin/vim-jsx-typescript'
     use 'maxmellon/vim-jsx-pretty'
     use 'yuezk/vim-js'
@@ -38,7 +38,7 @@ return require("packer").startup(
     use 'xolox/vim-misc'
     use 'xolox/vim-easytags'
     use 'preservim/tagbar'
-    use 'larvag/vimtex'
+    use 'lervag/vimtex'
     use 'jondkinney/dragvisuals.vim'
     use 'scrooloose/nerdtree'
     use 'junegunn/fzf.vim'

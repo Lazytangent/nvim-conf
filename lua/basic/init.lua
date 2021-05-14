@@ -1,4 +1,4 @@
-require "autocmds"
-require "colorscheme"
-require "mappings"
-require "options"
+require "basic.autocmds"
+require "basic.colorscheme"
+require "basic.mappings"
+require "basic.options"
