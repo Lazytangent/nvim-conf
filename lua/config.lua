@@ -36,7 +36,6 @@ Treesitter = {
     "javascript",
     "typescript",
     "tsx",
-    "jsx",
     "html",
     "css",
     "c",
