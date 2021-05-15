@@ -1,3 +1,4 @@
+-- Set up Lua plugins
 require("trouble").setup {}
 require("lsp-colors").setup {}
 require("lualine").setup {
@@ -9,6 +10,8 @@ require("lualine").setup {
     lualine_z = {'location', {'diagnostics', sources = {'nvim_lsp' ,'coc', 'ale'}, sections = {'error', 'warn', 'info'}}},
   },
 }
+
+-- LSP Config setup
 require('lspconfig').clangd.setup {}
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
