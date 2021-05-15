@@ -1,6 +1,6 @@
-local wk = require('which-key')
+require("which-key").setup{}
 
-wk.register({
+local mappings = {
   ["<leader>"] = {
     a = {
       name = "+ALE",
@@ -113,4 +113,8 @@ wk.register({
   ["<localleader>"] = {
     r = "Reload nvim config",
   },
-})
+}
+
+local wk = require('which-key')
+
+wk.register(mappings)
