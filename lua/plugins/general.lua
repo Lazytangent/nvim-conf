@@ -23,7 +23,7 @@ require('lspconfig').pyright.setup {}
 require('lspconfig').tsserver.setup {}
 require('lspconfig').vimls.setup {}
 
-require('nvim-treesitter').configs.setup {
+require('nvim-treesitter.configs').setup {
   ensure_installed = "maintained",
   ignore_install = {},
   highlight = {
