@@ -27,14 +27,15 @@ require('lspconfig').tsserver.setup {}
 require('lspconfig').vimls.setup {}
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = "maintained",
-  ignore_install = {},
+  ensure_installed = Treesitter.parsers,
   highlight = {
     enable = true,
     use_languagetree = true,
     additional_vim_regex_highlighting = true,
     disable = {},
   },
+  indent = {enable = true},
+  rainbow = {enable = Treesitter.rainbow},
 }
 
 require('indent_blankline').setup {}
