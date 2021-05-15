@@ -113,6 +113,22 @@ local mappings = {
   ["<localleader>"] = {
     r = "Reload nvim config",
   },
+  ["g"] = {
+    D = "Go to declaration",
+    d = "Go to definition",
+    i = "Go to implementation",
+  },
+  ["K"] = "Hover",
+  ["<C-k>"] = "Signature help",
+  ["<space>"] = {
+    w = {
+      name = "+Workspace",
+      a = "Add folder",
+      r = "Remove folder",
+      l = "List folders",
+    },
+    D = "Type definition",
+  },
 }
 
 local wk = require('which-key')
