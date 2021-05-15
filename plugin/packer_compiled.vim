@@ -212,9 +212,8 @@ _G.packer_plugins = {
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-js"
   },
   ["vim-jsdoc"] = {
-    commands = { "make install" },
     loaded = false,
-    needs_bufread = true,
+    needs_bufread = false,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-jsdoc"
   },
   ["vim-jsx-pretty"] = {
@@ -292,19 +291,13 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
-
--- Command lazy-loads
-time("Defining lazy-load commands", true)
--- vim.cmd [[command! -nargs=* -range -bang -complete=file make install lua require("packer.load")({'vim-jsdoc'}, { cmd = "make install", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-time("Defining lazy-load commands", false)
-
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time("Defining lazy-load filetype autocommands", true)
 vim.cmd [[au FileType tsx ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "tsx" }, _G.packer_plugins)]]
-vim.cmd [[au FileType jsx ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "jsx" }, _G.packer_plugins)]]
 vim.cmd [[au FileType js ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "js" }, _G.packer_plugins)]]
+vim.cmd [[au FileType jsx ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "jsx" }, _G.packer_plugins)]]
 vim.cmd [[au FileType ts ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "ts" }, _G.packer_plugins)]]
 time("Defining lazy-load filetype autocommands", false)
 vim.cmd("augroup END")
