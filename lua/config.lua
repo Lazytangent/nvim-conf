@@ -1,13 +1,16 @@
 Opts = {
-  preserve_cursor = true,
-  highlight_yank = true,
   relativenumber = true,
+  number = true,
+  numberwidth = 5,
+  wrap = true,
   cursorline = true,
   listchars = true,
-  wrap = true,
   timeoutlen = 500,
   updatetime = 300,
   scrolloff = 7,
+  textwidth = 80,
+  mouse = "a",
+  indent_size = 2,
 }
 
 Theming = {
@@ -24,11 +27,6 @@ Completion = {
   enabled = true,
   autopairs = true,
   items = 10,
-}
-
-Formatting = {
-  trim_trailing_space = true,
-  indent_size = 2,
 }
 
 Treesitter = {
