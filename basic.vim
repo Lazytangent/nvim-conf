@@ -192,8 +192,8 @@ set splitbelow
 nnoremap <silent> <C-k>  :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<cr>``
 nnoremap <silent> <C-j>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<cr>``
 
-inoremap <silent> <C-k>  :<C-O>m`<C-O>:move -2<cr><C-O>``
-inoremap <silent> <C-j>  :<C-O>m`<C-O>:move +1<cr><C-O>``
+inoremap <silent> <C-k>  <C-O>m`<C-O>:move -2<cr><C-O>``
+inoremap <silent> <C-j>  <C-O>m`<C-O>:move +1<cr><C-O>``
 
 vnoremap <silent> <C-k>  :<C-U>exec "'<,'>move '<-" . (1+v:count1)<cr>gv
 vnoremap <silent> <C-j>  :<C-U>exec "'<,'>move '>+" . (0+v:count1)<cr>gv
