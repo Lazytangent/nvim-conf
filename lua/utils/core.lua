@@ -5,7 +5,7 @@ local scopes = {g = vim.g, o = vim.o, b = vim.bo, w = vim.wo}
 -- autocommands
 function utils.define_augroups(definitions)
   for group_name, definition in pairs(definitions) do
-    vim.cmd("augroup " .. group.name)
+    vim.cmd("augroup " .. group_name)
     vim.cmd("autocmd!")
 
     for _, def in pairs(definition) do
