@@ -11,7 +11,7 @@ packadd packer.nvim
 
 try
 
-lua << EOF
+lua << END
   local time
   local profile_info
   local should_profile = false
@@ -159,9 +159,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
-  ["typscript-vim"] = {
+  ["typescript-vim"] = {
     loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/typscript-vim"
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/typescript-vim"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -214,7 +214,7 @@ _G.packer_plugins = {
   ["vim-jsdoc"] = {
     commands = { "make install" },
     loaded = false,
-    needs_bufread = false,
+    needs_bufread = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-jsdoc"
   },
   ["vim-jsx-pretty"] = {
@@ -281,7 +281,7 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-visual-multi"
   },
-  ["vimtex"] = {
+  vimtex = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vimtex"
   },
@@ -302,15 +302,15 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time("Defining lazy-load filetype autocommands", true)
-vim.cmd [[au FileType ts ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "ts" }, _G.packer_plugins)]]
-vim.cmd [[au FileType jsx ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "jsx" }, _G.packer_plugins)]]
 vim.cmd [[au FileType tsx ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "tsx" }, _G.packer_plugins)]]
+vim.cmd [[au FileType jsx ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "jsx" }, _G.packer_plugins)]]
 vim.cmd [[au FileType js ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "js" }, _G.packer_plugins)]]
+vim.cmd [[au FileType ts ++once lua require("packer.load")({'vim-jsdoc'}, { ft = "ts" }, _G.packer_plugins)]]
 time("Defining lazy-load filetype autocommands", false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
-EOF
+END
 
 catch
   echohl ErrorMsg

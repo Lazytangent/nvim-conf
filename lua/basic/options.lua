@@ -2,6 +2,8 @@ local u = require("utils.core")
 local cmd = vim.cmd
 
 -- Global
+u.opt("o", "splitbelow", true)
+u.opt("o", "splitright", true)
 u.opt("o", "incsearch", true)
 u.opt("o", "ignorecase", true)
 u.opt("o", "wildmenu", true)

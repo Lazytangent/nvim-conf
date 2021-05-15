@@ -19,7 +19,7 @@ return require("packer").startup(
     use 'peitalin/vim-jsx-typescript'
     use 'maxmellon/vim-jsx-pretty'
     use 'yuezk/vim-js'
-    use { 'heavenshell/vim-jsdoc', cmd = 'make install', ft = {'js', 'jsx', 'ts', 'tsx'} }
+    use { 'heavenshell/vim-jsdoc', run = 'make install', ft = {'js', 'jsx', 'ts', 'tsx'} }
     use 'instant-markdown/vim-instant-markdown'
     use 'plasticboy/vim-markdown'
     use 'mrdotb/vim-tailwindcss'

@@ -1,6 +1,6 @@
 vim = vim
 local utils = {}
-local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
+local scopes = {g = vim.g, o = vim.o, b = vim.bo, w = vim.wo}
 
 -- autocommands
 function utils.define_augroups(definitions)
