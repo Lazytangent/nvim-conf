@@ -32,6 +32,8 @@ u.opt("o", "writebackup", false)
 u.opt("o", "updatetime", Opts.updatetime)
 u.opt("o", "scrolloff", Opts.scrolloff)
 u.opt("o", "timeoutlen", Opts.timeoutlen)
+u.opt("o", "termguicolors", true)
+u.opt("o", "background", "dark")
 
 -- Window
 u.opt("w", "relativenumber", Opts.relativenumber)
