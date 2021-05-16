@@ -1,62 +1,75 @@
 return require("packer").startup(
   function()
+    -- Packer.nvim
     use "wbthomason/packer.nvim"
 
-    use 'hoob3rt/lualine.nvim'
-    use 'joshdick/onedark.vim'
-    use 'lewis6991/moonlight.vim'
+    -- Theme Stuff
+    use {
+      'hoob3rt/lualine.nvim',
+      'joshdick/onedark.vim',
+      'lewis6991/moonlight.vim',
+    }
 
-    use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
-    use { 'neoclide/coc.nvim', branch = "release", run = function() vim.fn['coc#util#install']() end }
-    use { 'prettier/vim-prettier', run = 'yarn install' }
-    use 'dense-analysis/ale'
-    use 'mattn/emmet-vim'
-    use 'pantharshit00/vim-prisma'
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use 'neovim/nvim-lspconfig'
+    -- Formatting && General LSP
+    use {
+      { 'neoclide/coc.nvim', branch = "release", run = function() vim.fn['coc#util#install']() end },
+      { 'prettier/vim-prettier', run = 'yarn install' },
+      { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+      'dense-analysis/ale',
+      'mattn/emmet-vim',
+      'neovim/nvim-lspconfig',
+    }
 
-    use 'leafgarland/typescript-vim'
-    use 'peitalin/vim-jsx-typescript'
-    use 'maxmellon/vim-jsx-pretty'
-    use 'yuezk/vim-js'
-    use { 'heavenshell/vim-jsdoc', run = 'make install', ft = {'js', 'jsx', 'ts', 'tsx'} }
-    use 'instant-markdown/vim-instant-markdown'
-    use 'plasticboy/vim-markdown'
-    use 'mrdotb/vim-tailwindcss'
-    use 'nvie/vim-flake8'
-    use 'jmcantrell/vim-virtualenv'
-    
-    use 'kyazdani42/nvim-web-devicons'
-    use 'ryanoasis/vim-devicons'
-    use 'folke/lsp-colors.nvim'
-    use 'folke/trouble.nvim'
-    use 'folke/which-key.nvim'
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
-    use 'axvr/org.vim'
-    use 'xolox/vim-misc'
-    use 'xolox/vim-easytags'
-    use 'preservim/tagbar'
-    use 'lervag/vimtex'
-    use 'jondkinney/dragvisuals.vim'
-    use 'scrooloose/nerdtree'
-    use 'junegunn/fzf.vim'
-    use 'jiangmiao/auto-pairs'
-    use { 'mg979/vim-visual-multi', branch = 'master' }
-    use 'tpope/vim-commentary'
-    use 'tpope/vim-surround'
-    use 'tpope/vim-repeat'
-    use 'tpope/vim-fugitive'
-    use 'tpope/vim-eunuch'
-    use 'tpope/vim-dadbod'
-    use 'tpope/vim-heroku'
-    use 'tpope/vim-dotenv'
-    use 'psliwka/vim-smoothie'
-    use 'kana/vim-textobj-user'
-    use 'kana/vim-textobj-line'
-    use 'christoomey/vim-sort-motion'
-    use 'michaeljsmith/vim-indent-object'
-    use 'vim-test/vim-test'
+    -- Specific Language Plugins
+    use {
+      { 'heavenshell/vim-jsdoc', run = 'make install', ft = {'js', 'jsx', 'ts', 'tsx'} },
+      'pantharshit00/vim-prisma',
+      'leafgarland/typescript-vim',
+      'peitalin/vim-jsx-typescript',
+      'maxmellon/vim-jsx-pretty',
+      'yuezk/vim-js',
+      'instant-markdown/vim-instant-markdown',
+      'plasticboy/vim-markdown',
+      'mrdotb/vim-tailwindcss',
+      'nvie/vim-flake8',
+      'jmcantrell/vim-virtualenv',
+    }
+
+    -- Quality of Life Improvements
+    use {
+      { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' },
+      { 'mg979/vim-visual-multi', branch = 'master' },
+      'kyazdani42/nvim-web-devicons',
+      'ryanoasis/vim-devicons',
+      'folke/lsp-colors.nvim',
+      'folke/trouble.nvim',
+      'folke/which-key.nvim',
+      'nvim-lua/popup.nvim',
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'axvr/org.vim',
+      'xolox/vim-misc',
+      'xolox/vim-easytags',
+      'preservim/tagbar',
+      'lervag/vimtex',
+      'jondkinney/dragvisuals.vim',
+      'scrooloose/nerdtree',
+      'junegunn/fzf.vim',
+      'jiangmiao/auto-pairs',
+      'tpope/vim-commentary',
+      'tpope/vim-surround',
+      'tpope/vim-repeat',
+      'tpope/vim-fugitive',
+      'tpope/vim-eunuch',
+      'tpope/vim-dadbod',
+      'tpope/vim-heroku',
+      'tpope/vim-dotenv',
+      'psliwka/vim-smoothie',
+      'kana/vim-textobj-user',
+      'kana/vim-textobj-line',
+      'christoomey/vim-sort-motion',
+      'michaeljsmith/vim-indent-object',
+      'vim-test/vim-test',
+    }
   end
 )
