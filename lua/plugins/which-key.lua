@@ -114,10 +114,12 @@ local mappings = {
     r = "Reload nvim config",
   },
   ["g"] = {
+    c = "Commentary",
     D = "Go to declaration",
     d = "Go to definition",
     i = "Go to implementation",
     r = "References",
+    s = "Sort motion",
   },
   ["K"] = "Hover",
   ["<C-h>"] = "Signature help",
@@ -146,6 +148,10 @@ local mappings = {
   ["]"] = {
     d = "Go to next diagnostic",
   },
+  ["<C-B>"] = "Back up a page",
+  ["<C-F>"] = "Forward down a page",
+  ["<C-D>"] = "Down half a page",
+  ["<C-U>"] = "Up half a page",
 }
 
 local wk = require('which-key')
