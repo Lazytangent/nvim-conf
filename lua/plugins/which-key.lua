@@ -117,6 +117,7 @@ local mappings = {
     D = "Go to declaration",
     d = "Go to definition",
     i = "Go to implementation",
+    r = "References",
   },
   ["K"] = "Hover",
   ["<C-k>"] = "Signature help",
@@ -128,6 +129,22 @@ local mappings = {
       l = "List folders",
     },
     D = "Type definition",
+    r = {
+      name = "+Rename",
+      n = "Rename",
+    },
+    c = {
+      name = "+Code",
+      a = "Code action",
+    },
+    e = "Show line diagnostics",
+    q = "Set loclist",
+  },
+  ["["] = {
+    d = "Go to prev diagnostic",
+  },
+  ["]"] = {
+    d = "Go to next diagnostic",
   },
 }
 
