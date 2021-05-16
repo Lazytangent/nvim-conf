@@ -35,6 +35,7 @@ Opts = {
   scrolloff = 7,
   textwidth = 80,
   mouse = "a",
+  smarttab = true,
 
   relativenumber = true,
   number = true,
