@@ -120,7 +120,7 @@ local mappings = {
     r = "References",
   },
   ["K"] = "Hover",
-  ["<C-k>"] = "Signature help",
+  ["<C-h>"] = "Signature help",
   ["<space>"] = {
     w = {
       name = "+Workspace",
