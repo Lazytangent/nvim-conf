@@ -39,6 +39,7 @@ return require("packer").startup(
     use {
       { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' },
       { 'mg979/vim-visual-multi', branch = 'master' },
+      'p00f/nvim-ts-rainbow',
       'kyazdani42/nvim-web-devicons',
       'ryanoasis/vim-devicons',
       'folke/lsp-colors.nvim',
