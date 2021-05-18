@@ -20,7 +20,6 @@ Opts = {
   showmatch = true,
   mat = 2,
   foldcolumn = "1",
-  clipboard = "unnamed",
   list = true,
   spell = true,
   modeline = true,
