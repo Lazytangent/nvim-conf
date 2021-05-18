@@ -22,7 +22,7 @@ return require("packer").startup(
 
     -- Specific Language Plugins
     use {
-      { 'heavenshell/vim-jsdoc', run = 'make install', },
+      { 'heavenshell/vim-jsdoc', run = 'make install' },
       'pantharshit00/vim-prisma',
       'leafgarland/typescript-vim',
       'peitalin/vim-jsx-typescript',
