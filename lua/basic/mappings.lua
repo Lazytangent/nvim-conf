@@ -142,6 +142,3 @@ u.map("v", "<C-j>", ":<C-U>exec \"'<,'>move '>+\" . (0+v:count1)<cr>gv", { norem
 
 -- Universal
 u.map("", "Q", "gq")
-
--- Command
-u.map("c", "Q", "q!")
