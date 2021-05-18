@@ -132,7 +132,6 @@ u.map("c", "<C-E>", "<End>", { noremap = true })
 u.map("c", "<C-K>", "<C-U>", { noremap = true })
 u.map("c", "<C-P>", "<Up>", { noremap = true })
 u.map("c", "<C-N>", "<Down>", { noremap = true })
-u.map("c", "Q", "q!", { noremap = true })
 
 -- Line movement
 u.map("n", "<C-k>", ":<C-U>exec \"exec 'norm m`' | move -\" . (1+v:count1)<cr>", { noremap = true })
