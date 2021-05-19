@@ -137,8 +137,5 @@ u.map("c", "<C-N>", "<Down>", { noremap = true })
 u.map("n", "<C-k>", ":<C-U>exec \"exec 'norm m`' | move -\" . (1+v:count1)<cr>", { noremap = true })
 u.map("n", "<C-j>", ":<C-U>exec \"exec 'norm m`' | move +\" . (0+v:count1)<cr>", { noremap = true })
 
-u.map("i", "<C-k>", "<C-O>m`<C-O>:move -2<cr><C-O>``", { noremap = true })
-u.map("i", "<C-j>", "<C-O>m`<C-O>:move +1<cr><C-O>``", { noremap = true })
-
 u.map("v", "<C-k>", ":<C-U>exec \"'<,'>move '<-\" . (1+v:count1)<cr>gv", { noremap = true })
 u.map("v", "<C-j>", ":<C-U>exec \"'<,'>move '>+\" . (0+v:count1)<cr>gv", { noremap = true })
