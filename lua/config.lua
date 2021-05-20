@@ -12,7 +12,6 @@ Opts = {
   cmdheight = 1,
   ruler = true,
   backspace = "eol,start,indent",
-  whichwrap = "<,>,h,l",
   smartcase = true,
   hlsearch = true,
   lazyredraw = true,
