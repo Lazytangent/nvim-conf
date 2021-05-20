@@ -6,6 +6,8 @@ require('nvim-treesitter.configs').setup {
     additional_vim_regex_highlighting = true,
     disable = {},
   },
-  indent = {enable = true},
-  rainbow = {enable = Treesitter.rainbow},
+  indent = { enable = true },
+  rainbow = { enable = Treesitter.rainbow },
+  textobjects = { enable = true },
+  incremental_selection = { enable = true },
 }
