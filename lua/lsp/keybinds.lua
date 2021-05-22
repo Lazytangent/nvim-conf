@@ -52,7 +52,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
-local servers = { 'clangd', 'jedi_language_server', 'jsonls', 'pyright', 'tsserver', 'vimls' }
+local servers = LSP.servers
 for _, lsp in ipairs(servers) do
   if lsp == 'html' then
     nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities }

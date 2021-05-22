@@ -58,6 +58,15 @@ LSP = {
   enabled = true,
   virtual_text = true,
   highlight_word = true,
+  servers = {
+    "clangd",
+    "jedi_language_server",
+    "jsonls",
+    "pyright",
+    "texlab",
+    "tsserver",
+    "vimls",
+  },
 }
 
 Completion = {
