@@ -7,7 +7,7 @@ vim.g.maplocalleader = " "
 u.map("", "Q", "gq")
 
 -- Normal Mode
-u.map("n", "<leader>w", ":w<cr>", { noremap = true })
+u.map("n", "<localleader>w", ":w<cr>", { noremap = true })
 u.map("n", "<leader>wq", ":wq<cr>", { noremap = true })
 u.map("n", "<leader>q", ":q<cr>", { noremap = true })
 u.map("n", "<leader>q", ":q<cr>", { noremap = true })
