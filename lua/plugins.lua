@@ -12,7 +12,7 @@ return require("packer").startup(
 
     -- Formatting && General LSP
     use {
-      { 'neoclide/coc.nvim', branch = "release", run = function() vim.fn['coc#util#install']() end },
+      { 'neoclide/coc.nvim', branch = "release" },
       { 'prettier/vim-prettier', run = 'yarn install' },
       { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
       'dense-analysis/ale',
