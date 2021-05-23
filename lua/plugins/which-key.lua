@@ -112,6 +112,7 @@ local mappings = {
   },
   ["<localleader>"] = {
     r = "Reload nvim config",
+    w = "Write",
   },
   ["g"] = {
     c = "Commentary",
@@ -124,12 +125,6 @@ local mappings = {
   ["K"] = "Hover",
   ["<C-h>"] = "Signature help",
   ["<space>"] = {
-    w = {
-      name = "+Workspace",
-      a = "Add folder",
-      r = "Remove folder",
-      l = "List folders",
-    },
     D = "Type definition",
     r = {
       name = "+Rename",
