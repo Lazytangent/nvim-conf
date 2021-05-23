@@ -38,6 +38,11 @@ local mappings = {
         t = "Git status",
       },
     },
+    m = {
+      name = "+MarkdownPreview",
+      d = "Preview Start",
+      s = "Preview Stop",
+    },
     n = {
       name = "+NERDTree",
       b = "From Bookmark",
@@ -111,6 +116,15 @@ local mappings = {
     },
   },
   ["<localleader>"] = {
+    c = {
+      d = "Change directory",
+      t = "Ctags",
+    },
+    n = {
+      name = "+Number",
+      n = "Toggle number",
+      r = "Toggle relative",
+    },
     r = "Reload nvim config",
     w = "Write",
   },
