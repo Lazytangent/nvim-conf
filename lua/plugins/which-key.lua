@@ -38,6 +38,8 @@ local mappings = {
         t = "Git status",
       },
     },
+    h = "Prev buffer",
+    l = "Next buffer",
     m = {
       name = "+MarkdownPreview",
       d = "Preview Start",
@@ -50,6 +52,8 @@ local mappings = {
       m = "Focus",
       n = "Toggle",
     },
+    O = "Add new line above",
+    o = "Add new line below",
     p = {
       name = "+Prettier and paste",
       p = "Toggle pastemode",
@@ -62,6 +66,8 @@ local mappings = {
         u = "Toggle relativenumber",
       },
     },
+    q = "Quit",
+    Q = "Force quit",
     s = {
       name = "+Spell",
       ["?"] = "Spelling suggestions",
@@ -83,16 +89,9 @@ local mappings = {
       name = "+Undo Fold",
       f = "Unfold",
     },
-    ["<CR>"] = "Turn off highlight",
-    h = "Prev buffer",
-    l = "Next buffer",
-    m = "Timestamp",
-    O = "Add new line above",
-    o = "Add new line below",
-    q = "Quit",
-    Q = "Force quit",
     w = "Write",
     x = "Create markdown buffer",
+    ["<CR>"] = "Turn off highlight",
     ["<C-k>"] = "Move line up",
     ["<C-j>"] = "Move line down",
     ["<C-n>"] = "Visual Multi",
@@ -120,6 +119,20 @@ local mappings = {
       d = "Change directory",
       t = "Ctags",
     },
+    d = "Diagnostics",
+    g = {
+      name = "+Coc",
+      c = "Commands",
+      d = "Defintion",
+      i = "Implementation",
+      r = "References",
+      y = "Type definition",
+    },
+    m = {
+      name = "+More utilities",
+      m = "Unix file encoding",
+      t = "Timestamp",
+    },
     n = {
       name = "+Number",
       n = "Toggle number",
@@ -127,6 +140,19 @@ local mappings = {
     },
     r = "Reload nvim config",
     w = "Write",
+  },
+  ["<space>"] = {
+    c = {
+      name = "+Code",
+      a = "Code action",
+    },
+    D = "Type definition",
+    e = "Show line diagnostics",
+    q = "Set loclist",
+    r = {
+      name = "+Rename",
+      n = "Rename",
+    },
   },
   ["g"] = {
     c = "Commentary",
@@ -138,19 +164,6 @@ local mappings = {
   },
   ["K"] = "Hover",
   ["<C-h>"] = "Signature help",
-  ["<space>"] = {
-    D = "Type definition",
-    r = {
-      name = "+Rename",
-      n = "Rename",
-    },
-    c = {
-      name = "+Code",
-      a = "Code action",
-    },
-    e = "Show line diagnostics",
-    q = "Set loclist",
-  },
   ["["] = {
     d = "Go to prev diagnostic",
   },

@@ -57,9 +57,9 @@ u.map("n", "t<C-l>", ":TestLast<cr>", { silent = true })
 u.map("n", "t<C-g>", ":TestVisit<cr>", { silent = true })
 
 -- NERDTree
-u.map("", "<leader>nn", ":NERDTreeToggle<cr>")
-u.map("", "<leader>nb", ":NERDTreeFromBookmark<Space>")
-u.map("", "<leader>nf", ":NERDTreeFind<cr>")
+u.map("",  "<leader>nn", ":NERDTreeToggle<cr>")
+u.map("",  "<leader>nb", ":NERDTreeFromBookmark<Space>")
+u.map("",  "<leader>nf", ":NERDTreeFind<cr>")
 u.map("n", "<leader>nm", ":NERDTreeFocus<cr>", { noremap = true })
 
 -- Vim-TailwindCSS
@@ -68,10 +68,10 @@ u.map("n", "<leader>tw", ":set completefunc=tailwind#complete<cr>")
 -- Vim-Coc
 u.map("n", "[r", "<Plug>(coc-diagnostic-prev)", { silent = true })
 u.map("n", "]r", "<Plug>(coc-diagnostic-next)", { silent = true })
-u.map("n", "<leader>gd", "<Plug>(coc-definition)", { silent = true })
-u.map("n", "<leader>gy", "<Plug>(coc-type-definition)", { silent = true })
-u.map("n", "<leader>gi", "<Plug>(coc-implementation)", { silent = true })
-u.map("n", "<leader>gr", "<Plug>(coc-references)", { silent = true })
+u.map("n", "<localleader>gd", "<Plug>(coc-definition)", { silent = true })
+u.map("n", "<localleader>gy", "<Plug>(coc-type-definition)", { silent = true })
+u.map("n", "<localleader>gi", "<Plug>(coc-implementation)", { silent = true })
+u.map("n", "<localleader>gr", "<Plug>(coc-references)", { silent = true })
 u.map("n", "<localleader>d", ":<C-u>CocList diagnostics<cr>", { noremap = true, silent = true })
 u.map("n", "<localleader>c", ":<C-u>CocList commands<cr>", { noremap = true, silent = true })
 
@@ -94,33 +94,33 @@ u.map("v", "*", ":<C-u>call VisualSelection('', '')<cr>/<C-R>=@/<cr><cr>", { sil
 u.map("v", "#", ":<C-u>call VisualSelection('', '')<cr>?<C-R>=@/<cr><cr>", { silent = true, noremap = true })
 
 -- Moving around tabs, windows, and buffers
-u.map("", "<leader><cr>", ":noh<cr>", { silent = true })
+u.map("",  "<leader><cr>", ":noh<cr>", { silent = true })
 
-u.map("", "<leader>ba", [[:%bd|e#|bd#<cr>]])
-u.map("", "<leader>l", [[:bnext<cr>]])
-u.map("", "<leader>h", [[:bprevious<cr>]])
+u.map("",  "<leader>ba", [[:%bd|e#|bd#<cr>]])
+u.map("",  "<leader>l", [[:bnext<cr>]])
+u.map("",  "<leader>h", [[:bprevious<cr>]])
 
-u.map("", "<leader>tn", ":tabnew<cr>")
-u.map("", "<leader>to", ":tabonly<cr>")
-u.map("", "<leader>tc", ":tabclose<cr>")
-u.map("", "<leader>tm", ":tabmove<cr>")
-u.map("", "<leader>tr", ":tabonly<cr>")
+u.map("",  "<leader>tn", ":tabnew<cr>")
+u.map("",  "<leader>to", ":tabonly<cr>")
+u.map("",  "<leader>tc", ":tabclose<cr>")
+u.map("",  "<leader>tm", ":tabmove<cr>")
+u.map("",  "<leader>tr", ":tabonly<cr>")
 
-u.map("", "<leader>te", [[:tabedit <C-r>=expand("%:p:h")<cr>/]])
-u.map("", "<leader>cd", ":cd %:p:h<cr>:pwd<cr>")
+u.map("",  "<leader>te", [[:tabedit <C-r>=expand("%:p:h")<cr>/]])
+u.map("",  "<leader>cd", ":cd %:p:h<cr>:pwd<cr>")
 
 -- Spell Checking
-u.map("", "<leader>ss", ":setlocal spell!<cr>")
-u.map("", "<leader>sn", "]s")
-u.map("", "<leader>sp", "[s")
-u.map("", "<leader>sa", "zg")
-u.map("", "<leader>s?", "z=")
+u.map("",  "<leader>ss", ":setlocal spell!<cr>")
+u.map("",  "<leader>sn", "]s")
+u.map("",  "<leader>sp", "[s")
+u.map("",  "<leader>sa", "zg")
+u.map("",  "<leader>s?", "z=")
 
 -- Misc.
-u.map("n", "<leader>m", "mmHmt:%s/<C-v><cr>//ge<cr>'tzt'm", { noremap = true })
-u.map("n", "<leader>mm", ":set ff=unix<cr>", { noremap = true })
-u.map("", "<leader>x", ":e ~/buffer.md<cr>")
-u.map("", "<leader>pp", ":setlocal paste!<cr>")
+u.map("n", "<localleader>mt", "mmHmt:%s/<C-v><cr>//ge<cr>'tzt'm", { noremap = true })
+u.map("n", "<localleader>mm", ":set ff=unix<cr>", { noremap = true })
+u.map("",  "<leader>x", ":e ~/buffer.md<cr>")
+u.map("",  "<leader>pp", ":setlocal paste!<cr>")
 u.map("v", "<C-c>", ":w !xclip -i -sel c<cr><cr>", { noremap = true })
 u.map("t", "<Esc", "<C-\\><C-n>", { noremap = true })
 
