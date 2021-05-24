@@ -33,6 +33,7 @@ return require("packer").startup(
       'mrdotb/vim-tailwindcss',
       'nvie/vim-flake8',
       'jmcantrell/vim-virtualenv',
+      'jidn/vim-dbml',
     }
 
     -- Quality of Life Improvements
