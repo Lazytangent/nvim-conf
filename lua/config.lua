@@ -59,7 +59,10 @@ LSP = {
   virtual_text = true,
   highlight_word = true,
   servers = {
+    "angularls",
     "clangd",
+    "cssls",
+    "html",
     "jedi_language_server",
     "jsonls",
     "pyright",
