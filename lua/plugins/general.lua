@@ -74,4 +74,4 @@ vim.g.fzf_action = {
 vim.g.smoothie_experimental_mappings = true
 
 -- Emmet-Vim
-vim.g.user_emmet_leader_key='<C-Z>'
+vim.g.user_emmet_leader_key='<C-L>'
