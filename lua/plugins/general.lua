@@ -51,6 +51,7 @@ vim.g.ale_fixers = {
   javascript = { 'prettier', 'eslint' },
   python = { 'autopep8', 'yapf' },
   typescript = { 'prettier', 'eslint' },
+  html = { 'prettier' },
 }
 vim.g.ale_change_sign_column_color = 1
 
