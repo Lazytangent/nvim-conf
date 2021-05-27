@@ -60,15 +60,20 @@ LSP = {
   highlight_word = true,
   servers = {
     "angularls",
+    "bashls",
     "clangd",
     "cssls",
+    "dockerls",
+    "graphql",
     "html",
     "jedi_language_server",
     "jsonls",
     "pyright",
+    "sqlls",
     "texlab",
     "tsserver",
     "vimls",
+    "yamlls",
   },
 }
 

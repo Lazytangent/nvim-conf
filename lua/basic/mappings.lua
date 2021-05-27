@@ -7,8 +7,8 @@ vim.g.maplocalleader = " "
 u.map("", "Q", "gq")
 
 -- Normal Mode Save and Quit Commands
-u.map("n", "<localleader>w", ":w<cr>", { noremap = true })
-u.map("n", "<leader>wq", ":wq<cr>", { noremap = true })
+u.map("n", "<leader>w", ":w<cr>", { noremap = true })
+u.map("n", "<localleader>wq", ":wq<cr>", { noremap = true })
 u.map("n", "<leader>q", ":q<cr>", { noremap = true })
 u.map("n", "<leader>Q", ":q!<cr>", { noremap = true })
 

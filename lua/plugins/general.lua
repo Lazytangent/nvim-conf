@@ -46,6 +46,9 @@ vim.g.vim_markdown_fenced_languages = {
 
 -- Vim-Ale
 vim.g.ale_disable_lsp = 1
+vim.g.ale_linters = {
+  sh = { 'language_server', },
+}
 vim.g.ale_fixers = {
   ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
   javascript = { 'prettier', 'eslint' },

@@ -33,10 +33,7 @@ local mappings = {
       r = "Coc-References",
       w = "Write and Add",
       y = "Go to type definition",
-      s = {
-        name = "+Git status",
-        t = "Git status",
-      },
+      s = "Status",
     },
     h = "Prev buffer",
     l = "Next buffer",
@@ -139,7 +136,6 @@ local mappings = {
       r = "Toggle relative",
     },
     r = "Reload nvim config",
-    w = "Write",
   },
   ["<space>"] = {
     c = {
@@ -152,6 +148,13 @@ local mappings = {
     r = {
       name = "+Rename",
       n = "Rename",
+    },
+    w = {
+      name = "+Workspace",
+      a = "Add folder",
+      l = "List folders",
+      r = "Remove folder",
+      q = "Write and quit",
     },
   },
   ["g"] = {
