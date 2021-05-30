@@ -48,6 +48,7 @@ vim.g.vim_markdown_fenced_languages = {
 vim.g.ale_disable_lsp = 1
 vim.g.ale_linters = {
   sh = { 'language_server', },
+  python = { 'autopep8', },
 }
 vim.g.ale_fixers = {
   ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
@@ -61,10 +62,11 @@ vim.g.ale_change_sign_column_color = 1
 -- Vim-Coc
 vim.g.coc_global_extensions = {
   "coc-emmet", "coc-css", "coc-html", "coc-json", "coc-prettier",
-  "coc-tsserver", "coc-git", "coc-pyright", "coc-sql", "coc-sh",
+  "coc-tsserver", "coc-git", "coc-sql", "coc-sh",
   "coc-yank", "coc-vimlsp", "coc-jedi", "coc-clangd", "coc-go",
   "coc-yaml", "coc-toml", "coc-texlab", "coc-tailwindcss",
   "coc-omnisharp", "coc-prisma",
+  -- "coc-pyright",
 }
 
 -- FZF

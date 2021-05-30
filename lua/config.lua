@@ -68,7 +68,6 @@ LSP = {
     "html",
     "jedi_language_server",
     "jsonls",
-    "pyright",
     "sqlls",
     "texlab",
     "tsserver",
