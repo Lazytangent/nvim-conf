@@ -49,6 +49,8 @@ vim.g.ale_disable_lsp = 1
 vim.g.ale_linters = {
   sh = { 'language_server', },
   python = { 'autopep8', },
+  typescript = { 'tsserver', 'prettier', 'eslint', },
+  javascript = { 'tsserver', 'prettier', 'eslint', },
 }
 vim.g.ale_fixers = {
   ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
