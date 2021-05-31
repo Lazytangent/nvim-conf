@@ -5,13 +5,8 @@ require('nvim-treesitter.configs').setup {
     use_languagetree = true,
     additional_vim_regex_highlighting = true,
     disable = {},
-    custom_captures = {
-      ["%81v"] = "Error",
-    },
-    textobjects = { enable = true },
   },
   indent = { enable = true },
   rainbow = { enable = Treesitter.rainbow },
-  textobjects = { enable = true },
   incremental_selection = { enable = true },
 }
