@@ -15,8 +15,8 @@ u.map("n", "<leader>Q", ":q!<cr>", { noremap = true })
 -- Insert Mode Save
 u.map("i", "<C-s>", "<Esc>:w<cr>i")
 
-u.map("n", "<leader>o", "o<Esc>", { noremap = true })
-u.map("n", "<leader>O", "O<Esc>", { noremap = true })
+u.map("n", "<localleader>o", "o<Esc>", { noremap = true })
+u.map("n", "<localleader>O", "O<Esc>", { noremap = true })
 u.map("n", "<localleader>qa", ":qa<cr>", { noremap = true })
 
 u.map("n", "<localleader>nr", ":set rnu!<cr>", { noremap = true })
