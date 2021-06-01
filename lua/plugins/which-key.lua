@@ -2,11 +2,6 @@ require("which-key").setup{}
 
 local mappings = {
   ["<leader>"] = {
-    a = {
-      name = "+ALE",
-      F = "ALE Fix",
-      I = "ALE Info",
-    },
     b = {
       name = "+Buffers",
       a = "Close all other buffers",
