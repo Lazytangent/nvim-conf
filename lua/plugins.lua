@@ -15,7 +15,6 @@ return require("packer").startup(
       { 'neoclide/coc.nvim', branch = "release" },
       { 'prettier/vim-prettier', run = 'yarn install' },
       { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
-      'dense-analysis/ale',
       'mattn/emmet-vim',
       'neovim/nvim-lspconfig',
     }

@@ -75,10 +75,6 @@ u.map("n", "<localleader>gr", "<Plug>(coc-references)", { silent = true })
 u.map("n", "<localleader>d", ":<C-u>CocList diagnostics<cr>", { noremap = true, silent = true })
 u.map("n", "<localleader>c", ":<C-u>CocList commands<cr>", { noremap = true, silent = true })
 
--- Vim-Ale
-u.map("n", "<leader>aF", ":ALEFix<cr>", { noremap = true })
-u.map("n", "<leader>aI", ":ALEInfo<cr>", { noremap = true })
-
 -- FZF
 u.map("n", "<C-p>", ":FZF<cr>", { noremap = true })
 
