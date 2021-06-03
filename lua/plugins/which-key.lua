@@ -10,6 +10,7 @@ local mappings = {
     c = {
       name = "+Change",
       d = "Change working directory",
+      t = "Ctags",
     },
     f = {
       name = "+Telescope",
@@ -46,11 +47,6 @@ local mappings = {
     },
     O = "Add new line above",
     o = "Add new line below",
-    p = {
-      name = "+Prettier and paste",
-      g = "Run Prettier",
-      p = "Toggle pastemode",
-    },
     r = {
       name = "+Relative number",
       n = {
@@ -108,7 +104,6 @@ local mappings = {
   },
   ["<localleader>"] = {
     c = {
-      d = "Change directory",
       t = "Ctags",
     },
     d = "Diagnostics",
@@ -140,11 +135,6 @@ local mappings = {
     D = "Type definition",
     e = "Show line diagnostics",
     f = "Format",
-    q = "Set loclist",
-    r = {
-      name = "+Rename",
-      n = "Rename",
-    },
     w = {
       name = "+Workspace",
       a = "Add folder",

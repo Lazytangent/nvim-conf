@@ -17,7 +17,6 @@ u.map("i", "<C-s>", "<Esc>:w<cr>i")
 
 u.map("n", "<localleader>o", "o<Esc>", { noremap = true })
 u.map("n", "<localleader>O", "O<Esc>", { noremap = true })
-u.map("n", "<localleader>qa", ":qa<cr>", { noremap = true })
 
 u.map("n", "<localleader>nr", ":set rnu!<cr>", { noremap = true })
 u.map("n", "<localleader>nn", ":set nu!<cr>", { noremap = true })
@@ -27,8 +26,8 @@ u.map("n", "<localleader>r", ":source ~/.config/nvim/init.lua<cr>", { noremap = 
 u.map("n", "<leader>fu", "zM<cr>", { noremap = true })
 u.map("n", "<leader>uf", "zR<cr>", { noremap = true })
 
-u.map("n", "<localleader>ct", ":!ctags -R .<cr><cr>", { noremap = true })
-u.map("n", "<localleader>cd", ":cd %:h<cr>", { noremap = true })
+u.map("n", "<leader>ct", ":!ctags -R .<cr><cr>", { noremap = true })
+u.map("n", "<leader>cd", ":cd %:h<cr>", { noremap = true })
 
 u.map("n", "j", "gj")
 u.map("n", "k", "gk")
