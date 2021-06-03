@@ -139,6 +139,7 @@ local mappings = {
     },
     D = "Type definition",
     e = "Show line diagnostics",
+    f = "Format",
     q = "Set loclist",
     r = {
       name = "+Rename",
