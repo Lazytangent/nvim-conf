@@ -8,7 +8,7 @@ require "lsp"
 
 -- Plugins
 require "plugins.general"
--- require "plugins.which-key"
+require "plugins.which-key"
 require "plugins.treesitter"
 
 -- Personal config

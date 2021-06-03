@@ -44,7 +44,7 @@ return require("packer").startup(
       'ryanoasis/vim-devicons',
       'folke/lsp-colors.nvim',
       'folke/trouble.nvim',
-      -- 'folke/which-key.nvim',
+      'folke/which-key.nvim',
       'nvim-lua/popup.nvim',
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope.nvim',
