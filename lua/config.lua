@@ -66,7 +66,7 @@ LSP = {
     "clangd",
     "cssls",
     "dockerls",
-    "denols",
+    -- "denols",
     "graphql",
     "html",
     "jedi_language_server",
