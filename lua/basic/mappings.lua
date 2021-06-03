@@ -78,7 +78,7 @@ u.map("n", "<localleader>c", ":<C-u>CocList commands<cr>", { noremap = true, sil
 -- FZF
 u.map("n", "<C-p>", ":FZF<cr>", { noremap = true })
 
-u.map("n", "<leader>pg", "<Plug>(Prettier)")
+u.map("n", "<leader>pg", "<cmd>Prettier<cr><cmd>w | e<cr>")
 
 -- Vim-Fugitive
 u.map("n", "<leader>gs", ":Git<cr>", { noremap = true })

@@ -57,6 +57,8 @@ local servers = LSP.servers
 for _, lsp in ipairs(servers) do
   if lsp == 'html' then
     nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities }
+  elseif lsp == 'denols' then
+    nvim_lsp[lsp].setup { init_options = { enable = true, lint = true, unstable = false } }
   else
     nvim_lsp[lsp].setup { on_attach = on_attach }
   end
