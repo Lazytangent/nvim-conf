@@ -48,8 +48,8 @@ local mappings = {
     o = "Add new line below",
     p = {
       name = "+Prettier and paste",
+      g = "Run Prettier",
       p = "Toggle pastemode",
-      y = "Run Prettier",
     },
     r = {
       name = "+Relative number",
