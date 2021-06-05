@@ -21,6 +21,7 @@ local autocmds = {
     {"BufNewFile,BufRead", "*.rasi", "set filetype=css"},
 
     {"FileType", "go", "setlocal shiftwidth=4 softtabstop=4"},
+    {"BufNewFile,BufRead", "*.zshrc", "set filetype=zsh"},
   },
   hl_yank = {
     {"TextYankPost", "*", 'lua require"vim.highlight".on_yank()'},
