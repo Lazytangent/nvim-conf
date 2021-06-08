@@ -9,7 +9,6 @@ require('nvim-treesitter.configs').setup {
   indent = { enable = true },
   rainbow = { enable = Treesitter.rainbow },
   incremental_selection = { enable = true },
-  tree_docs = { enable = true },
   refactor = {
     highlight_definitions = { enable = true },
   },
