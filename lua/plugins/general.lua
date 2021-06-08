@@ -4,6 +4,7 @@ require("lsp-colors").setup {}
 require("lualine").setup {
   options = {
     theme = "nightfly",
+    icons_enabled = false,
   },
   sections = {
     lualine_c = {{ 'filename', file_status = true, path = 1 }, 'diff'},
