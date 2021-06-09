@@ -12,13 +12,6 @@ local mappings = {
       d = "Change working directory",
       t = "Ctags",
     },
-    f = {
-      name = "+Telescope",
-      b = "Find buffer",
-      f = "Find files",
-      g = "Grep",
-      h = "Help",
-    },
     g = {
       name = "+Git and Goto",
       c = "Git commit",

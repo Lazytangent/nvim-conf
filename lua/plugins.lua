@@ -50,7 +50,7 @@ return require("packer").startup(
       'folke/which-key.nvim',
       'nvim-lua/popup.nvim',
       'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
+      'camspiers/snap',
       'axvr/org.vim',
       'xolox/vim-misc',
       'xolox/vim-easytags',

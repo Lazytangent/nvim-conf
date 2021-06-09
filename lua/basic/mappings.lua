@@ -32,12 +32,6 @@ u.map("n", "<leader>cd", ":cd %:h<cr>", { noremap = true })
 u.map("n", "j", "gj")
 u.map("n", "k", "gk")
 
--- Nvim Telescope
-u.map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { noremap = true })
-u.map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { noremap = true })
-u.map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { noremap = true })
-u.map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true })
-
 -- Vim-Instant-Markdown
 u.map("n", "<leader>md", ":InstantMarkdownPreview<cr>")
 u.map("n", "<leader>ms", ":InstantMarkdownStop<cr>")

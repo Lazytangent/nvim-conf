@@ -10,6 +10,7 @@ require "lsp"
 require "plugins.general"
 require "plugins.which-key"
 require "plugins.treesitter"
+require "plugins.snap"
 
 -- Personal config
 require "basic"
