@@ -49,11 +49,9 @@ u.map("n", "t<C-s>", ":TestSuite<cr>", { silent = true })
 u.map("n", "t<C-l>", ":TestLast<cr>", { silent = true })
 u.map("n", "t<C-g>", ":TestVisit<cr>", { silent = true })
 
--- NERDTree
-u.map("",  "<leader>nn", ":NERDTreeToggle<cr>")
-u.map("",  "<leader>nb", ":NERDTreeFromBookmark<Space>")
-u.map("",  "<leader>nf", ":NERDTreeFind<cr>")
-u.map("n", "<leader>nm", ":NERDTreeFocus<cr>", { noremap = true })
+-- Nvim Tree
+u.map("",  "<leader>nn", ":NvimTreeToggle<cr>")
+u.map("",  "<leader>nf", ":NvimTreeFindFile<cr>")
 
 -- Vim-TailwindCSS
 u.map("n", "<leader>tw", ":set completefunc=tailwind#complete<cr>")

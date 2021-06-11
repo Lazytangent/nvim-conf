@@ -31,13 +31,6 @@ vim.g.instant_markdown_autoscroll = 1
 -- Drag Visuals
 vim.g.DVB_TrimWS = 1
 
--- NERDTree
-vim.g.NERDTreeWinPos = "right"
-vim.g.NERDTreeShowHidden = 1
-vim.g.NERDTreeMinimalUI = 1
-vim.g.NERDTreeIgnore = {'.pyc$', '__pycache__'}
-vim.g.NERDTreeStatusLink = ""
-
 -- Vim-Markdown
 vim.g.vim_markdown_fenced_languages = {
   'html', 'python', 'css', 'javascript',
