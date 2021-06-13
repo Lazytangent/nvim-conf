@@ -59,6 +59,18 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities }
   elseif lsp == 'denols' then
     nvim_lsp[lsp].setup { init_options = { enable = true, lint = true, unstable = false } }
+  elseif ldp == 'gopls' then
+    nvim_lsp[lsp].setup {
+      cmd = {"gopls", "serve"},
+      settings = {
+        gopls = {
+          analyses = {
+            unusuedparams = true,
+          },
+          staticcheck = true,
+        },
+      },
+    }
   else
     nvim_lsp[lsp].setup { on_attach = on_attach }
   end
