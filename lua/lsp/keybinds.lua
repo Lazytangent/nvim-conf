@@ -70,6 +70,7 @@ for _, lsp in ipairs(servers) do
           staticcheck = true,
         },
       },
+      on_attach = on_attach,
     }
   else
     nvim_lsp[lsp].setup { on_attach = on_attach }
