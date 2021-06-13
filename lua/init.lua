@@ -11,6 +11,7 @@ require "plugins.general"
 require "plugins.which-key"
 require "plugins.treesitter"
 require "plugins.snap"
+require "plugins.nvim-tree"
 
 -- Personal config
 require "basic"
