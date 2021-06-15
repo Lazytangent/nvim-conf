@@ -59,6 +59,8 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities }
   elseif lsp == 'denols' then
     nvim_lsp[lsp].setup { init_options = { enable = true, lint = true, unstable = false } }
+  elseif lsp == 'sqlls' then
+    nvim_lsp[lsp].setup { cmd = {'sql-language-server', 'up', '--method', 'stdio'} }
   elseif ldp == 'gopls' then
     nvim_lsp[lsp].setup {
       cmd = {"gopls", "serve"},
