@@ -12,6 +12,12 @@ local mappings = {
       d = "Change working directory",
       t = "Ctags",
     },
+    f = {
+      name = "+Telescope",
+      d = "Definitions",
+      g = "Git",
+      r = "References",
+    },
     g = {
       name = "+Git and Goto",
       c = "Git commit",
@@ -66,40 +72,24 @@ local mappings = {
       o = "Only tab",
       w = "Tailwind Complete",
     },
-    u = {
-      name = "+Undo Fold",
-      f = "Unfold",
-    },
     w = "Write",
     x = "Create markdown buffer",
     ["<CR>"] = "Turn off highlight",
-    ["<C-k>"] = "Move line up",
-    ["<C-j>"] = "Move line down",
-    ["<C-n>"] = "Visual Multi",
-    ["<C-z>"] = {
-      name = "+Emmet",
-      [","] = "Expand abbr",
-      ["/"] = "Toggle comment",
-      [";"] = "Expand word",
-      a = "Anchorize url",
-      A = "Anchorize summary",
-      D = "Balance tag outword",
-      d = "Balance tag inward",
-      I = "Image encode",
-      i = "Image size",
-      j = "Split join tag",
-      k = "Remove tag",
-      m = "Merge lines",
-      N = "Move prev",
-      n = "Move next",
-      u = "Update tag",
-    },
   },
   ["<localleader>"] = {
     c = {
       t = "Ctags",
     },
     d = "Diagnostics",
+    f = {
+      name = "+Telescope",
+      b = "Find Buffers",
+      f = "Find Files",
+      g = "Live Grep",
+      h = "Help tags",
+      p = "Planets",
+      t = "Treesitter",
+    },
     g = {
       name = "+Coc",
       c = "Commands",
@@ -127,7 +117,6 @@ local mappings = {
     },
     D = "Type definition",
     e = "Show line diagnostics",
-    f = "Format",
     w = {
       name = "+Workspace",
       a = "Add folder",
@@ -156,6 +145,9 @@ local mappings = {
   ["<C-F>"] = "Forward down a page",
   ["<C-D>"] = "Down half a page",
   ["<C-U>"] = "Up half a page",
+  ["<C-k>"] = "Move line up",
+  ["<C-j>"] = "Move line down",
+  ["<C-n>"] = "Visual Multi",
 }
 
 local wk = require('which-key')

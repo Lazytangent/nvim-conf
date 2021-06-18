@@ -23,9 +23,6 @@ u.map("n", "<localleader>nn", ":set nu!<cr>", { noremap = true })
 
 u.map("n", "<localleader>r", ":source ~/.config/nvim/init.lua<cr>", { noremap = true })
 
-u.map("n", "<leader>fu", "zM<cr>", { noremap = true })
-u.map("n", "<leader>uf", "zR<cr>", { noremap = true })
-
 u.map("n", "<leader>ct", ":!ctags -R .<cr><cr>", { noremap = true })
 u.map("n", "<leader>cd", ":cd %:h<cr>", { noremap = true })
 
@@ -48,6 +45,18 @@ u.map("n", "t<C-f>", ":TestFile<cr>", { silent = true })
 u.map("n", "t<C-s>", ":TestSuite<cr>", { silent = true })
 u.map("n", "t<C-l>", ":TestLast<cr>", { silent = true })
 u.map("n", "t<C-g>", ":TestVisit<cr>", { silent = true })
+
+-- Telescope.nvim
+u.map("n", "<localleader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
+u.map("n", "<localleader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
+u.map("n", "<localleader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
+u.map("n", "<localleader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
+u.map("n", "<localleader>fp", "<cmd>lua require('telescope.builtin').planets()<cr>")
+u.map("n", "<localleader>ft", "<cmd>lua require('telescope.builtin').treesitter()<cr>")
+
+u.map("n", "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>")
+u.map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').git_status()<cr>")
+u.map("n", "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<cr>")
 
 -- Nvim Tree
 u.map("",  "<leader>nn", ":NvimTreeToggle<cr>")
