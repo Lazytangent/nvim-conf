@@ -38,7 +38,6 @@ local autocmds = {
 
 u.define_augroups(autocmds)
 
-vim.cmd("autocmd bufenter * if (winnr(\"$\") == 1 && exists(\"b:NERDTree\") && b:NERDTree.isTabTree()) | q | endif")
 vim.cmd("autocmd FocusGained,BufEnter * checktime")
 vim.cmd("autocmd BufWritePost plugins.lua PackerCompile")
 -- vim.cmd("highlight ColorColumn ctermbg=magenta")
