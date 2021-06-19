@@ -49,13 +49,15 @@ u.map("n", "t<C-g>", ":TestVisit<cr>", { silent = true })
 -- Telescope.nvim
 u.map("n", "<localleader>cc", "<cmd>lua require('telescope.builtin').colorscheme()<cr>")
 
+u.map("n", "<localleader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.map("n", "<localleader>fc", "<cmd>lua require('telescope.builtin').commands()<cr>")
 u.map("n", "<localleader>fd", "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>")
 u.map("n", "<localleader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.map("n", "<localleader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
-u.map("n", "<localleader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.map("n", "<localleader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
+u.map("n", "<localleader>fl", "<cmd>lua require('telescope.builtin').loclist()<cr>")
 u.map("n", "<localleader>fp", "<cmd>lua require('telescope.builtin').planets()<cr>")
+u.map("n", "<localleader>fq", "<cmd>lua require('telescope.builtin').quickfix()<cr>")
 u.map("n", "<localleader>fr", "<cmd>lua require('telescope.builtin').registers()<cr>")
 u.map("n", "<localleader>ft", "<cmd>lua require('telescope.builtin').treesitter()<cr>")
 
