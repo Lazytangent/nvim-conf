@@ -47,16 +47,23 @@ u.map("n", "t<C-l>", ":TestLast<cr>", { silent = true })
 u.map("n", "t<C-g>", ":TestVisit<cr>", { silent = true })
 
 -- Telescope.nvim
+u.map("n", "<localleader>cc", "<cmd>lua require('telescope.builtin').colorscheme()<cr>")
+
+u.map("n", "<localleader>fc", "<cmd>lua require('telescope.builtin').commands()<cr>")
+u.map("n", "<localleader>fd", "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>")
 u.map("n", "<localleader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.map("n", "<localleader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 u.map("n", "<localleader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.map("n", "<localleader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 u.map("n", "<localleader>fp", "<cmd>lua require('telescope.builtin').planets()<cr>")
+u.map("n", "<localleader>fr", "<cmd>lua require('telescope.builtin').registers()<cr>")
 u.map("n", "<localleader>ft", "<cmd>lua require('telescope.builtin').treesitter()<cr>")
 
 u.map("n", "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>")
+u.map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>")
 u.map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').git_status()<cr>")
 u.map("n", "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<cr>")
+u.map("n", "<leader>ft", "<cmd>lua require('telescope.builtin').tags()<cr>")
 
 -- Nvim Tree
 u.map("",  "<leader>nn", ":NvimTreeToggle<cr>")
@@ -65,16 +72,7 @@ u.map("",  "<leader>nf", ":NvimTreeFindFile<cr>")
 -- Vim-TailwindCSS
 u.map("n", "<leader>tw", ":set completefunc=tailwind#complete<cr>")
 
--- Vim-Coc
-u.map("n", "[r", "<Plug>(coc-diagnostic-prev)", { silent = true })
-u.map("n", "]r", "<Plug>(coc-diagnostic-next)", { silent = true })
-u.map("n", "<localleader>gd", "<Plug>(coc-definition)", { silent = true })
-u.map("n", "<localleader>gy", "<Plug>(coc-type-definition)", { silent = true })
-u.map("n", "<localleader>gi", "<Plug>(coc-implementation)", { silent = true })
-u.map("n", "<localleader>gr", "<Plug>(coc-references)", { silent = true })
-u.map("n", "<localleader>d", ":<C-u>CocList diagnostics<cr>", { noremap = true, silent = true })
-u.map("n", "<localleader>c", ":<C-u>CocList commands<cr>", { noremap = true, silent = true })
-
+-- Prettier
 u.map("n", "<localleader>pg", "<cmd>Prettier<cr><cmd>w | e<cr>")
 
 -- Vim-Fugitive
