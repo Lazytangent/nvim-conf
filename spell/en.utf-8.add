@@ -989,3 +989,12 @@ RepositoryPage
 NavLink
 useQuery
 isLoading
+builtin
+fd
+fg
+colorscheme
+fb
+fc
+fh
+fp
+fq

@@ -11,6 +11,7 @@ require "plugins.general"
 require "plugins.which-key"
 require "plugins.treesitter"
 require "plugins.nvim-tree"
+require "plugins.telescope"
 
 -- Personal config
 require "basic"
