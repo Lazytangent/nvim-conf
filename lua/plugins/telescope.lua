@@ -17,6 +17,7 @@ u.map("n", "<localleader>fq", "<cmd>lua require('telescope.builtin').quickfix()<
 u.map("n", "<localleader>fr", "<cmd>lua require('telescope.builtin').registers()<cr>")
 u.map("n", "<localleader>ft", "<cmd>lua require('telescope.builtin').treesitter()<cr>")
 
+u.map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').file_browser()<cr>")
 u.map("n", "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>")
 u.map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>")
 u.map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').git_status()<cr>")
