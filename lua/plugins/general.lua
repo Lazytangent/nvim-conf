@@ -38,34 +38,6 @@ vim.g.vim_markdown_fenced_languages = {
   'viml=vim', 'vim', 'bash=sh',
 }
 
--- Vim-Ale
-vim.g.ale_disable_lsp = 1
-vim.g.ale_linters = {
-  sh = { 'language_server', },
-  python = { 'autopep8', },
-  typescript = { 'tsserver', 'prettier', 'eslint', },
-  javascript = { 'tsserver', 'prettier', 'eslint', },
-}
-vim.g.ale_fixers = {
-  ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
-  javascript = { 'prettier', 'eslint' },
-  python = { 'autopep8', 'yapf' },
-  typescript = { 'prettier', 'eslint' },
-  html = { 'prettier' },
-  typescriptreact = { 'prettier', 'eslint' },
-}
-vim.g.ale_change_sign_column_color = 1
-
--- Vim-Coc
-vim.g.coc_global_extensions = {
-  "coc-emmet", "coc-css", "coc-html", "coc-json", "coc-prettier",
-  "coc-tsserver", "coc-git", "coc-sql", "coc-sh",
-  "coc-yank", "coc-vimlsp", "coc-jedi", "coc-clangd", "coc-go",
-  "coc-yaml", "coc-toml", "coc-texlab", "coc-tailwindcss",
-  "coc-omnisharp", "coc-prisma",
-  -- "coc-pyright",
-}
-
 -- FZF
 vim.g.fzf_action = {
   ["ctrl-t"] = "tab split",
