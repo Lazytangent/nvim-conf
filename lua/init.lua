@@ -6,6 +6,9 @@ require "plugins"
 -- LSP
 require "lsp"
 
+vim.g.mapleader = ","
+vim.g.maplocalleader = " "
+
 -- Plugins
 require "plugins.general"
 require "plugins.which-key"
