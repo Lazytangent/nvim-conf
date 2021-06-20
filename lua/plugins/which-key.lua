@@ -125,6 +125,9 @@ local mappings = {
       q = "Write and quit",
     },
   },
+  ["\\"] = {
+    f = "Format",
+  },
   ["g"] = {
     c = "Commentary",
     D = "Go to declaration",

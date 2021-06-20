@@ -46,6 +46,8 @@ local on_attach = function(client, bufnr)
   --     augroup END
   --   ]], false)
   -- end
+  local completion_on_attach = require'completion'.on_attach
+  completion_on_attach(client, buffer)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
