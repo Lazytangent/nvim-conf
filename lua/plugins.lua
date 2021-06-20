@@ -50,7 +50,6 @@ return require("packer").startup(
       'nvim-lua/popup.nvim',
       'nvim-lua/plenary.nvim',
       { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} },
-      'nvim-lua/completion-nvim',
       'axvr/org.vim',
       'xolox/vim-misc',
       'xolox/vim-easytags',
