@@ -1,6 +1,6 @@
 vim = vim
 local utils = {}
-local scopes = {g = vim.g, o = vim.o, b = vim.bo, w = vim.wo}
+local scopes = {g = vim.go, o = vim.o, b = vim.bo, w = vim.wo}
 
 -- autocommands
 function utils.define_augroups(definitions)
@@ -12,7 +12,7 @@ function utils.define_augroups(definitions)
       local command = table.concat(vim.tbl_flatten {"autocmd", def}, " ")
       vim.cmd(command)
     end
-    
+
     vim.cmd("augroup END")
   end
 end

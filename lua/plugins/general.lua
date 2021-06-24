@@ -13,6 +13,9 @@ require("lualine").setup {
 }
 
 require('indent_blankline').setup {}
+require('neoscroll').setup {
+  easing_function = 'circular',
+}
 
 -- Variables
 --------------------------------------------------------------------------------
