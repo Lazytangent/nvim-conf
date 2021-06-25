@@ -55,6 +55,7 @@ return require("packer").startup(
       'xolox/vim-easytags',
       'preservim/tagbar',
       'lervag/vimtex',
+      { 'tanvirtin/vgit.nvim', requires = 'nvim-lua/plenary.nvim' },
       'jondkinney/dragvisuals.vim',
       'kyazdani42/nvim-tree.lua',
       'junegunn/fzf.vim',
