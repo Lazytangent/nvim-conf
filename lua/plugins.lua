@@ -68,6 +68,7 @@ return require("packer").startup(
       'tpope/vim-heroku',
       'tpope/vim-dotenv',
       'tpope/vim-ragtag',
+      'tpope/vim-unimpaired',
       'alvan/vim-closetag',
       -- 'karb94/neoscroll.nvim',
       'psliwka/vim-smoothie',
