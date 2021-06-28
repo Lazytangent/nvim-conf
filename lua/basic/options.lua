@@ -37,6 +37,7 @@ u.opt("g", "mouse",          Opts.mouse)
 u.opt("g", "smarttab",       Opts.smarttab)
 u.opt("g", "foldmethod",     Opts.foldmethod)
 u.opt("g", "foldexpr",       Opts.foldexpr)
+u.opt("o", "completeopt",    Completion.completeopt)
 
 -- Window
 u.opt("w", "relativenumber", Opts.relativenumber)

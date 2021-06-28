@@ -60,3 +60,10 @@ u.map("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = t
 -- end
 
 -- remap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', {expr = true, noremap = true})
+
+-- Nvim-Compe
+u.map("i", "<C-Space>", "<cmd>compe#complete()<cr>", { silent = true, expr = true })
+u.map("i", "<C-y>", "<cmd>compe#confirm('<C-y>')<cr>", { silent = true, expr = true })
+u.map("i", "<C-e>", "<cmd>compe#close('<C-e>')<cr>", { silent = true, expr = true })
+u.map("i", "<C-f>", "<cmd>compe#scroll({ 'delta': +4 })<cr>", { silent = true, expr = true })
+u.map("i", "<C-d>", "<cmd>compe#scroll({ 'delta': -4 })<cr>", { silent = true, expr = true })

@@ -19,6 +19,7 @@ return require("packer").startup(
       'nvim-treesitter/nvim-treesitter-textobjects',
       'mattn/emmet-vim',
       'neovim/nvim-lspconfig',
+      'hrsh7th/nvim-compe',
     }
 
     -- Specific Language Plugins

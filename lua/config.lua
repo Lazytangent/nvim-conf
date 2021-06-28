@@ -86,6 +86,7 @@ Completion = {
   enabled = true,
   autopairs = true,
   items = 10,
+  completeopt = "menuone,noselect",
 }
 
 Treesitter = {
