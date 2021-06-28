@@ -46,17 +46,17 @@ u.map("n", "<localleader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, nore
 u.map("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
 
 -- Autopairs
-local remap = vim.api.nvim_set_keymap
-local npairs = require('nvim-autopairs')
+-- local remap = vim.api.nvim_set_keymap
+-- local npairs = require('nvim-autopairs')
 
-_G.MUtils = {}
+-- _G.MUtils = {}
 
-MUtils.completion_confirm=function()
-  if vim.fn.pumvisible() ~= 0 then
-    return npairs.esc("<cr>")
-  else
-    return npairs.autopairs_cr()
-  end
-end
+-- MUtils.completion_confirm=function()
+--   if vim.fn.pumvisible() ~= 0 then
+--     return npairs.esc("<cr>")
+--   else
+--     return npairs.autopairs_cr()
+--   end
+-- end
 
-remap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', {expr = true, noremap = true})
+-- remap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', {expr = true, noremap = true})

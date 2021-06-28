@@ -61,6 +61,7 @@ return require("packer").startup(
       'junegunn/fzf.vim',
       'jiangmiao/auto-pairs',
       -- 'windwp/nvim-autopairs',
+      'kristijanhusak/orgmode.nvim',
       'tpope/vim-commentary',
       'tpope/vim-surround',
       'tpope/vim-repeat',

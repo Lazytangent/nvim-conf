@@ -17,7 +17,7 @@ require('indent_blankline').setup {}
 -- require('neoscroll').setup {
 --   easing_function = 'circular',
 -- }
-require('nvim-autopairs').setup {}
+-- require('nvim-autopairs').setup {}
 
 -- Variables
 --------------------------------------------------------------------------------
