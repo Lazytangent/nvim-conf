@@ -96,3 +96,8 @@ vim.g.user_emmet_leader_key='<C-L>'
 -- u.map("n", "<leader>w<leader>t", "<cmd>VimwikiTabMakeDiaryNote<cr>");
 -- u.map("n", "<leader>w<leader>y", "<cmd>VimwikiMakeYesterdayDiaryNote<cr>");
 -- u.map("n", "<leader>w<leader>m", "<cmd>VimwikiMakeTomorrowDiaryNote<cr>");
+
+local wiki = {}
+wiki.nested_syntaxes = { python = 'python', javascript = 'javascript', js = 'javascript' }
+vim.g.vimwiki_list = { wiki }
+vim.g.vimwiki_global_ext = 0
