@@ -38,11 +38,11 @@ u.map("n", "<leader>gp", ":Git push<cr>", { noremap = true })
 u.map("n", "<leader>gl", ":Git pull<cr>", { noremap = true })
 
 -- Trouble.nvim
-u.map("n", "<localleader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
-u.map("n", "<localleader>xw", "<cmd>Trouble lsp_workspace_diagnostic<cr>", { silent = true, noremap = true })
-u.map("n", "<localleader>xd", "<cmd>Trouble lsp_document_diagnostics<cr>", { silent = true, noremap = true })
-u.map("n", "<localleader>xl", "<cmd>Trouble loclist<cr>", { silent = true, noremap = true })
-u.map("n", "<localleader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, noremap = true })
+u.map("n", "<localleader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
+u.map("n", "<localleader>xw", "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", { silent = true, noremap = true })
+u.map("n", "<localleader>xd", "<cmd>TroubleToggle lsp_document_diagnostics<cr>", { silent = true, noremap = true })
+u.map("n", "<localleader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
+u.map("n", "<localleader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
 u.map("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
 
 -- Autopairs

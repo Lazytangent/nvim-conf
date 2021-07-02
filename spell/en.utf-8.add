@@ -1045,3 +1045,13 @@ other
 POJO
 PERN
 setUsers
+Pokemoves
+PokeMoveCard
+PokeMove
+li
+Pokemove
+reactjs
+setState
+prevState
+componentDidMount
+lifecycle
