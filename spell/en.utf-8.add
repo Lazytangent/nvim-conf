@@ -1058,3 +1058,4 @@ lifecycle
 CREATEDB
 ORM
 textInput
+NvimTreeToggle
