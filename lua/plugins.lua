@@ -41,10 +41,10 @@ return require("packer").startup(
 
     -- Quality of Life Improvements
     use {
-      { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' },
       { 'mg979/vim-visual-multi', branch = 'master' },
       { 'tanvirtin/vgit.nvim', requires = 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} },
+       'lukas-reineke/indent-blankline.nvim',
       'p00f/nvim-ts-rainbow',
       'kyazdani42/nvim-web-devicons',
       'ryanoasis/vim-devicons',
@@ -83,6 +83,7 @@ return require("packer").startup(
       'christoomey/vim-sort-motion',
       'michaeljsmith/vim-indent-object',
       'vim-test/vim-test',
+      'famiu/nvim-reload',
     }
   end
 )

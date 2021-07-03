@@ -1,16 +1,18 @@
 require("which-key").setup{}
 
-local mappings = {
+local normal = {
   ["<leader>"] = {
     b = {
       name = "+Buffers",
       a = "Close all other buffers",
       d = "Close buffers",
+      l = { "<cmd>bnext<cr>", "next buffer" },
+      h = { "<cmd>bprevious<cr>", "prev buffer" },
     },
     c = {
       name = "+Change",
-      d = "Change working directory",
-      t = "Ctags",
+      d = { "<cmd>cd %:h<cr>", "Change working directory" },
+      t = { "<cmd>!ctags -R .<cr><cr>", "Ctags" },
     },
     f = {
       name = "+Telescope",
@@ -52,33 +54,32 @@ local mappings = {
       },
     },
     q = "Quit",
-    Q = "Force quit",
     s = {
       name = "+Spell",
-      ["?"] = "Spelling suggestions",
-      a = "Add word to good spelling list",
-      n = "Next bad spelling",
-      p = "Prev bad spelling",
-      s = "Toggle spellcheck",
+      ["?"] = { "z=", "Spelling suggestions" },
+      a = { "zg", "Add word to good spelling list" },
+      n = { "]s", "Next bad spelling" },
+      p = { "[s", "Prev bad spelling" },
+      s = { "<cmd>setlocal spell!<cr>", "Toggle spellcheck" },
     },
     t = {
       name = "+Tabs",
-      c = "Close tab",
-      e = "Edit tab",
-      m = "Move tab",
-      n = "New tab",
-      o = "Only tab",
+      c = { "<cmd>tabclose<cr>", "Close tab" },
+      e = { [[<cmd>tabedit <C-r>=expand("%:p:h")<cr>/]], "Edit tab" },
+      m = { "<cmd>tabmove<cr>", "Move tab" },
+      n = { "<cmd>tabnew<cr>", "New tab" },
+      o = { "<cmd>tabonly<cr>", "Only tab" },
       w = "Tailwind Complete",
     },
     w = "Write",
     x = "Create markdown buffer",
-    ["<CR>"] = "Turn off highlight",
+    ["<CR>"] = { "<cmd>nohlsearch<cr>", "Turn off highlight" },
   },
   ["<localleader>"] = {
     a = {
       name = "Add",
-      O = "Add new line above",
-      o = "Add new line below",
+      O = { "O<Esc>", "Add new line above" },
+      o = { "o<Esc>", "Add new line below" },
     },
     c = {
       t = "Ctags",
@@ -108,10 +109,13 @@ local mappings = {
     },
     n = {
       name = "+Number",
-      n = "Toggle number",
-      r = "Toggle relative",
+      n = { "<cmd>set nu!<cr>", "Toggle number" },
+      r = { "<cmd>set rnu!<cr>", "Toggle relative" },
     },
-    r = "Reload nvim config",
+    r = { "<cmd>Reload<cr>", "Reload nvim config" },
+    w = {
+      q = { "<cmd>wq<cr>", "write and quit" },
+    },
   },
   ["<space>"] = {
     c = {
@@ -125,11 +129,12 @@ local mappings = {
       a = "Add folder",
       l = "List folders",
       r = "Remove folder",
-      q = "Write and quit",
     },
   },
   ["\\"] = {
+    name = "Utilities",
     f = "Format",
+    w = { "<cmd>w<cr>", "Write" },
   },
   ["g"] = {
     c = "Commentary",
@@ -151,11 +156,34 @@ local mappings = {
   ["<C-F>"] = "Forward down a page",
   ["<C-D>"] = "Down half a page",
   ["<C-U>"] = "Up half a page",
-  ["<C-k>"] = "Move line up",
-  ["<C-j>"] = "Move line down",
+  ["<C-k>"] = { [[<cmd><C-U>exec "exec 'norm m`' | move -" . (1+v:count1)<cr>]], "Move line up" },
+  ["<C-j>"] = { [[<cmd><C-U>exec "exec 'norm m`' | move +" . (0+v:count1)<cr>]], "Move line down" },
   ["<C-n>"] = "Visual Multi",
+  ["j"] = { "gj" },
+  ["k"] = { "gk" },
+}
+
+local comamnd = {
+  ["$h"] = { "e ~/", "Edit home" },
+  ["$d"] = { "e ~/Desktop", "Edit Desktop" },
+  ["$j"] = { "e ./", "Edit here" },
+}
+
+local command_opts = {
+  mode = "c"
+}
+
+local visual = {
+  ["<C-k>"] = { [[<cmd><C-U>exec "'<,'>move '<-" . (1+v:count1)<cr>gv]], "Move line up" },
+  ["<C-j>"] = { [[<cmd><C-U>exec "'<,'>move '>+" . (0+v:count1)<cr>gv]], "Move line down" },
+}
+
+local visual_opts = {
+  mode = "v",
 }
 
 local wk = require('which-key')
 
-wk.register(mappings)
+wk.register(normal)
+wk.register(visual, visual_opts)
+-- wk.register(command, command_opts)
