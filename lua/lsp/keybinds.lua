@@ -57,6 +57,8 @@ local servers = LSP.servers
 for _, lsp in ipairs(servers) do
   if lsp == 'html' then
     nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities }
+  elseif lsp == 'denols' then
+    nvim_lsp[lsp].setup { autostart = false }
   elseif lsp == 'elixirls' then
     nvim_lsp[lsp].setup { cmd = {'elixirls'} }
   elseif lsp == 'sqlls' then

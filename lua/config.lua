@@ -66,6 +66,7 @@ LSP = {
     "clangd",
     "cssls",
     "dockerls",
+    "denols",
     "elixirls",
     "erlangls",
     "gopls",
