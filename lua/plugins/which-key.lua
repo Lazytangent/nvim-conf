@@ -4,8 +4,7 @@ local normal = {
   ["<leader>"] = {
     b = {
       name = "+Buffers",
-      a = "Close all other buffers",
-      d = "Close buffers",
+      d = { [[<cmd>%bdelete<cr>]], "Close buffers" },
       l = { "<cmd>bnext<cr>", "next buffer" },
       h = { "<cmd>bprevious<cr>", "prev buffer" },
     },
@@ -22,36 +21,22 @@ local normal = {
     },
     g = {
       name = "+Git and Goto",
-      c = "Git commit",
       d = "Go to definition",
       i = "Go to implementation",
-      l = "Git pull",
-      p = "Git push",
       r = "Coc-References",
-      w = "Write and Add",
       y = "Go to type definition",
-      s = "Status",
     },
     h = "Prev buffer",
     l = "Next buffer",
     m = {
       name = "+MarkdownPreview",
-      d = "Preview Start",
-      s = "Preview Stop",
+      d = { [[<cmd>InstantMarkdownPreview<cr>]], "Preview Start" },
+      s = { [[<cmd>InstantMarkdownStop<cr>]], "Preview Stop" },
     },
     n = {
-      name = "+NERDTree",
-      b = "From Bookmark",
-      f = "Find",
-      m = "Focus",
-      n = "Toggle",
-    },
-    r = {
-      name = "+Relative number",
-      n = {
-        name = "+Relative number",
-        u = "Toggle relativenumber",
-      },
+      name = "+NvimTree",
+      f = { [[<cmd>NvimTreeFindFile<cr>]], "Find" },
+      n = { [[<cmd>NvimTreeToggle<cr>]], "Toggle" },
     },
     q = "Quit",
     s = {
@@ -95,12 +80,12 @@ local normal = {
       t = "Treesitter",
     },
     g = {
-      name = "+Coc",
-      c = "Commands",
-      d = "Defintion",
-      i = "Implementation",
-      r = "References",
-      y = "Type definition",
+      name = "+Git",
+      c = { [[<cmd>Git commit<cr>]], "status" },
+      l = { [[<cmd>Git pull<cr>]], "pull" },
+      p = { [[<cmd>Git push<cr>]], "push" },
+      s = { [[<cmd>Git<cr>]], "status" },
+      w = { [[<cmd>Git write<cr>]], "write" },
     },
     m = {
       name = "+More utilities",
@@ -112,9 +97,19 @@ local normal = {
       n = { "<cmd>set nu!<cr>", "Toggle number" },
       r = { "<cmd>set rnu!<cr>", "Toggle relative" },
     },
+    p = { [[<cmd>Prettier<cr>]], "Prettier" },
     r = { "<cmd>Reload<cr>", "Reload nvim config" },
     w = {
       q = { "<cmd>wq<cr>", "write and quit" },
+    },
+    x = {
+      name = "+Trouble",
+      d = { [[<cmd>TroubleToggle lsp_document_diagnostics<cr>]], "toggle document diagnostics" },
+      l = { [[<cmd>TroubleToggle loclist<cr>]], "toggle location list" },
+      q = { [[<cmd>TroubleToggle quickfix<cr>]], "toggle quickfix" },
+      w = { [[<cmd>TroubleToggle lsp_workspace_diagnostics<cr>]], "toggle workspace diagnostics" },
+      x = { [[<cmd>TroubleToggle<cr>]], "toggle" },
+      R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
     },
   },
   ["<space>"] = {
@@ -159,8 +154,16 @@ local normal = {
   ["<C-k>"] = { [[<cmd><C-U>exec "exec 'norm m`' | move -" . (1+v:count1)<cr>]], "Move line up" },
   ["<C-j>"] = { [[<cmd><C-U>exec "exec 'norm m`' | move +" . (0+v:count1)<cr>]], "Move line down" },
   ["<C-n>"] = "Visual Multi",
-  ["j"] = { "gj" },
-  ["k"] = { "gk" },
+  ["j"] = { "gj", "Down virtual line" },
+  ["k"] = { "gk", "Up virtual line" },
+  ["t"] = {
+    name = "Test",
+    ["<C-n>"] = { [[<cmd>TestNearest<cr>]], "Test nearest" },
+    ["<C-f>"] = { [[<cmd>TestFile<cr>]], "Test file" },
+    ["<C-s>"] = { [[<cmd>TestSuite<cr>]], "Test suite" },
+    ["<C-l>"] = { [[<cmd>TestLast<cr>]], "Test last" },
+    ["<C-g>"] = { [[<cmd>TestVisit<cr>]], "Test visit" },
+  },
 }
 
 local comamnd = {
@@ -176,6 +179,10 @@ local command_opts = {
 local visual = {
   ["<C-k>"] = { [[<cmd><C-U>exec "'<,'>move '<-" . (1+v:count1)<cr>gv]], "Move line up" },
   ["<C-j>"] = { [[<cmd><C-U>exec "'<,'>move '>+" . (0+v:count1)<cr>gv]], "Move line down" },
+  ["<S-h>"] = { [[<cmd>DVB_Drag('left')]], "Drag left" },
+  ["<S-l>"] = { [[<cmd>DVB_Drag('right')]], "Drag right" },
+  ["<S-j>"] = { [[<cmd>DVB_Drag('down')]], "Drag down" },
+  ["<S-k>"] = { [[<cmd>DVB_Drag('up')]], "Drag up" },
 }
 
 local visual_opts = {
