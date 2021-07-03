@@ -44,8 +44,6 @@ local mappings = {
       m = "Focus",
       n = "Toggle",
     },
-    O = "Add new line above",
-    o = "Add new line below",
     r = {
       name = "+Relative number",
       n = {
@@ -77,6 +75,11 @@ local mappings = {
     ["<CR>"] = "Turn off highlight",
   },
   ["<localleader>"] = {
+    a = {
+      name = "Add",
+      O = "Add new line above",
+      o = "Add new line below",
+    },
     c = {
       t = "Ctags",
     },

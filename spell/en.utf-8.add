@@ -1055,3 +1055,6 @@ setState
 prevState
 componentDidMount
 lifecycle
+CREATEDB
+ORM
+textInput

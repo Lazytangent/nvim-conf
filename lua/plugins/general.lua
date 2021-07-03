@@ -14,10 +14,6 @@ require("lualine").setup {
 
 require('vgit').setup {}
 require('indent_blankline').setup {}
--- require('neoscroll').setup {
---   easing_function = 'circular',
--- }
--- require('nvim-autopairs').setup {}
 require('compe').setup {
   enabled = true;
   autocomplete = true;
@@ -83,19 +79,6 @@ vim.g.smoothie_experimental_mappings = true
 
 -- Emmet-Vim
 vim.g.user_emmet_leader_key='<C-L>'
-
--- Vimwiki
--- local u = require("utils.core")
--- vim.g.mapleader = "\\"
-
--- u.map("n", "<leader>ww", "<cmd>VimwikiIndex<cr>");
--- u.map("n", "<leader>wt", "<cmd>VimwikiTabIndex<cr>");
--- u.map("n", "<leader>ws", "<cmd>VimwikiUISelect<cr>");
--- u.map("n", "<leader>wi", "<cmd>VimwikiDiaryIndex<cr>");
--- u.map("n", "<leader>w<leader>w", "<cmd>VimwikiMakeDiaryNote<cr>");
--- u.map("n", "<leader>w<leader>t", "<cmd>VimwikiTabMakeDiaryNote<cr>");
--- u.map("n", "<leader>w<leader>y", "<cmd>VimwikiMakeYesterdayDiaryNote<cr>");
--- u.map("n", "<leader>w<leader>m", "<cmd>VimwikiMakeTomorrowDiaryNote<cr>");
 
 local wiki = {}
 wiki.nested_syntaxes = { python = 'python', javascript = 'javascript', js = 'javascript' }

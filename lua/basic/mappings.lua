@@ -10,8 +10,8 @@ u.map("n", "<leader>q", ":q<cr>", { noremap = true })
 u.map("n", "<leader>Q", ":q!<cr>", { noremap = true })
 
 -- Insert Mode Save
-u.map("n", "<localleader>o", "o<Esc>", { noremap = true })
-u.map("n", "<localleader>O", "O<Esc>", { noremap = true })
+u.map("n", "<localleader>ao", "o<Esc>", { noremap = true })
+u.map("n", "<localleader>aO", "O<Esc>", { noremap = true })
 
 u.map("n", "<localleader>nr", ":set rnu!<cr>", { noremap = true })
 u.map("n", "<localleader>nn", ":set nu!<cr>", { noremap = true })
@@ -55,7 +55,6 @@ u.map("",  "<leader>s?", "z=")
 u.map("n", "<localleader>mt", "mmHmt:%s/<C-v><cr>//ge<cr>'tzt'm", { noremap = true })
 u.map("n", "<localleader>mm", ":set ff=unix<cr>", { noremap = true })
 u.map("",  "<leader>x", ":e ~/buffer.md<cr>")
-u.map("",  "<leader>pp", ":setlocal paste!<cr>")
 u.map("v", "<C-c>", ":w !xclip -i -sel c<cr><cr>", { noremap = true })
 u.map("t", "<Esc", "<C-\\><C-n>", { noremap = true })
 
