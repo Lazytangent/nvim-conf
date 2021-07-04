@@ -83,7 +83,11 @@ vim.g.smoothie_experimental_mappings = true
 -- Emmet-Vim
 vim.g.user_emmet_leader_key='<C-L>'
 
+-- Vimwiki
 local wiki = {}
 wiki.nested_syntaxes = { python = 'python', javascript = 'javascript', js = 'javascript' }
 vim.g.vimwiki_list = { wiki }
 vim.g.vimwiki_global_ext = 0
+
+-- sneak.vim
+vim.g['sneak#label'] = 1

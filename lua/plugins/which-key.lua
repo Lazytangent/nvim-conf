@@ -60,6 +60,10 @@ local normal = {
       o = { [[<cmd>tabonly<cr>]], "Only tab" },
       w = "Tailwind Complete",
     },
+    u = {
+      name = "utilities",
+      f = "Format",
+    },
     w = { [[<cmd>w<cr>]], "Write" },
     ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
   },
@@ -124,11 +128,6 @@ local normal = {
       l = "List folders",
       r = "Remove folder",
     },
-  },
-  ["\\"] = {
-    name = "Utilities",
-    f = "Format",
-    w = { [[<cmd>w<cr>]], "Write" },
   },
   ["g"] = {
     c = "Commentary",
@@ -239,6 +238,10 @@ local normal = {
   ["<C-k>"] = { [[<cmd><C-U>exec "exec 'norm m`' | move -" . (1+v:count1)<cr>]], "Move line up" },
   ["<C-j>"] = { [[<cmd><C-U>exec "exec 'norm m`' | move +" . (0+v:count1)<cr>]], "Move line down" },
   ["<C-n>"] = "Visual Multi",
+  ["f"] = { [[<Plug>Sneak_f]], "Sneak f" },
+  ["F"] = { [[<Plug>Sneak_F]], "Sneak F" },
+  ["t"] = { [[<Plug>Sneak_t]], "Sneak t" },
+  ["T"] = { [[<Plug>Sneak_T]], "Sneak T" },
   ["j"] = { [[gj]], "Down virtual line" },
   ["k"] = { [[gk]], "Up virtual line" },
   ["t"] = {
