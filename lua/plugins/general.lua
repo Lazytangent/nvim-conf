@@ -1,4 +1,7 @@
 -- Set up Lua plugins
+require("octo").setup {
+  default_remote = { "origin", "upstream" };
+}
 require("trouble").setup {}
 require("lsp-colors").setup {}
 require("lualine").setup {

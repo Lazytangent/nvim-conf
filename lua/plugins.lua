@@ -76,6 +76,8 @@ return require("packer").startup(
       'tpope/vim-ragtag',
       'tpope/vim-unimpaired',
       'alvan/vim-closetag',
+      'justinmk/vim-sneak',
+      'pwntester/octo.nvim',
       -- 'karb94/neoscroll.nvim',
       'psliwka/vim-smoothie',
       'kana/vim-textobj-user',
