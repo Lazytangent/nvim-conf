@@ -86,6 +86,8 @@ local normal = {
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "quickfix list" },
       r = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "registers" },
       t = { [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], "treesitter" },
+
+      s = { [[<cmd>w<cr>]], "save file" },
     },
     g = {
       name = "+Git",
