@@ -95,7 +95,11 @@ local normal = {
       f = { [[<cmd>Git fetch<cr>]], "fetch" },
       l = { [[<cmd>Git pull<cr>]], "pull" },
       p = { [[<cmd>Git push<cr>]], "push" },
-      P = { [[<cmd>Git push -u origin main<cr>]], "push origin main" },
+      P = {
+        name = "+Push",
+        m = { [[<cmd>Git push -u origin main]], "main" },
+        p = { [[:Git push -u origin ]], "branch" },
+      },
       s = { [[<cmd>Git<cr>]], "status" },
       w = { [[<cmd>Gw<cr>]], "write" },
     },
