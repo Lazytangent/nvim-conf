@@ -273,8 +273,8 @@ local command_opts = {
 }
 
 local visual = {
-  ["<C-k>"] = { [[<cmd><C-U>exec "'<,'>move '<-" . (1+v:count1)<cr>gv]], "Move line up" },
-  ["<C-j>"] = { [[<cmd><C-U>exec "'<,'>move '>+" . (0+v:count1)<cr>gv]], "Move line down" },
+  ["<C-k>"] = { [[:<C-U>exec "'<,'>move '<-" . (1+v:count1)<cr>gv]], "Move line up" },
+  ["<C-j>"] = { [[:<C-U>exec "'<,'>move '>+" . (0+v:count1)<cr>gv]], "Move line down" },
   ["<S-h>"] = { [[<cmd>DVB_Drag('left')]], "Drag left" },
   ["<S-l>"] = { [[<cmd>DVB_Drag('right')]], "Drag right" },
   ["<S-j>"] = { [[<cmd>DVB_Drag('down')]], "Drag down" },
