@@ -3,6 +3,7 @@ local u = require("utils.core")
 local autocmds = {
   filetypes = {
     {"FileType", "gitcommit", "setlocal textwidth=72"},
+    {"FileType", "gitcommit", [[1 | startinsert]]},
     {"BufNewFile,BufRead", "*.jinja", "set syntax=htmljinja"},
     {"BufNewFile,BufRead", "*.mako", "set filetype=mako"},
     {"FileType", "python", "syntax keyword pythonDecorator True None False self"},

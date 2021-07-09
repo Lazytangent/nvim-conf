@@ -91,7 +91,7 @@ local normal = {
     },
     g = {
       name = "+Git",
-      c = { [[<cmd>Git commit<cr>]], "status" },
+      c = { [[<cmd>Git commit<cr>]], "commit" },
       f = { [[<cmd>Git fetch<cr>]], "fetch" },
       l = { [[<cmd>Git pull<cr>]], "pull" },
       p = { [[<cmd>Git push<cr>]], "push" },
