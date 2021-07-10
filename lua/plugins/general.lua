@@ -15,7 +15,16 @@ require("lualine").setup {
   },
 }
 
-require('vgit').setup {}
+require('gitsigns').setup {
+  signs = {
+    add = { hl = 'GitGutterAdd', text = '+' },
+    change = { hl = 'GitGutterChange', text = '~' },
+    delete = { hl = 'GitGutterDelete', text = '_' },
+    topdelete = { hl = 'GitGutterDelete', text = '¯' },
+    changedelete = { hl = 'GitGutterChange', text = '~' },
+  },
+}
+
 require('indent_blankline').setup {}
 require('compe').setup {
   enabled = true;
@@ -82,12 +91,6 @@ vim.g.smoothie_experimental_mappings = true
 
 -- Emmet-Vim
 vim.g.user_emmet_leader_key='<C-L>'
-
--- Vimwiki
-local wiki = {}
-wiki.nested_syntaxes = { python = 'python', javascript = 'javascript', js = 'javascript' }
-vim.g.vimwiki_list = { wiki }
-vim.g.vimwiki_global_ext = 0
 
 -- sneak.vim
 vim.g['sneak#label'] = 1

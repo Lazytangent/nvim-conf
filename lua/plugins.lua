@@ -42,16 +42,15 @@ return require("packer").startup(
     -- Quality of Life Improvements
     use {
       { 'mg979/vim-visual-multi', branch = 'master' },
-      { 'tanvirtin/vgit.nvim', requires = 'nvim-lua/plenary.nvim' },
+      { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} },
-       'lukas-reineke/indent-blankline.nvim',
+      'lukas-reineke/indent-blankline.nvim',
       'p00f/nvim-ts-rainbow',
       'kyazdani42/nvim-web-devicons',
       'ryanoasis/vim-devicons',
       'folke/lsp-colors.nvim',
       'folke/trouble.nvim',
       'folke/which-key.nvim',
-      -- 'vimwiki/vimwiki',
       -- 'nvim-lua/popup.nvim',
       -- 'nvim-lua/plenary.nvim',
       'xolox/vim-misc',
@@ -61,7 +60,6 @@ return require("packer").startup(
       'jondkinney/dragvisuals.vim',
       'junegunn/fzf.vim',
       'jiangmiao/auto-pairs',
-      -- 'windwp/nvim-autopairs',
       'kristijanhusak/orgmode.nvim',
 
       -- Tpope Section
@@ -80,7 +78,6 @@ return require("packer").startup(
       'alvan/vim-closetag',
       'justinmk/vim-sneak',
       'pwntester/octo.nvim',
-      -- 'karb94/neoscroll.nvim',
       'psliwka/vim-smoothie',
       'kana/vim-textobj-user',
       'kana/vim-textobj-line',
