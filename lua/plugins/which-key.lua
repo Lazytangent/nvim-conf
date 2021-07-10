@@ -60,12 +60,12 @@ local normal = {
       o = { [[<cmd>tabonly<cr>]], "Only tab" },
       w = "Tailwind Complete",
     },
-    u = {
-      name = "utilities",
-      f = "Format",
-    },
     w = { [[<cmd>w<cr>]], "Write" },
     ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
+    [","] = {
+      name = "+Utilities",
+      f = "Format",
+    },
   },
   ["<localleader>"] = {
     a = {
