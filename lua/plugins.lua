@@ -8,6 +8,7 @@ return require("packer").startup(
       'hoob3rt/lualine.nvim',
       'joshdick/onedark.vim',
       'lewis6991/moonlight.vim',
+      'projekt0n/github-nvim-theme',
     }
 
     -- Formatting && General LSP
