@@ -38,9 +38,9 @@ local normal = {
       s = { [[<cmd>InstantMarkdownStop<cr>]], "Preview Stop" },
     },
     n = {
-      name = "+NvimTree",
-      f = { [[<cmd>NvimTreeFindFile<cr>]], "Find" },
-      n = { [[<cmd>NvimTreeToggle<cr>]], "Toggle" },
+      name = "+NERDTree",
+      f = { [[<cmd>NERDTreeFind<cr>]], "Find" },
+      n = { [[<cmd>NERDTreeToggle<cr>]], "Toggle" },
     },
     q = "Quit",
     s = {
