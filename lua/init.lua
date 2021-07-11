@@ -14,7 +14,7 @@ require "plugins.general"
 require "plugins.mappings"
 require "plugins.which-key"
 require "plugins.treesitter"
-require "plugins.nvim-tree"
+require "plugins.nerdtree"
 require "plugins.telescope"
 
 -- Personal config

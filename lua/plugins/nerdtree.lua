@@ -1,0 +1,1 @@
+vim.g.NERDTreeWinPos = 'right'
