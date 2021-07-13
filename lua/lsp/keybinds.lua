@@ -54,7 +54,22 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
 local servers = LSP.servers
+local configs = require('lspconfig/configs')
 for _, lsp in ipairs(servers) do
+  if not nvim_lsp.emmet_ls then
+    configs.emmet_ls = {
+      default_config = {
+        cmd = {'emmet-ls', '--stdio'};
+        filetypes = {'html', 'css'};
+        root_dir = function(fname)
+          return vim.loop.cwd()
+        end;
+        settings = {};
+      };
+    }
+  end
+  nvim_lsp.emmet_ls.setup { capabilities = capabilities }
+
   if lsp == 'html' then
     nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities }
   elseif lsp == 'denols' then
