@@ -72,6 +72,7 @@ LSP = {
     "erlangls",
     "gopls",
     "graphql",
+    "groovyls",
     "html",
     "java_language_server",
     "jedi_language_server",

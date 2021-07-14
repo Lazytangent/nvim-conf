@@ -93,7 +93,11 @@ for _, lsp in ipairs(servers) do
     }
   elseif lsp == 'java_language_server' then
     nvim_lsp[lsp].setup {
-      cmd = {'~/Documents/LSP/java-language-server/dist/lang_server_mac.sh'}
+      cmd = {'/Users/petermai/Documents/LSP/java-language-server/dist/lang_server_mac.sh'},
+    }
+  elseif lsp == 'groovyls' then
+    nvim_lsp[lsp].setup {
+      cmd = { "java", "-jar", "~/Documents/LSP/groovy-language-server/build/libs/groovy-language-server-all.jar" },
     }
   else
     nvim_lsp[lsp].setup { on_attach = on_attach }
