@@ -16,6 +16,7 @@ local autocmds = {
     {"BufRead", "*.twig", "set syntax=html filetype=html"},
 
     {"FileType", "markdown", "setlocal shiftwidth=4 softtabstop=4 expandtab"},
+    {"FileType", "java", "setlocal shiftwidth=4 softtabstop=4"},
     {"BufNewFile,BufRead", "*.md", "setlocal textwidth=80"},
     {"BufNewFile,BufReadPost", "*.md", "set filetype=markdown"},
 

@@ -78,7 +78,7 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { cmd = {'elixirls'} }
   elseif lsp == 'sqlls' then
     nvim_lsp[lsp].setup { cmd = {'sql-language-server', 'up', '--method', 'stdio'} }
-  elseif ldp == 'gopls' then
+  elseif lsp == 'gopls' then
     nvim_lsp[lsp].setup {
       cmd = {"gopls", "serve"},
       settings = {
@@ -90,6 +90,10 @@ for _, lsp in ipairs(servers) do
         },
       },
       on_attach = on_attach,
+    }
+  elseif lsp == 'java_language_server' then
+    nvim_lsp[lsp].setup {
+      cmd = {'~/Documents/LSP/java-language-server/dist/lang_server_mac.sh'}
     }
   else
     nvim_lsp[lsp].setup { on_attach = on_attach }

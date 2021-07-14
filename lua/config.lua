@@ -73,6 +73,7 @@ LSP = {
     "gopls",
     "graphql",
     "html",
+    "java_language_server",
     "jedi_language_server",
     "jsonls",
     "rust_analyzer",
