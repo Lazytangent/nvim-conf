@@ -55,6 +55,8 @@ require('orgmode').setup {
   org_default_notes_file = '~/Documents/org/default.org',
 }
 
+require 'plugins.neoterm'
+
 -- Variables
 --------------------------------------------------------------------------------
 

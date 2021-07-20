@@ -54,6 +54,8 @@ return require("packer").startup(
       'folke/which-key.nvim',
       -- 'nvim-lua/popup.nvim',
       -- 'nvim-lua/plenary.nvim',
+      'tversteeg/registers.nvim',
+      'itmecho/neoterm.nvim',
       'xolox/vim-misc',
       'xolox/vim-easytags',
       'preservim/tagbar',

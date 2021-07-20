@@ -65,6 +65,12 @@ local normal = {
     [","] = {
       name = "+Utilities",
       f = "Format",
+      t = {
+        name = "+Neoterm",
+        t = { [[<cmd>NeotermToggle<cr>]], "toggle" },
+        r = { [[:NeotermRun<space>]], "run" },
+        x = { [[<cmd>NeotermExit<cr>]], "exit" },
+      },
     },
   },
   ["<localleader>"] = {
