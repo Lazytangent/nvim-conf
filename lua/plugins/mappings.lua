@@ -59,8 +59,8 @@ vim.g.maplocalleader = " "
 -- remap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', {expr = true, noremap = true})
 
 -- Nvim-Compe
-u.map("i", "<C-Space>", "<cmd>compe#complete()<cr>", { silent = true, expr = true })
-u.map("i", "<C-y>", "<cmd>compe#confirm('<C-y>')<cr>", { silent = true, expr = true })
-u.map("i", "<C-e>", "<cmd>compe#close('<C-e>')<cr>", { silent = true, expr = true })
-u.map("i", "<C-f>", "<cmd>compe#scroll({ 'delta': +4 })<cr>", { silent = true, expr = true })
-u.map("i", "<C-b>", "<cmd>compe#scroll({ 'delta': -4 })<cr>", { silent = true, expr = true })
+u.map("i", "<C-Space>", "compe#complete()", { silent = true, expr = true })
+u.map("i", "<C-y>", "compe#confirm('<C-y>')", { silent = true, expr = true })
+u.map("i", "<C-e>", "compe#close('<C-e>')", { silent = true, expr = true })
+u.map("i", "<C-f>", "compe#scroll({ 'delta': +4 })", { silent = true, expr = true })
+u.map("i", "<C-b>", "compe#scroll({ 'delta': -4 })", { silent = true, expr = true })
