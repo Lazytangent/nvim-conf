@@ -18,6 +18,8 @@ return require("packer").startup(
       'nvim-treesitter/nvim-treesitter-refactor',
       'nvim-treesitter/playground',
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'theHamsta/nvim-treesitter-pairs',
+      'windwp/nvim-ts-autotag',
       'mattn/emmet-vim',
       'neovim/nvim-lspconfig',
       'hrsh7th/nvim-compe',
@@ -63,7 +65,7 @@ return require("packer").startup(
       'preservim/nerdtree',
       'jondkinney/dragvisuals.vim',
       'junegunn/fzf.vim',
-      'jiangmiao/auto-pairs',
+      -- 'jiangmiao/auto-pairs',
       'kristijanhusak/orgmode.nvim',
 
       -- Tpope Section
