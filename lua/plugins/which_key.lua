@@ -103,7 +103,7 @@ local normal = {
       p = { [[<cmd>Git push<cr>]], "push" },
       P = {
         name = "+Push",
-        m = { [[<cmd>Git push -u origin main]], "main" },
+        m = { [[<cmd>Git push -u origin main<cr>]], "main" },
         p = { [[:Git push -u origin ]], "branch" },
       },
       s = { [[<cmd>Git<cr>]], "status" },
