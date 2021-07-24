@@ -65,7 +65,7 @@ return require("packer").startup(
       'preservim/nerdtree',
       'jondkinney/dragvisuals.vim',
       'junegunn/fzf.vim',
-      -- 'jiangmiao/auto-pairs',
+      'jiangmiao/auto-pairs',
       'kristijanhusak/orgmode.nvim',
 
       -- Tpope Section
