@@ -37,8 +37,8 @@ Opts = {
   mouse = "a",
   smarttab = true,
 
-  relativenumber = true,
-  number = true,
+  relativenumber = false,
+  number = false,
   numberwidth = 5,
   wrap = true,
   cursorline = true,
