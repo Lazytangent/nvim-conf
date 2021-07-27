@@ -53,7 +53,8 @@ Opts = {
 }
 
 Theming = {
-  colorscheme = "moonlight",
+  -- colorscheme = "moonlight",
+  colorscheme = 'tokyonight',
 }
 
 LSP = {

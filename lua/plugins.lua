@@ -6,9 +6,8 @@ return require("packer").startup(
     -- Theme Stuff
     use {
       'hoob3rt/lualine.nvim',
-      'joshdick/onedark.vim',
       'lewis6991/moonlight.vim',
-      'projekt0n/github-nvim-theme',
+      'folke/tokyonight.nvim',
     }
 
     -- Formatting && General LSP
@@ -54,6 +53,8 @@ return require("packer").startup(
       'folke/lsp-colors.nvim',
       'folke/trouble.nvim',
       'folke/which-key.nvim',
+      'folke/zen-mode.nvim',
+      'folke/todo-comments.nvim',
       -- 'nvim-lua/popup.nvim',
       -- 'nvim-lua/plenary.nvim',
       'tversteeg/registers.nvim',

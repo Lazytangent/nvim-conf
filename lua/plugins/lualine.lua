@@ -1,6 +1,7 @@
 require("lualine").setup {
   options = {
-    theme = "nightfly",
+    -- theme = "nightfly",
+    theme = 'tokyonight',
     icons_enabled = false,
   },
   sections = {
