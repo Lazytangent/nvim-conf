@@ -50,6 +50,8 @@ return require("packer").startup(
       'p00f/nvim-ts-rainbow',
       'kyazdani42/nvim-web-devicons',
       'ryanoasis/vim-devicons',
+
+      -- Folke Section
       'folke/lsp-colors.nvim',
       'folke/trouble.nvim',
       'folke/which-key.nvim',
