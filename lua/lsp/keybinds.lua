@@ -116,6 +116,7 @@ nvim_lsp.efm.setup {
   on_attach = on_attach,
   init_options = { documentFormatting = true },
   root_dir = vim.loop.cwd,
+  filetypes = { 'python', 'javascript', 'typescript', 'html', 'css', 'yaml', 'markdown', 'javascriptreact', 'typescriptreact' },
   settings = {
     rootMarkers = {".git/"},
     languages = {
