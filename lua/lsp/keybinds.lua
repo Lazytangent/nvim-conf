@@ -103,3 +103,17 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { on_attach = on_attach }
   end
 end
+
+local autopep8 = require 'efm.autopep8'
+
+nvim_lsp.efm.setup {
+  on_attach = on_attach,
+  init_options = { documentFormatting = true },
+  root_dir = vim.loop.cwd,
+  settings = {
+    rootMarkers = {".git/"},
+    lanuages = {
+      python = {autopep8}
+    }
+  }
+}
