@@ -1,3 +1,5 @@
+require "lsp.formatting"
+
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -105,6 +107,10 @@ for _, lsp in ipairs(servers) do
 end
 
 local autopep8 = require 'efm.autopep8'
+local black = require 'efm.black'
+local eslint = require 'efm.eslint'
+local isort = require 'efm.isort'
+local prettier = require 'efm.prettier'
 
 nvim_lsp.efm.setup {
   on_attach = on_attach,
@@ -112,8 +118,17 @@ nvim_lsp.efm.setup {
   root_dir = vim.loop.cwd,
   settings = {
     rootMarkers = {".git/"},
-    lanuages = {
-      python = {autopep8}
+    languages = {
+      python = {black, isort, autopep8},
+      typescript = {prettier, eslint},
+      javascript = {prettier, eslint},
+      typescriptreact = {prettier, eslint},
+      javascriptreact = {prettier, eslint},
+      yaml = {prettier},
+      json = {prettier},
+      html = {prettier},
+      css = {prettier},
+      markdown = {prettier},
     }
   }
 }
