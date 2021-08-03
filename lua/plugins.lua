@@ -21,7 +21,6 @@ return require("packer").startup(
       'windwp/nvim-ts-autotag',
       'mattn/emmet-vim',
       'neovim/nvim-lspconfig',
-      'mattn/efm-langserver',
       'hrsh7th/nvim-compe',
     }
 
