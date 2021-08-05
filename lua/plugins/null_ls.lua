@@ -5,7 +5,9 @@ local sources = {
   null_ls.builtins.formatting.eslint_d,
   null_ls.builtins.formatting.isort,
   null_ls.builtins.formatting.json_tool,
-  null_ls.builtins.formatting.prettierd,
+  null_ls.builtins.formatting.prettierd.with({
+    args = { "$FILENAME", "--single-quote", "--trailing-comma all" }
+  }),
   null_ls.builtins.formatting.rustfmt,
   null_ls.builtins.formatting.sqlformat,
   null_ls.builtins.formatting.yapf,
