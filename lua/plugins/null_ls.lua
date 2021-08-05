@@ -11,10 +11,6 @@ local sources = {
   null_ls.builtins.formatting.rustfmt,
   null_ls.builtins.formatting.sqlformat,
   null_ls.builtins.formatting.yapf,
-
-  null_ls.builtins.diagnostics.eslint,
-  null_ls.builtins.diagnostics.markdownlint,
-  null_ls.builtins.diagnostics.misspell,
 }
 
 null_ls.config({ sources = sources })
