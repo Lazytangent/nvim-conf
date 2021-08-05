@@ -106,6 +106,10 @@ for _, lsp in ipairs(servers) do
   end
 end
 
+nvim_lsp["null-ls"].setup {
+  on_attach = on_attach,
+}
+
 local autopep8 = require 'efm.autopep8'
 local black = require 'efm.black'
 local eslint = require 'efm.eslint'
