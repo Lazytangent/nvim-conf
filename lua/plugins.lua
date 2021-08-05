@@ -46,7 +46,12 @@ return require("packer").startup(
       { 'mg979/vim-visual-multi', branch = 'master' },
       { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} },
-      { 'jose-elias-alvarez/null-ls.nvim', requires = {"nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"} },
+      { 'jose-elias-alvarez/null-ls.nvim',
+      config = function()
+	      require("null-ls").config({})
+	      require("lspconfig")["null-ls"].setup({})
+      end,
+      requires = {"nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"} },
       'lukas-reineke/indent-blankline.nvim',
       'p00f/nvim-ts-rainbow',
       'kyazdani42/nvim-web-devicons',
