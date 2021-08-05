@@ -16,4 +16,4 @@ local sources = {
   }),
 }
 
-null_ls.config({ sources = sources })
+null_ls.config({ sources = sources, save_after_format = false, diagnostics_format = "[#{c}] #{m} (#{s})" })
