@@ -1,1 +1,1 @@
-setfiletype javascript
+autocmd BufNewFile,BufRead .sequelizerc set filetype=javascript
