@@ -77,6 +77,7 @@ return require("packer").startup(function()
 		"junegunn/fzf.vim",
 		"jiangmiao/auto-pairs",
 		"kristijanhusak/orgmode.nvim",
+		"mileszs/ack.vim",
 
 		-- Tpope Section
 		"tpope/vim-commentary",
