@@ -1,4 +1,3 @@
-require 'plugins.ack'
 require 'plugins.compe'
 require 'plugins.drag_visuals'
 require 'plugins.emmet_vim'
