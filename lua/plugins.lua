@@ -21,6 +21,7 @@ return require("packer").startup(function()
 		"mattn/emmet-vim",
 		"neovim/nvim-lspconfig",
 		"hrsh7th/nvim-compe",
+		"L3MON4D3/LuaSnip",
 	})
 
 	-- Specific Language Plugins

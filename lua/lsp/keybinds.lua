@@ -52,6 +52,13 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  }
+}
 
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
@@ -77,9 +84,9 @@ for _, lsp in ipairs(servers) do
   elseif lsp == 'denols' then
     nvim_lsp[lsp].setup { autostart = false }
   elseif lsp == 'elixirls' then
-    nvim_lsp[lsp].setup { cmd = {'elixirls'} }
+    nvim_lsp[lsp].setup { cmd = {'elixirls'}, capabilities = capabilities }
   elseif lsp == 'sqlls' then
-    nvim_lsp[lsp].setup { cmd = {'sql-language-server', 'up', '--method', 'stdio'} }
+    nvim_lsp[lsp].setup { cmd = {'sql-language-server', 'up', '--method', 'stdio'}, capabilities = capabilities }
   elseif lsp == 'gopls' then
     nvim_lsp[lsp].setup {
       cmd = {"gopls", "serve"},
@@ -92,17 +99,20 @@ for _, lsp in ipairs(servers) do
         },
       },
       on_attach = on_attach,
+      capabilities = capabilities,
     }
   elseif lsp == 'java_language_server' then
     nvim_lsp[lsp].setup {
       cmd = {'/Users/petermai/Documents/LSP/java-language-server/dist/lang_server_mac.sh'},
+      capabilities = capabilities,
     }
   elseif lsp == 'groovyls' then
     nvim_lsp[lsp].setup {
       cmd = { "java", "-jar", "~/Documents/LSP/groovy-language-server/build/libs/groovy-language-server-all.jar" },
+      capabilities = capabilities,
     }
   else
-    nvim_lsp[lsp].setup { on_attach = on_attach }
+    nvim_lsp[lsp].setup { on_attach = on_attach, capabilities = capabilities }
   end
 end
 
@@ -117,6 +127,7 @@ local isort = require 'efm.isort'
 local prettier = require 'efm.prettier'
 
 nvim_lsp.efm.setup {
+  capabilities = capabilities,
   on_attach = on_attach,
   init_options = { documentFormatting = true },
   root_dir = vim.loop.cwd,
