@@ -15,7 +15,6 @@ local dl = require("luasnip.extras").dynamic_lambda
 
 ls.config.set_config({
 	history = true,
-	updateevents = "TextChanged,TextChangedI",
 })
 
 local function copy(args)
@@ -35,8 +34,8 @@ end
 
 ls.snippets = {
 	all = {
-		s("fn", {
-			t("//Parameters: "),
+		s("func", {
+			t("// Parameters: "),
 			f(copy, 2),
 			t({ "", "function " }),
 			i(1),
@@ -71,14 +70,8 @@ ls.snippets = {
 			i(0),
 			t({ "", "}" }),
 		}),
-		ls.parser.parse_snippet(
-			"lspsyn",
-			"Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"
-		),
-		ls.parser.parse_snippet(
-			{ trig = "ter", wordTrig = false },
-			"${1:cond} ? ${2:true} : ${3:false} "
-		),
+		ls.parser.parse_snippet("lspsyn", "Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"),
+		ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
 	},
 }
 

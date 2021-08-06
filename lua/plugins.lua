@@ -22,6 +22,7 @@ return require("packer").startup(function()
 		"neovim/nvim-lspconfig",
 		"hrsh7th/nvim-compe",
 		"L3MON4D3/LuaSnip",
+		"rafamadriz/friendly-snippets",
 	})
 
 	-- Specific Language Plugins
