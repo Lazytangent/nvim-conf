@@ -279,7 +279,7 @@
   "jsx elements map": {
     "prefix": "jm",
     "body": "{${1:array}.map((item) => <${2:elementName} key={item.id}>\n\t$0\n</${2}>)}",
-    "description": "an element self closed"
+    "description": "JSX Element with inline .map"
   },
   "jsx elements map with return": {
     "prefix": "jmr",
@@ -294,10 +294,19 @@
   "useState": {
     "prefix": "us",
     "body": "const [${0:val}, set${1:setterName}] = useState(${2:defVal})",
-    "description": "use state hook"
+    "description": "React useState() hook"
   },
   "useEffect": {
     "prefix": "ue",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "}, [${2:dependencies}])$0"
+    ],
+    "description": "React useEffect() hook"
+  },
+  "useEffect with return": {
+    "prefix": "uer",
     "body": [
       "useEffect(() => {",
       "\t$1",
