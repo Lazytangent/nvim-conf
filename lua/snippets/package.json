@@ -1,18 +1,31 @@
 {
-  "name": "snippets",
-  "engines": {
-    "vscode": "^1.11.0"
-  },
-  "contributes": {
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./react.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./react-ts.json"
-      }
-    ]
-  }
+    "name": "snippets",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./react.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./react-ts.json"
+            },
+            {
+                "language": [
+                    "javascript",
+                    "typescript",
+                    "javascriptreact",
+                    "typescriptreact"
+                ],
+                "path": "./javascript.json"
+            },
+            {
+                "language": "python",
+                "path": "./python.json"
+            }
+        ]
+    }
 }

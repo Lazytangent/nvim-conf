@@ -1,0 +1,12 @@
+{
+    "let initialization": {
+        "prefix": "li",
+        "body": "let ${1:name} = ${2:value};",
+        "description": "Create a let variable and initialize it"
+    },
+    "const initialization": {
+        "prefix": "ci",
+        "body": "const ${1:name} = ${2:value};",
+        "description": "Create a const variable and initialize it"
+    }
+}

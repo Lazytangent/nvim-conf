@@ -1,0 +1,23 @@
+{
+    "Class Property": {
+        "prefix": "prop",
+        "body": [
+            "@property",
+            "def ${1:foo}(self):",
+            "\t\"\"\"",
+            "\t${2:The $1 property.}",
+            "\t\"\"\"",
+            "${3:return self._$1}"
+        ],
+        "description": "Create a property on a class"
+    },
+    "Class Setter": {
+        "prefix": "set",
+        "body": [
+            "@${1}.setter",
+            "def $1(self, value):",
+            "\t${2:self._$1} = value"
+        ],
+        "description": "Create a setter method on a class"
+    }
+}
