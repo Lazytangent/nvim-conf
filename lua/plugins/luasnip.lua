@@ -15,6 +15,7 @@ local dl = require("luasnip.extras").dynamic_lambda
 
 ls.config.set_config({
 	history = true,
+	updateevents = "TextChangedI",
 })
 
 local function copy(args)
@@ -31,6 +32,8 @@ rec_ls = function()
 		})
 	)
 end
+
+local tex = require('plugins.snippets.tex')
 
 ls.snippets = {
 	all = {
@@ -73,6 +76,7 @@ ls.snippets = {
 		ls.parser.parse_snippet("lspsyn", "Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"),
 		ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
 	},
+	tex = tex,
 }
 
 require("luasnip/loaders/from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
