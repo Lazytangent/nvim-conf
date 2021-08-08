@@ -100,7 +100,6 @@ return {
 	}),
 	s({ trig = "sq", dscr = "\sqrt{}" }, {
 		t("\\sqrt{"),
-		d(1, dynamic_get_select, )
-
+		d(1, dynamic_get_select, nil),
 	}),
 }
