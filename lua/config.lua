@@ -50,6 +50,8 @@ Opts = {
   fileencoding = "utf-8",
   syntax = "on",
   swapfile = false,
+
+  guifont = "Iosevka Nerd Font Mono:h12",
 }
 
 Theming = {
