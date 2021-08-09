@@ -117,6 +117,14 @@ local latex = {
 		i(0),
 		t({ "", "\\end{equation*}" }),
 	}),
+	s({ trig = "nabla", dscr = "Insert Nabla symbol" }, {
+		t("\\nabla"),
+		i(0),
+	}),
+	s({ trig = "upsidedowndelta", dscr = "Insert Nabla symbol" }, {
+		t("\\nabla"),
+		i(0),
+	}),
 }
 
 vim.list_extend(latex, greek)
