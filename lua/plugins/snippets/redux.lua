@@ -8,8 +8,8 @@ local c = ls.choice_node
 local d = ls.dynamic_node
 local l = require("luasnip.extras").lambda
 local r = require("luasnip.extras").rep
-local p = require("luasnip.extras").partial
 local m = require("luasnip.extras").match
+local p = require("luasnip.extras").partial
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
 
@@ -23,7 +23,7 @@ return {
 		i(2, "params"),
 		t({ ") => async (dispatch) => {", "\t" }),
 		i(0),
-		t({ "", "}" }),
+		t({ "", "};" }),
 	}),
 	s({ trig = "action", dscr = "Create a thunk creator" }, {
 		t("const "),
@@ -33,5 +33,11 @@ return {
 		t({ ") => ({", "\t" }),
 		i(0),
 		t({ "", "});" }),
+	}),
+	s({ trig = "sel", dscr = "Create a selector function" }, {
+		t("("),
+		i(1, "params"),
+		t(") => (state) => "),
+		i(2, "state"),
 	}),
 }

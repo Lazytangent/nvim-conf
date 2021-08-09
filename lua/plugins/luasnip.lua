@@ -35,51 +35,16 @@ end
 
 local tex = require('plugins.snippets.tex')
 local javascript = require('plugins.snippets.javascript')
-local redux = require('plugins.snippets.redux')
 
 ls.snippets = {
+	-- General Snippets
 	all = {
-		s("func", {
-			t("// Parameters: "),
-			f(copy, 2),
-			t({ "", "function " }),
-			i(1),
-			t("("),
-			i(2, "int foo"),
-			t({ ") {", "\t" }),
-			i(0),
-			t({ "", "}" }),
-		}),
-		s("class", {
-			c(1, {
-				t("public "),
-				t("private "),
-			}),
-			t("class "),
-			i(2),
-			t(" "),
-			c(3, {
-				t("{"),
-				sn(nil, {
-					t("expands "),
-					i(1),
-					t(" {"),
-				}),
-				sn(nil, {
-					t("implements "),
-					i(1),
-					t(" {"),
-				}),
-			}),
-			t({ "", "\t" }),
-			i(0),
-			t({ "", "}" }),
-		}),
-		ls.parser.parse_snippet("lspsyn", "Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"),
 		ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
 	},
+	-- Language Specific Snippets
 	tex = tex,
 	javascript = javascript,
+	typescript = javascript,
 }
 
 require("luasnip/loaders/from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
