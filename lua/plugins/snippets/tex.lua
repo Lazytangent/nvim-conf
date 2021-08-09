@@ -98,7 +98,7 @@ return {
 		i(3, "a_n z^n"),
 		t("}"),
 	}),
-	s({ trig = "sq", dscr = "\sqrt{}" }, {
+	s({ trig = "sq", dscr = "\\sqrt{}" }, {
 		t("\\sqrt{"),
 		d(1, dynamic_get_select, nil),
 	}),
