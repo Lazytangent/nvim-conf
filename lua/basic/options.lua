@@ -60,11 +60,11 @@ u.opt("b", "swapfile", Opts.swapfile)
 u.opt("g", "guifont", Opts.guifont)
 
 -- Commands
-cmd("set path+=.,**")
 cmd("filetype plugin indent on")
-cmd("set listchars=tab:\u{BB}\u{BB},trail:\u{B7},nbsp:~")
-cmd("set noshowmode")
-cmd("set formatoptions+=t")
-cmd("set clipboard+=unnamedplus")
-cmd("set whichwrap+=<,>,h,l")
+vim.o.listchars = Opts.listchars
+vim.o.showmode = Opts.showmode
+vim.opt.path:append({ "./**" })
+vim.opt.formatoptions:append({ "t" })
+vim.opt.clipboard:append({ "unnamedplus" })
+vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, h = true, l = true })
 cmd("syntax keyword dbmlType string varbinary")

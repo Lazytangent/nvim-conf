@@ -1,5 +1,5 @@
 Opts = {
-  listchars = true,
+  listchars = "tab:\u{BB}\u{BB},trail:\u{B7},nbsp:~",
 
   splitbelow = true,
   splitright = true,
@@ -52,6 +52,8 @@ Opts = {
   swapfile = false,
 
   guifont = "Iosevka Nerd Font Mono:h12",
+
+  showmode = false,
 }
 
 Theming = {
