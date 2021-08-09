@@ -38,6 +38,9 @@ require("nvim-treesitter.configs").setup({
 				["ico"] = "@conditional.inner",
 				["aco"] = "@conditional.outer",
 
+				["ir"] = "@parameter.inner",
+				["ar"] = "@parameter.outer",
+
 				-- Or you can define your own textobjects like this
 				["iF"] = {
 					python = "(function_definition) @function",

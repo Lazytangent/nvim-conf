@@ -31,7 +31,8 @@ local function dynamic_copy(args, old_state)
 end
 
 local function dynamic_get_select(args)
-	local node = i(1, args[1].env.SELECT_RAW)
+	local f_node = f(function(args) return args[1].env.SELECT_RAW end, {})
+	local node = i(1, f_node)
 	local snip = sn(nil, node)
 	return snip
 end
@@ -100,6 +101,8 @@ return {
 	}),
 	s({ trig = "sq", dscr = "\\sqrt{}" }, {
 		t("\\sqrt{"),
-		d(1, dynamic_get_select, nil),
+		i(1),
+		t("}"),
+		i(0),
 	}),
 }
