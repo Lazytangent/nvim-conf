@@ -37,7 +37,9 @@ local function dynamic_get_select(args)
 	return snip
 end
 
-return {
+local greek = require('plugins.snippets.greek')
+
+local latex = {
 	s({ trig = "beg", namr = "begin{} / end{}", dscr = "Create environment" }, {
 		t("\\begin{"),
 		i(1),
@@ -105,4 +107,17 @@ return {
 		t("}"),
 		i(0),
 	}),
+	s({ trig = "equation", dscr = "Create equation environment" }, {
+		t({ "\\begin{equation}", "" })
+		i(0),
+		t({ "", "\\end{equation}" }),
+	}),
+	s({ trig = "equation*", dscr = "Create anonymous equation environment" }, {
+		t({ "\\begin{equation*}", "" })
+		i(0),
+		t({ "", "\\end{equation*}" }),
+	}),
 }
+
+vim.list_extend(latex, greek)
+return latex
