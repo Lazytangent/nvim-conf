@@ -58,7 +58,11 @@ local javascript = {
 		t(" = ("),
 		c(2, {
 			i(nil, "props"),
-			i(nil, "{ props }"),
+			sn(nil, {
+				t("{ "),
+				i(1, "props"),
+				t(" }"),
+			}),
 		}),
 		t({ ") => {", "\t" }),
 		i(0),
@@ -67,6 +71,30 @@ local javascript = {
 		t({ "works!</h2>", "\t);", "};", "", "export default " }),
 		f(copy, 1),
 		t(";"),
+	}),
+	s({ trig = "res.json", dscr = "Parse the JSON body of a response" }, {
+		t("const "),
+		c(1, {
+			i(nil, "name"),
+			sn(nil, {
+				t("{ "),
+				i(1, "name"),
+				t(" }"),
+			}),
+		}),
+		t(" = await res.json();"),
+	}),
+	s({ trig = "response.json", dscr = "Parse the JSON body of a response" }, {
+		t("const "),
+		c(1, {
+			i(nil, "name"),
+			sn(nil, {
+				t("{ "),
+				i(1, "name"),
+				t(" }"),
+			}),
+		}),
+		t(" = await response.json();"),
 	}),
 }
 
