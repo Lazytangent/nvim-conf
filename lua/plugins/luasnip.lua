@@ -34,6 +34,8 @@ rec_ls = function()
 end
 
 local tex = require('plugins.snippets.tex')
+local javascript = require('plugins.snippets.javascript')
+local redux = require('plugins.snippets.redux')
 
 ls.snippets = {
 	all = {
@@ -77,6 +79,7 @@ ls.snippets = {
 		ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
 	},
 	tex = tex,
+	javascript = javascript,
 }
 
 require("luasnip/loaders/from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
