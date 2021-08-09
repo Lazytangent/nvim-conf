@@ -60,11 +60,11 @@ u.opt("b", "swapfile", Opts.swapfile)
 u.opt("g", "guifont", Opts.guifont)
 
 -- Commands
-cmd("filetype plugin indent on")
 vim.o.listchars = Opts.listchars
 vim.o.showmode = Opts.showmode
 vim.opt.path:append({ "./**" })
 vim.opt.formatoptions:append({ "t" })
 vim.opt.clipboard:append({ "unnamedplus" })
 vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, h = true, l = true })
+cmd("filetype plugin indent on")
 cmd("syntax keyword dbmlType string varbinary")
