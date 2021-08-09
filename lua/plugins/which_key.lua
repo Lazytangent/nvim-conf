@@ -303,7 +303,7 @@ local insert_opts = {
 	mode = "i",
 }
 
-local insert = {
+local select = {
 	["<C-e>"] = {
 		name = "LuaSnip Jumps",
 		["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
