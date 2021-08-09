@@ -52,6 +52,22 @@ local javascript = {
 		f(copy, 3),
 		t(";"),
 	}),
+	s({ trig = "fnc", dscr = "Functional Component" }, {
+		t("const "),
+		i(1, "Component"),
+		t(" = ("),
+		c(2, {
+			i(nil, "props"),
+			i(nil, "{ props }"),
+		}),
+		t({ ") => {", "\t" }),
+		i(0),
+		t({ "", "\treturn (", "\t\t<h2>" }),
+		f(copy, 1),
+		t({ "works!</h2>", "\t);", "};", "", "export default " }),
+		f(copy, 1),
+		t(";"),
+	}),
 }
 
 local redux = require('plugins.snippets.redux')
