@@ -292,17 +292,23 @@ local visual_opts = {
 }
 
 local insert = {
-	["<C-e>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
-	["<C-q>"] = { [[<Plug>luasnip-jump-prev]], "Prev choice" },
+	["<C-e>"] = {
+		name = "LuaSnip Jumps",
+		["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
+		["<C-p>"] = { [[<Plug>luasnip-jump-prev]], "Prev choice" },
+	},
 }
 
 local insert_opts = {
 	mode = "i",
 }
 
-local select = {
-	["<C-e>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
-	["<C-q>"] = { [[<Plug>luasnip-jump-prev]], "Prev choice" },
+local insert = {
+	["<C-e>"] = {
+		name = "LuaSnip Jumps",
+		["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
+		["<C-p>"] = { [[<Plug>luasnip-jump-prev]], "Prev choice" },
+	},
 }
 
 local select_opts = {
