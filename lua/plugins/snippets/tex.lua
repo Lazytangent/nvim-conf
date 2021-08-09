@@ -108,12 +108,12 @@ local latex = {
 		i(0),
 	}),
 	s({ trig = "equation", dscr = "Create equation environment" }, {
-		t({ "\\begin{equation}", "" })
+		t({ "\\begin{equation}", "" }),
 		i(0),
 		t({ "", "\\end{equation}" }),
 	}),
 	s({ trig = "equation*", dscr = "Create anonymous equation environment" }, {
-		t({ "\\begin{equation*}", "" })
+		t({ "\\begin{equation*}", "" }),
 		i(0),
 		t({ "", "\\end{equation*}" }),
 	}),
