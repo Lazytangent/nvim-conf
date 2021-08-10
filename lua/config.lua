@@ -54,6 +54,8 @@ Opts = {
   guifont = "Iosevka Nerd Font Mono:h12",
 
   showmode = false,
+  grepprg = "ag",
+  shiftround = true,
 }
 
 Theming = {

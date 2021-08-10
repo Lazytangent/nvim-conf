@@ -58,6 +58,8 @@ u.opt("b", "syntax", Opts.syntax)
 u.opt("b", "swapfile", Opts.swapfile)
 
 u.opt("g", "guifont", Opts.guifont)
+u.opt("g", "grepprg", Opts.grepprg)
+u.opt("g", "shiftround", Opts.shiftround)
 
 -- Commands
 vim.o.listchars = Opts.listchars
