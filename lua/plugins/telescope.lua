@@ -1,5 +1,5 @@
 require('telescope').setup {
 	defaults = {
-		layout_strategy = "center",
+		layout_strategy = "vertical",
 	}
 }
