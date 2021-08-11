@@ -57,7 +57,7 @@ Opts = {
   grepprg = "ag",
   shiftround = true,
 
-  undodir = "~/.config/nvim/undo_dir",
+  -- undodir = "~/.config/nvim/undo_dir",
   undofile = true,
 }
 
