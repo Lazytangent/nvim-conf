@@ -13,10 +13,11 @@ local m = require("luasnip.extras").match
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
 
-ls.config.set_config({
+ls.config.setup {
 	history = true,
 	updateevents = "TextChangedI",
-})
+	store_selection_keys = "<Tab>",
+}
 
 local function copy(args)
 	return args[1]
@@ -33,6 +34,15 @@ rec_ls = function()
 	)
 end
 
+local function bash(_, command)
+	local file = io.popen(command, "r")
+	local res = {}
+	for line in file:lines() do
+		table.insert(res, line)
+	end
+	return res
+end
+
 local tex = require('plugins.snippets.tex')
 local javascript = require('plugins.snippets.javascript')
 
@@ -40,6 +50,8 @@ ls.snippets = {
 	-- General Snippets
 	all = {
 		ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
+		s("bash", f(bash, {}, "ls")),
+		s("part", p(os.date, "%Y")),
 	},
 	-- Language Specific Snippets
 	tex = tex,
