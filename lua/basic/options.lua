@@ -60,6 +60,8 @@ u.opt("b", "swapfile", Opts.swapfile)
 u.opt("g", "guifont", Opts.guifont)
 u.opt("g", "grepprg", Opts.grepprg)
 u.opt("g", "shiftround", Opts.shiftround)
+u.opt("g", "undodir", Opts.undodir)
+u.opt("g", "undofile", Opts.undofile)
 
 -- Commands
 vim.o.listchars = Opts.listchars
