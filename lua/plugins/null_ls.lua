@@ -4,7 +4,7 @@ local sources = {
   null_ls.builtins.formatting.eslint_d,
   null_ls.builtins.formatting.json_tool,
   null_ls.builtins.formatting.stylua.with({
-	  args = { "--search-parent-directories" },
+	  args = { "--indent-width", "2" },
   }),
   null_ls.builtins.formatting.rustfmt,
   null_ls.builtins.formatting.sqlformat,

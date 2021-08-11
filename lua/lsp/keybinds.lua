@@ -129,6 +129,7 @@ local black = require("efm.black")
 local eslint = require("efm.eslint")
 local isort = require("efm.isort")
 local prettier = require("efm.prettier")
+local stylua = require("efm.stylua")
 
 nvim_lsp.efm.setup({
 	capabilities = capabilities,
@@ -145,6 +146,7 @@ nvim_lsp.efm.setup({
 		"markdown",
 		"javascriptreact",
 		"typescriptreact",
+		"lua",
 	},
 	settings = {
 		rootMarkers = { ".git/" },
@@ -159,6 +161,7 @@ nvim_lsp.efm.setup({
 			html = { prettier },
 			css = { prettier },
 			markdown = { prettier },
+			lua = { stylua },
 		},
 	},
 })
