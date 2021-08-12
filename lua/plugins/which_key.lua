@@ -116,6 +116,13 @@ local normal = {
     },
     p = { [[<cmd>Prettier<cr>]], "Prettier" },
     r = { [[<cmd>Reload<cr>]], "Reload nvim config" },
+    t = {
+      name = "+Tags",
+      g = { [[:UpdateTags -R<space>]], "Update tags for a directory" },
+      h = { [[<cmd>UpdateTags -R .<space>]], "Update tags here" },
+      t = { [[<cmd>TagbarToggle<cr>]], "Toggle Tagbar" },
+      u = { [[<cmd>UpdateTags<cr>]], "Update tags" },
+    },
     w = {
       q = { [[<cmd>wq<cr>]], "write and quit" },
     },
