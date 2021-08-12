@@ -246,10 +246,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-dotenv"
   },
-  ["vim-easytags"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-easytags"
-  },
   ["vim-eunuch"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-eunuch"
@@ -261,6 +257,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-gutentags"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-gutentags"
   },
   ["vim-heroku"] = {
     loaded = true,
@@ -293,10 +293,6 @@ _G.packer_plugins = {
   ["vim-markdown"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-markdown"
-  },
-  ["vim-misc"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-misc"
   },
   ["vim-prettier"] = {
     loaded = true,
