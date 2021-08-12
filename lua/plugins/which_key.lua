@@ -256,6 +256,10 @@ local normal = {
   ["<C-k>"] = { [[:<C-U>exec "exec 'norm m`' | move -" . (1+v:count1)<cr>]], "Move line up" },
   ["<C-j>"] = { [[:<C-U>exec "exec 'norm m`' | move +" . (0+v:count1)<cr>]], "Move line down" },
   ["<C-n>"] = "Visual Multi",
+  ["<C-L>"] = {
+    name = "+Local commands",
+    ["<C-R>"] = { [[:call ExecuteFile()<cr>]], "Run current file" },
+  },
   ["f"] = { [[<Plug>Sneak_f]], "Sneak f" },
   ["F"] = { [[<Plug>Sneak_F]], "Sneak F" },
   ["t"] = { [[<Plug>Sneak_t]], "Sneak t" },
