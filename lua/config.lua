@@ -17,7 +17,7 @@ Opts = {
   lazyredraw = true,
   magic = true,
   showmatch = true,
-  mat = 2,
+  matchtime = 2,
   foldcolumn = "1",
   list = true,
   spell = true,
@@ -58,6 +58,7 @@ Opts = {
   shiftround = true,
 
   undofile = true,
+  tags = "./tags;",
 }
 
 Theming = {
