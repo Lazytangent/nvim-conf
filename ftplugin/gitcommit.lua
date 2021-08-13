@@ -1,2 +1,2 @@
 vim.bo.textwidth=72
-vim.bo.cursorcolumn=50
+vim.wo.cursorcolumn=50
