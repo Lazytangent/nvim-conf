@@ -5,8 +5,10 @@ return require("packer").startup(function()
   -- Theme Stuff
   use({
     "hoob3rt/lualine.nvim",
-    "lewis6991/moonlight.vim",
+    -- "lewis6991/moonlight.vim",
     "folke/tokyonight.nvim",
+    "marko-cerovac/material.nvim",
+    "shaunsingh/moonlight.nvim",
   })
 
   -- Formatting && General LSP

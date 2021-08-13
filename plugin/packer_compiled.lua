@@ -113,9 +113,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
-  ["moonlight.vim"] = {
+  ["material.nvim"] = {
     loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/moonlight.vim"
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/material.nvim"
+  },
+  ["moonlight.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/moonlight.nvim"
   },
   ["neoterm.nvim"] = {
     loaded = true,
