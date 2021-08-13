@@ -55,6 +55,7 @@ return require("packer").startup(function()
       end,
       requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
+    "andymass/vim-matchup",
     "lukas-reineke/indent-blankline.nvim",
     "p00f/nvim-ts-rainbow",
     "kyazdani42/nvim-web-devicons",

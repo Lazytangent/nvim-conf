@@ -294,6 +294,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-markdown"
   },
+  ["vim-matchup"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-matchup"
+  },
   ["vim-prettier"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-prettier"
