@@ -15,6 +15,7 @@ require('compe').setup {
   source = {
     path = false;
     buffer = true;
+    tags = false;
     calc = true;
     nvim_lsp = true;
     nvim_lua = true;
