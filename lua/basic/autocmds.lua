@@ -1,30 +1,6 @@
 local u = require("utils.core")
 
 local autocmds = {
-  filetypes = {
-    {"FileType", "gitcommit", "setlocal textwidth=72"},
-    {"FileType", "gitcommit", [[1 | startinsert]]},
-    {"BufNewFile,BufRead", "*.jinja", "set syntax=htmljinja"},
-    {"BufNewFile,BufRead", "*.mako", "set filetype=mako"},
-    {"FileType", "python", "syntax keyword pythonDecorator True None False self"},
-    {"FileType", "python", [[let b:AutoPairs = AutoPairsDefine({"f'": "'", "r'": "'", "b'": "'"})]]},
-    {"BufNewFile,BufRead", "*.py", "setlocal softtabstop=4 shiftwidth=4 expandtab textwidth=79"},
-
-    {"FileType", "javascript", "setlocal fen"},
-    {"FileType", "javascript", "setlocal nocindent"},
-
-    {"BufRead", "*.twig", "set syntax=html filetype=html"},
-
-    {"FileType", "markdown", "setlocal shiftwidth=4 softtabstop=4 expandtab"},
-    {"FileType", "java", "setlocal shiftwidth=4 softtabstop=4"},
-    {"BufNewFile,BufRead", "*.md", "setlocal textwidth=80"},
-    {"BufNewFile,BufReadPost", "*.md", "set filetype=markdown"},
-
-    {"BufNewFile,BufRead", "*.rasi", "set filetype=css"},
-
-    {"FileType", "go", "setlocal shiftwidth=4 softtabstop=4"},
-    {"BufNewFile,BufRead", "*.zshrc", "set filetype=zsh"},
-  },
   hl_yank = {
     {"TextYankPost", "*", 'lua require"vim.highlight".on_yank()'},
   },
@@ -41,11 +17,8 @@ local autocmds = {
 u.define_augroups(autocmds)
 
 vim.cmd("autocmd FocusGained,BufEnter * checktime")
-vim.cmd("autocmd BufWritePost plugins.lua PackerCompile")
-vim.cmd([[
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-]])
+vim.cmd([[ autocmd StdinReadPre * let s:std_in=1 ]])
+-- autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 -- vim.cmd([[
 --   autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 -- ]])
