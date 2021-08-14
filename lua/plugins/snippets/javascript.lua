@@ -31,7 +31,7 @@ local function dynamic_copy(args, old_state)
 end
 
 local javascript = {
-  s({ trig = "ctx", dscr = "Create Context" }, {
+  s({ trig = "ctx", dscr = "Create Context", name = "Create Context" }, {
     t("const "),
     i(1, "NameOfContext"),
     t({ " = createContext();", "export const " }),
@@ -52,7 +52,7 @@ local javascript = {
     f(copy, 3),
     t(";"),
   }),
-  s({ trig = "fnc", dscr = "Functional Component" }, {
+  s({ trig = "fnc", dscr = "Functional Component", name = "Functional Component" }, {
     t("const "),
     i(1, "Component"),
     t(" = ("),
@@ -72,7 +72,7 @@ local javascript = {
     f(copy, 1),
     t(";"),
   }),
-  s({ trig = "res.json", dscr = "Parse the JSON body of a response" }, {
+  s({ trig = "res.json", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" }, {
     t("const "),
     c(1, {
       i(nil, "name"),
@@ -84,7 +84,7 @@ local javascript = {
     }),
     t(" = await res.json();"),
   }),
-  s({ trig = "response.json", dscr = "Parse the JSON body of a response" }, {
+  s({ trig = "response.json", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" }, {
     t("const "),
     c(1, {
       i(nil, "name"),
@@ -96,12 +96,12 @@ local javascript = {
     }),
     t(" = await response.json();"),
   }),
-  s({ trig = "cr", dscr = "const _____ = require('_____');" }, {
+  s({ trig = "cr", dscr = "const _____ = require('_____');", name = "CommonJS import" }, {
     t("const "),
     i(2, "name"),
     t(" = require('"),
     i(1, "module"),
-    t(");"),
+    t("');"),
   }),
 }
 
