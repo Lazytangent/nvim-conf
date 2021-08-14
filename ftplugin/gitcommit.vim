@@ -1,1 +1,1 @@
-setlocal startinsert
+startinsert
