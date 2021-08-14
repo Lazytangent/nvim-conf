@@ -69,14 +69,12 @@ return require("packer").startup(function()
     "folke/which-key.nvim",
     "folke/zen-mode.nvim",
     "folke/todo-comments.nvim",
-    -- 'nvim-lua/popup.nvim',
-    -- 'nvim-lua/plenary.nvim',
     "tversteeg/registers.nvim",
     "itmecho/neoterm.nvim",
     "ludovicchabant/vim-gutentags",
     "preservim/tagbar",
-    -- 'kyazdani42/nvim-tree.lua',
-    "preservim/nerdtree",
+    'kyazdani42/nvim-tree.lua',
+    -- "preservim/nerdtree",
     "jondkinney/dragvisuals.vim",
     "junegunn/fzf.vim",
     "jiangmiao/auto-pairs",
@@ -96,6 +94,7 @@ return require("packer").startup(function()
     "tpope/vim-ragtag",
     "tpope/vim-unimpaired",
 
+    "ahmedkhalf/project.nvim",
     "alvan/vim-closetag",
     "justinmk/vim-sneak",
     "pwntester/octo.nvim",
@@ -105,6 +104,5 @@ return require("packer").startup(function()
     "christoomey/vim-sort-motion",
     "michaeljsmith/vim-indent-object",
     "vim-test/vim-test",
-    "famiu/nvim-reload",
   })
 end)
