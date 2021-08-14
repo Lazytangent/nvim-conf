@@ -133,6 +133,16 @@ local normal = {
       x = { [[<cmd>TroubleToggle<cr>]], "toggle" },
       R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
     },
+    ["<localleader>"] = {
+      t = {
+        name = "+Tests",
+        f = { [[<cmd>TestFile]], "Test File" },
+        l = { [[<cmd>TestLast]], "Test Last" },
+        n = { [[<cmd>TestNearest]], "Test Nearest" },
+        s = { [[<cmd>TestSuite]], "Test Suite" },
+        v = { [[<cmd>TestVisit]], "Test Visit" },
+      },
+    },
   },
   ["<space>"] = {
     c = {
