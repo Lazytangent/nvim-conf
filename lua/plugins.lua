@@ -84,6 +84,7 @@ return require("packer").startup(function()
     -- Tpope Section
     "tpope/vim-commentary",
     "tpope/vim-surround",
+    "tpope/vim-dispatch",
     "tpope/vim-repeat",
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
