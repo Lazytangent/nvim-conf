@@ -134,6 +134,29 @@ local normal = {
       R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
     },
     ["<localleader>"] = {
+      o = {
+        name = "+Octo",
+        i = {
+          name = "+Issues",
+          b = { [[<cmd>Octo issue browser<cr>]], "Open in browser" },
+          c = { [[<cmd>Octo issue create<cr>]], "Create issue" },
+          d = { [[<cmd>Octo issue close<cr>]], "Close issue" },
+          e = { [[<cmd>Octo issue edit<cr>]], "Edit issue" },
+          l = { [[<cmd>Octo issue list<cr>]], "List issues" },
+          s = { [[<cmd>Octo issue search<cr>]], "Search" },
+        },
+        p = {
+          name = "+Pull Requests",
+          b = { [[<cmd>Octo pr browser<cr>]], "Open in browser" },
+          c = { [[<cmd>Octo pr create<cr>]], "Create PR" },
+          d = { [[<cmd>Octo pr close<cr>]], "Close PR" },
+          e = { [[<cmd>Octo pr edit<cr>]], "Edit PR" },
+          h = { [[<cmd>Octo pr checkout<cr>]], "Checkout PR" },
+          l = { [[<cmd>Octo pr list<cr>]], "List PR" },
+          m = { [[<cmd>Octo pr merge<cr>]], "Merge PR" },
+          s = { [[<cmd>Octo pr search<cr>]], "Search" },
+        },
+      },
       t = {
         name = "+Tests",
         f = { [[<cmd>TestFile]], "Test File" },
