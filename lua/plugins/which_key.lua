@@ -65,6 +65,7 @@ local normal = {
     [","] = {
       name = "+Utilities",
       f = { [[<cmd>lua vim.lsp.buf.formatting()<cr>]], "Format" },
+      p = { [[<cmd>Telescope projects<cr>]], "Open Project" },
       t = {
         name = "+Neoterm",
         t = { [[<cmd>NeotermToggle<cr>]], "toggle" },
