@@ -1,4 +1,4 @@
-return require("packer").startup(function()
+require("packer").startup(function()
   -- Packer.nvim
   use("wbthomason/packer.nvim")
 
@@ -107,3 +107,5 @@ return require("packer").startup(function()
     "vim-test/vim-test",
   })
 end)
+
+require "plugins.general"
