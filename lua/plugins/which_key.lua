@@ -72,6 +72,7 @@ local normal = {
         r = { [[:NeotermRun<space>]], "run" },
         x = { [[<cmd>NeotermExit<cr>]], "exit" },
       },
+      [","] = { [[<c-^>]], "Last buffer" },
     },
   },
   ["<localleader>"] = {

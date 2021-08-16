@@ -59,6 +59,7 @@ Opts = {
 
   undofile = true,
   tags = "./tags;",
+  -- formatlistpat = "\C^\s*[\[({]\?\([0-9]\+\|[iIvVxXlLcCdDmM]\+\|[a-zA-Z]\)[\]:.)}]\s\+\|^\s*[-+o*]\s\+",
 }
 
 Theming = {

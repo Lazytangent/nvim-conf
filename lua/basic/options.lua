@@ -57,6 +57,7 @@ u.opt("b", "smartindent", Opts.smartindent)
 u.opt("b", "fileencoding", Opts.fileencoding)
 u.opt("b", "syntax", Opts.syntax)
 u.opt("b", "swapfile", Opts.swapfile)
+-- u.opt("b", "formatlistpat", Opts.formatlistpat)
 
 u.opt("g", "guifont", Opts.guifont)
 u.opt("g", "grepprg", Opts.grepprg)
