@@ -20,6 +20,7 @@ require("packer").startup(function()
     "nvim-treesitter/nvim-treesitter-textobjects",
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
+    "JoosepAlviste/nvim-ts-context-commentstring",
     "mattn/emmet-vim",
     "neovim/nvim-lspconfig",
     "hrsh7th/nvim-compe",
