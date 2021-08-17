@@ -194,10 +194,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
-  ["project.nvim"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/project.nvim"
-  },
   ["registers.nvim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/registers.nvim"

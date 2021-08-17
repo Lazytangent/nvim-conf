@@ -95,7 +95,7 @@ require("packer").startup(function()
     "tpope/vim-ragtag",
     "tpope/vim-unimpaired",
 
-    "ahmedkhalf/project.nvim",
+    -- "ahmedkhalf/project.nvim",
     "alvan/vim-closetag",
     "justinmk/vim-sneak",
     "pwntester/octo.nvim",
