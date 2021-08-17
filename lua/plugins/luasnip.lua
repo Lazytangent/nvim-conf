@@ -13,50 +13,50 @@ local m = require("luasnip.extras").match
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
 
-ls.config.setup {
-	history = true,
-	updateevents = "TextChangedI",
-	store_selection_keys = "<Tab>",
-}
+ls.config.setup({
+  history = true,
+  updateevents = "TextChangedI",
+  store_selection_keys = "<Tab>",
+})
 
 local function copy(args)
-	return args[1]
+  return args[1]
 end
 
 local rec_ls
 rec_ls = function()
-	return sn(
-		nil,
-		c(1, {
-			t(""),
-			sn(nil, { t({ "", "\t\\item " }), i(1), d(2, rec_ls, {}) }),
-		})
-	)
+  return sn(
+    nil,
+    c(1, {
+      t(""),
+      sn(nil, { t({ "", "\t\\item " }), i(1), d(2, rec_ls, {}) }),
+    })
+  )
 end
 
 local function bash(_, command)
-	local file = io.popen(command, "r")
-	local res = {}
-	for line in file:lines() do
-		table.insert(res, line)
-	end
-	return res
+  local file = io.popen(command, "r")
+  local res = {}
+  for line in file:lines() do
+    table.insert(res, line)
+  end
+  return res
 end
 
-local tex = require('plugins.snippets.tex')
-local javascript = require('plugins.snippets.javascript')
+local tex = require("plugins.snippets.tex")
+local javascript = require("plugins.snippets.javascript")
 
 ls.snippets = {
-	-- General Snippets
-	all = {
-		ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
-		s("bash", f(bash, {}, "ls")),
-		s("part", p(os.date, "%Y")),
-	},
-	-- Language Specific Snippets
-	tex = tex,
-	javascript = javascript,
-	typescript = javascript,
+  -- General Snippets
+  all = {
+    ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
+    s("bash", f(bash, {}, "ls")),
+    s("part", p(os.date, "%Y")),
+  },
+  -- Language Specific Snippets
+  tex = tex,
+  javascript = javascript,
+  typescript = javascript,
 }
 
 require("luasnip/loaders/from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
