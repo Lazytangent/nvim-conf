@@ -39,8 +39,8 @@ local normal = {
     },
     n = {
       name = "+NERDTree",
-      f = { [[<cmd>NERDTreeFind<cr>]], "Find" },
-      n = { [[<cmd>NERDTreeToggle<cr>]], "Toggle" },
+      f = { [[<cmd>NvimTreeFindFile<space>]], "Find" },
+      n = { [[<cmd>NvimTreeToggle<cr>]], "Toggle" },
     },
     q = "Quit",
     s = {
