@@ -1,7 +1,7 @@
 local u = require("utils.core")
 
-vim.g.mapleader = ","
-vim.g.maplocalleader = " "
+-- vim.g.mapleader = ","
+-- vim.g.maplocalleader = " "
 
 -- Normal Mode Save and Quit Commands
 -- u.map("n", "\\w", ":w<cr>", { noremap = true })
