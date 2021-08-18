@@ -11,7 +11,7 @@ local no_errors, error_msg = pcall(function()
 
   local time
   local profile_info
-  local should_profile = true
+  local should_profile = false
   if should_profile then
     local hrtime = vim.loop.hrtime
     profile_info = {}
@@ -321,10 +321,6 @@ _G.packer_plugins = {
   ["vim-smoothie"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-smoothie"
-  },
-  ["vim-sneak"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-sneak"
   },
   ["vim-sort-motion"] = {
     loaded = true,

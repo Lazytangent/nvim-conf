@@ -99,7 +99,7 @@ require("packer").startup(function()
 
     -- "ahmedkhalf/project.nvim",
     "alvan/vim-closetag",
-    "justinmk/vim-sneak",
+    -- "justinmk/vim-sneak",
     "pwntester/octo.nvim",
     "psliwka/vim-smoothie",
     "kana/vim-textobj-user",
