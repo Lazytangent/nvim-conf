@@ -29,6 +29,14 @@ require("packer").startup(function()
     "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
     "mattn/emmet-vim",
+    {
+      "jose-elias-alvarez/null-ls.nvim",
+      config = function()
+        require("null-ls").config({})
+        require("lspconfig")["null-ls"].setup({})
+      end,
+      requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    },
   })
 
   -- Specific Language Plugins
@@ -42,8 +50,6 @@ require("packer").startup(function()
     "instant-markdown/vim-instant-markdown",
     "plasticboy/vim-markdown",
     "mrdotb/vim-tailwindcss",
-    "nvie/vim-flake8",
-    "jmcantrell/vim-virtualenv",
     "jidn/vim-dbml",
     "lervag/vimtex",
   })
@@ -53,14 +59,6 @@ require("packer").startup(function()
     { "mg979/vim-visual-multi", branch = "master" },
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
-    {
-      "jose-elias-alvarez/null-ls.nvim",
-      config = function()
-        require("null-ls").config({})
-        require("lspconfig")["null-ls"].setup({})
-      end,
-      requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    },
     "andymass/vim-matchup",
     "lukas-reineke/indent-blankline.nvim",
     "p00f/nvim-ts-rainbow",

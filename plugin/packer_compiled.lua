@@ -258,10 +258,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-eunuch"
   },
-  ["vim-flake8"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-flake8"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-fugitive"
@@ -305,10 +301,6 @@ _G.packer_plugins = {
   ["vim-matchup"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-matchup"
-  },
-  ["vim-prettier"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-prettier"
   },
   ["vim-prisma"] = {
     loaded = true,
@@ -361,10 +353,6 @@ _G.packer_plugins = {
   ["vim-unimpaired"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-unimpaired"
-  },
-  ["vim-virtualenv"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-virtualenv"
   },
   ["vim-visual-multi"] = {
     loaded = true,
