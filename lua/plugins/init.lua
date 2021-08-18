@@ -11,9 +11,8 @@ require("packer").startup(function()
     "shaunsingh/moonlight.nvim",
   })
 
-  -- Formatting && General LSP
+  -- Treesitter
   use({
-    { "prettier/vim-prettier", run = "yarn install" },
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
     "nvim-treesitter/nvim-treesitter-refactor",
     "nvim-treesitter/playground",
@@ -21,21 +20,25 @@ require("packer").startup(function()
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
     "JoosepAlviste/nvim-ts-context-commentstring",
-    "mattn/emmet-vim",
+  })
+
+  -- LSP
+  use({
     "neovim/nvim-lspconfig",
     "hrsh7th/nvim-compe",
     "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
+    "mattn/emmet-vim",
   })
 
   -- Specific Language Plugins
   use({
     { "heavenshell/vim-jsdoc", run = "make install" },
-    "pantharshit00/vim-prisma",
     "leafgarland/typescript-vim",
     "peitalin/vim-jsx-typescript",
     "maxmellon/vim-jsx-pretty",
     "yuezk/vim-js",
+    "pantharshit00/vim-prisma",
     "instant-markdown/vim-instant-markdown",
     "plasticboy/vim-markdown",
     "mrdotb/vim-tailwindcss",
