@@ -310,6 +310,16 @@ local normal = {
     ["<C-l>"] = { [[<cmd>TestLast<cr>]], "Test last" },
     ["<C-g>"] = { [[<cmd>TestVisit<cr>]], "Test visit" },
   },
+  ["c"] = {
+    name = "Change",
+    ["*"] = { [[/\<<C-r>=expand('<cword>')<cr>\>\C<cr>``cgn]], "Word and search forward" },
+    ["#"] = { [[?\<<C-r>=expand('<cword>')<cr>\>\C<cr>``cgN]], "Word and search backward" },
+  },
+  ["d"] = {
+    name = "Delete",
+    ["*"] = { [[/\<<C-r>=expand('<cword>')<cr>\>\C<cr>``dgn]], "Word and search forward" },
+    ["#"] = { [[?\<<C-r>=expand('<cword>')<cr>\>\C<cr>``dgN]], "Word and search backward" },
+  },
 }
 
 local comamnd = {
@@ -359,11 +369,48 @@ local select_opts = {
   mode = "s",
 }
 
+local operator = {
+  ["i"] = {
+    name = "+Inner",
+    n = {
+      name = "+Next",
+      ["("] = { [[:<C-u>normal! f(vi(<cr>]], "Parentheses" },
+      [")"] = { [[:<C-u>normal! f)vi(<cr>]], "Parentheses" },
+      ["b"] = { [[:<C-u>normal! f(vi(<cr>]], "Parentheses" },
+
+      ["{"] = { [[:<C-u>normal! f{vi{<cr>]], "Curly Braces" },
+      ["}"] = { [[:<C-u>normal! f}vi{<cr>]], "Curly Braces" },
+      ["B"] = { [[:<C-u>normal! f{vi{<cr>]], "Curly Braces" },
+
+      ["["] = { [[:<C-u>normal! f[vi[<cr>]], "Square Brackets" },
+      ["]"] = { [[:<C-u>normal! f]vi[<cr>]], "Square Brackets" },
+    },
+    l = {
+      name = "+Last",
+      ["("] = { [[:<C-u>normal! F(vi(<cr>]], "Parentheses" },
+      [")"] = { [[:<C-u>normal! F)vi(<cr>]], "Parentheses" },
+      ["b"] = { [[:<C-u>normal! F(vi(<cr>]], "Parentheses" },
+
+      ["{"] = { [[:<C-u>normal! F{vi{<cr>]], "Curly Braces" },
+      ["}"] = { [[:<C-u>normal! F}vi{<cr>]], "Curly Braces" },
+      ["B"] = { [[:<C-u>normal! F{vi{<cr>]], "Curly Braces" },
+
+      ["["] = { [[:<C-u>normal! F[vi[<cr>]], "Curly Braces" },
+      ["]"] = { [[:<C-u>normal! F]vi[<cr>]], "Curly Braces" },
+    },
+  },
+}
+
+local operator_opts = {
+  mode = "o"
+}
+
 local wk = require("which-key")
 
 wk.register(normal)
 wk.register(visual, visual_opts)
 wk.register(insert, insert_opts)
 wk.register(select, select_opts)
+wk.register(operator, operator_opts)
 
 -- wk.register(command, command_opts)
