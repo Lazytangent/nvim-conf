@@ -310,9 +310,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-prisma"
   },
+  ["vim-pug"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-pug"
+  },
   ["vim-ragtag"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-ragtag"
+  },
+  ["vim-rails"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-rails"
   },
   ["vim-repeat"] = {
     loaded = true,

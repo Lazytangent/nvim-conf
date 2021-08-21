@@ -52,6 +52,7 @@ require("packer").startup(function()
     "mrdotb/vim-tailwindcss",
     "jidn/vim-dbml",
     "lervag/vimtex",
+    "digitaltoad/vim-pug"
   })
 
   -- Quality of Life Improvements
@@ -97,6 +98,7 @@ require("packer").startup(function()
     "tpope/vim-ragtag",
     "tpope/vim-unimpaired",
     "tpope/vim-endwise",
+    "tpope/vim-rails",
 
     -- "ahmedkhalf/project.nvim",
     "alvan/vim-closetag",
