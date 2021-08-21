@@ -254,6 +254,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-dotenv"
   },
+  ["vim-endwise"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-endwise"
+  },
   ["vim-eunuch"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-eunuch"

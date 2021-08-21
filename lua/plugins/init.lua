@@ -96,6 +96,7 @@ require("packer").startup(function()
     "tpope/vim-dotenv",
     "tpope/vim-ragtag",
     "tpope/vim-unimpaired",
+    "tpope/vim-endwise",
 
     -- "ahmedkhalf/project.nvim",
     "alvan/vim-closetag",
