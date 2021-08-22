@@ -339,6 +339,12 @@ local visual = {
   ["<S-l>"] = { [[<cmd>DVB_Drag('right')]], "Drag right" },
   ["<S-j>"] = { [[<cmd>DVB_Drag('down')]], "Drag down" },
   ["<S-k>"] = { [[<cmd>DVB_Drag('up')]], "Drag up" },
+  ["<leader>"] = {
+    ["<leader>"] = {
+      name = "+Utilities",
+      g = { [[:<C-u>call GrepOperator(visualmode())<cr>]], "Grep for selection" },
+    },
+  },
 }
 
 local visual_opts = {
@@ -350,12 +356,6 @@ local insert = {
     name = "LuaSnip Jumps",
     ["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
     ["<C-p>"] = { [[<Plug>luasnip-jump-prev]], "Prev choice" },
-  },
-  ["<leader>"] = {
-    ["<leader>"] = {
-      name = "+Utilities",
-      g = { [[:<C-u>call GrepOperator(visualmode())<cr>]], "Grep for selection" },
-    },
   },
 }
 
