@@ -20,6 +20,7 @@ require("packer").startup(function()
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
     "JoosepAlviste/nvim-ts-context-commentstring",
+    "SmiteshP/nvim-gps",
   })
 
   -- LSP

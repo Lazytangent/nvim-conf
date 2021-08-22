@@ -64,6 +64,7 @@ local normal = {
     [","] = {
       name = "+Utilities",
       f = { [[<cmd>lua vim.lsp.buf.formatting()<cr>]], "Format" },
+      g = { [[:set operatorfunc=GrepOperator<cr>g@]], "Grep for word under cursor" },
       p = { [[<cmd>Telescope projects<cr>]], "Open Project" },
       t = {
         name = "+Terminal",
@@ -349,6 +350,12 @@ local insert = {
     name = "LuaSnip Jumps",
     ["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
     ["<C-p>"] = { [[<Plug>luasnip-jump-prev]], "Prev choice" },
+  },
+  ["<leader>"] = {
+    ["<leader>"] = {
+      name = "+Utilities",
+      g = { [[:<C-u>call GrepOperator(visualmode())<cr>]], "Grep for selection" },
+    },
   },
 }
 
