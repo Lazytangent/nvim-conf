@@ -30,8 +30,7 @@ local normal = {
       r = "Coc-References",
       y = "Go to type definition",
     },
-    h = { [[<cmd>bprevious<cr>]], "Prev buffer" },
-    l = { [[<cmd>bnext<cr>]], "Next buffer" },
+    l = { [[:ls<cr>:b<space>]], "Select buffer" },
     m = {
       name = "+MarkdownPreview",
       d = { [[<cmd>InstantMarkdownPreview<cr>]], "Preview Start" },
