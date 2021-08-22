@@ -115,6 +115,7 @@ Treesitter = {
     "cpp",
     "css",
     "dockerfile",
+    "elixir",
     "go",
     "graphql",
     "html",
@@ -131,6 +132,8 @@ Treesitter = {
     "toml",
     "typescript",
     "tsx",
+    "vim",
+    "vue",
     "yaml",
   }
 }
