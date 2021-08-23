@@ -112,6 +112,7 @@ local normal = {
       s = { [[<cmd>Git<cr>]], "status" },
       w = { [[<cmd>Gw<cr>]], "write" },
     },
+    m = { [[:marks<cr>:normal! `]], "Marks" },
     n = {
       name = "+Number",
       n = { [[<cmd>set nu!<cr>]], "Toggle number" },
