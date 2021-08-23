@@ -65,7 +65,8 @@ Opts = {
 
 Theming = {
   -- colorscheme = "moonlight",
-  colorscheme = 'tokyonight',
+  -- colorscheme = 'tokyonight',
+  colorscheme = "catppuccino",
 }
 
 LSP = {

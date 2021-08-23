@@ -9,6 +9,7 @@ require("packer").startup(function()
     "folke/tokyonight.nvim",
     "marko-cerovac/material.nvim",
     "shaunsingh/moonlight.nvim",
+    "Pocco81/Catppuccino.nvim",
   })
 
   -- Treesitter
