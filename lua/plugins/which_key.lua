@@ -30,12 +30,9 @@ local normal = {
       r = "Coc-References",
       y = "Go to type definition",
     },
+    j = { [[:jumps<cr>]], "Show jumps" },
     l = { [[:ls<cr>:b<space>]], "Select buffer" },
-    m = {
-      name = "+MarkdownPreview",
-      d = { [[<cmd>InstantMarkdownPreview<cr>]], "Preview Start" },
-      s = { [[<cmd>InstantMarkdownStop<cr>]], "Preview Stop" },
-    },
+    m = { [[:marks<cr>:normal! `]], "Show marks" },
     n = {
       name = "+NERDTree",
       f = { [[<cmd>NvimTreeFindFile<space>]], "Find" },
@@ -63,6 +60,7 @@ local normal = {
     ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
     [","] = {
       name = "+Utilities",
+      c = { [[:changes<cr>]], "Show changes" },
       f = { [[<cmd>lua vim.lsp.buf.formatting()<cr>]], "Format" },
       g = { [[:set operatorfunc=GrepOperator<cr>g@]], "Grep for word under cursor" },
       p = { [[<cmd>Telescope projects<cr>]], "Open Project" },
@@ -112,7 +110,11 @@ local normal = {
       s = { [[<cmd>Git<cr>]], "status" },
       w = { [[<cmd>Gw<cr>]], "write" },
     },
-    m = { [[:marks<cr>:normal! `]], "Marks" },
+    m = {
+      name = "+MarkdownPreview",
+      d = { [[<cmd>InstantMarkdownPreview<cr>]], "Preview Start" },
+      s = { [[<cmd>InstantMarkdownStop<cr>]], "Preview Stop" },
+    },
     n = {
       name = "+Number",
       n = { [[<cmd>set nu!<cr>]], "Toggle number" },
