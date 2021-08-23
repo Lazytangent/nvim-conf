@@ -417,6 +417,6 @@ wk.register(normal)
 wk.register(visual, visual_opts)
 wk.register(insert, insert_opts)
 wk.register(select, select_opts)
-wk.register(operator, operator_opts)
 
+-- wk.register(operator, operator_opts)
 -- wk.register(command, command_opts)
