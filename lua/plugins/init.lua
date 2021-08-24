@@ -62,6 +62,7 @@ require("packer").startup(function()
     { "mg979/vim-visual-multi", branch = "master" },
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
+    { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
     "andymass/vim-matchup",
     "lukas-reineke/indent-blankline.nvim",
     "p00f/nvim-ts-rainbow",
