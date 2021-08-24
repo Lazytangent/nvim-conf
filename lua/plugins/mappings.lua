@@ -59,9 +59,9 @@ vim.g.maplocalleader = " "
 -- remap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', {expr = true, noremap = true})
 
 -- Nvim-Compe
-u.map("i", "<C-Space>", "compe#complete()", { silent = true, expr = true })
+-- u.map("i", "<C-Space>", "compe#complete()", { silent = true, expr = true })
 -- u.map("i", "<C-y>", [[compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))]], { silent = true, expr = true })
-u.map("i", "<C-y>", "compe#confirm('<C-y>')", { silent = true, expr = true })
-u.map("i", "<C-e>", "compe#close('<C-e>')", { silent = true, expr = true })
-u.map("i", "<C-f>", "compe#scroll({ 'delta': +4 })", { silent = true, expr = true })
-u.map("i", "<C-b>", "compe#scroll({ 'delta': -4 })", { silent = true, expr = true })
+-- u.map("i", "<C-y>", "compe#confirm('<C-y>')", { silent = true, expr = true })
+-- u.map("i", "<C-e>", "compe#close('<C-e>')", { silent = true, expr = true })
+-- u.map("i", "<C-f>", "compe#scroll({ 'delta': +4 })", { silent = true, expr = true })
+-- u.map("i", "<C-b>", "compe#scroll({ 'delta': -4 })", { silent = true, expr = true })
