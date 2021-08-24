@@ -172,20 +172,6 @@ local normal = {
       },
     },
   },
-  ["<space>"] = {
-    c = {
-      name = "+Code",
-      a = "Code action",
-    },
-    D = "Type definition",
-    e = "Show line diagnostics",
-    w = {
-      name = "+Workspace",
-      a = "Add folder",
-      l = "List folders",
-      r = "Remove folder",
-    },
-  },
   ["g"] = {
     c = "Commentary",
     D = "Go to declaration",

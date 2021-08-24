@@ -3,8 +3,8 @@ require "utils.handlers"
 require "config"
 require "plugins"
 
--- vim.g.mapleader = ","
--- vim.g.maplocalleader = " "
+vim.g.mapleader = ","
+vim.g.maplocalleader = " "
 
 -- LSP
 require "lsp"
