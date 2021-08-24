@@ -122,6 +122,7 @@ require("packer").startup(function()
     "christoomey/vim-sort-motion",
     "michaeljsmith/vim-indent-object",
     "vim-test/vim-test",
+    "norcalli/nvim-terminal.lua",
   })
 end)
 

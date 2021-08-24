@@ -170,6 +170,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-terminal.lua"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/nvim-terminal.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
