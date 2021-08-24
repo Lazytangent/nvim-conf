@@ -27,7 +27,6 @@ require("packer").startup(function()
   -- LSP
   use({
     "neovim/nvim-lspconfig",
-    "hrsh7th/nvim-compe",
     "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
     "mattn/emmet-vim",
@@ -39,6 +38,15 @@ require("packer").startup(function()
       end,
       requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
+
+    -- "hrsh7th/nvim-compe",
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-calc",
+    "hrsh7th/cmp-nvim-lua",
+    "saadparwaiz1/cmp_luasnip",
+    "kdheepak/cmp-latex-symbols",
   })
 
   -- Specific Language Plugins

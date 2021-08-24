@@ -85,6 +85,30 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
+  ["cmp-calc"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-calc"
+  },
+  ["cmp-latex-symbols"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-latex-symbols"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+  },
   ["dragvisuals.vim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/dragvisuals.vim"
@@ -134,9 +158,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
   },
-  ["nvim-compe"] = {
+  ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
   ["nvim-gps"] = {
     loaded = true,
