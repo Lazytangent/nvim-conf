@@ -69,6 +69,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Catppuccino.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/Catppuccino.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/LuaSnip"

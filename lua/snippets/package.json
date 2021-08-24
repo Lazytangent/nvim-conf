@@ -14,15 +14,6 @@
                 "path": "./react-ts.json"
             },
             {
-                "language": [
-                    "javascript",
-                    "typescript",
-                    "javascriptreact",
-                    "typescriptreact"
-                ],
-                "path": "./javascript.json"
-            },
-            {
                 "language": "python",
                 "path": "./python.json"
             }
