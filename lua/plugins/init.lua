@@ -29,7 +29,7 @@ require("packer").startup(function()
     "neovim/nvim-lspconfig",
     "hrsh7th/nvim-compe",
     "L3MON4D3/LuaSnip",
-    "Lazytangent/friendly-snippets",
+    "rafamadriz/friendly-snippets",
     "mattn/emmet-vim",
     {
       "jose-elias-alvarez/null-ls.nvim",
