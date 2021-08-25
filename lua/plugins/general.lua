@@ -1,3 +1,4 @@
+require 'plugins.catppucchino'
 require 'plugins.cmp'
 -- require 'plugins.compe'
 require 'plugins.drag_visuals'

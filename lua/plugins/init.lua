@@ -110,8 +110,8 @@ require("packer").startup(function()
     "tpope/vim-unimpaired",
     "tpope/vim-endwise",
     "tpope/vim-rails",
-    "wellle/targets.vim",
 
+    "wellle/targets.vim",
     -- "ahmedkhalf/project.nvim",
     "alvan/vim-closetag",
     -- "justinmk/vim-sneak",

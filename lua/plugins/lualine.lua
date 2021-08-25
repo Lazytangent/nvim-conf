@@ -3,7 +3,8 @@ local gps = require('nvim-gps')
 require("lualine").setup {
   options = {
     -- theme = "nightfly",
-    theme = 'tokyonight',
+    -- theme = 'tokyonight',
+    theme = 'catppuccino',
     icons_enabled = false,
     disabled_filetypes = {'NvimTree'},
     extensions = { 'quickfix', 'fugitive' },
