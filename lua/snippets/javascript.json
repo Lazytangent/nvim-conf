@@ -1,0 +1,6 @@
+{
+    "const require import": {
+        "prefix": "cr",
+        "body": "const ${2:contents} = require('${1:module}');$0"
+    }
+}
