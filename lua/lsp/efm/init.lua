@@ -3,11 +3,11 @@ local nvim_lsp = require('lspconfig')
 local capabilities = require("lsp.capabilities")
 local on_attach = require("lsp.on_attach")
 
-local autopep8 = require("efm.autopep8")
-local black = require("efm.black")
-local eslint = require("efm.eslint")
-local isort = require("efm.isort")
-local prettier = require("efm.prettier")
+local autopep8 = require("lsp.efm.autopep8")
+local black = require("lsp.efm.black")
+local eslint = require("lsp.efm.eslint")
+local isort = require("lsp.efm.isort")
+local prettier = require("lsp.efm.prettier")
 
 nvim_lsp.efm.setup({
   capabilities = capabilities,
