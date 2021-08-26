@@ -201,6 +201,8 @@ local normal = {
       x = "crosshairs",
     },
   },
+  ["*"] = { [[*``]], "*" },
+  ["#"] = { [[#``]], "#" },
   ["["] = {
     d = "Go to prev diagnostic",
 
