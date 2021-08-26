@@ -11,7 +11,7 @@ local normal = {
     c = {
       name = "+Change",
       c = { [[<cmd>lua require('telescope.builtin').colorscheme()<cr>]], "colorscheme" },
-      d = { [[<cmd>cd %:h<cr>]], "Change working directory" },
+      d = { [[<cmd>cd %:p:h<cr>]], "Change working directory" },
       t = { [[<cmd>!ctags -R .<cr><cr>]], "Ctags" },
     },
     f = {
