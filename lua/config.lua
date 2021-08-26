@@ -127,6 +127,7 @@ Treesitter = {
     "latex",
     "lua",
     "python",
+    "query",
     "regex",
     "ruby",
     "rust",

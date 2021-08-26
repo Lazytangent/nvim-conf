@@ -21,7 +21,8 @@ require("packer").startup(function()
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
     "JoosepAlviste/nvim-ts-context-commentstring",
-    { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
+    -- { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
+    { "Lazytangent/nvim-gps", branch = 'dev', requires = "nvim-treesitter/nvim-treesitter" },
   })
 
   -- LSP

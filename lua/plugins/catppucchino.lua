@@ -5,7 +5,7 @@ require('catppuccino').setup(
       lsp_trouble = true,
       gitsigns = true,
       telescope = true,
-      nvimtree = true,
+      nvimtree = { enabled = true, show_root = true },
       which_key = true,
       indent_blankline = true,
       markdown = true,
