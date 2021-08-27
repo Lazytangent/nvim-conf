@@ -1,18 +1,18 @@
 require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
 
-  highlight = { enable = true, },
+  highlight = { enable = true },
   indent = { enable = true },
-  matchup = { enable = true, },
-  rainbow = { enable = Treesitter.rainbow },
+  matchup = { enable = true },
+  rainbow = { enable = Treesitter.rainbow, extended_mode = true },
 
   incremental_selection = {
     enable = true,
     keymaps = {
       init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
+      node_incremental = "gnrr",
+      scope_incremental = "gnrc",
+      node_decremental = "gnrm",
     },
   },
   refactor = {
@@ -93,5 +93,10 @@ require("nvim-treesitter.configs").setup({
   },
   autotag = {
     enable = true,
+  },
+  query_linter = {
+    enable = true,
+    use_virtual_text = true,
+    lint_events = { "BufWrite", "CursorHold" },
   },
 })
