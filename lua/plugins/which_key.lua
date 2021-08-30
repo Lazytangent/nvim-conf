@@ -109,6 +109,7 @@ local normal = {
       },
       s = { [[<cmd>Git<cr>]], "status" },
       w = { [[<cmd>Gw<cr>]], "write" },
+      S = { [[<cmd>Git write %<cr>]], "stash file" },
     },
     m = {
       name = "+MarkdownPreview",

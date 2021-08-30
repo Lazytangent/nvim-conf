@@ -72,6 +72,7 @@ require("packer").startup(function()
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
     { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+    { "nvim-telescope/telescope-frecency.nvim", requires = { "tami5/sql.nvim" } },
     "andymass/vim-matchup",
     "lukas-reineke/indent-blankline.nvim",
     "p00f/nvim-ts-rainbow",
