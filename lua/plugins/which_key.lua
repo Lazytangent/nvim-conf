@@ -34,8 +34,8 @@ local normal = {
     l = { [[:ls<cr>:b<space>]], "Select buffer" },
     m = { [[:marks<cr>:normal! `]], "Show marks" },
     n = {
-      name = "+NERDTree",
-      f = { [[<cmd>NvimTreeFindFile<space>]], "Find" },
+      name = "+NvimTree",
+      f = { [[:NvimTreeFindFile<space>]], "Find" },
       n = { [[<cmd>NvimTreeToggle<cr>]], "Toggle" },
     },
     q = "Quit",
@@ -50,7 +50,7 @@ local normal = {
     t = {
       name = "+Tabs",
       c = { [[<cmd>tabclose<cr>]], "Close tab" },
-      e = { [[<cmd>tabedit <C-r>=expand("%:p:h")<cr>/]], "Edit tab" },
+      e = { [[:tabedit <C-r>=expand("%:p:h")<cr>/<cr>]], "Edit tab" },
       m = { [[<cmd>tabmove<cr>]], "Move tab" },
       n = { [[<cmd>tabnew<cr>]], "New tab" },
       o = { [[<cmd>tabonly<cr>]], "Only tab" },
@@ -94,6 +94,8 @@ local normal = {
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "quickfix list" },
       r = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "registers" },
       t = { [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], "treesitter" },
+
+      s = { [[<cmd>w<cr>]], "Save file" },
     },
     g = {
       name = "+Git",
@@ -108,7 +110,7 @@ local normal = {
       },
       s = { [[<cmd>Git<cr>]], "status" },
       w = { [[<cmd>Gw<cr>]], "write" },
-      S = { [[<cmd>Git write %<cr>]], "stash file" },
+      S = { [[<cmd>Gwrite<cr>]], "stash file" },
     },
     m = {
       name = "+MarkdownPreview",
