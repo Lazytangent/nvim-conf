@@ -100,3 +100,5 @@ require("nvim-treesitter.configs").setup({
     lint_events = { "BufWrite", "CursorHold" },
   },
 })
+
+require 'plugins.treesitter.org_parser'
