@@ -1,4 +1,4 @@
 vim.cmd([[
-  iabbbrev hte the
-  iabbbrev teh the
+  iabbrev hte the
+  iabbrev teh the
 ]])
