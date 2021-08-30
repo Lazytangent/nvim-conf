@@ -82,6 +82,7 @@ local normal = {
     },
     f = {
       name = "+Telescope",
+      a = { [[<cmd>lua require('telescope').extensions.frecency.frecency()<cr>]], "Frecency" },
       b = { [[<cmd>lua require('telescope.builtin').buffers()<cr>]], "Find Buffers" },
       c = { [[<cmd>lua require('telescope.builtin').commands()<cr>]], "commands" },
       d = { [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>]], "document diagnostics" },
@@ -93,8 +94,6 @@ local normal = {
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "quickfix list" },
       r = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "registers" },
       t = { [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], "treesitter" },
-
-      s = { [[<cmd>w<cr>]], "save file" },
     },
     g = {
       name = "+Git",
