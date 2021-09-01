@@ -77,10 +77,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/LuaSnip"
   },
-  ["ack.vim"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/ack.vim"
-  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/auto-pairs"
@@ -282,10 +278,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/typescript-vim"
   },
-  ["vim-closetag"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-closetag"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-commentary"
@@ -337,10 +329,6 @@ _G.packer_plugins = {
   ["vim-instant-markdown"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-instant-markdown"
-  },
-  ["vim-js"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-js"
   },
   ["vim-jsdoc"] = {
     loaded = true,
@@ -417,10 +405,6 @@ _G.packer_plugins = {
   ["vim-unimpaired"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-unimpaired"
-  },
-  ["vim-visual-multi"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-visual-multi"
   },
   vimtex = {
     loaded = true,

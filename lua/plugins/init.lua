@@ -20,6 +20,7 @@ require("packer").startup(function()
     "nvim-treesitter/nvim-treesitter-textobjects",
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
+    "p00f/nvim-ts-rainbow",
     "JoosepAlviste/nvim-ts-context-commentstring",
     -- { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
     { "Lazytangent/nvim-gps", branch = 'dev', requires = "nvim-treesitter/nvim-treesitter" },
@@ -54,9 +55,8 @@ require("packer").startup(function()
   use({
     { "heavenshell/vim-jsdoc", run = "make install" },
     "leafgarland/typescript-vim",
-    "peitalin/vim-jsx-typescript",
+    "peitalin/vim-jsx-typescript", -- *.tsx files
     "maxmellon/vim-jsx-pretty",
-    "yuezk/vim-js",
     "pantharshit00/vim-prisma",
     "instant-markdown/vim-instant-markdown",
     "plasticboy/vim-markdown",
@@ -67,16 +67,18 @@ require("packer").startup(function()
   })
 
   -- Quality of Life Improvements
+  -- Telescope
   use({
-    { "mg979/vim-visual-multi", branch = "master" },
-    { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
     { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
     { "nvim-telescope/telescope-frecency.nvim", requires = { "tami5/sql.nvim" } },
     "nvim-telescope/telescope-project.nvim",
+  })
+
+  use({
+    { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
     "andymass/vim-matchup",
     "lukas-reineke/indent-blankline.nvim",
-    "p00f/nvim-ts-rainbow",
     "kyazdani42/nvim-web-devicons",
     "ryanoasis/vim-devicons",
 
@@ -86,17 +88,16 @@ require("packer").startup(function()
     "folke/which-key.nvim",
     "folke/zen-mode.nvim",
     "folke/todo-comments.nvim",
+
     "tversteeg/registers.nvim",
     "itmecho/neoterm.nvim",
     "ludovicchabant/vim-gutentags",
     "preservim/tagbar",
     'kyazdani42/nvim-tree.lua',
-    -- "preservim/nerdtree",
     "jondkinney/dragvisuals.vim",
     "junegunn/fzf.vim",
     "jiangmiao/auto-pairs",
     "kristijanhusak/orgmode.nvim",
-    "mileszs/ack.vim",
 
     -- Tpope Section
     "tpope/vim-commentary",
@@ -115,9 +116,7 @@ require("packer").startup(function()
     "tpope/vim-rails",
 
     "wellle/targets.vim",
-    -- "ahmedkhalf/project.nvim",
-    "alvan/vim-closetag",
-    -- "justinmk/vim-sneak",
+    -- "alvan/vim-closetag",
     "pwntester/octo.nvim",
     "psliwka/vim-smoothie",
     "kana/vim-textobj-user",
