@@ -73,6 +73,7 @@ require("packer").startup(function()
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
     { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
     { "nvim-telescope/telescope-frecency.nvim", requires = { "tami5/sql.nvim" } },
+    "nvim-telescope/telescope-project.nvim",
     "andymass/vim-matchup",
     "lukas-reineke/indent-blankline.nvim",
     "p00f/nvim-ts-rainbow",
