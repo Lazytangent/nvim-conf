@@ -238,6 +238,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/registers.nvim"
   },
+  ["sql.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/sql.nvim"
+  },
   tagbar = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/tagbar"
@@ -245,6 +249,10 @@ _G.packer_plugins = {
   ["targets.vim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/targets.vim"
+  },
+  ["telescope-frecency.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,

@@ -80,6 +80,11 @@ local normal = {
       O = { [[O<Esc>]], "Add new line above" },
       o = { [[o<Esc>]], "Add new line below" },
     },
+    c = {
+      name = "+Open",
+      c = { [[<cmd>copen<cr>]], "Quickfix" },
+      l = { [[<cmd>lopen<cr>]], "Location" },
+    },
     f = {
       name = "+Telescope",
       a = { [[<cmd>lua require('telescope').extensions.frecency.frecency()<cr>]], "Frecency" },
