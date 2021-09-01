@@ -11,3 +11,6 @@ require "lsp"
 
 -- Personal config
 require "basic"
+
+-- GUI Config
+require "guis"

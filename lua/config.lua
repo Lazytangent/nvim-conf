@@ -51,7 +51,7 @@ Opts = {
   syntax = "on",
   swapfile = false,
 
-  guifont = "Iosevka Nerd Font Mono:h12",
+  guifont = "Iosevka_Nerd_Font_Mono:h12",
 
   showmode = false,
   grepprg = "ag",
