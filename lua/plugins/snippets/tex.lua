@@ -139,6 +139,10 @@ local latex = {
     t("}"),
     i(0),
   }),
+  s({ trig = "sim", dscr = "Similar/Tilde", name = "Regular sim" }, {
+    t("\\sim"),
+    i(0),
+  }),
 }
 
 vim.list_extend(latex, greek)

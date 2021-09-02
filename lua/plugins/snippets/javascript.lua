@@ -103,6 +103,12 @@ local javascript = {
     i(1, "module"),
     t("');"),
   }),
+  s({ trig = "log", dscr = "console.log($1);$0", name = "Console log" }, {
+    t("console.log("),
+    i(1),
+    t(");"),
+    i(0),
+  }),
 }
 
 local redux = require("plugins.snippets.redux")
