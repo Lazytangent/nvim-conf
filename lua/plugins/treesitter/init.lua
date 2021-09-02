@@ -1,12 +1,16 @@
 require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
-  ignore_install = { "latex" },
+  -- ignore_install = { "latex" },
 
-  highlight = { enable = true },
   indent = { enable = true },
   matchup = { enable = true },
   rainbow = { enable = Treesitter.rainbow, extended_mode = true },
 
+  highlight = {
+    enable = true,
+    disable = { "latex", "tex" },
+    additional_vim_regex_highlighting = { "latex", "tex" },
+  },
   incremental_selection = {
     enable = true,
     keymaps = {
