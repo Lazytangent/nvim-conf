@@ -234,9 +234,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/registers.nvim"
   },
-  ["sql.nvim"] = {
+  ["sqlite.lua"] = {
     loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/sql.nvim"
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/sqlite.lua"
   },
   tagbar = {
     loaded = true,

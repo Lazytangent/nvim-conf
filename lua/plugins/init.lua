@@ -71,7 +71,7 @@ require("packer").startup(function()
   use({
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
     { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
-    { "nvim-telescope/telescope-frecency.nvim", requires = { "tami5/sql.nvim" } },
+    { "nvim-telescope/telescope-frecency.nvim", requires = { "tami5/sqlite.lua" } },
     "nvim-telescope/telescope-project.nvim",
   })
 
