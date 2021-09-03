@@ -143,6 +143,12 @@ local latex = {
     t("\\sim"),
     i(0),
   }),
+  s({ trig = "emph", dscr = "\\emph{$1}$0", name = "Emphasis" }, {
+    t("\\emph{"),
+    i(1),
+    t("}"),
+    i(0),
+  }),
 }
 
 vim.list_extend(latex, greek)
