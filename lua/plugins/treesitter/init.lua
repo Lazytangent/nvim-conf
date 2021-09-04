@@ -2,7 +2,7 @@ require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
   -- ignore_install = { "latex" },
 
-  indent = { enable = true },
+  indent = { enable = false },
   matchup = { enable = true },
   rainbow = { enable = Treesitter.rainbow, extended_mode = true },
 
