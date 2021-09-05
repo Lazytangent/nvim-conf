@@ -7,7 +7,7 @@ require('catppuccino').setup(
       telescope = true,
       nvimtree = { enabled = true, show_root = true },
       which_key = true,
-      indent_blankline = true,
+      indent_blankline = { enabled = true },
       markdown = true,
     },
   }
