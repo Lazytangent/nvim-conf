@@ -63,7 +63,8 @@ require("packer").startup(function()
     "mrdotb/vim-tailwindcss",
     "jidn/vim-dbml",
     "lervag/vimtex",
-    "digitaltoad/vim-pug"
+    "digitaltoad/vim-pug",
+    "elixir-editors/vim-elixir",
   })
 
   -- Quality of Life Improvements
