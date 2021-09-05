@@ -46,7 +46,7 @@ for _, lsp in ipairs(servers) do
   elseif lsp == "java_language_server" then
     nvim_lsp[lsp].setup({
       cmd = { "/Users/petermai/Documents/LSP/java-language-server/dist/lang_server_mac.sh" },
-      capabilities = capabilities,
+      -- capabilities = capabilities,
     })
   elseif lsp == "groovyls" then
     nvim_lsp[lsp].setup({

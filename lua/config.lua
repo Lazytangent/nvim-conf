@@ -89,6 +89,7 @@ LSP = {
     "html",
     "java_language_server",
     "jedi_language_server",
+    "jdtls",
     "jsonls",
     "rust_analyzer",
     "solargraph",
