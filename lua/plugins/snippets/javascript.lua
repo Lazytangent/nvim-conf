@@ -112,6 +112,8 @@ local javascript = {
 }
 
 local redux = require("plugins.snippets.redux")
+local react = require("plugins.snippets.react")
 vim.list_extend(javascript, redux)
+vim.list_extend(javascript, react)
 
 return javascript
