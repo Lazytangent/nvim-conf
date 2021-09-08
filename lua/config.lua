@@ -127,6 +127,7 @@ Treesitter = {
     "json",
     "latex",
     "lua",
+    "org",
     "python",
     "query",
     "regex",

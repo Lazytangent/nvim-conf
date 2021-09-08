@@ -98,7 +98,7 @@ require("packer").startup(function()
     "jondkinney/dragvisuals.vim",
     "junegunn/fzf.vim",
     "jiangmiao/auto-pairs",
-    "kristijanhusak/orgmode.nvim",
+    { "kristijanhusak/orgmode.nvim", branch = "tree-sitter" },
 
     -- Tpope Section
     "tpope/vim-commentary",

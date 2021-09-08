@@ -42,6 +42,14 @@ local orgmode = {
     t("#+TITLE: "),
     i(1, "title"),
   }),
+  s({ trig = "beg", dscr = "#+BEGIN_$1", name = "Create environment" }, {
+    t("#+BEGIN_"),
+    i(1),
+    t({ "", "" }),
+    i(0),
+    t({ "", "#+END_" }),
+    f(copy, 1),
+  }),
 }
 
 return orgmode
