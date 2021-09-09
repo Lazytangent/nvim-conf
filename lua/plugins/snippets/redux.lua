@@ -40,7 +40,7 @@ return {
     t ") => (state) => ",
     i(2, "state"),
   }),
-  s({ trig = "uSel", dscr = "useSelector hook", name = "useSelector" }, {
+  s({ trig = "uS", dscr = "useSelector hook", name = "useSelector" }, {
     t("const "),
     i(2, "variable"),
     t(" = useSelector((state) => state."),
@@ -55,7 +55,5 @@ return {
   s({ trig = "state", dscr = "Selector function", name = "Selector" }, {
     t("(state) => state."),
     i(1, "slice"),
-    t(");"),
-    i(0),
   }),
 }
