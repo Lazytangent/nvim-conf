@@ -112,7 +112,7 @@ local normal = {
       P = {
         name = "+Push",
         m = { [[<cmd>Git push -u origin main<cr>]], "main" },
-        p = { [[:Git push -u origin ]], "branch" },
+        p = { [[:Git push -u origin<space>]], "branch" },
       },
       s = { [[<cmd>Git<cr>]], "status" },
       w = { [[<cmd>Gw<cr>]], "write" },
