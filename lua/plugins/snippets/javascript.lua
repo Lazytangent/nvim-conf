@@ -72,7 +72,7 @@ local javascript = {
     f(copy, 1),
     t(";"),
   }),
-  s({ trig = "res.json", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" }, {
+  s({ trig = "rj", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" }, {
     t("const "),
     c(1, {
       i(nil, "name"),
@@ -108,6 +108,29 @@ local javascript = {
     i(1),
     t(");"),
     i(0),
+  }),
+  s({ trig = "edc", dscr = "Export default a const variable", name = "Export default const" }, {
+    t("const "),
+    i(1, "name"),
+    t({ "", "", "export default " }),
+    f(copy, 1),
+    t(";"),
+  }),
+  s({ trig = "edcl", dscr = "Export default class", name = "Export default class" }, {
+    t("export default class "),
+    i(1, "name"),
+    t({ "{", "\t" }),
+    i(0),
+    t({ "", "}" }),
+  }),
+  s({ trig = "edf", dscr = "Export default function with function declaration syntax", name = "Export default function" }, {
+    t("export default function "),
+    i(1, "name"),
+    t("("),
+    i(2, "params"),
+    t({ ") {", "\t" }),
+    i(0),
+    t({ "", "}" }),
   }),
 }
 
