@@ -57,7 +57,9 @@ ls.snippets = {
   -- Language Specific Snippets
   tex = tex,
   javascript = javascript,
+  javascriptreact = javascript,
   typescript = javascript,
+  typescriptreact = javascript,
   org = org,
 }
 
