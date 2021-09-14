@@ -112,6 +112,7 @@ local javascript = {
   s({ trig = "edc", dscr = "Export default a const variable", name = "Export default const" }, {
     t("const "),
     i(1, "name"),
+    i(0),
     t({ "", "", "export default " }),
     f(copy, 1),
     t(";"),
