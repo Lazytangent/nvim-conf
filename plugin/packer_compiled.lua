@@ -129,6 +129,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
+  },
   ["lsp-colors.nvim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"

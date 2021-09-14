@@ -79,6 +79,7 @@ require("packer").startup(function()
   use({
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
     "andymass/vim-matchup",
+    "ggandor/lightspeed.nvim",
     "lukas-reineke/indent-blankline.nvim",
     "kyazdani42/nvim-web-devicons",
     "ryanoasis/vim-devicons",
