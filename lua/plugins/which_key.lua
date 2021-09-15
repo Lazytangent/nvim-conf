@@ -1,4 +1,4 @@
-require("which-key").setup({})
+require("which-key").setup {}
 
 local normal = {
   ["<leader>"] = {
@@ -73,6 +73,24 @@ local normal = {
       },
       [","] = { [[<c-^>]], "Last buffer" },
     },
+    ["<localleader>"] = {
+      name = "+LSP",
+      l = {
+        name = "+LSP",
+        c = { "Code action" },
+        d = { "Definition" },
+        D = { "Declaration" },
+        r = { "References" },
+        t = { "Type definition" },
+      },
+      r = { "Rename" },
+      w = {
+        name = "+LSP Workspace",
+        a = { "Add workspace folder" },
+        r = { "Remove workspace folder" },
+        l = { "List workspace folders" },
+      }
+    },
   },
   ["<localleader>"] = {
     a = {
@@ -85,6 +103,7 @@ local normal = {
       c = { [[<cmd>copen<cr>]], "Quickfix" },
       l = { [[<cmd>lopen<cr>]], "Location" },
     },
+    e = { "Show line diagnostics" },
     f = {
       name = "+Telescope",
       a = { [[<cmd>lua require('telescope').extensions.frecency.frecency()<cr>]], "Frecency" },
@@ -155,6 +174,7 @@ local normal = {
       r = { [[<cmd>set rnu!<cr>]], "Toggle relative" },
     },
     p = { [[<cmd>Prettier<cr>]], "Prettier" },
+    q = { "Set diagnostics into location list" },
     r = { [[<cmd>Reload<cr>]], "Reload nvim config" },
     t = {
       name = "+Tags",
@@ -208,10 +228,6 @@ local normal = {
   },
   ["g"] = {
     c = "Commentary",
-    D = "Go to declaration",
-    d = "Go to definition",
-    i = "Go to implementation",
-    r = "References",
     s = "Sort motion",
   },
   ["j"] = { [[v:count == 0 ? 'gj' : 'j']], "Up (virtual) line", expr = true },
@@ -433,10 +449,10 @@ local operator = {
 }
 
 local operator_opts = {
-  mode = "o"
+  mode = "o",
 }
 
-local wk = require("which-key")
+local wk = require "which-key"
 
 wk.register(normal)
 wk.register(visual, visual_opts)
