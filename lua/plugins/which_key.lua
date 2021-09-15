@@ -75,6 +75,11 @@ local normal = {
     },
     ["<localleader>"] = {
       name = "+LSP",
+      d = {
+        name = "+Textobjects peek",
+        c = { "Outer class" },
+        f = { "Outer function" },
+      },
       l = {
         name = "+LSP",
         c = { "Code action" },

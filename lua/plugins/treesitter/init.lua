@@ -84,6 +84,13 @@ require("nvim-treesitter.configs").setup({
         ["[]"] = "@class.outer",
       },
     },
+    lsp_interop = {
+      enable = true,
+      peek_definition_code = {
+        ["<leader><localleader>df"] = "@function.outer",
+        ["<leader><localleader>dc"] = "@class.outer",
+      },
+    },
   },
   pairs = {
     enable = true,
