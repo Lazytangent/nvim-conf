@@ -77,23 +77,23 @@ local normal = {
       name = "+LSP",
       d = {
         name = "+Textobjects peek",
-        c = { "Outer class" },
-        f = { "Outer function" },
+        c = "Outer class",
+        f = "Outer function",
       },
       l = {
         name = "+LSP",
-        c = { "Code action" },
-        d = { "Definition" },
-        D = { "Declaration" },
-        r = { "References" },
-        t = { "Type definition" },
+        c = "Code action",
+        d = "Definition",
+        D = "Declaration",
+        r = "References",
+        t = "Type definition",
       },
-      r = { "Rename" },
+      r = "Rename",
       w = {
         name = "+LSP Workspace",
-        a = { "Add workspace folder" },
-        r = { "Remove workspace folder" },
-        l = { "List workspace folders" },
+        a = "Add workspace folder",
+        r = "Remove workspace folder",
+        l = "List workspace folders",
       }
     },
   },
@@ -108,7 +108,7 @@ local normal = {
       c = { [[<cmd>copen<cr>]], "Quickfix" },
       l = { [[<cmd>lopen<cr>]], "Location" },
     },
-    e = { "Show line diagnostics" },
+    e = "Show line diagnostics",
     f = {
       name = "+Telescope",
       a = { [[<cmd>lua require('telescope').extensions.frecency.frecency()<cr>]], "Frecency" },
@@ -179,7 +179,7 @@ local normal = {
       r = { [[<cmd>set rnu!<cr>]], "Toggle relative" },
     },
     p = { [[<cmd>Prettier<cr>]], "Prettier" },
-    q = { "Set diagnostics into location list" },
+    q = "Set diagnostics into location list",
     r = { [[<cmd>Reload<cr>]], "Reload nvim config" },
     t = {
       name = "+Tags",
@@ -234,6 +234,10 @@ local normal = {
   ["g"] = {
     c = "Commentary",
     s = "Sort motion",
+
+    -- LSP Stuff
+    d = "Go to defintion",
+    D = "Go to declaration",
   },
   ["j"] = { [[v:count == 0 ? 'gj' : 'j']], "Up (virtual) line", expr = true },
   ["k"] = { [[v:count == 0 ? 'gk' : 'k']], "Down (virtual) line", expr = true },
@@ -344,10 +348,6 @@ local normal = {
     ["<C-R>"] = { [[:call ExecuteFile()<cr>]], "Run current file" },
   },
   ["<C-U>"] = "Up half a page",
-  -- ["f"] = { [[<Plug>Sneak_f]], "Sneak f" },
-  -- ["F"] = { [[<Plug>Sneak_F]], "Sneak F" },
-  -- ["t"] = { [[<Plug>Sneak_t]], "Sneak t" },
-  -- ["T"] = { [[<Plug>Sneak_T]], "Sneak T" },
   ["t"] = {
     name = "Test",
     ["<C-n>"] = { [[<cmd>TestNearest<cr>]], "Test nearest" },
