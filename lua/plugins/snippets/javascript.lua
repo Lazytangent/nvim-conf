@@ -136,7 +136,7 @@ local javascript = {
   s({ trig = "Pkc", dscr = "A Sequelize model's static findByPk method", name = "findByPk" }, {
     t("const "),
     i(3, "variable"),
-    t(" = ")
+    t(" = "),
     i(1, "Model"),
     t(".findByPk("),
     i(2),
