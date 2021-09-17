@@ -133,6 +133,24 @@ local javascript = {
     i(0),
     t({ "", "}" }),
   }),
+  s({ trig = "Pkc", dscr = "A Sequelize model's static findByPk method", name = "findByPk" }, {
+    t("const "),
+    i(3, "variable"),
+    t(" = ")
+    i(1, "Model"),
+    t(".findByPk("),
+    i(2),
+    t(");"),
+  }),
+  s({ trig = "fA", dscr = "A Sequelize model's static findAll method", name = "findAll" }, {
+    t("const "),
+    i(3, "variable"),
+    t(" = "),
+    i(1, "Model"),
+    t(".findAll("),
+    i(2),
+    t(");"),
+  }),
 }
 
 local redux = require("plugins.snippets.redux")
