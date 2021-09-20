@@ -101,7 +101,7 @@ require("packer").startup(function()
     'kyazdani42/nvim-tree.lua',
     "jondkinney/dragvisuals.vim",
     "junegunn/fzf.vim",
-    "jiangmiao/auto-pairs",
+    -- "jiangmiao/auto-pairs",
     { "kristijanhusak/orgmode.nvim", branch = "tree-sitter" },
 
     -- Tpope Section
@@ -117,7 +117,7 @@ require("packer").startup(function()
     "tpope/vim-dotenv",
     "tpope/vim-ragtag",
     "tpope/vim-unimpaired",
-    "tpope/vim-endwise",
+    -- "tpope/vim-endwise",
     "tpope/vim-rails",
 
     "wellle/targets.vim",

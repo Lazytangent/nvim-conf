@@ -77,10 +77,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/LuaSnip"
   },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/auto-pairs"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-buffer"
@@ -321,10 +317,6 @@ _G.packer_plugins = {
   ["vim-elixir"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-elixir"
-  },
-  ["vim-endwise"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-endwise"
   },
   ["vim-eunuch"] = {
     loaded = true,
