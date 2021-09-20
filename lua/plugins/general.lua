@@ -1,3 +1,4 @@
+require 'plugins.autopairs'
 require 'plugins.catppucchino'
 require 'plugins.cmp'
 -- require 'plugins.compe'

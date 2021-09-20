@@ -85,6 +85,7 @@ require("packer").startup(function()
     "lukas-reineke/indent-blankline.nvim",
     "kyazdani42/nvim-web-devicons",
     "ryanoasis/vim-devicons",
+    "windwp/nvim-autopairs",
 
     -- Folke Section
     "folke/lsp-colors.nvim",
