@@ -26,6 +26,9 @@ cmp.setup {
       require('luasnip').lsp_expand(args.body)
     end
   },
+  completion = {
+    -- autocomplete = false,
+  },
 }
 
 require("nvim-autopairs.completion.cmp").setup {
