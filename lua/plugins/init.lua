@@ -25,6 +25,7 @@ require("packer").startup(function()
     "JoosepAlviste/nvim-ts-context-commentstring",
     -- { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
     { "Lazytangent/nvim-gps", branch = 'dev', requires = "nvim-treesitter/nvim-treesitter" },
+    { "ThePrimeagen/refactoring.nvim", requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" } },
   })
 
   -- LSP
