@@ -101,8 +101,8 @@ require("packer").startup(function()
     'kyazdani42/nvim-tree.lua',
     "jondkinney/dragvisuals.vim",
     "junegunn/fzf.vim",
-    -- "jiangmiao/auto-pairs",
     { "kristijanhusak/orgmode.nvim", branch = "tree-sitter" },
+    { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
 
     -- Tpope Section
     "tpope/vim-commentary",
@@ -117,11 +117,9 @@ require("packer").startup(function()
     "tpope/vim-dotenv",
     "tpope/vim-ragtag",
     "tpope/vim-unimpaired",
-    -- "tpope/vim-endwise",
     "tpope/vim-rails",
 
     "wellle/targets.vim",
-    -- "alvan/vim-closetag",
     "pwntester/octo.nvim",
     "psliwka/vim-smoothie",
     "kana/vim-textobj-user",
