@@ -20,6 +20,7 @@ local normal = {
       d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
       f = { [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]], "Fuzzy find" },
       g = { [[<cmd>lua require('telescope.builtin').git_status()<cr>]], "Git" },
+      i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
       p = { [[<cmd>lua require('telescope.builtin').resume()<cr>]], "Resume" },
       P = { [[<cmd>lua require('telescope.builtin').pickers()<cr>]], "Previous pickers" },
       r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
