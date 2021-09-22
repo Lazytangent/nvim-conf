@@ -106,6 +106,9 @@ require("nvim-treesitter.configs").setup({
   autotag = {
     enable = true,
   },
+  autopairs = {
+    enable = true,
+  },
   query_linter = {
     enable = true,
     use_virtual_text = true,
