@@ -9,7 +9,7 @@ end
 
 function M.search_all_files()
   require("telescope.builtin").find_files {
-    find_command = { "rg", "--no-ignore", "--files" },
+    find_command = { "rg", "--no-ignore", "--hidden", "--files" },
   }
 end
 

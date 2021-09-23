@@ -16,6 +16,7 @@ local normal = {
     },
     f = {
       name = "+Telescope",
+      a = { [[<cmd>lua require('plugins.telescope').search_all_files()<cr>]], "All files" },
       b = { [[<cmd>lua require('telescope.builtin').file_browser()<cr>]], "File browser" },
       d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
       f = { [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]], "Fuzzy find" },
