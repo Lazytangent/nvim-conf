@@ -116,6 +116,7 @@ local normal = {
       f = { [[<cmd>lua require('telescope.builtin').find_files()<cr>]], "Find files" },
       g = { [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], "Live grep" },
       h = { [[<cmd>lua require('telescope.builtin').help_tags()<cr>]], "Help tags" },
+      j = { [[<cmd>lua require('telescope.builtin').jumplist()<cr>]], "Jumplist" },
       l = { [[<cmd>lua require('telescope.builtin').loclist()<cr>]], "Location list" },
       p = { [[<cmd>lua require('telescope.builtin').planets()<cr>]], "Planets" },
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "Quickfix list" },
