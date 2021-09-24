@@ -1,5 +1,6 @@
 local npairs = require('nvim-autopairs')
 local Rule = require('nvim-autopairs.rule')
+local cond = require('nvim-autopairs.conds')
 
 npairs.setup {}
 
@@ -31,4 +32,9 @@ npairs.add_rules {
       return opts.prev_char:match('.%]') ~= nil
     end)
     :use_key(']'),
+  Rule('~', '~', 'org')
+    :with_pair(cond.not_before_regex_check("%g"))
+    :with_move(function(opts)
+      return opts.next_char == opts.char
+    end),
 }
