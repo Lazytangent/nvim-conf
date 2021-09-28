@@ -6,19 +6,30 @@ local capabilities = require("lsp.capabilities")
 -- and map buffer local keybindings when the language server attaches
 local servers = LSP.servers
 local configs = require("lspconfig/configs")
+
+configs.emmet_ls = {
+  default_config = {
+    cmd = { "emmet-ls", "--stdio" },
+    filetypes = { "html", "css" },
+    root_dir = function(fname)
+      return vim.loop.cwd()
+    end,
+    settings = {},
+  },
+}
+
+configs.ls_emmet = {
+  default_config = {
+    cmd = { 'ls_emmet', '--stdio' };
+    filetypes = { 'html', 'css', 'scss' };
+    root_dir = function(fname)
+      return vim.loop.cwd()
+    end;
+    settings = {};
+  }
+}
+
 for _, lsp in ipairs(servers) do
-  if not nvim_lsp.emmet_ls then
-    configs.emmet_ls = {
-      default_config = {
-        cmd = { "emmet-ls", "--stdio" },
-        filetypes = { "html", "css" },
-        root_dir = function(fname)
-          return vim.loop.cwd()
-        end,
-        settings = {},
-      },
-    }
-  end
   nvim_lsp.emmet_ls.setup({ capabilities = capabilities })
 
   if lsp == "html" then
@@ -53,6 +64,10 @@ for _, lsp in ipairs(servers) do
       cmd = { "java", "-jar", "~/Documents/LSP/groovy-language-server/build/libs/groovy-language-server-all.jar" },
       capabilities = capabilities,
     })
+  elseif lsp == "ls_emmet" then
+    nvim_lsp[lsp].setup {
+      capabilities = capabilities,
+    }
   else
     nvim_lsp[lsp].setup({ on_attach = on_attach, capabilities = capabilities })
   end

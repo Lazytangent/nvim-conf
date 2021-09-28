@@ -105,10 +105,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/dragvisuals.vim"
   },
-  ["emmet-vim"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/emmet-vim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/friendly-snippets"

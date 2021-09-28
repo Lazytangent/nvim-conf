@@ -23,8 +23,8 @@ require("packer").startup(function()
     "windwp/nvim-ts-autotag",
     "p00f/nvim-ts-rainbow",
     "JoosepAlviste/nvim-ts-context-commentstring",
-    -- { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
-    { "Lazytangent/nvim-gps", branch = 'dev', requires = "nvim-treesitter/nvim-treesitter" },
+    { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
+    -- { "Lazytangent/nvim-gps", branch = 'dev', requires = "nvim-treesitter/nvim-treesitter" },
     { "ThePrimeagen/refactoring.nvim", requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" } },
   })
 
@@ -33,7 +33,7 @@ require("packer").startup(function()
     "neovim/nvim-lspconfig",
     "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
-    "mattn/emmet-vim",
+    -- "mattn/emmet-vim",
     {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
