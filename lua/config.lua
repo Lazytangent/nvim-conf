@@ -81,7 +81,7 @@ LSP = {
     "dockerls",
     "denols",
     "elixirls",
-    "emmet_ls",
+    -- "emmet_ls",
     "erlangls",
     "gopls",
     "graphql",

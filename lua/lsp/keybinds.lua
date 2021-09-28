@@ -7,16 +7,16 @@ local capabilities = require("lsp.capabilities")
 local servers = LSP.servers
 local configs = require("lspconfig/configs")
 
-configs.emmet_ls = {
-  default_config = {
-    cmd = { "emmet-ls", "--stdio" },
-    filetypes = { "html", "css" },
-    root_dir = function(fname)
-      return vim.loop.cwd()
-    end,
-    settings = {},
-  },
-}
+-- configs.emmet_ls = {
+--   default_config = {
+--     cmd = { "emmet-ls", "--stdio" },
+--     filetypes = { "html", "css" },
+--     root_dir = function(fname)
+--       return vim.loop.cwd()
+--     end,
+--     settings = {},
+--   },
+-- }
 
 configs.ls_emmet = {
   default_config = {
@@ -30,7 +30,7 @@ configs.ls_emmet = {
 }
 
 for _, lsp in ipairs(servers) do
-  nvim_lsp.emmet_ls.setup({ capabilities = capabilities })
+  -- nvim_lsp.emmet_ls.setup({ capabilities = capabilities })
 
   if lsp == "html" then
     nvim_lsp[lsp].setup({ on_attach = on_attach, capabilities = capabilities })
