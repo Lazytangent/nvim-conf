@@ -97,7 +97,7 @@ require("packer").startup(function()
 
     "tversteeg/registers.nvim",
     "itmecho/neoterm.nvim",
-    "ludovicchabant/vim-gutentags",
+    -- "ludovicchabant/vim-gutentags",
     "preservim/tagbar",
     'kyazdani42/nvim-tree.lua',
     "jondkinney/dragvisuals.vim",
