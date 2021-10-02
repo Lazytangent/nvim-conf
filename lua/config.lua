@@ -91,7 +91,7 @@ LSP = {
     "jedi_language_server",
     "jdtls",
     "jsonls",
-    "ls_emmet",
+    -- "ls_emmet",
     "rust_analyzer",
     "solargraph",
     "sqlls",

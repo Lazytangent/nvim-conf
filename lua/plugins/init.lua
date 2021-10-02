@@ -33,7 +33,7 @@ require("packer").startup(function()
     "neovim/nvim-lspconfig",
     "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
-    -- "mattn/emmet-vim",
+    "mattn/emmet-vim",
     {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
@@ -43,7 +43,6 @@ require("packer").startup(function()
       requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
 
-    -- "hrsh7th/nvim-compe",
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",

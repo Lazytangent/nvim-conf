@@ -18,16 +18,16 @@ local configs = require("lspconfig/configs")
 --   },
 -- }
 
-configs.ls_emmet = {
-  default_config = {
-    cmd = { 'ls_emmet', '--stdio' };
-    filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' };
-    root_dir = function(fname)
-      return vim.loop.cwd()
-    end;
-    settings = {};
-  }
-}
+-- configs.ls_emmet = {
+--   default_config = {
+--     cmd = { 'ls_emmet', '--stdio' };
+--     filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' };
+--     root_dir = function(fname)
+--       return vim.loop.cwd()
+--     end;
+--     settings = {};
+--   }
+-- }
 
 for _, lsp in ipairs(servers) do
   -- nvim_lsp.emmet_ls.setup({ capabilities = capabilities })
@@ -64,10 +64,10 @@ for _, lsp in ipairs(servers) do
       cmd = { "java", "-jar", "~/Documents/LSP/groovy-language-server/build/libs/groovy-language-server-all.jar" },
       capabilities = capabilities,
     })
-  elseif lsp == "ls_emmet" then
-    nvim_lsp[lsp].setup {
-      capabilities = capabilities,
-    }
+  -- elseif lsp == "ls_emmet" then
+  --   nvim_lsp[lsp].setup {
+  --     capabilities = capabilities,
+  --   }
   else
     nvim_lsp[lsp].setup({ on_attach = on_attach, capabilities = capabilities })
   end
