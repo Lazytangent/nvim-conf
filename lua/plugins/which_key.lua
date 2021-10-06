@@ -70,6 +70,7 @@ local normal = {
         x = { [[<cmd>NeotermExit<cr>]], "Exit Neoterm" },
       },
       [","] = { [[<c-^>]], "Last buffer" },
+      ["*"] = { [[*<C-O>:%s///gn<cr>]], "Count matches" },
     },
     ["<localleader>"] = {
       name = "+LSP",
