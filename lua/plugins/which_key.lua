@@ -37,6 +37,7 @@ local normal = {
       n = { [[<cmd>NvimTreeToggle<cr>]], "Toggle" },
     },
     q = "Quit",
+    Q = { [[!!zsh<cr>]], "Run line through zsh" },
     s = {
       name = "+Spell",
       ["?"] = { [[z=]], "Spelling suggestions" },
