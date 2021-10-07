@@ -97,6 +97,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
   },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp_luasnip"

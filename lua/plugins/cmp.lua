@@ -20,6 +20,7 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "latex_symbols" },
+    { name = "path" },
   },
   snippet = {
     expand = function(args)

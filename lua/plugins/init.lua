@@ -48,6 +48,7 @@ require("packer").startup(function()
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-calc",
     "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
     "kdheepak/cmp-latex-symbols",
     { "RishabhRD/nvim-lsputils", requires = "RishabhRD/popfix" },
