@@ -68,6 +68,7 @@ u.opt("g", "undofile", Opts.undofile)
 -- Commands
 vim.o.listchars = Opts.listchars
 vim.o.showmode = Opts.showmode
+vim.cmd([[set path+=**]])
 vim.opt.path:append({ "**" })
 vim.opt.formatoptions:append({ "t" })
 vim.opt.clipboard:append({ "unnamedplus" })

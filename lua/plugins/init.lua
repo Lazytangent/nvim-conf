@@ -102,6 +102,7 @@ require("packer").startup(function()
     'kyazdani42/nvim-tree.lua',
     "jondkinney/dragvisuals.vim",
     "junegunn/fzf.vim",
+    "jubnzv/mdeval.nvim",
     { "kristijanhusak/orgmode.nvim", branch = "tree-sitter" },
     { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
 

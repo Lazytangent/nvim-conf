@@ -63,6 +63,7 @@ local normal = {
       f = { [[<cmd>lua vim.lsp.buf.formatting()<cr>]], "Format" },
       g = { [[:set operatorfunc=GrepOperator<cr>g@]], "Grep for word under cursor" },
       p = { [[<cmd>Telescope projects<cr>]], "Open Project" },
+      r = { [[<cmd>lua require('mdeval').eval_code_block()<cr>]], "Run code block with mdeval" },
       t = {
         name = "+Terminal",
         b = { [[:15split | term<cr>]], "Bottom terminal" },
