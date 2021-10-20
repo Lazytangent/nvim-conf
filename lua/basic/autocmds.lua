@@ -12,6 +12,9 @@ local autocmds = {
     {"BufWritePre", "*", [[%s/\n\+\%$//e]]},
     -- {"BufWritePre", "*.[ch]", [[*.[ch] %s/\%$/\r/e]]},
   },
+  terminal = {
+    {"TermOpen", "*", [[setlocal nonumber norelativenumber bufhidden="delete"]]},
+  },
 }
 
 u.define_augroups(autocmds)
