@@ -5,7 +5,7 @@ local autocmds = {
     {"TextYankPost", "*", 'lua require"vim.highlight".on_yank()'},
   },
   preserve_cursor = {
-    {"BufReadPost", "*", [[if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]]},
+    {"BufReadPost", "*", [[if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit' | exe "normal! g'\"" | endif]]},
   },
   trim_whitespaces = {
     {"BufWritePre", "*", [[%s/\s\+$//e]]},
@@ -31,3 +31,6 @@ vim.cmd([[ autocmd StdinReadPre * let s:std_in=1 ]])
 -- vim.cmd("highlight ColorColumn ctermbg=magenta")
 -- vim.cmd("call matchadd('ColorColumn', '%81v', 100)")
 -- vim.fn.matchadd('ColorColumn', '%81v', 100)
+-- gitcommit = {
+  -- {"FileType", "gitcommit", [[setlocal spell]]}
+-- }
