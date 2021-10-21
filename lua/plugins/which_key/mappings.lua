@@ -65,6 +65,7 @@ local normal = {
       t = {
         name = "+Terminal",
         b = { [[:15split | term<cr>]], "Bottom terminal" },
+        n = { [[:Term<cr>]], "25 height botton" },
         t = { [[<cmd>NeotermToggle<cr>]], "Toggle Neoterm" },
         r = { [[:NeotermRun<space>]], "Run Neoterm" },
         x = { [[<cmd>NeotermExit<cr>]], "Exit Neoterm" },
@@ -460,7 +461,7 @@ end
 
 local terminal = {
   ["<C-W>"] = { util('<C-\\><C-N><C-W>'), "Window movement" },
-  ["<C-C>"] = { util('<C-\\><C-N>:bd!<cr>'), "Close terminal" },
+  ["<C-#>"] = { util('<C-\\><C-N>:bd!<cr>'), "Close terminal" },
 }
 
 local terminal_opts = {
