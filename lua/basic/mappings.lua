@@ -40,10 +40,6 @@ local u = require("utils.core")
 -- u.map("",  "<leader>s?", "z=")
 
 -- Command Line
-u.map("c", "$h", "e ~/", { noremap = true })
-u.map("c", "$d", "e ~/Desktop", { noremap = true })
-u.map("c", "$j", "e ./", { noremap = true })
-
 u.map("c", "<C-A>", "<Home>", { noremap = true })
 u.map("c", "<C-E>", "<End>", { noremap = true })
 u.map("c", "<C-K>", "<C-U>", { noremap = true })

@@ -1,5 +1,3 @@
-require("which-key").setup {}
-
 local normal = {
   ["<leader>"] = {
     b = {
@@ -371,9 +369,6 @@ local normal = {
 }
 
 local comamnd = {
-  ["$h"] = { "e ~/", "Edit home" },
-  ["$d"] = { "e ~/Desktop", "Edit Desktop" },
-  ["$j"] = { "e ./", "Edit here" },
 }
 
 local command_opts = {
@@ -459,12 +454,26 @@ local operator_opts = {
   mode = "o",
 }
 
+local util = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local terminal = {
+  ["<C-W>"] = { util('<C-\\><C-N><C-W>'), "Window movement" },
+  ["<C-C>"] = { util('<C-\\><C-N>:bd!<cr>'), "Close terminal" },
+}
+
+local terminal_opts = {
+  mode = "t",
+}
+
 local wk = require "which-key"
 
 wk.register(normal)
 wk.register(visual, visual_opts)
 wk.register(insert, insert_opts)
 wk.register(select, select_opts)
+wk.register(terminal, terminal_opts)
 
 -- wk.register(operator, operator_opts)
 -- wk.register(command, command_opts)
