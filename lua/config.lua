@@ -21,6 +21,7 @@ Opts = {
   foldcolumn = "1",
   list = true,
   spell = false,
+  spelllang = "en_us",
   modeline = true,
   foldenable = true,
   foldlevelstart = 10,

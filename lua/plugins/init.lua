@@ -43,15 +43,21 @@ require("packer").startup(function()
       requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
 
+    -- nvim-cmp
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-calc",
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-path",
+    "f3fora/cmp-spell",
+    "ray-x/cmp-treesitter",
+    "quangnguyen30192/cmp-nvim-tags",
     "saadparwaiz1/cmp_luasnip",
     "kdheepak/cmp-latex-symbols",
     { "RishabhRD/nvim-lsputils", requires = "RishabhRD/popfix" },
+    { 'Saecki/crates.nvim', requires = { 'nvim-lua/plenary.nvim' } },
+    { 'andersevenrud/compe-tmux', branch = 'cmp' },
   })
 
   -- Specific Language Plugins
