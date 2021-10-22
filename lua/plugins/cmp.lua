@@ -20,7 +20,7 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "latex_symbols" },
-    { name = "path" },
+    -- { name = "path" },
     { name = "crates" },
     { name = "tmux" },
     { name = "spell" },
