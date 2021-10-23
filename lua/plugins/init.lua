@@ -4,8 +4,7 @@ require("packer").startup(function()
 
   -- Theme Stuff
   use({
-    "shadmansaleh/lualine.nvim",
-    -- "hoob3rt/lualine.nvim",
+    "nvim-lualine/lualine.nvim",
     -- "lewis6991/moonlight.vim",
     "folke/tokyonight.nvim",
     "marko-cerovac/material.nvim",
