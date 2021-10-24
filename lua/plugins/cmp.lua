@@ -23,9 +23,9 @@ cmp.setup {
     -- { name = "path" },
     { name = "crates" },
     { name = "tmux" },
-    { name = "spell" },
-    { name = "treesitter" },
-    { name = "tags" },
+    -- { name = "spell" },
+    -- { name = "treesitter" },
+    -- { name = "tags" },
   },
   snippet = {
     expand = function(args)
