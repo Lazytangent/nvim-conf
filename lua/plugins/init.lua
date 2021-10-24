@@ -92,6 +92,7 @@ require("packer").startup(function()
     "kyazdani42/nvim-web-devicons",
     "ryanoasis/vim-devicons",
     "windwp/nvim-autopairs",
+    "numToStr/Comment.nvim",
 
     -- Folke Section
     "folke/lsp-colors.nvim",
@@ -112,7 +113,7 @@ require("packer").startup(function()
     { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
 
     -- Tpope Section
-    "tpope/vim-commentary",
+    -- "tpope/vim-commentary",
     "tpope/vim-surround",
     "tpope/vim-dispatch",
     "tpope/vim-repeat",

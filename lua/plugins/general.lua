@@ -1,7 +1,7 @@
 require 'plugins.autopairs'
 require 'plugins.catppucchino'
 require 'plugins.cmp'
--- require 'plugins.compe'
+require 'plugins.comment_nvim'
 require 'plugins.drag_visuals'
 require 'plugins.emmet_vim'
 require 'plugins.fzf'
