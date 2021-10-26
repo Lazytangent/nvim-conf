@@ -76,6 +76,9 @@ require("packer").startup(function()
   })
 
   -- Quality of Life Improvements
+  use({
+    "nathom/filetype.nvim",
+  })
   -- Telescope
   use({
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
