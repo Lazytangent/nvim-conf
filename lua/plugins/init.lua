@@ -52,6 +52,7 @@ require("packer").startup(function()
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp-document-symbol",
     "lukas-reineke/cmp-under-comparator",
+    "lukas-reineke/cmp-rg",
     "f3fora/cmp-spell",
     "ray-x/cmp-treesitter",
     "quangnguyen30192/cmp-nvim-tags",
