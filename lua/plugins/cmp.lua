@@ -35,7 +35,32 @@ cmp.setup {
   completion = {
     -- autocomplete = false,
   },
+  sorting = {
+    comparators = {
+      cmp.config.compare.offset,
+      cmp.config.compare.exact,
+      cmp.config.compare.score,
+      require('cmp-under-comparator').under,
+      cmp.config.compare.kind,
+      cmp.config.compare.sort_text,
+      cmp.config.compare.lenth,
+      cmp.config.compare.order,
+    },
+  },
 }
+
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = "buffer" },
+  },
+})
+
+cmp.setup.cmdline(':', {
+  sources = {
+    { name = "path" },
+    { name = "cmdline" },
+  },
+})
 
 require("nvim-autopairs.completion.cmp").setup {
   map_cr = true,
