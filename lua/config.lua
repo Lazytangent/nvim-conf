@@ -94,6 +94,7 @@ LSP = {
     "jsonls",
     -- "ls_emmet",
     "pylsp",
+    "pyright",
     "rust_analyzer",
     "solargraph",
     "sqlls",
