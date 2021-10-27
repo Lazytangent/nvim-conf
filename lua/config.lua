@@ -93,6 +93,7 @@ LSP = {
     "jdtls",
     "jsonls",
     -- "ls_emmet",
+    "pylsp",
     "rust_analyzer",
     "solargraph",
     "sqlls",
