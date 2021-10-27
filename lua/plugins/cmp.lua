@@ -2,8 +2,8 @@ local cmp = require('cmp')
 
 cmp.setup {
   mapping = {
-    ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-    ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping({
@@ -77,7 +77,7 @@ cmp.setup.cmdline(':', {
 require("nvim-autopairs.completion.cmp").setup {
   map_cr = true,
   map_complete = true,
-  auto_select = false,
+  auto_select = true,
   insert = false,
   map_char = {
     all = '(',
