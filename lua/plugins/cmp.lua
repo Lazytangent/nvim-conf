@@ -23,6 +23,7 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "latex_symbols" },
+    { name = 'nvim_lsp_document_symbol' },
     -- { name = "path" },
     { name = "crates" },
     { name = "tmux" },
@@ -56,9 +57,11 @@ cmp.setup {
 }
 
 cmp.setup.cmdline('/', {
-  sources = {
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp_document_symbol' },
+  },{
     { name = "buffer" },
-  },
+  }),
 })
 
 cmp.setup.cmdline('?', {
