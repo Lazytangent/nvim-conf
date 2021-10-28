@@ -14,7 +14,8 @@ local autocmds = {
   },
   terminal = {
     {"TermOpen", "*", [[setlocal nonumber norelativenumber bufhidden="delete"]]},
-    {"BufWinEnter,WinEnter", "term://*", "startinsert"},
+    {"TermOpen", "*", "startinsert"},
+    -- {"BufWinEnter,WinEnter,BufRead", "term://*", "startinsert"},
   },
 }
 
