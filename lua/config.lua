@@ -101,6 +101,7 @@ LSP = {
     "texlab",
     "tsserver",
     "vimls",
+    "vuels",
     "yamlls",
   },
 }
