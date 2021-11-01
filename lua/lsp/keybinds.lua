@@ -10,6 +10,27 @@ local configs = require("lspconfig/configs")
 for _, lsp in ipairs(servers) do
   if lsp == "html" then
     nvim_lsp[lsp].setup({ on_attach = on_attach, capabilities = capabilities })
+  elseif lsp == "vuels" then
+    nvim_lsp[lsp].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      init_options = {
+        config = {
+          vetur = {
+            completion = {
+              autoImport = true,
+              useScaffoldSnippets = true,
+            },
+            format = {
+              defaultFormatter = {
+                js = "prettier",
+                ts = "prettier",
+              },
+            },
+          },
+        },
+      },
+    })
   elseif lsp == "denols" then
     nvim_lsp[lsp].setup({ autostart = false })
   elseif lsp == "elixirls" then
