@@ -46,6 +46,7 @@ end
 local tex = require("plugins.snippets.tex")
 local javascript = require("plugins.snippets.javascript")
 local org = require("plugins.snippets.orgmode")
+local vue = require("plugins.snippets.vue")
 
 ls.snippets = {
   -- General Snippets
@@ -61,6 +62,7 @@ ls.snippets = {
   typescript = javascript,
   typescriptreact = javascript,
   org = org,
+  vue = vue,
 }
 
 require("luasnip/loaders/from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
