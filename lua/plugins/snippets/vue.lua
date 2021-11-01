@@ -17,7 +17,7 @@ return {
   s({ trig = "vv", dscr = "Set up Vue file", name = "Set up Vue file" }, {
     t({ "<template>", "\t" }),
     i(1),
-    t({ "", "</template>", "", "<script>", "\texport default {" "\t\t" }),
+    t({ "", "</template>", "", "<script>", "\texport default {", "\t\t" }),
     i(2),
     t({ "", "\t}", "</script>", "", "<style></style>" })
   }),
