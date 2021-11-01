@@ -73,6 +73,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/Catppuccino.nvim"
   },
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/LuaSnip"
@@ -85,6 +89,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-calc"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-cmdline"
+  },
   ["cmp-latex-symbols"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-latex-symbols"
@@ -93,17 +101,49 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-document-symbol"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-document-symbol"
+  },
   ["cmp-nvim-lua"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
+  },
+  ["cmp-nvim-tags"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-nvim-tags"
   },
   ["cmp-path"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-path"
   },
+  ["cmp-rg"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-rg"
+  },
+  ["cmp-spell"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-spell"
+  },
+  ["cmp-treesitter"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-treesitter"
+  },
+  ["cmp-under-comparator"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp-under-comparator"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+  },
+  ["compe-tmux"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/compe-tmux"
+  },
+  ["crates.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/crates.nvim"
   },
   ["dragvisuals.vim"] = {
     loaded = true,
@@ -112,6 +152,10 @@ _G.packer_plugins = {
   ["emmet-vim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/emmet-vim"
+  },
+  ["filetype.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/filetype.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -144,6 +188,10 @@ _G.packer_plugins = {
   ["material.nvim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/material.nvim"
+  },
+  ["mdeval.nvim"] = {
+    loaded = true,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/mdeval.nvim"
   },
   ["moonlight.nvim"] = {
     loaded = true,
@@ -301,10 +349,6 @@ _G.packer_plugins = {
   ["typescript-vim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/typescript-vim"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
   ["vim-dadbod"] = {
     loaded = true,

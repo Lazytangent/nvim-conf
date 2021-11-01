@@ -70,13 +70,14 @@ require("packer").startup(function()
     "peitalin/vim-jsx-typescript", -- *.tsx files
     "maxmellon/vim-jsx-pretty",
     "pantharshit00/vim-prisma",
-    "instant-markdown/vim-instant-markdown",
     "plasticboy/vim-markdown",
     "mrdotb/vim-tailwindcss",
     "jidn/vim-dbml",
     "lervag/vimtex",
     "digitaltoad/vim-pug",
     "elixir-editors/vim-elixir",
+    { "kristijanhusak/orgmode.nvim", branch = "tree-sitter" },
+    { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
   })
 
   -- Quality of Life Improvements
@@ -110,14 +111,9 @@ require("packer").startup(function()
 
     "tversteeg/registers.nvim",
     "itmecho/neoterm.nvim",
-    -- "ludovicchabant/vim-gutentags",
-    "preservim/tagbar",
     'kyazdani42/nvim-tree.lua',
     "jondkinney/dragvisuals.vim",
-    "junegunn/fzf.vim",
     "jubnzv/mdeval.nvim",
-    { "kristijanhusak/orgmode.nvim", branch = "tree-sitter" },
-    { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
 
     -- Tpope Section
     -- "tpope/vim-commentary",
@@ -135,13 +131,11 @@ require("packer").startup(function()
     "tpope/vim-rails",
 
     "wellle/targets.vim",
-    "pwntester/octo.nvim",
     "psliwka/vim-smoothie",
     "kana/vim-textobj-user",
     "kana/vim-textobj-line",
     "christoomey/vim-sort-motion",
     "michaeljsmith/vim-indent-object",
-    "vim-test/vim-test",
     "norcalli/nvim-terminal.lua",
   })
 end)
