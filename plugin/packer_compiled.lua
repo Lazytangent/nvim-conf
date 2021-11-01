@@ -161,10 +161,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/friendly-snippets"
   },
-  ["fzf.vim"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/fzf.vim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
@@ -266,10 +262,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
-  ["octo.nvim"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/octo.nvim"
-  },
   ["orgmode.nvim"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/orgmode.nvim"
@@ -309,10 +301,6 @@ _G.packer_plugins = {
   ["sqlite.lua"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/sqlite.lua"
-  },
-  tagbar = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/tagbar"
   },
   ["targets.vim"] = {
     loaded = true,
@@ -390,10 +378,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-indent-object"
   },
-  ["vim-instant-markdown"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-instant-markdown"
-  },
   ["vim-jsdoc"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-jsdoc"
@@ -453,10 +437,6 @@ _G.packer_plugins = {
   ["vim-tailwindcss"] = {
     loaded = true,
     path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-tailwindcss"
-  },
-  ["vim-test"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-test"
   },
   ["vim-textobj-line"] = {
     loaded = true,
