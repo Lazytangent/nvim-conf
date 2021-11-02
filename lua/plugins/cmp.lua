@@ -62,6 +62,15 @@ cmp.setup {
     native_menu = false,
     ghost_text = cmp.core.view.ghost_text_view,
   },
+  formatting = {
+    format = require('lspkind').cmp_format({ with_text = true, manu = ({
+      buffer = "[Buffer]",
+      nvim_lsp = "[LSP]",
+      luasnip = "[LuaSnip]",
+      nvim_lua = "[Lua]",
+      latex_symbols = "[Latex]",
+    })}),
+  },
 }
 
 cmp.setup.cmdline('/', {

@@ -58,6 +58,7 @@ require("packer").startup(function()
     "quangnguyen30192/cmp-nvim-tags",
     "saadparwaiz1/cmp_luasnip",
     "kdheepak/cmp-latex-symbols",
+    "onsails/lspkind-nvim",
     { "RishabhRD/nvim-lsputils", requires = "RishabhRD/popfix" },
     { 'Saecki/crates.nvim', requires = { 'nvim-lua/plenary.nvim' } },
     { 'andersevenrud/compe-tmux', branch = 'cmp' },
