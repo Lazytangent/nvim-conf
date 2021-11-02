@@ -138,6 +138,7 @@ require("packer").startup(function()
     "christoomey/vim-sort-motion",
     "michaeljsmith/vim-indent-object",
     "norcalli/nvim-terminal.lua",
+    { "vuki656/package-info.nvim", requires = "MunifTanjim/nui.nvim" },
   })
 end)
 

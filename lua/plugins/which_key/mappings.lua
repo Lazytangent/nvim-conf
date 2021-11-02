@@ -179,9 +179,7 @@ local normal = {
       n = { [[<cmd>set nu!<cr>]], "Toggle number" },
       r = { [[<cmd>set rnu!<cr>]], "Toggle relative" },
     },
-    p = { [[<cmd>Prettier<cr>]], "Prettier" },
     q = "Set diagnostics into location list",
-    r = { [[<cmd>Reload<cr>]], "Reload nvim config" },
     t = {
       name = "+Tags",
       t = { [[<cmd>TagbarToggle<cr>]], "Toggle Tagbar" },
@@ -199,6 +197,13 @@ local normal = {
       R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
     },
     ["<localleader>"] = {
+      n = {
+        d = { [[<cmd>lua require('package-info').delete()<cr>]], "Delete a package" },
+        i = { [[<cmd>lua require('package-info').install()<cr>]], "Install new package" },
+        r = { [[<cmd>lua require('package-info').reinstall()<cr>]], "Reinstall packages" },
+        s = { [[<cmd>lua require('package-info').show()<cr>]], "Show outdated versions" },
+        v = { [[<cmd>lua require('package-info').change_version()<cr>]], "Change version" },
+      },
       o = {
         name = "+Octo",
         i = {
