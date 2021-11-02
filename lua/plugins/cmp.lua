@@ -58,6 +58,10 @@ cmp.setup {
   confirmation = {
     default_behavior = cmp.ConfirmBehavior.Replace,
   },
+  experimental = {
+    native_menu = false,
+    ghost_text = cmp.core.view.ghost_text_view,
+  },
 }
 
 cmp.setup.cmdline('/', {
