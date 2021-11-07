@@ -40,6 +40,7 @@ u.opt("g", "foldmethod", Opts.foldmethod)
 u.opt("g", "foldexpr", Opts.foldexpr)
 u.opt("g", "tags", Opts.tags)
 u.opt("o", "completeopt", Completion.completeopt)
+u.opt("o", "shell", Opts.shell)
 
 -- Window
 u.opt("w", "relativenumber", Opts.relativenumber)

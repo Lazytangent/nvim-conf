@@ -1,6 +1,7 @@
 Opts = {
   listchars = "tab:\u{BB}\u{BB},trail:\u{B7},nbsp:~",
 
+  shell = '/bin/bash',
   splitbelow = true,
   splitright = true,
   incsearch = true,
