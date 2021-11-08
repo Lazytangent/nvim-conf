@@ -426,8 +426,10 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-dadbod"
   },
   ["vim-dbml"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-dbml",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-dbml",
     url = "https://github.com/jidn/vim-dbml"
   },
   ["vim-devicons"] = {
@@ -446,8 +448,10 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-dotenv"
   },
   ["vim-elixir"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-elixir",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-elixir",
     url = "https://github.com/elixir-editors/vim-elixir"
   },
   ["vim-eunuch"] = {
@@ -476,8 +480,10 @@ _G.packer_plugins = {
     url = "https://github.com/heavenshell/vim-jsdoc"
   },
   ["vim-jsx-pretty"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
   ["vim-jsx-typescript"] = {
@@ -486,8 +492,10 @@ _G.packer_plugins = {
     url = "https://github.com/peitalin/vim-jsx-typescript"
   },
   ["vim-markdown"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-markdown",
     url = "https://github.com/plasticboy/vim-markdown"
   },
   ["vim-matchup"] = {
@@ -496,13 +504,17 @@ _G.packer_plugins = {
     url = "https://github.com/andymass/vim-matchup"
   },
   ["vim-prisma"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-prisma",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-prisma",
     url = "https://github.com/pantharshit00/vim-prisma"
   },
   ["vim-pug"] = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vim-pug",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-pug",
     url = "https://github.com/digitaltoad/vim-pug"
   },
   ["vim-ragtag"] = {
@@ -561,8 +573,10 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-unimpaired"
   },
   vimtex = {
-    loaded = true,
-    path = "/Users/petermai/.local/share/nvim/site/pack/packer/start/vimtex",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex",
     url = "https://github.com/lervag/vimtex"
   },
   ["which-key.nvim"] = {
@@ -582,6 +596,47 @@ time([[Defining packer_plugins]], false)
 time([[Config for null-ls.nvim]], true)
 try_loadstring("\27LJ\2\nf\0\0\3\0\5\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\0\0'\2\3\0B\0\2\0029\0\1\0009\0\4\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14lspconfig\vconfig\fnull-ls\frequire\0", "config", "null-ls.nvim")
 time([[Config for null-ls.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType pug ++once lua require("packer.load")({'vim-pug'}, { ft = "pug" }, _G.packer_plugins)]]
+vim.cmd [[au FileType jsx ++once lua require("packer.load")({'vim-jsx-pretty'}, { ft = "jsx" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tsx ++once lua require("packer.load")({'vim-jsx-pretty'}, { ft = "tsx" }, _G.packer_plugins)]]
+vim.cmd [[au FileType prisma ++once lua require("packer.load")({'vim-prisma'}, { ft = "prisma" }, _G.packer_plugins)]]
+vim.cmd [[au FileType js ++once lua require("packer.load")({'vim-jsx-pretty'}, { ft = "js" }, _G.packer_plugins)]]
+vim.cmd [[au FileType elixir ++once lua require("packer.load")({'vim-elixir'}, { ft = "elixir" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType dbml ++once lua require("packer.load")({'vim-dbml'}, { ft = "dbml" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-dbml/ftdetect/dbml.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-dbml/ftdetect/dbml.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-dbml/ftdetect/dbml.vim]], false)
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-elixir/ftdetect/elixir.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-elixir/ftdetect/elixir.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-elixir/ftdetect/elixir.vim]], false)
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-prisma/ftdetect/prisma.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-prisma/ftdetect/prisma.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-prisma/ftdetect/prisma.vim]], false)
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-pug/ftdetect/pug.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-pug/ftdetect/pug.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vim-pug/ftdetect/pug.vim]], false)
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]], false)
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim]], false)
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], true)
+vim.cmd [[source /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]]
+time([[Sourcing ftdetect script at: /Users/petermai/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)
