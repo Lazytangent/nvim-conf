@@ -77,7 +77,7 @@ require("packer").startup(function()
     "lervag/vimtex",
     "digitaltoad/vim-pug",
     "elixir-editors/vim-elixir",
-    { "kristijanhusak/orgmode.nvim", branch = "tree-sitter" },
+    "kristijanhusak/orgmode.nvim",
     { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
   })
 
