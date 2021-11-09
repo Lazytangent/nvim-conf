@@ -29,11 +29,6 @@ local normal = {
     j = { [[:jumps<cr>]], "Show jumps" },
     l = { [[:ls<cr>:b<space>]], "Select buffer" },
     m = { [[:marks<cr>:normal! `]], "Show marks" },
-    n = {
-      name = "+NvimTree",
-      f = { [[:NvimTreeFindFile<space>]], "Find" },
-      n = { [[<cmd>NvimTreeToggle<cr>]], "Toggle" },
-    },
     q = "Quit",
     Q = { [[!!zsh<cr>]], "Run line through zsh" },
     s = {
@@ -179,12 +174,17 @@ local normal = {
       n = { [[<cmd>set nu!<cr>]], "Toggle number" },
       r = { [[<cmd>set rnu!<cr>]], "Toggle relative" },
     },
+    o = {
+      name = "+Open",
+      p = "Project in NvimTree",
+    },
     q = "Set diagnostics into location list",
     t = {
       name = "+Tags",
       t = { [[<cmd>TagbarToggle<cr>]], "Toggle Tagbar" },
     },
     w = {
+      name = "+Write",
       q = { [[<cmd>wq<cr>]], "write and quit" },
     },
     x = {
