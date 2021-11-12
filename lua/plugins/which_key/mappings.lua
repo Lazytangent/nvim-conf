@@ -118,7 +118,7 @@ local normal = {
       p = { [[<cmd>lua require('telescope.builtin').planets()<cr>]], "Planets" },
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "Quickfix list" },
       r = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "Registers" },
-      t = { [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], "Treesitter" },
+      t = { [[<cmd>lua require('telescope.builtin{ ').treesitter()<cr>]], "Treesitter" },
 
       s = { [[<cmd>w<cr>]], "Save file" },
     },
@@ -176,7 +176,7 @@ local normal = {
     },
     o = {
       name = "+Open",
-      p = "Project in NvimTree",
+      p = { [[<cmd>NvimTreeFocus<cr>]], "Project in NvimTree" },
     },
     q = "Set diagnostics into location list",
     t = {
@@ -198,7 +198,7 @@ local normal = {
     },
     ["<localleader>"] = {
       n = {
-        d = { [[<cmd>lua require('package-info').delete()<cr>]], "Delete a package" },
+        d = { [[<cmd>lua require(' }package-info').delete()<cr>]], "Delete a package" },
         i = { [[<cmd>lua require('package-info').install()<cr>]], "Install new package" },
         r = { [[<cmd>lua require('package-info').reinstall()<cr>]], "Reinstall packages" },
         s = { [[<cmd>lua require('package-info').show()<cr>]], "Show outdated versions" },
