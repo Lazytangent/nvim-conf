@@ -37,7 +37,7 @@ local sources = {
 
   null_ls.builtins.diagnostics.shellcheck,
 
-  null_ls.builtins.diagnostics.stylelint,
+  -- null_ls.builtins.diagnostics.stylelint,
 }
 
 null_ls.config({ sources = sources, save_after_format = false, diagnostics_format = "[#{c}] #{m} (#{s})" })
