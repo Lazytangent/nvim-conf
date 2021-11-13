@@ -102,7 +102,7 @@ LSP = {
     "sourcekit",
     "sqlls",
     "stylelint_lsp",
-    "sumneko_lua",
+    -- "sumneko_lua",
     -- "tailwindcss",
     "texlab",
     "tsserver",
