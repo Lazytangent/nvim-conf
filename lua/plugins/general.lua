@@ -1,5 +1,5 @@
 require 'plugins.autopairs'
-require 'plugins.catppucchino'
+require 'plugins.catppucchin'
 require 'plugins.cmp'
 require 'plugins.comment_nvim'
 require 'plugins.drag_visuals'

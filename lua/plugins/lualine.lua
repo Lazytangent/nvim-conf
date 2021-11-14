@@ -5,7 +5,7 @@ require("lualine").setup {
   options = {
     -- theme = "nightfly",
     -- theme = 'tokyonight',
-    theme = 'catppuccino',
+    theme = 'catppuccin',
     icons_enabled = false,
     disabled_filetypes = {'NvimTree'},
     extensions = { 'quickfix', 'fugitive' },
