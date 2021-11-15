@@ -37,4 +37,5 @@ npairs.add_rules {
     :with_move(function(opts)
       return opts.next_char == opts.char
     end),
+  Rule('{% ', ' %', { 'html', 'htmldjango', 'htmljinja' }),
 }
