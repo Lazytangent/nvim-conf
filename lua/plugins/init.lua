@@ -103,6 +103,7 @@ require("packer").startup(function()
     "windwp/nvim-autopairs",
     "numToStr/Comment.nvim",
     "dhruvasagar/vim-table-mode",
+    "lukas-reineke/headlines.nvim",
 
     -- Folke Section
     "folke/lsp-colors.nvim",
