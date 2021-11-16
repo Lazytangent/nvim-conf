@@ -94,7 +94,7 @@ LSP = {
     "jedi_language_server",
     "jsonls",
     "pylsp",
-    "pyright",
+    -- "pyright",
     "prismals",
     "rls",
     "rust_analyzer",
