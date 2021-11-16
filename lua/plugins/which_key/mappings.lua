@@ -39,15 +39,6 @@ local normal = {
       p = { [[[s]], "Prev bad spelling" },
       s = { [[<cmd>setlocal spell!<cr>]], "Toggle spellcheck" },
     },
-    t = {
-      name = "+Tabs",
-      c = { [[<cmd>tabclose<cr>]], "Close tab" },
-      e = { [[:tabedit <C-r>=expand("%:p:h")<cr>/<cr>]], "Edit tab" },
-      m = { [[<cmd>tabmove<cr>]], "Move tab" },
-      n = { [[<cmd>tabnew<cr>]], "New tab" },
-      o = { [[<cmd>tabonly<cr>]], "Only tab" },
-      w = "Tailwind Complete",
-    },
     w = { [[<cmd>w<cr>]], "Write" },
     ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
     [","] = {

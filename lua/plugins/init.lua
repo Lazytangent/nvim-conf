@@ -102,6 +102,7 @@ require("packer").startup(function()
     "ryanoasis/vim-devicons",
     "windwp/nvim-autopairs",
     "numToStr/Comment.nvim",
+    "dhruvasagar/vim-table-mode",
 
     -- Folke Section
     "folke/lsp-colors.nvim",
