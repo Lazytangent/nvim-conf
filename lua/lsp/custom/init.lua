@@ -1,1 +1,7 @@
-require "lsp.custom.pyright"
+require 'lsp.custom.deno'
+require 'lsp.custom.elixir'
+require 'lsp.custom.go'
+require 'lsp.custom.java'
+require 'lsp.custom.pyright'
+require 'lsp.custom.sql'
+require 'lsp.custom.vue'
