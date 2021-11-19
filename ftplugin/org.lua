@@ -14,3 +14,5 @@
 -- }
 
 -- wk.register(normal_orgmode, { buffer = 0 })
+
+vim.cmd([[set conceallevel=2]])
