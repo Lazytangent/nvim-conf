@@ -78,7 +78,7 @@ require("packer").startup(function()
     { "digitaltoad/vim-pug", ft = "pug" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
     "kristijanhusak/orgmode.nvim",
-    { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
+    -- { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
   })
 
   -- Quality of Life Improvements
