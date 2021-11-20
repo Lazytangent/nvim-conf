@@ -1,5 +1,7 @@
 require('filetype').setup {
-  extensions = {
-    sequelizerc = "javascript",
-  },
+  overrides = {
+    extensions = {
+      sequelizerc = "javascript",
+    },
+  }
 }
