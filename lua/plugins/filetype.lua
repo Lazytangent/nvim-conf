@@ -3,5 +3,8 @@ require('filetype').setup {
     extensions = {
       sequelizerc = "javascript",
     },
+    literal = {
+      [".sequelizerc"] = "javascript",
+    },
   }
 }
