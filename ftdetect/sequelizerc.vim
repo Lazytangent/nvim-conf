@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead .sequelizerc set filetype=javascript
+autocmd BufNewFile,BufRead *.sequelizerc set filetype=javascript
