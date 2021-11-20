@@ -58,6 +58,7 @@ cmp.setup {
     { name = "luasnip" },
     { name = "latex_symbols" },
     { name = 'nvim_lsp_document_symbol' },
+    { name = 'orgmode' },
     -- { name = "path" },
     { name = "crates" },
     { name = "tmux" },

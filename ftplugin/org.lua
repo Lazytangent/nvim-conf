@@ -15,4 +15,7 @@
 
 -- wk.register(normal_orgmode, { buffer = 0 })
 
-vim.cmd([[set conceallevel=2]])
+vim.cmd([[
+  set conceallevel=2
+  set spell
+]])
