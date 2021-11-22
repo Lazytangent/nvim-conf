@@ -1,5 +1,11 @@
 local normal = {
   ["<leader>"] = {
+    a = {
+      name = "+ArgList",
+      a = { [[<cmd>args<cr>]], "Print arglist" },
+      n = { [[<cmd>next<cr>]], "Next file in arglist" },
+      p = { [[<cmd>prev<cr>]], "Prev file in arglist" },
+    },
     b = {
       name = "+Buffers",
       d = { [[<cmd>%bdelete<cr>]], "Close buffers" },
