@@ -75,7 +75,7 @@ require("packer").startup(function()
     { "lervag/vimtex", ft = "tex" },
     { "digitaltoad/vim-pug", ft = "pug" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
-    "kristijanhusak/orgmode.nvim",
+    "nvim-orgmode/orgmode.nvim",
     "keith/swift.vim",
     "tami5/swift.nvim",
   })
