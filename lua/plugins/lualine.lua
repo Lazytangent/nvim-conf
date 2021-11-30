@@ -13,6 +13,6 @@ require("lualine").setup {
   sections = {
     lualine_b = {'branch', 'diff',
                   {'diagnostics', sources = { 'nvim_lsp' }}},
-    lualine_c = {{ 'filename', file_status = true, path = 1 }, 'diff', { gps.get_location, cond = gps.is_available }, { package_info.get_status() }},
+    lualine_c = { "os.date('%c')", { 'filename', file_status = true, path = 1 }, 'diff', { gps.get_location, cond = gps.is_available }, { package_info.get_status() }},
   },
 }
