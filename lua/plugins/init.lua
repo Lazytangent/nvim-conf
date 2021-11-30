@@ -5,7 +5,6 @@ require("packer").startup(function()
   -- Theme Stuff
   use({
     "nvim-lualine/lualine.nvim",
-    -- "lewis6991/moonlight.vim",
     "folke/tokyonight.nvim",
     "marko-cerovac/material.nvim",
     "shaunsingh/moonlight.nvim",
@@ -23,7 +22,6 @@ require("packer").startup(function()
     "p00f/nvim-ts-rainbow",
     "JoosepAlviste/nvim-ts-context-commentstring",
     { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
-    -- { "Lazytangent/nvim-gps", branch = 'dev', requires = "nvim-treesitter/nvim-treesitter" },
     { "ThePrimeagen/refactoring.nvim", requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" } },
   })
 
@@ -80,7 +78,6 @@ require("packer").startup(function()
     "kristijanhusak/orgmode.nvim",
     "keith/swift.vim",
     "tami5/swift.nvim",
-    -- { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
   })
 
   -- Quality of Life Improvements
@@ -124,7 +121,6 @@ require("packer").startup(function()
     "jubnzv/mdeval.nvim",
 
     -- Tpope Section
-    -- "tpope/vim-commentary",
     "tpope/vim-surround",
     "tpope/vim-dispatch",
     "tpope/vim-repeat",
