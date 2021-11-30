@@ -83,7 +83,6 @@ LSP = {
       "cssls",
       "dockerls",
       "erlangls",
-      "eslint",
       "graphql",
       "html",
       "jdtls",
@@ -104,6 +103,7 @@ LSP = {
     custom = {
       "denols",
       "elixirls",
+      "eslint",
       "emmet_ls",
       "gopls",
       "java_language_server",
