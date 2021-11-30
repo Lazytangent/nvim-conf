@@ -5,7 +5,8 @@ function ExecuteFile()
         \ 'ruby': 'ruby',
         \ 'sh': 'sh',
         \ 'html': 'open',
-	\ 'java': 'java',
+        \ 'java': 'java',
+        \ 'swift': 'swift',
         \ }
   let cmd = get(filetype_to_command, &filetype, &filetype)
   call RunShellCommand(cmd . "%s")
