@@ -78,6 +78,8 @@ require("packer").startup(function()
     { "digitaltoad/vim-pug", ft = "pug" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
     "kristijanhusak/orgmode.nvim",
+    "keith/swift.vim",
+    "tami5/swift.nvim",
     -- { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" },
   })
 
