@@ -187,7 +187,7 @@ local normal = {
     },
     ["<leader>"] = {
       n = {
-        d = { [[<cmd>lua require(' }package-info').delete()<cr>]], "Delete a package" },
+        d = { [[<cmd>lua require('package-info').delete()<cr>]], "Delete a package" },
         i = { [[<cmd>lua require('package-info').install()<cr>]], "Install new package" },
         r = { [[<cmd>lua require('package-info').reinstall()<cr>]], "Reinstall packages" },
         s = { [[<cmd>lua require('package-info').show()<cr>]], "Show outdated versions" },

@@ -8,6 +8,7 @@ require("which-key").setup {
   key_labels = {
     ["<leader>"] = "SPC",
     ["<localleader>"] = "SPC m",
+    ["<space>"] = "SPC",
   },
 }
 
