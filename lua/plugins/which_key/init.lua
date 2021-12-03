@@ -5,6 +5,10 @@ require("which-key").setup {
       suggestions = 20,
     },
   },
+  key_labels = {
+    ["<leader>"] = "SPC",
+    ["<localleader>"] = "SPC m",
+  },
 }
 
 require("plugins.which_key.mappings")
