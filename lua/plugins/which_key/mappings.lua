@@ -52,7 +52,7 @@ local normal = {
       c = { [[:changes<cr>]], "Show changes" },
       f = { [[<cmd>lua vim.lsp.buf.formatting()<cr>]], "Format" },
       g = { [[:set operatorfunc=GrepOperator<cr>g@]], "Grep for word under cursor" },
-      p = { [[<cmd>Telescope projects<cr>]], "Open Project" },
+      p = { [[<cmd>Telescope project<cr>]], "Open Project" },
       r = { [[<cmd>lua require('mdeval').eval_code_block()<cr>]], "Run code block with mdeval" },
       t = {
         name = "+Terminal",
@@ -176,10 +176,6 @@ local normal = {
       p = { [[<cmd>NvimTreeFocus<cr>]], "Project in NvimTree" },
     },
     q = "Set diagnostics into location list",
-    t = {
-      name = "+Tags",
-      t = { [[<cmd>TagbarToggle<cr>]], "Toggle Tagbar" },
-    },
     w = {
       name = "+Write",
       q = { [[<cmd>wq<cr>]], "write and quit" },
