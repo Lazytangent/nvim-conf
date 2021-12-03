@@ -1,5 +1,5 @@
 local normal = {
-  ["<leader>"] = {
+  ["<localleader>"] = {
     a = {
       name = "+ArgList",
       a = { [[<cmd>args<cr>]], "Print arglist" },
@@ -65,7 +65,7 @@ local normal = {
       [","] = { [[<c-^>]], "Last buffer" },
       ["*"] = { [[*<C-O>:%s///gn<cr>]], "Count matches" },
     },
-    ["<localleader>"] = {
+    ["<leader>"] = {
       name = "+LSP",
       d = {
         name = "+Textobjects peek",
@@ -89,7 +89,7 @@ local normal = {
       }
     },
   },
-  ["<localleader>"] = {
+  ["<leader>"] = {
     a = {
       name = "Add",
       O = { [[O<Esc>]], "Add new line above" },
@@ -161,11 +161,7 @@ local normal = {
       v = "View",
       x = "Reload",
     },
-    m = {
-      name = "+MarkdownPreview",
-      d = { [[<cmd>InstantMarkdownPreview<cr>]], "Preview Start" },
-      s = { [[<cmd>InstantMarkdownStop<cr>]], "Preview Stop" },
-    },
+    m = "+Leader",
     n = {
       name = "+Number",
       n = { [[<cmd>set nu!<cr>]], "Toggle number" },
@@ -189,7 +185,7 @@ local normal = {
       x = { [[<cmd>TroubleToggle<cr>]], "toggle" },
       R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
     },
-    ["<localleader>"] = {
+    ["<leader>"] = {
       n = {
         d = { [[<cmd>lua require(' }package-info').delete()<cr>]], "Delete a package" },
         i = { [[<cmd>lua require('package-info').install()<cr>]], "Install new package" },
