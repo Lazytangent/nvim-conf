@@ -9,7 +9,7 @@ function ExecuteFile()
         \ 'swift': 'swift',
         \ }
   let cmd = get(filetype_to_command, &filetype, &filetype)
-  call RunShellCommand(cmd . "%s")
+  call RunShellCommand(cmd . " %")
 endfunction
 
 function RunShellCommand(cmdline)
