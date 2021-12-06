@@ -9,3 +9,6 @@ This takes inspiration from:
 - [[https://github.com/folke/dot/tree/master/config/nvim][folke]]
 - [[https://github.com/crispgm/dotfiles/tree/main/nvim][crispgm]]
 - [[https://github.com/siduck76/NvChad][siduck76]]
+
+** TODO Update which-key mappings to create proper labels
+SCHEDULED: <2021-12-07 Tue>
