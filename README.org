@@ -1,0 +1,11 @@
+#+title: Neovim Config Files
+
+On *nix systems, this belongs in =$HOME/.config/nvim=.
+
+This takes inspiration from:
+
+- [[https://github.com/lukas-reineke/dotfiles/tree/master/vim][lukas-reineke]]
+- [[https://github.com/tjdevries/config_manager/tree/master/xdg_config/nvim][tjdevries]]
+- [[https://github.com/folke/dot/tree/master/config/nvim][folke]]
+- [[https://github.com/crispgm/dotfiles/tree/main/nvim][crispgm]]
+- [[https://github.com/siduck76/NvChad][siduck76]]
