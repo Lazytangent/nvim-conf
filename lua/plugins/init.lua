@@ -59,7 +59,7 @@ require("packer").startup(function()
     "onsails/lspkind-nvim",
     { "RishabhRD/nvim-lsputils", requires = "RishabhRD/popfix" },
     { 'Saecki/crates.nvim', requires = { 'nvim-lua/plenary.nvim' } },
-    { 'andersevenrud/compe-tmux', branch = 'cmp' },
+    'andersevenrud/cmp-tmux',
   })
 
   -- Specific Language Plugins
