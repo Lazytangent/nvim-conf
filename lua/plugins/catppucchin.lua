@@ -11,5 +11,6 @@ require('catppuccin').setup {
     markdown = true,
     lightspeed = true,
     ts_rainbow = true,
+    cmp = true,
   },
 }
