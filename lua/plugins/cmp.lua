@@ -59,6 +59,7 @@ cmp.setup {
     { name = "latex_symbols" },
     { name = 'nvim_lsp_document_symbol' },
     { name = 'orgmode' },
+    { name = 'vim-dadbod-completion' },
     -- { name = "path" },
     { name = "crates" },
     { name = "tmux" },
