@@ -1,4 +1,5 @@
 local null_ls = require("null-ls")
+local on_attach = require("lsp.on_attach")
 
 local sources = {
   -- Formatting
@@ -40,4 +41,9 @@ local sources = {
   -- null_ls.builtins.diagnostics.stylelint,
 }
 
-null_ls.config({ sources = sources, save_after_format = false, diagnostics_format = "[#{c}] #{m} (#{s})" })
+null_ls.setup {
+  sources = sources,
+  save_after_format = false,
+  diagnostics_format = "[#{c}] #{m} (#{s})",
+  on_attach = on_attach,
+}

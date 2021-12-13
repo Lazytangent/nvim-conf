@@ -33,10 +33,6 @@ require("packer").startup(function()
     "mattn/emmet-vim",
     {
       "jose-elias-alvarez/null-ls.nvim",
-      config = function()
-        require("null-ls").config({})
-        require("lspconfig")["null-ls"].setup({})
-      end,
       requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
 
