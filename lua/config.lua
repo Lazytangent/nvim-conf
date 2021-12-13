@@ -61,7 +61,6 @@ Opts = {
 
   undofile = true,
   tags = "./tags;",
-  gutentags_ctags_executable = "/opt/homebrew/bin/ctags",
   -- formatlistpat = "\C^\s*[\[({]\?\([0-9]\+\|[iIvVxXlLcCdDmM]\+\|[a-zA-Z]\)[\]:.)}]\s\+\|^\s*[-+o*]\s\+",
 }
 
