@@ -3,6 +3,7 @@ require('filetype').setup {
     extensions = {
       sequelizerc = "javascript",
       swift = "swift",
+      tf = "terraform",
     },
     literal = {
       [".sequelizerc"] = "javascript",

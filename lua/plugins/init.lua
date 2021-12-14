@@ -76,6 +76,7 @@ require("packer").startup(function()
     "nvim-orgmode/orgmode.nvim",
     "keith/swift.vim",
     "tami5/swift.nvim",
+    "hashivim/vim-terraform",
   })
 
   -- Quality of Life Improvements
