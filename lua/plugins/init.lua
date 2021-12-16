@@ -1,4 +1,10 @@
-require("packer").startup(function()
+local packer = require("packer")
+
+packer.init {
+  max_jobs = 50,
+}
+
+packer.startup(function()
   -- Packer.nvim
   use("wbthomason/packer.nvim")
 
