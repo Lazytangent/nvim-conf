@@ -107,7 +107,7 @@ local normal = {
       name = "+Lists",
       c = { [[:changes<cr>]], "Show changes" },
       j = { [[:jumps<cr>]], "Show jumps" },
-      l = { [[:ls<cr>:b<space>]], "Select buffer" },
+      l = { [[:ls<cr>:b]], "Select buffer" },
       m = { [[:marks<cr>:normal! `]], "Show marks" },
     },
     m = {
