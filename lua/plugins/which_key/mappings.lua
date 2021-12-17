@@ -66,7 +66,6 @@ local normal = {
       name = "+Change",
       c = { [[<cmd>lua require('telescope.builtin').colorscheme()<cr>]], "colorscheme" },
       d = { [[<cmd>cd %:p:h<cr>]], "Change working directory" },
-      t = { [[<cmd>!ctags -R .<cr><cr>]], "Ctags" },
     },
     e = "Show line diagnostics",
     f = {
@@ -74,7 +73,6 @@ local normal = {
       a = { [[<cmd>lua require('telescope').extensions.frecency.frecency()<cr>]], "Frecency" },
       b = { [[<cmd>lua require('telescope.builtin').buffers()<cr>]], "Find Buffers" },
       c = { [[<cmd>lua require('telescope.builtin').commands()<cr>]], "Commands" },
-      d = { [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>]], "Document diagnostics" },
       f = { [[<cmd>lua require('telescope.builtin').find_files()<cr>]], "Find files" },
       g = { [[<cmd>lua require('telescope').extensions.live_grep_raw.live_grep_raw()<cr>]], "Live grep" },
       h = { [[<cmd>lua require('telescope.builtin').help_tags()<cr>]], "Help tags" },
@@ -82,9 +80,11 @@ local normal = {
       l = { [[<cmd>lua require('telescope.builtin').loclist()<cr>]], "Location list" },
       p = { [[<cmd>lua require('telescope.builtin').planets()<cr>]], "Planets" },
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "Quickfix list" },
-      r = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "Registers" },
       t = { [[<cmd>lua require('telescope.builtin{ ').treesitter()<cr>]], "Treesitter" },
 
+      d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "LSP Definitions" },
+      i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "LSP Implementations" },
+      r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "LSP References" },
       s = { [[<cmd>w<cr>]], "Save file" },
     },
     g = {
@@ -116,14 +116,15 @@ local normal = {
         name = "+Telescope",
         a = { [[<cmd>lua require('plugins.telescope').search_all_files()<cr>]], "All files" },
         b = { [[<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>]], "File browser" },
-        d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
         f = { [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]], "Fuzzy find" },
         g = { [[<cmd>lua require('telescope.builtin').git_status()<cr>]], "Git" },
-        i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
         p = { [[<cmd>lua require('telescope.builtin').resume()<cr>]], "Resume" },
         P = { [[<cmd>lua require('telescope.builtin').pickers()<cr>]], "Previous pickers" },
-        r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
         t = { [[<cmd>lua require('telescope.builtin').tags()<cr>]], "Tags" },
+
+        d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
+        i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
+        r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
       },
       g = { [[<cmd>lua require('plugins.telescope').grep_prompt()<cr>]], "Grep String" },
       l = {
