@@ -68,12 +68,21 @@ local normal = {
       d = { [[<cmd>cd %:p:h<cr>]], "Change working directory" },
     },
     d = {
-      name = "Debugger",
+      name = "+Debugger",
       c = { [[<cmd>lua require('dap').continue()<cr>]], "Continue" },
       i = { [[<cmd>lua require('dap').step_into()<cr>]], "Step Into" },
       o = { [[<cmd>lua require('dap').step_over()<cr>]], "Step Over" },
       r = { [[<cmd>lua require('dap').repl_open()<cr>]], "Open REPL" },
       t = { [[<cmd>lua require('dap').toggle_breakpoint()<cr>]], "Toggle breakpoint" },
+
+      f = {
+        name = "+Telescope",
+        c = { [[<cmd>lua require('telescope').extensions.dap.commands()<cr>]], "Commands" },
+        f = { [[<cmd>lua require('telescope').extensions.dap.frames()<cr>]], "Frames" },
+        l = { [[<cmd>lua require('telescope').extensions.dap.list_breakpoints()<cr>]], "List Breakpoints" },
+        o = { [[<cmd>lua require('telescope').extensions.dap.configurations()<cr>]], "Configurations" },
+        v = { [[<cmd>lua require('telescope').extensions.dap.variables()<cr>]], "Variables" },
+      },
     },
     e = "Show line diagnostics",
     f = {
