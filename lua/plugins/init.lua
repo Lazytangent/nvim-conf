@@ -66,6 +66,14 @@ packer.startup(function()
     "kristijanhusak/vim-dadbod-completion",
   })
 
+  -- DAP
+  use({
+    "mfussenegger/nvim-dap",
+    { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
+    "Pocco81/DAPInstall.nvim",
+    "theHamsta/nvim-dap-virtual-text",
+  })
+
   -- Specific Language Plugins
   use({
     { "heavenshell/vim-jsdoc", run = "make install" },
@@ -98,6 +106,7 @@ packer.startup(function()
     "nvim-telescope/telescope-file-browser.nvim",
     "nvim-telescope/telescope-live-grep-raw.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
+    "nvim-telescope/telescope-dap.nvim",
   })
 
   use({

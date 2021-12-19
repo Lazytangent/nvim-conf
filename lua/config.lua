@@ -156,3 +156,11 @@ Treesitter = {
     "yaml",
   }
 }
+
+Debuggers = {
+  "python",
+  "ccppr_vsc",
+  "lua",
+  "chrome",
+  "jsnode",
+}

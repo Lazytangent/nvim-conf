@@ -67,6 +67,14 @@ local normal = {
       c = { [[<cmd>lua require('telescope.builtin').colorscheme()<cr>]], "colorscheme" },
       d = { [[<cmd>cd %:p:h<cr>]], "Change working directory" },
     },
+    d = {
+      name = "Debugger",
+      c = { [[<cmd>lua require('dap').continue()<cr>]], "Continue" },
+      i = { [[<cmd>lua require('dap').step_into()<cr>]], "Step Into" },
+      o = { [[<cmd>lua require('dap').step_over()<cr>]], "Step Over" },
+      r = { [[<cmd>lua require('dap').repl_open()<cr>]], "Open REPL" },
+      t = { [[<cmd>lua require('dap').toggle_breakpoint()<cr>]], "Toggle breakpoint" },
+    },
     e = "Show line diagnostics",
     f = {
       name = "+Telescope",
