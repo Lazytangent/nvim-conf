@@ -83,6 +83,12 @@ local normal = {
         o = { [[<cmd>lua require('telescope').extensions.dap.configurations()<cr>]], "Configurations" },
         v = { [[<cmd>lua require('telescope').extensions.dap.variables()<cr>]], "Variables" },
       },
+      u = {
+        name = "UI",
+        c = { [[<cmd>lua require('dapui').close()<cr>]], "Close" },
+        o = { [[<cmd>lua require('dapui').open()<cr>]], "Open" },
+        t = { [[<cmd>lua require('dapui').toggle()<cr>]], "Toggle" },
+      },
     },
     e = "Show line diagnostics",
     f = {
