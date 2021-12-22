@@ -1,8 +1,5 @@
 local u = require("utils.core")
 
-vim.g.mapleader = ","
-vim.g.maplocalleader = " "
-
 -- Vim-Instant-Markdown
 -- u.map("n", "<leader>md", ":InstantMarkdownPreview<cr>")
 -- u.map("n", "<leader>ms", ":InstantMarkdownStop<cr>")
