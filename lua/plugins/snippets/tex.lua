@@ -54,6 +54,9 @@ local latex = {
   s("ldots", {
     t "\\ldots",
   }),
+  s("...", {
+    t "\\dots",
+  }),
   s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" }, {
     t "\\begin{figure}[",
     i(1, "htpb"),
@@ -148,6 +151,17 @@ local latex = {
     i(1),
     t("}"),
     i(0),
+  }),
+  s({ trig = "article", dscr = "Article Format", name = "Article Format" }, {
+    t({"\\documentclass[12pt]{article}",
+      "",
+      "\\usepackage{mathtools,graphicx,amssymb,amsthm,amsmath}",
+      "",
+      "\\begin{document}",
+      ""
+    }),
+    i(0),
+    t({"", "\\end{document}"}),
   }),
 }
 
