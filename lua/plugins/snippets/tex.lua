@@ -163,6 +163,10 @@ local latex = {
     i(0),
     t({"", "\\end{document}"}),
   }),
+  s({ trig = "ddx", dscr = "Derivative notation", name = "Derivative" }, {
+    t("\\frac{d}{dx}"),
+    i(0),
+  }),
 }
 
 vim.list_extend(latex, greek)
