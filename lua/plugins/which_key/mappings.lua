@@ -276,6 +276,7 @@ local normal = {
         },
       },
     },
+    ["`"] = { [[<C-^>]], "Prev buffer" },
   },
   ["g"] = {
     c = "Commentary",
