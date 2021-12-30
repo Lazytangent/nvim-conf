@@ -70,6 +70,7 @@ packer.startup(function()
   use({
     "mfussenegger/nvim-dap",
     { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
+    "mfussenegger/nvim-dap-python",
     "Pocco81/DAPInstall.nvim",
     "theHamsta/nvim-dap-virtual-text",
   })

@@ -74,6 +74,7 @@ local normal = {
       o = { [[<cmd>lua require('dap').step_over()<cr>]], "Step Over" },
       r = { [[<cmd>lua require('dap').repl_open()<cr>]], "Open REPL" },
       t = { [[<cmd>lua require('dap').toggle_breakpoint()<cr>]], "Toggle breakpoint" },
+      p = { [[<cmd>lua require('plugins.dap').configure_python_debugger()<cr>]], "Attach Python Debugger" },
 
       f = {
         name = "+Telescope",
