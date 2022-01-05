@@ -7,6 +7,7 @@ require('filetype').setup {
     },
     literal = {
       [".sequelizerc"] = "javascript",
+      [".vaultrc"] = "zsh",
     },
   }
 }
