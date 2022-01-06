@@ -28,7 +28,7 @@ nvim_lsp.efm.setup({
   settings = {
     rootMarkers = { ".git/" },
     languages = {
-      python = { black, isort, autopep8 },
+      python = { isort, autopep8, black },
       typescript = { prettier, eslint },
       javascript = { prettier, eslint },
       typescriptreact = { prettier, eslint },
