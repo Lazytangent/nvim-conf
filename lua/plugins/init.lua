@@ -124,9 +124,10 @@ packer.startup(function()
     -- Folke Section
     "folke/lsp-colors.nvim",
     "folke/trouble.nvim",
-    "folke/which-key.nvim",
     "folke/zen-mode.nvim",
     "folke/todo-comments.nvim",
+    -- "folke/which-key.nvim",
+    { "zeertzjq/which-key.nvim", branch = "patch-1" },
 
     "tversteeg/registers.nvim",
     "itmecho/neoterm.nvim",
