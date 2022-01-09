@@ -14,3 +14,4 @@ require "basic"
 
 -- GUI Config
 require "guis"
+require "commands"
