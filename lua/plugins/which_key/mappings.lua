@@ -100,15 +100,21 @@ local normal = {
       f = { [[<cmd>lua require('telescope.builtin').find_files()<cr>]], "Find files" },
       g = { [[<cmd>lua require('telescope').extensions.live_grep_raw.live_grep_raw()<cr>]], "Live grep" },
       h = { [[<cmd>lua require('telescope.builtin').help_tags()<cr>]], "Help tags" },
+      i = { [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]], "In buffer" },
       j = { [[<cmd>lua require('telescope.builtin').jumplist()<cr>]], "Jumplist" },
       l = { [[<cmd>lua require('telescope.builtin').loclist()<cr>]], "Location list" },
+      m = { [[<cmd>lua require('telescope.builtin').marks()<cr>]], "Marks" },
       p = { [[<cmd>lua require('telescope.builtin').planets()<cr>]], "Planets" },
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "Quickfix list" },
       t = { [[<cmd>lua require('telescope.builtin{ ').treesitter()<cr>]], "Treesitter" },
 
-      d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "LSP Definitions" },
-      i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "LSP Implementations" },
-      r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "LSP References" },
+      z = {
+        name = "+LSP Specific",
+        d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "LSP Definitions" },
+        i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "LSP Implementations" },
+        r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "LSP References" },
+      },
+
       s = { [[<cmd>w<cr>]], "Save file" },
     },
     g = {
