@@ -126,8 +126,7 @@ packer.startup(function()
     "folke/trouble.nvim",
     "folke/zen-mode.nvim",
     "folke/todo-comments.nvim",
-    -- "folke/which-key.nvim",
-    { "zeertzjq/which-key.nvim", branch = "patch-1" },
+    "folke/which-key.nvim",
 
     "tversteeg/registers.nvim",
     "itmecho/neoterm.nvim",
