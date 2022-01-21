@@ -1,6 +1,6 @@
 require 'lsp.custom.deno'
 require 'lsp.custom.elixir'
-require 'lsp.custom.eslint'
+-- require 'lsp.custom.eslint'
 require 'lsp.custom.go'
 require 'lsp.custom.java'
 require 'lsp.custom.pyright'

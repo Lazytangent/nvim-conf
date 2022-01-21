@@ -102,7 +102,7 @@ LSP = {
     custom = {
       "denols",
       "elixirls",
-      "eslint",
+      -- "eslint",
       "emmet_ls",
       "gopls",
       "java_language_server",
