@@ -10,6 +10,7 @@ lsp.gopls.setup {
         unusuedparams = true,
       },
       staticcheck = true,
+      experimentalWorkspaceModule = true,
     },
   },
   on_attach = on_attach,
