@@ -106,6 +106,9 @@ require("nvim-treesitter.configs").setup({
     use_virtual_text = true,
     lint_events = { "BufWrite", "CursorHold" },
   },
+  endwise = {
+    enable = true,
+  },
 })
 
 require 'plugins.treesitter.http_parser'
