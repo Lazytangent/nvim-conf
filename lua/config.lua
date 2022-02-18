@@ -75,7 +75,7 @@ LSP = {
   virtual_text = true,
   highlight_word = true,
   servers = {
-    regular = {
+    primary = {
       "angularls",
       "bashls",
       "clangd",
@@ -87,7 +87,6 @@ LSP = {
       "jdtls",
       "jedi_language_server",
       "jsonls",
-      "pylsp",
       "prismals",
       "rls",
       "rust_analyzer",
@@ -98,6 +97,9 @@ LSP = {
       "tsserver",
       "vimls",
       "yamlls",
+    },
+    regular = {
+      "pylsp",
     },
     custom = {
       "denols",

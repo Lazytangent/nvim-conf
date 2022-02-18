@@ -1,5 +1,5 @@
 local lsp = require('lspconfig')
-local on_attach = require('lsp.on_attach')
+local on_attach = require('lsp.regular.on_attach')
 local capabilities = require('lsp.capabilities')
 
 lsp.vuels.setup {

@@ -1,7 +1,7 @@
 local nvim_lsp = require('lspconfig')
 
 local capabilities = require("lsp.capabilities")
-local on_attach = require("lsp.on_attach")
+local on_attach = require("lsp.regular.on_attach")
 
 local autopep8 = require("lsp.efm.autopep8")
 local black = require("lsp.efm.black")

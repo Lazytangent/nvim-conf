@@ -1,12 +1,18 @@
 local nvim_lsp = require("lspconfig")
-local on_attach = require("lsp.on_attach")
+local primary_on_attach = require("lsp.primary.on_attach")
+local regular_on_attach = require("lsp.regular.on_attach")
 local capabilities = require("lsp.capabilities")
 
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
-local servers = LSP.servers.regular
+local regular_servers = LSP.servers.regular
+local primary_servers = LSP.servers.primary
 local configs = require("lspconfig/configs")
 
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup({ on_attach = on_attach, capabilities = capabilities })
+for _, lsp in ipairs(primary_servers) do
+  nvim_lsp[lsp].setup({ on_attach = primary_on_attach, capabilities = capabilities })
+end
+
+for _, lsp in ipairs(regular_servers) do
+  nvim_lsp[lsp].setup({ on_attach = regular_on_attach, capabilities = capabilities })
 end
