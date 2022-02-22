@@ -94,6 +94,7 @@ packer.startup(function()
     "tami5/swift.nvim",
     "hashivim/vim-terraform",
     "ray-x/go.nvim",
+    "b0o/schemastore.nvim",
   })
 
   -- Quality of Life Improvements
