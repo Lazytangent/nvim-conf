@@ -1,6 +1,3 @@
-vim.g.nvim_tree_quit_on_open = 1
-vim.g.nvim_tree_disable_window_picker = 1
-
 require('nvim-tree').setup {
   auto_close = true,
   diagnostics = {
@@ -18,5 +15,13 @@ require('nvim-tree').setup {
   },
   filters = {
     dotfiles = true,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+      window_picker = {
+        enable = false,
+      },
+    },
   },
 }
