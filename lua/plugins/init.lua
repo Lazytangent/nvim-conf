@@ -95,6 +95,7 @@ packer.startup(function()
     "hashivim/vim-terraform",
     "ray-x/go.nvim",
     "b0o/schemastore.nvim",
+    "fladson/vim-kitty",
   })
 
   -- Quality of Life Improvements

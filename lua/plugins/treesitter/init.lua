@@ -9,7 +9,7 @@ require("nvim-treesitter.configs").setup({
   highlight = {
     enable = true,
     disable = { "latex", "tex" },
-    additional_vim_regex_highlighting = { "latex", "tex", "org", "html", "swift" },
+    additional_vim_regex_highlighting = { "latex", "tex", "org", "html", "swift", "kitty" },
   },
   incremental_selection = {
     enable = true,
