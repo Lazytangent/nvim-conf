@@ -64,9 +64,9 @@ local latex = {
     i(2, "\t\\includegraphics[width=0.8\\textwidth]{"),
     i(3),
     t { "}", "\t\\caption{" },
-    d(4, dynamic_copy, { 3 }, 3),
+    d(4, dynamic_copy, { 3 }, { user_args = { 3 } }),
     t { "}", "\t\\label{fig:" },
-    d(5, dynamic_copy, { 3 }, 3),
+    d(5, dynamic_copy, { 3 }, { user_args = { 3 } }),
     t { "}", "\\end{figure}" },
   }),
   s({ trig = "table", namr = "Table environment", dscr = "Table environment" }, {
