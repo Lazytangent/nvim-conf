@@ -108,7 +108,7 @@ LSP = {
       "gopls",
       "java_language_server",
       "jsonls",
-      "pyright",
+      -- "pyright",
       "sqlls",
       "sumneko_lua",
       "tailwindcss",
