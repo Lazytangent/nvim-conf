@@ -99,6 +99,8 @@ LSP = {
     },
     regular = {
       "pylsp",
+      "terraformls",
+      "terraform_lsp",
     },
     custom = {
       "denols",
