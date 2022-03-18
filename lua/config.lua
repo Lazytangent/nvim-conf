@@ -38,6 +38,7 @@ Opts = {
   textwidth = 80,
   mouse = "a",
   smarttab = true,
+  laststatus = 3,
 
   relativenumber = true,
   number = true,
