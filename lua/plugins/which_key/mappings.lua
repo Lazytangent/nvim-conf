@@ -106,7 +106,7 @@ local normal = {
       m = { [[<cmd>lua require('telescope.builtin').marks()<cr>]], "Marks" },
       p = { [[<cmd>lua require('telescope.builtin').planets()<cr>]], "Planets" },
       q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "Quickfix list" },
-      t = { [[<cmd>lua require('telescope.builtin{ ').treesitter()<cr>]], "Treesitter" },
+      t = { [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], "Treesitter" },
 
       z = {
         name = "+LSP Specific",
