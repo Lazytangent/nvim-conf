@@ -143,6 +143,7 @@ local normal = {
     },
     m = {
       name = "+Local leader",
+      e = { [[:e<cr>]], "Edit file" },
       f = {
         name = "+Telescope",
         a = { [[<cmd>lua require('plugins.telescope').search_all_files()<cr>]], "All files" },
