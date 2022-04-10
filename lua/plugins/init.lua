@@ -101,6 +101,7 @@ packer.startup(function()
   -- Quality of Life Improvements
   use({
     "nathom/filetype.nvim",
+    "kdheepak/lazygit.nvim",
   })
   -- Telescope
   use({
