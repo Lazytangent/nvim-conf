@@ -67,6 +67,7 @@ ls.snippets = {
 
 require("luasnip/loaders/from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
 require("luasnip/loaders/from_vscode").load()
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/plugins/snippets" })
 
 ls.filetype_extend("ruby", {"rails"})
 ls.filetype_extend("html", {"twig"})
