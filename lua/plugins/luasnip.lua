@@ -47,27 +47,20 @@ local tex = require("plugins.snippets.tex")
 local javascript = require("plugins.snippets.javascript")
 local org = require("plugins.snippets.orgmode")
 local vue = require("plugins.snippets.vue")
-
-ls.snippets = {
-  -- General Snippets
-  all = {
-    ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
-    s("bash", f(bash, {}, "ls")),
-    s("part", p(os.date, "%Y")),
-  },
-  -- Language Specific Snippets
-  tex = tex,
-  javascript = javascript,
-  javascriptreact = javascript,
-  typescript = javascript,
-  typescriptreact = javascript,
-  org = org,
-  vue = vue,
+local all = {
+  ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
+  s("bash", f(bash, {}, "ls")),
+  s("part", p(os.date, "%Y")),
 }
 
-require("luasnip/loaders/from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
-require("luasnip/loaders/from_vscode").load()
-require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/plugins/snippets" })
+ls.add_snippets('all', all)
+ls.add_snippets('tex', tex)
+ls.add_snippets('javascript', javascript)
+ls.add_snippets('org', org)
+ls.add_snippets('vue', vue)
+
+require("luasnip.loaders.from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
+require("luasnip.loaders.from_vscode").load()
 
 ls.filetype_extend("ruby", {"rails"})
 ls.filetype_extend("html", {"twig"})
