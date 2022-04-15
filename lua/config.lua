@@ -96,6 +96,7 @@ LSP = {
       "texlab",
       "tsserver",
       "vimls",
+      "volar",
       "yamlls",
     },
     regular = {
