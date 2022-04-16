@@ -237,6 +237,7 @@ local normal = {
       l = { [[<cmd>lopen<cr>]], "Location" },
       p = { [[<cmd>NvimTreeFocus<cr>]], "Project in NvimTree" },
     },
+    p = { [[:cexpr system('pre-commit run -a')<cr>:copen<cr>]], "Pre-commit into Quickfix List" },
     q = "Set diagnostics into location list",
     s = {
       name = "+Spell",
