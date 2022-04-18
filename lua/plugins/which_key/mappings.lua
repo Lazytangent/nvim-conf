@@ -218,6 +218,7 @@ local normal = {
           s = { [[<cmd>Octo pr search<cr>]], "Search" },
         },
       },
+      p = { [[:25split | term pre-commit run --files %<cr>]], "Run pre-commit on the current file in a terminal split" },
       Q = { [[!!zsh<cr>]], "Run line through zsh" },
       t = {
         name = "+TableMode",
