@@ -102,6 +102,7 @@ packer.startup(function()
   use({
     "nathom/filetype.nvim",
     "kdheepak/lazygit.nvim",
+    "jamestthompson3/nvim-remote-containers",
   })
   -- Telescope
   use({
