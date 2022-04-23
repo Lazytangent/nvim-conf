@@ -1,5 +1,4 @@
 local dap = require "dap"
-local dap_install = require "dap-install"
 dap.set_log_level "DEBUG"
 
 local debug_host = "0.0.0.0"
