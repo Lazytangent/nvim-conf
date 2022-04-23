@@ -15,15 +15,31 @@ local normal = {
         r = "References",
         t = "Type definition",
       },
-      r = "Rename",
-      t = {
-        name = "+Tests",
-        f = { [[<cmd>TestFile]], "Test File" },
-        l = { [[<cmd>TestLast]], "Test Last" },
-        n = { [[<cmd>TestNearest]], "Test Nearest" },
-        s = { [[<cmd>TestSuite]], "Test Suite" },
-        v = { [[<cmd>TestVisit]], "Test Visit" },
+      p = {
+        name = "+LSP Pickers",
+        c = {
+          name = "+Code Actions",
+          c = { [[<cmd>lua require('telescope.builtin').lsp_code_actions()<cr>]], "at Cursor" },
+          r = { [[<cmd>lua require('telescope.builtin').lsp_range_code_actions()<cr>]], "on Range" },
+        },
+        d = {
+          name = "+Diagnostics",
+          d = { [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>]], "Document" },
+          w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>]], "Workspace" },
+
+          f = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
+          t = { [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>]], "Type Definitions" },
+        },
+        i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
+        r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
+        s = {
+          name = "+Symbols",
+          d = { [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]], "Document" },
+          w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>]], "Workspace" },
+          y = { [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>]], "Dyanmic workspace" },
+        },
       },
+      r = "Rename",
       w = {
         name = "+LSP Workspace",
         a = "Add workspace folder",
@@ -41,9 +57,6 @@ local normal = {
         name = "+Terminal",
         b = { [[:15split | term<cr>]], "Bottom terminal" },
         n = { [[:Term<cr>]], "25 height botton" },
-        t = { [[<cmd>NeotermToggle<cr>]], "Toggle Neoterm" },
-        r = { [[:NeotermRun<space>]], "Run Neoterm" },
-        x = { [[<cmd>NeotermExit<cr>]], "Exit Neoterm" },
       },
       [","] = { [[<c-^>]], "Last buffer" },
       ["*"] = { [[*<C-O>:%s///gn<cr>]], "Count matches" },
@@ -89,6 +102,7 @@ local normal = {
         c = { [[<cmd>lua require('dapui').close()<cr>]], "Close" },
         o = { [[<cmd>lua require('dapui').open()<cr>]], "Open" },
         t = { [[<cmd>lua require('dapui').toggle()<cr>]], "Toggle" },
+        u = { [[<cmd>lua require('dapui').toggle()<cr>]], "Toggle" },
       },
     },
     e = "Show line diagnostics",
@@ -132,7 +146,7 @@ local normal = {
       },
       s = { [[<cmd>Git<cr>]], "status" },
       w = { [[<cmd>Gw<cr>]], "write" },
-      S = { [[<cmd>Gwrite<cr>]], "stash file" },
+      S = { [[<cmd>Git stash<cr>]], "stash file" },
     },
     l = {
       name = "+Lists",
@@ -187,50 +201,13 @@ local normal = {
         v = "View",
         x = "Reload",
       },
-      n = {
-        name = "+NPM",
-        d = { [[<cmd>lua require('package-info').delete()<cr>]], "Delete a package" },
-        i = { [[<cmd>lua require('package-info').install()<cr>]], "Install new package" },
-        r = { [[<cmd>lua require('package-info').reinstall()<cr>]], "Reinstall packages" },
-        s = { [[<cmd>lua require('package-info').show()<cr>]], "Show outdated versions" },
-        v = { [[<cmd>lua require('package-info').change_version()<cr>]], "Change version" },
-      },
-      o = {
-        name = "+Octo",
-        i = {
-          name = "+Issues",
-          b = { [[<cmd>Octo issue browser<cr>]], "Open in browser" },
-          c = { [[<cmd>Octo issue create<cr>]], "Create issue" },
-          d = { [[<cmd>Octo issue close<cr>]], "Close issue" },
-          e = { [[<cmd>Octo issue edit<cr>]], "Edit issue" },
-          l = { [[<cmd>Octo issue list<cr>]], "List issues" },
-          s = { [[<cmd>Octo issue search<cr>]], "Search" },
-        },
-        p = {
-          name = "+Pull Requests",
-          b = { [[<cmd>Octo pr browser<cr>]], "Open in browser" },
-          c = { [[<cmd>Octo pr create<cr>]], "Create PR" },
-          d = { [[<cmd>Octo pr close<cr>]], "Close PR" },
-          e = { [[<cmd>Octo pr edit<cr>]], "Edit PR" },
-          h = { [[<cmd>Octo pr checkout<cr>]], "Checkout PR" },
-          l = { [[<cmd>Octo pr list<cr>]], "List PR" },
-          m = { [[<cmd>Octo pr merge<cr>]], "Merge PR" },
-          s = { [[<cmd>Octo pr search<cr>]], "Search" },
-        },
-      },
       p = { [[:25split | term pre-commit run --files %<cr>]], "Run pre-commit on the current file in a terminal split" },
-      Q = { [[!!zsh<cr>]], "Run line through zsh" },
       t = {
         name = "+TableMode",
         m = "Toggle table mode",
         t = "Tableize",
       },
       ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
-    },
-    n = {
-      name = "+Number",
-      n = { [[<cmd>set nu!<cr>]], "Toggle number" },
-      r = { [[<cmd>set rnu!<cr>]], "Toggle relative" },
     },
     o = {
       name = "+Open",
@@ -242,15 +219,7 @@ local normal = {
     q = "Set diagnostics into location list",
     s = {
       name = "+Spell",
-      ["?"] = { [[z=]], "Spelling suggestions" },
-      a = { [[zg]], "Add word to good spelling list" },
-      n = { [[]s]], "Next bad spelling" },
-      p = { [[[s]], "Prev bad spelling" },
       s = { [[<cmd>setlocal spell!<cr>]], "Toggle spellcheck" },
-    },
-    w = {
-      name = "+Write",
-      q = { [[<cmd>wq<cr>]], "write and quit" },
     },
     x = {
       name = "+Trouble",
@@ -261,37 +230,10 @@ local normal = {
       x = { [[<cmd>TroubleToggle<cr>]], "toggle" },
       R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
     },
-    ["<leader>"] = {
-      name = "+Utilities",
-      l = {
-        name = "+LSP Pickers",
-        c = {
-          name = "+Code Actions",
-          c = { [[<cmd>lua require('telescope.builtin').lsp_code_actions()<cr>]], "at Cursor" },
-          r = { [[<cmd>lua require('telescope.builtin').lsp_range_code_actions()<cr>]], "on Range" },
-        },
-        d = {
-          name = "+Diagnostics",
-          d = { [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>]], "Document" },
-          w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>]], "Workspace" },
-
-          f = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
-          t = { [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>]], "Type Definitions" },
-        },
-        i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
-        r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
-        s = {
-          name = "+Symbols",
-          d = { [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]], "Document" },
-          w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>]], "Workspace" },
-          y = { [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>]], "Dyanmic workspace" },
-        },
-      },
-    },
     ["`"] = { [[<C-^>]], "Prev buffer" },
   },
   ["g"] = {
-    c = "Commentary",
+    c = "Comment.nvim",
 
     -- LSP Stuff
     d = "Go to defintion",
@@ -400,11 +342,6 @@ local normal = {
   ["<C-h>"] = "Signature help",
   ["<C-k>"] = { [[:<C-U>exec "exec 'norm m`' | move -" . (1+v:count1)<cr>]], "Move line up" },
   ["<C-j>"] = { [[:<C-U>exec "exec 'norm m`' | move +" . (0+v:count1)<cr>]], "Move line down" },
-  ["<C-n>"] = "Visual Multi",
-  ["<C-L>"] = {
-    name = "+Local commands",
-    ["<C-R>"] = { [[:call ExecuteFile()<cr>]], "Run current file" },
-  },
   ["<C-U>"] = "Up half a page",
   ["c"] = {
     name = "Change",
