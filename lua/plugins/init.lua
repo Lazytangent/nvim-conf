@@ -12,17 +12,17 @@ packer.startup(function()
   use({
     "nvim-lualine/lualine.nvim",
     "folke/tokyonight.nvim",
-    "marko-cerovac/material.nvim",
-    "shaunsingh/moonlight.nvim",
     "catppuccin/nvim",
   })
 
   -- Treesitter
   use({
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
-    "nvim-treesitter/nvim-treesitter-refactor",
     "nvim-treesitter/playground",
+    "nvim-treesitter/nvim-treesitter-refactor",
     "nvim-treesitter/nvim-treesitter-textobjects",
+
+    "lewis6991/spellsitter.nvim",
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
     "p00f/nvim-ts-rainbow",
@@ -134,7 +134,6 @@ packer.startup(function()
     "folke/which-key.nvim",
 
     "tversteeg/registers.nvim",
-    "itmecho/neoterm.nvim",
     'kyazdani42/nvim-tree.lua',
     "jondkinney/dragvisuals.vim",
     "jubnzv/mdeval.nvim",
@@ -160,7 +159,6 @@ packer.startup(function()
     "christoomey/vim-sort-motion",
     "michaeljsmith/vim-indent-object",
     "norcalli/nvim-terminal.lua",
-    { "vuki656/package-info.nvim", requires = "MunifTanjim/nui.nvim" },
   })
 end)
 
