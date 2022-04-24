@@ -12,4 +12,4 @@ require("which-key").setup {
   },
 }
 
-require("plugins.which_key.mappings")
+require("mappings")

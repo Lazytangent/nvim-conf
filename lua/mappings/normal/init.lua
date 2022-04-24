@@ -1,4 +1,4 @@
-local leader = require('plugins.which_key.mappings.normal.leader')
+local leader = require('mappings.normal.leader')
 
 local normal = {
   ["<leader>"] = leader,

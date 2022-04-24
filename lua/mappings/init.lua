@@ -1,4 +1,4 @@
-local normal = require('plugins.which_key.mappings.normal')
+local normal = require('mappings.normal')
 
 local comamnd = {
 }
