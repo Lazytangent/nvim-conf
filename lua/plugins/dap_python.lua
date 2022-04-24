@@ -18,3 +18,11 @@ table.insert(dap.configurations.python, {
   request = 'launch',
 
 })
+
+table.insert(dap.configurations.python, {
+  name = 'FastAPI',
+  type = 'python',
+  request = 'launch',
+  module = 'uvicorn',
+  args = {'main:app'}
+})
