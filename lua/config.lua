@@ -107,12 +107,10 @@ LSP = {
     custom = {
       "denols",
       "elixirls",
-      -- "eslint",
       "emmet_ls",
       "gopls",
       "java_language_server",
       "jsonls",
-      -- "pyright",
       "sqlls",
       "sumneko_lua",
       "tailwindcss",
