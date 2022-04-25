@@ -1,40 +1,22 @@
--- Highlight on yank
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    require('vim.highlight').on_yank()
-  end,
-})
+local autocmds = {
+  -- Highlight on yank
+  {'TextYankPost', { callback = function() require('vim.highlight').on_yank() end }},
+  -- Remember cursor position
+  {'BufReadPost', { command = [[if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit' | exe "normal! g'\"" | endif]] }},
+  -- Remove trailing whitespace
+  {'BufWritePre', { command = [[%s/\s\+$//e]] }},
+  {'BufWritePre', { command = [[%s/\n\+\%$//e]] }},
+  -- Terminal buffer defaults
+  {'TermOpen', { command = [[setlocal nonumber norelativenumber bufhidden="delete"]] }},
+  {'TermOpen', { command = 'startinsert' }},
+  -- Update file if file has been updated outside of buffer
+  {{'FocusGained', 'BufEnter'}, { command = 'checktime' }},
+  {'StdinReadPre', { command = [[let s:std_in=1]] }},
+}
 
--- Remember cursor
-vim.api.nvim_create_autocmd('BufReadPost', {
-  command = [[if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit' | exe "normal! g'\"" | endif]],
-})
+for _, cmd in ipairs(autocmds) do
+  local event = cmd[1]
+  local opts = cmd[2]
 
--- Remove trailing whitespace
-vim.api.nvim_create_autocmd('BufWritePre', {
-  command = [[%s/\s\+$//e]],
-})
-
--- Remove trailing whitespace
-vim.api.nvim_create_autocmd('BufWritePre', {
-  command = [[%s/\n\+\%$//e]],
-})
-
--- Set terminal buffer defaults
-vim.api.nvim_create_autocmd('TermOpen', {
-  command = [[setlocal nonumber norelativenumber bufhidden="delete"]],
-})
-
--- Set terminal buffer defaults
-vim.api.nvim_create_autocmd('TermOpen', {
-  command = "startinsert",
-})
-
--- Update file if file has been updated outside of buffer
-vim.api.nvim_create_autocmd({'FocusGained', 'BufEnter'}, {
-  command = "checktime",
-})
-
-vim.api.nvim_create_autocmd('StdinReadPre', {
-  command = [[let s:std_in=1]],
-})
+  vim.api.nvim_create_autocmd(event, opts)
+end

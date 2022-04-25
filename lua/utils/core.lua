@@ -2,21 +2,6 @@ vim = vim
 local utils = {}
 local scopes = {g = vim.go, o = vim.o, b = vim.bo, w = vim.wo}
 
--- autocommands
-function utils.define_augroups(definitions)
-  for group_name, definition in pairs(definitions) do
-    vim.cmd("augroup " .. group_name)
-    vim.cmd("autocmd!")
-
-    for _, def in pairs(definition) do
-      local command = table.concat(vim.tbl_flatten {"autocmd", def}, " ")
-      vim.cmd(command)
-    end
-
-    vim.cmd("augroup END")
-  end
-end
-
 -- options
 function utils.opt(scope, key, value)
   scopes[scope][key] = value
