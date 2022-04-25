@@ -40,7 +40,7 @@ require("nvim-treesitter.configs").setup({
         __default = '// %s',
         jsx_element = '{/* %s */}',
         jsx_fragment = '{/* %s */}',
-        jsx_attribute = '// %s'
+        jsx_attribute = '// %s',
         comment = '// %s',
       },
     },
