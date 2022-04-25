@@ -7,7 +7,7 @@ local autocmds = {
   {'BufWritePre', { command = [[%s/\s\+$//e]] }},
   {'BufWritePre', { command = [[%s/\n\+\%$//e]] }},
   -- Terminal buffer defaults
-  {'TermOpen', { command = [[setlocal nonumber norelativenumber bufhidden="delete"]] }},
+  {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]] }},
   {'TermOpen', { command = 'startinsert' }},
   -- Update file if file has been updated outside of buffer
   {{'FocusGained', 'BufEnter'}, { command = 'checktime' }},
