@@ -60,20 +60,12 @@ cmp.setup {
     { name = 'nvim_lsp_document_symbol' },
     { name = 'orgmode' },
     { name = 'vim-dadbod-completion' },
-    -- { name = "path" },
     { name = "crates" },
-    { name = "tmux" },
-    -- { name = "spell" },
-    -- { name = "treesitter" },
-    -- { name = "tags" },
   },
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
     end
-  },
-  completion = {
-    -- autocomplete = false,
   },
   sorting = {
     comparators = {
@@ -87,12 +79,9 @@ cmp.setup {
       cmp.config.compare.order,
     },
   },
-  confirmation = {
-    default_behavior = cmp.ConfirmBehavior.Replace,
-  },
   experimental = {
     native_menu = false,
-    ghost_text = cmp.core.view.ghost_text_view,
+    ghost_text = true,
   },
   formatting = {
     format = require('lspkind').cmp_format({ with_text = true, manu = ({
@@ -121,7 +110,7 @@ cmp.setup.cmdline('?', {
 
 cmp.setup.cmdline(':', {
   sources = {
-    { name = "path" },
+    { name = 'path' },
     { name = "cmdline" },
   },
 })

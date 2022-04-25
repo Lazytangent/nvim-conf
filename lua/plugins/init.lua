@@ -56,13 +56,11 @@ packer.startup(function()
     "lukas-reineke/cmp-rg",
     "f3fora/cmp-spell",
     "ray-x/cmp-treesitter",
-    "quangnguyen30192/cmp-nvim-tags",
     "saadparwaiz1/cmp_luasnip",
     "kdheepak/cmp-latex-symbols",
     "onsails/lspkind-nvim",
     { "RishabhRD/nvim-lsputils", requires = "RishabhRD/popfix" },
     { 'Saecki/crates.nvim', requires = { 'nvim-lua/plenary.nvim' } },
-    "andersevenrud/cmp-tmux",
     "kristijanhusak/vim-dadbod-ui",
     "kristijanhusak/vim-dadbod-completion",
   })
