@@ -1207,3 +1207,9 @@ Recurse
 vue
 declaratively
 FastAPI
+flake8
+E203
+pycodestyle
+E501
+bool
+Pydantic
