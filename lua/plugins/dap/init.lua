@@ -17,14 +17,22 @@ local custom_python_configs = {
     name = 'Generic Remote',
     type = 'python',
     request = 'attach',
+    port = 5678,
+    host = 'localhost',
+    pathMappings = {
+      {
+        localRoot = vim.fn.getcwd(),
+        remoteRoot = "/usr/src/app",
+      },
+    },
   },
   {
     name = 'FastAPI',
     type = 'python',
     request = 'launch',
     module = 'uvicorn',
-    args = {'main:app'}
-  }
+    args = {'main:app'},
+  },
 }
 
 for _, v in ipairs(custom_python_configs) do
