@@ -1213,3 +1213,8 @@ pycodestyle
 E501
 bool
 Pydantic
+fastapi
+str
+OAuth2
+oauth
+JWT
