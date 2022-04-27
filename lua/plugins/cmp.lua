@@ -10,7 +10,7 @@ end
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '{', all = '(' }}))
 
 cmp.setup {
-  mapping = {
+  mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
@@ -48,7 +48,7 @@ cmp.setup {
       i = cmp.mapping.confirm({ select = true }),
       c = cmp.mapping.confirm({ select = false }),
     }),
-  },
+  }),
   sources = {
     { name = "buffer" },
     { name = 'rg' },
@@ -80,8 +80,10 @@ cmp.setup {
     },
   },
   experimental = {
-    native_menu = false,
     ghost_text = true,
+  },
+  view = {
+    entries = 'native',
   },
   formatting = {
     format = require('lspkind').cmp_format({ with_text = true, manu = ({
@@ -95,6 +97,7 @@ cmp.setup {
 }
 
 cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline({}),
   sources = cmp.config.sources({
     { name = 'nvim_lsp_document_symbol' },
   },{
