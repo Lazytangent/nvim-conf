@@ -15,3 +15,5 @@ require "basic"
 -- GUI Config
 require "guis"
 require "commands"
+
+vim.api.nvim_command "packadd! cfilter"
