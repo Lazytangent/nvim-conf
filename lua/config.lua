@@ -57,7 +57,7 @@ Opts = {
   -- guifont = "Iosevka Nerd Font Mono:h12",
 
   showmode = false,
-  grepprg = "ag",
+  grepprg = "ag --vimgrep --smart-case --nogroup --nocolor",
   shiftround = true,
 
   undofile = true,
