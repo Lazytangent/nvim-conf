@@ -1218,3 +1218,9 @@ str
 OAuth2
 oauth
 JWT
+BaseModel
+pydantic
+runtime
+ValidationError
+orm
+metadata
