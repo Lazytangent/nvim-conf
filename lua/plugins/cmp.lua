@@ -83,7 +83,7 @@ cmp.setup {
     ghost_text = true,
   },
   view = {
-    entries = 'native',
+    -- entries = 'native',
   },
   formatting = {
     format = require('lspkind').cmp_format({ with_text = true, manu = ({
