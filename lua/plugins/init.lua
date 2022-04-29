@@ -123,6 +123,7 @@ packer.startup(function()
     "windwp/nvim-autopairs",
     "numToStr/Comment.nvim",
     "dhruvasagar/vim-table-mode",
+    "j-hui/fidget.nvim",
 
     -- Folke Section
     "folke/lsp-colors.nvim",

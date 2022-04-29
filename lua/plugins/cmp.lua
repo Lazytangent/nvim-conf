@@ -82,9 +82,6 @@ cmp.setup {
   experimental = {
     ghost_text = true,
   },
-  view = {
-    -- entries = 'native',
-  },
   formatting = {
     format = require('lspkind').cmp_format({ with_text = true, manu = ({
       buffer = "[Buffer]",
@@ -106,12 +103,14 @@ cmp.setup.cmdline('/', {
 })
 
 cmp.setup.cmdline('?', {
+  mapping = cmp.mapping.preset.cmdline({}),
   sources = {
     { name = "buffer" },
   },
 })
 
 cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline({}),
   sources = {
     { name = 'path' },
     { name = "cmdline" },
