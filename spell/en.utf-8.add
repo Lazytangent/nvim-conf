@@ -1228,3 +1228,5 @@ validators
 ValueError
 TypeError
 AssertionError
+FastAPI
+multipart
