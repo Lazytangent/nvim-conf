@@ -1230,3 +1230,7 @@ TypeError
 AssertionError
 FastAPI
 multipart
+#panAPI
+OpanAPI/!
+OpenAPI
+docstring
