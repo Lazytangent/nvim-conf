@@ -54,7 +54,7 @@ Opts = {
   syntax = "on",
   swapfile = false,
 
-  -- guifont = "Iosevka Nerd Font Mono:h12",
+  guifont = "FiraCode Nerd Font",
 
   showmode = false,
   grepprg = "ag --vimgrep --smart-case --nogroup --nocolor",
