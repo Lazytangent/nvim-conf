@@ -5,3 +5,5 @@ end
 if vim.g.goneovim == 1 then
   require("guis.goneovim")
 end
+
+require('guis.neovide')
