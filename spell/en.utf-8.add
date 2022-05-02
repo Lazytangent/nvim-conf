@@ -1228,6 +1228,9 @@ validators
 ValueError
 TypeError
 AssertionError
-OpenAPI
+FastAPI
 multipart
+#panAPI
+OpanAPI/!
+OpenAPI
 docstring

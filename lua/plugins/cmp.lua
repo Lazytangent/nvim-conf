@@ -50,12 +50,12 @@ cmp.setup {
     }),
   }),
   sources = {
+    { name = "nvim_lsp" },
+    { name = "luasnip" },
     { name = "buffer" },
     { name = 'rg' },
-    { name = "nvim_lsp" },
     { name = "calc" },
     { name = "nvim_lua" },
-    { name = "luasnip" },
     { name = "latex_symbols" },
     { name = 'nvim_lsp_document_symbol' },
     { name = 'orgmode' },
@@ -82,9 +82,6 @@ cmp.setup {
   experimental = {
     ghost_text = true,
   },
-  view = {
-    -- entries = 'native',
-  },
   formatting = {
     format = require('lspkind').cmp_format({ with_text = true, manu = ({
       buffer = "[Buffer]",
@@ -106,12 +103,14 @@ cmp.setup.cmdline('/', {
 })
 
 cmp.setup.cmdline('?', {
+  mapping = cmp.mapping.preset.cmdline({}),
   sources = {
     { name = "buffer" },
   },
 })
 
 cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline({}),
   sources = {
     { name = 'path' },
     { name = "cmdline" },
