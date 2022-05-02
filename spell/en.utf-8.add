@@ -1228,3 +1228,6 @@ validators
 ValueError
 TypeError
 AssertionError
+OpenAPI
+multipart
+docstring
