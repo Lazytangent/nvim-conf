@@ -111,6 +111,7 @@ packer.startup(function()
     "nvim-telescope/telescope-live-grep-raw.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
     "nvim-telescope/telescope-dap.nvim",
+    "benfowler/telescope-luasnip.nvim",
   })
 
   use({

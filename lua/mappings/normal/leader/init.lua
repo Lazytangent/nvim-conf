@@ -3,6 +3,10 @@ local d = require('mappings.normal.leader.d')
 local leader = {
   ["<leader>"] = {
     name = "+LSP",
+    c = {
+      name = "+Utilities",
+      l = { [[<cmd>lua require('telescope').extensions.luasnip.luasnip()<cr>]], "Telescope: LuaSnip" },
+    },
     d = {
       name = "+Textobjects peek",
       c = "Outer class",
