@@ -1,6 +1,5 @@
 require("telescope").setup({
   defaults = require('telescope.themes').get_ivy({
-    -- layout_strategy = "vertical",
     file_ignore_patterns = { "^node_modules/" },
     mappings = {
       i = {
@@ -8,14 +7,7 @@ require("telescope").setup({
       }
     },
   }),
-  extensions = {
-    fzf = {
-      fuzzy = true,
-      override_generic_sorter = false,
-      override_file_sorter = true,
-      case_mode = "smart_case",
     },
-    file_browser = {},
     ["ui-select"] = {
       require("telescope.themes").get_dropdown {}
     },
