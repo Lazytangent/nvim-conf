@@ -16,7 +16,7 @@ require("telescope").setup({
             local dir = vim.fn.fnamemodify(selection.path, ":p:h")
             require("telescope.actions").close(prompt_bufnr)
             vim.cmd(string.format("silent cd %s", dir))
-          end
+          end,
         },
       },
     },
@@ -28,7 +28,6 @@ require("telescope").setup({
   },
 })
 
--- require("telescope").load_extension('projects')
 require("telescope").load_extension('fzf')
 require("telescope").load_extension('frecency')
 require("telescope").load_extension('file_browser')
