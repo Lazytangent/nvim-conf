@@ -9,7 +9,7 @@ local function get_python_path(workspace)
     return path.join(vim.env.VIRTUAL_ENV, 'bin', 'python')
   end
 
-  -- Find and use virtualenv from pipenv in workspace directory
+  -- Find and use virtualenv from Pipenv in workspace directory
   local match = vim.fn.glob(path.join(workspace, 'Pipfile'))
   if match ~= '' then
     local venv = vim.fn.trim(vim.fn.system('PIPENV_PIPFILE=' .. match .. ' pipenv --venv'))
