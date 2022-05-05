@@ -49,7 +49,7 @@ require("telescope").setup({
               else
                 Path:new(file.filename:sub(1, -2)):mkdir { parents = true }
               end
-              current_picker:refresh(finder, { reset_prompt = true, multi = current_picker._multi })
+              current_picker:refresh(finder, { reset_prompt = true })
             end)
           end,
         },
