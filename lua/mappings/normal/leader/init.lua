@@ -118,6 +118,9 @@ local leader = {
 
     A = { [[<cmd>lua require('plugins.telescope').search_all_files()<cr>]], "All files" },
     B = { [[<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>]], "File browser" },
+    D = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "LSP Definitions" },
+    I = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "LSP Implementations" },
+    R = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "LSP References" },
 
     s = { [[<cmd>w<cr>]], "Save file" },
   },
