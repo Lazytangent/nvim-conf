@@ -1,5 +1,7 @@
 local d = require('mappings.normal.leader.d')
 local f = require('mappings.normal.leader.f')
+local g = require('mappings.normal.leader.g')
+local localleader = require('mappings.normal.leader.localleader')
 
 local leader = {
   ["<leader>"] = {
@@ -89,23 +91,7 @@ local leader = {
   d = d,
   e = "Show line diagnostics",
   f = f,
-  g = {
-    name = "+Git",
-    c = { [[<cmd>Git commit<cr>]], "commit" },
-    f = { [[<cmd>Git fetch<cr>]], "fetch" },
-    g = { [[<cmd>Git<cr>]], "status" },
-    l = { [[<cmd>Git pull<cr>]], "pull" },
-    L = { [[<cmd>Git log<cr>]], "log" },
-    p = { [[<cmd>Git push<cr>]], "push" },
-    P = {
-      name = "+Push",
-      m = { [[<cmd>Git push -u origin main<cr>]], "main" },
-      p = { [[:Git push -u origin<space>]], "branch" },
-    },
-    s = { [[<cmd>Git<cr>]], "status" },
-    w = { [[<cmd>Gw<cr>]], "write" },
-    S = { [[<cmd>Git stash<cr>]], "stash file" },
-  },
+  g = g,
   l = {
     name = "+Lists",
     c = { [[:changes<cr>]], "Show changes" },
@@ -114,59 +100,7 @@ local leader = {
     l = { [[:ls<cr>:b]], "Select buffer" },
     m = { [[:marks<cr>:normal! `]], "Show marks" },
   },
-  m = {
-    name = "+Local leader",
-    e = { [[:e<cr>]], "Edit file" },
-    f = {
-      name = "+Telescope",
-      a = { [[<cmd>lua require('plugins.telescope').search_all_files()<cr>]], "All files" },
-      b = { [[<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>]], "File browser" },
-      f = { [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]], "Fuzzy find" },
-      g = { [[<cmd>lua require('telescope.builtin').git_status()<cr>]], "Git" },
-      l = { [[<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>]], "Lazygit" },
-      p = { [[<cmd>lua require('telescope.builtin').resume()<cr>]], "Resume" },
-      P = { [[<cmd>lua require('telescope.builtin').pickers()<cr>]], "Previous pickers" },
-      t = { [[<cmd>lua require('telescope.builtin').tags()<cr>]], "Tags" },
-
-      d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
-      i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
-      r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
-    },
-    g = { [[<cmd>lua require('plugins.telescope').grep_prompt()<cr>]], "Grep String" },
-    l = {
-      name = "+LaTeX",
-      C = "Clean full",
-      G = "Status all",
-      I = "Full Info",
-      K = "Stop all",
-      L = "Compile selected",
-      T = "Toggle TOC",
-      X = "Reload state",
-
-      a = "Context menu",
-      c = "Clean",
-      e = "Errors",
-      g = "Status",
-      i = "Info",
-      k = "Stop",
-      l = "Compile",
-      m = "imaps list",
-      o = "Compile output",
-      q = "Log",
-      r = "Reverse search",
-      s = "Toggle main",
-      t = "Open TOC",
-      v = "View",
-      x = "Reload",
-    },
-    p = { [[:25split | term pre-commit run --files %<cr>]], "Run pre-commit on the current file in a terminal split" },
-    t = {
-      name = "+TableMode",
-      m = "Toggle table mode",
-      t = "Tableize",
-    },
-    ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
-  },
+  m = localleader,
   o = {
     name = "+Open",
     c = { [[<cmd>copen<cr>]], "Quickfix" },
