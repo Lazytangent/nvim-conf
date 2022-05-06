@@ -125,6 +125,7 @@ packer.startup(function()
     "numToStr/Comment.nvim",
     "dhruvasagar/vim-table-mode",
     "j-hui/fidget.nvim",
+    "pianocomposer321/yabs.nvim",
 
     -- Folke Section
     "folke/lsp-colors.nvim",
