@@ -59,7 +59,7 @@ local leader = {
     name = "+Utilities",
     f = { [[<cmd>lua vim.lsp.buf.formatting()<cr>]], "Format" },
     g = { [[:set operatorfunc=GrepOperator<cr>g@]], "Grep for word under cursor" },
-    p = { [[:cexpr system('pre-commit run --files ' . shellescape(expand('%')))<cr>:copen<cr>]], "Run pre-commit on current file" },
+    p = { [[<cmd>lua require('yabs'):run_task('pre_commit')<cr>]], "Run pre-commit on current file" },
     r = { [[<cmd>lua require('mdeval').eval_code_block()<cr>]], "Run code block with mdeval" },
     t = {
       name = "+Terminal",
