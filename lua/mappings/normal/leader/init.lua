@@ -23,30 +23,6 @@ local leader = {
       r = "References",
       t = "Type definition",
     },
-    p = {
-      name = "+LSP Pickers",
-      c = {
-        name = "+Code Actions",
-        c = { [[<cmd>lua require('telescope.builtin').lsp_code_actions()<cr>]], "at Cursor" },
-        r = { [[<cmd>lua require('telescope.builtin').lsp_range_code_actions()<cr>]], "on Range" },
-      },
-      d = {
-        name = "+Diagnostics",
-        d = { [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>]], "Document" },
-        w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>]], "Workspace" },
-
-        f = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
-        t = { [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>]], "Type Definitions" },
-      },
-      i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
-      r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
-      s = {
-        name = "+Symbols",
-        d = { [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]], "Document" },
-        w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>]], "Workspace" },
-        y = { [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>]], "Dyanmic workspace" },
-      },
-    },
     r = "Rename",
     w = {
       name = "+LSP Workspace",
@@ -107,7 +83,30 @@ local leader = {
     l = { [[<cmd>lopen<cr>]], "Location" },
     p = { [[<cmd>NvimTreeFocus<cr>]], "Project in NvimTree" },
   },
-  p = { [[:cexpr system('pre-commit run -a')<cr>:copen<cr>]], "Pre-commit into Quickfix List" },
+  p = {
+    name = "+LSP Pickers",
+    c = {
+      name = "+Code Actions",
+      c = { [[<cmd>lua require('telescope.builtin').lsp_code_actions()<cr>]], "at Cursor" },
+      r = { [[<cmd>lua require('telescope.builtin').lsp_range_code_actions()<cr>]], "on Range" },
+    },
+    d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
+    i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
+    r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
+    s = {
+      name = "+Symbols",
+      d = { [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]], "Document" },
+      w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>]], "Workspace" },
+      y = { [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>]], "Dyanmic workspace" },
+    },
+    t = { [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>]], "Type Definitions" },
+
+    D = {
+      name = "+Diagnostics",
+      d = { [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>]], "Document" },
+      w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>]], "Workspace" },
+    },
+  },
   q = "Set diagnostics into location list",
   s = {
     name = "+Spell",

@@ -19,6 +19,7 @@ local f = {
   q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "Quickfix list" },
   r = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "Registers" },
   t = { [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], "Treesitter" },
+  y = { [[<cmd>Telescope yabs tasks<cr>]], "Telescope: Yabs" },
 
   z = {
     name = "+LSP Specific",

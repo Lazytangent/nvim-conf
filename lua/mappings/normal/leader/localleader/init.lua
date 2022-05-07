@@ -7,7 +7,21 @@ local localleader = {
   f = f,
   g = { [[<cmd>lua require('plugins.telescope').grep_prompt()<cr>]], "Grep String" },
   l = l,
-  p = { [[:25split | term pre-commit run --files %<cr>]], "Run pre-commit on the current file in a terminal split" },
+  p = {
+    name = "+LSP Pickers",
+    c = "LSP Code Actions",
+    e = "LSP References",
+    i = "LSP Implementations",
+    r = "LSP Rename",
+    t = "LSP Type Definition",
+
+    w = {
+      name = "+Workspace Folders",
+      a = "Add workspace folder",
+      r = "Remove workspace folder",
+      l = "List workspace folders",
+    },
+  },
   t = {
     name = "+TableMode",
     m = "Toggle table mode",
