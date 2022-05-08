@@ -1,4 +1,5 @@
 require 'plugins.autopairs'
+require 'plugins.bullets'
 require 'plugins.catppucchin'
 require 'plugins.cmp'
 require 'plugins.comment_nvim'

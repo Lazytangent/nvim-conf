@@ -126,6 +126,7 @@ packer.startup(function()
     "dhruvasagar/vim-table-mode",
     "j-hui/fidget.nvim",
     "pianocomposer321/yabs.nvim",
+    "dkarter/bullets.vim",
 
     -- Folke Section
     "folke/lsp-colors.nvim",
