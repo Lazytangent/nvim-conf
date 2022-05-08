@@ -100,6 +100,7 @@ LSP = {
       "yamlls",
     },
     regular = {
+      "ccls",
       "pylsp",
       "terraformls",
       "terraform_lsp",
