@@ -155,7 +155,6 @@ packer.startup(function()
     "tpope/vim-rails",
 
     "wellle/targets.vim",
-    "psliwka/vim-smoothie",
     "kana/vim-textobj-user",
     "kana/vim-textobj-line",
     "christoomey/vim-sort-motion",
