@@ -127,6 +127,7 @@ packer.startup(function()
     "j-hui/fidget.nvim",
     "pianocomposer321/yabs.nvim",
     "dkarter/bullets.vim",
+    { "ldelossa/gh.nvim", requires = { "ldelossa/litee.nvim" } },
 
     -- Folke Section
     "folke/lsp-colors.nvim",
