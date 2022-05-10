@@ -7,7 +7,6 @@ M.get_colors = function(type)
    local default_path = "colors.base46.hl_themes." .. name
 
    local present1, default_theme = pcall(require, default_path)
-   print(default_theme)
 
    if present1 then
       return default_theme[type]
