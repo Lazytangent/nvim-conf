@@ -11,5 +11,4 @@ This takes inspiration from:
 - [[https://github.com/crispgm/dotfiles/tree/main/nvim][crispgm]]
 - [[https://github.com/siduck76/NvChad][siduck76]]
 
-** DONE Update which-key mappings to create proper labels
-CLOSED: [2021-12-06 Mon 20:12] SCHEDULED: <2021-12-07 Tue>
+- Also took the [[https://github.com/NvChad/base46][NvChad/base46]] repo
