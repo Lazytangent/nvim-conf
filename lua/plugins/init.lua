@@ -70,7 +70,6 @@ packer.startup(function()
     "mfussenegger/nvim-dap",
     { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
     "mfussenegger/nvim-dap-python",
-    "Pocco81/dap-buddy.nvim",
     "theHamsta/nvim-dap-virtual-text",
   })
 
@@ -132,26 +131,20 @@ packer.startup(function()
     -- Folke Section
     "folke/lsp-colors.nvim",
     "folke/trouble.nvim",
-    "folke/zen-mode.nvim",
     "folke/todo-comments.nvim",
     "folke/which-key.nvim",
 
     "tversteeg/registers.nvim",
     'kyazdani42/nvim-tree.lua',
     "jondkinney/dragvisuals.vim",
-    "jubnzv/mdeval.nvim",
 
     -- Tpope Section
     "tpope/vim-surround",
-    "tpope/vim-dispatch",
     "tpope/vim-repeat",
     "tpope/vim-fugitive",
-    "tpope/vim-rhubarb",
     "tpope/vim-eunuch",
     "tpope/vim-dadbod",
-    "tpope/vim-heroku",
     "tpope/vim-dotenv",
-    "tpope/vim-ragtag",
     "tpope/vim-unimpaired",
     "tpope/vim-rails",
 
