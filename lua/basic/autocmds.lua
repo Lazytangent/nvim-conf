@@ -12,6 +12,20 @@ local autocmds = {
   -- Update file if file has been updated outside of buffer
   {{'FocusGained', 'BufEnter'}, { command = 'checktime' }},
   {'StdinReadPre', { command = [[let s:std_in=1]] }},
+  {'ModeChanged',
+    {
+      callback = function()
+        local luasnip = require('luasnip')
+        if
+          ((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
+          and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
+          and not luasnip.session.jump_active
+        then
+          luasnip.unlink_current()
+        end
+      end,
+    },
+  },
 }
 
 for _, cmd in ipairs(autocmds) do
