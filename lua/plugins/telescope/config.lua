@@ -4,6 +4,7 @@ require("telescope").setup({
     mappings = {
       i = {
         ["<C-u>"] = false,
+        ["<C-/>"] = require("telescope.actions").which_key,
       }
     },
   }),
