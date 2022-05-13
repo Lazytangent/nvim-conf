@@ -17,7 +17,7 @@ local f = {
   o = { [[<cmd>lua require('telescope.builtin').quickfixhistory()<cr>]], "Old Quickfix Lists" },
   p = { [[<cmd>lua require('telescope.builtin').pickers()<cr>]], "Prev Pickers" },
   q = { [[<cmd>lua require('telescope.builtin').quickfix()<cr>]], "Quickfix list" },
-  r = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "Registers" },
+  r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "LSP References" },
   t = { [[<cmd>lua require('telescope.builtin').treesitter()<cr>]], "Treesitter" },
   y = { [[<cmd>Telescope yabs tasks<cr>]], "Telescope: Yabs" },
 
@@ -33,7 +33,7 @@ local f = {
   D = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "LSP Definitions" },
   I = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "LSP Implementations" },
   P = { [[<cmd>lua require('utils.core').search_nvim()<cr>]], "Search Nvim config" },
-  R = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "LSP References" },
+  R = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "Registers" },
 
   s = { [[<cmd>w<cr>]], "Save file" },
 }
