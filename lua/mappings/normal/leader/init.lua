@@ -113,10 +113,10 @@ local leader = {
   },
   x = {
     name = "+Trouble",
-    d = { [[<cmd>TroubleToggle lsp_document_diagnostics<cr>]], "toggle document diagnostics" },
+    d = { [[<cmd>TroubleToggle document_diagnostics<cr>]], "toggle document diagnostics" },
     l = { [[<cmd>TroubleToggle loclist<cr>]], "toggle location list" },
     q = { [[<cmd>TroubleToggle quickfix<cr>]], "toggle quickfix" },
-    w = { [[<cmd>TroubleToggle lsp_workspace_diagnostics<cr>]], "toggle workspace diagnostics" },
+    w = { [[<cmd>TroubleToggle workspace_diagnostics<cr>]], "toggle workspace diagnostics" },
     x = { [[<cmd>TroubleToggle<cr>]], "toggle" },
     R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
   },
