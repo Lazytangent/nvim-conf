@@ -26,19 +26,18 @@ local sources = {
   null_ls.builtins.formatting.gofmt,
   null_ls.builtins.formatting.goimports,
 
+  null_ls.builtins.formatting.clang_format,
+
   null_ls.builtins.formatting.trim_whitespace.with({
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
   }),
 
   -- Linting
   null_ls.builtins.diagnostics.flake8,
-  -- null_ls.builtins.diagnostics.pylint,
 
   null_ls.builtins.diagnostics.rubocop,
 
   null_ls.builtins.diagnostics.shellcheck,
-
-  -- null_ls.builtins.diagnostics.stylelint,
 }
 
 null_ls.setup {

@@ -12,3 +12,24 @@ This takes inspiration from:
 - [[https://github.com/siduck76/NvChad][siduck76]]
 
 - Also took the [[https://github.com/NvChad/base46][NvChad/base46]] repo
+
+** Dependencies
+*** EFM
+**** Python/Pip
+- =black=
+- =isort=
+- =autopep8=
+
+**** NPM
+- =eslint_d=
+- =prettier=
+
+*** Null-LS
+**** Python/Pip
+-
+**** NPM
+- =prettier=
+- =eslint_id=
+**** Cargo/Rust
+- =stylua=
+- =rustfmt=
