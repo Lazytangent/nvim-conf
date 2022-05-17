@@ -26,10 +26,52 @@ This takes inspiration from:
 
 *** Null-LS
 **** Python/Pip
--
+- =codespell=
+
 **** NPM
 - =prettier=
 - =eslint_id=
+
 **** Cargo/Rust
 - =stylua=
 - =rustfmt=
+
+#+BEGIN_SRC bash
+rustup component add rustfmt
+#+END_SRC
+
+**** Go
+***** Revive
+#+BEGIN_SRC bash
+go get -u github.com/mgechev/revive
+#+END_SRC
+
+Also available through Homebrew
+
+#+BEGIN_SRC bash
+brew install revive
+#+END_SRC
+
+***** Staticcheck
+
+#+BEGIN_SRC bash
+go install honnef.co/go/tools/cmd/staticcheck@latest
+#+END_SRC
+
+Also available through Homebrew
+
+#+BEGIN_SRC bash
+brew install staticcheck
+#+END_SRC
+
+***** Goimports
+
+#+BEGIN_SRC bash
+go install golang.org/x/tools/cmd/goimports@latest
+#+END_SRC
+
+***** Gofmt
+
+**** JSON
+- =jq=
+  * Get through Homebrew

@@ -1,56 +1,69 @@
 local null_ls = require("null-ls")
+local f = null_ls.builtins.formatting
+local d = null_ls.builtins.diagnostics
 local on_attach = require("lsp.regular.on_attach")
 
 local formatting = {
   -- JavaScript/TypeScript
-  null_ls.builtins.formatting.prettier,
-  null_ls.builtins.formatting.eslint_d,
+  f.prettier,
+  f.eslint_d,
 
   -- JSON
-  null_ls.builtins.formatting.json_tool,
+  f.json_tool,
+  f.jq,
 
   -- Lua
-  null_ls.builtins.formatting.stylua,
+  f.stylua,
 
   -- Rust
-  null_ls.builtins.formatting.rustfmt,
+  f.rustfmt,
 
   -- SQL
-  null_ls.builtins.formatting.sqlformat,
+  f.sqlformat,
 
   -- Python
-  null_ls.builtins.formatting.yapf,
-  null_ls.builtins.formatting.autopep8,
-  null_ls.builtins.formatting.black,
-  null_ls.builtins.formatting.isort,
+  f.yapf,
+  f.autopep8,
+  f.black,
+  f.isort,
 
   -- Ruby
-  null_ls.builtins.formatting.rubocop,
+  f.rubocop,
 
   -- CSS/HTML
-  null_ls.builtins.formatting.stylelint,
+  f.stylelint,
 
   -- Go
-  null_ls.builtins.formatting.gofmt,
-  null_ls.builtins.formatting.goimports,
+  f.gofmt,
+  f.goimports,
 
   -- C/C++
-  null_ls.builtins.formatting.clang_format,
+  f.clang_format,
 
-  null_ls.builtins.formatting.trim_whitespace.with({
+  f.trim_whitespace.with({
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
   }),
 }
 
 local linting = {
   -- Python
-  null_ls.builtins.diagnostics.flake8,
+  d.flake8,
 
   -- Ruby
-  null_ls.builtins.diagnostics.rubocop,
+  d.rubocop,
 
   -- Shell
-  null_ls.builtins.diagnostics.shellcheck,
+  d.shellcheck,
+
+  -- Codespell
+  d.codespell,
+
+  -- TypeScript
+  d.tsc,
+
+  -- Go
+  d.revive,
+  d.staticcheck,
 }
 
 local sources = vim.tbl_extend("force", formatting, linting)
