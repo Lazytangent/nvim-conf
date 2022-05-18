@@ -19,7 +19,7 @@ cmp.setup {
       i = cmp.mapping.confirm({ select = true }),
       c = cmp.mapping.confirm({ select = false }),
     }),
-    ['<C-e>'] = cmp.mapping.close(),
+    ['<C-f>'] = cmp.mapping.close(),
     ['<C-y>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
