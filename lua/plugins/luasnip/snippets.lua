@@ -50,6 +50,7 @@ local all = {
 ls.add_snippets('all', all)
 ls.add_snippets('tex', tex)
 ls.add_snippets('javascript', javascript)
+ls.add_snippets('typescript', javascript)
 ls.add_snippets('org', org)
 ls.add_snippets('vue', vue)
 
