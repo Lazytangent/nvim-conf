@@ -113,6 +113,10 @@ local normal = {
   ["<C-k>"] = { [[:<C-U>exec "exec 'norm m`' | move -" . (1+v:count1)<cr>]], "Move line up" },
   ["<C-j>"] = { [[:<C-U>exec "exec 'norm m`' | move +" . (0+v:count1)<cr>]], "Move line down" },
   ["<C-U>"] = "Up half a page",
+  ["<C-w>"] = {
+    name = "+Window commands",
+    d = { [[<cmd>vsplit<cr><cmd>lua vim.lsp.buf.definition()<cr>]], "Vertical split and Go to definition" },
+  },
   ["c"] = {
     name = "Change",
     ["*"] = { [[/\<<C-r>=expand('<cword>')<cr>\>\C<cr>``cgn]], "Word and search forward" },
