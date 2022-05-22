@@ -8,24 +8,25 @@ require("lualine").setup {
     extensions = { 'quickfix', 'fugitive' },
   },
   sections = {
+    lualine_a = {
+      { 'mode', fmt = function(str) return str:sub(1, 1) end },
+    },
     lualine_b = {
       'branch',
-      'diff',
       {'diagnostics', sources = { 'nvim_diagnostic', 'nvim_lsp' }}
     },
     lualine_c = {
       "os.date('%c')",
       { 'filename', file_status = true, path = 1 },
       'diff',
-      { gps.get_location, cond = gps.is_available }
     },
   },
   tabline = {
     lualine_a = {
-      {
-        "windows",
-        mode = 2,
-      },
+      { "windows" },
+    },
+    lualine_c = {
+      { gps.get_location, cond = gps.is_available },
     },
   },
 }
