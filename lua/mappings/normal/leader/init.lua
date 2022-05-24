@@ -44,7 +44,7 @@ local leader = {
     t = {
       name = "+Terminal",
       b = { [[:15split | term<cr>]], "Bottom terminal" },
-      n = { [[:Term<cr>]], "25 height botton" },
+      n = { [[:Term<cr>]], "25 height bottom" },
     },
     [","] = { [[<c-^>]], "Last buffer" },
     ["*"] = { [[*<C-O>:%s///gn<cr>]], "Count matches" },
@@ -101,7 +101,7 @@ local leader = {
       name = "+Symbols",
       d = { [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]], "Document" },
       w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>]], "Workspace" },
-      y = { [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>]], "Dyanmic workspace" },
+      y = { [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>]], "Dynamic workspace" },
     },
     t = { [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>]], "Type Definitions" },
 
