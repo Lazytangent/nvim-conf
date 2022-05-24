@@ -19,13 +19,6 @@ require("lualine").setup {
       "os.date('%c')",
       { 'filename', file_status = true, path = 1 },
       'diff',
-    },
-  },
-  tabline = {
-    lualine_a = {
-      { "windows" },
-    },
-    lualine_c = {
       { gps.get_location, cond = gps.is_available },
     },
   },
