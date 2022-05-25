@@ -62,7 +62,7 @@ Opts = {
 
   undofile = true,
   tags = "./tags;",
-  winbar = "%=%m %f"
+  winbar = "%n%=%m %t"
   -- formatlistpat = "\C^\s*[\[({]\?\([0-9]\+\|[iIvVxXlLcCdDmM]\+\|[a-zA-Z]\)[\]:.)}]\s\+\|^\s*[-+o*]\s\+",
 }
 
