@@ -1,1 +1,3 @@
-require('go').setup()
+require('go').setup({
+  textobjects = false,
+})
