@@ -17,7 +17,7 @@ require("lualine").setup {
     },
     lualine_c = {
       "os.date('%c')",
-      { 'filename', file_status = true, path = 1 },
+      { 'filename', file_status = true },
       'diff',
       { gps.get_location, cond = gps.is_available },
     },
