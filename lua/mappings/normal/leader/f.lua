@@ -31,6 +31,7 @@ local f = {
   A = { [[<cmd>lua require('plugins.telescope').search_all_files()<cr>]], "All files" },
   B = { [[<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>]], "File browser" },
   D = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "LSP Definitions" },
+  G = { [[<cmd>lua require('telescope.builtin').git_status()<cr>]], "Git" },
   I = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "LSP Implementations" },
   P = { [[<cmd>lua require('utils.core').search_nvim()<cr>]], "Search Nvim config" },
   R = { [[<cmd>lua require('telescope.builtin').registers()<cr>]], "Registers" },
