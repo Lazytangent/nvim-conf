@@ -65,6 +65,29 @@ require("nvim-treesitter.configs").setup({
 
         ["ir"] = "@parameter.inner",
         ["ar"] = "@parameter.outer",
+
+        ["ib"] = "@block.inner",
+        ["ab"] = "@block.outer",
+      },
+    },
+    swap = {
+      enable = true,
+      swap_next = {
+        ["<localleader>b"] = "@block.outer",
+        ["<localleader>m"] = "@function.outer",
+        ["<localleader>c"] = "@class.outer",
+      },
+      swap_previous = {
+        ["<localleader>B"] = "@block.outer",
+        ["<localleader>M"] = "@function.outer",
+        ["<localleader>C"] = "@class.outer",
+      },
+    },
+    lsp_interop = {
+      enable = true,
+      peek_definition_code = {
+        ["<localleader>df"] = "@function.outer",
+        ["<localleader>dc"] = "@class.outer",
       },
     },
     move = {
@@ -86,7 +109,6 @@ require("nvim-treesitter.configs").setup({
         ["]E"] = "@call.outer",
         ["]L"] = "@loop.outer",
         ["]C"] = "@conditional.outer",
-        ["]A"] = "@parameter.outer",
       },
       goto_previous_start = {
         ["[m"] = "@function.outer",
@@ -97,14 +119,13 @@ require("nvim-treesitter.configs").setup({
         ["[c"] = "@conditional.outer",
         ["[a"] = "@parameter.outer",
       },
-      goto_previous_start = {
+      goto_previous_end = {
         ["[M"] = "@function.outer",
         ["[]"] = "@class.outer",
         ["[B"] = "@block.outer",
         ["[E"] = "@call.outer",
         ["[L"] = "@loop.outer",
         ["[C"] = "@conditional.outer",
-        ["[A"] = "@parameter.outer",
       },
     },
   },

@@ -3,10 +3,18 @@ local l = require('mappings.normal.leader.localleader.l')
 
 local localleader = {
   name = "+Local leader",
+  b = "Swap with next block",
+  c = "Swap with next class",
+  d = {
+    name = "+LSP Interop",
+    c = "Outer class definition",
+    f = "Outer function definition",
+  },
   e = { [[:e<cr>]], "Edit file" },
   f = f,
   g = { [[<cmd>lua require('plugins.telescope').grep_prompt()<cr>]], "Grep String" },
   l = l,
+  m = "Swap with next method/function",
   p = {
     name = "+LSP Pickers",
     c = "LSP Code Actions",
@@ -28,6 +36,10 @@ local localleader = {
     t = "Tableize",
   },
   ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
+
+  B = "Swap with previous block",
+  C = "Swap with previous class",
+  M = "Swap with previous method/function",
 }
 
 return localleader
