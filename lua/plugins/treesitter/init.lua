@@ -53,11 +53,13 @@ require("nvim-treesitter.configs").setup({
         -- You can use the capture groups defined in textobjects.scm
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
+
         ["acl"] = "@class.outer",
         ["icl"] = "@class.inner",
 
         ["ib"] = "@block.inner",
         ["ab"] = "@block.outer",
+
         ["ico"] = "@conditional.inner",
         ["aco"] = "@conditional.outer",
 
@@ -71,25 +73,38 @@ require("nvim-treesitter.configs").setup({
       goto_next_start = {
         ["]m"] = "@function.outer",
         ["]]"] = "@class.outer",
+        ["]b"] = "@block.outer",
+        ["]e"] = "@call.outer",
+        ["]l"] = "@loop.outer",
+        ["]c"] = "@conditional.outer",
+        ["]a"] = "@parameter.outer",
       },
       goto_next_end = {
         ["]M"] = "@function.outer",
         ["]["] = "@class.outer",
+        ["]B"] = "@block.outer",
+        ["]E"] = "@call.outer",
+        ["]L"] = "@loop.outer",
+        ["]C"] = "@conditional.outer",
+        ["]A"] = "@parameter.outer",
       },
       goto_previous_start = {
         ["[m"] = "@function.outer",
         ["[["] = "@class.outer",
+        ["[b"] = "@block.outer",
+        ["[e"] = "@call.outer",
+        ["[l"] = "@loop.outer",
+        ["[c"] = "@conditional.outer",
+        ["[a"] = "@parameter.outer",
       },
       goto_previous_start = {
         ["[M"] = "@function.outer",
         ["[]"] = "@class.outer",
-      },
-    },
-    lsp_interop = {
-      enable = true,
-      peek_definition_code = {
-        ["<leader><localleader>df"] = "@function.outer",
-        ["<leader><localleader>dc"] = "@class.outer",
+        ["[B"] = "@block.outer",
+        ["[E"] = "@call.outer",
+        ["[L"] = "@loop.outer",
+        ["[C"] = "@conditional.outer",
+        ["[A"] = "@parameter.outer",
       },
     },
   },
