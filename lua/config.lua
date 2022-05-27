@@ -57,7 +57,7 @@ Opts = {
   guifont = "FiraCode Nerd Font",
 
   showmode = false,
-  grepprg = "ag --vimgrep --smart-case --nogroup --nocolor",
+  grepprg = "rg --vimgrep --smart-case --no-heading",
   shiftround = true,
 
   undofile = true,
