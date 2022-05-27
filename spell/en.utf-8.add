@@ -1131,8 +1131,6 @@ situs
 Legrange
 hyperspheres
 Picard's
-#orrepondences
-Correpondences/!
 generatrix
 Pregel
 Puiseux
@@ -1156,7 +1154,6 @@ Chrisopher
 Haupt
 Pawel
 Kozlowski
-ois
 Sanker
 Ramanathan
 Roseel
@@ -1184,8 +1181,6 @@ Bhargava
 Etsy
 egonschiele
 adit
-#lgorithsm
-algorithsm/!
 karlmageddon
 threadsafe
 decrement
@@ -1230,8 +1225,6 @@ TypeError
 AssertionError
 FastAPI
 multipart
-#panAPI
-OpanAPI/!
 OpenAPI
 docstring
 Workpath
@@ -1256,3 +1249,4 @@ namespaces
 Installable
 editorconfig
 emacs
+os
