@@ -12,7 +12,6 @@ local localleader = {
   },
   e = { [[:e<cr>]], "Edit file" },
   f = f,
-  g = { [[<cmd>lua require('plugins.telescope').grep_prompt()<cr>]], "Grep String" },
   l = l,
   m = "Swap with next method/function",
   p = {

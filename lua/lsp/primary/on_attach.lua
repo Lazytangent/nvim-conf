@@ -15,14 +15,18 @@ local on_attach = function(client, bufnr)
 
   buf_set_keymap("n", "<localleader>pi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
   buf_set_keymap("n", "<localleader>pe", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
+
   buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
   buf_set_keymap("n", "<C-h>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
+
   buf_set_keymap("n", "<localleader>pwa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", opts)
   buf_set_keymap("n", "<localleader>pwr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", opts)
   buf_set_keymap("n", "<localleader>pwl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", opts)
+
   buf_set_keymap("n", "<localleader>pt", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
   buf_set_keymap("n", "<localleader>pr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
   buf_set_keymap("n", "<localleader>pc", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+
   buf_set_keymap("n", "<space>,f", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", opts)
 
   buf_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)

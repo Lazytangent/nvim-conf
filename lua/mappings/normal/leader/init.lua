@@ -3,6 +3,8 @@ local f = require('mappings.normal.leader.f')
 local g = require('mappings.normal.leader.g')
 local localleader = require('mappings.normal.leader.localleader')
 
+local telescope_builtin = [[<cmd>lua require('telescope.builtin').]]
+
 local leader = {
   ["<leader>"] = {
     name = "+LSP",
@@ -60,25 +62,26 @@ local leader = {
   b = {
     name = "+Buffers",
     d = { [[<cmd>%bdelete<cr>]], "Close buffers" },
-    l = { [[<cmd>bnext<cr>]], "Next buffer" },
-    h = { [[<cmd>bprevious<cr>]], "Prev buffer" },
+    l = { telescope_builtin .. [[buffers()<cr>]], "List buffers" },
+    n = { [[<cmd>bnext<cr>]], "Next buffer" },
+    p = { [[<cmd>bprevious<cr>]], "Prev buffer" },
   },
   c = {
     name = "+Change",
-    c = { [[<cmd>lua require('telescope.builtin').colorscheme()<cr>]], "colorscheme" },
+    c = { telescope_builtin .. [[colorscheme()<cr>]], "colorscheme" },
     d = { [[<cmd>cd %:p:h<cr>]], "Change working directory" },
   },
   d = d,
   e = "Show line diagnostics",
   f = f,
   g = g,
+  h = {
+    name = "+Help",
+    h = { telescope_builtin .. [[help_tags()<cr>]], "Help Tags" },
+  },
   l = {
-    name = "+Lists",
-    c = { [[:changes<cr>]], "Show changes" },
+    name = "+LagyGit",
     g = { [[:LazyGit<cr>]], "LazyGit" },
-    j = { [[:jumps<cr>]], "Show jumps" },
-    l = { [[:ls<cr>:b]], "Select buffer" },
-    m = { [[:marks<cr>:normal! `]], "Show marks" },
   },
   m = localleader,
   o = {
@@ -91,30 +94,41 @@ local leader = {
     name = "+LSP Pickers",
     c = {
       name = "+Code Actions",
-      c = { [[<cmd>lua require('telescope.builtin').lsp_code_actions()<cr>]], "at Cursor" },
-      r = { [[<cmd>lua require('telescope.builtin').lsp_range_code_actions()<cr>]], "on Range" },
+      c = { telescope_builtin .. [[lsp_code_actions()<cr>]], "at Cursor" },
+      r = { telescope_builtin .. [[lsp_range_code_actions()<cr>]], "on Range" },
     },
-    d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], "Definitions" },
-    i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
-    r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]], "References" },
+    d = { telescope_builtin .. [[lsp_definitions()<cr>]], "Definitions" },
+    i = { telescope_builtin .. [[lsp_implementations()<cr>]], "Implementations" },
+    r = { telescope_builtin .. [[lsp_references()<cr>]], "References" },
     s = {
       name = "+Symbols",
-      d = { [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]], "Document" },
-      w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>]], "Workspace" },
-      y = { [[<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>]], "Dynamic workspace" },
+      d = { telescope_builtin .. [[lsp_document_symbols()<cr>]], "Document" },
+      w = { telescope_builtin .. [[lsp_workspace_symbols()<cr>]], "Workspace" },
+      y = { telescope_builtin .. [[lsp_dynamic_workspace_symbols()<cr>]], "Dynamic workspace" },
     },
-    t = { [[<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>]], "Type Definitions" },
+    t = { telescope_builtin .. [[lsp_type_definitions()<cr>]], "Type Definitions" },
 
     D = {
       name = "+Diagnostics",
-      d = { [[<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>]], "Document" },
-      w = { [[<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>]], "Workspace" },
+      d = { telescope_builtin .. [[lsp_document_diagnostics()<cr>]], "Document" },
+      w = { telescope_builtin .. [[lsp_workspace_diagnostics()<cr>]], "Workspace" },
     },
   },
   q = "Set diagnostics into location list",
   s = {
     name = "+Spell",
     s = { [[<cmd>setlocal spell!<cr>]], "Toggle spellcheck" },
+  },
+  t = {
+    name = "+Tabs and Table Mode",
+    c = { [[<cmd>tabclose<cr>]], "Close tab" },
+    h = { [[<cmd>tabmove -<cr>]], "Move tab left" },
+    l = { [[<cmd>tabmove +<cr>]], "Move tab right" },
+    m = "Table Mode Toggle",
+    n = { [[<cmd>tabnext<cr>]], "Next tab" },
+    o = { [[<cmd>tabnew<cr>]], "Open new tab" },
+    p = { [[<cmd>tabprev<cr>]], "Prev tab" },
+    t = "Tableize",
   },
   x = {
     name = "+Trouble",

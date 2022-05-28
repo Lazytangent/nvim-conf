@@ -3,10 +3,21 @@ local leader = require('mappings.normal.leader')
 local normal = {
   ["<leader>"] = leader,
   ["g"] = {
-    c = "Comment.nvim",
+    b = "toggle blockwise comment",
+    c = "toggle linewise comment",
+    ["<"] = {
+      name = "+Uncomment",
+      b = "with blockwise comment",
+      c = "with linewise comment",
+    },
+    [">"] = {
+      name = "+Comment",
+      b = "with blockwise comment",
+      c = "with linewise comment",
+    },
 
     -- LSP Stuff
-    d = "Go to defintion",
+    d = "Go to definition",
     D = "Go to declaration",
   },
   ["j"] = { [[v:count == 0 ? 'gj' : 'j']], "Up (virtual) line", expr = true },
