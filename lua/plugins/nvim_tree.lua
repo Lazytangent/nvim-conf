@@ -1,4 +1,5 @@
 require('nvim-tree').setup {
+  reload_on_bufenter = true,
   diagnostics = {
     enable = true,
   },
@@ -21,6 +22,11 @@ require('nvim-tree').setup {
       window_picker = {
         enable = false,
       },
+    },
+  },
+  renderer = {
+    indent_markers = {
+      enable = true,
     },
   },
 }
