@@ -1,13 +1,6 @@
-local cmd = vim.cmd
-
 C = Theming.colorscheme
-vim.g.tokyonight_style = "night"
--- vim.g.material_style = "deep ocean"
+vim.g.catppuccin_flavour = "mocha"
 
--- Configure theme from global
 if C ~= nil then
-  cmd("colorscheme " .. C)
+  vim.cmd("colorscheme " .. C)
 end
-
--- Configure theme with Plugin
--- require('github-theme').setup {}

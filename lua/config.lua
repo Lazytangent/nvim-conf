@@ -63,14 +63,10 @@ Opts = {
   undofile = true,
   tags = "./tags;",
   winbar = "%n%=%m %t"
-  -- formatlistpat = "\C^\s*[\[({]\?\([0-9]\+\|[iIvVxXlLcCdDmM]\+\|[a-zA-Z]\)[\]:.)}]\s\+\|^\s*[-+o*]\s\+",
 }
 
 Theming = {
-  -- colorscheme = "moonlight",
-  -- colorscheme = 'tokyonight',
   colorscheme = "catppuccin",
-  -- colorscheme = "radium",
 }
 
 LSP = {
