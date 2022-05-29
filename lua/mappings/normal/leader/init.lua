@@ -122,6 +122,7 @@ local leader = {
   t = {
     name = "+Tabs and Table Mode",
     c = { [[<cmd>tabclose<cr>]], "Close tab" },
+    e = { [[<cmd>tabedit<cr>]], "Open a new tab" },
     h = { [[<cmd>tabmove -<cr>]], "Move tab left" },
     l = { [[<cmd>tabmove +<cr>]], "Move tab right" },
     m = "Table Mode Toggle",
