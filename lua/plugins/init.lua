@@ -12,7 +12,7 @@ packer.startup(function()
   use({
     "nvim-lualine/lualine.nvim",
     "folke/tokyonight.nvim",
-    "catppuccin/nvim",
+    { "catppuccin/nvim", as = "catppuccin" },
   })
 
   -- Treesitter
