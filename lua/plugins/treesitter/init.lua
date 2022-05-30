@@ -1,6 +1,5 @@
 require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
-  -- ignore_install = { "latex" },
 
   indent = { enable = false },
   matchup = { enable = true },
@@ -50,7 +49,6 @@ require("nvim-treesitter.configs").setup({
       enable = true,
       lookahead = true,
       keymaps = {
-        -- You can use the capture groups defined in textobjects.scm
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
 
