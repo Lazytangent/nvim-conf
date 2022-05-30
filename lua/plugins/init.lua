@@ -76,11 +76,7 @@ packer.startup(function()
   -- Specific Language Plugins
   use({
     { "heavenshell/vim-jsdoc", run = "make install" },
-    "leafgarland/typescript-vim",
-    "peitalin/vim-jsx-typescript", -- *.tsx files
-    { "maxmellon/vim-jsx-pretty", ft = { "js", "jsx", "tsx" } },
     { "pantharshit00/vim-prisma", ft = "prisma" },
-    { "plasticboy/vim-markdown", ft = "markdown" },
     "mrdotb/vim-tailwindcss",
     { "jidn/vim-dbml", ft = "dbml" },
     { "lervag/vimtex", ft = "tex" },
@@ -143,9 +139,7 @@ packer.startup(function()
     "tpope/vim-fugitive",
     "tpope/vim-eunuch",
     "tpope/vim-dadbod",
-    "tpope/vim-dotenv",
     "tpope/vim-unimpaired",
-    "tpope/vim-rails",
 
     "wellle/targets.vim",
     "kana/vim-textobj-user",
