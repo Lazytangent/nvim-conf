@@ -16,6 +16,7 @@ nvim_lsp.efm.setup({
   root_dir = vim.loop.cwd,
   filetypes = {
     "python",
+    "json",
     "javascript",
     "typescript",
     "html",
