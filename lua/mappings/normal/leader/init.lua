@@ -130,6 +130,9 @@ local leader = {
     o = { [[<cmd>tabnew<cr>]], "Open new tab" },
     p = { [[<cmd>tabprev<cr>]], "Prev tab" },
     t = "Tableize",
+
+    ["["] = { [[<cmd>tabnext<cr>]], "Next tab" },
+    ["]"] = { [[<cmd>tabprev<cr>]], "Prev tab" },
   },
   x = {
     name = "+Trouble",
