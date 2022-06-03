@@ -14,3 +14,5 @@ vim.g.bullets_outline_levels = {
   'rom',
   'std-',
 }
+
+vim.g.bullets_enable_in_empty_buffers = 0
