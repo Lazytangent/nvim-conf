@@ -25,7 +25,6 @@ local leader = {
       r = "References",
       t = "Type definition",
     },
-    r = "Rename",
     w = {
       name = "+LSP Workspace",
       a = "Add workspace folder",

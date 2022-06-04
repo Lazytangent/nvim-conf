@@ -29,6 +29,7 @@ local localleader = {
       l = "List workspace folders",
     },
   },
+  r = "Rename",
   t = {
     name = "+TableMode",
     m = "Toggle table mode",
