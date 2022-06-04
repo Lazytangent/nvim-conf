@@ -27,6 +27,7 @@ local f = {
   B = { telescope_extensions .. [[file_browser.file_browser()<cr>]],  "File browser" },
   D = { telescope_builtin .. [[lsp_definitions()<cr>]],               "LSP Definitions" },
   G = { telescope_builtin .. [[git_status()<cr>]],                    "Git" },
+  L = { telescope_extensions .. [[luasnip.luasnip()<cr>]],            "Luasnip" }
   P = { [[<cmd>lua require('utils.core').search_nvim()<cr>]],         "Search Nvim config" },
   R = { telescope_builtin .. [[registers()<cr>]],                     "Registers" },
   T = { telescope_builtin .. [[treesitter()<cr>]],                    "Treesitter" },
