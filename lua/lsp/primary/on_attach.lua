@@ -13,9 +13,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
   buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
 
-  buf_set_keymap("n", "<localleader>pi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
-  buf_set_keymap("n", "<localleader>pe", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-
   buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
   buf_set_keymap("n", "<C-h>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 
