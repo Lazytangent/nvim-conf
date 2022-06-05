@@ -146,6 +146,15 @@ local normal = {
     name = "Change",
     ["*"] = { [[/\<<C-r>=expand('<cword>')<cr>\>\C<cr>``cgn]], "Word and search forward" },
     ["#"] = { [[?\<<C-r>=expand('<cword>')<cr>\>\C<cr>``cgN]], "Word and search backward" },
+
+    i = {
+      name = "Inner",
+      d = "Org: Change inner date",
+      r = "Org: Increase priority of headline",
+      R = "Org: Decrease priority of headline",
+      t = "Org: Cycle TODO forwards",
+      T = "Org: Cycle TODO backwards",
+    },
   },
   ["d"] = {
     name = "Delete",

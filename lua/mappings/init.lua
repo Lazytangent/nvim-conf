@@ -1,6 +1,6 @@
 local normal = require('mappings.normal')
 
-local comamnd = {
+local command = {
 }
 
 local command_opts = {

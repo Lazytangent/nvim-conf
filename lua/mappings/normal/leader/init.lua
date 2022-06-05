@@ -1,6 +1,7 @@
 local d = require('mappings.normal.leader.d')
 local f = require('mappings.normal.leader.f')
 local g = require('mappings.normal.leader.g')
+local o = require('mappings.normal.leader.o')
 local localleader = require('mappings.normal.leader.localleader')
 
 local telescope_builtin = [[<cmd>lua require('telescope.builtin').]]
@@ -83,12 +84,7 @@ local leader = {
     g = { [[:LazyGit<cr>]], "LazyGit" },
   },
   m = localleader,
-  o = {
-    name = "+Open",
-    c = { [[<cmd>copen<cr>]], "Quickfix" },
-    l = { [[<cmd>lopen<cr>]], "Location" },
-    p = { [[<cmd>NvimTreeFocus<cr>]], "Project in NvimTree" },
-  },
+  o = o,
   p = {
     name = "+LSP Pickers",
     c = {
@@ -143,6 +139,7 @@ local leader = {
     R = { [[<cmd>TroubleToggle lsp_references<cr>]], "toggle lsp references" },
   },
   ["`"] = { [[<C-^>]], "Prev buffer" },
+  ["<Enter>"] = "Org: Meta Return",
 }
 
 return leader
