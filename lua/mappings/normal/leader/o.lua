@@ -1,7 +1,7 @@
 return {
   name = "+Open",
-  c = { [[<cmd>copen<cr>]], "Quickfix" },
-  l = { [[<cmd>lopen<cr>]], "Location" },
+  c = { [[<cmd>copen<cr>]],         "Quickfix" },
+  l = { [[<cmd>lopen<cr>]],         "Location" },
   p = { [[<cmd>NvimTreeFocus<cr>]], "Project in NvimTree" },
 
   -- Org Mode

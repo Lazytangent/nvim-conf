@@ -3,6 +3,7 @@ local leader = require('mappings.normal.leader')
 local normal = {
   ["<leader>"] = leader,
   ["g"] = {
+    a = { [[<Plug>(EasyAlign)]], "Easy Align" },
     b = "toggle blockwise comment",
     c = "toggle linewise comment",
     ["<"] = {
@@ -20,7 +21,7 @@ local normal = {
     d = "Go to definition",
     D = "Go to declaration",
   },
-  ["j"] = { [[v:count == 0 ? 'gj' : 'j']], "Up (virtual) line", expr = true },
+  ["j"] = { [[v:count == 0 ? 'gj' : 'j']], "Up (virtual) line",   expr = true },
   ["k"] = { [[v:count == 0 ? 'gk' : 'k']], "Down (virtual) line", expr = true },
   ["K"] = "Hover",
   ["y"] = {
