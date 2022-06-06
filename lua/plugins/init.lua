@@ -141,6 +141,7 @@ packer.startup(function()
     "tpope/vim-dadbod",
     "tpope/vim-unimpaired",
 
+    "junegunn/vim-easy-align",
     "wellle/targets.vim",
     "kana/vim-textobj-user",
     "kana/vim-textobj-line",
