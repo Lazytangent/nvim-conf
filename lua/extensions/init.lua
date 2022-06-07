@@ -129,10 +129,6 @@ packer.startup(function()
     "folke/todo-comments.nvim",
     "folke/which-key.nvim",
 
-    "tversteeg/registers.nvim",
-    'kyazdani42/nvim-tree.lua',
-    "jondkinney/dragvisuals.vim",
-
     -- Tpope Section
     "tpope/vim-surround",
     "tpope/vim-repeat",
@@ -141,6 +137,7 @@ packer.startup(function()
     "tpope/vim-dadbod",
     "tpope/vim-unimpaired",
 
+    -- Testing
     { "rcarriga/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } },
     "vim-test/vim-test",
     "rcarriga/neotest-python",
@@ -149,11 +146,10 @@ packer.startup(function()
 
     "junegunn/vim-easy-align",
     "wellle/targets.vim",
-    "kana/vim-textobj-user",
-    "kana/vim-textobj-line",
-    "christoomey/vim-sort-motion",
-    "michaeljsmith/vim-indent-object",
     "norcalli/nvim-terminal.lua",
+    "tversteeg/registers.nvim",
+    'kyazdani42/nvim-tree.lua',
+    "jondkinney/dragvisuals.vim",
   })
 end)
 
