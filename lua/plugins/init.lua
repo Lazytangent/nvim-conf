@@ -141,6 +141,12 @@ packer.startup(function()
     "tpope/vim-dadbod",
     "tpope/vim-unimpaired",
 
+    { "rcarriga/neotest", requires = { "autoinemadec/FixCursorHold.nvim" } },
+    "test.vim",
+    "rcarriga/neotest-python",
+    "rcarriga/neotest-plenary",
+    "rcarriga/neotest-vim-test",
+
     "junegunn/vim-easy-align",
     "wellle/targets.vim",
     "kana/vim-textobj-user",
