@@ -1,6 +1,6 @@
 local f = {
   name = "+Telescope",
-  a = { [[<cmd>lua require('plugins.telescope').search_all_files()<cr>]],             "All files" },
+  a = { [[<cmd>lua require('extensions.telescope').search_all_files()<cr>]],          "All files" },
   b = { [[<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>]], "File browser" },
   f = { [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]],    "Fuzzy find" },
   g = { [[<cmd>lua require('telescope.builtin').git_status()<cr>]],                   "Git" },

@@ -1,4 +1,4 @@
-require "plugins.telescope.config"
+require "extensions.telescope.config"
 local M = {}
 
 function M.search_all_files()

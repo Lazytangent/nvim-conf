@@ -99,7 +99,7 @@ packer.startup(function()
   })
   -- Telescope
   use({
-    { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" }, { "nvim-telescope/telescope-live-grep-raw.nvim" } } },
+    { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" }, { "nvim-telescope/telescope-live-grep-args.nvim" } } },
     { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
     { "nvim-telescope/telescope-frecency.nvim", requires = { "tami5/sqlite.lua" } },
     "nvim-telescope/telescope-file-browser.nvim",
@@ -157,4 +157,4 @@ packer.startup(function()
   })
 end)
 
-require "plugins.general"
+require "extensions.general"

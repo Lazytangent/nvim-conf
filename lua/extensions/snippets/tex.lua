@@ -39,7 +39,7 @@ local function dynamic_get_select(args)
   return snip
 end
 
-local greek = require "plugins.snippets.greek"
+local greek = require "extensions.snippets.greek"
 
 local latex = {
   s({ trig = "beg", namr = "begin{} / end{}", dscr = "Create environment" }, {

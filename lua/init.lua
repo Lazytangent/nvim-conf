@@ -1,7 +1,7 @@
 -- Basic settings
 require "utils.handlers"
 require "config"
-require "plugins"
+require "extensions"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " m"

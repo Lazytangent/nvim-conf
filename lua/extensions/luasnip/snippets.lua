@@ -37,10 +37,10 @@ local function bash(_, command)
   return res
 end
 
-local tex = require("plugins.snippets.tex")
-local javascript = require("plugins.snippets.javascript")
-local org = require("plugins.snippets.orgmode")
-local vue = require("plugins.snippets.vue")
+local tex = require("extensions.snippets.tex")
+local javascript = require("extensions.snippets.javascript")
+local org = require("extensions.snippets.orgmode")
+local vue = require("extensions.snippets.vue")
 local all = {
   ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
   s("bash", f(bash, {}, "ls")),

@@ -3,7 +3,7 @@ vim.api.nvim_create_user_command("Yabs", function(opts)
 end, {
   nargs = "*",
   complete = function(_, line)
-    local tasks = require('plugins.yabs.tasks')
+    local tasks = require('extensions.yabs.tasks')
 
     local l = vim.split(line, "%s+")
     local n = #l - 2
