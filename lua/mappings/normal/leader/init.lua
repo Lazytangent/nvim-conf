@@ -121,8 +121,8 @@ local leader = {
 
     m = {
       name = "Summary",
-      c = { [[<cmd>lua require('neotest').summary.close()<cr>]], "Close summary" },
-      o = { [[<cmd>lua require('neotest').summary.open()<cr>]], "Open summary" },
+      c = { [[<cmd>lua require('neotest').summary.close()<cr>]],  "Close summary" },
+      o = { [[<cmd>lua require('neotest').summary.open()<cr>]],   "Open summary" },
       m = { [[<cmd>lua require('neotest').summary.toggle()<cr>]], "Toggle summary" },
       t = { [[<cmd>lua require('neotest').summary.toggle()<cr>]], "Toggle summary" },
     },
