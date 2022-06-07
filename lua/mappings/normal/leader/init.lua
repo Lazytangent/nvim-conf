@@ -115,8 +115,17 @@ local leader = {
     a = { [[<cmd>lua require('neotest').run.attach()<cr>]],                  "Attach to nearest test" },
     d = { [[<cmd>lua require('neotest').run.run({ strategy = "dap" })<cr>]], "Debug nearest test" },
     f = { [[<cmd>lua require('neotest').run.run()<cr>]],                     "Current file" },
+    o = { [[<cmd>lua require('neotest').output.open({ enter = true })<cr>]], "Open output" },
     s = { [[<cmd>lua require('neotest').run.stop()<cr>]],                    "Stop test" },
     t = { [[<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>]],   "Nearest test" },
+
+    m = {
+      name = "Summary",
+      c = { [[<cmd>lua require('neotest').summary.close()<cr>]], "Close summary" },
+      o = { [[<cmd>lua require('neotest').summary.open()<cr>]], "Open summary" },
+      m = { [[<cmd>lua require('neotest').summary.toggle()<cr>]], "Toggle summary" },
+      t = { [[<cmd>lua require('neotest').summary.toggle()<cr>]], "Toggle summary" },
+    },
   },
   s = {
     name = "+Spell",

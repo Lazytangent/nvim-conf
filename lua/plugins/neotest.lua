@@ -8,4 +8,7 @@ require('neotest').setup({
       ignore_file_types = { "python", "vim", "lua" },
     }),
   },
+  output = {
+    open_on_run = true,
+  },
 })
