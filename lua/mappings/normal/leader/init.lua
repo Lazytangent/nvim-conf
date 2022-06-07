@@ -110,6 +110,14 @@ local leader = {
     },
   },
   q = "Set diagnostics into location list",
+  r = {
+    name = "Run tests",
+    a = { [[<cmd>lua require('neotest').run.attach()<cr>]],                  "Attach to nearest test" },
+    d = { [[<cmd>lua require('neotest').run.run({ strategy = "dap" })<cr>]], "Debug nearest test" },
+    f = { [[<cmd>lua require('neotest').run.run()<cr>]],                     "Current file" },
+    s = { [[<cmd>lua require('neotest').run.stop()<cr>]],                    "Stop test" },
+    t = { [[<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>]],   "Nearest test" },
+  },
   s = {
     name = "+Spell",
     s = { [[<cmd>setlocal spell!<cr>]], "Toggle spellcheck" },
