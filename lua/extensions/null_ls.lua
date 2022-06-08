@@ -1,7 +1,7 @@
-local null_ls = require("null-ls")
+local null_ls = require "null-ls"
 local f = null_ls.builtins.formatting
 local d = null_ls.builtins.diagnostics
-local on_attach = require("lsp.regular.on_attach")
+local on_attach = require "lsp.regular.on_attach"
 
 local formatting = {
   -- JavaScript/TypeScript
@@ -14,6 +14,7 @@ local formatting = {
 
   -- Lua
   f.stylua,
+  f.lua_format,
 
   -- Rust
   f.rustfmt,
@@ -40,9 +41,9 @@ local formatting = {
   -- C/C++
   f.clang_format,
 
-  f.trim_whitespace.with({
+  f.trim_whitespace.with {
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
-  }),
+  },
 }
 
 local linting = {
@@ -66,7 +67,7 @@ local linting = {
   d.staticcheck,
 }
 
-local sources = vim.tbl_extend("force", formatting, linting)
+local sources = vim.tbl_extend("force", {}, linting, formatting)
 
 null_ls.setup {
   sources = sources,
