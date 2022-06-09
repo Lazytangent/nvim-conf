@@ -10,146 +10,146 @@ packer.startup(function()
 
   -- Theme Stuff
   use({
-    "nvim-lualine/lualine.nvim",
     "folke/tokyonight.nvim",
+    "nvim-lualine/lualine.nvim",
     { "catppuccin/nvim", as = "catppuccin" },
   })
 
   -- Treesitter
   use({
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
-    "nvim-treesitter/playground",
     "nvim-treesitter/nvim-treesitter-refactor",
     "nvim-treesitter/nvim-treesitter-textobjects",
+    "nvim-treesitter/playground",
 
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    "RRethy/nvim-treesitter-endwise",
     "lewis6991/spellsitter.nvim",
+    "p00f/nvim-ts-rainbow",
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
-    "p00f/nvim-ts-rainbow",
-    "JoosepAlviste/nvim-ts-context-commentstring",
     { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
     { "ThePrimeagen/refactoring.nvim", requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" } },
-    "RRethy/nvim-treesitter-endwise",
   })
 
   -- LSP
   use({
-    "neovim/nvim-lspconfig",
     "L3MON4D3/LuaSnip",
-    "rafamadriz/friendly-snippets",
     "mattn/emmet-vim",
+    "neovim/nvim-lspconfig",
+    "rafamadriz/friendly-snippets",
     {
       "jose-elias-alvarez/null-ls.nvim",
       requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     },
 
     -- nvim-cmp
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-nvim-lsp",
+    "f3fora/cmp-spell",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-calc",
+    "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lsp-document-symbol",
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/cmp-nvim-lsp-document-symbol",
-    "lukas-reineke/cmp-under-comparator",
+    "hrsh7th/nvim-cmp",
+    "kdheepak/cmp-latex-symbols",
+    "kristijanhusak/vim-dadbod-completion",
+    "kristijanhusak/vim-dadbod-ui",
     "lukas-reineke/cmp-rg",
-    "f3fora/cmp-spell",
+    "lukas-reineke/cmp-under-comparator",
+    "onsails/lspkind-nvim",
     "ray-x/cmp-treesitter",
     "saadparwaiz1/cmp_luasnip",
-    "kdheepak/cmp-latex-symbols",
-    "onsails/lspkind-nvim",
     { "RishabhRD/nvim-lsputils", requires = "RishabhRD/popfix" },
     { 'Saecki/crates.nvim', requires = { 'nvim-lua/plenary.nvim' } },
-    "kristijanhusak/vim-dadbod-ui",
-    "kristijanhusak/vim-dadbod-completion",
   })
 
   -- DAP
   use({
     "mfussenegger/nvim-dap",
-    { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
     "mfussenegger/nvim-dap-python",
     "theHamsta/nvim-dap-virtual-text",
+    { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
   })
 
   -- Specific Language Plugins
   use({
     { "heavenshell/vim-jsdoc", run = "make install" },
     { "pantharshit00/vim-prisma", ft = "prisma" },
-    "mrdotb/vim-tailwindcss",
     { "jidn/vim-dbml", ft = "dbml" },
     { "lervag/vimtex", ft = "tex" },
     { "digitaltoad/vim-pug", ft = "pug" },
     { "elixir-editors/vim-elixir", ft = "elixir" },
-    "nvim-orgmode/orgmode.nvim",
-    "keith/swift.vim",
-    "tami5/swift.nvim",
-    "hashivim/vim-terraform",
-    "ray-x/go.nvim",
     "b0o/schemastore.nvim",
     "fladson/vim-kitty",
+    "hashivim/vim-terraform",
+    "keith/swift.vim",
+    "mrdotb/vim-tailwindcss",
+    "nvim-orgmode/orgmode.nvim",
+    "ray-x/go.nvim",
+    "tami5/swift.nvim",
   })
 
   -- Quality of Life Improvements
   use({
-    "nathom/filetype.nvim",
-    "kdheepak/lazygit.nvim",
     "jamestthompson3/nvim-remote-containers",
+    "kdheepak/lazygit.nvim",
+    "nathom/filetype.nvim",
   })
   -- Telescope
   use({
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" }, { "nvim-telescope/telescope-live-grep-args.nvim" } } },
     { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
     { "nvim-telescope/telescope-frecency.nvim", requires = { "tami5/sqlite.lua" } },
+    "nvim-telescope/telescope-dap.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
-    "nvim-telescope/telescope-dap.nvim",
     "benfowler/telescope-luasnip.nvim",
   })
 
   use({
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
+    { "ldelossa/gh.nvim", requires = { "ldelossa/litee.nvim" } },
     "andymass/vim-matchup",
+    "dhruvasagar/vim-table-mode",
+    "dkarter/bullets.vim",
     "ggandor/lightspeed.nvim",
-    "lukas-reineke/indent-blankline.nvim",
+    "j-hui/fidget.nvim",
     "kyazdani42/nvim-web-devicons",
+    "lukas-reineke/indent-blankline.nvim",
+    "numToStr/Comment.nvim",
+    "pianocomposer321/yabs.nvim",
     "ryanoasis/vim-devicons",
     "windwp/nvim-autopairs",
-    "numToStr/Comment.nvim",
-    "dhruvasagar/vim-table-mode",
-    "j-hui/fidget.nvim",
-    "pianocomposer321/yabs.nvim",
-    "dkarter/bullets.vim",
-    { "ldelossa/gh.nvim", requires = { "ldelossa/litee.nvim" } },
 
     -- Folke Section
     "folke/lsp-colors.nvim",
-    "folke/trouble.nvim",
     "folke/todo-comments.nvim",
+    "folke/trouble.nvim",
     "folke/which-key.nvim",
 
     -- Tpope Section
-    "tpope/vim-surround",
-    "tpope/vim-repeat",
-    "tpope/vim-fugitive",
-    "tpope/vim-eunuch",
-    "tpope/vim-dadbod",
-    "tpope/vim-unimpaired",
 
+    "tpope/vim-dadbod",
+    "tpope/vim-eunuch",
+    "tpope/vim-fugitive",
+    "tpope/vim-repeat",
+    "tpope/vim-surround",
+    "tpope/vim-unimpaired",
     -- Testing
     { "rcarriga/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } },
-    "vim-test/vim-test",
-    "rcarriga/neotest-python",
     "rcarriga/neotest-plenary",
+    "rcarriga/neotest-python",
     "rcarriga/neotest-vim-test",
+    "vim-test/vim-test",
 
+    "jondkinney/dragvisuals.vim",
     "junegunn/vim-easy-align",
-    "wellle/targets.vim",
     "norcalli/nvim-terminal.lua",
     "tversteeg/registers.nvim",
+    "wellle/targets.vim",
     'kyazdani42/nvim-tree.lua',
-    "jondkinney/dragvisuals.vim",
   })
 end)
 
