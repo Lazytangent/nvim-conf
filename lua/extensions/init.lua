@@ -38,10 +38,7 @@ packer.startup(function()
     "mattn/emmet-vim",
     "neovim/nvim-lspconfig",
     "rafamadriz/friendly-snippets",
-    {
-      "jose-elias-alvarez/null-ls.nvim",
-      requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    },
+    { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" } },
 
     -- nvim-cmp
     "f3fora/cmp-spell",
