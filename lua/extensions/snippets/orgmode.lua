@@ -31,23 +31,16 @@ local function dynamic_copy(args, old_state)
 end
 
 local orgmode = {
-  s({ trig = "bsrc", dscr = "#+BEGIN_SRC $1", name = "Create SRC block" }, {
-    t("#+BEGIN_SRC "),
-    i(1, "language"),
-    t({ "", "" }),
-    i(0),
-    t({ "", "#+END_SRC" }),
-  }),
   s({ trig = "title", dscr = "#+TITLE: ", name = "Create title" }, {
-    t("#+TITLE: "),
+    t("#+title: "),
     i(1, "title"),
   }),
   s({ trig = "beg", dscr = "#+BEGIN_$1", name = "Create environment" }, {
-    t("#+BEGIN_"),
+    t("#+begin_"),
     i(1),
     t({ "", "" }),
     i(0),
-    t({ "", "#+END_" }),
+    t({ "", "#+end_" }),
     f(copy, 1),
   }),
 }
