@@ -12,48 +12,46 @@ local m = require("luasnip.extras").match
 local p = require("luasnip.extras").partial
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
+local fmt = require("luasnip.extras.fmt").fmt
 
 local parse = require("luasnip").parser.parse_snippet
 
 return {
-  s({ trig = "thunk", dscr = "Create a thunk creator" }, {
-    t "const ",
-    i(1, "thunkCreator"),
-    t " = (",
-    i(2, "params"),
-    t { ") => async (dispatch) => {", "\t" },
-    i(0),
-    t { "", "};" },
-  }),
-  s({ trig = "action", dscr = "Create a thunk creator" }, {
-    t "const ",
-    i(1, "actionCreator"),
-    t " = (",
-    i(2, "params"),
-    t { ") => ({", "\t" },
-    i(0),
-    t { "", "});" },
-  }),
-  s({ trig = "sel", dscr = "Create a selector function" }, {
-    t "(",
-    i(1, "params"),
-    t ") => (state) => ",
-    i(2, "state"),
-  }),
-  s({ trig = "uS", dscr = "useSelector hook", name = "useSelector" }, {
-    t("const "),
-    i(2, "variable"),
-    t(" = useSelector((state) => state."),
-    i(1),
-    t(");"),
-    i(0),
-  }),
-  s({ trig = "uD", dscr = "useDispatch hook", name = "useDispatch" }, {
+  s({ trig = "thunk", dscr = "Create a thunk creator" },
+    fmt(
+      [[
+      const {thunkCreator} = ({params}) => async (dispatch) => {{
+        {}
+      }};
+      ]],
+      { thunkCreator = i(1, "thunkCreator"), params = i(2, "params"), i(0) }
+    )
+  ),
+  s({ trig = "action", dscr = "Create an action creator" },
+    fmt(
+      [[
+      const {actionCreator} = ({params}) => ({{
+        {}
+      }})
+      ]],
+      { actionCreator = i(1, "actionCreator"), params = i(2, "params"), i(0) }
+    )
+  ),
+  s({ trig = "sel", dscr = "Create a selector function" },
+    fmt("({params}) => (state) => {state}",
+      { params = i(1, "params"), state = i(2, "state") }
+    )
+  ),
+  s({ trig = "uS", dscr = "useSelector hook", name = "useSelector" },
+    fmt("const {variable} = useSelector((state) => state.{});{}",
+      { variable = i(2, "variable"), i(1), i(0) }
+    )
+  ),
+  s({ trig = "uD", dscr = "useDispatch hook", name = "useDispatch" },
     t("const dispatch = useDispatch();"),
-    i(0),
-  }),
-  s({ trig = "state", dscr = "Selector function", name = "Selector" }, {
-    t("(state) => state."),
-    i(1, "slice"),
-  }),
+    i(0)
+  ),
+  s({ trig = "state", dscr = "Selector function", name = "Selector" },
+    fmt("(state) => state.{slice}", { slice = i(1, "slice") })
+  ),
 }

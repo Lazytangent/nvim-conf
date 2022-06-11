@@ -12,6 +12,7 @@ local m = require("luasnip.extras").match
 local p = require("luasnip.extras").partial
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
+local fmt = require("luasnip.extras.fmt").fmt
 
 local parse = require("luasnip").parser.parse_snippet
 
@@ -35,14 +36,16 @@ local orgmode = {
     t("#+title: "),
     i(1, "title"),
   }),
-  s({ trig = "beg", dscr = "#+BEGIN_$1", name = "Create environment" }, {
-    t("#+begin_"),
-    i(1),
-    t({ "", "" }),
-    i(0),
-    t({ "", "#+end_" }),
-    f(copy, 1),
-  }),
+  s({ trig = "beg", dscr = "#+BEGIN_$1", name = "Create environment" },
+    fmt(
+      [[
+      #+begin_{}
+      {}
+      #+end_{}
+      ]],
+      { i(1), i(0), f(copy, 1) }
+    )
+  ),
 }
 
 return orgmode

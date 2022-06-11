@@ -42,7 +42,6 @@ local javascript = require("extensions.snippets.javascript")
 local org = require("extensions.snippets.orgmode")
 local vue = require("extensions.snippets.vue")
 local all = {
-  ls.parser.parse_snippet({ trig = "ter", wordTrig = false }, "${1:cond} ? ${2:true} : ${3:false} "),
   s("bash", f(bash, {}, "ls")),
   s("part", p(os.date, "%Y")),
 }

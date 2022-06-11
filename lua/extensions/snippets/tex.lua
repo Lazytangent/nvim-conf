@@ -12,6 +12,8 @@ local p = require("luasnip.extras").partial
 local m = require("luasnip.extras").match
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
+local fmt = require("luasnip.extras.fmt").fmt
+local fmta = require("luasnip.extras.fmt").fmta
 
 local parse = require("luasnip").parser.parse_snippet
 
@@ -42,33 +44,40 @@ end
 local greek = require "extensions.snippets.greek"
 
 local latex = {
-  s({ trig = "beg", namr = "begin{} / end{}", dscr = "Create environment" }, {
-    t "\\begin{",
-    i(1),
-    t { "}", "\t" },
-    i(0),
-    t { "", "\\end{" },
-    f(copy, 1),
-    t { "}" },
-  }),
+  s({ trig = "beg", namr = "begin{} / end{}", dscr = "Create environment" },
+    fmta(
+      [[
+      \begin{<>}
+      <>
+      \end{<>}
+      ]],
+      { i(1), i(0), f(copy, 1) }
+    )
+  ),
   s("ldots", {
     t "\\ldots",
   }),
   s("...", {
     t "\\dots",
   }),
-  s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" }, {
-    t "\\begin{figure}[",
-    i(1, "htpb"),
-    t { "]", "\t\\centering", "" },
-    i(2, "\t\\includegraphics[width=0.8\\textwidth]{"),
-    i(3),
-    t { "}", "\t\\caption{" },
-    d(4, dynamic_copy, { 3 }, { user_args = { 3 } }),
-    t { "}", "\t\\label{fig:" },
-    d(5, dynamic_copy, { 3 }, { user_args = { 3 } }),
-    t { "}", "\\end{figure}" },
-  }),
+  s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" },
+    fmta(
+    [[
+    \begin{figure}[<>]
+      \centering
+      <><>
+      \caption{<>}
+      \label{<>}
+    \end{figure}
+    ]],
+    {
+      i(1, "htpb"),
+      i(2, "\t\\includegraphics[width=0.8\\textwidth]{"),
+      i(3),
+      d(4, dynamic_copy, { 3 }, { user_args = { 3 } }),
+      d(5, dynamic_copy, { 3 }, { user_args = { 3 } })
+    })
+  ),
   s({ trig = "table", namr = "Table environment", dscr = "Table environment" }, {
     t "\\begin{table}[",
     i(1, "htpb"),

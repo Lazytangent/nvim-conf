@@ -12,6 +12,8 @@ local m = require("luasnip.extras").match
 local p = require("luasnip.extras").partial
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
+local fmt = require("luasnip.extras.fmt").fmt
+local fmta = require("luasnip.extras.fmt").fmta
 
 local parse = require("luasnip").parser.parse_snippet
 
@@ -31,126 +33,138 @@ local function dynamic_copy(args, old_state)
 end
 
 local javascript = {
-  s({ trig = "ctx", dscr = "Create Context", name = "Create Context" }, {
-    t("const "),
-    i(1, "NameOfContext"),
-    t({ " = createContext();", "export const " }),
-    i(2, "useContextHook"),
-    t(" = () => useContext("),
-    f(copy, 1),
-    t({ ");", "", "const " }),
-    i(3, "ContextProvider"),
-    t({ " = ({ children }) => {", "\t" }),
-    i(0),
-    t({ "", "\treturn (", "\t\t<" }),
-    f(copy, 1),
-    t(".Provider value={{"),
-    i(4),
-    t({ "}}>", "\t\t\t{children}", "\t\t</" }),
-    f(copy, 1),
-    t({ ".Provider>", "\t);", "};", "", "export default " }),
-    f(copy, 3),
-    t(";"),
-  }),
-  s({ trig = "fnc", dscr = "Functional Component", name = "Functional Component" }, {
-    t("const "),
-    i(1, "Component"),
-    t(" = ("),
-    c(2, {
-      i(nil, "props"),
-      sn(nil, {
-        t("{ "),
-        i(1, "props"),
-        t(" }"),
+  s({ trig = "ctx", dscr = "Create Context", name = "Create Context" },
+    fmta(
+    [[
+    const <> = createContext();
+    export const <> = () =>> useContext(<>);
+
+    const <> = ({ children }) =>> {
+      <>
+      return (
+        <<<>.Provider value={{<>}}>>
+          {children}
+        <</<>.Provider>>
+      );
+    };
+
+    export default <>;
+    ]],
+    {
+      i(1, "NameOfContext"),
+      i(2, "useContextHook"),
+      f(copy, 1),
+      i(3, "ContextProvider"),
+      i(0),
+      f(copy, 1),
+      i(4),
+      f(copy, 1),
+      f(copy, 3),
+    }
+    )
+  ),
+  s({ trig = "fnc", dscr = "Functional Component", name = "Functional Component" },
+    fmta(
+    [[
+    const <> = (<>) =>> {
+      <>
+      return (
+        <<h2>><> works!<</h2>>
+      );
+    };
+
+    export default <>;
+    ]],
+    {
+      i(1, "Component"),
+      c(2, {
+        i(nil, "props"),
+        sn(nil, fmta("{<>}", { i(1, "props") }))
       }),
-    }),
-    t({ ") => {", "\t" }),
-    i(0),
-    t({ "", "\treturn (", "\t\t<h2>" }),
-    f(copy, 1),
-    t({ "works!</h2>", "\t);", "};", "", "export default " }),
-    f(copy, 1),
-    t(";"),
-  }),
-  s({ trig = "rj", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" }, {
-    t("const "),
-    c(1, {
-      i(nil, "name"),
-      sn(nil, {
-        t("{ "),
-        i(1, "name"),
-        t(" }"),
-      }),
-    }),
-    t(" = await res.json();"),
-  }),
-  s({ trig = "response.json", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" }, {
-    t("const "),
-    c(1, {
-      i(nil, "name"),
-      sn(nil, {
-        t("{ "),
-        i(1, "name"),
-        t(" }"),
-      }),
-    }),
-    t(" = await response.json();"),
-  }),
-  s({ trig = "cr", dscr = "const _____ = require('_____');", name = "CommonJS import" }, {
-    t("const "),
-    i(2, "name"),
-    t(" = require('"),
-    i(1, "module"),
-    t("');"),
-  }),
-  s({ trig = "log", dscr = "console.log($1);$0", name = "Console log" }, {
-    t("console.log("),
-    i(1),
-    t(");"),
-    i(0),
-  }),
-  s({ trig = "edc", dscr = "Export default a const variable", name = "Export default const" }, {
-    t("const "),
-    i(1, "name"),
-    i(0),
-    t({ "", "", "export default " }),
-    f(copy, 1),
-    t(";"),
-  }),
-  s({ trig = "edcl", dscr = "Export default class", name = "Export default class" }, {
-    t("export default class "),
-    i(1, "name"),
-    t({ "{", "\t" }),
-    i(0),
-    t({ "", "}" }),
-  }),
-  s({ trig = "edf", dscr = "Export default function with function declaration syntax", name = "Export default function" }, {
-    t("export default function "),
-    i(1, "name"),
-    t("("),
-    i(2, "params"),
-    t({ ") {", "\t" }),
-    i(0),
-    t({ "", "}" }),
-  }),
-  s({ trig = "Pkc", dscr = "A Sequelize model's static findByPk method", name = "findByPk" }, {
-    t("const "),
-    i(3, "variable"),
-    t(" = "),
-    i(1, "Model"),
-    t(".findByPk("),
-    i(2),
-    t(");"),
-  }),
-  s({ trig = "fA", dscr = "A Sequelize model's static findAll method", name = "findAll" }, {
-    t("const "),
-    i(3, "variable"),
-    t(" = "),
-    i(1, "Model"),
-    t(".findAll("),
-    i(2),
-    t(");"),
-  }),
+      i(0),
+      f(copy, 1),
+      f(copy, 1)
+    }
+    )
+  ),
+  s({ trig = "rj", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" },
+    fmta(
+      "const <> = await res.json();",
+      { c(1, {
+        i(nil, "name"),
+        sn(nil,
+          fmta("{<>}", i(1, "name"))
+        )
+      }) }
+    )
+  ),
+  s({ trig = "response.json", dscr = "Parse the JSON body of a response", name = "Parse JSON body of a response" },
+    fmta(
+      "const <> = await response.json();",
+      {
+        c(1, {
+          i(nil, "name"),
+          sn(nil, fmta(
+            "{<>}", { i(1, "name") }
+          ))
+        })
+      }
+    )
+  ),
+  s({ trig = "cr", dscr = "const _____ = require('_____');", name = "CommonJS import" },
+    fmt(
+      'const {} = require("{}");',
+      { i(2, "name"), i(1, "module") }
+    )
+  ),
+  s({ trig = "log", dscr = "console.log($1);$0", name = "Console log" },
+    fmt(
+      "console.log({});{}",
+      { i(1), i(0) }
+    )
+  ),
+  s({ trig = "edc", dscr = "Export default a const variable", name = "Export default const" },
+    fmt(
+      [[
+      const {}
+
+      export default {};
+      ]],
+      { i(1, "name"), f(copy, 1) }
+    )
+  ),
+  s({ trig = "edcl", dscr = "Export default class", name = "Export default class" },
+    fmta(
+      [[
+      export default class <> {
+        <>
+      }
+      ]],
+      { i(1, "name"), i(0) }
+    )
+  ),
+  s({ trig = "edf", dscr = "Export default function with function declaration syntax", name = "Export default function" },
+    fmta(
+      [[
+      export default function <> (<>) {
+        <>
+      }
+      ]],
+      { i(1, "name"), i(2, "params"), i(0) }
+    )
+  ),
+  s({ trig = "Pkc", dscr = "A Sequelize model's static findByPk method", name = "findByPk" },
+    fmt(
+      "const {} = {}.findByPk(<>);",
+      { i(3, "variable"), i(1, "Model"), i(2) }
+    )
+  ),
+  s({ trig = "fA", dscr = "A Sequelize model's static findAll method", name = "findAll" },
+    fmt(
+      "const {} = {}.findAll({});",
+      { i(3, "variable"), i(1, "Model"), i(2) }
+    )
+  ),
 }
 
 local redux = require("extensions.snippets.redux")

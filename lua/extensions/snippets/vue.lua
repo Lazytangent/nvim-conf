@@ -12,13 +12,25 @@ local m = require("luasnip.extras").match
 local p = require("luasnip.extras").partial
 local n = require("luasnip.extras").nonempty
 local dl = require("luasnip.extras").dynamic_lambda
+local fmt = require("luasnip.extras.fmt").fmt
 
 return {
-  s({ trig = "vv", dscr = "Set up Vue file", name = "Set up Vue file" }, {
-    t({ "<template>", "\t" }),
-    i(1),
-    t({ "", "</template>", "", "<script>", "\texport default {", "\t\t" }),
-    i(2),
-    t({ "", "\t}", "</script>", "", "<style></style>" })
-  }),
+  s({ trig = "vv", dscr = "Set up Vue file", name = "Set up Vue file" },
+    fmt(
+    [[
+    <template>
+      {}
+    </template>
+
+    <script>
+      export default {{
+        {}
+      }}
+    </script>
+
+    <style></style>
+    ]],
+    { i(1), i(2) }
+    )
+  ),
 }
