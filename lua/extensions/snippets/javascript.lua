@@ -155,7 +155,7 @@ local javascript = {
   ),
   s({ trig = "Pkc", dscr = "A Sequelize model's static findByPk method", name = "findByPk" },
     fmt(
-      "const {} = {}.findByPk(<>);",
+      "const {} = {}.findByPk({});",
       { i(3, "variable"), i(1, "Model"), i(2) }
     )
   ),
