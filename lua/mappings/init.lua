@@ -32,6 +32,7 @@ local insert = {
     name = "LuaSnip Jumps",
     ["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
     ["<C-p>"] = { [[<Plug>luasnip-jump-prev]],      "Prev choice" },
+    ["<C-u>"] = { [[<cmd>lua require("luasnip.extras.select_choice")()<cr>]], "Select Choice Node" },
   },
 }
 
@@ -55,6 +56,7 @@ local select = {
     ["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
     ["<C-p>"] = { [[<Plug>luasnip-jump-prev]],      "Prev choice" },
   },
+  ["<C-u>"] = { [[<cmd>lua require("luasnip.extras.select_choice")()<cr>]], "Select Choice Node" },
 }
 
 local select_opts = {
