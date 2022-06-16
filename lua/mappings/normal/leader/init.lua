@@ -37,10 +37,10 @@ local leader = {
     name = "+Utilities",
     d = {
       name = "+Diagnostics",
-      h = { [[<cmd>lua vim.diagnostic.hide(nil, 0)<cr>]], "Hide diagnostics in buffer" },
-      s = { [[<cmd>lua vim.diagnostic.show(nil, 0)<cr>]], "Show diagnostics in buffer" },
+      h = { [[<cmd>lua vim.diagnostic.disable(nil, 0)<cr>]], "Hide diagnostics in buffer" },
+      s = { [[<cmd>lua vim.diagnostic.enable(nil, 0)<cr>]], "Show diagnostics in buffer" },
     },
-    f = { [[<cmd>lua vim.lsp.buf.formatting()<cr>]],               "Format" },
+    f = { [[<cmd>lua vim.lsp.buf.format({ async = true })<cr>]],               "Format" },
     g = { [[:set operatorfunc=GrepOperator<cr>g@]],                "Grep for word under cursor" },
     p = { [[<cmd>lua require('yabs'):run_task('pre_commit')<cr>]], "Run pre-commit on current file" },
     t = {
