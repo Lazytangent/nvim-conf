@@ -127,13 +127,13 @@ packer.startup(function()
     "folke/which-key.nvim",
 
     -- Tpope Section
-
     "tpope/vim-dadbod",
     "tpope/vim-eunuch",
     "tpope/vim-fugitive",
     "tpope/vim-repeat",
     "tpope/vim-surround",
     "tpope/vim-unimpaired",
+
     -- Testing
     { "rcarriga/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } },
     "rcarriga/neotest-plenary",
