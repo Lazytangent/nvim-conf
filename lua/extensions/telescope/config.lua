@@ -5,6 +5,7 @@ require("telescope").setup({
       i = {
         ["<C-u>"] = false,
         ["<C-/>"] = require("telescope.actions").which_key,
+        ["<M-w>"] = require("telescope.actions").smart_add_to_loclist,
       }
     },
   }),
