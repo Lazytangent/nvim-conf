@@ -1276,3 +1276,6 @@ awslocal
 txt
 aws
 EventBridge
+ECS
+MSK
+analytics
