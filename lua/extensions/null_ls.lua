@@ -1,6 +1,7 @@
 local null_ls = require "null-ls"
 local f = null_ls.builtins.formatting
 local d = null_ls.builtins.diagnostics
+local ca = null_ls.builtins.code_actions
 local on_attach = require "lsp.regular.on_attach"
 
 local formatting = {
@@ -67,7 +68,11 @@ local linting = {
   d.staticcheck,
 }
 
-local sources = vim.tbl_extend("force", {}, linting, formatting)
+local code_actions = {
+  ca.gitsigns,
+}
+
+local sources = vim.tbl_extend("force", {}, linting, formatting, code_actions)
 
 null_ls.setup {
   sources = sources,
