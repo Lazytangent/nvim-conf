@@ -105,8 +105,6 @@ packer.startup(function()
     "benfowler/telescope-luasnip.nvim",
   })
 
-  use({ 'anuvyklack/hydra.nvim', requires = "anuvyklack/keymap-layer.nvim" })
-
   use({
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
     { "ldelossa/gh.nvim", requires = { "ldelossa/litee.nvim" } },
