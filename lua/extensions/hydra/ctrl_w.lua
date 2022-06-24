@@ -29,7 +29,7 @@ Hydra({
       -- Split
       { 's', '<C-w>s' },
       { 'v', '<C-w>v' },
-      { 'q', '<Cmd>try | close | catch | endtry<CR>', { desc = 'close window' } },
+      { 'q', '<C-w>q', { desc = 'close window' } },
       -- Size
       { '+', '<C-w>+' },
       { '-', '<C-w>-' },
