@@ -1,10 +1,11 @@
 -- Basic settings
 require "utils.handlers"
 require "config"
-require "extensions"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " m"
+
+require "extensions"
 
 -- LSP
 require "lsp"
