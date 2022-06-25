@@ -1,4 +1,3 @@
-local d = require('mappings.normal.leader.d')
 local f = require('mappings.normal.leader.f')
 local g = require('mappings.normal.leader.g')
 local o = require('mappings.normal.leader.o')
@@ -71,7 +70,6 @@ local leader = {
     c = { telescope_builtin .. [[colorscheme()<cr>]], "colorscheme" },
     d = { [[<cmd>cd %:p:h<cr>]],                      "Change working directory" },
   },
-  d = d,
   e = "Show line diagnostics",
   f = f,
   g = g,
