@@ -112,7 +112,7 @@ local leader = {
   r = {
     name = "Run tests",
     a = { utils.lua_require("neotest", "run.attach()"),                  "Attach to nearest test" },
-    d = { utils.lua_require("neotest", "run.run({ strategy = "dap" })"), "Debug nearest test" },
+    d = { utils.lua_require("neotest", "run.run({ strategy = 'dap' })"), "Debug nearest test" },
     f = { utils.lua_require("neotest", "run.run()"),                     "Current file" },
     o = { utils.lua_require("neotest", "output.open({ enter = true })"), "Open output" },
     s = { utils.lua_require("neotest", "run.stop()"),                    "Stop test" },
