@@ -1,8 +1,10 @@
+local utils = require("mappings.utils")
+
 return {
   name = "+Open",
-  c = { [[<cmd>copen<cr>]],         "Quickfix" },
-  l = { [[<cmd>lopen<cr>]],         "Location" },
-  p = { [[<cmd>NvimTreeFocus<cr>]], "Project in NvimTree" },
+  c = { utils.cmd "copen",         "Quickfix" },
+  l = { utils.cmd "lopen",         "Location" },
+  p = { utils.cmd "NvimTreeFocus", "Project in NvimTree" },
 
   -- Org Mode
   e = "Org: Export",

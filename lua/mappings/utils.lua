@@ -1,0 +1,23 @@
+local utils = {}
+
+utils.cmd = function(command)
+  return table.concat({ "<cmd>", comamnd, "<cr>"})
+end
+
+utils.lua_require = function(module, function)
+  return utils.cmd(table.concat({ "lua require('", module, "').", function }))
+end
+
+utils.telescope_builtin = function(func)
+  return utils.lua_require("telescope.builtin", func)
+end
+
+utils.telescope_extensions = function(func)
+  return utils.lua_require("telescope", table.concat({ "extensions.", func }))
+end
+
+utils.extensions_telescope = function(func)
+  return utils.lua_require("extensions.telescope", func)
+end
+
+return utils

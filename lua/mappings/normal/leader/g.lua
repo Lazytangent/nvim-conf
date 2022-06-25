@@ -1,19 +1,21 @@
+local utils = require('mappings.utils')
+
 local g = {
   name = "+Git",
-  c = { [[<cmd>Git commit<cr>]], "commit" },
-  f = { [[<cmd>Git fetch<cr>]],  "fetch" },
-  g = { [[<cmd>Git<cr>]],        "status" },
-  l = { [[<cmd>Git pull<cr>]],   "pull" },
-  L = { [[<cmd>Git log<cr>]],    "log" },
-  p = { [[<cmd>Git push<cr>]],   "push" },
+  c = { utils.cmd "Git commit", "commit" },
+  f = { utils.cmd "Git fetch",  "fetch" },
+  g = { utils.cmd "Git",        "status" },
+  l = { utils.cmd "Git pull",   "pull" },
+  L = { utils.cmd "Git log",    "log" },
+  p = { utils.cmd "Git push",   "push" },
   P = {
     name = "+Push",
-    m = { [[<cmd>Git push -u origin main<cr>]], "main" },
+    m = { utils.cmd "Git push -u origin main", "main" },
     p = { [[:Git push -u origin<space>]],       "branch" },
   },
-  s = { [[<cmd>Git<cr>]],       "status" },
-  w = { [[<cmd>Gw<cr>]],        "write" },
-  S = { [[<cmd>Git stash<cr>]], "stash file" },
+  s = { utils.cmd "Git",       "status" },
+  w = { utils.cmd "Gw",        "write" },
+  S = { utils.cmd "Git stash", "stash file" },
 }
 
 return g

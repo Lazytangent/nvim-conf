@@ -1,17 +1,19 @@
+local utils = require('mappings.utils')
+
 local f = {
   name = "+Telescope",
-  a = { [[<cmd>lua require('extensions.telescope').search_all_files()<cr>]],          "All files" },
-  b = { [[<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>]], "File browser" },
-  f = { [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]],    "Fuzzy find" },
-  g = { [[<cmd>lua require('telescope.builtin').git_status()<cr>]],                   "Git" },
-  l = { [[<cmd>lua require('telescope').extensions.lazygit.lazygit()<cr>]],           "Lazygit" },
-  p = { [[<cmd>lua require('telescope.builtin').resume()<cr>]],                       "Resume" },
-  P = { [[<cmd>lua require('telescope.builtin').pickers()<cr>]],                      "Previous pickers" },
-  t = { [[<cmd>lua require('telescope.builtin').tags()<cr>]],                         "Tags" },
+  a = { utils.extensions_telescope "search_all_files()",          "All files" },
+  b = { utils.telescope_extensions "file_browser.file_browser()", "File browser" },
+  f = { utils.telescope_builtin "current_buffer_fuzzy_find()",    "Fuzzy find" },
+  g = { utils.telescope_builtin "git_status()",                   "Git" },
+  l = { utils.telescope_extensions "lazygit.lazygit()",           "Lazygit" },
+  p = { utils.telescope_builtin "resume()",                       "Resume" },
+  P = { utils.telescope_builtin "pickers()",                      "Previous pickers" },
+  t = { utils.telescope_builtin "tags()",                         "Tags" },
 
-  d = { [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]],     "Definitions" },
-  i = { [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]], "Implementations" },
-  r = { [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]],      "References" },
+  d = { utils.telescope_builtin "lsp_definitions()",     "Definitions" },
+  i = { utils.telescope_builtin "lsp_implementations()", "Implementations" },
+  r = { utils.telescope_builtin "lsp_references()",      "References" },
 }
 
 return f
