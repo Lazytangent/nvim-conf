@@ -16,6 +16,15 @@ local g = {
   s = { utils.cmd "Git",       "status" },
   w = { utils.cmd "Gw",        "write" },
   S = { utils.cmd "Git stash", "stash file" },
+
+  t = {
+    name = "Toggle",
+    b = { utils.gitsigns "toggle_current_line_blame()", "Toggle blame" },
+    d = { utils.gitsigns "toggle_deleted()", "Toggle deleted" },
+    n = { utils.gitsigns "toggle_numhl()", "Toggle number hl" },
+    s = { utils.gitsigns "toggle_signs()", "Toggle signs" },
+    w = { utils.gitsigns "toggle_word_diff()", "Toggle word diff" },
+  },
 }
 
 return g
