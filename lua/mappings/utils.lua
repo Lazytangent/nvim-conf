@@ -20,4 +20,8 @@ utils.extensions_telescope = function(func)
   return utils.lua_require("extensions.telescope", func)
 end
 
+utils.gitsigns = function(func)
+  return utils.lua_require("gitsigns", func)
+end
+
 return utils
