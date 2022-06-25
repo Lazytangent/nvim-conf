@@ -13,7 +13,7 @@ local hint = [[
 Hydra({
    hint = hint,
    config = {
-      timeout = 100,
+      timeout = 500,
       hint = {
          border = 'rounded',
       },
