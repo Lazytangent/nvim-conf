@@ -1,4 +1,5 @@
 local d = require('mappings.normal.leader.d')
+local f = require('mappings.normal.leader.f')
 local g = require('mappings.normal.leader.g')
 local o = require('mappings.normal.leader.o')
 local localleader = require('mappings.normal.leader.localleader')
@@ -72,6 +73,7 @@ local leader = {
   },
   d = d,
   e = "Show line diagnostics",
+  f = f,
   g = g,
   h = {
     name = "+Help",
