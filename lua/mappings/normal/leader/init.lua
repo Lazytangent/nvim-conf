@@ -48,7 +48,7 @@ local leader = {
       b = { [[:15split | term<cr>]], "Bottom terminal" },
       n = { [[:Term<cr>]],           "25 height bottom" },
     },
-    [",                               "] = { [[<c-^>]], "Last buffer" },
+    [","] = { [[<c-^>]], "Last buffer" },
     ["*"] = { [[*<C-O>:%s///gn<cr>]], "Count matches" },
   },
   a = {
