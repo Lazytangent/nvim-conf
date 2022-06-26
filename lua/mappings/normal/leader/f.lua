@@ -17,7 +17,7 @@ local f = {
   c = { telescope_builtin 'commands()', 'Commands' },
   d = { telescope_builtin 'diagnostics({ bufnr = 0 })', "Local diagnostics" },
   f = { telescope_builtin 'find_files()', "Files" },
-  g = { telescope_builtin 'live_grep_args.live_grep_args()', "Live grep" },
+  g = { telescope_extensions 'live_grep_args.live_grep_args()', "Live grep" },
   h = { telescope_builtin 'help_tags()', 'Help tags' },
   i = { telescope_builtin 'lsp_implementations()', 'LSP Implementations' },
   j = { telescope_builtin 'jumplist()', "Jumplist" },
