@@ -1,5 +1,6 @@
 local f = require('mappings.normal.leader.localleader.f')
 local l = require('mappings.normal.leader.localleader.l')
+local utils = require('mappings.utils')
 
 local localleader = {
   name = "+Local leader",
@@ -35,7 +36,7 @@ local localleader = {
     m = "Toggle table mode",
     t = "Tableize",
   },
-  ["<CR>"] = { [[<cmd>nohlsearch<cr>]], "Turn off highlight" },
+  ["<CR>"] = { utils.cmd "nohlsearch", "Turn off highlight" },
 
   B = "Swap with previous block",
   C = "Swap with previous class",
