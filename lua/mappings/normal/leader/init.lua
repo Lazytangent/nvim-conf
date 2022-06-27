@@ -42,7 +42,7 @@ local leader = {
     },
     f = { utils.cmd "vim.lsp.buf.format({ async = true })",   "Format" },
     g = { [[:set operatorfunc=GrepOperator<cr>g@]],           "Grep for word under cursor" },
-    p = { utils.cmd "require('yabs'):run_task('pre_commit')", "Run pre-commit on current file" },
+    p = { "<cmd>lua require('yabs'):run_task('pre_commit')<cr>:e<cr>", "Run pre-commit on current file" },
     t = {
       name = "+Terminal",
       b = { [[:15split | term<cr>]], "Bottom terminal" },
