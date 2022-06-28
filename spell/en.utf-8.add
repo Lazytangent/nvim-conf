@@ -1279,3 +1279,4 @@ EventBridge
 ECS
 MSK
 analytics
+entrypoint
