@@ -113,10 +113,10 @@ local leader = {
     name = "Run tests",
     a = { utils.lua_require("neotest", "run.attach()"),                  "Attach to nearest test" },
     d = { utils.lua_require("neotest", "run.run({ strategy = 'dap' })"), "Debug nearest test" },
-    f = { utils.lua_require("neotest", "run.run()"),                     "Current file" },
+    f = { utils.lua_require("neotest", "run.run(vim.fn.expand('%'))"),   "Nearest test" },
     o = { utils.lua_require("neotest", "output.open({ enter = true })"), "Open output" },
     s = { utils.lua_require("neotest", "run.stop()"),                    "Stop test" },
-    t = { utils.lua_require("neotest", "run.run(vim.fn.expand('%'))"),   "Nearest test" },
+    t = { utils.lua_require("neotest", "run.run()"),                     "Nearest test" },
 
     m = {
       name = "Summary",
