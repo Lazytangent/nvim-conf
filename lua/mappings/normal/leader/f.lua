@@ -36,6 +36,7 @@ local f = {
   D = { telescope_builtin 'lsp_definitions()', "LSP Definitions" },
   G = { telescope_builtin 'git_status()', "Git" },
   L = { telescope_extensions 'luasnip.luasnip()<cr>', "Luasnip" },
+  O = { telescope_builtin 'oldfiles()', "Old files (recent)" },
   P = { cmd [[lua require('utils.core').search_nvim()]], "Private config" },
   R = { telescope_builtin 'registers()', "Registers" },
   T = { telescope_builtin 'treesitter()', "Treesitter" },
