@@ -8,6 +8,9 @@ require('neotest').setup({
       ignore_file_types = { "python", "vim", "lua" },
     }),
   },
+  icons = {
+    running = "R",
+  },
   output = {
     open_on_run = true,
   },
