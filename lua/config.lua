@@ -89,7 +89,6 @@ LSP = {
       "tsserver",
       "vimls",
       "volar",
-      "yamlls",
     },
     regular = {
       "ccls",
@@ -108,6 +107,7 @@ LSP = {
       "sumneko_lua",
       "tailwindcss",
       "vuels",
+      "yamlls",
     },
   },
 }
