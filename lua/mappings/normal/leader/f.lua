@@ -1,51 +1,40 @@
-local cmd = function(command)
-  return table.concat({ '<cmd>', command, '<cr>' })
-end
-local telescope_builtin = function(func)
-  return cmd([[lua require('telescope.builtin').]] .. func)
-end
-local telescope_extensions = function(func)
-  return cmd([[lua require('telescope').extensions.]] .. func)
-end
-local extensions_telescope = function(func)
-  return cmd([[lua require('extensions.telescope').]] .. func)
-end
+local utils = require('mappings.utils')
 
 local f = {
-  a = { extensions_telescope 'search_all_files()', 'All files' },
-  b = { telescope_builtin 'buffers()', 'Buffers' },
-  c = { telescope_builtin 'commands()', 'Commands' },
-  d = { telescope_builtin 'diagnostics({ bufnr = 0 })', "Local diagnostics" },
-  f = { telescope_builtin 'find_files()', "Files" },
-  g = { telescope_extensions 'live_grep_args.live_grep_args()', "Live grep" },
-  h = { telescope_builtin 'help_tags()', 'Help tags' },
-  i = { telescope_builtin 'lsp_implementations()', 'LSP Implementations' },
-  j = { telescope_builtin 'jumplist()', "Jumplist" },
-  l = { telescope_builtin 'loclist()', "Loclist" },
-  m = { telescope_builtin 'marks()', "Marks" },
-  n = { telescope_builtin 'diagnostics()', "Global diagnostics" },
-  o = { telescope_builtin 'quickfixhistory()', "Quickfix History" },
-  p = { telescope_builtin 'pickers()', "Pickers" },
-  q = { telescope_builtin 'quickfix()', "Quickfix" },
-  r = { telescope_builtin 'lsp_references()', "LSP References" },
-  t = { telescope_builtin 'grep_string()', "This word" },
-  y = { cmd 'Telescope yabs tasks', "Yabs" },
+  a = { utils.extensions_telescope 'search_all_files()', 'All files' },
+  b = { utils.telescope_builtin 'buffers()', 'Buffers' },
+  c = { utils.telescope_builtin 'commands()', 'Commands' },
+  d = { utils.telescope_builtin 'diagnostics({ bufnr = 0 })', "Local diagnostics" },
+  f = { utils.telescope_builtin 'find_files()', "Files" },
+  g = { utils.telescope_extensions 'live_grep_args.live_grep_args()', "Live grep" },
+  h = { utils.telescope_builtin 'help_tags()', 'Help tags' },
+  i = { utils.telescope_builtin 'lsp_implementations()', 'LSP Implementations' },
+  j = { utils.telescope_builtin 'jumplist()', "Jumplist" },
+  l = { utils.telescope_builtin 'loclist()', "Loclist" },
+  m = { utils.telescope_builtin 'marks()', "Marks" },
+  n = { utils.telescope_builtin 'diagnostics()', "Global diagnostics" },
+  o = { utils.telescope_builtin 'quickfixhistory()', "Quickfix History" },
+  p = { utils.telescope_builtin 'pickers()', "Pickers" },
+  q = { utils.telescope_builtin 'quickfix()', "Quickfix" },
+  r = { utils.telescope_builtin 'lsp_references()', "LSP References" },
+  t = { utils.telescope_builtin 'grep_string()', "This word" },
+  y = { utils.cmd 'Telescope yabs tasks', "Yabs" },
 
-  A = { telescope_extensions 'frecency.frecency()', "Frecency" },
-  B = { telescope_extensions 'file_browser.file_browser()', "File browser" },
-  D = { telescope_builtin 'lsp_definitions()', "LSP Definitions" },
-  G = { telescope_builtin 'git_status()', "Git" },
-  L = { telescope_extensions 'luasnip.luasnip()<cr>', "Luasnip" },
-  O = { telescope_builtin 'oldfiles()', "Old files (recent)" },
-  P = { cmd [[lua require('utils.core').search_nvim()]], "Private config" },
-  R = { telescope_builtin 'registers()', "Registers" },
-  T = { telescope_builtin 'treesitter()', "Treesitter" },
+  A = { utils.telescope_extensions 'frecency.frecency()', "Frecency" },
+  B = { utils.telescope_extensions 'file_browser.file_browser()', "File browser" },
+  D = { utils.telescope_builtin 'lsp_definitions()', "LSP Definitions" },
+  G = { utils.telescope_builtin 'git_status()', "Git" },
+  L = { utils.telescope_extensions 'luasnip.luasnip()<cr>', "Luasnip" },
+  O = { utils.telescope_builtin 'oldfiles()', "Old files (recent)" },
+  P = { utils.cmd [[lua require('utils.core').search_nvim()]], "Private config" },
+  R = { utils.telescope_builtin 'registers()', "Registers" },
+  T = { utils.telescope_builtin 'treesitter()', "Treesitter" },
 
-  ['/'] = { telescope_builtin 'current_buffer_fuzzy_find()', "Search current buffer" },
-  ['?'] = { telescope_builtin 'search_history()', "Search history" },
-  [';'] = { telescope_builtin 'command_history()', "Command history" },
+  ['/'] = { utils.telescope_builtin 'current_buffer_fuzzy_find()', "Search current buffer" },
+  ['?'] = { utils.telescope_builtin 'search_history()', "Search history" },
+  [';'] = { utils.telescope_builtin 'command_history()', "Command history" },
 
-  s = { cmd "w", "Save file" },
+  s = { utils.cmd "w", "Save file" },
 }
 
 return f
