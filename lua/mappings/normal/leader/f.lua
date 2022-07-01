@@ -17,6 +17,7 @@ local f = {
   p = { utils.telescope_builtin 'pickers()', "Pickers" },
   q = { utils.telescope_builtin 'quickfix()', "Quickfix" },
   r = { utils.telescope_builtin 'lsp_references()', "LSP References" },
+  s = { utils.telescope_builtin 'resume()', "Resume" },
   t = { utils.telescope_builtin 'grep_string()', "This word" },
   y = { utils.cmd 'Telescope yabs tasks', "Yabs" },
 
