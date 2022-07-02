@@ -9,6 +9,9 @@ neotest.setup({
     require("neotest-vim-test")({
       ignore_file_types = { "python", "vim", "lua" },
     }),
+    require("neotest-jest")({
+      jestCommand = "npm test --",
+    }),
   },
   icons = {
     running = "R",
