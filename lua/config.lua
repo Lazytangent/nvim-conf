@@ -1,4 +1,6 @@
-Opts = {
+local config = {}
+
+config.Opts = {
   autoindent     = true,
   background     = "dark",
   backspace      = "eol,start,indent",
@@ -59,11 +61,11 @@ Opts = {
   writebackup    = false,
 }
 
-Theming = {
+config.Theming = {
   colorscheme = "catppuccin",
 }
 
-LSP = {
+config.LSP = {
   enabled        = true,
   highlight_word = true,
   virtual_text   = true,
@@ -112,14 +114,14 @@ LSP = {
   },
 }
 
-Completion = {
+config.Completion = {
   enabled = true,
   autopairs = true,
   items = 10,
   completeopt = "menuone,noselect",
 }
 
-Treesitter = {
+config.Treesitter = {
   enabled = true,
   rainbow = true,
   parsers = {
@@ -154,10 +156,4 @@ Treesitter = {
   }
 }
 
-Debuggers = {
-  "python",
-  "ccppr_vsc",
-  "lua",
-  "chrome",
-  "jsnode",
-}
+return config

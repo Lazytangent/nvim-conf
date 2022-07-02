@@ -1,3 +1,5 @@
+local Theming = require("config").Theming
+
 C = Theming.colorscheme
 vim.g.catppuccin_flavour = "mocha"
 
