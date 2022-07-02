@@ -35,7 +35,6 @@ packer.startup(function()
   -- LSP
   use({
     "L3MON4D3/LuaSnip",
-    "mattn/emmet-vim",
     "neovim/nvim-lspconfig",
     "rafamadriz/friendly-snippets",
     { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" } },
@@ -94,6 +93,7 @@ packer.startup(function()
     "kdheepak/lazygit.nvim",
     "nathom/filetype.nvim",
   })
+
   -- Telescope
   use({
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" }, { "nvim-telescope/telescope-live-grep-args.nvim" } } },
@@ -117,6 +117,7 @@ packer.startup(function()
     "j-hui/fidget.nvim",
     "kyazdani42/nvim-web-devicons",
     "lukas-reineke/indent-blankline.nvim",
+    "mattn/emmet-vim",
     "numToStr/Comment.nvim",
     "pianocomposer321/yabs.nvim",
     "ryanoasis/vim-devicons",
