@@ -26,7 +26,7 @@ local autocmds = {
       end,
     },
   },
-  {'BufReadPost', { command = [[setlocal nospell]], pattern = quickfix }}
+  {'BufReadPost', { command = [[setlocal nospell]], pattern = 'quickfix' }}
 }
 
 for _, cmd in ipairs(autocmds) do
