@@ -58,6 +58,6 @@ vim.api.nvim_create_user_command('AttachTest', function(args)
   neotest.run.attach()
 end, {})
 
-vim.api.nvim_create_user_command('OpenTest', function(args)
+vim.api.nvim_create_user_command('OpenTestOutput', function(args)
   neotest.output.open()
 end, {})
