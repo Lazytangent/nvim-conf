@@ -50,8 +50,6 @@ packer.startup(function()
     "hrsh7th/cmp-path",
     "hrsh7th/nvim-cmp",
     "kdheepak/cmp-latex-symbols",
-    "kristijanhusak/vim-dadbod-completion",
-    "kristijanhusak/vim-dadbod-ui",
     "lukas-reineke/cmp-rg",
     "lukas-reineke/cmp-under-comparator",
     "onsails/lspkind-nvim",
@@ -130,7 +128,6 @@ packer.startup(function()
     "folke/which-key.nvim",
 
     -- Tpope Section
-    "tpope/vim-dadbod",
     "tpope/vim-eunuch",
     "tpope/vim-fugitive",
     "tpope/vim-repeat",
