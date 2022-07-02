@@ -92,6 +92,13 @@ packer.startup(function()
     "nathom/filetype.nvim",
   })
 
+  -- Dadbod
+  use({
+    "tpope/vim-dadbod",
+    "kristijanhusak/vim-dadbod-ui",
+    "kristijanhusak/vim-dadbod-completion",
+  })
+
   -- Telescope
   use({
     { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" }, { "nvim-telescope/telescope-live-grep-args.nvim" } } },
