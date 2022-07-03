@@ -3,3 +3,5 @@ plugged
 tags
 *.spl
 *packer_compiled*
+.env
+*.sql
