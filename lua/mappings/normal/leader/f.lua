@@ -19,6 +19,7 @@ local f = {
   r = { utils.telescope_builtin 'lsp_references()', "LSP References" },
   s = { utils.telescope_builtin 'resume()', "Resume" },
   t = { utils.telescope_builtin 'grep_string()', "This word" },
+  w = { utils.telescope_extensions 'workspaces.workspaces()', "Workspaces" },
   y = { utils.cmd 'Telescope yabs tasks', "Yabs" },
 
   A = { utils.telescope_extensions 'frecency.frecency()', "Frecency" },
