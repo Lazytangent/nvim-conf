@@ -123,6 +123,7 @@ packer.startup(function()
     "kyazdani42/nvim-web-devicons",
     "lukas-reineke/indent-blankline.nvim",
     "mattn/emmet-vim",
+    "natecraddock/workspaces.nvim",
     "numToStr/Comment.nvim",
     "pianocomposer321/yabs.nvim",
     "ryanoasis/vim-devicons",
