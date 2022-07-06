@@ -1,4 +1,6 @@
-require("telescope").setup({
+local telescope = require("telescope")
+
+telescope.setup({
   defaults = require('telescope.themes').get_ivy({
     file_ignore_patterns = { "^node_modules/" },
     mappings = {
@@ -62,15 +64,19 @@ require("telescope").setup({
     ["ui-select"] = {
       require("telescope.themes").get_dropdown {}
     },
+    workspaces = {
+      keep_insert = true,
+    },
   },
 })
 
-require("telescope").load_extension('dap')
-require("telescope").load_extension('file_browser')
-require("telescope").load_extension('frecency')
-require("telescope").load_extension('fzf')
-require("telescope").load_extension('lazygit')
-require("telescope").load_extension('live_grep_args')
-require("telescope").load_extension('luasnip')
-require("telescope").load_extension('ui-select')
-require("telescope").load_extension('yabs')
+telescope.load_extension('dap')
+telescope.load_extension('file_browser')
+telescope.load_extension('frecency')
+telescope.load_extension('fzf')
+telescope.load_extension('lazygit')
+telescope.load_extension('live_grep_args')
+telescope.load_extension('luasnip')
+telescope.load_extension('ui-select')
+telescope.load_extension('workspaces')
+telescope.load_extension('yabs')
