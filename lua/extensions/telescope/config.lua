@@ -21,13 +21,19 @@ telescope.setup({
   },
 })
 
-telescope.load_extension('dap')
-telescope.load_extension('file_browser')
-telescope.load_extension('frecency')
-telescope.load_extension('fzf')
-telescope.load_extension('lazygit')
-telescope.load_extension('live_grep_args')
-telescope.load_extension('luasnip')
-telescope.load_extension('ui-select')
-telescope.load_extension('workspaces')
-telescope.load_extension('yabs')
+local extensions = {
+  'dap',
+  'file_browser',
+  'frecency',
+  'fzf',
+  'lazygit',
+  'live_grep_args',
+  'luasnip',
+  'ui-select',
+  'workspaces',
+  'yabs',
+}
+
+for _, extension in ipairs(extensions) do
+  telescope.load_extension(extension)
+end
