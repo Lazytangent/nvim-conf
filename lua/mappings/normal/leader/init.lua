@@ -37,8 +37,8 @@ local leader = {
     name = "+Utilities",
     d = {
       name = "+Diagnostics",
-      h = { utils.cmd "vim.diagnostic.hide()",   "Hide diagnostics in buffer" },
-      s = { utils.cmd "vim.diagnostic.enable()", "Show diagnostics in buffer" },
+      h = { utils.cmd "lua vim.diagnostic.hide()", "Hide diagnostics in buffer" },
+      s = { utils.cmd "lua vim.diagnostic.show()", "Show diagnostics in buffer" },
     },
     f = { utils.cmd "vim.lsp.buf.format({ async = true })",   "Format" },
     g = { [[:set operatorfunc=GrepOperator<cr>g@]],           "Grep for word under cursor" },
