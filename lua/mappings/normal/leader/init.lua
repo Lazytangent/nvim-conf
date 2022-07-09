@@ -130,6 +130,10 @@ local leader = {
   q = "Set diagnostics into location list",
   r = {
     name = "Refactoring",
+    b = { utils.lua_require("refactoring", "refactor('Extract Block')"), "Extract block" },
+    f = { utils.lua_require("refactoring", "refactor('Extract Block To File')"), "Extract block to file" },
+    i = { utils.lua_require("refactoring", "refactor('Inline Variable')"), "Inline variable" },
+
     c = { utils.lua_require("refactoring", "debug.cleanup({})"), "Clean up" },
     p = { utils.lua_require("refactoring", "debug.printf({ below = true })"), "printf" },
     v = { utils.lua_require("refactoring", "debug.print_var({ normal = true })"), "print_var" },
