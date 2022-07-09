@@ -128,6 +128,12 @@ local leader = {
     },
   },
   q = "Set diagnostics into location list",
+  r = {
+    name = "Refactoring",
+    c = { utils.lua_require("refactoring", "debug.cleanup({})"), "Clean up" },
+    p = { utils.lua_require("refactoring", "debug.printf({ below = true })"), "printf" },
+    v = { utils.lua_require("refactoring", "debug.print_var({ normal = true })"), "print_var" },
+  },
   s = {
     name = "+Spell",
     s = { utils.cmd "setlocal spell!", "Toggle spellcheck" },
