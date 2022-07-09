@@ -128,7 +128,6 @@ packer.startup(function()
     "pianocomposer321/yabs.nvim",
     "ryanoasis/vim-devicons",
     "windwp/nvim-autopairs",
-    "X3eRo0/dired.nvim",
 
     -- Folke Section
     "folke/lsp-colors.nvim",

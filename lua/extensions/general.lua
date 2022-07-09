@@ -6,7 +6,6 @@ local extensions = {
   'comment_nvim',
   'dap',
   'dbui',
-  'dired',
   'drag_visuals',
   'emmet_vim',
   'fidget',
