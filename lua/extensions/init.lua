@@ -159,4 +159,8 @@ packer.startup(function()
   })
 end)
 
-require "extensions.general"
+local extensions = require("config").Extensions
+
+for _, extension in ipairs(extensions) do
+  require("extensions." .. extension)
+end
