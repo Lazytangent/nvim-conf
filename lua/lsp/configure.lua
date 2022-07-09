@@ -8,7 +8,7 @@ local LSP = require("config").LSP
 -- and map buffer local keybindings when the language server attaches
 local regular_servers = LSP.servers.regular
 local primary_servers = LSP.servers.primary
-local configs = require("lspconfig/configs")
+local configs = require("lspconfig.configs")
 
 for _, lsp in ipairs(primary_servers) do
   nvim_lsp[lsp].setup({ on_attach = primary_on_attach, capabilities = capabilities })
