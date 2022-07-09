@@ -1,3 +1,4 @@
+require "commands.cd"
 require "commands.find"
 require "commands.gen_secret"
 require "commands.gen_uuid"
