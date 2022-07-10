@@ -171,7 +171,6 @@ config.Extensions = {
   'gh',
   'gitsigns',
   'go',
-  'hydra',
   'indent_blankline',
   'lazygit',
   'lightspeed',

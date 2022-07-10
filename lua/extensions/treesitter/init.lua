@@ -29,6 +29,9 @@ require("nvim-treesitter.configs").setup({
         list_definitions_toc = "gO",
       },
     },
+    smart_rename = {
+      enable = true,
+    },
   },
   playground = {
     enable = true,
