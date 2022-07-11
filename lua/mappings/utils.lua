@@ -5,7 +5,7 @@ utils.cmd = function(command)
 end
 
 utils.lua_cmd = function(command)
-  return utils.cmd(table.concat({ "lua", command }))
+  return utils.cmd(table.concat({ "lua", " ", command }))
 end
 
 utils.lua_require = function(module, func)
