@@ -140,12 +140,18 @@ cmp.setup.cmdline('/', {
   },{
     { name = "buffer" },
   }),
+  completion = {
+    autocomplete = { 'InsertEnter', 'TextChanged' },
+  },
 })
 
 cmp.setup.cmdline('?', {
   mapping = cmp.mapping.preset.cmdline({}),
   sources = {
     { name = "buffer" },
+  },
+  completion = {
+    autocomplete = { 'InsertEnter', 'TextChanged' },
   },
 })
 
@@ -154,5 +160,8 @@ cmp.setup.cmdline(':', {
   sources = {
     { name = 'path' },
     { name = "cmdline" },
+  },
+  completion = {
+    autocomplete = { 'InsertEnter', 'TextChanged' },
   },
 })
