@@ -1,29 +1,14 @@
 local normal = require('mappings.normal')
 local visual = require('mappings.visual')
+local insert = require('mappings.insert')
 
-local command = {
-}
+local command = {}
 
-local command_opts = {
-  mode = "c",
-}
+local command_opts = { mode = "c", }
 
-local visual_opts = {
-  mode = "v",
-}
+local visual_opts = { mode = "v", }
 
-local insert = {
-  ["<C-e>"] = {
-    name = "LuaSnip Jumps",
-    ["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
-    ["<C-p>"] = { [[<Plug>luasnip-jump-prev]],      "Prev choice" },
-    ["<C-u>"] = { [[<cmd>lua require("luasnip.extras.select_choice")()<cr>]], "Select Choice Node" },
-  },
-}
-
-local insert_opts = {
-  mode = "i",
-}
+local insert_opts = { mode = "i", }
 
 local visual_only = {
   g = {

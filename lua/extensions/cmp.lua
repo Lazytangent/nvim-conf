@@ -48,6 +48,43 @@ cmp.setup {
       i = cmp.mapping.confirm({ select = true }),
       c = cmp.mapping.confirm({ select = false }),
     }),
+    ["<C-x><C-n>"] = cmp.mapping.complete({
+      config = {
+        sources = {
+          { name = 'nvim_lsp' },
+          { name = 'nvim_lsp_document_symbol' },
+        },
+      },
+    }),
+    ["<C-x>s"] = cmp.mapping.complete({
+      config = {
+        sources = {
+          { name = "luasnip" },
+        },
+      },
+    }),
+    ["<C-x><C-o>"] = cmp.mapping.complete(),
+    ["<C-x><C-b>"] = cmp.mapping.complete({
+      config = {
+        sources = {
+          { name = "buffer" },
+        },
+      },
+    }),
+    ["<C-x><C-p>"] = cmp.mapping.complete({
+      config = {
+        sources = {
+          { name = "path" },
+        },
+      },
+    }),
+    ["<C-x><C-r>"] = cmp.mapping.complete({
+      config = {
+        sources = {
+          { name = "rg" },
+        },
+      },
+    }),
   }),
   sources = {
     { name = "nvim_lsp" },
@@ -90,6 +127,9 @@ cmp.setup {
       nvim_lua = "[Lua]",
       latex_symbols = "[Latex]",
     })}),
+  },
+  completion = {
+    autocomplete = false,
   },
 }
 
