@@ -10,6 +10,14 @@ local regular_servers = LSP.servers.regular
 local primary_servers = LSP.servers.primary
 local configs = require("lspconfig.configs")
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false,
+    signs = true,
+    update_in_insert = false,
+  }
+)
+
 for _, lsp in ipairs(primary_servers) do
   nvim_lsp[lsp].setup({ on_attach = primary_on_attach, capabilities = capabilities })
 end
