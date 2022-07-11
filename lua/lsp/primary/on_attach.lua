@@ -32,6 +32,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "<leader>e", utils.lua_cmd("vim.diagnostic.open_float()"), opts)
   buf_set_keymap("n", "[d",        utils.lua_cmd("vim.diagnostic.goto_prev()"), opts)
   buf_set_keymap("n", "]d",        utils.lua_cmd("vim.diagnostic.goto_next()"), opts)
+  buf_set_keymap("n", "[e",        utils.lua_cmd("vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })"), opts)
+  buf_set_keymap("n", "]e",        utils.lua_cmd("vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })"), opts)
   buf_set_keymap("n", "<space>q",  utils.lua_cmd("vim.diagnostic.set_loclist()"), opts)
 end
 
