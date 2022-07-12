@@ -1,20 +1,22 @@
--- Basic settings
-require "utils.handlers"
-require "config"
+-- Set up Packer
+require "utils.packer"
 
+-- Set up Leader and Local leader mappings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " m"
 
+-- Load in extensions
 require "extensions"
 
--- LSP
+-- Configure LSP
 require "lsp"
 
--- Personal config
+-- Personal config stuff
 require "basic"
+require "commands"
 
 -- GUI Config
 require "guis"
-require "commands"
 
+-- Start Cfilter for Quickfix list
 vim.api.nvim_command "packadd! cfilter"
