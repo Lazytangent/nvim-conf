@@ -9,6 +9,7 @@ require('filetype').setup {
       [".sequelizerc"] = "javascript",
       [".vaultrc"] = "zsh",
       ["Dockerfile.dev"] = "dockerfile",
+      [".env"] = "sh",
     },
   }
 }
