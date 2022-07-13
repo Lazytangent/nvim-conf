@@ -1,4 +1,10 @@
-require "basic.autocmds"
-require "basic.colorscheme"
-require "basic.mappings"
-require "basic.options"
+local modules = {
+  "autocmds",
+  "colorscheme",
+  "mappings",
+  "options",
+}
+
+for _, module in ipairs(modules) do
+  require("basic." .. module)
+end
