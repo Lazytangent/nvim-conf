@@ -184,6 +184,7 @@ config.Extensions = {
   'orgmode',
   'refactoring',
   'spellsitter',
+  'surround',
   'swift',
   'telescope',
   'terminal',

@@ -118,6 +118,7 @@ packer.startup(function()
     "ggandor/lightspeed.nvim",
     "j-hui/fidget.nvim",
     "kyazdani42/nvim-web-devicons",
+    "kylechui/nvim-surround",
     "lukas-reineke/indent-blankline.nvim",
     "mattn/emmet-vim",
     "natecraddock/workspaces.nvim",
@@ -136,7 +137,6 @@ packer.startup(function()
     "tpope/vim-eunuch",
     "tpope/vim-fugitive",
     "tpope/vim-repeat",
-    "tpope/vim-surround",
     "tpope/vim-unimpaired",
 
     -- Testing
