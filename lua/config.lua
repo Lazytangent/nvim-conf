@@ -99,17 +99,14 @@ config.LSP = {
       "terraform_lsp",
     },
     custom = {
-      "denols",
-      "elixirls",
-      "emmet_ls",
-      "gopls",
-      "java_language_server",
+      "deno",
+      "elixir",
+      "go",
+      "java",
       "jsonls",
-      "sqlls",
-      "sumneko_lua",
-      "tailwindcss",
-      "vuels",
-      "yamlls",
+      "sql",
+      "vue",
+      "yaml",
     },
   },
 }
@@ -156,6 +153,9 @@ config.Treesitter = {
   }
 }
 
+-- Plugins that need extra configuration
+-- These names need to align with one of the files/directories in the
+-- lua/extensions directory
 config.Extensions = {
   'autopairs',
   'bullets',

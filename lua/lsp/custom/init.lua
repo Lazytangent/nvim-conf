@@ -1,9 +1,5 @@
-require 'lsp.custom.deno'
-require 'lsp.custom.elixir'
-require 'lsp.custom.go'
-require 'lsp.custom.java'
-require 'lsp.custom.jsonls'
--- require 'lsp.custom.pyright'
-require 'lsp.custom.sql'
-require 'lsp.custom.vue'
-require 'lsp.custom.yamlls'
+local servers = require("config").LSP.servers.custom
+
+for _, server in ipairs(servers) do
+  require("lsp.custom." .. server)
+end
