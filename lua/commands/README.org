@@ -1,0 +1,32 @@
+#+title: User Commands
+
+Documents the custom User Commands created.
+
+** =:Cd=
+- Changes the working directory to the directory of the file in the focused
+  buffer
+
+- Changes the working directory of the entire Neovim instance
+
+** =:Lcd=
+- Changes the working directory of the buffer/pane and its children to the
+  directory of the file in the focused buffer
+
+** =:Find=
+- Shortcut for =:Telescope find_files= command
+
+** =:FindAll=
+- Shortcut for =:Telescope find_files previewer=false hidden=true=
+- Search through all files, including hidden ones
+
+** =:GenSecret=
+- Generates a secret with Python
+
+** =:GenUuid=
+- Generates a UUID4 with Python
+
+** =:Touch <name>=
+- Creates files with =touch=
+
+** =:Yabs=
+- Run something with Yabs
