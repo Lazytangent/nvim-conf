@@ -1,9 +1,14 @@
 local dap = require "dap"
+local utils = require("utils.core")
 dap.set_log_level "DEBUG"
 
-require 'extensions.dap_python'
-require 'extensions.dap_ui'
-require 'extensions.dap_virtual_text'
+local modules = {
+  'dap_python',
+  'dap_ui',
+  'dap_virtual_text',
+}
+
+utils.load_modules("extensions", modules)
 
 local custom_python_configs = {
   {

@@ -1,3 +1,5 @@
+local utils = require("utils.core")
+
 local modules = {
   "autocmds",
   "colorscheme",
@@ -5,6 +7,4 @@ local modules = {
   "options",
 }
 
-for _, module in ipairs(modules) do
-  require("basic." .. module)
-end
+utils.load_modules("basic", modules)

@@ -1,5 +1,4 @@
 local servers = require("config").LSP.servers.custom
+local utils = require("utils.core")
 
-for _, server in ipairs(servers) do
-  require("lsp.custom." .. server)
-end
+utils.load_modules("lsp.custom", servers)

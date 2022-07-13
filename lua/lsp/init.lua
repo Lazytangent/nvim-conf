@@ -1,4 +1,10 @@
-require "lsp.formatting"
-require "lsp.configure"
-require "lsp.efm"
-require "lsp.custom"
+local utils = require("utils.core")
+
+local modules = {
+  "formatting",
+  "configure",
+  "efm",
+  "custom",
+}
+
+utils.load_modules("lsp", modules)

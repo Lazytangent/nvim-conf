@@ -1,3 +1,5 @@
+local utils = require("utils.core")
+
 local modules = {
   "cd",
   "find",
@@ -7,6 +9,4 @@ local modules = {
   "yabs",
 }
 
-for _, module in ipairs(modules) do
-  require("commands." .. module)
-end
+utils.load_modules("commands", modules)
