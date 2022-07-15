@@ -125,6 +125,7 @@ packer.startup(function()
     "numToStr/Comment.nvim",
     "pianocomposer321/yabs.nvim",
     "ryanoasis/vim-devicons",
+    "sindrets/diffview.nvim",
     "windwp/nvim-autopairs",
 
     -- Folke Section

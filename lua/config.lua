@@ -164,6 +164,7 @@ config.Extensions = {
   'comment_nvim',
   'dap',
   'dbui',
+  'diffview',
   'drag_visuals',
   'emmet_vim',
   'fidget',
