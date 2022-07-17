@@ -2,6 +2,6 @@ local lsp = require('lspconfig')
 local capabilities = require('lsp.capabilities')
 
 lsp.elixirls.setup {
-  cmd = { "elixirls" },
+  cmd = { "elixir-ls" },
   capabilities = capabilities,
 }
