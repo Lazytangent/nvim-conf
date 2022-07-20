@@ -1,4 +1,5 @@
 local leader = require('mappings.normal.leader')
+local utils = require('mappings.utils')
 
 local normal = {
   ["<leader>"] = leader,
@@ -6,6 +7,8 @@ local normal = {
     a = { [[<Plug>(EasyAlign)]], "Easy Align" },
     b = "toggle blockwise comment",
     c = "toggle linewise comment",
+    l = { utils.lua_require("leap-ast", "leap()"), "Leap AST" },
+
     ["<"] = {
       name = "+Uncomment",
       b = "with blockwise comment",

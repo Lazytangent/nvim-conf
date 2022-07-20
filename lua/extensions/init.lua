@@ -116,6 +116,8 @@ packer.startup(function()
     "dhruvasagar/vim-table-mode",
     "dkarter/bullets.vim",
     "ggandor/lightspeed.nvim",
+    "ggandor/leap.nvim",
+    "ggandor/leap-ast.nvim",
     "j-hui/fidget.nvim",
     "kyazdani42/nvim-web-devicons",
     "kylechui/nvim-surround",
