@@ -23,9 +23,9 @@ require("lualine").setup {
     },
   },
   winbar = {
-    lualine_x = {'filename'},
+    lualine_y = {{'filename', path = 1}},
   },
   inactive_winbar = {
-    lualine_x = {'filename'},
+    lualine_y = {{'filename', path = 1}},
   },
 }
