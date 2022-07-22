@@ -56,7 +56,6 @@ config.Opts = {
   wildignore     = "*.o,*~,*.pyc,*/.git/*,*.hg/*,*/.svn/*,*/.DS_Store",
   wildmenu       = true,
   wildmode       = "longest,list:full",
-  winbar         = "%n%=%m %t",
   wrap           = true,
   writebackup    = false,
 }
