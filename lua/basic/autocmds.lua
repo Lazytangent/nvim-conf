@@ -1,17 +1,19 @@
+local group = vim.api.nvim_create_augroup("CustomGroups", {})
+
 local autocmds = {
   -- Highlight on yank
-  {'TextYankPost', { callback = function() require('vim.highlight').on_yank() end }},
+  {'TextYankPost', { callback = function() require('vim.highlight').on_yank() end, group = group }},
   -- Remember cursor position
-  {'BufReadPost', { command = [[if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit' | exe "normal! g'\"" | endif]] }},
+  {'BufReadPost', { command = [[if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit' | exe "normal! g'\"" | endif]], group = group }},
   -- Remove trailing whitespace
-  {'BufWritePre', { command = [[%s/\s\+$//e]] }},
-  {'BufWritePre', { command = [[%s/\n\+\%$//e]] }},
+  {'BufWritePre', { command = [[%s/\s\+$//e]], group = group }},
+  {'BufWritePre', { command = [[%s/\n\+\%$//e]], group = group }},
   -- Terminal buffer defaults
-  {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]] }},
-  {'TermOpen', { command = 'startinsert' }},
+  {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]], group = group }},
+  {'TermOpen', { command = 'startinsert', group = group }},
   -- Update file if file has been updated outside of buffer
-  {{'FocusGained', 'BufEnter'}, { command = 'checktime' }},
-  {'StdinReadPre', { command = [[let s:std_in=1]] }},
+  {{'FocusGained', 'BufEnter'}, { command = 'checktime', group = group }},
+  {'StdinReadPre', { command = [[let s:std_in=1]], group = group }},
   {'ModeChanged',
     {
       callback = function()
@@ -24,9 +26,10 @@ local autocmds = {
           luasnip.unlink_current()
         end
       end,
+      group = group,
     },
   },
-  {'BufReadPost', { command = [[setlocal nospell]], pattern = 'quickfix' }}
+  {'BufReadPost', { command = [[setlocal nospell]], pattern = 'quickfix', group = group }}
 }
 
 for _, cmd in ipairs(autocmds) do
