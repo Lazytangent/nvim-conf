@@ -89,10 +89,10 @@ cmp.setup {
   sources = {
     { name = "nvim_lsp" },
     { name = "luasnip" },
+    { name = "nvim_lua" },
     { name = "buffer" },
     { name = 'rg' },
     { name = "calc" },
-    { name = "nvim_lua" },
     { name = "latex_symbols" },
     { name = 'nvim_lsp_document_symbol' },
     { name = 'orgmode' },
@@ -120,13 +120,17 @@ cmp.setup {
     ghost_text = true,
   },
   formatting = {
-    format = require('lspkind').cmp_format({ with_text = true, manu = ({
-      buffer = "[Buffer]",
-      nvim_lsp = "[LSP]",
-      luasnip = "[LuaSnip]",
-      nvim_lua = "[Lua]",
-      latex_symbols = "[Latex]",
-    })}),
+    format = require('lspkind').cmp_format({
+      mode = "test_symbol",
+      menu = ({
+        buffer = "[Buffer]",
+        ripgrep = "[Rg]",
+        nvim_lsp = "[LSP]",
+        luasnip = "[LuaSnip]",
+        nvim_lua = "[Nvim Lua]",
+        latex_symbols = "[Latex]",
+      })
+    }),
   },
   completion = {
     autocomplete = false,
