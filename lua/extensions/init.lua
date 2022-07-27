@@ -156,6 +156,7 @@ packer.startup(function()
     "tversteeg/registers.nvim",
     "wellle/targets.vim",
     'kyazdani42/nvim-tree.lua',
+    { '0x100101/lab.nvim', run = 'nvm use 16 && cd js && npm ci' },
   })
 end)
 
