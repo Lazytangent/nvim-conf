@@ -6,6 +6,12 @@ require("lualine").setup {
     icons_enabled = false,
     disabled_filetypes = {'NvimTree'},
     extensions = { 'quickfix', 'fugitive' },
+    globalstatus = true,
+    refresh = {
+      statusline = 500,
+      tabline = 1000,
+      winbar = 1000,
+    },
   },
   sections = {
     lualine_a = {
@@ -17,7 +23,7 @@ require("lualine").setup {
     },
     lualine_c = {
       "os.date('%c')",
-      { 'filename', file_status = true, path = 1 },
+      { 'filename', file_status = true },
       'diff',
       { gps.get_location, cond = gps.is_available },
     },
