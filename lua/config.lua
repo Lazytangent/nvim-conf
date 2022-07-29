@@ -171,7 +171,6 @@ config.Extensions = {
   'gitsigns',
   'go',
   'indent_blankline',
-  'lab',
   'lazygit',
   'lightspeed',
   'lsp_colors',
