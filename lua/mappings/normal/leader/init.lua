@@ -31,7 +31,8 @@ local leader = {
       a = "Add workspace folder",
       r = "Remove workspace folder",
       l = "List workspace folders",
-    }
+    },
+    x = { utils.cmd "luafile %", "Run luafile" },
   },
   [","] = {
     name = "+Utilities",
