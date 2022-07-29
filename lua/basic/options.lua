@@ -45,6 +45,7 @@ u.opt("g", "tags",           Opts.tags)
 u.opt("o", "completeopt",    Completion.completeopt)
 u.opt("o", "shell",          Opts.shell)
 u.opt("o", "laststatus",     Opts.laststatus)
+u.opt("o", "winbar",         Opts.winbar)
 
 -- Window
 u.opt("w", "relativenumber", Opts.relativenumber)

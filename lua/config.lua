@@ -58,6 +58,7 @@ config.Opts = {
   wildmode       = "longest,list:full",
   wrap           = true,
   writebackup    = false,
+  winbar         = "%n%=%m %t"
 }
 
 config.Theming = {
