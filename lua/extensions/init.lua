@@ -47,6 +47,7 @@ packer.startup(function()
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lsp-document-symbol",
     "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-omni",
     "hrsh7th/cmp-path",
     "hrsh7th/nvim-cmp",
     "kdheepak/cmp-latex-symbols",

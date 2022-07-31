@@ -85,6 +85,13 @@ cmp.setup {
         },
       },
     }),
+    ["<C-x><C-x>"] = cmp.mapping.complete({
+      config = {
+        sources = cmp.config.sources({
+          { name = "omni" },
+        }),
+      },
+    })
   }),
   sources = {
     { name = "nvim_lsp" },
@@ -101,7 +108,7 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      luasnip.lsp_expand(args.body)
     end
   },
   sorting = {
@@ -136,6 +143,12 @@ cmp.setup {
     autocomplete = false,
   },
 }
+
+cmp.setup.filetype('gitcommit', {
+  sources = cmp.config.sources({
+    { name = 'buffer' },
+  }),
+})
 
 cmp.setup.cmdline('/', {
   mapping = cmp.mapping.preset.cmdline({}),
