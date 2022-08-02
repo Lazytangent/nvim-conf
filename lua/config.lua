@@ -158,7 +158,6 @@ config.Treesitter = {
 -- lua/extensions directory
 config.Extensions = {
   'autopairs',
-  'bullets',
   'catppucchin',
   'cmp',
   'comment_nvim',
