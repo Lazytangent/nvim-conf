@@ -5,3 +5,4 @@ tags
 *packer_compiled*
 .env
 *.sql
+log.txt
