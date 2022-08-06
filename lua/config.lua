@@ -181,6 +181,7 @@ config.Extensions = {
   'null_ls',
   'nvim_gps',
   'nvim_tree',
+  'onedark',
   'orgmode',
   'refactoring',
   'spellsitter',

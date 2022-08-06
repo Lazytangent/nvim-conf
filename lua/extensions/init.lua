@@ -12,6 +12,7 @@ packer.startup(function()
   use({
     "folke/tokyonight.nvim",
     "nvim-lualine/lualine.nvim",
+    'navarasu/onedark.nvim',
     'B4mbus/oxocarbon-lua.nvim',
     { "catppuccin/nvim", as = "catppuccin" },
   })
