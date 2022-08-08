@@ -10,7 +10,7 @@ require("nvim-treesitter.configs").setup({
   highlight = {
     enable = true,
     disable = function(lang, bufnr)
-      for _, disabled_lang in Treesitter.disabled do
+      for _, disabled_lang in ipairs(Treesitter.disabled) do
         if lang == disabled_lang then
           return true
         end
