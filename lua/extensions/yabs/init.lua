@@ -16,6 +16,14 @@ require('yabs'):setup({
         },
       },
     },
+    rust = {
+      tasks = {
+        rustfmt = {
+          command = "rustfmt %",
+          output = "quickfix",
+        },
+      },
+    },
   },
   tasks = {
     pre_commit = {

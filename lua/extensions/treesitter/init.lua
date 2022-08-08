@@ -9,7 +9,15 @@ require("nvim-treesitter.configs").setup({
 
   highlight = {
     enable = true,
-    disable = { "latex", "tex" },
+    disable = function(lang, bufnr)
+      for _, disabled_lang in Treesitter.disabled do
+        if lang == disabled_lang then
+          return true
+        end
+      end
+
+      return vim.api.nvim_buf_line_count(bufnr) > 50000
+    end,
     additional_vim_regex_highlighting = { "latex", "tex", "org", "html", "swift", "kitty" },
   },
   incremental_selection = {

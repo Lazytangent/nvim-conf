@@ -120,6 +120,7 @@ config.Completion = {
 
 config.Treesitter = {
   enabled = true,
+  disabled = { 'latex', 'tex' },
   rainbow = true,
   parsers = {
     "bash",
