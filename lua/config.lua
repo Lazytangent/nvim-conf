@@ -184,6 +184,7 @@ config.Extensions = {
   'onedark',
   'orgmode',
   'refactoring',
+  'rust_tools',
   'spellsitter',
   'surround',
   'swift',

@@ -85,6 +85,7 @@ packer.startup(function()
     "mrdotb/vim-tailwindcss",
     "nvim-orgmode/orgmode.nvim",
     "ray-x/go.nvim",
+    "simrat39/rust-tools.nvim",
     "tami5/swift.nvim",
   })
 
