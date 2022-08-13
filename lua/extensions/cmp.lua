@@ -132,6 +132,7 @@ cmp.setup {
       menu = ({
         buffer = "[Buffer]",
         ripgrep = "[Rg]",
+        rg = "[Rg]",
         nvim_lsp = "[LSP]",
         luasnip = "[LuaSnip]",
         nvim_lua = "[Nvim Lua]",
