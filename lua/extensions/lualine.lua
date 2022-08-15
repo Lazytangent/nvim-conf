@@ -1,11 +1,13 @@
 local gps = require('nvim-gps')
 
 require("lualine").setup {
+  extensions = { 'quickfix', 'fugitive' },
   options = {
     theme = 'auto',
     icons_enabled = false,
-    disabled_filetypes = {'NvimTree'},
-    extensions = { 'quickfix', 'fugitive' },
+    disabled_filetypes = {
+      statusline = {'NvimTree'},
+    },
     globalstatus = true,
     refresh = {
       statusline = 500,
