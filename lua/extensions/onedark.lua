@@ -1,3 +1,3 @@
 require('onedark').setup {
-    style = 'darker'
+  style = 'deep'
 }
