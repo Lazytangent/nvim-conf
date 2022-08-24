@@ -155,8 +155,8 @@ local leader = {
     p = { utils.cmd "tabprev", "Prev tab" },
     t = "Tableize",
 
-    ["["] = { utils.cmd "tabnext", "Next tab" },
-    ["]"] = { utils.cmd "tabprev", "Prev tab" },
+    ["["] = { utils.cmd "tabprev", "Next tab" },
+    ["]"] = { utils.cmd "tabnext", "Prev tab" },
   },
   x = {
     name = "+Trouble",
