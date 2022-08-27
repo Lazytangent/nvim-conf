@@ -116,7 +116,7 @@ packer.startup(function()
 
   use({
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
-    --[[ "andymass/vim-matchup", ]]
+    "andymass/vim-matchup",
     "dhruvasagar/vim-table-mode",
     "ggandor/lightspeed.nvim",
     "ggandor/leap.nvim",
