@@ -4,7 +4,7 @@ require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
 
   indent = { enable = false },
-  matchup = { enable = true },
+  --[[ matchup = { enable = true }, ]]
   rainbow = { enable = Treesitter.rainbow, extended_mode = true },
 
   highlight = {
