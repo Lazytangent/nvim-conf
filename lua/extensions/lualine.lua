@@ -36,4 +36,11 @@ require("lualine").setup {
   inactive_winbar = {
     lualine_y = {{'filename', path = 1}},
   },
+  tabline = {
+    lualine_a = {
+      {
+        'tabs',
+      },
+    },
+  },
 }
