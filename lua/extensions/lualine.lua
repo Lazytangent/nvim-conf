@@ -30,7 +30,7 @@ require("lualine").setup {
     },
   },
   winbar = {
-    lualine_a = {{ gps.get_location, cond = gps.is_available }},
+    lualine_c = {{ gps.get_location, cond = gps.is_available }},
     lualine_y = {{'filename', path = 1}},
   },
   inactive_winbar = {
