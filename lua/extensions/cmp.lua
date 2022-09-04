@@ -63,13 +63,13 @@ cmp.setup {
         },
       },
     }),
-    ["<C-x>S"] = cmp.mappings.complete({
+    ["<C-x>S"] = cmp.mapping.complete({
       config = {
         sources = {
           { name = "spell" },
         },
       },
-    })
+    }),
     ["<C-x><C-o>"] = cmp.mapping.complete(),
     ["<C-x><C-b>"] = cmp.mapping.complete({
       config = {
