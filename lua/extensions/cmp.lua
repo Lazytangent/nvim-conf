@@ -63,6 +63,13 @@ cmp.setup {
         },
       },
     }),
+    ["<C-x>S"] = cmp.mappings.complete({
+      config = {
+        sources = {
+          { name = "spell" },
+        },
+      },
+    })
     ["<C-x><C-o>"] = cmp.mapping.complete(),
     ["<C-x><C-b>"] = cmp.mapping.complete({
       config = {
@@ -99,6 +106,7 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "buffer" },
     { name = 'rg' },
+    { name = 'treesitter' },
     { name = "calc" },
     { name = "latex_symbols" },
     { name = 'nvim_lsp_document_symbol' },

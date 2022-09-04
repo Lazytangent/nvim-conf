@@ -91,7 +91,6 @@ packer.startup(function()
 
   -- Quality of Life Improvements
   use({
-    "jamestthompson3/nvim-remote-containers",
     "kdheepak/lazygit.nvim",
     "nathom/filetype.nvim",
   })
