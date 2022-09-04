@@ -27,10 +27,10 @@ require("lualine").setup {
       "os.date('%c')",
       { 'filename', file_status = true },
       'diff',
-      { gps.get_location, cond = gps.is_available },
     },
   },
   winbar = {
+    lualine_a = {{ gps.get_location, cond = gps.is_available }},
     lualine_y = {{'filename', path = 1}},
   },
   inactive_winbar = {
