@@ -158,6 +158,7 @@ packer.startup(function()
     "tversteeg/registers.nvim",
     "wellle/targets.vim",
     'kyazdani42/nvim-tree.lua',
+    "pwntester/octo.nvim",
   })
 end)
 
