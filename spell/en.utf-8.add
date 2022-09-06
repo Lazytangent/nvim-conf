@@ -1297,3 +1297,6 @@ PROJ
 #esposne
 resposne/!
 arg
+Threadpool
+MangaDex
+Redis
