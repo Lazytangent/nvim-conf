@@ -7,3 +7,12 @@ if vim.g.goneovim == 1 then
 end
 
 require('guis.neovide')
+
+if vim.fn.has("gui_vimr") == 1 then
+  vim.cmd [[ echo "in vimr block" ]]
+
+  vim.cmd [[
+    colorscheme oxocarbon-lua
+    colorscheme catppuccin
+  ]]
+end
