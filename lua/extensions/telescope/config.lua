@@ -34,6 +34,7 @@ local extensions = {
   'lazygit',
   'live_grep_args',
   'luasnip',
+  'project',
   'refactoring',
   'ui-select',
   'workspaces',

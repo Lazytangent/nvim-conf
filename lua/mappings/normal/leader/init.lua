@@ -127,6 +127,8 @@ local leader = {
       d = { utils.telescope_builtin "lsp_document_diagnostics()",  "Document" },
       w = { utils.telescope_builtin "lsp_workspace_diagnostics()", "Workspace" },
     },
+
+    p = { utils.telescope_extensions "project.project()", "Telescope: Project" },
   },
   q = "Set diagnostics into location list",
   r = {

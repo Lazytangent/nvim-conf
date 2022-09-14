@@ -110,6 +110,7 @@ packer.startup(function()
     "nvim-telescope/telescope-dap.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
+    "nvim-telescope/telescope-project.nvim",
     "benfowler/telescope-luasnip.nvim",
   })
 
