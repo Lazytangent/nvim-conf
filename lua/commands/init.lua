@@ -6,6 +6,7 @@ local modules = {
   "gen_secret",
   "gen_uuid",
   "go_run",
+  "jq",
   "touch",
   "yabs",
 }
