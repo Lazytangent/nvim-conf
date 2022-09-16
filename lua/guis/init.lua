@@ -16,3 +16,9 @@ if vim.fn.has("gui_vimr") == 1 then
     colorscheme catppuccin
   ]]
 end
+
+if vim.g.neovide then
+  vim.cmd [[
+    set guifont="Fira Code Nerd Font"
+  ]]
+end
