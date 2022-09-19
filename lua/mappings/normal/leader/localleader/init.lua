@@ -41,6 +41,8 @@ local localleader = {
   B = "Swap with previous block",
   C = "Swap with previous class",
   M = "Swap with previous method/function",
+
+  ["'"] = { utils.lua_require("femaco.edit", "edit_code_block()"), "Edit code block with FeMaco" },
 }
 
 return localleader
