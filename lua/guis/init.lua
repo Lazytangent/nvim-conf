@@ -6,8 +6,6 @@ if vim.g.goneovim == 1 then
   require("guis.goneovim")
 end
 
-require('guis.neovide')
-
 if vim.fn.has("gui_vimr") == 1 then
   vim.cmd [[ echo "in vimr block" ]]
 
@@ -18,7 +16,9 @@ if vim.fn.has("gui_vimr") == 1 then
 end
 
 if vim.g.neovide then
+  print('here')
   vim.cmd [[
-    set guifont="Fira Code Nerd Font"
+    set guifont=FiraCode\ Nerd\ Font
   ]]
+  require('guis.neovide')
 end
