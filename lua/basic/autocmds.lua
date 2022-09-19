@@ -5,9 +5,6 @@ local autocmds = {
   {'TextYankPost', { callback = function() require('vim.highlight').on_yank() end, group = group }},
   -- Remember cursor position
   {'BufReadPost', { command = [[if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit' | exe "normal! g'\"" | endif]], group = group }},
-  -- Remove trailing whitespace
-  {'BufWritePre', { command = [[%s/\s\+$//e]], group = group }},
-  {'BufWritePre', { command = [[%s/\n\+\%$//e]], group = group }},
   -- Terminal buffer defaults
   {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]], group = group }},
   {'TermOpen', { command = 'startinsert', group = group }},

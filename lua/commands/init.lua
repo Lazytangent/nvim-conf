@@ -8,6 +8,7 @@ local modules = {
   "go_run",
   "jq",
   "touch",
+  "trim",
   "yabs",
 }
 
