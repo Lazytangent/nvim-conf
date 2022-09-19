@@ -166,6 +166,7 @@ config.Extensions = {
   'diffview',
   'drag_visuals',
   'emmet_vim',
+  'femaco',
   'fidget',
   'filetype',
   'gitsigns',

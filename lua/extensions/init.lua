@@ -93,6 +93,7 @@ packer.startup(function()
   use({
     "kdheepak/lazygit.nvim",
     "nathom/filetype.nvim",
+    "AckslD/nvim-FeMaco.lua",
   })
 
   -- Dadbod
