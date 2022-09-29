@@ -82,6 +82,7 @@ packer.startup(function()
     { "fladson/vim-kitty", ft = "kitty" },
     { "hashivim/vim-terraform", ft = "terraform" },
     "b0o/schemastore.nvim",
+    "carbon-language/vim-carbon-lang",
     "keith/swift.vim",
     "mrdotb/vim-tailwindcss",
     "nvim-orgmode/orgmode.nvim",
