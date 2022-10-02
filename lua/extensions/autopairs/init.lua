@@ -39,3 +39,6 @@ npairs.add_rules {
     end),
   Rule('{% ', ' %', { 'html', 'htmldjango', 'htmljinja' }),
 }
+
+npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp" }
+npairs.get_rule("'")[1]:with_pair(cond.not_after_text("&"))
