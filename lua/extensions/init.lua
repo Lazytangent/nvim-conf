@@ -89,6 +89,7 @@ packer.startup(function()
     "ray-x/go.nvim",
     "simrat39/rust-tools.nvim",
     "tami5/swift.nvim",
+    "mfussenegger/nvim-jdtls",
   })
 
   -- Quality of Life Improvements
