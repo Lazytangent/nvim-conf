@@ -155,6 +155,7 @@ config.Treesitter = {
 -- These names need to align with one of the files/directories in the
 -- lua/extensions directory
 config.Extensions = {
+  'autolist',
   'autopairs',
   'catppucchin',
   'cmp',
