@@ -16,7 +16,6 @@ if vim.fn.has("gui_vimr") == 1 then
 end
 
 if vim.g.neovide then
-  print('here')
   vim.cmd [[
     set guifont=FiraCode\ Nerd\ Font
   ]]
