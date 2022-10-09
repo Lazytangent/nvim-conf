@@ -7,6 +7,7 @@ local modules = {
   "gen_uuid",
   "go_run",
   "jq",
+  "nuke_plugins",
   "touch",
   "trim",
   "yabs",
