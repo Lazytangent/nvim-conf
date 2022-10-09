@@ -3,7 +3,6 @@ require('Comment').setup {
   mappings = {
     basic = true,
     extra = true,
-    extended = true,
   },
   pre_hook = function(ctx)
     local u = require('Comment.utils')
