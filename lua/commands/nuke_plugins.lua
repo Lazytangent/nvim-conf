@@ -1,4 +1,5 @@
 local util = require("packer.util")
+local packer = require("packer")
 
 local M = {}
 
@@ -42,4 +43,24 @@ local nuke = function()
   vim.notify("Plugins have been nuked. Packer will re-install itself, but you'll probably have to reinstall the plugins yourself by running :PackerSync")
 end
 
+local nuke_plugin = function(opts)
+  local plugin = opts.fargs[1]
+
+  local plugin_dir = util.join_paths(vim.fn.stdpath("data"), "site", "pack", "packer")
+  local matching_paths = vim.fs.find(plugin, { path = plugin_dir })
+
+  -- Check for empty matching paths
+  local path = matching_paths[1]
+  if path == nil then
+    print("No matching plugin found")
+  end
+
+  M.rm_dir(path)
+  print("Plugin " .. plugin .. " has been nuked. You can reinstall it by running :PackerSync")
+end
+
 vim.api.nvim_create_user_command("NukePlugins", nuke, {})
+vim.api.nvim_create_user_command("NukePlugin", nuke_plugin, {
+  nargs = 1,
+  complete = packer.plugin_complete,
+})
