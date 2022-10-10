@@ -6,3 +6,4 @@ tags
 .env
 *.sql
 log.txt
+test.json
