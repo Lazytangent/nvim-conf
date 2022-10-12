@@ -53,6 +53,7 @@ ls.add_snippets('org', org)
 ls.add_snippets('terraform', terraform)
 ls.add_snippets('tex', tex)
 ls.add_snippets('typescript', javascript)
+ls.add_snippets('typescriptreact', javascript)
 ls.add_snippets('vue', vue)
 
 require("luasnip.loaders.from_vscode").load({ paths = "~/.config/nvim/lua/snippets" })
