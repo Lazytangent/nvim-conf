@@ -1,5 +1,5 @@
 local lsp = require('lspconfig')
-local on_attach = require('lsp.regular.on_attach')
+local on_attach = require('lsp.primary.on_attach')
 local capabilities = require('lsp.capabilities')
 
 lsp.gopls.setup {
