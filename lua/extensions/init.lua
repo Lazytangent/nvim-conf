@@ -99,6 +99,7 @@ packer.startup(function()
     "nathom/filetype.nvim",
     "AckslD/nvim-FeMaco.lua",
     "gaoDean/autolist.nvim",
+    "monaqa/dial.nvim",
   })
 
   -- Dadbod

@@ -162,6 +162,7 @@ config.Extensions = {
   'comment_nvim',
   'dap',
   'dbui',
+  'dial',
   'diffview',
   'drag_visuals',
   'emmet_vim',
