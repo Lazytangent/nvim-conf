@@ -66,11 +66,12 @@ local leader = {
     l = { utils.telescope_builtin "buffers()", "List buffers" },
     n = { utils.cmd "bnext",                   "Next buffer" },
     p = { utils.cmd "bprevious",               "Prev buffer" },
+    w = { utils.cmd "bwipeout",                "Wipeout buffer", },
   },
   c = {
     name = "+Change",
     c = { utils.telescope_builtin "colorscheme()", "colorscheme" },
-    d = { utils.cmd "cd %:p:h",                       "Change working directory" },
+    d = { utils.cmd "cd %:p:h",                    "Change working directory" },
   },
   e = "Show line diagnostics",
   f = f,
