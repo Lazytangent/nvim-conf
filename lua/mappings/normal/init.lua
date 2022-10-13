@@ -135,7 +135,7 @@ local normal = {
     ["["] = "Next class start",
     ["]"] = "Next class end",
   },
-  ["<C-a>"] = { utils.lua_require("dial.map", "inc_normal()"), "Increment with dial" },
+  ["<C-a>"] = { require("dial.map").inc_normal(), "Increment with dial" },
   ["<C-B>"] = "Back up a page",
   ["<C-F>"] = "Forward down a page",
   ["<C-D>"] = "Down half a page",
@@ -147,7 +147,7 @@ local normal = {
     name = "+Window commands",
     d = { [[<cmd>vsplit<cr><cmd>lua vim.lsp.buf.definition()<cr>]], "Vertical split and Go to definition" },
   },
-  ["<C-x>"] = { utils.lua_require("dial.map", "dec_normal()"), "Decrement with dial" },
+  ["<C-x>"] = { require("dial.map").dec_normal(), "Decrement with dial" },
   ["c"] = {
     name = "Change",
     ["*"] = { [[/\<<C-r>=expand('<cword>')<cr>\>\C<cr>``cgn]], "Word and search forward" },
