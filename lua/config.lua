@@ -190,7 +190,6 @@ config.Extensions = {
   'orgmode',
   'refactoring',
   'rust_tools',
-  'spellsitter',
   'surround',
   'swift',
   'telescope',
