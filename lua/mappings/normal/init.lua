@@ -43,6 +43,7 @@ local normal = {
       v = "virtualedit",
       w = "wrap",
       x = "crosshairs",
+      z = { [[<cmd>if exists("g:syntax_on") <Bar> syntax off <Bar> else <Bar> syntax enable <Bar> endif<cr>]], "Toggle syntax" },
     },
   },
   ["*"] = { [[*``]], "*" },
