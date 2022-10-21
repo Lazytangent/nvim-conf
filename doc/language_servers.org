@@ -1,0 +1,86 @@
+#+title: Language Servers
+
+- angularls
+- bashls
+- clangd
+- cssls
+- dockerls
+- graphql
+- html
+- jedi_language_server
+- prismals
+- rls
+- solargraph
+- sourcekit
+- stylelint_lsp
+- texlab
+- tsserver
+- vimls
+- volar
+
+- ccls
+- pylsp
+- terraformls
+- terraform_lsp
+
+- denols
+- gopls
+- jsonls
+- rust_analyzer
+- sqlls
+- vuels
+- yamlls
+
+** Installable with NPM
+#+BEGIN_SRC bash
+npm i -g \
+    @angular/language-server \
+    bash-language-server \
+    dockerfile-language-server-nodejs \
+    pyright \
+    typescript \
+    graphql-language-service-cli \
+    vscode-langservers-extracted \
+    typescript-language-server \
+    vim-language-server \
+    sql-language-server \
+    yaml-language-server \
+    @prisma/language-server \
+    stylelint-lsp \
+    @tailwindcss/language-server \
+    vls
+#+END_SRC
+
+** Installable with Pip
+#+BEGIN_SRC bash
+pip install -U \
+    jedi-language-server \
+    python-lsp-server \
+    'python-lsp-server[all]' \
+    black
+#+END_SRC
+
+** Installable with Brew
+#+BEGIN_SRC bash
+brew install \
+    efm-langserver \
+    shellcheck \
+    terraform-ls \
+    terraform-lsp
+#+END_SRC
+
+** Installable with Cargo/Rustup
+#+BEGIN_SRC bash
+cargo install --git https://github.com/latex-lsp/texlab.git --locked
+cargo install stylua
+#+END_SRC
+
+#+BEGIN_SRC bash
+rustup component add rust-analyzer
+#+END_SRC
+
+** Install with Ruby Gem
+#+BEGIN_SRC bash
+gem install solargraph
+gem install rubocop
+#+END_SRC
