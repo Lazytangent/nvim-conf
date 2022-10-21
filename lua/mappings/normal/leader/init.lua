@@ -143,10 +143,19 @@ local leader = {
     c = { utils.lua_require("refactoring", "debug.cleanup({})"), "Clean up" },
     p = { utils.lua_require("refactoring", "debug.printf({ below = true })"), "printf" },
     v = { utils.lua_require("refactoring", "debug.print_var({ normal = true })"), "print_var" },
+
+    h = { utils.cmd "IronHide",    "Hide Iron REPL" },
+    r = { utils.cmd "IronRestart", "Restart Iron REPL" },
+    s = { utils.cmd "IronRepl",    "Open Iron REPL" },
   },
   s = {
-    name = "+Spell",
-    s = { utils.cmd "setlocal spell!", "Toggle spellcheck" },
+    name     = "Send to REPL",
+    c        = "Send motion",
+    f        = "Send file",
+    l        = "Send line",
+    ["<CR>"] = "CR",
+    q        = "Exit Iron REPL",
+    C        = "Clear Iron REPL",
   },
   t = {
     name = "+Tabs and Table Mode",
