@@ -99,6 +99,7 @@ packer.startup(function()
     "AckslD/nvim-FeMaco.lua",
     "gaoDean/autolist.nvim",
     "monaqa/dial.nvim",
+    "hkupty/iron.nvim",
   })
 
   -- Dadbod
