@@ -59,8 +59,19 @@ local nuke_plugin = function(opts)
   print("Plugin " .. plugin .. " has been nuked. You can reinstall it by running :PackerSync")
 end
 
+local reinstall_plugin = function(opts)
+  nuke_plugin(opts)
+
+  vim.cmd [[PackerSync]]
+end
+
 vim.api.nvim_create_user_command("NukePlugins", nuke, {})
 vim.api.nvim_create_user_command("NukePlugin", nuke_plugin, {
+  nargs = 1,
+  complete = packer.plugin_complete,
+})
+
+vim.api.nvim_create_user_command("ReinstallPlugin", reinstall_plugin, {
   nargs = 1,
   complete = packer.plugin_complete,
 })
