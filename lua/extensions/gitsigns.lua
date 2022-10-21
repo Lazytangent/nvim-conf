@@ -17,22 +17,22 @@ require('gitsigns').setup {
 
     -- Navigation
     map('n', ']h', function()
-      if vim.wo.diff then return ']c' end
+      if vim.wo.diff then return ']h' end
       vim.schedule(function() gs.next_hunk() end)
       return '<Ignore>'
     end)
 
     map('n', '[h', function()
-      if vim.wo.diff then return '[c' end
+      if vim.wo.diff then return '[h' end
       vim.schedule(function() gs.prev_hunk() end)
       return '<Ignore>'
     end)
 
-    -- Actions
-    map('n', '<localleader>gp', gs.preview_hunk)
-    map('n', '<localleader>gd', gs.diffthis)
-    map('n', '<localleader>gD', function() gs.diffthis('~') end)
-    map('n', '<localleader>gtd', gs.toggle_deleted)
+    --[[ -- Actions ]]
+    --[[ map('n', '<localleader>gp', gs.preview_hunk) ]]
+    --[[ map('n', '<localleader>gd', gs.diffthis) ]]
+    --[[ map('n', '<localleader>gD', function() gs.diffthis('~') end) ]]
+    --[[ map('n', '<localleader>gtd', gs.toggle_deleted) ]]
 
     -- Text object
     map({'o', 'x'}, 'ih', '<cmd>Gitsigns select_hunk<cr>')
