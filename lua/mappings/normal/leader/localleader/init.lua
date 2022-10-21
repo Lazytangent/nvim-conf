@@ -1,4 +1,5 @@
 local f = require('mappings.normal.leader.localleader.f')
+local g = require('mappings.normal.leader.localleader.g')
 local l = require('mappings.normal.leader.localleader.l')
 local utils = require('mappings.utils')
 
@@ -13,6 +14,7 @@ local localleader = {
   },
   e = { [[:e<cr>]], "Edit file" },
   f = f,
+  g = g,
   l = l,
   m = "Swap with next method/function",
   p = {
