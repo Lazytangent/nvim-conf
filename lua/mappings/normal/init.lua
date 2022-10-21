@@ -7,6 +7,7 @@ local normal = {
     a = { [[<Plug>(EasyAlign)]], "Easy Align" },
     b = "toggle blockwise comment",
     c = "toggle linewise comment",
+    g = { ":1<cr>", "First line" },
     l = { utils.lua_require("leap-ast", "leap()"), "Leap AST" },
 
     ["<"] = {
