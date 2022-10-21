@@ -75,7 +75,6 @@ config.LSP = {
       "clangd",
       "cssls",
       "dockerls",
-      "erlangls",
       "graphql",
       "html",
       "jedi_language_server",
@@ -97,7 +96,6 @@ config.LSP = {
     },
     custom = {
       "deno",
-      "elixir",
       "go",
       "jsonls",
       "rust_analyzer",
