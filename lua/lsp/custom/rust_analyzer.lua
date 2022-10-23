@@ -4,4 +4,6 @@ local capabilities = require('lsp.capabilities')
 
 lsp.rust_analyzer.setup {
   cmd = { "rustup", "run", "stable", "rust-analyzer" },
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
