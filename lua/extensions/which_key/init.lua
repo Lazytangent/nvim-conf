@@ -10,6 +10,9 @@ require("which-key").setup {
     ["<localleader>"] = "SPC m",
     ["<space>"] = "SPC",
   },
+  triggers_blacklist = {
+    n = { "d" },
+  },
 }
 
 require("mappings")
