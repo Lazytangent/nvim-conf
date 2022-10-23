@@ -130,7 +130,6 @@ packer.startup(function()
     "ggandor/leap-ast.nvim",
     "j-hui/fidget.nvim",
     "kyazdani42/nvim-web-devicons",
-    "kylechui/nvim-surround",
     "lukas-reineke/indent-blankline.nvim",
     "mattn/emmet-vim",
     "natecraddock/workspaces.nvim",
@@ -167,6 +166,11 @@ packer.startup(function()
     "wellle/targets.vim",
     'kyazdani42/nvim-tree.lua',
     "pwntester/octo.nvim",
+  })
+
+  -- Custom fixes for recent problems
+  use({
+    "Lazytangent/nvim-surround",
   })
 end)
 
