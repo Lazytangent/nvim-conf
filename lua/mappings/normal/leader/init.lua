@@ -156,6 +156,8 @@ local leader = {
     ["<CR>"] = "CR",
     q        = "Exit Iron REPL",
     C        = "Clear Iron REPL",
+
+    s = { utils.cmd "SymbolsOutline", "Toggle symbols outline" },
   },
   t = {
     name = "+Tabs and Table Mode",
