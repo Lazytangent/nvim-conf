@@ -3,7 +3,10 @@ local Treesitter = require("config").Treesitter
 require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
 
-  indent = { enable = true },
+  indent = {
+    enable = true,
+    disable = { 'python' },
+  },
   matchup = { enable = true },
   rainbow = { enable = Treesitter.rainbow, extended_mode = true },
 
