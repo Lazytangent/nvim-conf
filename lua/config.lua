@@ -191,6 +191,7 @@ config.Extensions = {
   'rust_tools',
   'surround',
   'swift',
+  'symbols_outline',
   'telescope',
   'terminal',
   'todo_comments',

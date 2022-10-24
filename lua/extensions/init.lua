@@ -100,6 +100,7 @@ packer.startup(function()
     "gaoDean/autolist.nvim",
     "monaqa/dial.nvim",
     "hkupty/iron.nvim",
+    "simrat39/symbols-outline.nvim",
   })
 
   -- Dadbod
