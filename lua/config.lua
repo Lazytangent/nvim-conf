@@ -98,7 +98,6 @@ config.LSP = {
       "deno",
       "go",
       "jsonls",
-      "rust_analyzer",
       "sql",
       "vue",
       "yaml",
