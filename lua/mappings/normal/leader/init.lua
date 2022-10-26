@@ -90,14 +90,14 @@ local leader = {
   o = o,
   n = {
     name = "Neotest",
-    a = { utils.lua_require("neotest", "run.attach()"),                  "Attach to nearest test" },
-    d = { utils.lua_require("neotest", "run.run({ strategy = 'dap' })"), "Debug nearest test" },
-    f = { utils.lua_require("neotest", "run.run(vim.fn.expand('%'))"),   "Nearest test" },
+    a = { utils.lua_require("neotest", "run.attach()"),                     "Attach to nearest test" },
+    d = { utils.lua_require("neotest", "run.run({ strategy = 'dap' })"),    "Debug nearest test" },
+    f = { utils.lua_require("neotest", "run.run(vim.fn.expand('%'))"),      "Test file" },
     n = { utils.lua_require('neotest', "jump.next({ status = 'failed' })"), "Next failed" },
-    o = { utils.lua_require("neotest", "output.open({ enter = true })"), "Open output" },
+    o = { utils.lua_require("neotest", "output.open({ enter = true })"),    "Open output" },
     p = { utils.lua_require('neotest', "jump.prev({ status = 'failed' })"), "Prev failed" },
-    s = { utils.lua_require("neotest", "run.stop()"),                    "Stop test" },
-    t = { utils.lua_require("neotest", "run.run()"),                     "Nearest test" },
+    s = { utils.lua_require("neotest", "run.stop()"),                       "Stop test" },
+    t = { utils.lua_require("neotest", "run.run()"),                        "Nearest test" },
 
     m = {
       name = "Summary",
