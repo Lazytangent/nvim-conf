@@ -10,7 +10,6 @@ local f = {
   h = { utils.telescope_builtin 'help_tags()',                        'Help tags' },
   i = { utils.telescope_builtin 'lsp_implementations()',              'LSP Implementations' },
   j = { utils.telescope_builtin 'jumplist()',                         "Jumplist" },
-  l = { utils.telescope_builtin 'loclist()',                          "Loclist" },
   m = { utils.telescope_builtin 'marks()',                            "Marks" },
   n = { utils.telescope_builtin 'diagnostics()',                      "Global diagnostics" },
   o = { utils.telescope_builtin 'quickfixhistory()',                  "Quickfix History" },
@@ -35,6 +34,12 @@ local f = {
   ['/'] = { utils.telescope_builtin 'current_buffer_fuzzy_find()', "Search current buffer" },
   ['?'] = { utils.telescope_builtin 'search_history()',            "Search history" },
   [';'] = { utils.telescope_builtin 'command_history()',           "Command history" },
+
+  l = {
+    name = "LSP Stuff",
+    d = { utils.telescope_builtin 'diagnostics()',          'Diagnostics' },
+    s = { utils.telescope_builtin 'lsp_document_symbols()', "LSP Document Symbols" },
+  },
 
   s = { utils.cmd "w", "Save file" },
 }
