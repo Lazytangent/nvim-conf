@@ -1,6 +1,8 @@
 local utils = require('mappings.utils')
 
 local f = {
+  name = "Telescope stuff",
+
   a = { utils.extensions_telescope 'search_all_files()',              'All files' },
   b = { utils.telescope_builtin 'buffers()',                          'Buffers' },
   c = { utils.telescope_builtin 'commands()',                         'Commands' },
