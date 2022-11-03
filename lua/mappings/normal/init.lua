@@ -24,6 +24,7 @@ local normal = {
     -- LSP Stuff
     d = "Go to definition",
     D = "Go to declaration",
+    I = "Implementations",
   },
   ["j"] = { [[v:count == 0 ? 'gj' : 'j']], "Up (virtual) line",   expr = true },
   ["k"] = { [[v:count == 0 ? 'gk' : 'k']], "Down (virtual) line", expr = true },

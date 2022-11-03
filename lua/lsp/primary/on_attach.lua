@@ -12,6 +12,7 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
   buf_set_keymap("n", "gd", utils.lua_cmd("vim.lsp.buf.definition()"), opts)
   buf_set_keymap("n", "gD", utils.lua_cmd("vim.lsp.buf.declaration()"), opts)
+  buf_set_keymap("n", "gI", utils.lua_cmd("vim.lsp.buf.implementation()"), opts)
 
   buf_set_keymap("n", "K",     utils.lua_cmd("vim.lsp.buf.hover()"), opts)
   buf_set_keymap("n", "<C-h>", utils.lua_cmd("vim.lsp.buf.signature_help()"), opts)
@@ -21,9 +22,9 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "<localleader>pwl", utils.lua_cmd("print(vim.inspect(vim.lsp.buf.list_workspace_folders()))"), opts)
 
   buf_set_keymap("n", "<localleader>pt", utils.lua_cmd("vim.lsp.buf.type_definition()"), opts)
-  buf_set_keymap("n", "<localleader>pc", utils.lua_cmd("vim.lsp.buf.code_action()"), opts)
   buf_set_keymap("n", "<localleader>pr", utils.lua_cmd("vim.lsp.buf.rename()"), opts)
   buf_set_keymap("n", "<localleader>r",  utils.lua_cmd("vim.lsp.buf.rename()"), opts)
+  buf_set_keymap("n", "<leader>la", utils.lua_cmd("vim.lsp.buf.code_action()"), opts)
 
   buf_set_keymap("n", "<space>,f", utils.lua_cmd("vim.lsp.buf.format({ async = true })"), opts)
 

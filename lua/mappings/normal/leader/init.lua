@@ -83,7 +83,8 @@ local leader = {
     h = { utils.telescope_builtin "help_tags()", "Help Tags" },
   },
   l = {
-    name = "+LagyGit",
+    name = "+LagyGit and LSP",
+    a = "Code action",
     g = { utils.cmd "LazyGit", "LazyGit" },
   },
   m = localleader,
