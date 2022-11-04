@@ -40,7 +40,9 @@ local formatting = {
   f.goimports,
 
   -- C/C++
-  f.clang_format,
+  f.clang_format.with {
+    filetypes = { "c", "c++", "cpp" },
+  },
 
   f.trim_whitespace.with {
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
