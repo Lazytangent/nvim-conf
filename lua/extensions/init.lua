@@ -33,6 +33,8 @@ packer.startup(function()
     "phelipetls/jsonpath.nvim",
     { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" },
     { "ThePrimeagen/refactoring.nvim", requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" } },
+    "yioneko/nvim-yati",
+    "yioneko/vim-tmindent",
   })
 
   -- LSP

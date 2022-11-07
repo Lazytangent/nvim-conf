@@ -193,6 +193,7 @@ config.Extensions = {
   'symbols_outline',
   'telescope',
   'terminal',
+  'tmindent',
   'todo_comments',
   'treesitter',
   'trouble',
