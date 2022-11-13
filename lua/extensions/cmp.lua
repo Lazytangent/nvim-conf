@@ -190,4 +190,13 @@ cmp.setup.cmdline(':', {
   completion = {
     autocomplete = { 'InsertEnter', 'TextChanged' },
   },
+  formatting = {
+    format = require('lspkind').cmp_format({
+      mode = "test_symbol",
+      menu = ({
+        path = "[Path]",
+        cmdline = "[Cmdline]",
+      })
+    }),
+  },
 })
