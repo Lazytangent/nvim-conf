@@ -5,6 +5,6 @@
 
 (expression_statement
   (assignment
-    ((identifier) @name)
-    (#lua-match? @name "^query$")
+    ((identifier) @_name)
+    (#lua-match? @_name "^query$")
     ((string) @graphql (#offset! @graphql 0 3 0 0))))
