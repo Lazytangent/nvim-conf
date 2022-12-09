@@ -161,6 +161,7 @@ packer.startup(function()
     "rcarriga/neotest-vim-test",
     "vim-test/vim-test",
     "haydenmeade/neotest-jest",
+    "rouge8/neotest-rust",
 
     "jondkinney/dragvisuals.vim",
     "junegunn/vim-easy-align",

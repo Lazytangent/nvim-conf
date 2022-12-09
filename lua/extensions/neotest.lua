@@ -12,6 +12,7 @@ neotest.setup({
     require("neotest-jest")({
       jestCommand = "npm test --",
     }),
+    require("neotest-rust"),
   },
   icons = {
     running = "R",
