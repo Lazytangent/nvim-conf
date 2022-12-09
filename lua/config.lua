@@ -168,7 +168,7 @@ config.Extensions = {
   'emmet_vim',
   'femaco',
   'fidget',
-  'filetype',
+  -- 'filetype',
   'gitsigns',
   'go',
   'indent_blankline',

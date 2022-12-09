@@ -97,7 +97,7 @@ packer.startup(function()
   -- Quality of Life Improvements
   use({
     "kdheepak/lazygit.nvim",
-    "nathom/filetype.nvim",
+    --[[ "nathom/filetype.nvim", ]]
     "AckslD/nvim-FeMaco.lua",
     "gaoDean/autolist.nvim",
     "monaqa/dial.nvim",
