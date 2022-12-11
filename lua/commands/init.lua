@@ -8,6 +8,7 @@ local modules = {
   "go_run",
   "jq",
   "nuke_plugins",
+  "unset",
   "touch",
   "trim",
   "yabs",
