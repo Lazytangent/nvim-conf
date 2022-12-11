@@ -3,29 +3,6 @@ local utils = require('mappings.utils')
 
 local normal = {
   ["<leader>"] = leader,
-  ["g"] = {
-    a = { [[<Plug>(EasyAlign)]], "Easy Align" },
-    b = "toggle blockwise comment",
-    c = "toggle linewise comment",
-    g = { ":1<cr>", "First line" },
-    l = { utils.lua_require("leap-ast", "leap()"), "Leap AST" },
-
-    ["<"] = {
-      name = "+Uncomment",
-      b = "with blockwise comment",
-      c = "with linewise comment",
-    },
-    [">"] = {
-      name = "+Comment",
-      b = "with blockwise comment",
-      c = "with linewise comment",
-    },
-
-    -- LSP Stuff
-    d = "Go to definition",
-    D = "Go to declaration",
-    I = "Implementations",
-  },
   ["j"] = { [[v:count == 0 ? 'gj' : 'j']], "Up (virtual) line",   expr = true },
   ["k"] = { [[v:count == 0 ? 'gk' : 'k']], "Down (virtual) line", expr = true },
   ["K"] = "Hover",

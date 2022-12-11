@@ -93,3 +93,5 @@ wk.register(visual_only, visual_only_opts)
 
 -- wk.register(operator, operator_opts)
 -- wk.register(command,  command_opts)
+
+require("mappings.custom")
