@@ -184,6 +184,7 @@ config.Extensions = {
   'nvim_gps',
   'nvim_tree',
   'octo',
+  'oil',
   'onedark',
   'orgmode',
   'refactoring',

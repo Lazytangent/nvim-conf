@@ -170,6 +170,7 @@ packer.startup(function()
     "wellle/targets.vim",
     'kyazdani42/nvim-tree.lua',
     "pwntester/octo.nvim",
+    "stevearc/oil.nvim",
   })
 
   -- Custom fixes for recent problems
