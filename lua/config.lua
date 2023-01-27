@@ -170,7 +170,6 @@ config.Extensions = {
   'fidget',
   -- 'filetype',
   'gitsigns',
-  'go',
   'indent_blankline',
   'iron',
   'lazygit',
