@@ -173,7 +173,6 @@ config.Extensions = {
   'indent_blankline',
   'iron',
   'lazygit',
-  'lightspeed',
   'lsp_colors',
   'lsputils',
   'lualine',

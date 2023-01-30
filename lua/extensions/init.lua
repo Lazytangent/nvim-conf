@@ -126,10 +126,9 @@ packer.startup(function()
 
   use({
     { "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" },
+    { "ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end },
     "andymass/vim-matchup",
     "dhruvasagar/vim-table-mode",
-    "ggandor/lightspeed.nvim",
-    "ggandor/leap.nvim",
     "ggandor/leap-ast.nvim",
     "j-hui/fidget.nvim",
     "kyazdani42/nvim-web-devicons",
