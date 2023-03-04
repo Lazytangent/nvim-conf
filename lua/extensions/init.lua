@@ -27,7 +27,7 @@ packer.startup(function()
 
     "JoosepAlviste/nvim-ts-context-commentstring",
     "RRethy/nvim-treesitter-endwise",
-    "p00f/nvim-ts-rainbow",
+    "HiPhish/nvim-ts-rainbow2",
     "theHamsta/nvim-treesitter-pairs",
     "windwp/nvim-ts-autotag",
     "phelipetls/jsonpath.nvim",

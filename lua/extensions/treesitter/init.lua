@@ -8,7 +8,12 @@ require("nvim-treesitter.configs").setup({
     disable = { 'python' },
   },
   matchup = { enable = true },
-  rainbow = { enable = Treesitter.rainbow, extended_mode = true },
+  rainbow = {
+    enable = Treesitter.rainbow,
+    extended_mode = true,
+    query = 'rainbow-parens',
+    strategy = require 'ts-rainbow.strategy.local',
+  },
 
   highlight = {
     enable = true,
