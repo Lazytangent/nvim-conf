@@ -4,7 +4,15 @@ local autocmds = {
   -- Highlight on yank
   {'TextYankPost', { callback = function() require('vim.highlight').on_yank() end, group = group }},
   -- Remember cursor position
-  {'BufReadPost', { command = [[if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'gitcommit' | exe "normal! g'\"" | endif]], group = group }},
+  {'BufEnter', { callback = function()
+    if
+      vim.fn.line("'\"") > 1 and
+      vim.fn.line("'\"") <= vim.fn.line("$") and
+      vim.bo.filetype ~= "gitcommit"
+    then
+      vim.cmd [[exec "normal! g'\""]]
+    end
+  end, group = group }},
   -- Remove trailing whitespace
   {'BufWritePre', { command = [[%s/\s\+$//e]], group = group }},
   {'BufWritePre', { command = [[%s/\n\+\%$//e]], group = group }},

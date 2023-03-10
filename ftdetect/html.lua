@@ -1,1 +1,1 @@
-vim.cmd("set filetype=htmldjango")
+vim.bo.filetype = "htmldjango"
