@@ -78,6 +78,7 @@ config.LSP = {
       "graphql",
       "html",
       "jedi_language_server",
+      "kotlin_language_server",
       "prismals",
       "rls",
       "solargraph",

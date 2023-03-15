@@ -44,6 +44,9 @@ local formatting = {
     filetypes = { "c", "c++", "cpp" },
   },
 
+  -- Kotlin
+  f.ktlint,
+
   f.trim_whitespace.with {
     filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
   },
@@ -68,6 +71,9 @@ local linting = {
   -- Go
   d.revive,
   d.staticcheck,
+
+  -- Kotlin
+  d.ktlint,
 }
 
 local code_actions = {
