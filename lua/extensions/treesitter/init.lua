@@ -5,7 +5,7 @@ require("nvim-treesitter.configs").setup({
 
   indent = {
     enable = false,
-    disable = { 'python' },
+    disable = { 'python', 'kotlin' },
   },
   matchup = { enable = true },
   rainbow = {
