@@ -124,7 +124,6 @@ config.Treesitter = {
     "css",
     "dockerfile",
     "elixir",
-    "gitcommit",
     "gitignore",
     "go",
     "gomod",
