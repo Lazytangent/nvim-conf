@@ -15,11 +15,11 @@ local on_attach = require("lsp.primary.on_attach")
 -- vim/.config/nvim/ftplugin/java.lua
 local config = {
   cmd = {
-    'jdtls',
+    '/usr/bin/jdtls',
     '-configuration', '/usr/share/java/jdtls/config_linux',
     '-data', workspace_folder
   },
-  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
+  root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
   settings = {
     java = {
     },
