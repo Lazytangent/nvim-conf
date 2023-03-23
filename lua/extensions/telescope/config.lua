@@ -3,7 +3,7 @@ local lga_actions = require("telescope-live-grep-args.actions")
 
 telescope.setup({
   defaults = require('telescope.themes').get_ivy({
-    file_ignore_patterns = { "^node_modules/" },
+    file_ignore_patterns = { "^node_modules/", "%.class" },
     mappings = {
       i = {
         ["<C-u>"] = false,
