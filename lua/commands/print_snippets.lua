@@ -34,14 +34,23 @@ vim.api.nvim_create_user_command('DescribeSnippetsTable', function(args)
   local filetype = vim.bo.filetype
   local snippets = require('luasnip').get_snippets(filetype, { type = "snippets" })
 
+  local bufnr = vim.api.nvim_create_buf(true, true)
+
   local headline = create_headline(keys)
-  print(headline)
-  print(("-"):rep(string.len(headline)))
+  vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { headline })
+  local break_ = ("-"):rep(string.len(headline))
+  vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, { break_ })
+
   for _, snippet in ipairs(snippets) do
       local snippet_table = {}
       for _, key in ipairs(keys) do
           table.insert(snippet_table, snippet[key])
       end
-      print(create_line(snippet_table))
+      local line = create_line(snippet_table)
+    vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, { line })
   end
+
+  vim.cmd.vsplit()
+  vim.api.nvim_win_set_buf(0, bufnr)
+
 end, {})
