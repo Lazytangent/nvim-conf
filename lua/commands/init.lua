@@ -9,6 +9,7 @@ local modules = {
   "go_run",
   "jq",
   "nuke_plugins",
+  "print_snippets",
   "unset",
   "touch",
   "trim",
