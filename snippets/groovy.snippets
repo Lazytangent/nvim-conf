@@ -1,0 +1,57 @@
+snippet pl
+    plugins {
+        ${0}
+    }
+
+snippet app
+    application {
+        mainClass = '${0}'
+    }
+
+snippet repo
+    repositories {
+        ${0}
+    }
+
+snippet flat
+    flatDir {
+        dirs '${0}'
+    }
+
+snippet dep
+    dependencies {
+        ${0}
+    }
+
+snippet algs4
+    plugins {
+        id 'application'
+        id 'eclipse'
+    }
+
+    repositories {
+        flatDir {
+            dirs '/usr/local/lift/lib'
+        }
+    }
+
+    dependencies {
+        implementation name: 'algs4'
+    }
+
+    application {
+        mainClass = 'algs.${1}'
+    }
+
+    tasks.named('jar') {
+        manifest {
+            attributes('Main-Class': '${0}')
+        }
+    }
+
+snippet jar
+    tasks.named('jar') {
+        manifest {
+            attributes('Main-Class': '${0}')
+        }
+    }
