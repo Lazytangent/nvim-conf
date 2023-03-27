@@ -92,6 +92,7 @@ packer.startup(function()
     "simrat39/rust-tools.nvim",
     "tami5/swift.nvim",
     "mfussenegger/nvim-jdtls",
+    "vim-scripts/groovyindent-unix",
   })
 
   -- Quality of Life Improvements
