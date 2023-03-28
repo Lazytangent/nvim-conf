@@ -1,5 +1,5 @@
 -- Set up Packer
-require "utils.packer"
+require "utils.lazy"
 
 -- Set up Leader and Local leader mappings
 vim.g.mapleader = " "
