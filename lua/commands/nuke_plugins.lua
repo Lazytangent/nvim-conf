@@ -1,5 +1,5 @@
-local util = require('utils')
-local lazy_completion = require('lazy.view.commands')
+local util = require("packer.util")
+local packer = require("packer")
 
 local M = {}
 
@@ -68,10 +68,10 @@ end
 vim.api.nvim_create_user_command("NukePlugins", nuke, {})
 vim.api.nvim_create_user_command("NukePlugin", nuke_plugin, {
   nargs = 1,
-  complete = lazy_completion.complete,
+  complete = packer.plugin_complete,
 })
 
 vim.api.nvim_create_user_command("ReinstallPlugin", reinstall_plugin, {
   nargs = 1,
-  complete = lazy_completion.complete,
+  complete = packer.plugin_complete,
 })
