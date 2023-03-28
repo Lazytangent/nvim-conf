@@ -171,7 +171,7 @@ config.Extensions = {
   'dap',
   'dbui',
   'dial',
-  'diffview',
+  -- 'diffview',
   'drag_visuals',
   'emmet_vim',
   'femaco',
