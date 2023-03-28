@@ -2,6 +2,9 @@ local lazy = require('lazy')
 
 local lazy_opts = {
   concurrency = 50,
+  dev = {
+    path = "~/.local/src/neovim-plugins",
+  },
 }
 
 -- Theme Stuff
@@ -36,7 +39,8 @@ local treesitter = {
   "yioneko/nvim-yati",
   "yioneko/vim-tmindent",
   {
-    "SmiteshP/nvim-gps",
+    "Lazytangent/nvim-gps",
+    dev = true,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
   {
