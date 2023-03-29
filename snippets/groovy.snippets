@@ -45,7 +45,7 @@ snippet algs4
 
     tasks.named('jar') {
         manifest {
-            attributes('Main-Class': '${0}')
+            attributes('Main-Class': 'algs.${0}', 'Class-Path': '/usr/local/lift/lib/algs4.jar')
         }
     }
 
@@ -55,3 +55,6 @@ snippet jar
             attributes('Main-Class': '${0}')
         }
     }
+
+snippet id
+    id '${0}'
