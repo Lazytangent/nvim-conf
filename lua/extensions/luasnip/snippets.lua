@@ -17,8 +17,7 @@ local function copy(args)
   return args[1]
 end
 
-local rec_ls
-rec_ls = function()
+local rec_ls = function()
   return sn(
     nil,
     c(1, {
