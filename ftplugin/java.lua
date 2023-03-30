@@ -22,6 +22,11 @@ local config = {
   root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
   settings = {
     java = {
+      inlayHints = {
+        parameterNames = {
+          enabled = "all",
+        },
+      },
     },
   },
   init_options = {

@@ -86,11 +86,11 @@ local lsp = {
   },
   {
     "lvimuser/lsp-inlayhints.nvim",
-    config = function()
-      require('lsp-inlayhints').setup()
-
-      vim.cmd("highlight link LspInlayHint Comment")
-    end,
+    opts = {
+      inlay_hints = {
+        highlight = "Comment",
+      },
+    },
   },
 }
 
