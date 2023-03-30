@@ -14,4 +14,9 @@ rt.setup {
     end,
     capabilities = capabilities,
   },
+  tools = {
+    inlay_hints = {
+      auto = false,
+    },
+  },
 }

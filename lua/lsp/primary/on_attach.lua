@@ -8,6 +8,8 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end
 
+  require("lsp-inlayhints").on_attach(client, bufnr)
+
   -- Mappings
   local opts = { noremap = true, silent = true }
   buf_set_keymap("n", "gd", utils.lua_cmd("vim.lsp.buf.definition()"), opts)

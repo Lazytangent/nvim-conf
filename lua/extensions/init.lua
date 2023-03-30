@@ -84,6 +84,10 @@ local lsp = {
     'Saecki/crates.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
+  {
+    "lvimuser/lsp-inlayhints.nvim",
+    config = true,
+  },
 }
 
 -- DAP
