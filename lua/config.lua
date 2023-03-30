@@ -80,7 +80,6 @@ config.LSP = {
       "jedi_language_server",
       "kotlin_language_server",
       "prismals",
-      "rls",
       "solargraph",
       "sourcekit",
       "stylelint_lsp",
