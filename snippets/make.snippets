@@ -1,0 +1,7 @@
+snippet algs4
+	.PHONY: build
+	build:
+		@gradle jar
+
+	%.txt:
+		@curl -O https://algs.cs.princeton.edu/${0}/$@
