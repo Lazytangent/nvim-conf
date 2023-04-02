@@ -3,7 +3,7 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     config = function()
-      require 'extensions.lualine'
+      require 'extensions.theme-stuff.configs.lualine'
     end,
   },
   {
