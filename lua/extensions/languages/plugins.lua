@@ -15,7 +15,7 @@ return {
     "lervag/vimtex",
     ft = "tex",
     config = function()
-      require 'extensions.vimtex'
+      require 'extensions.languages.configs.vimtex'
     end
   },
   {
@@ -47,14 +47,14 @@ return {
     "nvim-orgmode/orgmode.nvim",
     ft = "org",
     config = function()
-      require 'extensions.orgmode'
+      require 'extensions.languages.configs..orgmode'
     end,
   },
   {
     "simrat39/rust-tools.nvim",
     ft = "rust",
     config = function()
-      require 'extensions.rust_tools'
+      require 'extensions.languages.configs.rust-tools'
     end,
   },
   { "tami5/swift.nvim", ft = "switft", main = "swift_env", opts = require("extensions.swift") },
