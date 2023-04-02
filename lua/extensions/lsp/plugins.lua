@@ -10,7 +10,7 @@ return {
         store_selection_keys = "<Tab>",
       })
 
-      require 'extensions.luasnip.snippets'
+      require 'extensions.lsp.luasnip.snippets'
     end,
   },
   "neovim/nvim-lspconfig",
@@ -19,7 +19,7 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     config = function()
-      require 'extensions.null_ls'
+      require 'extensions.lsp.configs.null-ls'
     end,
   },
 
@@ -36,7 +36,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     config = function()
-      require 'extensions.cmp'
+      require 'extensions.lsp.configs.cmp'
     end,
   },
   "kdheepak/cmp-latex-symbols",
@@ -49,7 +49,7 @@ return {
     "RishabhRD/nvim-lsputils",
     dependencies = { "RishabhRD/popfix" },
     config = function()
-      require 'extensions.lsputils'
+      require 'extensions.lsp.configs.lsputils'
     end
   },
   {
