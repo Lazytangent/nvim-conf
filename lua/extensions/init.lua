@@ -8,15 +8,15 @@ local lazy_opts = {
 }
 
 local items = {
-  'theme-stuff',
-  'treesitter',
-  'lsp',
+  'custom',
+  'dadbod',
   'dap',
   'languages',
+  'lsp',
   'quality-of-life',
-  'dadbod',
   'telescope',
-  'custom',
+  'theme-stuff',
+  'treesitter',
 }
 
 local plugins = {}
