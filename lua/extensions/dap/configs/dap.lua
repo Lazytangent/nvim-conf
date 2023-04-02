@@ -4,11 +4,9 @@ dap.set_log_level "DEBUG"
 
 local modules = {
   'dap_python',
-  'dap_ui',
-  'dap_virtual_text',
 }
 
-utils.load_modules("extensions", modules)
+utils.load_modules("extensions.dap.configs", modules)
 
 local custom_python_configs = {
   {
