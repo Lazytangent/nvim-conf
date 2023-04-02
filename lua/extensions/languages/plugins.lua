@@ -57,7 +57,7 @@ return {
       require 'extensions.languages.configs.rust-tools'
     end,
   },
-  { "tami5/swift.nvim", ft = "switft", main = "swift_env", opts = require("extensions.swift") },
+  { "tami5/swift.nvim", ft = "switft", main = "swift_env", opts = require "extensions.languages.configs.swift" },
   { "mfussenegger/nvim-jdtls", ft = "java" },
   { "vim-scripts/groovyindent-unix", ft = "groovy" },
 }
