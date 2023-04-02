@@ -3,7 +3,10 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-      require 'extensions.treesitter'
+      require 'extensions.treesitter.configs.treesitter'
+
+      require 'extensions.treesitter.configs.http-parser'
+      require 'extensions.treesitter.configs.context'
     end,
   },
   "nvim-treesitter/nvim-treesitter-refactor",
@@ -21,7 +24,7 @@ return {
   {
     "yioneko/vim-tmindent",
     config = function()
-      require 'extensions.tmindent'
+      require 'extensions.treesitter.configs.tmindent'
     end,
   },
   {

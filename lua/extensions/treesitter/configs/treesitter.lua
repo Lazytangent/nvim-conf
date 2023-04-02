@@ -176,6 +176,3 @@ require("nvim-treesitter.configs").setup({
     end,
   },
 })
-
-require 'extensions.treesitter.http_parser'
-require 'extensions.treesitter.context'
