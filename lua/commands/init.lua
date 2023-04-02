@@ -8,11 +8,12 @@ local modules = {
   "gen_uuid",
   "go_run",
   "jq",
+  "messages",
   "nuke_plugins",
   "print_snippets",
-  "unset",
   "touch",
   "trim",
+  "unset",
   "yabs",
 }
 
