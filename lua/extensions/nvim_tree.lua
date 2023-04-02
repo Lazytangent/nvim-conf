@@ -1,4 +1,4 @@
-require('nvim-tree').setup {
+return {
   reload_on_bufenter = true,
   diagnostics = {
     enable = true,

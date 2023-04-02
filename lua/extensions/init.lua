@@ -16,11 +16,36 @@ local theme_stuff = {
       require 'extensions.lualine'
     end,
   },
-  'navarasu/onedark.nvim',
-  'B4mbus/oxocarbon-lua.nvim',
+  {
+    "navarasu/onedark.nvim",
+    opts = {
+      style = "deep",
+    },
+  },
+  "B4mbus/oxocarbon-lua.nvim",
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    opts = {
+      flavour = "mocha",
+      transparent_background = true,
+      term_colors = true,
+      integrations = {
+        cmp = true,
+        fidget = true,
+        gitsigns = true,
+        indent_blankline = { enabled = true },
+        leap = true,
+        lightspeed = true,
+        lsp_trouble = true,
+        markdown = true,
+        nvimtree = { enabled = true, show_root = true },
+        symbols_outline = true,
+        telescope = true,
+        ts_rainbow = true,
+        which_key = true,
+      },
+    },
   },
 }
 
@@ -29,6 +54,9 @@ local treesitter = {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    config = function()
+      require 'extensions.treesitter'
+    end,
   },
   "nvim-treesitter/nvim-treesitter-refactor",
   "nvim-treesitter/nvim-treesitter-textobjects",
@@ -42,26 +70,56 @@ local treesitter = {
   "windwp/nvim-ts-autotag",
   "phelipetls/jsonpath.nvim",
   "yioneko/nvim-yati",
-  "yioneko/vim-tmindent",
+  {
+    "yioneko/vim-tmindent",
+    config = function()
+      require 'extensions.tmindent'
+    end,
+  },
   {
     "Lazytangent/nvim-gps",
     dev = true,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      icons = {
+        ["container-name"] = "〇 ",
+      },
+      languages = {
+        ["json"] = false,
+      },
+    },
   },
   {
     "ThePrimeagen/refactoring.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
+    config = true,
   },
 }
 
 -- LSP
 local lsp = {
-  "L3MON4D3/LuaSnip",
+  {
+    "L3MON4D3/LuaSnip",
+    config = function()
+      local ls = require("luasnip")
+
+      ls.config.setup({
+        history = true,
+        updateevents = "TextChangedI",
+        store_selection_keys = "<Tab>",
+      })
+
+      require 'extensions.luasnip.snippets'
+    end,
+  },
   "neovim/nvim-lspconfig",
   "rafamadriz/friendly-snippets",
   {
     "jose-elias-alvarez/null-ls.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    config = function()
+      require 'extensions.null_ls'
+    end,
   },
 
   -- nvim-cmp
@@ -89,6 +147,9 @@ local lsp = {
   {
     "RishabhRD/nvim-lsputils",
     dependencies = { "RishabhRD/popfix" },
+    config = function()
+      require 'extensions.lsputils'
+    end
   },
   {
     'Saecki/crates.nvim',
@@ -106,7 +167,12 @@ local lsp = {
 
 -- DAP
 local dap = {
-  "mfussenegger/nvim-dap",
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require 'extensions.dap'
+    end,
+  },
   "mfussenegger/nvim-dap-python",
   "theHamsta/nvim-dap-virtual-text",
   {
@@ -169,7 +235,13 @@ local languages = {
       require 'extensions.orgmode'
     end,
   },
-  { "simrat39/rust-tools.nvim", ft = "rust" },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+    config = function()
+      require 'extensions.rust_tools'
+    end,
+  },
   { "tami5/swift.nvim", ft = "switft", main = "swift_env", opts = require("extensions.swift") },
   { "mfussenegger/nvim-jdtls", ft = "java" },
   { "vim-scripts/groovyindent-unix", ft = "groovy" },
@@ -194,7 +266,18 @@ local qol = {
       end,
     },
   },
-  "gaoDean/autolist.nvim",
+  {
+    "gaoDean/autolist.nvim",
+    opts = {
+      lists = {
+        filetypes = {
+          generic = {
+            "org",
+          },
+        },
+      },
+    }
+  },
   { "monaqa/dial.nvim", config = function() require 'extensions.dial' end },
   {
     "hkupty/iron.nvim",
@@ -218,7 +301,7 @@ local qol = {
       })
     end,
   },
-  "simrat39/symbols-outline.nvim",
+  { "simrat39/symbols-outline.nvim", config = true },
 }
 
 -- Dadbod
@@ -243,6 +326,9 @@ local telescope = {
       { "nvim-lua/plenary.nvim" },
       { "nvim-telescope/telescope-live-grep-args.nvim" },
     },
+    config = function()
+      require 'extensions.telescope.config'
+    end,
   },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
@@ -263,6 +349,9 @@ local more_qol = {
   {
     "lewis6991/gitsigns.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require 'extensions.gitsigns'
+    end,
   },
   {
     "ggandor/leap.nvim",
@@ -275,20 +364,85 @@ local more_qol = {
   "ggandor/leap-ast.nvim",
   { "j-hui/fidget.nvim", config = true },
   "kyazdani42/nvim-web-devicons",
-  "lukas-reineke/indent-blankline.nvim",
-  "mattn/emmet-vim",
-  "natecraddock/workspaces.nvim",
-  "numToStr/Comment.nvim",
-  "pianocomposer321/yabs.nvim",
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require 'extensions.indent_blankline'
+    end,
+  },
+  {
+    "mattn/emmet-vim",
+    config = function()
+      vim.g.user_emmet_leader_key='<C-L>'
+
+      vim.g.user_emmet_settings = {
+        javascript = {
+          extends = 'jsx',
+        },
+      }
+    end,
+  },
+  {
+    "natecraddock/workspaces.nvim",
+    opts = {
+      hooks = {
+        open = { "Telescope find_files" },
+      },
+    },
+  },
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require 'extensions.comment_nvim'
+    end
+  },
+  {
+    "pianocomposer321/yabs.nvim",
+    config = function()
+      require 'extensions.yabs'
+    end,
+  },
   "ryanoasis/vim-devicons",
   require 'extensions.diffview',
-  "windwp/nvim-autopairs",
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require 'extensions.autopairs'
+    end,
+  },
 
   -- Folke Section
-  "folke/lsp-colors.nvim",
-  "folke/todo-comments.nvim",
-  "folke/trouble.nvim",
-  "folke/which-key.nvim",
+  { "folke/lsp-colors.nvim", config = true },
+  {
+    "folke/todo-comments.nvim",
+    config = true,
+  },
+  {
+    "folke/trouble.nvim",
+    opts = {
+      mode = 'document_diagnostics',
+    },
+  },
+  {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {
+        plugins = {
+          spelling = {
+            enabled = true,
+            suggestions = 20,
+          },
+        },
+        key_labels = {
+          ["<leader>"] = "SPC",
+          ["<localleader>"] = "SPC m",
+          ["<space>"] = "SPC",
+        },
+      }
+
+      require("mappings")
+    end,
+  },
 
   -- Tpope Section
   "tpope/vim-eunuch",
@@ -311,19 +465,27 @@ local more_qol = {
   "haydenmeade/neotest-jest",
   "rouge8/neotest-rust",
 
-  "jondkinney/dragvisuals.vim",
+  {
+    "jondkinney/dragvisuals.vim",
+    config = function()
+      vim.g.DVB_TrimWS = 1
+    end,
+  },
   "junegunn/vim-easy-align",
-  "norcalli/nvim-terminal.lua",
+  { "norcalli/nvim-terminal.lua", config = true },
   "tversteeg/registers.nvim",
   "wellle/targets.vim",
-  'kyazdani42/nvim-tree.lua',
+  { "kyazdani42/nvim-tree.lua", opts = require 'extensions.nvim_tree' },
   { "pwntester/octo.nvim", config = true },
   { "stevearc/oil.nvim", config = true },
 }
 
 -- Custom fixes for recent problems
 local custom = {
-  "Lazytangent/nvim-surround",
+  {
+    "Lazytangent/nvim-surround",
+    config = true,
+  },
 }
 
 local plugins = {
@@ -340,9 +502,3 @@ local plugins = {
 }
 
 lazy.setup(plugins, lazy_opts)
-
-local extensions = require("config").Extensions
-
-for _, extension in ipairs(extensions) do
-  require("extensions." .. extension)
-end

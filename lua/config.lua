@@ -158,40 +158,4 @@ config.Treesitter = {
   }
 }
 
--- Plugins that need extra configuration
--- These names need to align with one of the files/directories in the
--- lua/extensions directory
-config.Extensions = {
-  'autolist',
-  'autopairs',
-  'catppucchin',
-  'comment_nvim',
-  'dap',
-  'drag_visuals',
-  'emmet_vim',
-  'gitsigns',
-  'indent_blankline',
-  'lsp_colors',
-  'lsputils',
-  'luasnip',
-  'null_ls',
-  'nvim_gps',
-  'nvim_tree',
-  'onedark',
-  'refactoring',
-  'rust_tools',
-  'surround',
-  'symbols_outline',
-  'telescope',
-  'terminal',
-  'tmindent',
-  'todo_comments',
-  'treesitter',
-  'trouble',
-  'vim_markdown',
-  'which_key',
-  'workspaces',
-  'yabs',
-}
-
 return config
