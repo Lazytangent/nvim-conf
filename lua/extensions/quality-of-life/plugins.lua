@@ -28,7 +28,7 @@ return {
       },
     }
   },
-  { "monaqa/dial.nvim", config = function() require 'extensions.dial' end },
+  { "monaqa/dial.nvim", config = function() require 'extensions.quality-of-life.configs.dial' end },
   {
     "hkupty/iron.nvim",
     main = "iron.core",
@@ -56,7 +56,7 @@ return {
     "lewis6991/gitsigns.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require 'extensions.gitsigns'
+      require 'extensions.quality-of-life.configs.gitsigns'
     end,
   },
   {
@@ -73,7 +73,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require 'extensions.indent_blankline'
+      require 'extensions.quality-of-life.configs.indent-blankline'
     end,
   },
   {
@@ -99,21 +99,21 @@ return {
   {
     "numToStr/Comment.nvim",
     config = function()
-      require 'extensions.comment_nvim'
+      require 'extensions.quality-of-life.configs.comment-nvim'
     end
   },
   {
     "pianocomposer321/yabs.nvim",
     config = function()
-      require 'extensions.yabs'
+      require 'extensions.quality-of-life.configs.yabs'
     end,
   },
   "ryanoasis/vim-devicons",
-  require 'extensions.diffview',
+  require 'extensions.quality-of-life.configs.diffview',
   {
     "windwp/nvim-autopairs",
     config = function()
-      require 'extensions.autopairs'
+      require 'extensions.quality-of-life.configs.autopairs'
     end,
   },
 
@@ -161,7 +161,7 @@ return {
     "rcarriga/neotest",
     dependencies = { "antoinemadec/FixCursorHold.nvim" },
     config = function()
-      require 'extensions.neotest'
+      require 'extensions.quality-of-life.configs.neotest'
     end,
   },
   "rcarriga/neotest-plenary",
@@ -181,7 +181,7 @@ return {
   { "norcalli/nvim-terminal.lua", config = true },
   "tversteeg/registers.nvim",
   "wellle/targets.vim",
-  { "kyazdani42/nvim-tree.lua", opts = require 'extensions.nvim_tree' },
+  { "kyazdani42/nvim-tree.lua", opts = require 'extensions.quality-of-life.configs.nvim-tree' },
   { "pwntester/octo.nvim", config = true },
   { "stevearc/oil.nvim", config = true },
 }
