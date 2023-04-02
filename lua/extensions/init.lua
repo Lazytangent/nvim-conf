@@ -10,7 +10,12 @@ local lazy_opts = {
 -- Theme Stuff
 local theme_stuff = {
   "folke/tokyonight.nvim",
-  "nvim-lualine/lualine.nvim",
+  {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require 'extensions.lualine'
+    end,
+  },
   'navarasu/onedark.nvim',
   'B4mbus/oxocarbon-lua.nvim',
   {
@@ -69,7 +74,12 @@ local lsp = {
   "hrsh7th/cmp-nvim-lua",
   "hrsh7th/cmp-omni",
   "hrsh7th/cmp-path",
-  "hrsh7th/nvim-cmp",
+  {
+    "hrsh7th/nvim-cmp",
+    config = function()
+      require 'extensions.cmp'
+    end,
+  },
   "kdheepak/cmp-latex-symbols",
   "lukas-reineke/cmp-rg",
   "lukas-reineke/cmp-under-comparator",
@@ -102,6 +112,7 @@ local dap = {
   {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap" },
+    config = true,
   },
 }
 
@@ -122,6 +133,9 @@ local languages = {
   {
     "lervag/vimtex",
     ft = "tex",
+    config = function()
+      require 'extensions.vimtex'
+    end
   },
   {
     "digitaltoad/vim-pug",
@@ -142,36 +156,81 @@ local languages = {
   {
     "ray-x/go.nvim",
     ft = "go",
-    config = function(_plugin, _opts)
-      require('go').setup({ textobjects = false, luasnip = true })
+    opts = { textobjects = false, luasnip = true },
+  },
+  { "b0o/schemastore.nvim", ft = { "json", "yaml" } },
+  { "carbon-language/vim-carbon-lang", ft = "carbon" },
+  { "keith/swift.vim", ft = "swift"},
+  "mrdotb/vim-tailwindcss",
+  {
+    "nvim-orgmode/orgmode.nvim",
+    ft = "org",
+    config = function()
+      require 'extensions.orgmode'
     end,
   },
-  "b0o/schemastore.nvim",
-  "carbon-language/vim-carbon-lang",
-  "keith/swift.vim",
-  "mrdotb/vim-tailwindcss",
-  "nvim-orgmode/orgmode.nvim",
-  "simrat39/rust-tools.nvim",
-  "tami5/swift.nvim",
-  "mfussenegger/nvim-jdtls",
-  "vim-scripts/groovyindent-unix",
+  { "simrat39/rust-tools.nvim", ft = "rust" },
+  { "tami5/swift.nvim", ft = "switft", main = "swift_env", opts = require("extensions.swift") },
+  { "mfussenegger/nvim-jdtls", ft = "java" },
+  { "vim-scripts/groovyindent-unix", ft = "groovy" },
 }
 
 -- Quality of Life Improvements
 local qol = {
-  "kdheepak/lazygit.nvim",
-  --[[ "nathom/filetype.nvim", ]]
-  "AckslD/nvim-FeMaco.lua",
+  {
+    "kdheepak/lazygit.nvim",
+    config = function()
+      if vim.fn.has('nvim') == 1 and vim.fn.executable('nvr') == 1 then
+        vim.cmd([[let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"]])
+      end
+    end,
+  },
+  {
+    "AckslD/nvim-FeMaco.lua",
+    opts = {
+      prepare_buffer = function(opts)
+        vim.cmd '30new'
+        return vim.api.nvim_get_current_win()
+      end,
+    },
+  },
   "gaoDean/autolist.nvim",
-  "monaqa/dial.nvim",
-  "hkupty/iron.nvim",
+  { "monaqa/dial.nvim", config = function() require 'extensions.dial' end },
+  {
+    "hkupty/iron.nvim",
+    main = "iron.core",
+    config = function()
+      require('iron.core').setup({
+        config = {
+          scratch_repl    = true,
+          repl_definition = {},
+          repl_open_cmd   = require("iron.view").bottom(40),
+        },
+        keymaps = {
+          send_motion = "<leader>sc",
+          visual_send = "<leader>sc",
+          send_file   = "<leader>sf",
+          send_line   = "<leader>sl",
+          cr          = "<leader>s<cr>",
+          exit        = "<leader>sq",
+          clear       = "<leader>sC",
+        },
+      })
+    end,
+  },
   "simrat39/symbols-outline.nvim",
 }
 
 -- Dadbod
 local dadbod = {
   "tpope/vim-dadbod",
-  "kristijanhusak/vim-dadbod-ui",
+  {
+    "kristijanhusak/vim-dadbod-ui",
+    config = function()
+      vim.g.db_ui_env_variable_url = 'DATABASE_URL'
+      vim.g.db_ui_env_variable_name = 'DATABASE_NAME'
+    end,
+  },
   "kristijanhusak/vim-dadbod-completion",
 }
 
@@ -214,7 +273,7 @@ local more_qol = {
   "andymass/vim-matchup",
   "dhruvasagar/vim-table-mode",
   "ggandor/leap-ast.nvim",
-  "j-hui/fidget.nvim",
+  { "j-hui/fidget.nvim", config = true },
   "kyazdani42/nvim-web-devicons",
   "lukas-reineke/indent-blankline.nvim",
   "mattn/emmet-vim",
@@ -222,7 +281,7 @@ local more_qol = {
   "numToStr/Comment.nvim",
   "pianocomposer321/yabs.nvim",
   "ryanoasis/vim-devicons",
-  --[[ "sindrets/diffview.nvim", ]]
+  require 'extensions.diffview',
   "windwp/nvim-autopairs",
 
   -- Folke Section
@@ -241,6 +300,9 @@ local more_qol = {
   {
     "rcarriga/neotest",
     dependencies = { "antoinemadec/FixCursorHold.nvim" },
+    config = function()
+      require 'extensions.neotest'
+    end,
   },
   "rcarriga/neotest-plenary",
   "rcarriga/neotest-python",
@@ -255,8 +317,8 @@ local more_qol = {
   "tversteeg/registers.nvim",
   "wellle/targets.vim",
   'kyazdani42/nvim-tree.lua',
-  "pwntester/octo.nvim",
-  "stevearc/oil.nvim",
+  { "pwntester/octo.nvim", config = true },
+  { "stevearc/oil.nvim", config = true },
 }
 
 -- Custom fixes for recent problems

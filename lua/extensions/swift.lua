@@ -1,4 +1,4 @@
-require('swift_env').setup {
+return {
   format = {
     auto = false,
     config_default_content = [[
