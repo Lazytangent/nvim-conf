@@ -6,6 +6,7 @@ return {
         vim.cmd([[let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"]])
       end
     end,
+    event = "VeryLazy",
   },
   {
     "AckslD/nvim-FeMaco.lua",
@@ -15,6 +16,7 @@ return {
         return vim.api.nvim_get_current_win()
       end,
     },
+    event = "VeryLazy",
   },
   {
     "gaoDean/autolist.nvim",
@@ -26,11 +28,13 @@ return {
           },
         },
       },
-    }
+    },
+    event = "VeryLazy",
   },
-  { "monaqa/dial.nvim", config = function() require 'extensions.quality-of-life.configs.dial' end },
+  { "monaqa/dial.nvim", event = "VeryLazy", config = function() require 'extensions.quality-of-life.configs.dial' end },
   {
     "hkupty/iron.nvim",
+    event = "VeryLazy",
     main = "iron.core",
     config = function()
       require('iron.core').setup({
@@ -51,9 +55,10 @@ return {
       })
     end,
   },
-  { "simrat39/symbols-outline.nvim", config = true },
+  { "simrat39/symbols-outline.nvim", event = "VeryLazy", config = true },
   {
     "lewis6991/gitsigns.nvim",
+    event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require 'extensions.quality-of-life.configs.gitsigns'
@@ -65,19 +70,31 @@ return {
       require('leap').add_default_mappings()
     end,
   },
-  "andymass/vim-matchup",
-  "dhruvasagar/vim-table-mode",
-  "ggandor/leap-ast.nvim",
-  { "j-hui/fidget.nvim", config = true },
-  "kyazdani42/nvim-web-devicons",
+  {
+    "andymass/vim-matchup",
+    event = "VeryLazy",
+  },
+  {
+    "dhruvasagar/vim-table-mode",
+    event = "VeryLazy",
+  },
+  {
+    "ggandor/leap-ast.nvim",
+    event = "VeryLazy",
+  },
+  { "j-hui/fidget.nvim", event = "VeryLazy", config = true },
+  { "kyazdani42/nvim-web-devicons", event = "VeryLazy" },
   {
     "lukas-reineke/indent-blankline.nvim",
+    event = "VeryLazy",
     config = function()
       require 'extensions.quality-of-life.configs.indent-blankline'
     end,
   },
   {
     "mattn/emmet-vim",
+    event = "VeryLazy",
+    ft = { "html", "htmldjango", "javascriptreact", "typescriptreact" },
     config = function()
       vim.g.user_emmet_leader_key='<C-L>'
 
@@ -90,6 +107,7 @@ return {
   },
   {
     "natecraddock/workspaces.nvim",
+    event = "VeryLazy",
     opts = {
       hooks = {
         open = { "Telescope find_files" },
@@ -98,17 +116,19 @@ return {
   },
   {
     "numToStr/Comment.nvim",
+    event = "VeryLazy",
     config = function()
       require 'extensions.quality-of-life.configs.comment-nvim'
     end
   },
   {
     "pianocomposer321/yabs.nvim",
+    event = "VeryLazy",
     config = function()
       require 'extensions.quality-of-life.configs.yabs'
     end,
   },
-  "ryanoasis/vim-devicons",
+  { "ryanoasis/vim-devicons", event = "VeryLazy" },
   require 'extensions.quality-of-life.configs.diffview',
   {
     "windwp/nvim-autopairs",
@@ -163,6 +183,7 @@ return {
     config = function()
       require 'extensions.quality-of-life.configs.neotest'
     end,
+    event = "VeryLazy",
   },
   "rcarriga/neotest-plenary",
   "rcarriga/neotest-python",
@@ -181,7 +202,7 @@ return {
   { "norcalli/nvim-terminal.lua", config = true },
   "tversteeg/registers.nvim",
   "wellle/targets.vim",
-  { "kyazdani42/nvim-tree.lua", opts = require 'extensions.quality-of-life.configs.nvim-tree' },
-  { "pwntester/octo.nvim", config = true },
+  { "kyazdani42/nvim-tree.lua", event = "VeryLazy", opts = require 'extensions.quality-of-life.configs.nvim-tree' },
+  { "pwntester/octo.nvim", event = "VeryLazy", config = true },
   { "stevearc/oil.nvim", config = true },
 }
