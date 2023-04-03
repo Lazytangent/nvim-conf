@@ -47,6 +47,7 @@ return {
       "ray-x/cmp-treesitter",
       "saadparwaiz1/cmp_luasnip",
     },
+    event = "InsertEnter",
   },
   {
     "RishabhRD/nvim-lsputils",
