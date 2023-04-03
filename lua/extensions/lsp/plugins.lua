@@ -1,7 +1,7 @@
 return {
   {
     "L3MON4D3/LuaSnip",
-    event = "VeryLazy",
+    event = "InsertEnter",
     config = function()
       local ls = require("luasnip")
 
@@ -25,27 +25,29 @@ return {
   },
 
   -- nvim-cmp
-  "f3fora/cmp-spell",
-  "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-calc",
-  "hrsh7th/cmp-cmdline",
-  "hrsh7th/cmp-nvim-lsp",
-  "hrsh7th/cmp-nvim-lsp-document-symbol",
-  "hrsh7th/cmp-nvim-lua",
-  "hrsh7th/cmp-omni",
-  "hrsh7th/cmp-path",
   {
     "hrsh7th/nvim-cmp",
     config = function()
       require 'extensions.lsp.configs.cmp'
     end,
+    dependencies = {
+      "f3fora/cmp-spell",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lsp-document-symbol",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-omni",
+      "hrsh7th/cmp-path",
+      "kdheepak/cmp-latex-symbols",
+      "lukas-reineke/cmp-rg",
+      "lukas-reineke/cmp-under-comparator",
+      "onsails/lspkind-nvim",
+      "ray-x/cmp-treesitter",
+      "saadparwaiz1/cmp_luasnip",
+    },
   },
-  "kdheepak/cmp-latex-symbols",
-  "lukas-reineke/cmp-rg",
-  "lukas-reineke/cmp-under-comparator",
-  "onsails/lspkind-nvim",
-  "ray-x/cmp-treesitter",
-  "saadparwaiz1/cmp_luasnip",
   {
     "RishabhRD/nvim-lsputils",
     dependencies = { "RishabhRD/popfix" },

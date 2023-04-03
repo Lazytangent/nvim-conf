@@ -2,6 +2,12 @@ return {
   {
     "heavenshell/vim-jsdoc",
     build = "make install",
+    ft = {
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+    },
   },
   {
     "pantharshit00/vim-prisma",
@@ -16,7 +22,7 @@ return {
     ft = "tex",
     config = function()
       require 'extensions.languages.configs.vimtex'
-    end
+    end,
   },
   {
     "digitaltoad/vim-pug",
@@ -41,13 +47,13 @@ return {
   },
   { "b0o/schemastore.nvim", ft = { "json", "yaml" } },
   { "carbon-language/vim-carbon-lang", ft = "carbon" },
-  { "keith/swift.vim", ft = "swift"},
-  "mrdotb/vim-tailwindcss",
+  { "keith/swift.vim", ft = "swift" },
+  { "mrdotb/vim-tailwindcss", ft = { "css", "javascript", "typescript", "javascriptreact", "typescriptreact" } },
   {
     "nvim-orgmode/orgmode.nvim",
     ft = "org",
     config = function()
-      require 'extensions.languages.configs..orgmode'
+      require 'extensions.languages.configs.orgmode'
     end,
   },
   {
@@ -57,7 +63,7 @@ return {
       require 'extensions.languages.configs.rust-tools'
     end,
   },
-  { "tami5/swift.nvim", ft = "switft", main = "swift_env", opts = require "extensions.languages.configs.swift" },
+  { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
   { "mfussenegger/nvim-jdtls", ft = "java" },
   { "vim-scripts/groovyindent-unix", ft = "groovy" },
 }

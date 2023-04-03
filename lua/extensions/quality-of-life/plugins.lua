@@ -95,7 +95,7 @@ return {
     "mattn/emmet-vim",
     event = "VeryLazy",
     ft = { "html", "htmldjango", "javascriptreact", "typescriptreact" },
-    config = function()
+    init = function()
       vim.g.user_emmet_leader_key='<C-L>'
 
       vim.g.user_emmet_settings = {
@@ -135,19 +135,22 @@ return {
     config = function()
       require 'extensions.quality-of-life.configs.autopairs'
     end,
+    event = "VeryLazy",
   },
 
   -- Folke Section
-  { "folke/lsp-colors.nvim", config = true },
+  { "folke/lsp-colors.nvim", event = "VeryLazy", config = true },
   {
     "folke/todo-comments.nvim",
     config = true,
+    event = "VeryLazy",
   },
   {
     "folke/trouble.nvim",
     opts = {
       mode = 'document_diagnostics',
     },
+    event = "VeryLazy",
   },
   {
     "folke/which-key.nvim",
@@ -168,13 +171,14 @@ return {
 
       require("mappings")
     end,
+    event = "VeryLazy",
   },
 
   -- Tpope Section
-  "tpope/vim-eunuch",
-  "tpope/vim-fugitive",
-  "tpope/vim-repeat",
-  "tpope/vim-unimpaired",
+  { "tpope/vim-eunuch", event = "VeryLazy" },
+  { "tpope/vim-fugitive", event = "VeryLazy" },
+  { "tpope/vim-repeat", event = "VeryLazy" },
+  { "tpope/vim-unimpaired", event = "VeryLazy" },
 
   -- Testing
   {
@@ -185,24 +189,25 @@ return {
     end,
     event = "VeryLazy",
   },
-  "rcarriga/neotest-plenary",
-  "rcarriga/neotest-python",
-  "rcarriga/neotest-vim-test",
-  "vim-test/vim-test",
-  "haydenmeade/neotest-jest",
-  "rouge8/neotest-rust",
+  { "rcarriga/neotest-plenary", event = "VeryLazy" },
+  { "rcarriga/neotest-python", event = "VeryLazy" },
+  { "rcarriga/neotest-vim-test", event = "VeryLazy" },
+  { "vim-test/vim-test", event = "VeryLazy" },
+  { "haydenmeade/neotest-jest", event = "VeryLazy" },
+  { "rouge8/neotest-rust", event = "VeryLazy" },
 
   {
     "jondkinney/dragvisuals.vim",
-    config = function()
+    init = function()
       vim.g.DVB_TrimWS = 1
     end,
+    event = "VeryLazy",
   },
-  "junegunn/vim-easy-align",
-  { "norcalli/nvim-terminal.lua", config = true },
-  "tversteeg/registers.nvim",
-  "wellle/targets.vim",
+  { "junegunn/vim-easy-align", event = "VeryLazy" },
+  { "norcalli/nvim-terminal.lua", config = true, event = "VeryLazy" },
+  { "tversteeg/registers.nvim", event = "VeryLazy" },
+  { "wellle/targets.vim", event = "VeryLazy" },
   { "kyazdani42/nvim-tree.lua", event = "VeryLazy", opts = require 'extensions.quality-of-life.configs.nvim-tree' },
   { "pwntester/octo.nvim", event = "VeryLazy", config = true },
-  { "stevearc/oil.nvim", config = true },
+  { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
 }

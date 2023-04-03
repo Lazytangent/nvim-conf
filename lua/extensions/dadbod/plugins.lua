@@ -1,11 +1,12 @@
 return {
-  "tpope/vim-dadbod",
+  { "tpope/vim-dadbod", cmd = "DB" },
   {
     "kristijanhusak/vim-dadbod-ui",
-    config = function()
+    init = function()
       vim.g.db_ui_env_variable_url = 'DATABASE_URL'
       vim.g.db_ui_env_variable_name = 'DATABASE_NAME'
     end,
+    cmd = "DBUI",
   },
   "kristijanhusak/vim-dadbod-completion",
 }
