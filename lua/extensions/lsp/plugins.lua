@@ -47,7 +47,6 @@ return {
       "ray-x/cmp-treesitter",
       "saadparwaiz1/cmp_luasnip",
     },
-    event = "VeryLazy",
   },
   {
     "RishabhRD/nvim-lsputils",
