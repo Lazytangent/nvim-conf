@@ -1,6 +1,7 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    event = "VeryLazy",
     config = function()
       require 'extensions.dap.configs.dap'
     end,

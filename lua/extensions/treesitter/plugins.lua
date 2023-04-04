@@ -41,6 +41,7 @@ return {
         ["json"] = false,
       },
     },
+    event = "VeryLazy",
   },
   {
     "ThePrimeagen/refactoring.nvim",

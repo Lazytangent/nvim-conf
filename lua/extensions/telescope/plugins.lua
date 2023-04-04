@@ -22,5 +22,6 @@ return {
     config = function()
       require 'extensions.telescope.configs.telescope'
     end,
+    event = "VeryLazy",
   },
 }

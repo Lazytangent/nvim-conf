@@ -47,13 +47,15 @@ return {
       "ray-x/cmp-treesitter",
       "saadparwaiz1/cmp_luasnip",
     },
+    event = "VeryLazy",
   },
   {
     "RishabhRD/nvim-lsputils",
     dependencies = { "RishabhRD/popfix" },
     config = function()
       require 'extensions.lsp.configs.lsputils'
-    end
+    end,
+    event = "VeryLazy",
   },
   {
     'Saecki/crates.nvim',
