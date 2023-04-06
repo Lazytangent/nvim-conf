@@ -6,16 +6,15 @@ return {
       require 'extensions.treesitter.configs.treesitter'
 
       require 'extensions.treesitter.configs.http-parser'
-      require 'extensions.treesitter.configs.context'
     end,
     dependencies = {
       "HiPhish/nvim-ts-rainbow2",
+      { "nvim-treesitter/nvim-treesitter-context", config = true },
     },
   },
   "nvim-treesitter/nvim-treesitter-refactor",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "nvim-treesitter/playground",
-  "nvim-treesitter/nvim-treesitter-context",
 
   "JoosepAlviste/nvim-ts-context-commentstring",
   "RRethy/nvim-treesitter-endwise",
