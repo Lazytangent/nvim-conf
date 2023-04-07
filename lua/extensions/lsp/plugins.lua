@@ -1,20 +1,5 @@
 return {
-  {
-    "L3MON4D3/LuaSnip",
-    config = function()
-      local ls = require("luasnip")
-
-      ls.config.setup({
-        history = true,
-        updateevents = "TextChangedI",
-        store_selection_keys = "<Tab>",
-      })
-
-      require 'extensions.lsp.luasnip.snippets'
-    end,
-  },
   "neovim/nvim-lspconfig",
-  "rafamadriz/friendly-snippets",
   {
     "jose-elias-alvarez/null-ls.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
@@ -45,6 +30,23 @@ return {
       "onsails/lspkind-nvim",
       "ray-x/cmp-treesitter",
       "saadparwaiz1/cmp_luasnip",
+      {
+        "L3MON4D3/LuaSnip",
+        config = function()
+          local ls = require("luasnip")
+
+          ls.config.setup({
+            history = true,
+            updateevents = "TextChangedI",
+            store_selection_keys = "<Tab>",
+          })
+
+          require 'extensions.lsp.luasnip.snippets'
+        end,
+        dependencies = {
+          "rafamadriz/friendly-snippets",
+        },
+      },
     },
   },
   {
