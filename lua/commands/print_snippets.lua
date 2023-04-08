@@ -34,7 +34,7 @@ vim.api.nvim_create_user_command('DescribeSnippetsTable', function(args)
   local filetype = vim.bo.filetype
   local snippets = require('luasnip').get_snippets(filetype, { type = "snippets" })
 
-  local bufnr = vim.api.nvim_create_buf(true, true)
+  local bufnr = vim.api.nvim_create_buf(false, true)
 
   local headline = create_headline(keys)
   vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { headline })
@@ -52,5 +52,6 @@ vim.api.nvim_create_user_command('DescribeSnippetsTable', function(args)
 
   vim.cmd.vsplit()
   vim.api.nvim_win_set_buf(0, bufnr)
+  vim.cmd("%:EasyAlign *|")
 
 end, {})
