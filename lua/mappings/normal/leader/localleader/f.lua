@@ -14,6 +14,9 @@ local f = {
   d = { utils.telescope_builtin "lsp_definitions()",     "Definitions" },
   i = { utils.telescope_builtin "lsp_implementations()", "Implementations" },
   r = { utils.telescope_builtin "lsp_references()",      "References" },
+
+  j = { utils.lua_require("extensions.telescope.custom.java", "files()"),       "Java Files" },
+  B = { utils.lua_require("extensions.telescope.custom.java", "build_files()"), "Java Build Files" },
 }
 
 return f
