@@ -97,6 +97,7 @@ config.LSP = {
       "deno",
       "go",
       "jsonls",
+      "lua",
       "sql",
       "tsserver",
       "vue",
