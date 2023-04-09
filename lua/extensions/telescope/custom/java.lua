@@ -5,7 +5,7 @@ local M = {}
 M.files = function()
   builtin.find_files {
     prompt_title = "Java Files",
-    find_command = { "fd", "--type", "file", "--extension", "java" },
+    find_command = { "rg", "--files", "--color", "never", "--glob", "*.java" },
   }
 end
 
