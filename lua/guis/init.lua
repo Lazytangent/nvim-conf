@@ -16,8 +16,8 @@ if vim.fn.has("gui_vimr") == 1 then
 end
 
 if vim.g.neovide then
-  vim.cmd [[
-    set guifont=FiraCode\ Nerd\ Font
-  ]]
-  require('guis.neovide')
+  vim.schedule(function()
+    vim.cmd [[set guifont=FiraCode\ Nerd\ Font:h12]]
+    require('guis.neovide')
+  end)
 end
