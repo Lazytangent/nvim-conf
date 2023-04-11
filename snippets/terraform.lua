@@ -1,8 +1,3 @@
-local ls = require("luasnip")
-local s = ls.snippet
-local i = ls.insert_node
-local fmta = require("luasnip.extras.fmt").fmta
-
 local terraform = {
   s({ trig = "var", dscr = "Variable Declaration", name = "Variable Declaration" },
     fmta(
