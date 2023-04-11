@@ -22,8 +22,6 @@ local function dynamic_copy(args, old_state)
   return snip
 end
 
-local greek = require "extensions.snippets.greek"
-
 local latex = {
   s({ trig = "beg", namr = "begin{} / end{}", dscr = "Create environment" },
     fmta(
@@ -158,6 +156,4 @@ local latex = {
     i(0),
   }),
 }
-
-vim.list_extend(latex, greek)
 return latex

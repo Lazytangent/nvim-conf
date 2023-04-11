@@ -10,8 +10,6 @@ local function copy(args)
   return args[1]
 end
 
-local greek = require('extensions.snippets.greek')
-
 local orgmode = {
   s({ trig = "__", dscr = "#+TITLE: ", name = "Create title" }, {
     t("#+title: "),
@@ -53,5 +51,4 @@ local orgmode = {
   ),
 }
 
-vim.list_extend(orgmode, greek)
 return orgmode

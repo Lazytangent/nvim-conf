@@ -146,7 +146,4 @@ local javascript = {
   ),
 }
 
-local redux = require("extensions.snippets.redux")
-vim.list_extend(javascript, redux)
-
 return javascript
