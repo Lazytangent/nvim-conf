@@ -9,7 +9,7 @@ orgmode.setup {
   org_hide_emphasis_markers = true,
   org_highlight_latex_and_related = "entities",
   emacs_config = {
-    config_path = "$HOME/.config/emacs",
+    config_path = "$HOME/.config/emacs/init.el",
   },
   mappings = {
     org = {
