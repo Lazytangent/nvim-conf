@@ -1,15 +1,15 @@
-snippet algs4
-	.PHONY: build
-	build:
-		@gradle jar
-
-	%.txt:
-		@curl -O https://algs4.cs.princeton.edu/${0}/$@
-
 snippet simple-algs4
 	.PHONY: build
 	build:
 		@javac-algs4 ${1}
+
+	%.txt:
+		@curl -O https://algs4.cs.princeton.edu/${0}/$@
+
+snippet algs4
+	.PHONY: build
+	build:
+		@gradle jar
 
 	%.txt:
 		@curl -O https://algs4.cs.princeton.edu/${0}/$@
