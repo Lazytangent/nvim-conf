@@ -3,6 +3,18 @@ local s = ls.snippet
 local f = ls.function_node
 local p = require("luasnip.extras").partial
 
+ls.config.setup({
+  history = true,
+  updateevents = "TextChangedI",
+  store_selection_keys = "<Tab>",
+  load_ft_func = require('luasnip.extras.filetype_functions').extend_load_ft({
+    tex = { "greek" },
+    org = { "greek" },
+    typescript = { "javascript", "redux" },
+    typescriptreact = { "javascript", "redux" },
+  }),
+})
+
 local function bash(_, command)
   local file = io.popen(command, "r")
   local res = {}

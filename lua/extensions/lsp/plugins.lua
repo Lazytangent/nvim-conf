@@ -33,21 +33,7 @@ return {
       {
         "L3MON4D3/LuaSnip",
         config = function()
-          local ls = require("luasnip")
-
-          ls.config.setup({
-            history = true,
-            updateevents = "TextChangedI",
-            store_selection_keys = "<Tab>",
-            load_ft_func = require('luasnip.extras.filetype_functions').extend_load_ft({
-                tex = { "greek" },
-                org = { "greek" },
-                typescript = { "javascript", "redux" },
-                typescriptreact = { "javascript", "redux" },
-            }),
-          })
-
-          require 'extensions.lsp.luasnip.snippets'
+          require 'extensions.lsp.luasnip'
         end,
         dependencies = {
           "rafamadriz/friendly-snippets",

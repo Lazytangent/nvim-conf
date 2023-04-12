@@ -146,5 +146,6 @@ local latex = {
     t("\\frac{d}{dx}"),
     i(0),
   }),
+  s("degree", { t("^{\\circ}"), i(0) }),
 }
 return latex
