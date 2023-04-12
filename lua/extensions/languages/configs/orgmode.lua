@@ -8,6 +8,7 @@ orgmode.setup {
   org_indent_mode = 'noindent',
   org_hide_emphasis_markers = true,
   org_highlight_latex_and_related = "entities",
+  org_src_window_setup = "bottright 16new",
   emacs_config = {
     config_path = "$HOME/.config/emacs/init.el",
   },
