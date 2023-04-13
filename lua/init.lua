@@ -5,6 +5,9 @@ require "utils.lazy"
 vim.g.mapleader = " "
 vim.g.maplocalleader = " m"
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Load in extensions
 require "extensions"
 
