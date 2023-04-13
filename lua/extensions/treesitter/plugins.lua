@@ -21,7 +21,6 @@ return {
   "theHamsta/nvim-treesitter-pairs",
   "windwp/nvim-ts-autotag",
   "phelipetls/jsonpath.nvim",
-  "yioneko/nvim-yati",
   {
     "yioneko/vim-tmindent",
     config = function()
