@@ -51,7 +51,6 @@ return {
   { "mrdotb/vim-tailwindcss", ft = { "css", "javascript", "typescript", "javascriptreact", "typescriptreact" } },
   {
     "nvim-orgmode/orgmode.nvim",
-    ft = "org",
     config = function()
       require 'extensions.languages.configs.orgmode'
     end,
