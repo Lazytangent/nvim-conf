@@ -76,3 +76,7 @@ vim.api.nvim_create_user_command('ListSnippets', function()
 
   sl.open({ printer = printer })
 end, {})
+
+vim.api.nvim_create_user_command("ListSnippetFts", function()
+  require('luasnip.util.util').get_snippet_filetypes()
+end, {})

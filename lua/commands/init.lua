@@ -3,6 +3,7 @@ local utils = require("utils.core")
 local modules = {
   "cd",
   "config",
+  "edit_snippet",
   "gen_secret",
   "gen_uuid",
   "go_run",
