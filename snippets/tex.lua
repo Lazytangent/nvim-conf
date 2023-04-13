@@ -147,5 +147,6 @@ local latex = {
     i(0),
   }),
   s("degree", { t("^{\\circ}"), i(0) }),
+  s("mm", fmt("${}${}", { i(1, "math mode"), i(0) })),
 }
 return latex
