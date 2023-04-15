@@ -41,6 +41,8 @@ local orgmode = {
       { i(1), i(0), f(copy, 1) }
     )
   ),
+  s("ee", fmt("={}={}", { i(1, "code content"), i(0) })),
+  s("tt", fmt("~{}~{}", { i(1, "code content"), i(0) })),
 }
 
 return orgmode
