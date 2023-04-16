@@ -64,5 +64,9 @@ return {
   {
     "folke/neodev.nvim",
     config = true,
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    config = true,
   }
 }
