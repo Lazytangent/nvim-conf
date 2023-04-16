@@ -73,6 +73,7 @@ config.LSP = {
       "angularls",
       "bashls",
       "clangd",
+      "cmake",
       "cssls",
       "dockerls",
       "graphql",
@@ -81,7 +82,6 @@ config.LSP = {
       "kotlin_language_server",
       "prismals",
       "solargraph",
-      "sourcekit",
       "stylelint_lsp",
       "texlab",
       "vimls",
@@ -90,6 +90,7 @@ config.LSP = {
     regular = {
       "ccls",
       "pylsp",
+      "sourcekit",
       "terraformls",
       "terraform_lsp",
     },
