@@ -10,6 +10,7 @@ local modules = {
   "jq",
   "messages",
   "nuke_plugins",
+  "org",
   "print_snippets",
   "touch",
   "trim",
