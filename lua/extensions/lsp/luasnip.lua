@@ -5,7 +5,7 @@ local p = require("luasnip.extras").partial
 
 ls.setup({
   history = true,
-  updateevents = "TextChangedI",
+  update_events = "TextChangedI",
   store_selection_keys = "<Tab>",
   load_ft_func = require('luasnip.extras.filetype_functions').extend_load_ft({
     tex = { "greek" },
