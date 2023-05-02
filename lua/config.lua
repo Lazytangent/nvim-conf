@@ -61,7 +61,7 @@ config.Opts = {
 }
 
 config.Theming = {
-  colorscheme = "fluoromachine",
+  colorscheme = "tokyonight-night",
 }
 
 config.LSP = {
