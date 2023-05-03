@@ -72,7 +72,6 @@ config.LSP = {
     primary = {
       "angularls",
       "bashls",
-      "clangd",
       "cmake",
       "cssls",
       "dockerls",
@@ -88,17 +87,18 @@ config.LSP = {
       "volar",
     },
     regular = {
-      "ccls",
       "pylsp",
-      "sourcekit",
       "terraformls",
       "terraform_lsp",
     },
     custom = {
+      "ccls",
+      "clangd",
       "deno",
       "go",
       "jsonls",
       "lua",
+      "sourcekit",
       "sql",
       "tsserver",
       "vue",

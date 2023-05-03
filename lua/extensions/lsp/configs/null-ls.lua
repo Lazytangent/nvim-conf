@@ -87,4 +87,7 @@ null_ls.setup {
   save_after_format = false,
   diagnostics_format = "[#{c}] #{m} (#{s})",
   on_attach = on_attach,
+  on_init = function(new_client, _)
+    new_client.offset_encoding = 'utf-16'
+  end,
 }
