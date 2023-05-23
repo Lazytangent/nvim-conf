@@ -106,6 +106,7 @@
         "/home/petermai/.local/share/nvim/lazy/todo-comments.nvim/lua",
         "/home/petermai/.local/share/nvim/lazy/nvim-dap-virtual-text/lua",
         "/home/petermai/.config/nvim/lua",
-        "${3rd}/luv/library"
+        "${3rd}/luv/library",
+        "/tmp/lua-language-server.LJDA/meta/431ffc12"
     ]
 }
