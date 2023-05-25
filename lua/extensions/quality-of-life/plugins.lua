@@ -1,5 +1,10 @@
 return {
   {
+    "TimUntersberger/neogit",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = true,
+  },
+  {
     "kdheepak/lazygit.nvim",
     config = function()
       if vim.fn.has('nvim') == 1 and vim.fn.executable('nvr') == 1 then
