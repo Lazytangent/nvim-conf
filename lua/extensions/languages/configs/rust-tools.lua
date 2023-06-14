@@ -1,6 +1,6 @@
 local rt = require("rust-tools")
 
-local capabilities = require('lsp.capabilities')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local utils = require('mappings.utils')
 
 local on_attach = function(client, bufnr)

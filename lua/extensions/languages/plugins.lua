@@ -57,7 +57,6 @@ return {
   },
   {
     "simrat39/rust-tools.nvim",
-    ft = "rust",
     config = function()
       require 'extensions.languages.configs.rust-tools'
     end,

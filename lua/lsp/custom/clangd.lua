@@ -1,6 +1,6 @@
 local lsp = require('lspconfig')
 local on_attach = require('lsp.primary.on_attach')
-local capabilities = require('lsp.capabilities')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 capabilities.offsetEncoding = 'utf-16'
 
