@@ -62,6 +62,7 @@ return {
     end,
   },
   { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
-  { "mfussenegger/nvim-jdtls", ft = "java" },
+  { "mfussenegger/nvim-jdtls" },
   { "vim-scripts/groovyindent-unix", ft = "groovy" },
+  { "pmizio/typescript-tools.nvim", dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }, config = true },
 }
