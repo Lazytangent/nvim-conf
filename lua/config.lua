@@ -100,7 +100,6 @@ config.LSP = {
       "lua",
       "sourcekit",
       "sql",
-      "tsserver",
       "vue",
       "yaml",
     },
