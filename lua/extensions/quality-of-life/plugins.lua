@@ -186,10 +186,10 @@ return {
   },
 
   -- Tpope Section
-  { "tpope/vim-eunuch", event = "VeryLazy" },
-  { "tpope/vim-fugitive", event = "VeryLazy" },
-  { "tpope/vim-repeat", event = "VeryLazy" },
-  { "tpope/vim-unimpaired", event = "VeryLazy" },
+  { "tpope/vim-eunuch" },
+  { "tpope/vim-fugitive" },
+  { "tpope/vim-repeat" },
+  { "tpope/vim-unimpaired" },
 
   -- Testing
   {
