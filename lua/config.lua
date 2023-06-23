@@ -61,7 +61,7 @@ config.Opts = {
 }
 
 config.Theming = {
-  colorscheme = "tokyonight-night",
+  colorscheme = "catppuccin",
 }
 
 config.LSP = {
