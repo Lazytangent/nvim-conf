@@ -76,6 +76,7 @@ config.LSP = {
       "cssls",
       "dockerls",
       "graphql",
+      "hls",
       "html",
       "jedi_language_server",
       "kotlin_language_server",

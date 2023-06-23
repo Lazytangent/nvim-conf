@@ -29,6 +29,7 @@
   "gitsigns.nvim": { "branch": "main", "commit": "a36bc3360d584d39b4fb076d855c4180842d4444" },
   "go.nvim": { "branch": "master", "commit": "a8095eb334495caec3099b717cc7f5b1fbc3e628" },
   "groovyindent-unix": { "branch": "master", "commit": "d6fca576272cc13fd747ff47a82b75b9e9586866" },
+  "haskell-tools.nvim": { "branch": "1.x.x", "commit": "7154357bc5213656a6af134e2babec1c364aa5e6" },
   "indent-blankline.nvim": { "branch": "master", "commit": "7075d7861f7a6bbf0de0298c83f8a13195e6ec01" },
   "iron.nvim": { "branch": "master", "commit": "9017061849e543d8e94b79d2a94b95e856ab6a10" },
   "jsonpath.nvim": { "branch": "main", "commit": "ea7e07e935f3f95deda97f9f6dc87f7bcf3fb69a" },
