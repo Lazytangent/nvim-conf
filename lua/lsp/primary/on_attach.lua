@@ -4,11 +4,10 @@ local on_attach = function(client, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
 
-  require("lsp-inlayhints").on_attach(client, bufnr)
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.buf.inlay_hint(bufnr, true)
+  end
 
   -- Mappings
   local opts = { noremap = true, silent = true }

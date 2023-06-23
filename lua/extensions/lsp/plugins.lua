@@ -54,14 +54,6 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
   {
-    "lvimuser/lsp-inlayhints.nvim",
-    opts = {
-      inlay_hints = {
-        highlight = "Comment",
-      },
-    },
-  },
-  {
     "folke/neodev.nvim",
     config = true,
   },
