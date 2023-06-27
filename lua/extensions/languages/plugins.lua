@@ -89,4 +89,7 @@ return {
     },
     branch = "1.x.x",
   },
+  {
+    "sealemar/vtl",
+  },
 }
