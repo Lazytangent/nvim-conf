@@ -127,6 +127,7 @@
   "vim-tmindent": { "branch": "main", "commit": "1b39d347b2c97f991f2d5d9e3948e5c7ec7902ce" },
   "vim-unimpaired": { "branch": "master", "commit": "6d44a6dc2ec34607c41ec78acf81657248580bf1" },
   "vimtex": { "branch": "master", "commit": "91fbb48c0b850684a082801138dddc941a427d38" },
+  "vtl": { "branch": "master", "commit": "1f75c4069a42bacd9ac3338b98f143830f0de66d" },
   "which-key.nvim": { "branch": "main", "commit": "d871f2b664afd5aed3dc1d1573bef2fb24ce0484" },
   "workspaces.nvim": { "branch": "master", "commit": "c8bd98990d322b107e58ff5373038b753a8ef66d" },
   "yabs.nvim": { "branch": "main", "commit": "88bdb5c557448960be3cb9d3da64e52009e7bef9" }
