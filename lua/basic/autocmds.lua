@@ -18,7 +18,7 @@ local autocmds = {
   {'BufWritePre', { command = [[%s/\n\+\%$//e]], group = group }},
   -- Terminal buffer defaults
   {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]], group = group }},
-  {'TermOpen', { command = 'startinsert', group = group }},
+  -- {'TermOpen', { command = 'startinsert', group = group }},
   -- Update file if file has been updated outside of buffer
   {{'FocusGained', 'BufEnter'}, { command = 'checktime', group = group }},
   {'StdinReadPre', { command = [[let s:std_in=1]], group = group }},
