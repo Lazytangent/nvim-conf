@@ -46,7 +46,7 @@ return {
     opts = {
       textobjects = false,
       luasnip = true,
-      lap_inlay_hints = {
+      lsp_inlay_hints = {
         only_current_line = true,
       },
     },
