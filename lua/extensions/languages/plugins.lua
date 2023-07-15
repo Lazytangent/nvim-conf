@@ -47,7 +47,7 @@ return {
       textobjects = false,
       luasnip = true,
       lsp_inlay_hints = {
-        only_current_line = true,
+        enable = false,
       },
     },
   },
