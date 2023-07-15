@@ -43,7 +43,13 @@ return {
   {
     "ray-x/go.nvim",
     ft = "go",
-    opts = { textobjects = false, luasnip = true },
+    opts = {
+      textobjects = false,
+      luasnip = true,
+      lap_inlay_hints = {
+        only_current_line = true,
+      },
+    },
   },
   { "b0o/schemastore.nvim", ft = { "json", "yaml" } },
   { "carbon-language/vim-carbon-lang", ft = "carbon" },
