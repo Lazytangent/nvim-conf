@@ -221,4 +221,5 @@ return {
   { "kyazdani42/nvim-tree.lua", event = "VeryLazy", opts = require 'extensions.quality-of-life.configs.nvim-tree' },
   { "pwntester/octo.nvim", event = "VeryLazy", config = true },
   { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
+  { "dgagn/diagflow.nvim", config = true, },
 }
