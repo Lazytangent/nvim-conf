@@ -47,4 +47,7 @@ return {
     config = true,
     event = "VeryLazy",
   },
+  {
+    "David-Kunz/treesitter-unit",
+  },
 }
