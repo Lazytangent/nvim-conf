@@ -37,6 +37,7 @@ telescope.setup({
 })
 
 local extensions = {
+  'ast_grep',
   'dap',
   'file_browser',
   'frecency',

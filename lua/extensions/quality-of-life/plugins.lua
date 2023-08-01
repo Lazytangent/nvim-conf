@@ -72,16 +72,8 @@ return {
     end,
   },
   {
-    "ggandor/flit.nvim",
-    dependencies = {
-      {
-        "ggandor/leap.nvim",
-        config = function(_plugin, _opts)
-          require('leap').add_default_mappings()
-        end,
-      },
-    },
-    config = true,
+    "folke/flash.nvim",
+    event = "VeryLazy",
   },
   {
     "andymass/vim-matchup",

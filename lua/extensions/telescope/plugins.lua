@@ -18,6 +18,7 @@ return {
       "nvim-telescope/telescope-ui-select.nvim",
       "nvim-telescope/telescope-project.nvim",
       "benfowler/telescope-luasnip.nvim",
+      "Marskey/telescope-sg",
     },
     config = function()
       require 'extensions.telescope.configs.telescope'
