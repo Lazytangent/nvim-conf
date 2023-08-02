@@ -107,6 +107,7 @@
   "trouble.nvim": { "branch": "main", "commit": "d99e2abd10808ef91738ce98a5c767e6a51df449" },
   "typescript-tools.nvim": { "branch": "master", "commit": "1b0af278f7415bc8fbb8128af99622dffcf5a9c2" },
   "vim-carbon-lang": { "branch": "trunk", "commit": "77e58e52287643c0035116a685919bd153075033" },
+  "vim-cucumber": { "branch": "master", "commit": "4d43c1bb3c387d9beb51d4bede0dfe5a51466edc" },
   "vim-dadbod": { "branch": "master", "commit": "7d80bbd11c407a09e0f7b869c38f3dec3902805f" },
   "vim-dadbod-completion": { "branch": "master", "commit": "fc7321a17f4c55db11fae89a884ddf4724020bae" },
   "vim-dadbod-ui": { "branch": "master", "commit": "200aebf70e6fc4b0eb1d3ecf0d57028e198d8dc6" },

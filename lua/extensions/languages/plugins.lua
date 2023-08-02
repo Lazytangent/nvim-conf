@@ -98,4 +98,5 @@ return {
   {
     "sealemar/vtl",
   },
+  { "tpope/vim-cucumber" },
 }
