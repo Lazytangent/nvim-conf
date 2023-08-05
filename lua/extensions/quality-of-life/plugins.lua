@@ -218,4 +218,5 @@ return {
   { "pwntester/octo.nvim", event = "VeryLazy", config = true },
   { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
   { "dgagn/diagflow.nvim", config = true, },
+  'tpope/vim-sleuth',
 }
