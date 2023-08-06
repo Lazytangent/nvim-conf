@@ -5,9 +5,8 @@ local o = require('mappings.normal.leader.o')
 local localleader = require('mappings.normal.leader.localleader')
 local utils = require('mappings.utils')
 
-local telescope_builtin = [[<cmd>lua require('telescope.builtin').]]
-
 local leader = {
+  ["/"] = { utils.telescope_builtin "current_buffer_fuzzy_find()", "Search current buffer" },
   ["<leader>"] = {
     name = "+LSP",
     c = {

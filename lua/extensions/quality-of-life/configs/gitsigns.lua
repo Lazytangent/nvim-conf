@@ -29,10 +29,10 @@ require('gitsigns').setup {
     end)
 
     --[[ -- Actions ]]
-    --[[ map('n', '<localleader>gp', gs.preview_hunk) ]]
-    --[[ map('n', '<localleader>gd', gs.diffthis) ]]
-    --[[ map('n', '<localleader>gD', function() gs.diffthis('~') end) ]]
-    --[[ map('n', '<localleader>gtd', gs.toggle_deleted) ]]
+    map('n', '<localleader>gp', gs.preview_hunk)
+    map('n', '<localleader>gd', gs.diffthis)
+    map('n', '<localleader>gD', function() gs.diffthis('~') end)
+    map('n', '<localleader>gtd', gs.toggle_deleted)
 
     -- Text object
     map({'o', 'x'}, 'ih', '<cmd>Gitsigns select_hunk<cr>')
