@@ -91,7 +91,7 @@ return {
     "ggandor/leap-ast.nvim",
     event = "VeryLazy",
   },
-  { "j-hui/fidget.nvim", event = "VeryLazy", config = true },
+  { "j-hui/fidget.nvim", tag = "legacy", event = "VeryLazy", config = true },
   { "kyazdani42/nvim-web-devicons", event = "VeryLazy" },
   {
     "lukas-reineke/indent-blankline.nvim",
