@@ -1,5 +1,5 @@
 return {
-  { "tpope/vim-dadbod", cmd = "DB" },
+  "tpope/vim-dadbod",
   {
     "kristijanhusak/vim-dadbod-ui",
     init = function()
