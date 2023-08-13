@@ -52,6 +52,7 @@ return {
   {
     'Saecki/crates.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
+    config = true,
   },
   {
     "folke/neodev.nvim",
