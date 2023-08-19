@@ -158,6 +158,7 @@ config.Treesitter = {
     "vimdoc",
     "vue",
     "yaml",
+    "zig",
   }
 }
 
