@@ -74,6 +74,7 @@ config.LSP = {
       "bashls",
       "cmake",
       "cssls",
+      "cucumber_language_server",
       "dockerls",
       "graphql",
       "hls",
