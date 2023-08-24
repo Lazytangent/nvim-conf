@@ -99,4 +99,5 @@ return {
     "sealemar/vtl",
   },
   { "tpope/vim-cucumber" },
+  "alaviss/nim.nvim",
 }
