@@ -8,7 +8,6 @@ return {
       require 'extensions.treesitter.configs.http-parser'
     end,
     dependencies = {
-      "HiPhish/nvim-ts-rainbow2",
       { "nvim-treesitter/nvim-treesitter-context", config = true },
     },
   },
@@ -36,5 +35,5 @@ return {
   {
     "David-Kunz/treesitter-unit",
   },
-  { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
+  { url = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git" }
 }

@@ -219,4 +219,5 @@ return {
   { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
   { "dgagn/diagflow.nvim", config = true, },
   'tpope/vim-sleuth',
+  { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
 }
