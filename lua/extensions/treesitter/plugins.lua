@@ -28,20 +28,6 @@ return {
     end,
   },
   {
-    "Lazytangent/nvim-gps",
-    dev = true,
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {
-      icons = {
-        ["container-name"] = "〇 ",
-      },
-      languages = {
-        ["json"] = false,
-      },
-    },
-    event = "VeryLazy",
-  },
-  {
     "ThePrimeagen/refactoring.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
     config = true,
@@ -50,4 +36,5 @@ return {
   {
     "David-Kunz/treesitter-unit",
   },
+  { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
 }

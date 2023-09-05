@@ -1,4 +1,3 @@
-local gps = require('nvim-gps')
 local jsonpath = require('jsonpath')
 
 require("lualine").setup {
@@ -31,7 +30,7 @@ require("lualine").setup {
     },
   },
   winbar = {
-    lualine_c = {{ gps.get_location, cond = gps.is_available }, { jsonpath.get, cond = function() return vim.bo.filetype == "json" end } },
+    lualine_c = {{"navic"}, { jsonpath.get, cond = function() return vim.bo.filetype == "json" end }},
     lualine_y = {{'filename', path = 1}},
   },
   inactive_winbar = {
