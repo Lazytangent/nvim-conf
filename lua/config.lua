@@ -154,7 +154,7 @@ config.Treesitter = {
     "swift",
     "toml",
     "typescript",
-    -- "tsx",
+    "tsx",
     "vim",
     "vimdoc",
     "vue",
