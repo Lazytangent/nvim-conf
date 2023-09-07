@@ -17,7 +17,7 @@ end
 
 if vim.g.neovide then
   vim.schedule(function()
-    vim.cmd [[set guifont=FiraCode\ Nerd\ Font:h12]]
+    vim.cmd [[set guifont=FiraCode\ Nerd\ Font:h16]]
     require('guis.neovide')
   end)
 end
