@@ -2,9 +2,12 @@ local Treesitter = require("config").Treesitter
 
 require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
+  auto_install = false,
+  sync_install = false,
+  ignore_install = {},
 
   indent = {
-    enable = false,
+    enable = true,
     disable = { 'python', 'kotlin' },
   },
   matchup = { enable = true },
