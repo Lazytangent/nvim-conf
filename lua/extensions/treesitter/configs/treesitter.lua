@@ -81,9 +81,6 @@ require("nvim-treesitter.configs").setup({
         ["acl"] = "@class.outer",
         ["icl"] = "@class.inner",
 
-        ["ib"] = "@block.inner",
-        ["ab"] = "@block.outer",
-
         ["ico"] = "@conditional.inner",
         ["aco"] = "@conditional.outer",
 
@@ -156,6 +153,7 @@ require("nvim-treesitter.configs").setup({
   },
   autotag = {
     enable = true,
+    enable_close_on_slash = false,
   },
   autopairs = {
     enable = true,
