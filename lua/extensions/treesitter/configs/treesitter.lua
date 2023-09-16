@@ -54,9 +54,6 @@ require("nvim-treesitter.configs").setup({
       enable = true,
     },
   },
-  playground = {
-    enable = true,
-  },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
