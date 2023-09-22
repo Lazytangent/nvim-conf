@@ -124,6 +124,7 @@ config.Treesitter = {
     "c",
     "cpp",
     "css",
+    "dart",
     "dockerfile",
     "elixir",
     "gitignore",
