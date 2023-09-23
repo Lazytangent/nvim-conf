@@ -40,6 +40,7 @@ local extensions = {
   'ast_grep',
   'dap',
   'file_browser',
+  'flutter',
   'frecency',
   'fzf',
   'lazygit',
