@@ -74,6 +74,7 @@ return {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig", "SmiteshP/nvim-navic" },
     opts = {
+      on_attach = require('lsp.primary.on_attach'),
       settings = {
         expose_as_code_action = 'all',
         tsserver_file_preferences = {
@@ -107,6 +108,10 @@ return {
       'nvim-lua/plenary.nvim',
       'stevearc/dressing.nvim',
     },
-    config = true,
+    opts = {
+      lsp = {
+        on_attach = require('lsp.primary.on_attach'),
+      },
+    },
   },
 }

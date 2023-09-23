@@ -1,10 +1,9 @@
-local navic = require("nvim-navic")
-
 local on_attach = function(client, bufnr)
   if client.server_capabilities.inlayHintProvider then
     vim.lsp.buf.inlay_hint(bufnr, true)
   end
-  navic.attach(client, bufnr)
+
+  require("nvim-navic").attach(client, bufnr)
 
   -- Mappings
   local opts = { noremap = true, silent = true }
