@@ -8,7 +8,7 @@ return {
       require 'extensions.treesitter.configs.http-parser'
     end,
     dependencies = {
-      { "nvim-treesitter/nvim-treesitter-context", config = true },
+      -- { "nvim-treesitter/nvim-treesitter-context", config = true },
     },
   },
   "nvim-treesitter/nvim-treesitter-refactor",
