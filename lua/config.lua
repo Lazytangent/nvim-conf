@@ -91,6 +91,7 @@ config.LSP = {
     },
     regular = {
       "pylsp",
+      "ruff_lsp",
       "terraformls",
       "terraform_lsp",
     },
