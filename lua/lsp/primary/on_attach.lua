@@ -3,7 +3,9 @@ local on_attach = function(client, bufnr)
     vim.lsp.buf.inlay_hint(bufnr, true)
   end
 
-  require("nvim-navic").attach(client, bufnr)
+  if client.server_capabilities.documentSymbols then
+    require("nvim-navic").attach(client, bufnr)
+  end
 
   -- Mappings
   local opts = { noremap = true, silent = true }
