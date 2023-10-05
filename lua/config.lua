@@ -91,7 +91,6 @@ config.LSP = {
     },
     regular = {
       "pylsp",
-      "ruff_lsp",
       "terraformls",
       "terraform_lsp",
     },
@@ -102,6 +101,7 @@ config.LSP = {
       "go",
       "jsonls",
       "lua",
+      "ruff_lsp",
       "sourcekit",
       "sql",
       "vue",
