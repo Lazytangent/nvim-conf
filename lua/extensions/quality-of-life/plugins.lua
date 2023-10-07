@@ -229,4 +229,20 @@ return {
       require('kitty-scrollback').setup()
     end,
   },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      css = { "stylelint" },
+      go = { "goimports", "gofmt" },
+      javascript = { "prettier", "eslint_d" },
+      json = { "jq" },
+      lua = { "stylua" },
+      python = { "isort", "black", "ruff_format", "ruff_fix" },
+      ruby = { "rubocop" },
+      rust = { "rustfmt" },
+      sql = { "sql_formatter" },
+      terraform = { "terraform_fmt" },
+      ["*"] = { "trim_whitespace" },
+    },
+  },
 }

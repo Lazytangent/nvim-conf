@@ -18,6 +18,7 @@
   "cmp-treesitter": { "branch": "master", "commit": "389eadd48c27aa6dc0e6b992644704f026802a2e" },
   "cmp-under-comparator": { "branch": "master", "commit": "6857f10272c3cfe930cece2afa2406e1385bfef8" },
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
+  "conform.nvim": { "branch": "master", "commit": "ba1ca20bb5f89a8bdd94b268411263275550843a" },
   "crates.nvim": { "branch": "main", "commit": "04a06cee3fb9c584de4f5481eb4080bd6c759336" },
   "dart-vim-plugin": { "branch": "master", "commit": "928302ec931caf0dcf21835cca284ccd2b192f7b" },
   "diagflow.nvim": { "branch": "main", "commit": "8ccfd5a9206984cfaa5225ae77e63614fd0969c8" },
