@@ -99,7 +99,14 @@ cmp.setup {
           { name = "omni" },
         }),
       },
-    })
+    }),
+    ["<C-x><C-g>"] = cmp.mapping.complete({
+      config = {
+        sources = cmp.config.sources({
+          { name = "git" },
+        }),
+      },
+    }),
   }),
   sources = {
     { name = "nvim_lsp" },
@@ -108,6 +115,7 @@ cmp.setup {
     { name = "buffer" },
     { name = 'rg' },
     { name = 'treesitter' },
+    { name = 'git' },
     { name = "calc" },
     { name = "latex_symbols" },
     { name = 'nvim_lsp_document_symbol' },

@@ -39,6 +39,9 @@ return {
           "rafamadriz/friendly-snippets",
         },
       },
+      {
+        "petertriho/cmp-git",
+      },
     },
   },
   {
