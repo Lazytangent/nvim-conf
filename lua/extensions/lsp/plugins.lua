@@ -30,6 +30,7 @@ return {
       "onsails/lspkind-nvim",
       "ray-x/cmp-treesitter",
       "saadparwaiz1/cmp_luasnip",
+      "petertriho/cmp-git",
       {
         "L3MON4D3/LuaSnip",
         config = function()
@@ -39,9 +40,7 @@ return {
           "rafamadriz/friendly-snippets",
         },
       },
-      {
-        "petertriho/cmp-git",
-      },
+      { "Gelio/cmp-natdat", config = true },
     },
   },
   {
