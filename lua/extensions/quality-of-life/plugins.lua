@@ -96,24 +96,15 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
-    config = function()
-    --   local highlight = {
-    --       "RainbowRed",
-    --       "RainbowYellow",
-    --       "RainbowBlue",
-    --       "RainbowOrange",
-    --       "RainbowGreen",
-    --       "RainbowViolet",
-    --       "RainbowCyan",
-    --   }
-      -- require("ibl").setup { scope = { highlight = highlight } }
-      require("ibl").setup {}
-
-      -- Indent-Blankline
-      vim.g.indent_blankline_char = "▏"
-      vim.g.indent_blankline_show_trailing_blankline_indent = false
-      vim.g.indent_blankline_show_first_indent_level = false
-    end,
+    opts = {
+      indent = {
+        char = "▏",
+      },
+      scope = {
+        enabled = false,
+      },
+    },
+    main = "ibl",
   },
   {
     "mattn/emmet-vim",
