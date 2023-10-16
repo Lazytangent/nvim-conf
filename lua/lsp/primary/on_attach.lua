@@ -1,6 +1,6 @@
 local on_attach = function(client, bufnr)
   if client.server_capabilities.inlayHintProvider then
-    vim.lsp.buf.inlay_hint(bufnr, true)
+    vim.lsp.inlay_hint(bufnr, true)
   end
 
   if client.server_capabilities.documentSymbols then
@@ -32,7 +32,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "]d",        vim.diagnostic.goto_next, opts)
   vim.keymap.set("n", "[e",        function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) end, opts)
   vim.keymap.set("n", "]e",        function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR }) end, opts)
-  vim.keymap.set("n", "<space>q",  vim.diagnostic.set_loclist, opts)
+  vim.keymap.set("n", "<space>q",  vim.diagnostic.setloclist, opts)
 end
 
 return on_attach
