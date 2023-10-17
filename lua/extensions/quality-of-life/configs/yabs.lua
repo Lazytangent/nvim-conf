@@ -26,7 +26,7 @@ require('yabs'):setup({
     },
   },
   tasks = {
-    pre_commit = {
+    ["pre-commit"] = {
       command = "pre-commit run --files %",
       output = "quickfix",
     },
