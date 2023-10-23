@@ -224,7 +224,12 @@ return {
   { "pwntester/octo.nvim", event = "VeryLazy", config = true },
   { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
   { "dgagn/diagflow.nvim", config = true, },
-  'tpope/vim-sleuth',
+  {
+    'tpope/vim-sleuth',
+    config = function()
+      vim.g.sleuth_heuristics = 0
+    end,
+  },
   { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
   {
     "mikesmithgh/kitty-scrollback.nvim",
