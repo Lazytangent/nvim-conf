@@ -163,6 +163,7 @@ cmp.setup {
         nvim_lua = "[Nvim Lua]",
         latex_symbols = "[Latex]",
         natdat = "[Date]",
+        ["vim-dadbod-completion"] = "[DB]",
       }),
     }),
   },
@@ -174,6 +175,20 @@ cmp.setup {
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources({
     { name = 'buffer' },
+  }),
+})
+
+cmp.setup.filetype('sql', {
+  mapping = cmp.mapping.preset.insert({
+    ["<C-x><C-n>"] = cmp.mapping.complete({
+      config = {
+        sources = cmp.config.sources({
+          { name = "vim-dadbod-completion" },
+          { name = 'nvim_lsp' },
+          { name = 'nvim_lsp_document_symbol' },
+        }),
+      },
+    }),
   }),
 })
 
