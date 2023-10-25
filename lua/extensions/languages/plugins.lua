@@ -76,7 +76,11 @@ return {
     opts = {
       on_attach = require('lsp.primary.on_attach'),
       settings = {
-        expose_as_code_action = 'all',
+        expose_as_code_action = {
+          "fix_all",
+          "add_missing_imports",
+          "remove_unused",
+        },
         -- tsserver_file_preferences = {
         --   includeInlayParameterNameHints = 'all',
         --   includeInlayParameterNameHintsWhenArgumentMatchesName = false,
