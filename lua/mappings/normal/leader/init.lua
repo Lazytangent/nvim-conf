@@ -79,7 +79,9 @@ local leader = {
   g = g,
   h = {
     name = "+Help",
+    d = { require("utils.core").grep_vim_docs,   "Vim Documentation" },
     h = { utils.telescope_builtin "help_tags()", "Help Tags" },
+    p = { require("utils.core").grep_plugins,    "Plugins" },
   },
   l = {
     name = "+LagyGit and LSP",
