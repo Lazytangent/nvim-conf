@@ -35,4 +35,20 @@ function utils.load_modules(base, modules)
   end
 end
 
+function utils.grep_vim_docs()
+  require("telescope").extensions.live_grep_args.live_grep_args {
+    search_dirs = {
+      "/usr/local/share/nvim/doc",
+    },
+  }
+end
+
+function utils.grep_plugins()
+  require("telescope").extensions.live_grep_args.live_grep_args {
+    search_dirs = {
+      "~/.local/share/nvim",
+    },
+  }
+end
+
 return utils
