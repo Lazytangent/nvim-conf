@@ -1,6 +1,6 @@
 local on_attach = function(client, bufnr)
   if client.server_capabilities.inlayHintProvider then
-    vim.lsp.inlay_hint.enable(bufnr, true)
+    vim.lsp.inlay_hint.enable(bufnr, false)
   end
 
   if client.server_capabilities.documentSymbols then
