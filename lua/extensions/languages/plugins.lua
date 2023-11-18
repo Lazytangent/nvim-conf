@@ -119,4 +119,5 @@ return {
     },
   },
   "dart-lang/dart-vim-plugin",
+  "aklt/plantuml-syntax",
 }
