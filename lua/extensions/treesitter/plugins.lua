@@ -3,18 +3,30 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
+      vim.g.skip_ts_context_commentstring_module = true
       require 'extensions.treesitter.configs.treesitter'
 
       require 'extensions.treesitter.configs.http-parser'
     end,
-    dependencies = {
-      -- { "nvim-treesitter/nvim-treesitter-context", config = true },
-    },
   },
   "nvim-treesitter/nvim-treesitter-refactor",
   "nvim-treesitter/nvim-treesitter-textobjects",
 
-  "JoosepAlviste/nvim-ts-context-commentstring",
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    opts = {
+      enable_autocmd = false,
+      languages = {
+        javascript = {
+          __default = '// %s',
+          jsx_element = '{/* %s */}',
+          jsx_fragment = '{/* %s */}',
+          jsx_attribute = '// %s',
+          comment = '// %s',
+        },
+      },
+    },
+  },
   "RRethy/nvim-treesitter-endwise",
   "theHamsta/nvim-treesitter-pairs",
   "windwp/nvim-ts-autotag",
