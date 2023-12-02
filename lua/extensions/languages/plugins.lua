@@ -120,4 +120,9 @@ return {
   },
   "dart-lang/dart-vim-plugin",
   "aklt/plantuml-syntax",
+  {
+    "kaarmu/typst.vim",
+    ft = "typst",
+    lazy = false,
+  },
 }

@@ -113,6 +113,7 @@
   "treesitter-unit": { "branch": "main", "commit": "89968a1f8c72427691088e6d09d26a52c2ddc6f4" },
   "trouble.nvim": { "branch": "main", "commit": "f1168feada93c0154ede4d1fe9183bf69bac54ea" },
   "typescript-tools.nvim": { "branch": "master", "commit": "11f50fb66132c0bac929533b64536a8a7c490435" },
+  "typst.vim": { "branch": "main", "commit": "8b1d2962875b8701c830199f042b74663b6a3a7f" },
   "vim-carbon-lang": { "branch": "trunk", "commit": "e5036677b42cdc9c3b95c373fbd459200f1d63d2" },
   "vim-cucumber": { "branch": "master", "commit": "6c80f698b19806bc8d68788f260a7b002fa3511e" },
   "vim-dadbod": { "branch": "master", "commit": "fecf5a3ecfb1869f34252c7c27351de99f01ab0e" },
