@@ -60,15 +60,20 @@ return {
     config = function()
       require 'extensions.languages.configs.orgmode'
     end,
+    event = "VeryLazy",
   },
   {
     "simrat39/rust-tools.nvim",
     config = function()
       require 'extensions.languages.configs.rust-tools'
     end,
+    event = "VeryLazy",
   },
   { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
-  { "mfussenegger/nvim-jdtls" },
+  {
+    "mfussenegger/nvim-jdtls",
+    event = "VeryLazy",
+  },
   { "vim-scripts/groovyindent-unix", ft = "groovy" },
   {
     "pmizio/typescript-tools.nvim",
@@ -91,7 +96,8 @@ return {
         --   includeInlayEnumMemberValueHints = true,
         -- },
       },
-    }
+    },
+    event = "VeryLazy",
   },
   {
     "mrcjkb/haskell-tools.nvim",
@@ -100,12 +106,20 @@ return {
       "nvim-telescope/telescope.nvim",
     },
     branch = "1.x.x",
+    event = "VeryLazy",
   },
   {
     "sealemar/vtl",
+    event = "VeryLazy",
   },
-  { "tpope/vim-cucumber" },
-  "alaviss/nim.nvim",
+  {
+    "tpope/vim-cucumber",
+    event = "VeryLazy",
+  },
+  {
+    "alaviss/nim.nvim",
+    event = "VeryLazy",
+  },
   {
     "akinsho/flutter-tools.nvim",
     dependencies = {
@@ -117,9 +131,16 @@ return {
         on_attach = require('lsp.primary.on_attach'),
       },
     },
+    event = "VeryLazy",
   },
-  "dart-lang/dart-vim-plugin",
-  "aklt/plantuml-syntax",
+  {
+    "dart-lang/dart-vim-plugin",
+    event = "VeryLazy",
+  },
+  {
+    "aklt/plantuml-syntax",
+    event = "VeryLazy",
+  },
   {
     "kaarmu/typst.vim",
     ft = "typst",

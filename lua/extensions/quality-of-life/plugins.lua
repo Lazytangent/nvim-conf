@@ -5,6 +5,7 @@ return {
     opts = {
       kind = "split",
     },
+    event = "VeryLazy",
   },
   {
     "kdheepak/lazygit.nvim",
