@@ -42,7 +42,6 @@ return {
       },
       { "Gelio/cmp-natdat", config = true },
     },
-    event = "VeryLazy",
   },
   {
     "RishabhRD/nvim-lsputils",
