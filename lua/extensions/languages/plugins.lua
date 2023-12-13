@@ -60,14 +60,12 @@ return {
     config = function()
       require 'extensions.languages.configs.orgmode'
     end,
-    event = "VeryLazy",
   },
   {
     "simrat39/rust-tools.nvim",
     config = function()
       require 'extensions.languages.configs.rust-tools'
     end,
-    event = "VeryLazy",
   },
   { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
   {
