@@ -1,5 +1,10 @@
 return {
-  "folke/tokyonight.nvim",
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      style = "night",
+    },
+  },
   {
     "nvim-lualine/lualine.nvim",
     config = function()
