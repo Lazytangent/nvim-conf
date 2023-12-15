@@ -62,7 +62,7 @@ config.Opts = {
 }
 
 config.Theming = {
-  colorscheme = "oxocarbon-lua",
+  colorscheme = "tokyonight",
 }
 
 config.LSP = {
