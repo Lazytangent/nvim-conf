@@ -62,7 +62,7 @@ config.Opts = {
 }
 
 config.Theming = {
-  colorscheme = "catppuccin",
+  colorscheme = "oxocarbon-lua",
 }
 
 config.LSP = {
