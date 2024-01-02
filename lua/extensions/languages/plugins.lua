@@ -144,4 +144,8 @@ return {
     ft = "typst",
     lazy = false,
   },
+  {
+    "towolf/vim-helm",
+    ft = "helm",
+  },
 }
