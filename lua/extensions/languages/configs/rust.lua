@@ -1,14 +1,9 @@
-local rt = require("rust-tools")
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local utils = require('mappings.utils')
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
   end
 
   -- Mappings
@@ -39,14 +34,13 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "<space>q",  utils.lua_cmd("vim.diagnostic.set_loclist()"), opts)
 end
 
-rt.setup {
+vim.g.rustaceanvim = {
   server = {
     cmd = { "rustup", "run", "stable", "rust-analyzer" },
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
 
-      vim.keymap.set("n", "<C-Space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-      vim.keymap.set("n", "<Leader>as", rt.code_action_group.code_action_group, { buffer = bufnr })
+      vim.keymap.set("n", "<Leader>as", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
     end,
     capabilities = capabilities,
   },

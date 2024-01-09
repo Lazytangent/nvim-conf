@@ -62,9 +62,10 @@ return {
     end,
   },
   {
-    "simrat39/rust-tools.nvim",
+    "mrcjkb/rustaceanvim",
+    version = '^3',
     config = function()
-      require 'extensions.languages.configs.rust-tools'
+      require 'extensions.languages.configs.rust'
     end,
   },
   { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
