@@ -43,7 +43,6 @@ local extensions = {
   'flutter',
   'frecency',
   'fzf',
-  'lazygit',
   'live_grep_args',
   'luasnip',
   'project',
