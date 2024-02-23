@@ -62,9 +62,10 @@ return {
     end,
   },
   {
-    "simrat39/rust-tools.nvim",
+    "mrcjkb/rustaceanvim",
+    version = '^3',
     config = function()
-      require 'extensions.languages.configs.rust-tools'
+      require 'extensions.languages.configs.rust'
     end,
   },
   { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
@@ -84,55 +85,16 @@ return {
           "add_missing_imports",
           "remove_unused",
         },
-        -- tsserver_file_preferences = {
-        --   includeInlayParameterNameHints = 'all',
-        --   includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        --   includeInlayFunctionParameterTypeHints = true,
-        --   includeInlayVariableTypeHints = true,
-        --   includeInlayPropertyDeclarationTypeHints = true,
-        --   includeInlayFunctionLikeReturnTypeHints = true,
-        --   includeInlayEnumMemberValueHints = true,
-        -- },
       },
     },
     event = "VeryLazy",
   },
-  -- {
-  --   "mrcjkb/haskell-tools.nvim",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-telescope/telescope.nvim",
-  --   },
-  --   branch = "1.x.x",
-  --   event = "VeryLazy",
-  -- },
   {
     "sealemar/vtl",
     event = "VeryLazy",
   },
   {
-    "tpope/vim-cucumber",
-    event = "VeryLazy",
-  },
-  {
     "alaviss/nim.nvim",
-    event = "VeryLazy",
-  },
-  {
-    "akinsho/flutter-tools.nvim",
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'stevearc/dressing.nvim',
-    },
-    opts = {
-      lsp = {
-        on_attach = require('lsp.primary.on_attach'),
-      },
-    },
-    event = "VeryLazy",
-  },
-  {
-    "dart-lang/dart-vim-plugin",
     event = "VeryLazy",
   },
   {
@@ -143,5 +105,9 @@ return {
     "kaarmu/typst.vim",
     ft = "typst",
     lazy = false,
+  },
+  {
+    "towolf/vim-helm",
+    ft = "helm",
   },
 }

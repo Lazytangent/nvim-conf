@@ -86,7 +86,6 @@ local leader = {
   l = {
     name = "+LagyGit and LSP",
     a = "Code action",
-    g = { utils.cmd "LazyGit", "LazyGit" },
   },
   m = localleader,
   o = o,

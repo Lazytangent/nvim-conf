@@ -78,6 +78,7 @@ config.LSP = {
       "cucumber_language_server",
       "dockerls",
       "graphql",
+      "helm_ls",
       "hls",
       "html",
       "jedi_language_server",

@@ -1,5 +1,6 @@
 return {
   {
+    -- Emacs's magit-like Git client
     "NeogitOrg/neogit",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
@@ -8,15 +9,7 @@ return {
     event = "VeryLazy",
   },
   {
-    "kdheepak/lazygit.nvim",
-    config = function()
-      if vim.fn.has('nvim') == 1 and vim.fn.executable('nvr') == 1 then
-        vim.cmd([[let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"]])
-      end
-    end,
-    event = "VeryLazy",
-  },
-  {
+    -- Edit code blocks nested inside other buffers
     "AckslD/nvim-FeMaco.lua",
     opts = {
       prepare_buffer = function(opts)
@@ -42,7 +35,11 @@ return {
     },
     event = "VeryLazy",
   },
-  { "monaqa/dial.nvim", event = "VeryLazy", config = function() require 'extensions.quality-of-life.configs.dial' end },
+  {
+    "monaqa/dial.nvim",
+    event = "VeryLazy",
+    config = function() require 'extensions.quality-of-life.configs.dial' end
+  },
   {
     "hkupty/iron.nvim",
     event = "VeryLazy",
