@@ -1,4 +1,4 @@
--- Set up Packer
+-- Set up Lazy
 require "utils.lazy"
 
 -- Set up Leader and Local leader mappings
