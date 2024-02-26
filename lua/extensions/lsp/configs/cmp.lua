@@ -114,8 +114,16 @@ cmp.setup {
         }),
       },
     }),
+    ["<C-x>c"] = cmp.mapping.complete({
+      config = {
+        sources = cmp.config.sources({
+          { name = "copilot" },
+        }),
+      },
+    }),
   }),
   sources = {
+    { name = "copilot", group_index = 2 },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "nvim_lua" },
@@ -164,6 +172,7 @@ cmp.setup {
         latex_symbols = "[Latex]",
         natdat = "[Date]",
         ["vim-dadbod-completion"] = "[DB]",
+        Copliot = "[Copilot]",
       }),
     }),
   },
