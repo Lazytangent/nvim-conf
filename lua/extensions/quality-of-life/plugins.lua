@@ -229,6 +229,8 @@ return {
     'tpope/vim-sleuth',
     config = function()
       vim.g.sleuth_heuristics = 0
+      vim.g.sleuth_javascript_heuristics = 1
+      vim.g.sleuth_typescript_heuristics = 1
     end,
   },
   { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
