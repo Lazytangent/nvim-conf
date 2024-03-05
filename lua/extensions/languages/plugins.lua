@@ -110,4 +110,8 @@ return {
     "towolf/vim-helm",
     ft = "helm",
   },
+  {
+    "jvirtanen/vim-hcl",
+    ft = "hcl",
+  },
 }
