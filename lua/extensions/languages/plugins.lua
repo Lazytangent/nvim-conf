@@ -132,4 +132,8 @@ return {
   {
     "nathangrigg/vim-beancount",
   },
+  {
+    "jvirtanen/vim-hcl",
+    ft = "hcl",
+  },
 }
