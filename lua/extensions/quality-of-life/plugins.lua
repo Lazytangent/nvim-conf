@@ -271,4 +271,8 @@ return {
     "zbirenbaum/copilot-cmp",
     config = true,
   },
+  {
+    "mechatroner/rainbow_csv",
+    ft = "csv",
+  },
 }
