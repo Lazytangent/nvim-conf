@@ -36,9 +36,6 @@ return {
         config = function()
           require 'extensions.lsp.luasnip'
         end,
-        dependencies = {
-          "rafamadriz/friendly-snippets",
-        },
       },
       { "Gelio/cmp-natdat", config = true },
     },
