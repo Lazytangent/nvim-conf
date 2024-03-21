@@ -91,6 +91,7 @@ config.LSP = {
       "volar",
     },
     regular = {
+      "basedpyright",
       "pylsp",
       "terraformls",
       "terraform_lsp",

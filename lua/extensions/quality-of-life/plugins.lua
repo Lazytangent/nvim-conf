@@ -196,16 +196,19 @@ return {
 
   -- Testing
   {
-    "rcarriga/neotest",
-    dependencies = { "antoinemadec/FixCursorHold.nvim" },
+    "nvim-neotest/neotest",
+    dependencies = {
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-neotest/nvim-nio",
+    },
     config = function()
       require 'extensions.quality-of-life.configs.neotest'
     end,
     event = "VeryLazy",
   },
-  { "rcarriga/neotest-plenary", event = "VeryLazy" },
-  { "rcarriga/neotest-python", event = "VeryLazy" },
-  { "rcarriga/neotest-vim-test", event = "VeryLazy" },
+  { "nvim-neotest/neotest-plenary", event = "VeryLazy" },
+  { "nvim-neotest/neotest-python", event = "VeryLazy" },
+  { "nvim-neotest/neotest-vim-test", event = "VeryLazy" },
   { "vim-test/vim-test", event = "VeryLazy" },
   { "haydenmeade/neotest-jest", event = "VeryLazy" },
   { "rouge8/neotest-rust", event = "VeryLazy" },
