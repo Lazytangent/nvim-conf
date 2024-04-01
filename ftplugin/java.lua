@@ -2,7 +2,7 @@ vim.opt_local.shiftwidth = 4
 vim.opt_local.softtabstop = 4
 vim.opt_local.makeprg = "javac %"
 
-vim.api.nvim_buf_set_keymap(0, 'n', '<localleader><leader>r', ':!/usr/lib/jvm/java-22-openjdk/bin/java -cp %:p:h %:t:r<cr>', { noremap = true })
+vim.api.nvim_buf_set_keymap(0, 'n', '<localleader><leader>r', ':!/usr/lib/jvm/java-22-jdk/bin/java -cp %:p:h %:t:r<cr>', { noremap = true })
 
 local jdtls = require('jdtls')
 local root_markers = {'gradlew', '.git'}
@@ -13,12 +13,21 @@ local on_attach = require("lsp.primary.on_attach")
 
 -- See mfussenegger/dotfiles for more inspiration
 -- vim/.config/nvim/ftplugin/java.lua
-vim.fn.setenv('JAVA_HOME', '/usr/lib/jvm/java-22-openjdk')
+vim.fn.setenv('JAVA_HOME', '/usr/lib/jvm/java-22-jdk')
+
+local bundles = {
+  home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
+}
+
+for _, bundle in ipairs(vim.split(vim.fn.glob('/usr/lib/eclipse/plugins/*.jar'), '\n')) do
+  table.insert(bundles, bundle)
+end
 
 local config = {
   cmd = {
     '/usr/bin/jdtls',
 
+    -- '/usr/lib/jvm/java-22-jdk/bin/java',
     -- '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     -- '-Dosgi.bundles.defaultStartLevel=4',
     -- '-Declipse.product=org.eclipse.jdt.ls.core.product',
@@ -30,8 +39,8 @@ local config = {
     -- '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
     -- '-jar', '/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.2.900.v20240129-1338.jar',
-    '-configuration', '/usr/share/java/jdtls/config_linux',
-    '-data', workspace_folder
+    '--configuration', '/usr/share/java/jdtls/config_linux',
+    '--data', workspace_folder
   },
   root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
   settings = {
@@ -41,10 +50,28 @@ local config = {
           enabled = "all",
         },
       },
+      configuration = {
+        runtimes = {
+          {
+            name = "JavaSE-17",
+            path = "/usr/lib/jvm/java-17-openjdk/",
+          },
+          -- {
+          --   name = "apache-tomcat-7.0.109",
+          --   path = home .. "/.local/src/apache-tomcat-7.0.109/",
+          -- },
+        },
+      },
+      eclipse = {
+        downloadSources = true,
+      },
+      maven = {
+        downloadSources = true,
+      },
     },
   },
   init_options = {
-    bundles = {}
+    -- bundles = bundles,
   },
   on_attach = on_attach,
 }
