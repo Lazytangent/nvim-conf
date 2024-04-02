@@ -2,6 +2,7 @@ return {
   {
     -- Emacs's magit-like Git client
     "NeogitOrg/neogit",
+    branch = "nightly",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       kind = "split",
