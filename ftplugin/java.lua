@@ -13,20 +13,23 @@ local on_attach = require("lsp.primary.on_attach")
 
 -- See mfussenegger/dotfiles for more inspiration
 -- vim/.config/nvim/ftplugin/java.lua
-vim.fn.setenv('JAVA_HOME', '/usr/lib/jvm/java-22-jdk')
+-- vim.fn.setenv('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk/')
+vim.fn.setenv('JAVA_HOME', '/usr/lib/jvm/java-22-jdk/')
 
 local bundles = {
   home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
 }
 
-for _, bundle in ipairs(vim.split(vim.fn.glob('/usr/lib/eclipse/plugins/*.jar'), '\n')) do
-  table.insert(bundles, bundle)
-end
+-- for _, bundle in ipairs(vim.split(vim.fn.glob('/usr/lib/eclipse/plugins/*.jar'), '\n')) do
+--   table.insert(bundles, bundle)
+-- end
+
+-- for _, bundle in ipairs(vim.split(vim.fn.glob(home .. '/.local/src/apache-tomcat-7.0.109/lib/*.jar'), '\n')) do
+--   table.insert(bundles, bundle)
+-- end
 
 local config = {
   cmd = {
-    '/usr/bin/jdtls',
-
     -- '/usr/lib/jvm/java-22-jdk/bin/java',
     -- '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     -- '-Dosgi.bundles.defaultStartLevel=4',
@@ -37,41 +40,49 @@ local config = {
     -- '--add-modules=ALL-SYSTEM',
     -- '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     -- '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+    -- '-jar', vim.fn.glob('/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_*.jar'),
 
-    -- '-jar', '/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.2.900.v20240129-1338.jar',
-    '--configuration', '/usr/share/java/jdtls/config_linux',
-    '--data', workspace_folder
+    '/usr/bin/jdtls',
+    '--jvm-arg=-Dlog.level=ALL',
+    '--jvm-arg=-Dlog.protocol=true',
+    '--jvm-arg=-Xmx1g',
+
+    '-configuration', '/usr/share/java/jdtls/config_linux',
+    '-data', workspace_folder,
   },
   root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
   settings = {
     java = {
-      inlayHints = {
-        parameterNames = {
-          enabled = "all",
-        },
-      },
+      -- inlayHints = {
+      --   parameterNames = {
+      --     enabled = "all",
+      --   },
+      -- },
       configuration = {
         runtimes = {
+          {
+            name = "JavaSE-22",
+            path = "/usr/lib/jvm/java-22-jdk/",
+          },
+
           {
             name = "JavaSE-17",
             path = "/usr/lib/jvm/java-17-openjdk/",
           },
-          -- {
-          --   name = "apache-tomcat-7.0.109",
-          --   path = home .. "/.local/src/apache-tomcat-7.0.109/",
-          -- },
         },
       },
       eclipse = {
         downloadSources = true,
       },
-      maven = {
-        downloadSources = true,
-      },
+      -- project = {
+      --   referencedLibraries = {
+          -- home .. '/.local/src/apache-tomcat-7.0.109/lib/servlet-api.jar',
+      --   },
+      -- },
     },
   },
   init_options = {
-    -- bundles = bundles,
+    bundles = bundles,
   },
   on_attach = on_attach,
 }
