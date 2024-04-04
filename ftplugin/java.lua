@@ -73,7 +73,7 @@ local config = {
 
       project = {
         referencedLibraries = {
-          -- home .. '/.local/src/apache-tomcat-7.0.109/lib/servlet-api.jar',
+          home .. '/.local/src/apache-tomcat-7.0.109/lib/servlet-api.jar',
         },
       },
     },
