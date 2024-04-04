@@ -17,7 +17,7 @@ local on_attach = require("lsp.primary.on_attach")
 
 local bundles = {
   home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
-  home .. '/.local/src/dev/vscode-pde/extension/server',
+  vim.fn.glob(home .. '/.local/src/dev/vscode-pde/extension/server/*.jar'),
 }
 
 local jar = vim.fn.glob(home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar', true)
