@@ -261,6 +261,7 @@ return {
         rust = { "rustfmt" },
         sql = { "sql_formatter" },
         terraform = { "terraform_fmt" },
+        typescript = { "prettier", "eslint_d" },
         ["*"] = { "trim_whitespace" },
       },
     },
