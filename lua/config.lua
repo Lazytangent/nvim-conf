@@ -155,6 +155,7 @@ config.Treesitter = {
     "rust",
     "scheme",
     "scss",
+    "sql",
     "swift",
     "toml",
     "typescript",
