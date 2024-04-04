@@ -7,25 +7,22 @@ local on_attach = require "lsp.regular.on_attach"
 local formatting = {
   -- JavaScript/TypeScript
   f.prettier,
-  f.eslint_d,
 
   -- JSON
-  f.json_tool,
-  f.jq,
+  require("none-ls.formatting.jq"),
 
   -- Lua
   f.stylua,
-  f.lua_format,
 
   -- Rust
-  f.rustfmt,
+  require("none-ls.formatting.rustfmt"),
 
   -- SQL
   f.sqlformat,
 
   -- Python
   f.yapf,
-  f.autopep8,
+  require("none-ls.formatting.autopep8"),
   f.black,
   f.isort,
 
@@ -46,27 +43,17 @@ local formatting = {
 
   -- Kotlin
   f.ktlint,
-
-  f.trim_whitespace.with {
-    filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
-  },
 }
 
 local linting = {
-  -- Python
-  d.flake8,
-
   -- Ruby
   d.rubocop,
 
   -- Shell
-  d.shellcheck,
+  require("none-ls-shellcheck.diagnostics"),
 
   -- Codespell
   d.codespell,
-
-  -- TypeScript
-  d.tsc,
 
   -- Go
   d.revive,

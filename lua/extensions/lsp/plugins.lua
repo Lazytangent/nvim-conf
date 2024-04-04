@@ -2,7 +2,12 @@ return {
   "neovim/nvim-lspconfig",
   {
     "nvimtools/none-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "neovim/nvim-lspconfig",
+      "nvimtools/none-ls-extras.nvim",
+      "gbprod/none-ls-shellcheck.nvim",
+    },
     config = function()
       require 'extensions.lsp.configs.null-ls'
     end,
@@ -36,9 +41,6 @@ return {
         config = function()
           require 'extensions.lsp.luasnip'
         end,
-        dependencies = {
-          "rafamadriz/friendly-snippets",
-        },
       },
       { "Gelio/cmp-natdat", config = true },
     },

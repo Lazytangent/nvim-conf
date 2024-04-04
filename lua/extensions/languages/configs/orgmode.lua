@@ -1,7 +1,5 @@
 local orgmode = require('orgmode')
 
-orgmode.setup_ts_grammar()
-
 orgmode.setup {
   org_adapt_indentation = false,
   org_agenda_files = {'~/Documents/org/*', '~/.local/src/org/*'},
