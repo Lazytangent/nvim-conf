@@ -8,23 +8,24 @@ local jdtls = require('jdtls')
 local root_markers = {'gradlew', '.git'}
 local root_dir = require('jdtls.setup').find_root(root_markers)
 local home = os.getenv("HOME")
-local workspace_folder = home .. "/.local/share/eclipse-workspace/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
+local workspace_folder = home .. "/.local/share/jdtls-workspaces/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
+print(workspace_folder)
 local on_attach = require("lsp.primary.on_attach")
 
 -- See mfussenegger/dotfiles for more inspiration
 -- vim/.config/nvim/ftplugin/java.lua
 
 local bundles = {
-  home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
+  -- home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
 }
 
-for _, bundle in ipairs(vim.split(vim.fn.glob('/usr/lib/eclipse/plugins/*.jar'), '\n')) do
-  table.insert(bundles, bundle)
-end
+-- for _, bundle in ipairs(vim.split(vim.fn.glob(home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/*.jar', true), '\n')) do
+--   table.insert(bundles, bundle)
+-- end
 
-for _, bundle in ipairs(vim.split(vim.fn.glob(home .. '/.local/src/apache-tomcat-7.0.109/lib/*.jar'), '\n')) do
-  table.insert(bundles, bundle)
-end
+-- for _, bundle in ipairs(vim.split(vim.fn.glob(home .. '/.local/src/apache-tomcat-7.0.109/lib/*.jar'), '\n')) do
+--   table.insert(bundles, bundle)
+-- end
 
 local jar = vim.fn.glob(home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar', true)
 local configuration = home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_linux'
@@ -65,12 +66,14 @@ local config = {
           },
         },
       },
+
       eclipse = {
         downloadSources = true,
       },
+
       project = {
         referencedLibraries = {
-          home .. '/.local/src/apache-tomcat-7.0.109/lib/servlet-api.jar',
+          -- home .. '/.local/src/apache-tomcat-7.0.109/lib/servlet-api.jar',
         },
       },
     },
