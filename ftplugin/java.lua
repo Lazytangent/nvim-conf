@@ -16,16 +16,9 @@ local on_attach = require("lsp.primary.on_attach")
 -- vim/.config/nvim/ftplugin/java.lua
 
 local bundles = {
-  -- home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
+  home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
+  home .. '/.local/src/dev/vscode-pde/extension/server',
 }
-
--- for _, bundle in ipairs(vim.split(vim.fn.glob(home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/*.jar', true), '\n')) do
---   table.insert(bundles, bundle)
--- end
-
--- for _, bundle in ipairs(vim.split(vim.fn.glob(home .. '/.local/src/apache-tomcat-7.0.109/lib/*.jar'), '\n')) do
---   table.insert(bundles, bundle)
--- end
 
 local jar = vim.fn.glob(home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar', true)
 local configuration = home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_linux'
