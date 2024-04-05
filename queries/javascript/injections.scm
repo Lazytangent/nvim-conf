@@ -1,4 +1,3 @@
-; inherits: javascript
 ; extends
 
 (((comment) @injection.language (#offset! @injection.language 0 3 0 -3))
