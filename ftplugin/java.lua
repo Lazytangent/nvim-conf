@@ -15,6 +15,7 @@ local on_attach = require("lsp.primary.on_attach")
 -- See mfussenegger/dotfiles for more inspiration
 -- vim/.config/nvim/ftplugin/java.lua
 
+-- Java LS extensions
 local bundles = {
   home .. '/.local/src/programming-stuff/language-servers/lsp4jakarta/jakarta.jdt/org.eclipse.lsp4jakarta.jdt.core/target/org.eclipse.lsp4jakarta.jdt.core-0.2.2-SNAPSHOT.jar',
   vim.fn.glob(home .. '/.local/src/dev/vscode-pde/extension/server/*.jar'),
@@ -42,11 +43,6 @@ local config = {
   root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
   settings = {
     java = {
-      inlayHints = {
-        parameterNames = {
-          enabled = "all",
-        },
-      },
       configuration = {
         runtimes = {
           {
@@ -62,6 +58,12 @@ local config = {
 
       eclipse = {
         downloadSources = true,
+      },
+
+      inlayHints = {
+        parameterNames = {
+          enabled = "all",
+        },
       },
 
       project = {
