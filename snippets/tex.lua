@@ -91,12 +91,12 @@ local latex = {
     t "}",
     i(0),
   }),
-  s({ trig = "equation", dscr = "Create equation environment" }, {
+  s({ trig = "eq", dscr = "Create equation environment" }, {
     t { "\\begin{equation}", "\t" },
     i(0),
     t { "", "\\end{equation}" },
   }),
-  s({ trig = "equation*", dscr = "Create anonymous equation environment" }, {
+  s({ trig = "eq", dscr = "Create anonymous equation environment" }, {
     t { "\\begin{equation*}", "\t" },
     i(0),
     t { "", "\\end{equation*}" },
@@ -126,6 +126,12 @@ local latex = {
     i(0),
   }),
   s({ trig = "emph", dscr = "\\emph{$1}$0", name = "Emphasis" }, {
+    t("\\emph{"),
+    i(1),
+    t("}"),
+    i(0),
+  }),
+  s({ trig = "italic", dscr = "\\emph{$1}$0", name = "Emphasis" }, {
     t("\\emph{"),
     i(1),
     t("}"),
