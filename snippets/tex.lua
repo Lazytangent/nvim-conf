@@ -85,6 +85,12 @@ local latex = {
     i(3, "a_n z^n"),
     t "}",
   }),
+  s({ trig = "sqrt", dscr = "\\sqrt{}" }, {
+    t "\\sqrt{",
+    i(1),
+    t "}",
+    i(0),
+  }),
   s({ trig = "sq", dscr = "\\sqrt{}" }, {
     t "\\sqrt{",
     i(1),
@@ -96,7 +102,7 @@ local latex = {
     i(0),
     t { "", "\\end{equation}" },
   }),
-  s({ trig = "eq", dscr = "Create anonymous equation environment" }, {
+  s({ trig = "eq*", dscr = "Create anonymous equation environment" }, {
     t { "\\begin{equation*}", "\t" },
     i(0),
     t { "", "\\end{equation*}" },
