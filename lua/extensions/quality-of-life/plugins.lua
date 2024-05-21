@@ -64,7 +64,6 @@ return {
       })
     end,
   },
-  { "simrat39/symbols-outline.nvim", event = "VeryLazy", config = true },
   {
     "lewis6991/gitsigns.nvim",
     event = "VeryLazy",

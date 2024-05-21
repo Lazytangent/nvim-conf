@@ -1,6 +1,6 @@
 return {
   {
-    "Lazytangent/nvim-surround",
+    "kylechui/nvim-surround",
     config = true,
   },
 }

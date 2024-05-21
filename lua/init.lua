@@ -8,6 +8,13 @@ vim.g.maplocalleader = " m"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- TODO: Temp fix until `typescript-tools.nvim` merges in fix for Isseu #266
+vim.tbl_add_reverse_lookup = function (tbl)
+  for k, v in pairs(tbl) do
+    tbl[v] = k
+  end
+end
+
 -- Load in extensions
 require "extensions"
 
