@@ -21,24 +21,26 @@ local bundles = {
   vim.fn.glob(home .. '/.local/src/dev/vscode-pde/extension/server/*.jar'),
 }
 
-local jar = vim.fn.glob(home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar', true)
-local configuration = home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_linux'
+-- local jar = vim.fn.glob(home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar', true)
+-- local configuration = home .. '/.local/src/repos/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_linux'
 
 local config = {
   cmd = {
-    '/usr/lib/jvm/java-17-openjdk/bin/java',
-    '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-    '-Dosgi.bundles.defaultStartLevel=4',
-    '-Declipse.product=org.eclipse.jdt.ls.core.product',
-    '-Dlog.protocol=true',
-    '-Dlog.level=ALL',
-    '-Xmx1g',
-    '--add-modules=ALL-SYSTEM',
-    '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    '-jar', jar,
-    '-configuration', configuration,
-    '-data', workspace_folder,
+    -- '/usr/lib/jvm/java-22-openjdk/bin/java',
+    -- '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+    -- '-Dosgi.bundles.defaultStartLevel=4',
+    -- '-Declipse.product=org.eclipse.jdt.ls.core.product',
+    -- '-Dlog.protocol=true',
+    -- '-Dlog.level=ALL',
+    -- '-Xmx1g',
+    -- '--add-modules=ALL-SYSTEM',
+    -- '--add-opens', 'java.base/java.util=ALL-UNNAMED',
+    -- '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+    -- '-jar', jar,
+    -- '-configuration', configuration,
+    -- '-data', workspace_folder,
+
+    '/usr/bin/jdtls',
   },
   root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
   settings = {
@@ -47,7 +49,7 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-22",
-            path = "/usr/lib/jvm/java-22-jdk/",
+            path = "/usr/lib/jvm/java-22-openjdk/",
           },
           {
             name = "JavaSE-17",
@@ -68,7 +70,7 @@ local config = {
 
       project = {
         referencedLibraries = {
-          home .. '/.local/src/apache-tomcat-7.0.109/lib/servlet-api.jar',
+          -- home .. '/.local/src/apache-tomcat-7.0.109/lib/servlet-api.jar',
         },
       },
     },

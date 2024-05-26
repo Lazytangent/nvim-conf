@@ -63,7 +63,6 @@ return {
   },
   {
     "mrcjkb/rustaceanvim",
-    version = '^3',
     config = function()
       require 'extensions.languages.configs.rust'
     end,
