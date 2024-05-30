@@ -12,6 +12,11 @@ set cpo&vim
 
 syn match   loxSpecial	       "\\\d\d\d\|\\."
 
+syn match  loxCommentSkip	contained "^\s*\*\%($\|\s\+\)"
+syn region loxCommentString	contained start=+L\=\\\@<!"+ skip=+\\\\\|\\"+ end=+"+ end=+\*/+me=s-1 contains=cSpecial,cCommentSkip
+syn region loxComment2String	contained start=+L\=\\\@<!"+ skip=+\\\\\|\\"+ end=+"+ end="$" contains=cSpecial
+syn region loxCommentL	start="//" skip="\\$" end="$" keepend contains=@cCommentGroup,cComment2String,cCharacter,cNumbersCom,cSpaceError,cWrongComTail,@Spell
+
 syn region  loxComment	       start="/\*"  end="\*/" contains=@Spell
 syn region  loxStringD	       start=+"+  skip=+\\\\\|\\"+  end=+"\|$+	contains=loxSpecial
 syn region  loxStringS	       start=+'+  skip=+\\\\\|\\'+  end=+'\|$+	contains=loxSpecial
@@ -45,6 +50,11 @@ syn match   loxNumber           "\<\(\d\+\(_\d\+\)*\)\?\.\d\+\(_\d\+\)*\([eE][+-
 syn match   loxNumber           "\<\d\+\(_\d\+\)*\.\(\d\+\(_\d\+\)*\([eE][+-]\?\d\+\)\?\)\?\>"
 
 highlight default link loxComment Comment
+highlight default link loxCommentL Comment
+highlight default link loxComment2String Comment
+highlight default link loxCommentString Comment
+highlight default link loxCommentSkip Comment
+
 highlight default link loxBoolean Boolean
 highlight default link loxNumber loxValue
 highlight default link loxConditional Conditional
