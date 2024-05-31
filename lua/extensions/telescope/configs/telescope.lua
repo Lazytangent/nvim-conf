@@ -9,6 +9,10 @@ telescope.setup({
         ["<C-u>"] = false,
         ["<C-/>"] = require("telescope.actions").which_key,
         ["<M-w>"] = require("telescope.actions").smart_add_to_loclist,
+        ["<C-t>"] = require("trouble.sources.telescope").open,
+      },
+      n = {
+        ["<C-t>"] = require("trouble.sources.telescope").open,
       }
     },
   }),
