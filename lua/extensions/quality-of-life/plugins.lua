@@ -1,15 +1,5 @@
 return {
   {
-    -- Emacs's magit-like Git client
-    "NeogitOrg/neogit",
-    branch = "master",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      kind = "split",
-    },
-    event = "VeryLazy",
-  },
-  {
     -- Edit code blocks nested inside other buffers
     "AckslD/nvim-FeMaco.lua",
     opts = {
@@ -20,19 +10,6 @@ return {
       ensure_newline = function(base_filetype)
         return true
       end,
-    },
-    event = "VeryLazy",
-  },
-  {
-    "gaoDean/autolist.nvim",
-    opts = {
-      lists = {
-        filetypes = {
-          generic = {
-            "org",
-          },
-        },
-      },
     },
     event = "VeryLazy",
   },
@@ -119,15 +96,15 @@ return {
       }
     end,
   },
-  {
-    "natecraddock/workspaces.nvim",
-    event = "VeryLazy",
-    opts = {
-      hooks = {
-        open = { "Telescope find_files" },
-      },
-    },
-  },
+  -- {
+  --   "natecraddock/workspaces.nvim",
+  --   event = "VeryLazy",
+  --   opts = {
+  --     hooks = {
+  --       open = { "Telescope find_files" },
+  --     },
+  --   },
+  -- },
   {
     "numToStr/Comment.nvim",
     event = "VeryLazy",
@@ -143,7 +120,11 @@ return {
     end,
   },
   { "ryanoasis/vim-devicons", event = "VeryLazy" },
-  require 'extensions.quality-of-life.configs.diffview',
+  {
+    "sindrets/diffview.nvim",
+    config = true,
+    event = "VeryLazy",
+  },
   {
     "windwp/nvim-autopairs",
     config = function()
@@ -224,7 +205,6 @@ return {
   { "norcalli/nvim-terminal.lua", config = true, event = "VeryLazy" },
   { "tversteeg/registers.nvim", event = "VeryLazy" },
   { "wellle/targets.vim", event = "VeryLazy" },
-  { "kyazdani42/nvim-tree.lua", event = "VeryLazy", opts = require 'extensions.quality-of-life.configs.nvim-tree' },
   { "pwntester/octo.nvim", event = "VeryLazy", config = true },
   { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
   { "dgagn/diagflow.nvim", config = true, },
@@ -261,5 +241,9 @@ return {
         ["*"] = { "trim_whitespace" },
       },
     },
+  },
+  {
+    "kylechui/nvim-surround",
+    config = true,
   },
 }

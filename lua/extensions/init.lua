@@ -8,7 +8,6 @@ local lazy_opts = {
 }
 
 local items = {
-  'custom',
   'dadbod',
   'dap',
   'languages',

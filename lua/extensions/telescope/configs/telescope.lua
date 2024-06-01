@@ -51,7 +51,7 @@ local extensions = {
   'project',
   'refactoring',
   'ui-select',
-  'workspaces',
+  -- 'workspaces',
   'yabs',
 }
 
