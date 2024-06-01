@@ -50,14 +50,6 @@ return {
     end,
   },
   {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    config = true,
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-    },
-  },
-  {
     "andymass/vim-matchup",
     event = "VeryLazy",
   },
@@ -168,12 +160,26 @@ return {
     end,
     event = "VeryLazy",
   },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    config = true,
+    keys = {
+      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+    },
+  },
 
   -- Tpope Section
   { "tpope/vim-eunuch" },
   { "tpope/vim-fugitive" },
   { "tpope/vim-repeat" },
   { "tpope/vim-unimpaired" },
+  {
+    'tpope/vim-sleuth',
+    config = function()
+      vim.g.sleuth_heuristics = 0
+    end,
+  },
 
   -- Testing
   {
@@ -208,12 +214,6 @@ return {
   { "pwntester/octo.nvim", event = "VeryLazy", config = true },
   { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
   { "dgagn/diagflow.nvim", config = true, },
-  {
-    'tpope/vim-sleuth',
-    config = function()
-      vim.g.sleuth_heuristics = 0
-    end,
-  },
   { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
   {
     "mikesmithgh/kitty-scrollback.nvim",
