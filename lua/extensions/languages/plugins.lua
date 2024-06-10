@@ -109,4 +109,7 @@ return {
     "towolf/vim-helm",
     ft = "helm",
   },
+  {
+    "nathangrigg/vim-beancount",
+  },
 }

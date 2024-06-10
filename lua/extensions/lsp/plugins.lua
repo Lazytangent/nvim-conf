@@ -43,6 +43,7 @@ return {
         end,
       },
       { "Gelio/cmp-natdat", config = true },
+      "crispgm/cmp-beancount",
     },
   },
   {

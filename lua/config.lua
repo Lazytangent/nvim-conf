@@ -97,6 +97,7 @@ config.LSP = {
       "terraform_lsp",
     },
     custom = {
+      "beancount",
       "ccls",
       "clangd",
       "deno",

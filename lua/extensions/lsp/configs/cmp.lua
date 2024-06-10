@@ -9,6 +9,13 @@ end
 
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
+local beancount_src = {
+  name = 'beancount',
+  option = {
+    account = '~/.local/src/beancount/account.bean',
+  },
+}
+
 cmp.setup {
   mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -130,6 +137,7 @@ cmp.setup {
     { name = 'vim-dadbod-completion' },
     { name = "crates" },
     { name = "natdat" },
+    beancount_src,
   },
   snippet = {
     expand = function(args)
