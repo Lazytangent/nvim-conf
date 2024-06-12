@@ -125,6 +125,7 @@ config.Treesitter = {
   disabled = { 'latex', 'tex' },
   parsers = {
     "bash",
+    "beancount",
     "c",
     "cpp",
     "css",
