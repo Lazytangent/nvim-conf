@@ -200,6 +200,18 @@ cmp.setup.filetype('sql', {
   }),
 })
 
+cmp.setup.filetype('beancount', {
+  mapping = cmp.mapping.preset.insert({
+    ["<C-x><C-n>"] = cmp.mapping.complete({
+      config = {
+        sources = cmp.config.sources({
+          beancount_src,
+        }),
+      },
+    }),
+  }),
+})
+
 cmp.setup.cmdline('/', {
   mapping = cmp.mapping.preset.cmdline({}),
   sources = cmp.config.sources({
