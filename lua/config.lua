@@ -89,6 +89,7 @@ config.LSP = {
       "texlab",
       "vimls",
       "volar",
+      "zls",
     },
     regular = {
       "basedpyright",
