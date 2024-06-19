@@ -1,8 +1,4 @@
 local on_attach = function(client, bufnr)
-  if client.server_capabilities.inlayHintProvider then
-    vim.lsp.inlay_hint.enable(true)
-  end
-
   if client.server_capabilities.documentSymbols then
     require("nvim-navic").attach(client, bufnr)
   end
