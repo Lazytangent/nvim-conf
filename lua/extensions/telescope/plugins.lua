@@ -4,12 +4,11 @@ return {
     dependencies = {
       "nvim-lua/popup.nvim",
       "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope-live-grep-args.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
       },
-      "nvim-telescope/telescope-dap.nvim",
+      "nvim-telescope/telescope-live-grep-args.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
       "benfowler/telescope-luasnip.nvim",
     },
