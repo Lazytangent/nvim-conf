@@ -4,6 +4,7 @@ local modules = {
   "cd",
   "config",
   "edit_snippet",
+  "format",
   "gen_secret",
   "gen_uuid",
   "go_run",
