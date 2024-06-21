@@ -1379,3 +1379,5 @@ Acyclic
 underapproximation
 overapproximate
 GoogleTest
+tsquery
+PostgreSQL's
