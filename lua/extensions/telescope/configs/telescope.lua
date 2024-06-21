@@ -37,10 +37,6 @@ telescope.setup({
 })
 
 local extensions = {
-  'ast_grep',
-  'dap',
-  'file_browser',
-  'frecency',
   'fzf',
   'live_grep_args',
   'luasnip',
