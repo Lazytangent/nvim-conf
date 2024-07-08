@@ -17,7 +17,7 @@ ls.setup({
 
 ls.log.set_loglevel("info")
 
-local function bash(_, command)
+local function bash(_, _, command)
   local file = io.popen(command, "r")
   local res = {}
   for line in file:lines() do
@@ -27,8 +27,9 @@ local function bash(_, command)
 end
 
 local all = {
-  s("bash", f(bash, {}, "ls")),
-  s("part", p(os.date, "%Y")),
+  s("bash", p(bash, {}, { user_args = { "ls" } })),
+  s("year", p(os.date, "%Y")),
+  s("today", p(os.date, "%Y-%m-%d")),
 }
 
 ls.add_snippets('all', all)
