@@ -11,7 +11,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<localleader>pc",  vim.lsp.buf.code_action, opts)
   vim.keymap.set("n", "<localleader>pr",  vim.lsp.buf.rename, opts)
   vim.keymap.set("n", "<localleader>r",   vim.lsp.buf.rename, opts)
-  vim.keymap.set("n", "<space>,f",        function() require("conform").format({ async = true }) end, opts)
 
   vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
   vim.keymap.set("n", "[d",        vim.diagnostic.goto_prev, opts)
