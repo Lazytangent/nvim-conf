@@ -43,16 +43,12 @@ telescope.setup({
 local extensions = {
   'ast_grep',
   'dap',
-  'file_browser',
-  'frecency',
   'fzf',
   'live_grep_args',
   'luasnip',
   'project',
   'refactoring',
   'ui-select',
-  -- 'workspaces',
-  'yabs',
 }
 
 for _, extension in ipairs(extensions) do

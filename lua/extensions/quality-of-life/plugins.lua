@@ -57,10 +57,6 @@ return {
     "dhruvasagar/vim-table-mode",
     event = "VeryLazy",
   },
-  {
-    "ggandor/leap-ast.nvim",
-    event = "VeryLazy",
-  },
   { "j-hui/fidget.nvim", event = "VeryLazy", config = true },
   { "kyazdani42/nvim-web-devicons", event = "VeryLazy" },
   {
@@ -88,28 +84,12 @@ return {
       }
     end,
   },
-  -- {
-  --   "natecraddock/workspaces.nvim",
-  --   event = "VeryLazy",
-  --   opts = {
-  --     hooks = {
-  --       open = { "Telescope find_files" },
-  --     },
-  --   },
-  -- },
   {
     "numToStr/Comment.nvim",
     event = "VeryLazy",
     config = function()
       require 'extensions.quality-of-life.configs.comment-nvim'
     end
-  },
-  {
-    "pianocomposer321/yabs.nvim",
-    event = "VeryLazy",
-    config = function()
-      require 'extensions.quality-of-life.configs.yabs'
-    end,
   },
   { "ryanoasis/vim-devicons", event = "VeryLazy" },
   {

@@ -27,6 +27,3 @@ Documents the custom User Commands created.
 
 ** =:Touch <name>=
 - Creates files with =touch=
-
-** =:Yabs=
-- Run something with Yabs

@@ -15,7 +15,6 @@ local modules = {
   "touch",
   "trim",
   "unset",
-  "yabs",
 }
 
 utils.load_modules("commands", modules)
