@@ -160,14 +160,6 @@ return {
     end,
     event = "VeryLazy",
   },
-  {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    config = true,
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-    },
-  },
 
   -- Tpope Section
   { "tpope/vim-eunuch" },

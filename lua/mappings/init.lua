@@ -2,18 +2,12 @@ local normal = require('mappings.normal')
 local visual = require('mappings.visual')
 local insert = require('mappings.insert')
 
-local command = {}
-
-local command_opts = { mode = "c", }
-
 local visual_opts = { mode = "v", }
 
 local insert_opts = { mode = "i", }
 
 local visual_only = {
-  g = {
-    a = { [[<Plug>(EasyAlign)]], "Easy Align" },
-  },
+  { "ga", [[<Plug>(EasyAlign)]], desc = "Easy Align" },
 }
 
 local visual_only_opts = {
@@ -21,52 +15,14 @@ local visual_only_opts = {
 }
 
 local select = {
-  ["<C-e>"] = {
-    name = "LuaSnip Jumps",
-    ["<C-n>"] = { [[<Plug>luasnip-expand-or-jump]], "Next choice" },
-    ["<C-p>"] = { [[<Plug>luasnip-jump-prev]],      "Prev choice" },
-  },
-  ["<C-u>"] = { [[<cmd>lua require("luasnip.extras.select_choice")()<cr>]], "Select Choice Node" },
+  { "<C-e>", group = "LuaSnip Jumps", },
+  { "<C-e><C-n>", [[<Plug>luasnip-expand-or-jump]], desc = "Next choice" },
+  { "<C-e><C-p>", [[<Plug>luasnip-jump-prev]],      desc = "Prev choice" },
+  { "<C-u>", [[<cmd>lua require("luasnip.extras.select_choice")()<cr>]], desc = "Select Choice Node" },
 }
 
 local select_opts = {
   mode = "s",
-}
-
-local operator = {
-  ["i"] = {
-    name = "+Inner",
-    n = {
-      name = "+Next",
-      ["("] = { [[:<C-u>normal! f(vi(<cr>]], "Parentheses" },
-      [")"] = { [[:<C-u>normal! f)vi(<cr>]], "Parentheses" },
-      ["b"] = { [[:<C-u>normal! f(vi(<cr>]], "Parentheses" },
-
-      ["{"] = { [[:<C-u>normal! f{vi{<cr>]], "Curly Braces" },
-      ["}"] = { [[:<C-u>normal! f}vi{<cr>]], "Curly Braces" },
-      ["B"] = { [[:<C-u>normal! f{vi{<cr>]], "Curly Braces" },
-
-      ["["] = { [[:<C-u>normal! f[vi[<cr>]], "Square Brackets" },
-      ["]"] = { [[:<C-u>normal! f]vi[<cr>]], "Square Brackets" },
-    },
-    l = {
-      name = "+Last",
-      ["("] = { [[:<C-u>normal! F(vi(<cr>]], "Parentheses" },
-      [")"] = { [[:<C-u>normal! F)vi(<cr>]], "Parentheses" },
-      ["b"] = { [[:<C-u>normal! F(vi(<cr>]], "Parentheses" },
-
-      ["{"] = { [[:<C-u>normal! F{vi{<cr>]], "Curly Braces" },
-      ["}"] = { [[:<C-u>normal! F}vi{<cr>]], "Curly Braces" },
-      ["B"] = { [[:<C-u>normal! F{vi{<cr>]], "Curly Braces" },
-
-      ["["] = { [[:<C-u>normal! F[vi[<cr>]], "Curly Braces" },
-      ["]"] = { [[:<C-u>normal! F]vi[<cr>]], "Curly Braces" },
-    },
-  },
-}
-
-local operator_opts = {
-  mode = "o",
 }
 
 local util = function(str)
@@ -74,8 +30,8 @@ local util = function(str)
 end
 
 local terminal = {
-  ["<C-W>"] = { util('<C-\\><C-N><C-W>'),    "Window movement" },
-  ["<C-#>"] = { util('<C-\\><C-N>:bd!<cr>'), "Close terminal" },
+  { "<C-W>", util('<C-\\><C-N><C-W>'),    desc = "Window movement" },
+  { "<C-#>", util('<C-\\><C-N>:bd!<cr>'), desc = "Close terminal" },
 }
 
 local terminal_opts = {
@@ -84,14 +40,30 @@ local terminal_opts = {
 
 local wk = require "which-key"
 
-wk.register(normal)
-wk.register(visual,      visual_opts)
-wk.register(insert,      insert_opts)
-wk.register(select,      select_opts)
-wk.register(terminal,    terminal_opts)
-wk.register(visual_only, visual_only_opts)
-
--- wk.register(operator, operator_opts)
--- wk.register(command,  command_opts)
+wk.add({
+  {
+    select_opts,
+    select,
+  },
+  {
+    terminal_opts,
+    terminal,
+  },
+  {
+    visual_only_opts,
+    visual_only,
+  },
+  {
+    insert_opts,
+    insert,
+  },
+  {
+    visual_opts,
+    visual,
+  },
+  {
+    normal,
+  },
+})
 
 require("mappings.custom")
