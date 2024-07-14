@@ -25,14 +25,6 @@ return {
     end,
   },
   {
-    "digitaltoad/vim-pug",
-    ft = "pug",
-  },
-  {
-    "elixir-editors/vim-elixir",
-    ft = "elixir",
-  },
-  {
     "fladson/vim-kitty",
     ft = "kitty",
   },
@@ -52,8 +44,8 @@ return {
     },
   },
   { "b0o/schemastore.nvim", ft = { "json", "yaml" } },
-  { "carbon-language/vim-carbon-lang", ft = "carbon" },
   { "keith/swift.vim", ft = "swift" },
+  { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
   { "mrdotb/vim-tailwindcss", ft = { "css", "javascript", "typescript", "javascriptreact", "typescriptreact" } },
   {
     "nvim-orgmode/orgmode.nvim",
@@ -67,12 +59,10 @@ return {
       require 'extensions.languages.configs.rust'
     end,
   },
-  { "tami5/swift.nvim", ft = "swift", main = "swift_env", opts = require "extensions.languages.configs.swift" },
   {
     "mfussenegger/nvim-jdtls",
     event = "VeryLazy",
   },
-  { "vim-scripts/groovyindent-unix", ft = "groovy" },
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig", "SmiteshP/nvim-navic" },
@@ -86,14 +76,6 @@ return {
         },
       },
     },
-    event = "VeryLazy",
-  },
-  {
-    "sealemar/vtl",
-    event = "VeryLazy",
-  },
-  {
-    "alaviss/nim.nvim",
     event = "VeryLazy",
   },
   {

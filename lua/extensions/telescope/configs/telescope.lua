@@ -41,13 +41,10 @@ telescope.setup({
 })
 
 local extensions = {
-  'ast_grep',
   'dap',
   'fzf',
   'live_grep_args',
   'luasnip',
-  'project',
-  'refactoring',
   'ui-select',
 }
 

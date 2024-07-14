@@ -129,11 +129,6 @@ return {
             suggestions = 20,
           },
         },
-        key_labels = {
-          ["<leader>"] = "SPC",
-          ["<localleader>"] = "SPC m",
-          ["<space>"] = "SPC",
-        },
       }
 
       require("mappings")
@@ -153,25 +148,6 @@ return {
     end,
   },
 
-  -- Testing
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "antoinemadec/FixCursorHold.nvim",
-      "nvim-neotest/nvim-nio",
-    },
-    config = function()
-      require 'extensions.quality-of-life.configs.neotest'
-    end,
-    event = "VeryLazy",
-  },
-  { "nvim-neotest/neotest-plenary", event = "VeryLazy" },
-  { "nvim-neotest/neotest-python", event = "VeryLazy" },
-  { "nvim-neotest/neotest-vim-test", event = "VeryLazy" },
-  { "vim-test/vim-test", event = "VeryLazy" },
-  { "haydenmeade/neotest-jest", event = "VeryLazy" },
-  { "rouge8/neotest-rust", event = "VeryLazy" },
-
   {
     "jondkinney/dragvisuals.vim",
     init = function()
@@ -180,10 +156,8 @@ return {
     event = "VeryLazy",
   },
   { "junegunn/vim-easy-align", event = "VeryLazy" },
-  { "norcalli/nvim-terminal.lua", config = true, event = "VeryLazy" },
   { "tversteeg/registers.nvim", event = "VeryLazy" },
   { "wellle/targets.vim", event = "VeryLazy" },
-  { "pwntester/octo.nvim", event = "VeryLazy", config = true },
   { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
   { "dgagn/diagflow.nvim", config = true, },
   { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
