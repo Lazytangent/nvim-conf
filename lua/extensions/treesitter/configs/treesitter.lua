@@ -75,26 +75,6 @@ require("nvim-treesitter.configs").setup({
         ["ab"] = "@block.outer",
       },
     },
-    swap = {
-      enable = true,
-      swap_next = {
-        ["<localleader>b"] = "@block.outer",
-        ["<localleader>m"] = "@function.outer",
-        ["<localleader>c"] = "@class.outer",
-      },
-      swap_previous = {
-        ["<localleader>B"] = "@block.outer",
-        ["<localleader>M"] = "@function.outer",
-        ["<localleader>C"] = "@class.outer",
-      },
-    },
-    lsp_interop = {
-      enable = true,
-      peek_definition_code = {
-        ["<localleader>df"] = "@function.outer",
-        ["<localleader>dc"] = "@class.outer",
-      },
-    },
     move = {
       enable = true,
       set_jumps = true,
