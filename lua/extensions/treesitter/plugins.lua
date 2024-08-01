@@ -47,7 +47,7 @@ return {
   },
   {
     "Wansmer/treesj",
-    dependencies = { 'nvim-tresitter/nvim-treesitter' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = true,
   },
 }
