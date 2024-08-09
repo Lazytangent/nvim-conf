@@ -1427,3 +1427,8 @@ iff
 equalities
 codomain
 pointwise
+injective
+surjective
+bijective
+Cardinality
+cardinality
