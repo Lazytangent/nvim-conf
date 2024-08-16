@@ -25,10 +25,16 @@ local function bash(_, _, command)
   return res
 end
 
+local function yesterday()
+  local date = os.time() - 24 * 60 * 60
+  return os.date("%Y-%m-%d", date)
+end
+
 local all = {
   s("bash", p(bash, {}, { user_args = { "ls" } })),
   s("year", p(os.date, "%Y")),
   s("today", p(os.date, "%Y-%m-%d")),
+  s("yesterday", p(yesterday)),
 }
 
 ls.add_snippets('all', all)
