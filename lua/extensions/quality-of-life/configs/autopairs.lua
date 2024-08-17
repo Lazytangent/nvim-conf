@@ -40,4 +40,4 @@ npairs.add_rules {
   Rule('{% ', ' %', { 'html', 'htmldjango', 'htmljinja' }),
 }
 
-npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust" }
+npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex" }
