@@ -2,7 +2,7 @@ vim.opt_local.makeprg = "javac %"
 
 vim.api.nvim_buf_set_keymap(0, 'n', '<localleader><leader>r', ':!/usr/lib/jvm/java-17-jdk/bin/java -cp %:p:h %:t:r<cr>', { noremap = true })
 
--- local root_markers = {'gradlew', '.git'}
+-- local root_markers = {'gradlew', '.git', 'mvnw'}
 -- local root_dir = require('jdtls.setup').find_root(root_markers)
 -- local workspace_folder = home .. "/.local/share/jdtls-workspaces/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
