@@ -2,12 +2,12 @@ vim.opt_local.makeprg = "javac %"
 
 vim.api.nvim_buf_set_keymap(0, 'n', '<localleader><leader>r', ':!/usr/lib/jvm/java-17-jdk/bin/java -cp %:p:h %:t:r<cr>', { noremap = true })
 
--- local root_markers = {'gradlew', '.git', 'mvnw'}
--- local root_dir = require('jdtls.setup').find_root(root_markers)
--- local workspace_folder = home .. "/.local/share/jdtls-workspaces/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
+local root_markers = {'gradlew', '.git', 'mvnw'}
+local root_dir = require('jdtls.setup').find_root(root_markers)
+local home = os.getenv("HOME")
+local data_dir= home .. "/.local/share/jdtls-workspaces/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
 local jdtls = require('jdtls')
--- local home = os.getenv("HOME")
 local on_attach = require("lsp.primary.on_attach")
 
 -- See mfussenegger/dotfiles for more inspiration
@@ -39,6 +39,7 @@ local config = {
     -- '-data', workspace_folder,
 
     '/usr/bin/jdtls',
+    '-data', data_dir,
   },
   root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
   settings = {
