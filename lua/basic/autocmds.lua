@@ -13,9 +13,11 @@ local autocmds = {
       vim.cmd [[exec "normal! g'\""]]
     end
   end, group = group }},
+
   -- Remove trailing whitespace
-  {'BufWritePre', { command = [[%s/\s\+$//e]], group = group }},
-  {'BufWritePre', { command = [[%s/\n\+\%$//e]], group = group }},
+  -- {'BufWritePre', { command = [[%s/\s\+$//e]], group = group }},
+  -- {'BufWritePre', { command = [[%s/\n\+\%$//e]], group = group }},
+
   -- Terminal buffer defaults
   {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]], group = group }},
   -- {'TermOpen', { command = 'startinsert', group = group }},
