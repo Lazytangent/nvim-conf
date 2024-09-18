@@ -77,6 +77,7 @@ return {
       },
     },
     event = "VeryLazy",
+    ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
   },
   -- {
   --   "mrcjkb/haskell-tools.nvim",

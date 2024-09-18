@@ -10,6 +10,7 @@ return {
     config = function()
       require 'extensions.theme-stuff.configs.lualine'
     end,
+    lazy = false,
   },
   {
     "navarasu/onedark.nvim",
