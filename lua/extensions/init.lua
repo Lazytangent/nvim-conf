@@ -2,9 +2,6 @@ local lazy = require('lazy')
 
 local lazy_opts = {
   concurrency = 50,
-  defaults = {
-    lazy = true,
-  },
   dev = {
     path = "~/.local/src/neovim-plugins",
   },
