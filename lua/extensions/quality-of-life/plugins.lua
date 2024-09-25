@@ -169,4 +169,11 @@ return {
     "mechatroner/rainbow_csv",
     ft = "csv",
   },
+  {
+    "rest-nvim/rest.nvim",
+  },
+  {
+    "kylechui/nvim-surround",
+    config = true,
+  },
 }
