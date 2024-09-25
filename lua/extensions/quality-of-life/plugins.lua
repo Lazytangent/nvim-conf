@@ -31,6 +31,7 @@ return {
   {
     "andymass/vim-matchup",
     event = "VeryLazy",
+    lazy = false,
   },
   {
     "dhruvasagar/vim-table-mode",
