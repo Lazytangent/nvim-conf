@@ -1,3 +1,5 @@
+local parentModule = (...):match("(.-)[^%.]+$")
+
 return {
   {
     -- Edit code blocks nested inside other buffers
@@ -91,7 +93,6 @@ return {
       require 'extensions.quality-of-life.configs.comment-nvim'
     end
   },
-  { "ryanoasis/vim-devicons", event = "VeryLazy" },
   {
     "sindrets/diffview.nvim",
     config = true,
@@ -106,47 +107,10 @@ return {
   },
 
   -- Folke Section
-  { "folke/lsp-colors.nvim", event = "VeryLazy", config = true },
-  {
-    "folke/todo-comments.nvim",
-    config = true,
-    event = "VeryLazy",
-  },
-  {
-    "folke/trouble.nvim",
-    opts = {
-      mode = 'document_diagnostics',
-    },
-    event = "VeryLazy",
-  },
-  {
-    "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {
-        plugins = {
-          spelling = {
-            enabled = true,
-            suggestions = 20,
-          },
-        },
-      }
-
-      require("mappings")
-    end,
-    event = "VeryLazy",
-  },
+  require(parentModule .. 'folke'),
 
   -- Tpope Section
-  { "tpope/vim-eunuch" },
-  { "tpope/vim-fugitive" },
-  { "tpope/vim-repeat" },
-  { "tpope/vim-unimpaired" },
-  {
-    'tpope/vim-sleuth',
-    config = function()
-      vim.g.sleuth_heuristics = 0
-    end,
-  },
+  require(parentModule .. 'tpope'),
 
   {
     "jondkinney/dragvisuals.vim",
@@ -189,7 +153,6 @@ return {
     },
   },
   {
-    "kylechui/nvim-surround",
-    config = true,
+    "rest-nvim/rest.nvim",
   },
 }
