@@ -45,6 +45,7 @@ local extensions = {
   'fzf',
   'live_grep_args',
   'luasnip',
+  'rest',
   'ui-select',
 }
 
