@@ -155,4 +155,8 @@ return {
   {
     "rest-nvim/rest.nvim",
   },
+  {
+    "kylechui/nvim-surround",
+    config = true,
+  },
 }
