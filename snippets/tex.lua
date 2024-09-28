@@ -149,6 +149,9 @@ local latex = {
   s({ trig = ";ff", wordTrig = false, snippetType = "autosnippet" },
     fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })
   ),
+  s({ trig = ";[", wordTrig = false, snippetType = "autosnippet" },
+    fmta("\\left[<>\\right]<>", { i(1), i(0) })
+  ),
 }
 
 return latex
