@@ -1,3 +1,7 @@
+local ls = require('luasnip')
+
+local autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" })
+
 local function copy(args)
   return args[1]
 end
@@ -14,7 +18,7 @@ local function dynamic_copy(args, old_state)
 end
 
 local latex = {
-  s({ trig = ";beg", namr = "begin{} / end{}", dscr = "Create environment", snippetType = "autosnippet" },
+  autosnippet({ trig = ";beg", namr = "begin{} / end{}", dscr = "Create environment" },
     fmta(
       [[
       \begin{<>}
@@ -24,10 +28,10 @@ local latex = {
       { i(1), i(0), f(copy, 1) }
     )
   ),
-  s({ trig = ";ldots", wordTrig = false, snippetType = "autosnippet" }, {
+  autosnippet({ trig = ";ldots", wordTrig = false }, {
     t "\\ldots",
   }),
-  s({ trig = ";...", wordTrig = false, snippetType = "autosnippet" }, {
+  autosnippet({ trig = ";...", wordTrig = false }, {
     t "\\dots",
   }),
   s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" },
@@ -151,6 +155,9 @@ local latex = {
   ),
   s({ trig = ";[", wordTrig = false, snippetType = "autosnippet" },
     fmta("\\left[<>\\right]<>", { i(1), i(0) })
+  ),
+  s({ trig = '"', snippetType = "autosnippet" },
+    fmta("``<>''<>", { i(1), i(0) })
   ),
 }
 
