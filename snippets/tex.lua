@@ -14,7 +14,7 @@ local function dynamic_copy(args, old_state)
 end
 
 local latex = {
-  s({ trig = "beg", namr = "begin{} / end{}", dscr = "Create environment" },
+  s({ trig = ";beg", namr = "begin{} / end{}", dscr = "Create environment", snippetType = "autosnippet" },
     fmta(
       [[
       \begin{<>}
@@ -24,10 +24,10 @@ local latex = {
       { i(1), i(0), f(copy, 1) }
     )
   ),
-  s({ trig = ";ldots", wordTrig = false }, {
+  s({ trig = ";ldots", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\ldots",
   }),
-  s({ trig = ";...", wordTrig = false }, {
+  s({ trig = ";...", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\dots",
   }),
   s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" },
@@ -48,7 +48,7 @@ local latex = {
       d(5, dynamic_copy, { 3 }, { user_args = { 3 } })
     })
   ),
-  s({ trig = ";table", namr = "Table environment", dscr = "Table environment" }, {
+  s({ trig = ";table", namr = "Table environment", dscr = "Table environment", snippetType = "autosnippet" }, {
     t "\\begin{table}[",
     i(1, "htpb"),
     t { "]", "" },
@@ -65,7 +65,7 @@ local latex = {
     i(0),
     t { "", "\t\\end{tabular}", "\\end{table}" },
   }),
-  s({ trig = ";pac", dscr = "Package", wordTrig = false }, {
+  s({ trig = ";pac", dscr = "Package", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\usepackage[",
     i(1, "options"),
     t "]{",
@@ -73,10 +73,10 @@ local latex = {
     t "}",
     i(0),
   }),
-  s({ trig = ";iff", dscr = "iff", wordTrig = false }, {
+  s({ trig = ";iff", dscr = "iff", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\iff",
   }),
-  s({ trig = ";sum", dscr = "sum", wordTrig = false }, {
+  s({ trig = ";sum", dscr = "sum", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\sum_{n=",
     i(1, "1"),
     t "}^{",
@@ -85,29 +85,29 @@ local latex = {
     i(3, "a_n z^n"),
     t "}",
   }),
-  s({ trig = ";sqrt", dscr = "\\sqrt{}", wordTrig = false }, {
+  s({ trig = ";sqrt", dscr = "\\sqrt{}", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\sqrt{",
     i(1),
     t "}",
     i(0),
   }),
-  s({ trig = ";sq", dscr = "\\sqrt{}", wordTrig = false }, {
+  s({ trig = ";sq", dscr = "\\sqrt{}", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\sqrt{",
     i(1),
     t "}",
     i(0),
   }),
-  s({ trig = ";eq", dscr = "Create equation environment", wordTrig = false }, {
+  s({ trig = "eq", dscr = "Create equation environment" }, {
     t { "\\begin{equation}", "\t" },
     i(0),
     t { "", "\\end{equation}" },
   }),
-  s({ trig = ";eq*", dscr = "Create anonymous equation environment", wordTrig = false }, {
+  s({ trig = ";eq*", dscr = "Create anonymous equation environment", wordTrig = false, snippetType = "autosnippet" }, {
     t { "\\begin{equation*}", "\t" },
     i(0),
     t { "", "\\end{equation*}" },
   }),
-  s({ trig = "nabla", dscr = "Insert Nabla symbol" }, {
+  s({ trig = ";nabla", dscr = "Insert Nabla symbol", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\nabla",
     i(0),
   }),
@@ -136,13 +136,19 @@ local latex = {
     i(0),
     t({"", "\\end{document}"}),
   }),
-  s({ trig = "ddx", dscr = "Derivative notation", name = "Derivative" }, {
+  s({ trig = ";ddx", dscr = "Derivative notation", name = "Derivative", wordTrig = false, snippetType = "autosnippet" }, {
     t("\\frac{d}{dx}"),
     i(0),
   }),
-  s({ trig = ";deg", wordTrig = false }, { t("^{\\circ}"), i(0) }),
-  s({ trig = ";mm", wordTrig = false }, fmt("${}${}", { i(1, "math mode"), i(0) })),
-  s({ trig = ";ff", wordTrig = false }, fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })),
+  s({ trig = ";deg", wordTrig = false, snippetType = "autosnippet" },
+    { t("^{\\circ}"), i(0) }
+  ),
+  s({ trig = ";mm", wordTrig = false, snippetType = "autosnippet" },
+    fmt("${}${}", { i(1, "math mode"), i(0) })
+  ),
+  s({ trig = ";ff", wordTrig = false, snippetType = "autosnippet" },
+    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })
+  ),
 }
 
 return latex
