@@ -24,10 +24,10 @@ local latex = {
       { i(1), i(0), f(copy, 1) }
     )
   ),
-  s("ldots", {
+  s({ trig = ";ldots", wordTrig = false }, {
     t "\\ldots",
   }),
-  s("...", {
+  s({ trig = ";...", wordTrig = false }, {
     t "\\dots",
   }),
   s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" },
@@ -48,7 +48,7 @@ local latex = {
       d(5, dynamic_copy, { 3 }, { user_args = { 3 } })
     })
   ),
-  s({ trig = "table", namr = "Table environment", dscr = "Table environment" }, {
+  s({ trig = ";table", namr = "Table environment", dscr = "Table environment" }, {
     t "\\begin{table}[",
     i(1, "htpb"),
     t { "]", "" },
@@ -65,7 +65,7 @@ local latex = {
     i(0),
     t { "", "\t\\end{tabular}", "\\end{table}" },
   }),
-  s({ trig = "pac", dscr = "Package" }, {
+  s({ trig = ";pac", dscr = "Package", wordTrig = false }, {
     t "\\usepackage[",
     i(1, "options"),
     t "]{",
@@ -73,10 +73,10 @@ local latex = {
     t "}",
     i(0),
   }),
-  s({ trig = "iff", dscr = "iff" }, {
+  s({ trig = ";iff", dscr = "iff", wordTrig = false }, {
     t "\\iff",
   }),
-  s({ trig = "sum", dscr = "sum" }, {
+  s({ trig = ";sum", dscr = "sum", wordTrig = false }, {
     t "\\sum_{n=",
     i(1, "1"),
     t "}^{",
@@ -85,24 +85,24 @@ local latex = {
     i(3, "a_n z^n"),
     t "}",
   }),
-  s({ trig = "sqrt", dscr = "\\sqrt{}" }, {
+  s({ trig = ";sqrt", dscr = "\\sqrt{}", wordTrig = false }, {
     t "\\sqrt{",
     i(1),
     t "}",
     i(0),
   }),
-  s({ trig = "sq", dscr = "\\sqrt{}" }, {
+  s({ trig = ";sq", dscr = "\\sqrt{}", wordTrig = false }, {
     t "\\sqrt{",
     i(1),
     t "}",
     i(0),
   }),
-  s({ trig = "eq", dscr = "Create equation environment" }, {
+  s({ trig = ";eq", dscr = "Create equation environment", wordTrig = false }, {
     t { "\\begin{equation}", "\t" },
     i(0),
     t { "", "\\end{equation}" },
   }),
-  s({ trig = "eq*", dscr = "Create anonymous equation environment" }, {
+  s({ trig = ";eq*", dscr = "Create anonymous equation environment", wordTrig = false }, {
     t { "\\begin{equation*}", "\t" },
     i(0),
     t { "", "\\end{equation*}" },
@@ -121,26 +121,8 @@ local latex = {
     t("|"),
     i(0),
   }),
-  s({ trig = "sub*", dscr = "Un-numbered subsection", name = "\\subsection*" }, {
-    t("\\subsection*{"),
-    i(1, "subsection"),
-    t("}"),
-    i(0),
-  }),
   s({ trig = "sim", dscr = "Similar/Tilde", name = "Regular sim" }, {
     t("\\sim"),
-    i(0),
-  }),
-  s({ trig = "emph", dscr = "\\emph{$1}$0", name = "Emphasis" }, {
-    t("\\emph{"),
-    i(1),
-    t("}"),
-    i(0),
-  }),
-  s({ trig = "italic", dscr = "\\emph{$1}$0", name = "Emphasis" }, {
-    t("\\emph{"),
-    i(1),
-    t("}"),
     i(0),
   }),
   s({ trig = "article", dscr = "Article Format", name = "Article Format" }, {
@@ -158,8 +140,9 @@ local latex = {
     t("\\frac{d}{dx}"),
     i(0),
   }),
-  s("degree", { t("^{\\circ}"), i(0) }),
-  s("mm", fmt("${}${}", { i(1, "math mode"), i(0) })),
-  s("//", fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })),
+  s({ trig = ";deg", wordTrig = false }, { t("^{\\circ}"), i(0) }),
+  s({ trig = ";mm", wordTrig = false }, fmt("${}${}", { i(1, "math mode"), i(0) })),
+  s({ trig = ";ff", wordTrig = false }, fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })),
 }
+
 return latex

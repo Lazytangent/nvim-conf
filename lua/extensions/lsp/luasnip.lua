@@ -3,6 +3,7 @@ local s = ls.snippet
 local p = require("luasnip.extras").partial
 
 ls.setup({
+  enable_autosnippets = true,
   history = true,
   update_events = "TextChangedI",
   store_selection_keys = "<Tab>",
