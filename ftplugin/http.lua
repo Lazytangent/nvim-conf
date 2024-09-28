@@ -4,7 +4,8 @@ local nmap = function(lhs, rhs)
   })
 end
 
-nmap('<localleader>Rr', function() vim.cmd('Rest run') end)
-nmap('<localleader>RL', function() vim.cmd('Rest last') end)
-nmap('<localleader>Rl', function() vim.cmd('Rest logs') end)
-nmap('<localleader>Re', require('telescope').extensions.rest.select_env)
+nmap('<localleader>.', function() vim.cmd('Rest run') end)
+nmap('<localleader>mr', function() vim.cmd('Rest run') end)
+nmap('<localleader>mL', function() vim.cmd('Rest last') end)
+nmap('<localleader>ml', function() vim.cmd('Rest logs') end)
+nmap('<localleader>me', require('telescope').extensions.rest.select_env)

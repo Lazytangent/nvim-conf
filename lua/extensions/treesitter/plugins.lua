@@ -45,9 +45,4 @@ return {
     main = 'rainbow-delimiters.setup',
     config = true,
   },
-  {
-    "Wansmer/treesj",
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    config = true,
-  },
 }

@@ -198,7 +198,6 @@ local spec = {
   { "<leader>mlv", desc = "View" },
   { "<leader>mlx", desc = "Reload" },
   { "<leader>mM", function() require("treesj").toggle({ split = { recursive = true } }) end },
-  { "<leader>mm", require("treesj").toggle },
   { "<leader>mo", require("oil").open_float },
   { "<leader>mp", group = "LSP Pickers" },
   { "<leader>mpc", desc = "LSP Code Actions" },
