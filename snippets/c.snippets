@@ -1,11 +1,18 @@
-snippet incs
+snippet ;incs
+autosnippet true
     #include <$1>$0
 
-snippet incl
+snippet ;incl
+autosnippet true
     #include "$1"$0
 
-snippet ifndef
+snippet ;ifndef
+autosnippet true
     #ifndef $1
     #define $1
     $0
     #endif // !$1
+
+snippet ;def
+autosnippet true
+    #define $0
