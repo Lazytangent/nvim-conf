@@ -2,10 +2,6 @@ local ls = require('luasnip')
 
 local autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" })
 
-local function copy(args)
-  return args[1]
-end
-
 local function dynamic_copy(args, old_state)
   if not old_state then
     old_state = {}
@@ -25,7 +21,7 @@ local latex = {
       <>
       \end{<>}
       ]],
-      { i(1), i(0), f(copy, 1) }
+      { i(1), i(0), rep(1) }
     )
   ),
   autosnippet({ trig = ";ldots", wordTrig = false }, {
