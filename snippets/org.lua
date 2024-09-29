@@ -7,7 +7,7 @@ local orgmode = {
     t("#+title: "),
     i(1, "title"),
   }),
-  s({ trig = ";beg", dscr = "#+BEGIN_$1", name = "Create environment", snippetType = "autonsnippet" },
+  s({ trig = ";beg", dscr = "#+BEGIN_$1", name = "Create environment", snippetType = "autosnippet" },
     fmt(
       [[
       #+begin_{}
