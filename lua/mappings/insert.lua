@@ -1,8 +1,12 @@
+local ls = require("luasnip")
+
 local insert = {
-  { "<C-e>", group = "LuaSnip Jumps", },
-  { "<C-e><C-n>", [[<Plug>luasnip-expand-or-jump]], desc = "Next choice" },
-  { "<C-e><C-p>", [[<Plug>luasnip-jump-prev]],      desc = "Prev choice" },
-  { "<C-e><C-u>", [[<cmd>lua require("luasnip.extras.select_choice")()<cr>]], desc = "Select Choice Node" },
+  { "<C-e>", function()
+    if ls.choice_active() then
+      ls.change_choice(1)
+    end
+  end, desc = "Select Choice Node"},
+  { "<C-k>", ls.expand_or_jump, silent = true },
 
   { "<C-x>", group = "Completion modes" },
   { "<C-x>s", desc = "Snippets" },
