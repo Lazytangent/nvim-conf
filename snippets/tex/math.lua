@@ -574,11 +574,11 @@ local other_snippets = {
     {condition = math}
   ),
   -- COLON, i.e. \colon
-  s({trig = "::", snippetType="autosnippet"},
-    {
-      t("\\colon "),
-    }
-  ),
+  -- s({trig = "::", snippetType="autosnippet"},
+  --   {
+  --     t("\\colon "),
+  --   }
+  -- ),
   -- IMPLIES, i.e. \implies
   s({trig = ">>", snippetType="autosnippet"},
     {
