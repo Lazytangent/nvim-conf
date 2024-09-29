@@ -39,6 +39,12 @@ local orgmode = {
   ),
   s({ trig = ";ee", snippetType = "autosnippet" }, fmt("={}={}", { i(1, "code content"), i(0) })),
   s({ trig = ";tt", snippetType = "autosnippet" }, fmt("~{}~{}", { i(1, "code content"), i(0) })),
+  s({ trig = ";bf", snippetType = "autosnippet" },
+    fmt("*{}*{}", { i(1, "bold"), i(0) })
+  ),
+  s({ trig = ";it", snippetType = "autosnippet" },
+    fmt("/{}/{}", { i(1, "italics"), i(0) })
+  ),
 }
 
 return orgmode

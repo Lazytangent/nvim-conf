@@ -9,7 +9,7 @@ ls.setup({
   store_selection_keys = "<Tab>",
   load_ft_func = require('luasnip.extras.filetype_functions').extend_load_ft({
     tex = { "greek" },
-    org = { "greek", "tex", "latex" },
+    org = { "greek" },
     typescript = { "javascript" },
     typescriptreact = { "javascript" },
   }),
@@ -47,4 +47,4 @@ require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/snippe
 
 ls.filetype_extend("ruby", {"rails"})
 ls.filetype_extend("html", {"twig"})
-ls.filetype_extend("org", {"tex", "greek"})
+ls.filetype_extend("org", {"greek"})
