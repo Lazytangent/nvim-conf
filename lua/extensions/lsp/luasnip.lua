@@ -13,6 +13,12 @@ ls.setup({
     typescript = { "javascript" },
     typescriptreact = { "javascript" },
   }),
+  snip_env = {
+    autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" }),
+    tex = {
+      in_math = function() return vim.fn["vimtex#syntax#in_mathzone"]() == 1 end,
+    },
+  },
 })
 
 ls.log.set_loglevel("info")
