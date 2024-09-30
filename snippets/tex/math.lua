@@ -1,3 +1,5 @@
+local autosnippet = require('luasnip').extend_decorator.apply(s, { snippetType = "autosnippet" })
+
 local generate_matrix = function(args, snip)
   local rows = tonumber(snip.captures[2])
   local cols = tonumber(snip.captures[3])
@@ -60,6 +62,9 @@ local snippets = {
       }
     ),
     { condition = math }
+  ),
+  autosnippet({ trig = "//", name = "fraction" },
+    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })
   ),
 }
 
