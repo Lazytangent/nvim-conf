@@ -3,6 +3,7 @@ local utils = {}
 local scopes = {g = vim.go, o = vim.o, b = vim.bo, w = vim.wo}
 
 -- options
+-- TODO: Remove, eventually
 function utils.opt(scope, key, value)
   scopes[scope][key] = value
   if scope ~= "o" then
