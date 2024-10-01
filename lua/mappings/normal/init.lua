@@ -3,18 +3,30 @@ local telescope = require 'telescope.builtin'
 local spec = {
   { "#",      "#``", desc = "#" },
   { "*",      "*``", desc = "*" },
-  { "<C-a>",  function() require("dial.map").manipulate("increment", "normal") end, desc = "Increment with dial" },
+  {
+    "<C-a>",
+    function()
+      require("dial.map").manipulate("increment", "normal")
+    end,
+    desc = "Increment with dial"
+  },
   { "<C-h>",  desc = "Signature help" },
   { "<C-w>",  group = "Window commands" },
-  { "<C-w>d",
+  {
+    "<C-w>d",
     function()
       vim.cmd "vsplit"
       vim.lsp.buf.definition()
-    end, desc = "Vertical split and Go to definition" },
-  { "<C-x>",
+    end,
+    desc = "Vertical split and Go to definition"
+  },
+  {
+    "<C-x>",
     function()
       require("dial.map").manipulate("decrement", "normal")
-    end, desc = "Decrement with dial" },
+    end,
+    desc = "Decrement with dial"
+  },
 
   { "<leader>,", group = "Utilities" },
   { "<leader>,*", "*<C-O>:%s///gn<cr>", desc = "Count matches" },
