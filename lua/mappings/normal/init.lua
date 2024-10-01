@@ -28,37 +28,37 @@ local spec = {
     desc = "Decrement with dial"
   },
 
-  { "<leader>,", group = "Utilities" },
-  { "<leader>,*", "*<C-O>:%s///gn<cr>", desc = "Count matches" },
+  { "<leader>,",  group = "Utilities" },
+  { "<leader>,*", "*<C-O>:%s///gn<cr>",  desc = "Count matches" },
 
   { "<leader>,,", "<C-^>", desc = "Prev buffer" },
   { "<leader>`",  "<C-^>", desc = "Prev buffer" },
 
-  { "<leader>,d", group = "Diagnostics" },
-  { "<leader>,dh", vim.diagnostic.hide, desc = "Hide diagnostics in buffer" },
-  { "<leader>,ds", vim.diagnostic.show, desc = "Show diagnostics in buffer" },
-  { "<leader>,f",  vim.lsp.buf.format,  desc = "Format" },
+  { "<leader>,d",  group = "Diagnostics" },
+  { "<leader>,dh", vim.diagnostic.hide,     desc = "Hide diagnostics in buffer" },
+  { "<leader>,ds", vim.diagnostic.show,     desc = "Show diagnostics in buffer" },
+  { "<leader>,f",  vim.lsp.buf.format,      desc = "Format" },
 
-  { "<leader>,g", ":set operatorfunc=GrepOperator<cr>", desc = "Grep for word under cursor" },
-  { "<leader>/", telescope.current_buffer_fuzzy_find, desc = "Search current buffer" },
+  { "<leader>/",  telescope.current_buffer_fuzzy_find,  desc = "Search current buffer" },
 
   { "<leader><Enter>", desc = "Org: Meta Return" },
 
-  { "<leader><leader>", group = "LSP" },
-  { "<leader><leader>c", group = "Utilities" },
+  { "<leader><leader>",   group = "LSP" },
+  { "<leader><leader>c",  group = "Utilities" },
   { "<leader><leader>cl", require('telescope').extensions.luasnip.luasnip, desc = "Telescope: LuaSnip" },
 
-  { "<leader><leader>d", group = "Textobjects peek" },
+  { "<leader><leader>d",  group = "Textobjects peek" },
   { "<leader><leader>dc", desc = "Outer class" },
   { "<leader><leader>df", desc = "Outer function" },
 
-  { "<leader><leader>l", group = "LSP" },
+  { "<leader><leader>l",  group = "LSP" },
   { "<leader><leader>lD", desc = "Declaration" },
   { "<leader><leader>lc", desc = "Code action" },
   { "<leader><leader>ld", desc = "Definition" },
   { "<leader><leader>lr", desc = "References" },
   { "<leader><leader>lt", desc = "Type definition" },
-  { "<leader><leader>w", group = "LSP Workspace" },
+
+  { "<leader><leader>w",  group = "LSP Workspace" },
   { "<leader><leader>wa", desc = "Add workspace folder" },
   { "<leader><leader>wl", desc = "List workspace folders" },
   { "<leader><leader>wr", desc = "Remove workspace folder" },
@@ -134,22 +134,22 @@ local spec = {
   { "<leader>gts", require('gitsigns').toggle_signs,              desc = "Toggle signs" },
   { "<leader>gtw", require('gitsigns').toggle_word_diff,          desc = "Toggle word diff" },
 
-  { "<leader>h", group = "Help" },
+  { "<leader>h",  group = "Help" },
   { "<leader>hh", require('telescope.builtin').help_tags, desc = "Help Tags" },
 
   { "<leader>l",  group = "LSP" },
   { "<leader>la", desc = "Code action" },
 
-  { "<leader>m", group = "Local leader" },
-  { "<leader>m'", require('femaco.edit').edit_code_block, desc = "Edit code block with FeMaco" },
-  { "<leader>m<CR>", function() vim.cmd "nohlsearch" end, desc = "Turn off highlight" },
+  { "<leader>m",     group = "Local leader" },
+  { "<leader>m'",    require('femaco.edit').edit_code_block, desc = "Edit code block with FeMaco" },
+  { "<leader>m<CR>", function() vim.cmd "nohlsearch" end,    desc = "Turn off highlight" },
 
   { "<leader>mB", desc = "Swap with previous block" },
   { "<leader>mC", desc = "Swap with previous class" },
   { "<leader>mb", desc = "Swap with next block" },
   { "<leader>mc", desc = "Swap with next class" },
 
-  { "<leader>md", group = "LSP Interop" },
+  { "<leader>md",  group = "LSP Interop" },
   { "<leader>mdc", desc = "Outer class definition" },
   { "<leader>mdf", desc = "Outer function definition" },
 
@@ -165,15 +165,15 @@ local spec = {
   { "<leader>mfr", require('telescope.builtin').lsp_references,             desc = "References" },
   { "<leader>mft", require('telescope.builtin').tags,                       desc = "Tags" },
 
-  { "<leader>mg", group = "Gitsigns" },
+  { "<leader>mg",  group = "Gitsigns" },
   { "<leader>mgD", desc = "Diff this ~" },
   { "<leader>mgd", desc = "Diff this" },
   { "<leader>mgp", desc = "Preview hunk" },
 
-  { "<leader>mgt", group = "Toggle" },
+  { "<leader>mgt",  group = "Toggle" },
   { "<leader>mgtd", desc = "Toggle deleted" },
 
-  { "<leader>ml", group = "LaTeX" },
+  { "<leader>ml",  group = "LaTeX" },
   { "<leader>mlC", desc = "Clean full" },
   { "<leader>mlG", desc = "Status all" },
   { "<leader>mlI", desc = "Full Info" },
@@ -199,20 +199,20 @@ local spec = {
 
   { "<leader>mo", require("oil").open_float },
 
-  { "<leader>mp", group = "LSP Pickers" },
+  { "<leader>mp",  group = "LSP Pickers" },
   { "<leader>mpc", desc = "LSP Code Actions" },
   { "<leader>mpe", desc = "LSP References" },
   { "<leader>mpi", desc = "LSP Implementations" },
   { "<leader>mpr", desc = "LSP Rename" },
   { "<leader>mpt", desc = "LSP Type Definition" },
 
-  { "<leader>mpw", group = "Workspace Folders" },
+  { "<leader>mpw",  group = "Workspace Folders" },
   { "<leader>mpwa", desc = "Add workspace folder" },
   { "<leader>mpwl", desc = "List workspace folders" },
   { "<leader>mpwr", desc = "Remove workspace folder" },
-  { "<leader>mr", desc = "Rename" },
+  { "<leader>mr",   desc = "Rename" },
 
-  { "<leader>mt", group = "TableMode" },
+  { "<leader>mt",  group = "TableMode" },
   { "<leader>mtm", desc = "Toggle table mode" },
   { "<leader>mtt", desc = "Tableize" },
 
@@ -226,20 +226,20 @@ local spec = {
   { "<leader>oK", desc = "Org: Move subtree up" },
   { "<leader>oe", desc = "Org: Export" },
 
-  { "<leader>oi", group = "Insert" },
+  { "<leader>oi",  group = "Insert" },
   { "<leader>oi!", desc = "Timestamp Inactive" },
   { "<leader>oi.", desc = "Timestamp" },
   { "<leader>oiT", desc = "TODO Heading" },
   { "<leader>oid", desc = "Deadline" },
   { "<leader>oih", desc = "Heading" },
   { "<leader>ois", desc = "Schedule" },
-  { "<leader>ok", desc = "Org SRC: Abort changes" },
-  { "<leader>oo", desc = "Org: Open at point" },
-  { "<leader>or", desc = "Org: Refile" },
-  { "<leader>ot", desc = "Org: Set tags on current headline" },
-  { "<leader>ow", desc = "Org SRC: Write changes" },
+  { "<leader>ok",  desc = "Org SRC: Abort changes" },
+  { "<leader>oo",  desc = "Org: Open at point" },
+  { "<leader>or",  desc = "Org: Refile" },
+  { "<leader>ot",  desc = "Org: Set tags on current headline" },
+  { "<leader>ow",  desc = "Org SRC: Write changes" },
 
-  { "<leader>ox", group = "Clock" },
+  { "<leader>ox",  group = "Clock" },
   { "<leader>oxe", desc = "Org: Set Effort" },
   { "<leader>oxi", desc = "Org: Clock in" },
   { "<leader>oxj", desc = "Org: Clock GoTo" },
@@ -248,8 +248,8 @@ local spec = {
 
   { "<leader>p", group = "LSP Pickers" },
 
-  { "<leader>pD", group = "Diagnostics" },
-  { "<leader>pDd", require('telescope.builtin').lsp_document_diagnostics, desc = "Document" },
+  { "<leader>pD",  group = "Diagnostics" },
+  { "<leader>pDd", require('telescope.builtin').lsp_document_diagnostics,  desc = "Document" },
   { "<leader>pDw", require('telescope.builtin').lsp_workspace_diagnostics, desc = "Workspace" },
 
   { "<leader>pc",  group = "Code Actions" },
@@ -259,7 +259,7 @@ local spec = {
   { "<leader>pi",  require('telescope.builtin').lsp_implementations,    desc = "Implementations" },
   { "<leader>pr",  require('telescope.builtin').lsp_references,         desc = "References" },
 
-  { "<leader>ps", group = "Symbols" },
+  { "<leader>ps",  group = "Symbols" },
   { "<leader>psd", require('telescope.builtin').lsp_document_symbols,          desc = "Document" },
   { "<leader>psw", require('telescope.builtin').lsp_workspace_symbols,         desc = "Workspace" },
   { "<leader>psy", require('telescope.builtin').lsp_dynamic_workspace_symbols, desc = "Dynamic workspace" },
@@ -283,11 +283,11 @@ local spec = {
   { "<leader>tm", desc = "Table Mode Toggle" },
   { "<leader>tt", desc = "Tableize" },
 
-  { "<leader>x", group = "Trouble" },
+  { "<leader>x",  group = "Trouble" },
   { "<leader>xR", "<cmd>Trouble lsp_references<cr>", desc = "toggle lsp references" },
-  { "<leader>xl", "<cmd>Trouble loclist<cr>", desc = "toggle location list" },
-  { "<leader>xq", "<cmd>Trouble quickfix<cr>", desc = "toggle quickfix" },
-  { "<leader>xx", "<cmd>Trouble diagnostics<cr>", desc = "toggle" },
+  { "<leader>xl", "<cmd>Trouble loclist<cr>",        desc = "toggle location list" },
+  { "<leader>xq", "<cmd>Trouble quickfix<cr>",       desc = "toggle quickfix" },
+  { "<leader>xx", "<cmd>Trouble diagnostics<cr>",    desc = "toggle" },
 
   { "K", desc = "Hover" },
 
