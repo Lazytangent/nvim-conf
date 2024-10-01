@@ -163,26 +163,9 @@ return {
     },
   },
   {
-    "rest-nvim/rest.nvim",
-  },
-  {
     "kylechui/nvim-surround",
     config = true,
   },
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   cmd = "Copilot",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("copilot").setup()
-  --   end,
-  -- },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   config = function()
-  --     require("copilot_cmp").setup()
-  --   end,
-  -- },
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -202,6 +185,15 @@ return {
   },
   {
     "kylechui/nvim-surround",
+    config = true,
+  },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
     config = true,
   },
 }

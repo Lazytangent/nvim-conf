@@ -1,6 +1,5 @@
 local augend = require("dial.augend")
 local config = require("dial.config")
-local map = require("dial.map")
 
 config.augends:register_group {
   default = {

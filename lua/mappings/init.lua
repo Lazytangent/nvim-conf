@@ -1,16 +1,19 @@
-local normal = require('mappings.normal')
-local visual = require('mappings.visual')
-local insert = require('mappings.insert')
+local ls = require 'luasnip'
+
+local normal = require 'mappings.normal'
+local visual = require 'mappings.visual'
+local insert = require 'mappings.insert'
 
 local visual_only = {
   { "ga", [[<Plug>(EasyAlign)]], desc = "Easy Align" },
 }
 
 local select = {
-  { "<C-e>", group = "LuaSnip Jumps", },
-  { "<C-e><C-n>", [[<Plug>luasnip-expand-or-jump]], desc = "Next choice" },
-  { "<C-e><C-p>", [[<Plug>luasnip-jump-prev]],      desc = "Prev choice" },
-  { "<C-u>", [[<cmd>lua require("luasnip.extras.select_choice")()<cr>]], desc = "Select Choice Node" },
+  { "<C-e>", function()
+    if ls.choice_active() then
+      ls.change_choice(1)
+    end
+  end, desc = "Select Choice Node" },
 }
 
 local util = function(str)
@@ -24,7 +27,7 @@ local terminal = {
 
 local wk = require "which-key"
 
-wk.add({
+wk.add {
   {
     mode = "s",
     select,
@@ -48,6 +51,4 @@ wk.add({
   {
     normal,
   },
-})
-
-require("mappings.custom")
+}
