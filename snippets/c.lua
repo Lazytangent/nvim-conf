@@ -15,6 +15,24 @@ local snippets = {
     })
   ),
   autosnippet(";def", fmt("#define {}", { i(0) })),
+  autosnippet(";struct",
+    fmta([[
+      "struct <>{
+        <>
+      }<>"
+    ]], {
+      i(1, "tag"),
+      i(2, "members"),
+      i(0)
+    })
+  ),
+  autosnippet(";type",
+    fmt("typedef <> <>;<>", {
+      i(1, "old"),
+      i(2, "new"),
+      i(0)
+    })
+  ),
 }
 
 return snippets
