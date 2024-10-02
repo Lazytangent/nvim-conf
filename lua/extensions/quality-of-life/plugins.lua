@@ -100,7 +100,15 @@ return {
   { "junegunn/vim-easy-align", event = "VeryLazy" },
   { "tversteeg/registers.nvim", event = "VeryLazy" },
   { "wellle/targets.vim", event = "VeryLazy" },
-  { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
+  {
+    "stevearc/oil.nvim",
+    opts = {
+      keymaps = {
+        ["<Esc>"] = "actions.close",
+      },
+    },
+    event = "VeryLazy",
+  },
   { "dgagn/diagflow.nvim", config = true, },
   {
     'tpope/vim-sleuth',

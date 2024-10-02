@@ -2,6 +2,7 @@ local telescope = require 'telescope.builtin'
 local telescope_extensions = require('telescope').extensions
 local dap = require('dap')
 local gitsigns = require('gitsigns')
+local dial_map = require 'dial.map'
 
 local spec = {
   { "#",      "#``", desc = "#" },
@@ -9,7 +10,7 @@ local spec = {
   {
     "<C-a>",
     function()
-      require("dial.map").manipulate("increment", "normal")
+      dial_map.manipulate("increment", "normal")
     end,
     desc = "Increment with dial"
   },
@@ -25,7 +26,7 @@ local spec = {
   {
     "<C-x>",
     function()
-      require("dial.map").manipulate("decrement", "normal")
+      dial_map.manipulate("decrement", "normal")
     end,
     desc = "Decrement with dial"
   },
@@ -185,8 +186,6 @@ local spec = {
   { "<leader>mtm", desc = "Toggle table mode" },
   { "<leader>mtt", desc = "Tableize" },
 
-  { "<leader>o", group = "Open" },
-
   { "<leader>o$", desc = "Org: Archive subtree" },
   { "<leader>o'", desc = "Org: Edit special" },
   { "<leader>o,", desc = "Org: Change priority" },
@@ -317,8 +316,22 @@ local spec = {
   { "cit", desc = "Org: Cycle TODO forwards" },
 
   { "ga", "<Plug>(EasyAlign)", desc = "Easy Align" },
+  {
+    "g<C-a>",
+    function()
+      dial_map.manipulate("increment", "gnormal")
+    end,
+    desc = "gnormal increment",
+  },
+  {
+    "g<C-x>",
+    function()
+      dial_map.manipulate("decrement", "gnormal")
+    end,
+    desc = "gnormal decrement",
+  },
 
-  { "j", "v:count == 0 ? 'gj' : 'j'", desc = "Up (virtual) line", expr = true },
+  { "j", "v:count == 0 ? 'gj' : 'j'", desc = "Up (virtual) line",   expr = true },
   { "k", "v:count == 0 ? 'gk' : 'k'", desc = "Down (virtual) line", expr = true },
 
   { "yo",  group = "option" },
@@ -328,7 +341,6 @@ local spec = {
   { "yoh", desc = "hlsearch" },
   { "yoi", desc = "ignorecase" },
   { "yol", desc = "list" },
-  { "yom", "<cmd>set modifiable<cr>", desc = "Set modifiable" },
   { "yon", desc = "number" },
   { "yor", desc = "relativenumber" },
   { "yos", desc = "spell" },
@@ -337,6 +349,7 @@ local spec = {
   { "yow", desc = "wrap" },
   { "yox", desc = "crosshairs" },
 
+  { "yom", "<cmd>set modifiable<cr>", desc = "Set modifiable" },
   {
     "yoz",
     function()
