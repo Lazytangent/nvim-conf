@@ -27,7 +27,7 @@ local snippets = {
     })
   ),
   autosnippet(";type",
-    fmt("typedef <> <>;<>", {
+    fmta("typedef <> <>;<>", {
       i(1, "old"),
       i(2, "new"),
       i(0)
