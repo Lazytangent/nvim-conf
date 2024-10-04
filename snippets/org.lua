@@ -45,6 +45,9 @@ local orgmode = {
   s({ trig = ";it", snippetType = "autosnippet" },
     fmt("/{}/{}", { i(1, "italics"), i(0) })
   ),
+  s({ trig = ";mm", wordTrig = false, snippetType = "autosnippet" },
+    fmt("${}${}", { i(1, "math mode"), i(0) })
+  ),
 }
 
 return orgmode

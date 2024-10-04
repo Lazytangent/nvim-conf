@@ -121,6 +121,7 @@ local spec = {
 
   { "<leader>h",  group = "Help" },
   { "<leader>hh", telescope.help_tags, desc = "Help Tags" },
+  { "<leader>hk", telescope.keymaps,   desc = "Keymaps" },
 
   { "<leader>l",  group = "LSP" },
   { "<leader>la", desc = "Code action" },                  -- via LSP on_attach

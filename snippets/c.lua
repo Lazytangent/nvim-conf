@@ -17,17 +17,17 @@ local snippets = {
   autosnippet(";def", fmt("#define {}", { i(0) })),
   autosnippet(";struct",
     fmta([[
-      "struct <>{
+      struct <>{
         <>
-      }<>"
+      }<>
     ]], {
-      i(1, "tag"),
+      i(1),
       i(2, "members"),
       i(0)
     })
   ),
   autosnippet(";type",
-    fmt("typedef <> <>;<>", {
+    fmta("typedef <> <>;<>", {
       i(1, "old"),
       i(2, "new"),
       i(0)
