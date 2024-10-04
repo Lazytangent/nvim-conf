@@ -1,4 +1,8 @@
 local telescope = require 'telescope.builtin'
+local telescope_extensions = require('telescope').extensions
+local dap = require('dap')
+local gitsigns = require('gitsigns')
+local dial_map = require 'dial.map'
 
 local spec = {
   { "#",      "#``", desc = "#" },
@@ -6,12 +10,11 @@ local spec = {
   {
     "<C-a>",
     function()
-      require("dial.map").manipulate("increment", "normal")
+      dial_map.manipulate("increment", "normal")
     end,
     desc = "Increment with dial"
   },
-  { "<C-h>",  desc = "Signature help" },
-  { "<C-w>",  group = "Window commands" },
+  { "<C-h>",  desc = "Signature help" }, -- Set via LSP on_attach
   {
     "<C-w>d",
     function()
@@ -23,152 +26,119 @@ local spec = {
   {
     "<C-x>",
     function()
-      require("dial.map").manipulate("decrement", "normal")
+      dial_map.manipulate("decrement", "normal")
     end,
     desc = "Decrement with dial"
   },
 
-  { "<leader>,", group = "Utilities" },
-  { "<leader>,*", "*<C-O>:%s///gn<cr>", desc = "Count matches" },
+  { "<leader>,",  group = "Utilities" },
+  { "<leader>,*", "*<C-O>:%s///gn<cr>",  desc = "Count matches" },
 
   { "<leader>,,", "<C-^>", desc = "Prev buffer" },
   { "<leader>`",  "<C-^>", desc = "Prev buffer" },
 
-  { "<leader>,d", group = "Diagnostics" },
-  { "<leader>,dh", vim.diagnostic.hide, desc = "Hide diagnostics in buffer" },
-  { "<leader>,ds", vim.diagnostic.show, desc = "Show diagnostics in buffer" },
-  { "<leader>,f",  vim.lsp.buf.format,  desc = "Format" },
+  { "<leader>,d",  group = "Diagnostics" },
+  { "<leader>,dh", vim.diagnostic.hide,     desc = "Hide diagnostics in buffer" },
+  { "<leader>,ds", vim.diagnostic.show,     desc = "Show diagnostics in buffer" },
+  { "<leader>,f",  vim.lsp.buf.format,      desc = "Format" },
 
-  { "<leader>,g", ":set operatorfunc=GrepOperator<cr>", desc = "Grep for word under cursor" },
-  { "<leader>/", telescope.current_buffer_fuzzy_find, desc = "Search current buffer" },
+  { "<leader>/",  telescope.current_buffer_fuzzy_find,  desc = "Search current buffer" },
 
-  { "<leader><Enter>", desc = "Org: Meta Return" },
+  { "<leader><Enter>", desc = "Org: Meta Return" }, -- Only in Orgmode
 
-  { "<leader><leader>", group = "LSP" },
-  { "<leader><leader>c", group = "Utilities" },
-  { "<leader><leader>cl", require('telescope').extensions.luasnip.luasnip, desc = "Telescope: LuaSnip" },
-
-  { "<leader><leader>d", group = "Textobjects peek" },
-  { "<leader><leader>dc", desc = "Outer class" },
-  { "<leader><leader>df", desc = "Outer function" },
-
-  { "<leader><leader>l", group = "LSP" },
-  { "<leader><leader>lD", desc = "Declaration" },
-  { "<leader><leader>lc", desc = "Code action" },
-  { "<leader><leader>ld", desc = "Definition" },
-  { "<leader><leader>lr", desc = "References" },
-  { "<leader><leader>lt", desc = "Type definition" },
-  { "<leader><leader>w", group = "LSP Workspace" },
-  { "<leader><leader>wa", desc = "Add workspace folder" },
-  { "<leader><leader>wl", desc = "List workspace folders" },
-  { "<leader><leader>wr", desc = "Remove workspace folder" },
+  { "<leader><leader>",   group = "LSP" },
+  { "<leader><leader>c",  group = "Utilities" },
 
   { "<leader>d",   group = "Debugger" },
-  { "<leader>dc",  require('dap').continue,                              desc = "Start or Continue" },
+  { "<leader>dc",  dap.continue,                              desc = "Start or Continue" },
   { "<leader>dd",  group = "Utils" },
-  { "<leader>ddc", require('dap').clear_breakpoints,                     desc = "Clear all breakpoints" },
-  { "<leader>ddl", require('dap').list_breakpoints,                      desc = "Lists all breakpoints in quickfix" },
+  { "<leader>ddc", dap.clear_breakpoints,                     desc = "Clear all breakpoints" },
+  { "<leader>ddl", dap.list_breakpoints,                      desc = "Lists all breakpoints in quickfix" },
   { "<leader>df",  group = "Telescope" },
-  { "<leader>dg",  require('dap').run_to_cursor,                         desc = "Run to cursor" },
-  { "<leader>di",  require('dap').step_into,                             desc = "Step Into" },
-  { "<leader>dj",  require('dap').up,                                    desc = "Up stacktrace" },
-  { "<leader>dk",  require('dap').down,                                  desc = "Down stacktrace" },
-  { "<leader>dl",  require('dap.ext.vscode').load_launchjs,              desc = "Load .vscode/launch.json configs" },
-  { "<leader>dn",  require('dap').step_over,                             desc = "Step Over" },
-  { "<leader>do",  require('dap').step_out,                              desc = "Step Out" },
-  { "<leader>dr",  require('dap.repl').open,                             desc = "Open REPL" },
-  { "<leader>dt",  require('dap').toggle_breakpoint,                     desc = "Toggle breakpoint" },
-  { "<leader>du",  group = "UI" },
+  { "<leader>dg",  dap.run_to_cursor,                         desc = "Run to cursor" },
+  { "<leader>di",  dap.step_into,                             desc = "Step Into" },
+  { "<leader>dj",  dap.up,                                    desc = "Up stacktrace" },
+  { "<leader>dk",  dap.down,                                  desc = "Down stacktrace" },
+  { "<leader>dl",  require('dap.ext.vscode').load_launchjs,   desc = "Load .vscode/launch.json configs" },
+  { "<leader>dn",  dap.step_over,                             desc = "Step Over" },
+  { "<leader>do",  dap.step_out,                              desc = "Step Out" },
+  { "<leader>dr",  require('dap.repl').open,                  desc = "Open REPL" },
+  { "<leader>dt",  dap.toggle_breakpoint,                     desc = "Toggle breakpoint" },
 
   { "<leader>e", desc = "Show line diagnostics" },
 
   { "<leader>f",  group = "Telescope stuff" },
-  { "<leader>f/", require('telescope.builtin').current_buffer_fuzzy_find,                 desc = "Search current buffer" },
-  { "<leader>f;", require('telescope.builtin').command_history,                           desc = "Command history" },
-  { "<leader>f?", require('telescope.builtin').search_history,                            desc = "Search history" },
-  { "<leader>fD", require('telescope.builtin').lsp_definitions,                           desc = "LSP Definitions" },
-  { "<leader>fG", require('telescope.builtin').git_status,                                desc = "Git" },
-  { "<leader>fL", require('telescope').extensions.luasnip.luasnip,                        desc = "Luasnip" },
-  { "<leader>fO", require('telescope.builtin').oldfiles,                                  desc = "Old files (recent)" },
-  { "<leader>fP", require('utils.core').search_nvim,                                      desc = "Private config" },
-  { "<leader>fR", require('telescope.builtin').registers,                                 desc = "Registers" },
-  { "<leader>fS", require('telescope.builtin').lsp_document_symbols,                      desc = "Symbols" },
-  { "<leader>fT", require('telescope.builtin').treesitter,                                desc = "Treesitter" },
-  { "<leader>fb", require('telescope.builtin').buffers,                                   desc = "Buffers" },
-  { "<leader>fc", require('telescope.builtin').commands,                                  desc = "Commands" },
-  { "<leader>fd", function() require('telescope.builtin').diagnostics({ bufnr = 0 }) end, desc = "Local diagnostics" },
-  { "<leader>fe", require('telescope.builtin').resume,                                    desc = "Resume" },
-  { "<leader>ff", require('telescope.builtin').find_files,                                desc = "Files" },
-  { "<leader>fg", require('telescope').extensions.live_grep_args.live_grep_args,          desc = "Live grep" },
-  { "<leader>fh", require('telescope.builtin').help_tags,                                 desc = "Help tags" },
-  { "<leader>fi", require('telescope.builtin').lsp_implementations,                       desc = "LSP Implementations" },
-  { "<leader>fj", require('telescope.builtin').jumplist,                                  desc = "Jumplist" },
-  { "<leader>fk", require('telescope.builtin').keymaps,                                   desc = "Keymaps" },
+  { "<leader>f'", telescope.resume,                                        desc = "Resume" },
+  { "<leader>f;", telescope.command_history,                               desc = "Command history" },
+  { "<leader>f?", telescope.search_history,                                desc = "Search history" },
+  { "<leader>fB", require('extensions.telescope.custom.java').build_files, desc = "Java Build Files" },
+  { "<leader>fD", telescope.lsp_definitions,                               desc = "LSP Definitions" },
+  { "<leader>fG", telescope.git_status,                                    desc = "Git" },
+  { "<leader>fI", telescope.lsp_implementations,                           desc = "LSP Implementations" },
+  { "<leader>fJ", require('extensions.telescope.custom.java').files,       desc = "Java Files" },
+  { "<leader>fL", telescope_extensions.luasnip.luasnip,                    desc = "Luasnip" },
+  { "<leader>fO", telescope.oldfiles,                                      desc = "Old files (recent)" },
+  { "<leader>fP", require('utils.core').search_nvim,                       desc = "Private config" },
+  { "<leader>fR", telescope.registers,                                     desc = "Registers" },
+  { "<leader>fS", telescope.lsp_document_symbols,                          desc = "Symbols" },
+  { "<leader>fT", telescope.treesitter,                                    desc = "Treesitter" },
+  { "<leader>fb", telescope.buffers,                                       desc = "Buffers" },
+  { "<leader>fc", telescope.commands,                                      desc = "Commands" },
+  { "<leader>fd", function() telescope.diagnostics({ bufnr = 0 }) end,     desc = "Local diagnostics" },
+  { "<leader>fe", telescope.resume,                                        desc = "Resume" },
+  { "<leader>ff", telescope.find_files,                                    desc = "Files" },
+  { "<leader>fg", telescope_extensions.live_grep_args.live_grep_args,      desc = "Live grep" },
+  { "<leader>fh", telescope.help_tags,                                     desc = "Help tags" },
+  { "<leader>fi", telescope.lsp_implementations,                           desc = "LSP Implementations" },
+  { "<leader>fj", telescope.jumplist,                                      desc = "Jumplist" },
+  { "<leader>fk", telescope.keymaps,                                       desc = "Keymaps" },
+  { "<leader>fm", telescope.marks,                                         desc = "Marks" },
+  { "<leader>fn", telescope.diagnostics,                                   desc = "Global diagnostics" },
+  { "<leader>fo", telescope.quickfixhistory,                               desc = "Quickfix History" },
+  { "<leader>fp", telescope.pickers,                                       desc = "Pickers" },
+  { "<leader>fq", telescope.quickfix,                                      desc = "Quickfix" },
+  { "<leader>fr", telescope.lsp_references,                                desc = "LSP References" },
+  { "<leader>ft", telescope.grep_string,                                   desc = "This word" },
+  { "<leader>fz", telescope.tags,                                          desc = "Tags" },
 
   { "<leader>fl",  group = "LSP Stuff" },
-  { "<leader>fld", require('telescope.builtin').diagnostics,          desc = "Diagnostics" },
-  { "<leader>fls", require('telescope.builtin').lsp_document_symbols, desc = "LSP Document Symbols" },
-  { "<leader>fm",  require('telescope.builtin').marks,                desc = "Marks" },
-  { "<leader>fn",  require('telescope.builtin').diagnostics,          desc = "Global diagnostics" },
-  { "<leader>fo",  require('telescope.builtin').quickfixhistory,      desc = "Quickfix History" },
-  { "<leader>fp",  require('telescope.builtin').pickers,              desc = "Pickers" },
-  { "<leader>fq",  require('telescope.builtin').quickfix,             desc = "Quickfix" },
-  { "<leader>fr",  require('telescope.builtin').lsp_references,       desc = "LSP References" },
-  { "<leader>ft",  require('telescope.builtin').grep_string,          desc = "This word" },
+  { "<leader>fld", telescope.diagnostics,          desc = "Diagnostics" },
+  { "<leader>fls", telescope.lsp_document_symbols, desc = "LSP Document Symbols" },
 
   { "<leader>fs",  "<cmd>w<cr>", desc = "Save file" },
 
   { "<leader>g",  group = "Git" },
-  { "<leader>gg", "<cmd>Git<cr>",  desc = "status" },
-  { "<leader>gs", "<cmd>Git<cr>",  desc = "status" },
+  { "<leader>gg", "<cmd>Git<cr>",    desc = "status" },
+  { "<leader>gs", "<cmd>Neogit<cr>", desc = "status" },
 
-  { "<leader>gt",  group = "Toggle" },
-  { "<leader>gtb", require('gitsigns').toggle_current_line_blame, desc = "Toggle blame" },
-  { "<leader>gtd", require('gitsigns').toggle_deleted,            desc = "Toggle deleted" },
-  { "<leader>gtn", require('gitsigns').toggle_numhl,              desc = "Toggle number hl" },
-  { "<leader>gts", require('gitsigns').toggle_signs,              desc = "Toggle signs" },
-  { "<leader>gtw", require('gitsigns').toggle_word_diff,          desc = "Toggle word diff" },
+  { "<leader>gt",  group = "Gitsigns" },
+  { "<leader>gtb", gitsigns.toggle_current_line_blame, desc = "Toggle blame" },
+  { "<leader>gtd", gitsigns.toggle_deleted,            desc = "Toggle deleted" },
+  { "<leader>gtn", gitsigns.toggle_numhl,              desc = "Toggle number hl" },
+  { "<leader>gtp", gitsigns.preview_hunk,              desc = "Preview Hunk" },
+  { "<leader>gts", gitsigns.toggle_signs,              desc = "Toggle signs" },
+  { "<leader>gtw", gitsigns.toggle_word_diff,          desc = "Toggle word diff" },
 
-  { "<leader>h", group = "Help" },
-  { "<leader>hh", require('telescope.builtin').help_tags, desc = "Help Tags" },
+  { "<leader>h",  group = "Help" },
+  { "<leader>hh", telescope.help_tags, desc = "Help Tags" },
 
   { "<leader>l",  group = "LSP" },
-  { "<leader>la", desc = "Code action" },
+  { "<leader>la", desc = "Code action" },                  -- via LSP on_attach
+  { "<leader>lc", telescope.lsp_code_actions,              desc = "at Cursor" },
+  { "<leader>lr", telescope.lsp_range_code_actions,        desc = "on Range" },
+  { "<leader>ls", telescope.lsp_document_symbols,          desc = "Document" },
+  { "<leader>lS", telescope.lsp_workspace_symbols,         desc = "Workspace" },
+  { "<leader>lw", telescope.lsp_dynamic_workspace_symbols, desc = "Dynamic workspace" },
+  { "<leader>lt", telescope.lsp_type_definitions,          desc = "Type Definitions" },
 
-  { "<leader>m", group = "Local leader" },
-  { "<leader>m'", require('femaco.edit').edit_code_block, desc = "Edit code block with FeMaco" },
-  { "<leader>m<CR>", function() vim.cmd "nohlsearch" end, desc = "Turn off highlight" },
+  { "<leader>m",     group = "Local leader" },
+  { "<leader>m'",    require('femaco.edit').edit_code_block, desc = "Edit code block with FeMaco" },
+  { "<leader>m<CR>", function() vim.cmd "nohlsearch" end,    desc = "Turn off highlight" },
 
-  { "<leader>mB", desc = "Swap with previous block" },
-  { "<leader>mC", desc = "Swap with previous class" },
-  { "<leader>mb", desc = "Swap with next block" },
-  { "<leader>mc", desc = "Swap with next class" },
-
-  { "<leader>md", group = "LSP Interop" },
-  { "<leader>mdc", desc = "Outer class definition" },
-  { "<leader>mdf", desc = "Outer function definition" },
-
-  { "<leader>mf",  group = "Telescope" },
-  { "<leader>mfB", require('extensions.telescope.custom.java').build_files, desc = "Java Build Files" },
-  { "<leader>mfP", require('telescope.builtin').pickers,                    desc = "Previous pickers" },
-  { "<leader>mfd", require('telescope.builtin').lsp_definitions,            desc = "Definitions" },
-  { "<leader>mff", require('telescope.builtin').current_buffer_fuzzy_find,  desc = "Fuzzy find" },
-  { "<leader>mfg", require('telescope.builtin').git_status,                 desc = "Git" },
-  { "<leader>mfi", require('telescope.builtin').lsp_implementations,        desc = "Implementations" },
-  { "<leader>mfj", require('extensions.telescope.custom.java').files,       desc = "Java Files" },
-  { "<leader>mfp", require('telescope.builtin').resume,                     desc = "Resume" },
-  { "<leader>mfr", require('telescope.builtin').lsp_references,             desc = "References" },
-  { "<leader>mft", require('telescope.builtin').tags,                       desc = "Tags" },
-
-  { "<leader>mg", group = "Gitsigns" },
-  { "<leader>mgD", desc = "Diff this ~" },
-  { "<leader>mgd", desc = "Diff this" },
-  { "<leader>mgp", desc = "Preview hunk" },
-
-  { "<leader>mgt", group = "Toggle" },
+  { "<leader>mgt",  group = "Toggle" },
   { "<leader>mgtd", desc = "Toggle deleted" },
 
-  { "<leader>ml", group = "LaTeX" },
+  { "<leader>ml",  group = "LaTeX" },
   { "<leader>mlC", desc = "Clean full" },
   { "<leader>mlG", desc = "Status all" },
   { "<leader>mlI", desc = "Full Info" },
@@ -194,24 +164,22 @@ local spec = {
 
   { "<leader>mo", require("oil").open_float },
 
-  { "<leader>mp", group = "LSP Pickers" },
+  { "<leader>mp",  group = "LSP Pickers" },
   { "<leader>mpc", desc = "LSP Code Actions" },
   { "<leader>mpe", desc = "LSP References" },
   { "<leader>mpi", desc = "LSP Implementations" },
   { "<leader>mpr", desc = "LSP Rename" },
   { "<leader>mpt", desc = "LSP Type Definition" },
 
-  { "<leader>mpw", group = "Workspace Folders" },
+  { "<leader>mpw",  group = "Workspace Folders" },
   { "<leader>mpwa", desc = "Add workspace folder" },
   { "<leader>mpwl", desc = "List workspace folders" },
   { "<leader>mpwr", desc = "Remove workspace folder" },
-  { "<leader>mr", desc = "Rename" },
+  { "<leader>mr",   desc = "Rename" },
 
-  { "<leader>mt", group = "TableMode" },
+  { "<leader>mt",  group = "TableMode" },
   { "<leader>mtm", desc = "Toggle table mode" },
   { "<leader>mtt", desc = "Tableize" },
-
-  { "<leader>o", group = "Open" },
 
   { "<leader>o$", desc = "Org: Archive subtree" },
   { "<leader>o'", desc = "Org: Edit special" },
@@ -221,70 +189,42 @@ local spec = {
   { "<leader>oK", desc = "Org: Move subtree up" },
   { "<leader>oe", desc = "Org: Export" },
 
-  { "<leader>oi", group = "Insert" },
+  { "<leader>oi",  group = "Insert" },
   { "<leader>oi!", desc = "Timestamp Inactive" },
   { "<leader>oi.", desc = "Timestamp" },
   { "<leader>oiT", desc = "TODO Heading" },
   { "<leader>oid", desc = "Deadline" },
   { "<leader>oih", desc = "Heading" },
   { "<leader>ois", desc = "Schedule" },
-  { "<leader>ok", desc = "Org SRC: Abort changes" },
-  { "<leader>oo", desc = "Org: Open at point" },
-  { "<leader>or", desc = "Org: Refile" },
-  { "<leader>ot", desc = "Org: Set tags on current headline" },
-  { "<leader>ow", desc = "Org SRC: Write changes" },
-
-  { "<leader>ox", group = "Clock" },
+  { "<leader>ok",  desc = "Org SRC: Abort changes" },
+  { "<leader>oo",  desc = "Org: Open at point" },
+  { "<leader>or",  desc = "Org: Refile" },
+  { "<leader>ot",  desc = "Org: Set tags on current headline" },
+  { "<leader>ow",  desc = "Org SRC: Write changes" },
+  { "<leader>ox",  group = "Clock" },
   { "<leader>oxe", desc = "Org: Set Effort" },
   { "<leader>oxi", desc = "Org: Clock in" },
   { "<leader>oxj", desc = "Org: Clock GoTo" },
   { "<leader>oxo", desc = "Org: Clock out" },
   { "<leader>oxq", desc = "Org: Cancel Clock" },
 
-  { "<leader>p", group = "LSP Pickers" },
+  { "<leader>pd",  group = "Diagnostics" },
+  { "<leader>pdd", telescope.lsp_document_diagnostics,  desc = "Document" },
+  { "<leader>pdw", telescope.lsp_workspace_diagnostics, desc = "Workspace" },
 
-  { "<leader>pD", group = "Diagnostics" },
-  { "<leader>pDd", require('telescope.builtin').lsp_document_diagnostics, desc = "Document" },
-  { "<leader>pDw", require('telescope.builtin').lsp_workspace_diagnostics, desc = "Workspace" },
-
-  { "<leader>pc",  group = "Code Actions" },
-  { "<leader>pcc", require('telescope.builtin').lsp_code_actions,       desc = "at Cursor" },
-  { "<leader>pcr", require('telescope.builtin').lsp_range_code_actions, desc = "on Range" },
-  { "<leader>pd",  require('telescope.builtin').lsp_definitions,        desc = "Definitions" },
-  { "<leader>pi",  require('telescope.builtin').lsp_implementations,    desc = "Implementations" },
-  { "<leader>pr",  require('telescope.builtin').lsp_references,         desc = "References" },
-
-  { "<leader>ps", group = "Symbols" },
-  { "<leader>psd", require('telescope.builtin').lsp_document_symbols,          desc = "Document" },
-  { "<leader>psw", require('telescope.builtin').lsp_workspace_symbols,         desc = "Workspace" },
-  { "<leader>psy", require('telescope.builtin').lsp_dynamic_workspace_symbols, desc = "Dynamic workspace" },
-  { "<leader>pt",  require('telescope.builtin').lsp_type_definitions,          desc = "Type Definitions" },
-
-  { "<leader>q", desc = "Set diagnostics into location list" },
-
-  { "<leader>rh", function() vim.cmd "IronHide" end,    desc = "Hide Iron REPL" },
-  { "<leader>rr", function() vim.cmd "IronRestart" end, desc = "Restart Iron REPL" },
-  { "<leader>rs", function() vim.cmd "IronRepl" end,    desc = "Open Iron REPL" },
-
-  { "<leader>s",     group = "Send to REPL" },
-  { "<leader>s<CR>", desc = "CR" },
-  { "<leader>sC",    desc = "Clear Iron REPL" },
-  { "<leader>sc",    desc = "Send motion" },
-  { "<leader>sf",    desc = "Send file" },
-  { "<leader>sl",    desc = "Send line" },
-  { "<leader>sq",    desc = "Exit Iron REPL" },
+  { "<leader>q", desc = "Set diagnostics into location list" }, -- Set via LSP on_attach
 
   { "<leader>t",  group = "Tabs and Table Mode" },
   { "<leader>tm", desc = "Table Mode Toggle" },
   { "<leader>tt", desc = "Tableize" },
 
-  { "<leader>x", group = "Trouble" },
-  { "<leader>xR", "<cmd>Trouble lsp_references<cr>", desc = "toggle lsp references" },
-  { "<leader>xl", "<cmd>Trouble loclist<cr>", desc = "toggle location list" },
-  { "<leader>xq", "<cmd>Trouble quickfix<cr>", desc = "toggle quickfix" },
-  { "<leader>xx", "<cmd>Trouble diagnostics<cr>", desc = "toggle" },
+  { "<leader>x",  group = "Trouble" },
+  { "<leader>xR", function() vim.cmd "Trouble lsp_references" end, desc = "toggle lsp references" },
+  { "<leader>xl", function() vim.cmd "Trouble loclist" end,        desc = "toggle location list" },
+  { "<leader>xq", function() vim.cmd "Trouble quickfix" end,       desc = "toggle quickfix" },
+  { "<leader>xx", function() vim.cmd "Trouble diagnostics" end,    desc = "toggle" },
 
-  { "K", desc = "Hover" },
+  { "K", desc = "Hover" }, -- LSP on_attach
 
   { "[<C-L>",   desc = "Last error of prev file in loclist" },
   { "[<C-Q>",   desc = "Last error of prev file in quickfix" },
@@ -371,8 +311,22 @@ local spec = {
   { "cit", desc = "Org: Cycle TODO forwards" },
 
   { "ga", "<Plug>(EasyAlign)", desc = "Easy Align" },
+  {
+    "g<C-a>",
+    function()
+      dial_map.manipulate("increment", "gnormal")
+    end,
+    desc = "gnormal increment",
+  },
+  {
+    "g<C-x>",
+    function()
+      dial_map.manipulate("decrement", "gnormal")
+    end,
+    desc = "gnormal decrement",
+  },
 
-  { "j", "v:count == 0 ? 'gj' : 'j'", desc = "Up (virtual) line", expr = true },
+  { "j", "v:count == 0 ? 'gj' : 'j'", desc = "Up (virtual) line",   expr = true },
   { "k", "v:count == 0 ? 'gk' : 'k'", desc = "Down (virtual) line", expr = true },
 
   { "yo",  group = "option" },
@@ -382,7 +336,6 @@ local spec = {
   { "yoh", desc = "hlsearch" },
   { "yoi", desc = "ignorecase" },
   { "yol", desc = "list" },
-  { "yom", "<cmd>set modifiable<cr>", desc = "Set modifiable" },
   { "yon", desc = "number" },
   { "yor", desc = "relativenumber" },
   { "yos", desc = "spell" },
@@ -391,7 +344,18 @@ local spec = {
   { "yow", desc = "wrap" },
   { "yox", desc = "crosshairs" },
 
-  { "yoz", '<cmd>if exists("g:syntax_on") <Bar> syntax off <Bar> else <Bar> syntax enable <Bar> endif<cr>', desc = "Toggle syntax" },
+  { "yom", "<cmd>set modifiable<cr>", desc = "Set modifiable" },
+  {
+    "yoz",
+    function()
+      if vim.g.syntax_on == 1 then
+        vim.cmd "syntax off"
+      else
+        vim.cmd "syntax enable"
+      end
+    end,
+    desc = "Toggle syntax"
+  },
 }
 
 return spec

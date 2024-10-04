@@ -21,29 +21,6 @@ return {
     config = function() require 'extensions.quality-of-life.configs.dial' end
   },
   {
-    "hkupty/iron.nvim",
-    event = "VeryLazy",
-    main = "iron.core",
-    config = function()
-      require('iron.core').setup({
-        config = {
-          scratch_repl    = true,
-          repl_definition = {},
-          repl_open_cmd   = require("iron.view").bottom(40),
-        },
-        keymaps = {
-          send_motion = "<leader>sc",
-          visual_send = "<leader>sc",
-          send_file   = "<leader>sf",
-          send_line   = "<leader>sl",
-          cr          = "<leader>s<cr>",
-          exit        = "<leader>sq",
-          clear       = "<leader>sC",
-        },
-      })
-    end,
-  },
-  {
     "lewis6991/gitsigns.nvim",
     event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -123,7 +100,15 @@ return {
   { "junegunn/vim-easy-align", event = "VeryLazy" },
   { "tversteeg/registers.nvim", event = "VeryLazy" },
   { "wellle/targets.vim", event = "VeryLazy" },
-  { "stevearc/oil.nvim", config = true, event = "VeryLazy" },
+  {
+    "stevearc/oil.nvim",
+    opts = {
+      keymaps = {
+        ["<Esc>"] = "actions.close",
+      },
+    },
+    event = "VeryLazy",
+  },
   { "dgagn/diagflow.nvim", config = true, },
   {
     'tpope/vim-sleuth',
@@ -194,6 +179,27 @@ return {
       "sindrets/diffview.nvim",
       "nvim-telescope/telescope.nvim",
     },
+    config = true,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = true,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = true,
+  },
+  {
+    "mechatroner/rainbow_csv",
+    ft = "csv",
+  },
+  {
+    "rest-nvim/rest.nvim",
+  },
+  {
+    "kylechui/nvim-surround",
     config = true,
   },
 }

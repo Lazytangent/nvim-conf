@@ -1,6 +1,7 @@
 local Treesitter = require("config").Treesitter
 
 require("nvim-treesitter.configs").setup({
+  modules = {},
   ensure_installed = Treesitter.parsers,
   auto_install = false,
   sync_install = false,
@@ -62,12 +63,6 @@ require("nvim-treesitter.configs").setup({
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
 
-        ["acl"] = "@class.outer",
-        ["icl"] = "@class.inner",
-
-        ["ico"] = "@conditional.inner",
-        ["aco"] = "@conditional.outer",
-
         ["ir"] = "@parameter.inner",
         ["ar"] = "@parameter.outer",
 
@@ -81,26 +76,18 @@ require("nvim-treesitter.configs").setup({
       goto_next_start = {
         ["]m"] = "@function.outer",
         ["]]"] = "@class.outer",
-        ["]g"] = "@block.outer",
-        ["]c"] = "@conditional.outer",
       },
       goto_next_end = {
         ["]M"] = "@function.outer",
         ["]["] = "@class.outer",
-        ["]G"] = "@block.outer",
-        ["]C"] = "@conditional.outer",
       },
       goto_previous_start = {
         ["[m"] = "@function.outer",
         ["[["] = "@class.outer",
-        ["[g"] = "@block.outer",
-        ["[c"] = "@conditional.outer",
       },
       goto_previous_end = {
         ["[M"] = "@function.outer",
         ["[]"] = "@class.outer",
-        ["[G"] = "@block.outer",
-        ["[C"] = "@conditional.outer",
       },
     },
   },
