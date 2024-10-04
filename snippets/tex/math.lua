@@ -64,7 +64,8 @@ local snippets = {
     { condition = math }
   ),
   autosnippet({ trig = "//", name = "fraction" },
-    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })
+    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) }),
+    { condition = math }
   ),
 }
 
