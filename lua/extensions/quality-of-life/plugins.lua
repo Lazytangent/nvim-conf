@@ -37,7 +37,6 @@ return {
     event = "VeryLazy",
   },
   { "j-hui/fidget.nvim", event = "VeryLazy", config = true },
-  { "kyazdani42/nvim-web-devicons", event = "VeryLazy" },
   {
     "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
@@ -97,7 +96,6 @@ return {
     event = "VeryLazy",
   },
   { "junegunn/vim-easy-align", event = "VeryLazy" },
-  { "tversteeg/registers.nvim", event = "VeryLazy" },
   { "wellle/targets.vim", event = "VeryLazy" },
   {
     "stevearc/oil.nvim",
@@ -108,7 +106,6 @@ return {
     },
     event = "VeryLazy",
   },
-  { "dgagn/diagflow.nvim", config = true, },
   { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
   {
     "mikesmithgh/kitty-scrollback.nvim",
