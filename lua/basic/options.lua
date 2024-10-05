@@ -1,6 +1,4 @@
--- Global
 vim.go.completeopt = "menuone,noselect"
-vim.go.foldcolumn = "2"
 vim.go.foldexpr = "nvim_treesitter#foldexpr()"
 vim.go.foldlevelstart = 10
 vim.go.foldmethod = "expr"
@@ -37,14 +35,13 @@ vim.go.wildmenu = true
 vim.go.wildmode = "longest,list:full"
 vim.go.writebackup = false
 
--- Window
 vim.wo.cursorline = true
+vim.wo.foldcolumn = "3"
 vim.wo.number = false
 vim.wo.numberwidth = 5
 vim.wo.relativenumber = false
 vim.wo.wrap = true
 
--- Buffer
 vim.bo.autoindent = true
 vim.bo.expandtab = true
 vim.bo.fileencoding = "utf-8"
@@ -55,7 +52,6 @@ vim.bo.swapfile = false
 vim.bo.syntax = "off"
 vim.bo.tabstop = 8
 
--- Commands
 vim.o.listchars = "tab:\u{BB}\u{BB},trail:\u{B7},nbsp:~"
 vim.o.showmode = false
 vim.opt.path:append({ "**" })
