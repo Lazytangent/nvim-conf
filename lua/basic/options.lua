@@ -1,18 +1,14 @@
 vim.go.completeopt    = "menuone,noselect"
-vim.go.foldexpr       = "nvim_treesitter#foldexpr()"
 vim.go.foldlevelstart = 10
-vim.go.foldmethod     = "expr"
 vim.go.grepprg        = "rg --vimgrep --smart-case --no-heading"
 vim.go.hlsearch       = true
 vim.go.ignorecase     = true
 vim.go.incsearch      = true
 vim.go.laststatus     = 3
 vim.go.lazyredraw     = true
-vim.go.list           = true
 vim.go.listchars      = "tab:\u{BB}\u{BB},trail:\u{B7},nbsp:~"
 vim.go.magic          = true
 vim.go.matchtime      = 2
-vim.go.modeline       = true
 vim.go.mouse          = "a"
 vim.go.ruler          = true
 vim.go.scrolloff      = 2
@@ -22,15 +18,11 @@ vim.go.showcmd        = true
 vim.go.showmatch      = true
 vim.go.showmode       = false
 vim.go.smartcase      = true
-vim.go.spell          = true
-vim.go.spelllang      = "en_us"
 vim.go.splitbelow     = true
 vim.go.splitright     = true
 vim.go.tags           = "./tags;"
 vim.go.termguicolors  = true
-vim.go.textwidth      = 80
 vim.go.timeoutlen     = 500
-vim.go.undofile       = true
 vim.go.updatetime     = 300
 vim.go.wildignore     = "*.o,*~,*.pyc,*/.git/*,*.hg/*,*/.svn/*,*/.DS_Store,*/__pycache__/*,*/target/*"
 vim.go.wildmenu       = true
@@ -39,20 +31,28 @@ vim.go.writebackup    = false
 
 vim.wo.cursorline     = true
 vim.wo.foldcolumn     = "3"
+vim.wo.foldexpr       = "nvim_treesitter#foldexpr()"
+vim.wo.foldmethod     = "expr"
+vim.wo.list           = true
 vim.wo.number         = false
 vim.wo.numberwidth    = 5
 vim.wo.relativenumber = false
+vim.wo.spell          = true
 vim.wo.wrap           = true
 
 vim.bo.autoindent   = true
 vim.bo.expandtab    = true
 vim.bo.fileencoding = "utf-8"
+vim.bo.modeline       = true
 vim.bo.shiftwidth   = 4
 vim.bo.smartindent  = false
 vim.bo.softtabstop  = 4
+vim.bo.spelllang      = "en_us"
 vim.bo.swapfile     = false
 vim.bo.syntax       = "off"
 vim.bo.tabstop      = 8
+vim.bo.textwidth    = 80
+vim.bo.undofile       = true
 
 vim.opt.clipboard:append({ "unnamedplus" })
 vim.opt.errorformat:append({ "%f" })
