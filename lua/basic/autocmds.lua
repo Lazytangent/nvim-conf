@@ -37,7 +37,13 @@ local autocmds = {
       group = group,
     },
   },
-  {'BufReadPost', { command = [[setlocal nospell]], pattern = 'quickfix', group = group }}
+  {'BufReadPost', { command = [[setlocal nospell]], pattern = 'quickfix', group = group }},
+  {'FileType', { pattern = 'org', callback = function()
+    vim.keymap.set('i', '<S-CR>', '<cmd>lua require("orgmode").action("org_mappings.meta_return")<cr>', {
+      silent = true,
+      buffer = true,
+    })
+  end}},
 }
 
 for _, cmd in ipairs(autocmds) do
