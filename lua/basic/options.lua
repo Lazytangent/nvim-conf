@@ -40,19 +40,30 @@ vim.wo.relativenumber = false
 vim.wo.spell          = true
 vim.wo.wrap           = true
 
-vim.bo.autoindent   = true
-vim.bo.expandtab    = true
-vim.bo.fileencoding = "utf-8"
-vim.bo.modeline       = true
-vim.bo.shiftwidth   = 4
-vim.bo.smartindent  = false
-vim.bo.softtabstop  = 4
-vim.bo.spelllang      = "en_us"
-vim.bo.swapfile     = false
-vim.bo.syntax       = "off"
-vim.bo.tabstop      = 8
-vim.bo.textwidth    = 80
-vim.bo.undofile       = true
+-- So far, only buffer-local settings were being overwritten after using Telescope.
+-- It seems like the Telescope buffer applied settings that would overwrite the origin vim.bo settings.
+local settings = {
+  buffer = {
+    autoindent   = true,
+    expandtab    = true,
+    fileencoding = "utf-8",
+    modeline     = true,
+    shiftwidth   = 4,
+    smartindent  = false,
+    softtabstop  = 4,
+    spelllang    = "en_us",
+    swapfile     = false,
+    syntax       = "off",
+    tabstop      = 8,
+    textwidth    = 80,
+    undofile     = true,
+  },
+}
+
+for k, v in pairs(settings.buffer) do
+  vim.bo[k] = v
+  vim.o[k] = v
+end
 
 vim.opt.clipboard:append({ "unnamedplus" })
 vim.opt.errorformat:append({ "%f" })
