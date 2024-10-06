@@ -3,25 +3,33 @@ local group = vim.api.nvim_create_augroup("CustomGroups", {})
 local autocmds = {
   -- Highlight on yank
   {'TextYankPost', { callback = function() require('vim.highlight').on_yank() end, group = group }},
+
   -- Remember cursor position
   {'BufEnter', { callback = function()
     if
-      vim.fn.line("'\"") > 1 and
+      vim.fn.line("'\"") >= 1 and
       vim.fn.line("'\"") <= vim.fn.line("$") and
-      vim.bo.filetype ~= "gitcommit"
+      vim.bo.filetype ~= "gitcommit" and
+      vim.bo.filetype ~= "commit" and
+      vim.fn.index({'xxd', 'gitrebase'}, vim.bo.filetype) == -1
     then
       vim.cmd [[exec "normal! g'\""]]
     end
   end, group = group }},
+
   -- Remove trailing whitespace
   {'BufWritePre', { command = [[%s/\s\+$//e]], group = group }},
   {'BufWritePre', { command = [[%s/\n\+\%$//e]], group = group }},
+
   -- Terminal buffer defaults
   {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]], group = group }},
   -- {'TermOpen', { command = 'startinsert', group = group }},
+
   -- Update file if file has been updated outside of buffer
   {{'FocusGained', 'BufEnter'}, { command = 'checktime', group = group }},
   {'StdinReadPre', { command = [[let s:std_in=1]], group = group }},
+
+  -- LuaSnip get out of nodes
   {'ModeChanged',
     {
       callback = function()
@@ -37,7 +45,12 @@ local autocmds = {
       group = group,
     },
   },
+
+  -- Disables spellcheck in quickfix list
   {'BufReadPost', { command = [[setlocal nospell]], pattern = 'quickfix', group = group }},
+
+  -- Try orgmode meta-return with Shift-Return in insert mode. (Didn't work in
+  -- Alacritty)
   {'FileType', { pattern = 'org', callback = function()
     vim.keymap.set('i', '<S-CR>', '<cmd>lua require("orgmode").action("org_mappings.meta_return")<cr>', {
       silent = true,
