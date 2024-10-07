@@ -1,8 +1,6 @@
-local u = require("utils.core")
-
 -- Command Line
-u.map("c", "<C-A>", "<Home>", { noremap = true })
-u.map("c", "<C-E>", "<End>",  { noremap = true })
-u.map("c", "<C-K>", "<C-U>",  { noremap = true })
-u.map("c", "<C-P>", "<Up>",   { noremap = true })
-u.map("c", "<C-N>", "<Down>", { noremap = true })
+vim.keymap.set("c", "<C-a>", "<Home>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-e>", "<End>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-k>", "<C-u>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-p>", "<Up>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-n>", "<Down>", { noremap = true, silent = true })

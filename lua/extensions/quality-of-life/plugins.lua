@@ -38,7 +38,6 @@ return {
     event = "VeryLazy",
   },
   { "j-hui/fidget.nvim", event = "VeryLazy", config = true },
-  { "kyazdani42/nvim-web-devicons", event = "VeryLazy" },
   {
     "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
@@ -75,6 +74,9 @@ return {
     "sindrets/diffview.nvim",
     config = true,
     event = "VeryLazy",
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
   },
   {
     "windwp/nvim-autopairs",
@@ -98,7 +100,6 @@ return {
     event = "VeryLazy",
   },
   { "junegunn/vim-easy-align", event = "VeryLazy" },
-  { "tversteeg/registers.nvim", event = "VeryLazy" },
   { "wellle/targets.vim", event = "VeryLazy" },
   {
     "stevearc/oil.nvim",
@@ -108,15 +109,6 @@ return {
       },
     },
     event = "VeryLazy",
-  },
-  { "dgagn/diagflow.nvim", config = true, },
-  {
-    'tpope/vim-sleuth',
-    config = function()
-      vim.g.sleuth_heuristics = 0
-      vim.g.sleuth_javascript_heuristics = 1
-      vim.g.sleuth_typescript_heuristics = 1
-    end,
   },
   { "SmiteshP/nvim-navic", dependencies = { "neovim/nvim-lspconfig" } },
   {

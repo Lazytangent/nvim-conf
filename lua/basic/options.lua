@@ -1,84 +1,78 @@
-local config = require("config")
-local u = require("utils.core")
-local cmd = vim.cmd
-local Opts = config.Opts
-local Completion = config.Completion
+vim.go.completeopt    = "menuone,noselect"
+vim.go.foldlevelstart = 10
+vim.go.grepprg        = "rg --vimgrep --smart-case --no-heading"
+vim.go.hlsearch       = true
+vim.go.ignorecase     = true
+vim.go.incsearch      = true
+vim.go.laststatus     = 3
+vim.go.lazyredraw     = true
+vim.go.listchars      = "tab:\u{BB}\u{BB},trail:\u{B7},nbsp:~"
+vim.go.magic          = true
+vim.go.matchtime      = 2
+vim.go.mouse          = "a"
+vim.go.ruler          = true
+vim.go.scrolloff      = 2
+vim.go.shell          = "/bin/zsh"
+vim.go.shiftround     = true
+vim.go.showcmd        = true
+vim.go.showmatch      = true
+vim.go.showmode       = false
+vim.go.smartcase      = true
+vim.go.splitbelow     = true
+vim.go.splitright     = true
+vim.go.tags           = "./tags;"
+vim.go.termguicolors  = true
+vim.go.timeoutlen     = 500
+vim.go.updatetime     = 300
+vim.go.wildignore     = "*.o,*~,*.pyc,*/.git/*,*.hg/*,*/.svn/*,*/.DS_Store,*/__pycache__/*,*/target/*"
+vim.go.wildmenu       = true
+vim.go.wildmode       = "longest,list:full"
+vim.go.writebackup    = false
 
--- Global
-u.opt("g", "splitbelow",        Opts.splitbelow)
-u.opt("g", "splitright",        Opts.splitright)
-u.opt("g", "incsearch",         Opts.incsearch)
-u.opt("g", "ignorecase",        Opts.ignorecase)
-u.opt("g", "wildmenu",          Opts.wildmenu)
-u.opt("g", "wildmode",          Opts.wildmode)
-u.opt("g", "wildignore",        Opts.wildignore)
-u.opt("g", "showcmd",           Opts.showcmd)
-u.opt("g", "cmdheight",         Opts.cmdheight)
-u.opt("g", "ruler",             Opts.ruler)
-u.opt("g", "backspace",         Opts.backspace)
-u.opt("g", "smartcase",         Opts.smartcase)
-u.opt("g", "hlsearch",          Opts.hlsearch)
-u.opt("g", "lazyredraw",        Opts.lazyredraw)
-u.opt("g", "magic",             Opts.magic)
-u.opt("g", "showmatch",         Opts.showmatch)
-u.opt("g", "matchtime",         Opts.matchtime)
-u.opt("g", "foldcolumn",        Opts.foldcolumn)
-u.opt("g", "list",              Opts.list)
-u.opt("g", "spell",             Opts.spell)
-u.opt("g", "spelllang",         Opts.spelllang)
-u.opt("g", "modeline",          Opts.modeline)
-u.opt("g", "foldenable",        Opts.foldenable)
-u.opt("g", "foldlevelstart",    Opts.foldlevelstart)
-u.opt("g", "backup",            Opts.backup)
-u.opt("g", "writebackup",       Opts.writebackup)
-u.opt("g", "termguicolors",     Opts.termguicolors)
-u.opt("g", "background",        Opts.background)
-u.opt("g", "timeoutlen",        Opts.timeoutlen)
-u.opt("g", "updatetime",        Opts.updatetime)
-u.opt("g", "scrolloff",         Opts.scrolloff)
-u.opt("g", "textwidth",         Opts.textwidth)
-u.opt("g", "mouse",             Opts.mouse)
-u.opt("g", "smarttab",          Opts.smarttab)
-u.opt("g", "foldmethod",        Opts.foldmethod)
-u.opt("g", "foldexpr",          Opts.foldexpr)
-u.opt("g", "tags",              Opts.tags)
-u.opt("o", "completeopt",       Completion.completeopt)
-u.opt("o", "shell",             Opts.shell)
-u.opt("o", "laststatus",        Opts.laststatus)
+vim.wo.cursorline     = true
+vim.wo.foldcolumn     = "3"
+vim.wo.foldexpr       = "nvim_treesitter#foldexpr()"
+vim.wo.foldmethod     = "expr"
+vim.wo.list           = true
+vim.wo.number         = false
+vim.wo.numberwidth    = 5
+vim.wo.relativenumber = false
+vim.wo.spell          = true
+vim.wo.wrap           = true
 
--- Window
-u.opt("w", "relativenumber", Opts.relativenumber)
-u.opt("w", "number",         Opts.number)
-u.opt("w", "numberwidth",    Opts.numberwidth)
-u.opt("w", "wrap",           Opts.wrap)
-u.opt("w", "cursorline",     Opts.cursorline)
+-- So far, only buffer-local settings were being overwritten after using Telescope.
+-- It seems like the Telescope buffer applied settings that would overwrite the origin vim.bo settings.
+local settings = {
+  buffer = {
+    autoindent   = true,
+    expandtab    = true,
+    fileencoding = "utf-8",
+    modeline     = true,
+    shiftwidth   = 4,
+    smartindent  = false,
+    softtabstop  = 4,
+    spelllang    = "en_us",
+    swapfile     = false,
+    syntax       = "off",
+    tabstop      = 8,
+    textwidth    = 80,
+    undofile     = true,
+  },
+}
 
--- Buffer
-u.opt("b", "tabstop",          8) -- Don't change this
-u.opt("b", "softtabstop",      Opts.indent_size)
-u.opt("b", "shiftwidth",       Opts.indent_size)
-u.opt("b", "expandtab",        Opts.expandtab)
-u.opt("b", "autoindent",       Opts.autoindent)
-u.opt("b", "smartindent",      Opts.smartindent)
-u.opt("b", "fileencoding",     Opts.fileencoding)
-u.opt("b", "syntax",           Opts.syntax)
-u.opt("b", "swapfile",         Opts.swapfile)
--- u.opt("b", "formatlistpat", Opts.formatlistpat)
+for k, v in pairs(settings.buffer) do
+  vim.bo[k] = v
+  vim.o[k] = v
+end
 
--- u.opt("g", "guifont",    Opts.guifont)
-u.opt("g", "grepprg",    Opts.grepprg)
-u.opt("g", "shiftround", Opts.shiftround)
--- u.opt("g", "undodir", Opts.undodir)
-u.opt("g", "undofile",   Opts.undofile)
-
--- Commands
-vim.o.listchars = Opts.listchars
-vim.o.showmode = Opts.showmode
-vim.opt.path:append({ "**" })
-vim.opt.formatoptions:append({ "t" })
 vim.opt.clipboard:append({ "unnamedplus" })
+vim.opt.errorformat:append({ "%f" })
+vim.opt.formatoptions:append({ "t" })
+vim.opt.path:append({ "**" })
 vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, h = true, l = true })
-cmd("filetype plugin indent on")
-cmd("syntax keyword dbmlType string varbinary")
-cmd("set errorformat+=%f")
-cmd("let g:python3_host_prog = '" .. Opts.python3_host_prog .. "'")
+
+vim.cmd "filetype plugin indent on"
+vim.cmd "syntax keyword dbmlType string varbinary"
+
+local python3_host_prog = "$HOME/.local/src/neovim-plugins/python-support/.venv/bin/python"
+vim.cmd("let g:python3_host_prog = '" .. python3_host_prog .. "'")

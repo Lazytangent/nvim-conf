@@ -5,7 +5,7 @@ require("nvim-treesitter.configs").setup({
   ensure_installed = Treesitter.parsers,
   auto_install = false,
   sync_install = false,
-  ignore_install = {},
+  ignore_install = { 'org' },
 
   indent = {
     enable = true,
@@ -32,7 +32,7 @@ require("nvim-treesitter.configs").setup({
         return true
       end
     end,
-    additional_vim_regex_highlighting = { "latex", "tex", "org", "html", "swift", "kitty" },
+    additional_vim_regex_highlighting = { "latex", "tex", "html", "swift", "kitty" },
   },
   incremental_selection = {
     enable = true,
@@ -72,6 +72,7 @@ require("nvim-treesitter.configs").setup({
     },
     move = {
       enable = true,
+      disable = { "org" },
       set_jumps = true,
       goto_next_start = {
         ["]m"] = "@function.outer",

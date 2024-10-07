@@ -27,7 +27,7 @@ local orgmode = {
       { i(0) }
     )
   ),
-  s({ trig = ";env", description = "LaTeX Environment", name = "LaTeX Environment", snippetType = "autosnippet" },
+  s({ trig = ";tex", description = "LaTeX Environment", name = "LaTeX Environment", snippetType = "autosnippet" },
     fmta(
       [[
       \begin{<>}
