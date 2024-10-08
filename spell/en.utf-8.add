@@ -1481,6 +1481,11 @@ DDoS
 interop
 lexeme
 termwise
+nondeterministic
+CPUs
+opcode
+URIs
+parsers
 Cryptographic
 ECDSA
 reputational

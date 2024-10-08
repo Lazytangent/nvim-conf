@@ -194,4 +194,10 @@ return {
     "kylechui/nvim-surround",
     config = true,
   },
+  {
+    "chrisbra/unicode.vim",
+  },
+  {
+    "protex/better-digraphs.nvim",
+  },
 }
