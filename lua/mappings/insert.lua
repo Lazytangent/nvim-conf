@@ -7,6 +7,7 @@ local insert = {
     end
   end, desc = "Select Choice Node"},
   { "<C-k>", ls.expand_or_jump, silent = true },
+  { "<C-h>", "<cmd>lua require('better-digraphs').digraphs('insert')<cr>" },
 
   { "<C-x>", group = "Completion modes" },
   { "<C-x>s", desc = "Snippets" },

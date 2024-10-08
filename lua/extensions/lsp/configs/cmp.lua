@@ -113,13 +113,6 @@ cmp.setup {
         }),
       },
     }),
-    ["<C-x><C-g>"] = cmp.mapping.complete({
-      config = {
-        sources = cmp.config.sources({
-          { name = "git" },
-        }),
-      },
-    }),
     ["<C-x><C-d>"] = cmp.mapping.complete({
       config = {
         sources = cmp.config.sources({
