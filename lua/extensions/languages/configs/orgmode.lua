@@ -12,13 +12,18 @@ orgmode.setup {
   org_highlight_latex_and_related = "entities",
   org_src_window_setup = "botright new",
   org_startup_folded = 'showeverything',
+  org_todo_keywords = {
+    'TODO(t)', 'PROJ(p)',
+    '|',
+    'DONE(d)',
+  },
   emacs_config = {
     config_path = "$HOME/.config/emacs/init.el",
   },
   mappings = {
     org = {
-      org_todo = "<localleader>mtt",
-      org_todo_prev = "<localleader>mtd",
+      org_todo = { "cit", "<localleader>mtt" },
+      org_todo_prev = { "cit", "<localleader>mtd" },
     },
   },
   win_split_mode = '40split',
