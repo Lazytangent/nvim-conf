@@ -2,7 +2,9 @@ local npairs = require('nvim-autopairs')
 local Rule = require('nvim-autopairs.rule')
 local cond = require('nvim-autopairs.conds')
 
-npairs.setup {}
+npairs.setup {
+  enable_abbr = true,
+}
 
 npairs.add_rules(require('nvim-autopairs.rules.endwise-elixir'))
 npairs.add_rules(require('nvim-autopairs.rules.endwise-lua'))
