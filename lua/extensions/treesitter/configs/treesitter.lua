@@ -117,5 +117,6 @@ require("nvim-treesitter.configs").setup({
   },
   endwise = {
     enable = true,
+    disable = { "lua" }, -- temporarily cause there's a bug. See https://github.com/RRethy/nvim-treesitter-endwise/issues/41
   },
 })
