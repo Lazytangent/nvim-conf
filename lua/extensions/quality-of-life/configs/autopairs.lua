@@ -11,11 +11,23 @@ npairs.add_rules(require('nvim-autopairs.rules.endwise-lua'))
 npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))
 
 npairs.add_rules {
-  Rule(' ', ' ')
-    :with_pair(function (opts)
+  -- From https://github.com/windwp/nvim-autopairs/issues/314
+  Rule(" ", " ")
+    :with_pair(cond.done())
+    :replace_endpair(function(opts)
       local pair = opts.line:sub(opts.col - 1, opts.col)
-      return vim.tbl_contains({ '()', '[]', '{}' }, pair)
-    end),
+      if vim.tbl_contains({ "()", "{}", "[]" }, pair) then
+        return " " -- it return space here
+      end
+      return ""-- return empty
+    end)
+    :with_move(cond.none())
+    :with_cr(cond.none())
+    :with_del(function(opts)
+      local col = vim.api.nvim_win_get_cursor(0)[2]
+      local context = opts.line:sub(col - 1, col + 2)
+      return vim.tbl_contains({ "(  )", "{  }", "[  ]" }, context)
+  end),
   Rule('( ', ' )')
     :with_pair(function() return false end)
     :with_move(function(opts)
