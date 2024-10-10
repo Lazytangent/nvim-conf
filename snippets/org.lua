@@ -1,3 +1,25 @@
+local function get_previous_src_lang()
+  local lang = 'org'
+  local query_str = '((block parameter: (expr) @lang))'
+  local query = vim.treesitter.query.parse(lang, query_str)
+
+  local node = vim.treesitter.get_node()
+  if node == nil then
+    vim.notify("Node was nil")
+    return
+  end
+  local tree = node:tree()
+  local root_node = tree:root()
+  local last = root_node
+
+  for _, curr, _, _ in query:iter_captures(root_node, 0) do
+    last = curr
+  end
+
+  local last_text = vim.treesitter.get_node_text(last, 0)
+  return last_text
+end
+
 local orgmode = {
   s({ trig = "__", dscr = "#+TITLE: ", name = "Create title", snippetType = "autosnippet" }, {
     t("#+title: "),
@@ -47,6 +69,22 @@ local orgmode = {
   ),
   s({ trig = ";mm", wordTrig = false, snippetType = "autosnippet" },
     fmt("${}${}", { i(1, "math mode"), i(0) })
+  ),
+  s({ trig = "<s" },
+    fmta(
+      [[
+      #+begin_src <>
+      <>
+      #+end_src
+      ]],
+      {
+        d(1, function()
+          local lang = get_previous_src_lang()
+          return sn(nil, { i(1, lang) })
+        end),
+        i(0)
+      }
+    )
   ),
 }
 
