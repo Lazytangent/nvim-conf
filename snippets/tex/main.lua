@@ -152,7 +152,8 @@ local latex = {
   s({ trig = ";[", wordTrig = false, snippetType = "autosnippet" },
     fmta("\\left[<>\\right]<>", { i(1), i(0) })
   ),
-  s({ trig = '"', snippetType = "autosnippet" },
+  s({ trig = '"' },
+  -- s({ trig = '"', snippetType = "autosnippet" },
     fmta("``<>''<>", { i(1), i(0) })
   ),
 }
