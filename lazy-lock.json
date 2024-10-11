@@ -95,6 +95,7 @@
   "typescript-tools.nvim": { "branch": "master", "commit": "f8c2e0b36b651c85f52ad5c5373ff8b07adc15a7" },
   "typst.vim": { "branch": "main", "commit": "4d18ced62599ffe5b3c0e5e49566d5456121bc02" },
   "unicode.vim": { "branch": "master", "commit": "9da92ffe08b90200dcb499fdfecb234326f5514c" },
+  "vim-abolish": { "branch": "master", "commit": "dcbfe065297d31823561ba787f51056c147aa682" },
   "vim-beancount": { "branch": "master", "commit": "25bcbc773554b5798d253a1a5fa5de158792f95e" },
   "vim-cucumber": { "branch": "master", "commit": "c0c9f5fd631632d794c6aa6d8d0ab13f834a1113" },
   "vim-dadbod": { "branch": "master", "commit": "7888cb7164d69783d3dce4e0283decd26b82538b" },
