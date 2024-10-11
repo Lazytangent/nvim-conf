@@ -6,7 +6,7 @@ local function get_previous_src_lang()
   local node = vim.treesitter.get_node()
   if node == nil then
     vim.notify("Node was nil")
-    return
+    return ''
   end
   local tree = node:tree()
   local root_node = tree:root()
@@ -17,7 +17,7 @@ local function get_previous_src_lang()
   end
 
   local last_text = vim.treesitter.get_node_text(last, 0)
-  return last_text
+  return last_text or ''
 end
 
 local orgmode = {
