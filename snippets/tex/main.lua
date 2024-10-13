@@ -117,7 +117,8 @@ local latex = {
   }),
   ms({
     { trig = "verb", dscr = "Inline verbatim", name = "\\verb||" },
-    "vb"
+    "vb",
+    { trig = ";vb", snippetType = "autosnippet" }
   }, {
     t("\\verb|"),
     i(1),
