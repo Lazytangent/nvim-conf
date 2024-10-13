@@ -115,7 +115,10 @@ local latex = {
     t "\\nabla",
     i(0),
   }),
-  s({ trig = "verb", dscr = "Inline verbatim", name = "\\verb||" }, {
+  ms({
+    { trig = "verb", dscr = "Inline verbatim", name = "\\verb||" },
+    "vb"
+  }, {
     t("\\verb|"),
     i(1),
     t("|"),
