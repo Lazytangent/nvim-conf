@@ -7,6 +7,7 @@ local insert = {
     end
   end, desc = "Select Choice Node"},
   -- { "<C-k>", ls.expand_or_jump, silent = true },
+  { "<C-j>", ls.expand_or_jump, silent = true }, -- Doesn't seem to also overwrite <CR> (RET)
   { "<C-h>", "<cmd>lua require('better-digraphs').digraphs('insert')<cr>" },
 
   { "<C-x>", group = "Completion modes" },
