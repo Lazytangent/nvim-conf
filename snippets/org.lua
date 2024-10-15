@@ -6,18 +6,25 @@ local function get_previous_src_lang()
   local node = vim.treesitter.get_node()
   if node == nil then
     vim.notify("Node was nil")
-    return ''
+    return 'lang'
   end
   local tree = node:tree()
   local root_node = tree:root()
   local last = root_node
+  local i = 0
 
-  for _, curr, _, _ in query:iter_captures(root_node, 0) do
+  for idx, curr, _, _ in query:iter_captures(root_node, 0) do
+    i = idx
     last = curr
   end
 
+  if i == 0 then
+    -- Didn't find any captures and stayed on root
+    return 'lang'
+  end
+
   local last_text = vim.treesitter.get_node_text(last, 0)
-  return last_text or ''
+  return last_text or 'lang'
 end
 
 local orgmode = {

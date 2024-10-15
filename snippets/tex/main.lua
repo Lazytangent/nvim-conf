@@ -115,7 +115,11 @@ local latex = {
     t "\\nabla",
     i(0),
   }),
-  s({ trig = "verb", dscr = "Inline verbatim", name = "\\verb||" }, {
+  ms({
+    { trig = "verb", dscr = "Inline verbatim", name = "\\verb||" },
+    "vb",
+    { trig = ";vb", snippetType = "autosnippet" }
+  }, {
     t("\\verb|"),
     i(1),
     t("|"),
@@ -155,6 +159,15 @@ local latex = {
   s({ trig = '"' },
   -- s({ trig = '"', snippetType = "autosnippet" },
     fmta("``<>''<>", { i(1), i(0) })
+  ),
+  s({ trig = "([%w_.]+)vv", wordTrig = false, regTrig = true, snippetType = "autosnippet" },
+    fmta(
+      "\\verb|<>|<>",
+      {
+        f(function(_, snip) return snip.captures[1] end),
+        d(1, get_visual),
+      }
+    )
   ),
 }
 

@@ -24,6 +24,7 @@ orgmode.setup {
     org = {
       org_todo = { "cit", "<localleader>mtt" },
       org_todo_prev = { "cit", "<localleader>mtd" },
+      org_meta_return = { "<leader><cr>", "<C-CR>" },
     },
   },
   win_split_mode = '40split',
