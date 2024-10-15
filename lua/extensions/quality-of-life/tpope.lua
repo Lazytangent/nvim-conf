@@ -9,5 +9,14 @@ return {
       vim.g.sleuth_heuristics = 0
     end,
   },
-  { "tpope/vim-unimpaired" },
+  {
+    "tpope/vim-unimpaired",
+    config = function()
+      -- Abolish abbreviations
+      vim.cmd [[
+        Abolish fex for example
+        Abolish proc{,s} procedure{,s}
+      ]]
+    end,
+  },
 }
