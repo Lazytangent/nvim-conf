@@ -1,5 +1,14 @@
 return {
-  { "tpope/vim-abolish" },
+  {
+    "tpope/vim-abolish",
+    config = function()
+      -- Abolish abbreviations
+      vim.cmd [[
+        Abolish fex for example
+        Abolish proc{,s} procedure{,s}
+      ]]
+    end,
+  },
   { "tpope/vim-eunuch" },
   { "tpope/vim-fugitive" },
   { "tpope/vim-repeat" },
@@ -11,12 +20,5 @@ return {
   },
   {
     "tpope/vim-unimpaired",
-    config = function()
-      -- Abolish abbreviations
-      vim.cmd [[
-        Abolish fex for example
-        Abolish proc{,s} procedure{,s}
-      ]]
-    end,
   },
 }
