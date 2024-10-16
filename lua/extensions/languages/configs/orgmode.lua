@@ -5,6 +5,8 @@ orgmode.setup {
   org_agenda_files = {'~/Documents/org/*', '~/.local/src/org/*'},
   org_agenda_skip_deadline_if_done = true,
   org_agenda_skip_scheduled_if_done = true,
+  org_agenda_span = 10,
+  org_agenda_start_day = '+0d',
   org_default_notes_file = '~/.local/src/org/default.org',
   org_hide_emphasis_markers = true,
   org_highlight_latex_and_related = "entities",
@@ -25,4 +27,5 @@ orgmode.setup {
       org_meta_return = { "<leader><cr>", "<C-CR>" },
     },
   },
+  win_split_mode = '40split',
 }

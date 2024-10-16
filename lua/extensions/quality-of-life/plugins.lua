@@ -31,6 +31,7 @@ return {
   {
     "andymass/vim-matchup",
     event = "VeryLazy",
+    lazy = false,
   },
   {
     "dhruvasagar/vim-table-mode",
@@ -133,9 +134,28 @@ return {
         rust = { "rustfmt" },
         sql = { "sql_formatter" },
         terraform = { "terraform_fmt" },
+        typescript = { "prettier", "eslint_d" },
         ["*"] = { "trim_whitespace" },
       },
     },
+  },
+  {
+    "kylechui/nvim-surround",
+    config = true,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = true,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = true,
+  },
+  {
+    "mechatroner/rainbow_csv",
+    ft = "csv",
   },
   {
     "rest-nvim/rest.nvim",
@@ -151,6 +171,27 @@ return {
       "sindrets/diffview.nvim",
       "nvim-telescope/telescope.nvim",
     },
+    config = true,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = true,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = true,
+  },
+  {
+    "mechatroner/rainbow_csv",
+    ft = "csv",
+  },
+  {
+    "rest-nvim/rest.nvim",
+  },
+  {
+    "kylechui/nvim-surround",
     config = true,
   },
   {

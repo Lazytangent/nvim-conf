@@ -1,10 +1,16 @@
 return {
-  "folke/tokyonight.nvim",
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      style = "night",
+    },
+  },
   {
     "nvim-lualine/lualine.nvim",
     config = function()
       require 'extensions.theme-stuff.configs.lualine'
     end,
+    lazy = false,
   },
   {
     "navarasu/onedark.nvim",

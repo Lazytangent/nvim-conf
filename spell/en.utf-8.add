@@ -1464,6 +1464,9 @@ wingflaps
 invariants
 decrypted
 unencrypted
+tsquery
+PostgreSQL's
+moved
 hostname
 scalability
 indeterminates
@@ -1485,10 +1488,14 @@ URIs
 parsers
 Cryptographic
 ECDSA
+reputational
+CDN
 typings
 TypeScript
 transpiling
 operand's
+#nd_src
+end_src/!
 #nd_src
 end_src/!
 cryptographic
@@ -1544,3 +1551,4 @@ polymorphism
 subexpressions
 modularity
 representable
+backoff

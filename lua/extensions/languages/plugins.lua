@@ -77,6 +77,45 @@ return {
       },
     },
     event = "VeryLazy",
+    ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+  },
+  -- {
+  --   "mrcjkb/haskell-tools.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  --   branch = "1.x.x",
+  --   event = "VeryLazy",
+  -- },
+  {
+    "sealemar/vtl",
+    event = "VeryLazy",
+  },
+  {
+    "tpope/vim-cucumber",
+    event = "VeryLazy",
+  },
+  {
+    "alaviss/nim.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "akinsho/flutter-tools.nvim",
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',
+    },
+    opts = {
+      lsp = {
+        on_attach = require('lsp.primary.on_attach'),
+      },
+    },
+    event = "VeryLazy",
+  },
+  {
+    "dart-lang/dart-vim-plugin",
+    event = "VeryLazy",
   },
   {
     "aklt/plantuml-syntax",
@@ -93,5 +132,9 @@ return {
   },
   {
     "nathangrigg/vim-beancount",
+  },
+  {
+    "jvirtanen/vim-hcl",
+    ft = "hcl",
   },
 }
