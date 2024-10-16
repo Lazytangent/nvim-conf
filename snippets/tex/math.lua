@@ -56,9 +56,21 @@ local snippets = {
 }
 
 local other_snippets = {
+  autosnippet({ trig = "([%w]+)mg", wordTrig = false, regTrig = true },
+    fmta(
+      "\\|<>\\|<>",
+      {
+        f(function(_, snip) return snip.captures[1] end),
+        i(0),
+      }
+    ),
+    {
+      condition = tex.in_math,
+    }
+  ),
   -- SUPERSCRIPT
   -- quote triggers superscript
-  s({trig = "([%w%)%]%}])'", wordTrig=false, regTrig = true, snippetType="autosnippet"},
+  s({trig = "([%w%)%]%}%|])'", wordTrig=false, regTrig = true, snippetType="autosnippet"},
     fmta(
       "<>^{<>}",
       {
@@ -70,7 +82,7 @@ local other_snippets = {
   ),
   -- SUBSCRIPT
   -- semicolon triggers subscript
-  s({trig = "([%w%)%]%}]);", wordTrig=false, regTrig = true, snippetType="autosnippet"},
+  s({trig = "([%w%)%]%}%|]);", wordTrig=false, regTrig = true, snippetType="autosnippet"},
     fmta(
       "<>_{<>}",
       {
@@ -82,7 +94,7 @@ local other_snippets = {
   ),
   -- SUBSCRIPT AND SUPERSCRIPT
   -- dunderscore trigger
-  s({trig = "([%w%)%]%}])__", wordTrig=false, regTrig = true, snippetType="autosnippet"},
+  s({trig = "([%w%)%]%}%|])__", wordTrig=false, regTrig = true, snippetType="autosnippet"},
     fmta(
       "<>^{<>}_{<>}",
       {
@@ -102,7 +114,7 @@ local other_snippets = {
   ),
   -- SUPERSCRIPT SHORTCUT
   -- Places the first alphanumeric character after the trigger into a superscript.
-  s({trig = '([%w%)%]%}])"([%w])', regTrig = true, wordTrig = false, snippetType="autosnippet"},
+  s({trig = '([%w%)%]%}%|])"([%w])', regTrig = true, wordTrig = false, snippetType="autosnippet"},
     fmta(
       "<>^{<>}",
       {
@@ -114,7 +126,7 @@ local other_snippets = {
   ),
   -- SUBSCRIPT SHORTCUT
   -- Places the first alphanumeric character after the trigger into a subscript.
-  s({trig = '([%w%)%]%}]):([%w])', regTrig = true, wordTrig = false, snippetType="autosnippet"},
+  s({trig = '([%w%)%]%}%|]):([%w])', regTrig = true, wordTrig = false, snippetType="autosnippet"},
     fmta(
       "<>_{<>}",
       {
