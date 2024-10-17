@@ -157,7 +157,9 @@ return {
       "sindrets/diffview.nvim",
       "nvim-telescope/telescope.nvim",
     },
-    config = true,
+    opts = {
+      disable_insert_on_commit = true,
+    },
   },
   {
     "chrisbra/unicode.vim",
