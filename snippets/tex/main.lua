@@ -160,7 +160,7 @@ local latex = {
   -- s({ trig = '"', snippetType = "autosnippet" },
     fmta("``<>''<>", { i(1), i(0) })
   ),
-  s({ trig = "([%w_.]+)vv", wordTrig = false, regTrig = true, snippetType = "autosnippet" },
+  s({ trig = "([%w_.%[%]%(%)%*]+)vv", wordTrig = false, regTrig = true, snippetType = "autosnippet" },
     fmta(
       "\\verb|<>|<>",
       {

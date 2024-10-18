@@ -140,20 +140,6 @@ return {
     },
   },
   {
-    "kylechui/nvim-surround",
-    config = true,
-  },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = true,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = true,
-  },
-  {
     "mechatroner/rainbow_csv",
     ft = "csv",
   },
@@ -171,28 +157,9 @@ return {
       "sindrets/diffview.nvim",
       "nvim-telescope/telescope.nvim",
     },
-    config = true,
-  },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = true,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = true,
-  },
-  {
-    "mechatroner/rainbow_csv",
-    ft = "csv",
-  },
-  {
-    "rest-nvim/rest.nvim",
-  },
-  {
-    "kylechui/nvim-surround",
-    config = true,
+    opts = {
+      disable_insert_on_commit = true,
+    },
   },
   {
     "chrisbra/unicode.vim",
