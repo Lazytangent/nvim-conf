@@ -1,4 +1,4 @@
-local parentModule = (...):match("(.-)[^%.]+$")
+local parent_module = (...):match("(.-)[^%.]+$")
 
 local modules = {}
 local children = {
@@ -36,7 +36,7 @@ local children = {
 }
 
 for _, name in ipairs(children) do
-  table.insert(modules, require(parentModule .. name))
+  table.insert(modules, require(parent_module .. name))
 end
 
 return modules
