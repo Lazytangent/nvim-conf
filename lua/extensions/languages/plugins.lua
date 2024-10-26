@@ -2,20 +2,28 @@ local parentModule = (...):match("(.-)[^%.]+$")
 
 local modules = {}
 local children = {
-  'jsdoc',
-  'prisma',
+  'beancount',
   'dbml',
-  'vimtex',
-  'kitty',
-  'terraform',
   'go',
+  'hcl',
+  'helm',
+  'java',
+  'jsdoc',
+  'kitty',
+  'orgmode',
+  'prisma',
+  'rust',
   'schemastore',
   'swift',
   'tailwindcss',
-  'orgmode',
-  'rust',
-  'java',
+  'terraform',
   'typescript',
+  'vimtex',
+
+  'lsp',
+  'completion',
+  'neodev',
+  'nonels',
 
   -- 'haskell',
   -- 'velocity-vtl',
@@ -25,10 +33,6 @@ local children = {
   -- 'dart',
   -- 'plantuml',
   -- 'typst',
-
-  'helm',
-  'beancount',
-  'hcl',
 }
 
 for _, name in ipairs(children) do
