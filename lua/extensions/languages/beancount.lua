@@ -1,0 +1,3 @@
+return {
+  "nathangrigg/vim-beancount",
+}

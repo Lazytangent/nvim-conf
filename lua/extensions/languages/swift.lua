@@ -1,7 +1,16 @@
 return {
-  format = {
-    auto = false,
-    config_default_content = [[
+  {
+    "keith/swift.vim",
+    ft = "swift",
+  },
+  {
+    "tami5/swift.nvim",
+    ft = "swift",
+    main = "swift_env",
+    opts = {
+      format = {
+        auto = false,
+        config_default_content = [[
 # see avaliable rules: https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
 
 # Format Options
@@ -28,5 +37,7 @@ return {
 --disable redundantPattern
 --enable redundantReturn
     ]],
-  }
+      }
+    }
+  },
 }
