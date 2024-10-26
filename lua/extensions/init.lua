@@ -12,7 +12,7 @@ local items = {
   'dap',
   'languages',
   'lsp',
-  'quality-of-life',
+  'qol',
   'telescope',
   'theme-stuff',
   'treesitter',
