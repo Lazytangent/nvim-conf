@@ -56,6 +56,10 @@ local snippets = {
 }
 
 local other_snippets = {
+  autosnippet({ trig = "||", name = "double bars", wordTrig = false },
+    fmta("\\|<>", { i(0) }),
+    { condition = tex.in_math }
+  ),
   autosnippet({ trig = "([%w]+)mg", wordTrig = false, regTrig = true },
     fmta(
       "\\|<>\\|<>",
@@ -528,11 +532,11 @@ local other_snippets = {
     {condition = tex.in_math}
   ),
   -- PARALLEL SYMBOL, i.e. \parallel
-  s({trig = "||", snippetType="autosnippet"},
-    {
-      t("\\parallel"),
-    }
-  ),
+  -- s({trig = "||", snippetType="autosnippet"},
+  --   {
+  --     t("\\parallel"),
+  --   }
+  -- ),
   -- CDOTS, i.e. \cdots
   s({trig = "cdd", snippetType="autosnippet"},
     {
