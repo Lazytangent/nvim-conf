@@ -21,6 +21,7 @@ local children = {
   'navic',
   'neogit',
   'oil',
+  'profile',
   'rainbow-csv',
   'rest',
   'surround',
