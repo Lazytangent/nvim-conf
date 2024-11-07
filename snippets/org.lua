@@ -15,7 +15,11 @@ local function get_previous_src_lang()
 
   for idx, curr, _, _ in query:iter_captures(root_node, 0) do
     i = idx
-    last = curr
+    local text = vim.treesitter.get_node_text(curr, 0)
+
+    if not string.match(text, "[%/%.%:]") then
+      last = curr
+    end
   end
 
   if i == 0 then
