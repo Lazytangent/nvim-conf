@@ -2,7 +2,7 @@ local lsp = require('lspconfig')
 local on_attach = require('lsp.primary.on_attach')
 local capabilities = require('lsp.capabilities')
 
-lsp.ruff_lsp.setup {
+lsp.ruff.setup {
   init_options = {
     settings = {
       args = {

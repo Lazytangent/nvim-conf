@@ -45,7 +45,7 @@ config.LSP = {
       "go",
       "jsonls",
       "lua",
-      "ruff_lsp",
+      "ruff",
       "sourcekit",
       "sql",
       "vue",
