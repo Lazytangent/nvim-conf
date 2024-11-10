@@ -317,6 +317,10 @@ return {
 
         local function bash(_, _, command)
           local file = io.popen(command, "r")
+          if file == nil then
+            return
+          end
+
           local res = {}
           for line in file:lines() do
             table.insert(res, line)
