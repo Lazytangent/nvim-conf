@@ -1617,3 +1617,8 @@ failover
 tricker
 tricker:/!
 virtualizing
+unreplicated
+MySQL
+autoincrementing
+failovers
+backpatching
