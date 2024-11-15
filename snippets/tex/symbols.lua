@@ -80,6 +80,9 @@ local symbol_specs = {
   dag = { context = { name = "†" }, command = [[\dagger]] },
   ["+-"] = { context = { name = "†" }, command = [[\pm]] },
   ["-+"] = { context = { name = "†" }, command = [[\mp]] },
+
+  ["</"] = { context = { name = "</" }, command = [[\langle]] },
+  [">/"] = { context = { name = "</" }, command = [[\rangle]] },
 }
 
 local snippets = {}
