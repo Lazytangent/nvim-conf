@@ -1622,3 +1622,6 @@ MySQL
 autoincrementing
 failovers
 backpatching
+referentially
+32-bit
+64-bit
