@@ -1625,3 +1625,7 @@ backpatching
 referentially
 32-bit
 64-bit
+microkernels
+interoperates
+truthy
+nondeterminism
