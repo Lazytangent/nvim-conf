@@ -605,6 +605,35 @@ local other_snippets = {
       t("\\times "),
     }
   ),
+
+  s({trig = "bf"},
+    fmta("\\mathbf{<>}<>", { i(1, "bold"), i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "rm"},
+    fmta("\\mathrm{<>}<>", { i(1, "bold"), i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "sf"},
+    fmta("\\mathsf{<>}<>", { i(1, "bold"), i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "it"},
+    fmta("\\mathit{<>}<>", { i(1, "bold"), i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "cal"},
+    fmta("\\mathcal{<>}<>", { i(1, "bold"), i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "bb"},
+    fmta("\\mathbb{<>}<>", { i(1, "bold"), i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "frak"},
+    fmta("\\mathfrak{<>}<>", { i(1, "bold"), i(0) }),
+    {condition = tex.in_math}
+  ),
 }
 
 return vim.list_extend(snippets, other_snippets)
