@@ -8,4 +8,5 @@ return {
   opts = {
     disable_insert_on_commit = true,
   },
+  event = "VeryLazy",
 }
