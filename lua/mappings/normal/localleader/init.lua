@@ -30,7 +30,7 @@ return {
   { "<leader>mlv", desc = "View" },
   { "<leader>mlx", desc = "Reload" },
 
-  { "<leader>mo", require("oil").open_float },
+  { "<leader>mo", require("oil").open },
 
   { "<leader>mp",  group = "LSP Pickers" },
   { "<leader>mpc", desc = "LSP Code Actions" },
