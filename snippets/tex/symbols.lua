@@ -88,6 +88,9 @@ local symbol_specs = {
 
   ["</"] = { context = { name = "</" }, command = [[\langle]] },
   [">/"] = { context = { name = "</" }, command = [[\rangle]] },
+
+  ["l|"] = { context = { name = "lvert" }, command = [[\lvert]] },
+  ["r|"] = { context = { name = "rvert" }, command = [[\rvert]] },
 }
 
 local snippets = {}
