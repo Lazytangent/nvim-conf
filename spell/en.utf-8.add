@@ -1642,3 +1642,5 @@ fallthrough
 substrings
 subexpression
 breakpoint
+deallocations
+arity
