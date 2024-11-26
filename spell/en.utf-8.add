@@ -1644,3 +1644,5 @@ subexpression
 breakpoint
 deallocations
 arity
+deallocates
+redefinitions
