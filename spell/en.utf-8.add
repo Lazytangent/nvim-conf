@@ -1646,3 +1646,5 @@ deallocations
 arity
 deallocates
 redefinitions
+datacenters
+trie
