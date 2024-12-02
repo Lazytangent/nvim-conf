@@ -2,7 +2,7 @@ local group = vim.api.nvim_create_augroup("CustomGroups", {})
 
 local autocmds = {
   -- Highlight on yank
-  {'TextYankPost', { callback = function() require('vim.highlight').on_yank() end, group = group }},
+  {'TextYankPost', { callback = function() require('vim.hl').on_yank() end, group = group }},
 
   -- Remember cursor position
   {'BufEnter', { callback = function()
