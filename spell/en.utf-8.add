@@ -1649,3 +1649,5 @@ redefinitions
 datacenters
 trie
 datacenter's
+mergesort
+heapsort
