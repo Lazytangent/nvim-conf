@@ -1661,3 +1661,9 @@ ISAs
 x86
 prototypal
 subranges
+upvalues
+upvalue
+lexically
+designators
+destructor
+bucketsort
