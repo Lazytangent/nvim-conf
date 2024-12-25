@@ -16,6 +16,7 @@ local children = {
   'folke',
   'gitsigns',
   'indent-blankline',
+  'jq-playground',
   'kitty-scrollback',
   'matchup',
   'navic',
