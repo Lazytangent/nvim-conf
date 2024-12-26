@@ -302,7 +302,6 @@ return {
     "ray-x/cmp-sql",
     "saadparwaiz1/cmp_luasnip",
     "petertriho/cmp-git",
-    "micangl/cmp-vimtex",
     "SergioRibera/cmp-dotenv",
     {
       "L3MON4D3/LuaSnip",
