@@ -1,6 +1,7 @@
 return {
   -- "hrsh7th/nvim-cmp",
   "iguanacucumber/magazine.nvim",
+  name = "nvim-cmp",
   config = function()
     local cmp_autopairs = require('nvim-autopairs.completion.cmp')
     local cmp = require('cmp')
@@ -138,6 +139,7 @@ return {
         { name = "calc" },
         { name = "latex_symbols" },
         { name = 'nvim_lsp_document_symbol' },
+        { name = "dotenv" },
         { name = 'orgmode' },
         { name = 'vim-dadbod-completion' },
         { name = "crates" },
@@ -197,6 +199,7 @@ return {
         ["<C-x><C-n>"] = cmp.mapping.complete({
           config = {
             sources = cmp.config.sources({
+              { name = "sql" },
               { name = "vim-dadbod-completion" },
               { name = 'nvim_lsp' },
               { name = 'nvim_lsp_document_symbol' },
@@ -212,6 +215,26 @@ return {
           config = {
             sources = cmp.config.sources({
               beancount_src,
+            }),
+          },
+        }),
+      }),
+    })
+
+    cmp.setup.filetype('tex', {
+      mapping = cmp.mapping.preset.insert({
+        ["<C-x><C-n>"] = cmp.mapping.complete({
+          config = {
+            sources = cmp.config.sources({
+              { name = "nvim_lsp" },
+              { name = "luasnip" },
+              { name = "buffer" },
+              { name = 'rg' },
+              { name = 'git' },
+              { name = "calc" },
+              { name = "latex_symbols" },
+              { name = 'nvim_lsp_document_symbol' },
+              { name = "natdat" },
             }),
           },
         }),
@@ -262,10 +285,11 @@ return {
   end,
   dependencies = {
     "f3fora/cmp-spell",
-    "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-calc",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/cmp-nvim-lsp",
+    { "iguanacucumber/mag-buffer", name = "cmp-buffer" },
+    { "iguanacucumber/mag-cmdline", name = "cmp-cmdline" },
+    { "iguanacucumber/mag-nvim-lsp", name = "cmp-nvim-lsp" },
+    { "iguanacucumber/mag-nvim-lua", name = "cmp-nvim-lua" },
     "hrsh7th/cmp-nvim-lsp-signature-help",
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-omni",
@@ -275,8 +299,10 @@ return {
     "lukas-reineke/cmp-under-comparator",
     "onsails/lspkind-nvim",
     "ray-x/cmp-treesitter",
+    "ray-x/cmp-sql",
     "saadparwaiz1/cmp_luasnip",
     "petertriho/cmp-git",
+    "SergioRibera/cmp-dotenv",
     {
       "L3MON4D3/LuaSnip",
       config = function()

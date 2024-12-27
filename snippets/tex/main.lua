@@ -172,25 +172,25 @@ local latex = {
       }
     )
   ),
-  s({ trig = '*([%w]+)*', regTrig = true, snippetType = "autosnippet" },
+  s({ trig = '*(%w[%w%s%-\']+%w)*', regTrig = true, snippetType = "autosnippet" },
     fmta("\\textbf{<>}<>", {
       f(function(_, snip) return snip.captures[1] end),
       d(1, get_visual),
     })
   ),
-  s({ trig = '/([%w]+)/', regTrig = true, snippetType = "autosnippet" },
+  s({ trig = '/(%w[%w%s%-\']+%w)/', regTrig = true, snippetType = "autosnippet" },
     fmta("\\textit{<>}<>", {
       f(function(_, snip) return snip.captures[1] end),
       d(1, get_visual),
     })
   ),
-  s({ trig = '-([%w]+)-', regTrig = true, snippetType = "autosnippet" },
+  s({ trig = '-(%w[%w%s]+%w)-', regTrig = true, snippetType = "autosnippet" },
     fmta("\\emph{<>}<>", {
       f(function(_, snip) return snip.captures[1] end),
       d(1, get_visual),
     })
   ),
-  s({ trig = '_([%w]+)_', regTrig = true, snippetType = "autosnippet" },
+  s({ trig = '_(%w[%w%s%-\']+%w)_', regTrig = true, snippetType = "autosnippet" },
     fmta("\\underline{<>}<>", {
       f(function(_, snip) return snip.captures[1] end),
       d(1, get_visual),
