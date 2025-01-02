@@ -1,6 +1,3 @@
-vim.cmd.iabbrev({ "pln", 'println!("' })
-vim.cmd.iabbrev({ "sfm", 'String::from("' })
-
 vim.api.nvim_buf_create_user_command(0, "CargoRun", function()
   vim.schedule(function()
     local bufnr = vim.api.nvim_create_buf(true, true)
