@@ -11,6 +11,7 @@ local children = {
   'jsdoc',
   'kitty',
   'orgmode',
+  'postgresql',
   'prisma',
   'rust',
   'schemastore',
