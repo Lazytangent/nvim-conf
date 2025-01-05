@@ -151,10 +151,12 @@ local latex = {
     fmt("${}${}", { i(1, "math mode"), i(0) })
   ),
   s({ trig = ";ff", wordTrig = false, snippetType = "autosnippet" },
-    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) })
+    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) }),
+    { condition = tex.in_math }
   ),
   s({ trig = ";[", wordTrig = false, snippetType = "autosnippet" },
-    fmta("\\left[<>\\right]<>", { i(1), i(0) })
+    fmta("\\left[<>\\right]<>", { i(1), i(0) }),
+    { condition = tex.in_math }
   ),
   s({ trig = '"' },
   -- s({ trig = '"', snippetType = "autosnippet" },
