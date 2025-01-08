@@ -24,7 +24,7 @@ syn region  loxStringT	       start=+`+  skip=+\\\\\|\\`+  end=+`+	contains=loxS
 
 syntax keyword loxBoolean true false
 syntax keyword loxConditional if else
-syntax keyword loxFunction fun
+syntax keyword loxFunction fun class
 syntax keyword loxIdentifier this var
 syntax keyword loxRepeat for while
 syntax keyword loxStatement return print
