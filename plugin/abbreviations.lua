@@ -1,6 +1,11 @@
-vim.cmd([[
-  iabbrev hte the
-  iabbrev teh the
-  iabbrev ot to
-  iabbrev nad and
-]])
+local abbrevs = {
+  the = { "hte", "teh" },
+  to = { "ot" },
+  ["and"] = { "nad" },
+}
+
+for word, list in pairs(abbrevs) do
+  for _, shortcut in ipairs(list) do
+    vim.cmd("iabbrev " .. shortcut .. " " .. word)
+  end
+end
