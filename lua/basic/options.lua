@@ -11,7 +11,6 @@ vim.go.magic          = true
 vim.go.matchtime      = 2
 vim.go.mouse          = "a"
 vim.go.ruler          = true
-vim.go.scrolloff      = 2
 vim.go.shell          = "/bin/zsh"
 vim.go.shiftround     = true
 vim.go.showcmd        = true

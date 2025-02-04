@@ -634,6 +634,39 @@ local other_snippets = {
     fmta("\\mathfrak{<>}<>", { i(1, "bold"), i(0) }),
     {condition = tex.in_math}
   ),
+
+  -- Floor
+  s({trig = "lf"},
+    fmta("\\lfloor <>", { i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "rf"},
+    fmta("\\rfloor <>", { i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "floor"},
+    fmta("\\lfloor <> \\rfloor<>", { i(1, "floor"), i(0) }),
+    {condition = tex.in_math}
+  ),
+
+  -- Ceilings
+  s({trig = "lc"},
+    fmta("\\lceil <>", { i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "rc"},
+    fmta("\\rceil <>", { i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "ceil"},
+    fmta("\\lceil <> \\rceil<>", { i(1, "ceil"), i(0) }),
+    {condition = tex.in_math}
+  ),
+
+  -- O(n)
+  s({trig = "oo"},
+    fmta("$O(<>)$<>", { i(1, "n"), i(0) })
+  ),
 }
 
 return vim.list_extend(snippets, other_snippets)
