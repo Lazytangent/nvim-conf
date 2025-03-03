@@ -11,6 +11,7 @@ local children = {
   'dragvisuals',
   'easy-align',
   'emmet-vim',
+  'endec',
   'femaco',
   'fidget',
   'folke',
