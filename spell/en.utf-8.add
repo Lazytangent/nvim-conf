@@ -1730,3 +1730,6 @@ syscall
 nonexisting
 gRPC
 primality
+protoc
+proto
+enums
