@@ -22,6 +22,7 @@ local children = {
   'matchup',
   'navic',
   'neogit',
+  'octo',
   'oil',
   'profile',
   'rainbow-csv',
