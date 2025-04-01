@@ -75,3 +75,16 @@ vim.cmd "syntax keyword dbmlType string varbinary"
 
 local python3_host_prog = "$HOME/.local/src/neovim-plugins/python-support/.venv/bin/python"
 vim.cmd("let g:python3_host_prog = '" .. python3_host_prog .. "'")
+
+-- Diagnostics
+vim.diagnostic.config({
+  virtual_text = {
+    current_line = true,
+    severity = {
+      max = vim.diagnostic.severity.WARN,
+    },
+  },
+  virtual_lines = {
+    current_line = true,
+  },
+})
