@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
-  pattern = "*.html",
+  pattern = ".nsprc",
   callback = function()
-    vim.bo.filetype = "htmldjango"
+    vim.bo.filetype = "json"
   end,
 })
