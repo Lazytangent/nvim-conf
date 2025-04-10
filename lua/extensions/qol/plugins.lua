@@ -32,6 +32,7 @@ local children = {
   'targets',
   'tpope',
   'unicode',
+  'yanky',
 }
 
 for _, name in ipairs(children) do
