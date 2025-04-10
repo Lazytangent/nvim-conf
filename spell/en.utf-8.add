@@ -1771,3 +1771,7 @@ internetwork
 http
 lexemes
 destructuring
+elementwise
+Atomicity
+Unkeyed
+atomicity
