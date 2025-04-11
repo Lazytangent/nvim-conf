@@ -9,4 +9,5 @@ return {
     { "<C-p>", "<Plug>(YankyPreviousEntry)" },
     { "<C-n>", "<Plug>(YankyNextEntry)" },
   },
+  config = true,
 }
