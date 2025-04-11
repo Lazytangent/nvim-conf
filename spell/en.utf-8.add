@@ -1775,3 +1775,5 @@ elementwise
 Atomicity
 Unkeyed
 atomicity
+linearizability
+browsable
