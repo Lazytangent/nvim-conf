@@ -1778,3 +1778,9 @@ atomicity
 linearizability
 browsable
 Vendoring
+serializability
+serializable
+subrange
+namespacing
+disjunction
+subscripted
