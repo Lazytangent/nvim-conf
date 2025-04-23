@@ -201,6 +201,13 @@ local latex = {
   s({ trig = ';tt', snippetType = "autosnippet" },
     fmta("\\texttt{<>}<>", { i(1, "teletype"), i(0) })
   ),
+  s({ trig = 'inline', dscr = "mintinline" },
+    fmta("\\mintinline{<>}{<>}<>", {
+      i(1, "lang"),
+      i(2),
+      i(0),
+    })
+  ),
 }
 
 return latex
