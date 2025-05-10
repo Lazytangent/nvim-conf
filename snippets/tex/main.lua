@@ -97,16 +97,6 @@ local latex = {
     t "}",
     i(0),
   }),
-  s({ trig = "eq", dscr = "Create equation environment" }, {
-    t { "\\begin{equation}", "\t" },
-    i(0),
-    t { "", "\\end{equation}" },
-  }),
-  s({ trig = ";eq*", dscr = "Create anonymous equation environment", wordTrig = false, snippetType = "autosnippet" }, {
-    t { "\\begin{equation*}", "\t" },
-    i(0),
-    t { "", "\\end{equation*}" },
-  }),
   s({ trig = ";nabla", dscr = "Insert Nabla symbol", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\nabla",
     i(0),
@@ -169,6 +159,15 @@ local latex = {
     fmta("\\mintinline{<>}{<>}<>", {
       i(1, "lang"),
       i(2),
+      i(0),
+    })
+  ),
+  s({ trig = 'listing', dscr = 'Code listing' },
+    fmta([[
+      \begin{listing}[H]
+      <>
+      \end{listing}
+      ]], {
       i(0),
     })
   ),
