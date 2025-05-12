@@ -171,6 +171,17 @@ local latex = {
       i(0),
     })
   ),
+  s({ trig = 'minted', dscr = 'Minted environment' },
+    fmta([[
+      \begin{minted}{<>}
+      <>
+      \end{minted}<>
+      ]], {
+        i(1, "lang"),
+        i(2, "code"),
+        i(0),
+      })
+  ),
 }
 
 return latex
