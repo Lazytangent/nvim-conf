@@ -162,6 +162,13 @@ local latex = {
       i(0),
     })
   ),
+  s({ trig = 'inline2', dscr = "mintinline" },
+    fmta("\\mintinline{<>}{<>}<>", {
+      i(2, "lang"),
+      i(1),
+      i(0),
+    })
+  ),
   s({ trig = 'listing', dscr = 'Code listing' },
     fmta([[
       \begin{listing}[H]
