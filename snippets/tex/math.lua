@@ -606,6 +606,9 @@ local other_snippets = {
     }
   ),
 
+  s({trig = "mathbf"},
+    fmta("$\\mathbf{<>}$<>", { i(1, "bold"), i(0) })
+  ),
   s({trig = "bf"},
     fmta("\\mathbf{<>}<>", { i(1, "bold"), i(0) }),
     {condition = tex.in_math}

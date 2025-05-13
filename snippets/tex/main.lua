@@ -97,16 +97,6 @@ local latex = {
     t "}",
     i(0),
   }),
-  s({ trig = "eq", dscr = "Create equation environment" }, {
-    t { "\\begin{equation}", "\t" },
-    i(0),
-    t { "", "\\end{equation}" },
-  }),
-  s({ trig = ";eq*", dscr = "Create anonymous equation environment", wordTrig = false, snippetType = "autosnippet" }, {
-    t { "\\begin{equation*}", "\t" },
-    i(0),
-    t { "", "\\end{equation*}" },
-  }),
   s({ trig = ";nabla", dscr = "Insert Nabla symbol", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\nabla",
     i(0),
@@ -162,44 +152,35 @@ local latex = {
   -- s({ trig = '"', snippetType = "autosnippet" },
     fmta("``<>''<>", { i(1), i(0) })
   ),
-  ms({
-    { trig = '([%w_.%[%]%(%)%*%"%!%-]+)vv', wordTrig = false, regTrig = true, snippetType = "autosnippet" },
-    { trig = '=([%w_.%[%]%(%)%*%"%!%-]+)=', regTrig = true, snippetType = "autosnippet" },
-  },
-    fmta(
-      "\\verb|<>|<>",
-      {
-        f(function(_, snip) return snip.captures[1] end),
-        d(1, get_visual),
-      }
-    )
-  ),
-  s({ trig = '*(%w[%w%s%-\']+%w)*', regTrig = true, snippetType = "autosnippet" },
-    fmta("\\textbf{<>}<>", {
-      f(function(_, snip) return snip.captures[1] end),
-      d(1, get_visual),
-    })
-  ),
-  s({ trig = '/(%w[%w%s%-\']+%w)/', regTrig = true, snippetType = "autosnippet" },
-    fmta("\\textit{<>}<>", {
-      f(function(_, snip) return snip.captures[1] end),
-      d(1, get_visual),
-    })
-  ),
-  s({ trig = '-(%w[%w%s]+%w)-', regTrig = true, snippetType = "autosnippet" },
-    fmta("\\emph{<>}<>", {
-      f(function(_, snip) return snip.captures[1] end),
-      d(1, get_visual),
-    })
-  ),
-  s({ trig = '_(%w[%w%s%-\']+%w)_', regTrig = true, snippetType = "autosnippet" },
-    fmta("\\underline{<>}<>", {
-      f(function(_, snip) return snip.captures[1] end),
-      d(1, get_visual),
-    })
-  ),
   s({ trig = ';tt', snippetType = "autosnippet" },
     fmta("\\texttt{<>}<>", { i(1, "teletype"), i(0) })
+  ),
+  s({ trig = 'inline', dscr = "mintinline" },
+    fmta("\\mintinline{<>}{<>}<>", {
+      i(2, "lang"),
+      i(1),
+      i(0),
+    })
+  ),
+  s({ trig = 'listing', dscr = 'Code listing' },
+    fmta([[
+      \begin{listing}[H]
+      <>
+      \end{listing}
+      ]], {
+      i(0),
+    })
+  ),
+  s({ trig = 'minted', dscr = 'Minted environment' },
+    fmta([[
+      \begin{minted}{<>}
+      <>
+      \end{minted}<>
+      ]], {
+        i(1, "lang"),
+        i(2, "code"),
+        i(0),
+      })
   ),
 }
 

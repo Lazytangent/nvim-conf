@@ -16,6 +16,7 @@ local children = {
   'fidget',
   'folke',
   'gitsigns',
+  'helpview',
   'indent-blankline',
   'jq-playground',
   'kitty-scrollback',

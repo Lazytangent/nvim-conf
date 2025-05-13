@@ -17,3 +17,8 @@ spell: spelllist
 snippets:
 	git add snippets/
 	git commit --message "Update snippets"
+
+.PHONY: plugins
+plugins:
+	git add lazy-lock.json
+	git commit --message "Update plugins"
