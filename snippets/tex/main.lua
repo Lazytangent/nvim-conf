@@ -157,13 +157,6 @@ local latex = {
   ),
   s({ trig = 'inline', dscr = "mintinline" },
     fmta("\\mintinline{<>}{<>}<>", {
-      i(1, "lang"),
-      i(2),
-      i(0),
-    })
-  ),
-  s({ trig = 'inline2', dscr = "mintinline" },
-    fmta("\\mintinline{<>}{<>}<>", {
       i(2, "lang"),
       i(1),
       i(0),
