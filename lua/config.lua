@@ -90,6 +90,7 @@ config.Treesitter = {
     "lua",
     "make",
     "ocaml",
+    "nu",
     "python",
     "query",
     "regex",
