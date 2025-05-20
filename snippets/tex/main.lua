@@ -182,7 +182,7 @@ local latex = {
         i(0),
       })
   ),
-  s({ trig = 'linenos', dscr = 'Minted environment with linenos' },
+  s({ trig = 'lnos', dscr = 'Minted environment with linenos' },
     fmta([[
       \begin{minted}[linenos<>]{<>}
       <>
