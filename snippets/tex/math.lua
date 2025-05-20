@@ -553,19 +553,22 @@ local other_snippets = {
   s({trig = "eqq", snippetType="autosnippet"},
     {
       t("\\equiv "),
-    }
+    },
+    {condition = tex.in_math}
   ),
   -- SETMINUS, i.e. \setminus
   s({trig = "stm", snippetType="autosnippet"},
     {
       t("\\setminus "),
-    }
+    },
+    {condition = tex.in_math}
   ),
   -- SUBSET, i.e. \subset
   s({trig = "sbb", snippetType="autosnippet"},
     {
       t("\\subset "),
-    }
+    },
+    {condition = tex.in_math}
   ),
   -- APPROX, i.e. \approx
   s({trig = "px", snippetType="autosnippet"},
@@ -591,19 +594,22 @@ local other_snippets = {
   s({trig = ">>", snippetType="autosnippet"},
     {
       t("\\implies "),
-    }
+    },
+    {condition = tex.in_math}
   ),
   -- DOT PRODUCT, i.e. \cdot
   s({trig = ",.", snippetType="autosnippet"},
     {
       t("\\cdot "),
-    }
+    },
+    {condition = tex.in_math}
   ),
   -- CROSS PRODUCT, i.e. \times
   s({trig = "xx", snippetType="autosnippet"},
     {
       t("\\times "),
-    }
+    },
+    {condition = tex.in_math}
   ),
 
   s({trig = "mathbf"},

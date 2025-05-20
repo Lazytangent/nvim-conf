@@ -10,6 +10,7 @@ local children = {
   'java',
   'jsdoc',
   'kitty',
+  -- 'nu',
   'orgmode',
   'postgresql',
   'prisma',

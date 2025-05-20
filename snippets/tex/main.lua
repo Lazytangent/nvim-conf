@@ -182,6 +182,30 @@ local latex = {
         i(0),
       })
   ),
+  s({ trig = 'lnos', dscr = 'Minted environment with linenos' },
+    fmta([[
+      \begin{minted}[linenos<>]{<>}
+      <>
+      \end{minted}<>
+      ]], {
+        i(1),
+        i(2, "lang"),
+        i(3, "code"),
+        i(0),
+      })
+  ),
+  s({ trig = 'numbered', dscr = 'Minted environment with linenos starting from a firstnumber' },
+    fmta([[
+      \begin{minted}[linenos,firstnumber=<>]{<>}
+      <>
+      \end{minted}<>
+      ]], {
+        i(1, "linenumber"),
+        i(2, "lang"),
+        i(3, "code"),
+        i(0),
+      })
+  ),
 }
 
 return latex
