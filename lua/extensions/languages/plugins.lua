@@ -14,7 +14,7 @@ local children = {
   -- 'orgmode',
   'postgresql',
   -- 'prisma',
-  'rust',
+  -- 'rust',
   'schemastore',
   'swift',
   'tailwindcss',
@@ -23,7 +23,7 @@ local children = {
   -- 'vimtex',
 
   -- 'lsp',
-  'completion',
+  -- 'completion',
   -- 'neodev',
   -- 'nonels',
 

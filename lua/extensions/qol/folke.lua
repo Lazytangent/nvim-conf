@@ -1,9 +1,9 @@
 return {
-  {
-    "folke/lsp-colors.nvim",
-    config = true,
-    event = "VeryLazy",
-  },
+  -- {
+  --   "folke/lsp-colors.nvim",
+  --   config = true,
+  --   event = "VeryLazy",
+  -- },
   {
     "folke/todo-comments.nvim",
     config = true,

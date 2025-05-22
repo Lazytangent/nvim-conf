@@ -1,20 +1,20 @@
-local ls = require 'luasnip'
+-- local ls = require 'luasnip'
 
 local normal = require 'mappings.normal'
 local visual = require 'mappings.visual'
-local insert = require 'mappings.insert'
+-- local insert = require 'mappings.insert'
 
 local visual_only = {
   { "ga", [[<Plug>(EasyAlign)]], desc = "Easy Align" },
 }
 
-local select = {
-  { "<C-e>", function()
-    if ls.choice_active() then
-      ls.change_choice(1)
-    end
-  end, desc = "Select Choice Node" },
-}
+-- local select = {
+--   { "<C-e>", function()
+--     if ls.choice_active() then
+--       ls.change_choice(1)
+--     end
+--   end, desc = "Select Choice Node" },
+-- }
 
 local util = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -28,10 +28,10 @@ local terminal = {
 local wk = require "which-key"
 
 wk.add {
-  {
-    mode = "s",
-    select,
-  },
+  -- {
+  --   mode = "s",
+  --   select,
+  -- },
   {
     mode = "t",
     terminal,
@@ -40,10 +40,10 @@ wk.add {
     mode = "x",
     visual_only,
   },
-  {
-    mode = "i",
-    insert,
-  },
+  -- {
+  --   mode = "i",
+  --   insert,
+  -- },
   {
     mode = "v",
     visual,

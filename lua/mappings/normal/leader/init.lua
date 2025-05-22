@@ -23,8 +23,8 @@ return {
   { "<leader>q", desc = "Set diagnostics into location list" }, -- Set via LSP on_attach
 
   require(current_module .. 'leader'),
-  require(current_module .. 'd'),
-  require(current_module .. 'f'),
+  -- require(current_module .. 'd'),
+  -- require(current_module .. 'f'),
   require(current_module .. 'g'),
   require(current_module .. 'h'),
   require(current_module .. 'l'),

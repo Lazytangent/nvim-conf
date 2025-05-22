@@ -30,21 +30,21 @@ local autocmds = {
   {'StdinReadPre', { command = [[let s:std_in=1]], group = group }},
 
   -- LuaSnip get out of nodes
-  {'ModeChanged',
-    {
-      callback = function()
-        local luasnip = require('luasnip')
-        if
-          ((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
-          and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
-          and not luasnip.session.jump_active
-        then
-          luasnip.unlink_current()
-        end
-      end,
-      group = group,
-    },
-  },
+  -- {'ModeChanged',
+  --   {
+  --     callback = function()
+  --       local luasnip = require('luasnip')
+  --       if
+  --         ((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
+  --         and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
+  --         and not luasnip.session.jump_active
+  --       then
+  --         luasnip.unlink_current()
+  --       end
+  --     end,
+  --     group = group,
+  --   },
+  -- },
 
   -- Disables spellcheck in quickfix list
   {'BufReadPost', { command = [[setlocal nospell]], pattern = 'quickfix', group = group }},

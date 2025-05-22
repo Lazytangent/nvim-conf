@@ -11,7 +11,7 @@ local items = {
   'dadbod',
   -- 'dap',
   'languages',
-  -- 'qol',
+  'qol',
   -- 'telescope',
   -- 'theme-stuff',
   -- 'treesitter',

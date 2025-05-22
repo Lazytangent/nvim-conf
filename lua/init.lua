@@ -34,6 +34,6 @@ require "commands"
 -- Start Cfilter for Quickfix list
 vim.api.nvim_command "packadd! cfilter"
 
-if vim.g.vscode then
+if vim.g.vscode == 1 then
   require "vscode_settings"
 end
