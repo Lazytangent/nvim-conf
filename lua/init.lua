@@ -22,14 +22,18 @@ end
 require "extensions"
 
 -- Configure LSP
-require "lsp"
+-- require "lsp"
 
 -- Personal config stuff
 require "basic"
 require "commands"
 
 -- GUI Config
-require "guis"
+-- require "guis"
 
 -- Start Cfilter for Quickfix list
 vim.api.nvim_command "packadd! cfilter"
+
+if vim.g.vscode then
+  require "vscode_settings"
+end

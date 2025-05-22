@@ -9,12 +9,12 @@ local lazy_opts = {
 
 local items = {
   'dadbod',
-  'dap',
+  -- 'dap',
   'languages',
-  'qol',
-  'telescope',
-  'theme-stuff',
-  'treesitter',
+  -- 'qol',
+  -- 'telescope',
+  -- 'theme-stuff',
+  -- 'treesitter',
 }
 
 local plugins = {}
