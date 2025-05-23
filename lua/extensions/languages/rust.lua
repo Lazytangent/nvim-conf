@@ -2,7 +2,7 @@ return {
   {
     "mrcjkb/rustaceanvim",
     config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local utils = require('mappings.utils')
 
       local on_attach = function(client, bufnr)
@@ -45,7 +45,7 @@ return {
 
             vim.keymap.set("n", "<Leader>as", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
           end,
-          capabilities = capabilities,
+          -- capabilities = capabilities,
         },
       }
     end,
