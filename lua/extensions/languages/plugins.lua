@@ -14,7 +14,7 @@ local children = {
   -- 'orgmode',
   'postgresql',
   -- 'prisma',
-  -- 'rust',
+  'rust',
   'schemastore',
   'swift',
   'tailwindcss',
