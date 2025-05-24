@@ -12,16 +12,10 @@ snippet bf
 snippet it
         \textit{${1:italics}}$0
 
-snippet under
-        \underline{${1:underline}}$0
-
-snippet tt
-        \texttt{${1:teletype}}$0
-
 snippet -
         \item{$1}$0
 
-snippet list
+snippet lst
         \begin{itemize}
             $0
         \end{itemize}
@@ -31,7 +25,7 @@ snippet enum
             $0
         \end{enumerate}
 
-snippet nlist
+snippet nlst
         \begin{enumerate}
             $0
         \end{enumerate}
@@ -42,7 +36,7 @@ snippet sec
 snippet subsec
         \subsection{$1}$0
 
-snippet text
+snippet txt
         \text{$1}$0
 
 snippet smallcaps
@@ -53,15 +47,6 @@ snippet sc
 
 snippet ol
         \overline{${1:A}}$0
-
-snippet AND
-        \textsc{and}$0
-
-snippet OR
-        \textsc{or}$0
-
-snippet NOT
-        \textsc{not}(${1:A})$0
 
 snippet mr
         \mathrel{$1}$0
