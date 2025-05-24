@@ -15,6 +15,7 @@ local children = {
   'femaco',
   'fidget',
   'folke',
+  'gitlinker',
   'gitsigns',
   'helpview',
   'indent-blankline',
