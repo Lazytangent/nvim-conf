@@ -14,7 +14,13 @@ local function dynamic_copy(args, old_state)
 end
 
 local latex = {
-  autosnippet({ trig = ";beg", namr = "begin{} / end{}", dscr = "Create environment" },
+  autosnippet({ trig = "w/", name = "with", dscr = "Abbrevation" },
+    { t "with", }
+  ),
+  autosnippet({ trig = "w/o", name = "without", dscr = "Abbrevation" },
+    { t "without", }
+  ),
+  autosnippet({ trig = ";beg", name = "begin{} / end{}", dscr = "Create environment" },
     fmta(
       [[
       \begin{<>}
@@ -30,7 +36,7 @@ local latex = {
   autosnippet({ trig = ";...", wordTrig = false }, {
     t "\\dots",
   }),
-  s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" },
+  s({ trig = "fig", name = "Figure environment", dscr = "Figure environment" },
     fmta(
     [[
     \begin{figure}[<>]
@@ -48,7 +54,7 @@ local latex = {
       d(5, dynamic_copy, { 3 }, { user_args = { 3 } })
     })
   ),
-  s({ trig = ";table", namr = "Table environment", dscr = "Table environment", snippetType = "autosnippet" }, {
+  s({ trig = ";table", name = "Table environment", dscr = "Table environment", snippetType = "autosnippet" }, {
     t "\\begin{table}[",
     i(1, "htpb"),
     t { "]", "" },
