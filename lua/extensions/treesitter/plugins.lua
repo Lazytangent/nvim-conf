@@ -2,6 +2,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    -- lazy = false,
+    -- branch = 'main',
     config = function()
       vim.g.skip_ts_context_commentstring_module = true
       require 'extensions.treesitter.configs.treesitter'

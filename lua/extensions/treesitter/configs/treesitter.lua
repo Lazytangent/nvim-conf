@@ -1,6 +1,7 @@
 local Treesitter = require("config").Treesitter
 
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter").setup({
+  -- install_dir = vim.fn.stdpath('data') .. '/site',
   modules = {},
   ensure_installed = Treesitter.parsers,
   auto_install = false,
@@ -120,3 +121,5 @@ require("nvim-treesitter.configs").setup({
     disable = { "lua" }, -- temporarily cause there's a bug. See https://github.com/RRethy/nvim-treesitter-endwise/issues/41
   },
 })
+
+-- require('nvim-treesitter').install(Treesitter.parsers)

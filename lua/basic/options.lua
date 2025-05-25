@@ -30,6 +30,7 @@ vim.go.writebackup    = false
 
 vim.wo.cursorline     = true
 vim.wo.foldcolumn     = "3"
+-- vim.wo.foldexpr       = "v:lua.vim.treesitter.foldexpr()"
 vim.wo.foldexpr       = "nvim_treesitter#foldexpr()"
 vim.wo.foldmethod     = "expr"
 vim.wo.list           = true
@@ -46,6 +47,7 @@ local settings = {
     autoindent   = true,
     expandtab    = true,
     fileencoding = "utf-8",
+    -- indentexpr   = "v:lua.require'nvim-treesitter'.indentexpr()",
     modeline     = true,
     shiftwidth   = 4,
     smartindent  = false,
