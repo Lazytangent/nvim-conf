@@ -2,17 +2,21 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    -- lazy = false,
-    -- branch = 'main',
+    lazy = false,
+    branch = 'main',
     config = function()
       vim.g.skip_ts_context_commentstring_module = true
       require 'extensions.treesitter.configs.treesitter'
 
-      require 'extensions.treesitter.configs.http-parser'
+      -- require 'extensions.treesitter.configs.http-parser'
     end,
   },
-  "nvim-treesitter/nvim-treesitter-refactor",
-  "nvim-treesitter/nvim-treesitter-textobjects",
+  -- "nvim-treesitter/nvim-treesitter-refactor",
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    branch = 'main',
+    config = true,
+  },
 
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
@@ -29,10 +33,10 @@ return {
       },
     },
   },
-  "RRethy/nvim-treesitter-endwise",
-  "theHamsta/nvim-treesitter-pairs",
+  -- "RRethy/nvim-treesitter-endwise",
+  -- "theHamsta/nvim-treesitter-pairs",
   "windwp/nvim-ts-autotag",
-  "phelipetls/jsonpath.nvim",
+  -- "phelipetls/jsonpath.nvim",
   {
     "yioneko/vim-tmindent",
     config = function()

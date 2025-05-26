@@ -1,6 +1,6 @@
 return {
   { "<leader>m",     group = "Local leader" },
-  { "<leader>m'",    require('femaco.edit').edit_code_block, desc = "Edit code block with FeMaco" },
+  -- { "<leader>m'",    require('femaco.edit').edit_code_block, desc = "Edit code block with FeMaco" },
   { "<leader>m<CR>", function() vim.cmd "nohlsearch" end,    desc = "Turn off highlight" },
 
   { "<leader>mgt",  group = "Toggle" },
