@@ -167,7 +167,7 @@ local latex = {
       i(0),
     })
   ),
-  s({ trig = 'listing', dscr = 'Code listing' },
+  s({ trig = 'lstng', dscr = 'Code listing' },
     fmta([[
       \begin{listing}[H]
       <>
@@ -176,7 +176,7 @@ local latex = {
       i(0),
     })
   ),
-  s({ trig = 'minted', dscr = 'Minted environment' },
+  s({ trig = 'mntd', dscr = 'Minted environment' },
     fmta([[
       \begin{minted}{<>}
       <>
@@ -199,7 +199,7 @@ local latex = {
         i(0),
       })
   ),
-  s({ trig = 'numbered', dscr = 'Minted environment with linenos starting from a firstnumber' },
+  s({ trig = 'nmbrd', dscr = 'Minted environment with linenos starting from a firstnumber' },
     fmta([[
       \begin{minted}[linenos,firstnumber=<>]{<>}
       <>
