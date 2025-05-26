@@ -33,6 +33,7 @@ return {
       },
     },
   },
+  "brianhuster/treesitter-endwise.nvim",
   -- "RRethy/nvim-treesitter-endwise",
   -- "theHamsta/nvim-treesitter-pairs",
   "windwp/nvim-ts-autotag",
