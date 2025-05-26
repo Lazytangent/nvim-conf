@@ -155,7 +155,6 @@ local latex = {
     { condition = tex.in_math }
   ),
   s({ trig = '"' },
-  -- s({ trig = '"', snippetType = "autosnippet" },
     fmta("``<>''<>", { i(1), i(0) })
   ),
   s({ trig = ';tt', snippetType = "autosnippet" },
