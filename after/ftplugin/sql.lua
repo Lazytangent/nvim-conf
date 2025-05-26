@@ -13,3 +13,4 @@ wk.add({
   mode = "x",
   { "<leader>db", desc = "Execute selection" },
 })
+vim.treesitter.start()

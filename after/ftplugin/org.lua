@@ -12,3 +12,4 @@ vim.keymap.set('i', '<C-CR>', '<cmd>lua require("orgmode").action("org_mappings.
   silent = true,
   buffer = true,
 })
+vim.treesitter.start()
