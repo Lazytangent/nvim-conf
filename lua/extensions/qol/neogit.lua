@@ -7,5 +7,11 @@ return {
   },
   opts = {
     disable_insert_on_commit = true,
+    mappings = {
+      status = {
+        ["]]"] = "NextSection",
+        ["[["] = "PreviousSection",
+      },
+    },
   },
 }
