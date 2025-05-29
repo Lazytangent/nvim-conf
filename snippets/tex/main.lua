@@ -13,6 +13,46 @@ local function dynamic_copy(args, old_state)
   return snip
 end
 
+local function get_previous_minted_lang()
+  local lang = 'latex'
+  local query_str = [[(minted_environment
+          (begin
+            (curly_group_text
+              (text
+                (word)))
+            (curly_group_text
+              (text
+                (word) @lang))))]]
+  local query = vim.treesitter.query.parse(lang, query_str)
+
+  local node = vim.treesitter.get_node()
+  if node == nil then
+    vim.notify("Node was nil")
+    return 'lang'
+  end
+  local tree = node:tree()
+  local root_node = tree:root()
+  local last = root_node
+  local i = 0
+
+  for idx, curr, _, _ in query:iter_captures(root_node, 0) do
+    i = idx
+    local text = vim.treesitter.get_node_text(curr, 0)
+
+    if not string.match(text, "[%/%.%:]") then
+      last = curr
+    end
+  end
+
+  if i == 0 then
+    -- Didn't find any captures and stayed on root
+    return 'lang'
+  end
+
+  local last_text = vim.treesitter.get_node_text(last, 0)
+  return last_text or 'lang'
+end
+
 local latex = {
   autosnippet({ trig = "w/", name = "with", dscr = "Abbrevation" },
     { t "with", }
@@ -162,7 +202,10 @@ local latex = {
   ),
   s({ trig = 'inline', dscr = "mintinline" },
     fmta("\\mintinline{<>}{<>}<>", {
-      i(2, "lang"),
+      d(2, function()
+        local lang = get_previous_minted_lang()
+        return sn(nil, { i(1, lang) })
+      end),
       i(1),
       i(0),
     })
@@ -182,7 +225,10 @@ local latex = {
       <>
       \end{minted}<>
       ]], {
-        i(1, "lang"),
+        d(1, function()
+          local lang = get_previous_minted_lang()
+          return sn(nil, { i(1, lang) })
+        end),
         i(2, "code"),
         i(0),
       })
@@ -194,7 +240,10 @@ local latex = {
       \end{minted}<>
       ]], {
         i(1),
-        i(2, "lang"),
+        d(2, function()
+          local lang = get_previous_minted_lang()
+          return sn(nil, { i(1, lang) })
+        end),
         i(3, "code"),
         i(0),
       })
@@ -206,7 +255,10 @@ local latex = {
       \end{minted}<>
       ]], {
         i(1, "linenumber"),
-        i(2, "lang"),
+        d(2, function()
+          local lang = get_previous_minted_lang()
+          return sn(nil, { i(1, lang) })
+        end),
         i(3, "code"),
         i(0),
       })
