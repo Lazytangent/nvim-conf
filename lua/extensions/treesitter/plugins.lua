@@ -11,6 +11,11 @@ return {
       -- require 'extensions.treesitter.configs.http-parser'
     end,
   },
+  {
+    "MeanderingProgrammer/treesitter-modules.nvim",
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = true,
+  },
   -- "nvim-treesitter/nvim-treesitter-refactor",
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
