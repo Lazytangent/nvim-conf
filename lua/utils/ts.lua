@@ -44,4 +44,14 @@ M.find_match = function(lang, table)
   return nil
 end
 
+-- Start of a function for figuring out whether a node is inside one of TeX's "list" environments
+M.inspect_node = function()
+  local node = vim.treesitter.get_node()
+  if node ~= nil then
+    print(node:sexpr())
+  else
+    print "Node was nil"
+  end
+end
+
 return M
