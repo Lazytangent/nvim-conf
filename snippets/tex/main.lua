@@ -1,4 +1,5 @@
 local ls = require('luasnip')
+local utils = require('utils.ts')
 
 local autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" })
 
@@ -15,42 +16,20 @@ end
 
 local function get_previous_minted_lang()
   local lang = 'latex'
-  local query_str = [[(minted_environment
+  local query_strs = {
+    [[(minted_environment
           (begin
             (curly_group_text
               (text
                 (word)))
             (curly_group_text
               (text
-                (word) @lang))))]]
-  local query = vim.treesitter.query.parse(lang, query_str)
+                (word) @lang))))]],
+  }
 
-  local node = vim.treesitter.get_node()
-  if node == nil then
-    vim.notify("Node was nil")
-    return 'lang'
-  end
-  local tree = node:tree()
-  local root_node = tree:root()
-  local last = root_node
-  local i = 0
+  local res = utils.find_match(lang, query_strs)
 
-  for idx, curr, _, _ in query:iter_captures(root_node, 0) do
-    i = idx
-    local text = vim.treesitter.get_node_text(curr, 0)
-
-    if not string.match(text, "[%/%.%:]") then
-      last = curr
-    end
-  end
-
-  if i == 0 then
-    -- Didn't find any captures and stayed on root
-    return 'lang'
-  end
-
-  local last_text = vim.treesitter.get_node_text(last, 0)
-  return last_text or 'lang'
+  return res or 'lang'
 end
 
 local latex = {
