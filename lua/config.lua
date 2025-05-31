@@ -71,6 +71,7 @@ config.Treesitter = {
     "dart",
     "dockerfile",
     "elixir",
+    "fennel",
     "gitignore",
     "go",
     "gomod",

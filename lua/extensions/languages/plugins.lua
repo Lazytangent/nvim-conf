@@ -4,6 +4,7 @@ local modules = {}
 local children = {
   'beancount',
   'dbml',
+  'fennel',
   'go',
   'hcl',
   'helm',
