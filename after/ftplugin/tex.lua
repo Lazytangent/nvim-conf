@@ -60,10 +60,46 @@ local mappings = {
   { ']*', desc = '[Count] Next end of a LaTeX comment' },
   { '[/', desc = '[Count] Previous start of a LaTeX comment' },
   { '[*', desc = '[Count] Previous end of a LaTeX comment' },
+
+  { 'dsc', desc = 'Delete surrounding command' },
+  { 'dse', desc = 'Delete surrounding environment' },
+  { 'ds$', desc = 'Delete surrounding math environment' },
+  { 'dsd', desc = 'Delete surrounding delimiter' },
+
+  { 'csc', desc = 'Delete surrounding command' },
+  { 'cse', desc = 'Delete surrounding environment' },
+  { 'cs$', desc = 'Delete surrounding math environment' },
+  { 'csd', desc = 'Delete surrounding delimiter' },
+
+  { 'tse', desc = 'Toggle environment' },
+  { 'tsc', desc = 'Toggle starred command' },
+  { 'tss', desc = 'Toggle starred environment' },
+  { 'ts$', desc = 'Toggle math environment' },
+  { 'tsd', desc = 'Toggle delimiter' },
+  { 'tsD', desc = 'Toggle delimiter' },
+  { 'tsf', desc = 'Toggle inline fraction' },
+  { 'tsb', desc = 'Toggle line-break' },
 }
 
 require('which-key').add {
   {
     mappings
-  }
+  },
+  {
+    mode = { "o" },
+    {
+      { 'ic', desc = 'Inner Command' },
+      { 'ac', desc = 'A Command' },
+      { 'id', desc = 'Inner Delimiter' },
+      { 'ad', desc = 'A Delimiter' },
+      { 'ie', desc = 'Inner Environment' },
+      { 'ae', desc = 'A Environment' },
+      { 'i$', desc = 'Inner Math Environment' },
+      { 'a$', desc = 'A Math Environment' },
+      { 'iP', desc = 'Inner Section' },
+      { 'aP', desc = 'A Section' },
+      { 'im', desc = 'Inner Item' },
+      { 'am', desc = 'A Item' },
+    },
+  },
 }
