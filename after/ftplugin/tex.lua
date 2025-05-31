@@ -1,3 +1,7 @@
+-- Treesitter
+vim.treesitter.start(0, 'latex')
+vim.bo.syntax = 'on'
+
 local abbrevs = {
   ["representation{,s}"] = { "reprr{,s}" },
   ["of course"] = { "ofc" },
