@@ -1,7 +1,7 @@
 local config = {}
 
 config.Theming = {
-  colorscheme = "catppuccin",
+  colorscheme = "oxocarbon",
 }
 
 config.LSP = {

@@ -13,7 +13,8 @@ return {
     require("lualine").setup {
       extensions = { 'quickfix', 'fugitive' },
       options = {
-        theme = 'auto',
+        -- theme = 'auto',
+        theme = 'citruszest',
         icons_enabled = false,
         disabled_filetypes = {
           statusline = {'NvimTree'},
