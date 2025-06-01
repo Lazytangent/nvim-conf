@@ -11,7 +11,6 @@ end
 vim.api.nvim_create_user_command("New", function(opts)
   local args = opts.fargs
   local filetype = args[1]
-  print(filetype)
   vim.cmd("new")
   vim.cmd("set filetype=" .. filetype)
   for _, thing in ipairs(slice(args, 2)) do
