@@ -66,6 +66,7 @@ config.Treesitter = {
     "bash",
     "beancount",
     "c",
+    "commonlisp",
     "cpp",
     "css",
     "dart",
