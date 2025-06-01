@@ -10,6 +10,7 @@ local modules = {
   "go_run",
   "jq",
   "messages",
+  "new",
   "nuke_plugins",
   "org",
   "print_snippets",
