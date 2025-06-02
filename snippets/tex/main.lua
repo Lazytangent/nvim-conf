@@ -179,7 +179,7 @@ local latex = {
   s({ trig = ';tt', snippetType = "autosnippet" },
     fmta("\\texttt{<>}<>", { i(1, "teletype"), i(0) })
   ),
-  s({ trig = 'inline', dscr = "mintinline" },
+  s({ trig = 'nln', dscr = "mintinline" },
     fmta("\\mintinline{<>}{<>}<>", {
       d(2, function()
         local lang = get_previous_minted_lang()
