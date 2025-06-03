@@ -16,7 +16,7 @@ return {
 
     npairs.add_rules {
       -- From https://github.com/windwp/nvim-autopairs/issues/314
-      Rule(" ", " ")
+      Rule(" ", " ", "-commonlisp")
       :with_pair(cond.done())
       :replace_endpair(function(opts)
         local pair = opts.line:sub(opts.col - 1, opts.col)
@@ -58,11 +58,11 @@ return {
       Rule('{% ', ' %', { 'html', 'htmldjango', 'htmljinja' }),
     }
 
-    npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex" }
+    npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex", "commonlisp" }
 
     npairs.get_rule("[").not_filetypes = { "tex" }
     npairs.get_rule('"')[1].not_filetypes = { "tex" }
-    npairs.get_rule('( ').not_filetypes = { "scheme", "lisp", "fennel" }
+    npairs.get_rule('( ').not_filetypes = { "scheme", "lisp", "fennel", "commonlisp" }
   end,
   event = "VeryLazy",
 }
