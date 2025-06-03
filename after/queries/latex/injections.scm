@@ -17,3 +17,14 @@
 	 (word) @lang (#eq? @lang "cl"))))
    (source_code) @injection.content
    (#set! injection.language "commonlisp")))
+
+; mintinline
+
+(generic_command
+  command: (command_name) @command (#eq? @command "\\mintinline")
+  arg: (curly_group
+	 (text
+	   word: (word) @lang (#eq? @lang "fnl")))
+  arg: (curly_group) @injection.content
+  (#offset! @injection.content 0 1 0 -1)
+  (#set! injection.language "fennel"))
