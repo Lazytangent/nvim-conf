@@ -4,6 +4,7 @@
   "better-digraphs.nvim": { "branch": "master", "commit": "c895f619cbd2e23860285baea6d2933649a28b26" },
   "catppuccin": { "branch": "main", "commit": "be1e5e6308bb9d016bf5c1565e0f1d5e46400d7a" },
   "citruszest.nvim": { "branch": "main", "commit": "a2df858072e0820a0a9254b17bcf9734b1a1c727" },
+  "clojure.vim": { "branch": "master", "commit": "128ccd4d1c84a7455757ba0a2249016fe5ee6640" },
   "cmp-beancount": { "branch": "main", "commit": "29e23297c06b9d69771e4b14e0fb3b9d583a150e" },
   "cmp-buffer": { "branch": "main", "commit": "11159370b51495c9848b0b6bb2b933df27672a7a" },
   "cmp-calc": { "branch": "main", "commit": "5947b412da67306c5b68698a02a846760059be2e" },
