@@ -18,6 +18,15 @@
    (source_code) @injection.content
    (#set! injection.language "commonlisp")))
 
+((minted_environment
+   (begin
+     (curly_group_text)
+     (curly_group_text
+       (text
+	 (word) @lang (#eq? @lang "clj"))))
+   (source_code) @injection.content
+   (#set! injection.language "clojure")))
+
 ; mintinline
 
 (generic_command
