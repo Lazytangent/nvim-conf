@@ -1,7 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   config = function()
-    local jsonpath = require('jsonpath')
+    -- local jsonpath = require('jsonpath')
 
     local function indent()
       local softtabstop = vim.bo.softtabstop
@@ -14,6 +14,8 @@ return {
       extensions = { 'quickfix', 'fugitive' },
       options = {
         theme = 'auto',
+        -- theme = 'citruszest',
+        -- theme = 'oxocarbon',
         icons_enabled = false,
         disabled_filetypes = {
           statusline = {'NvimTree'},
@@ -46,7 +48,10 @@ return {
         },
       },
       winbar = {
-        lualine_c = {{"navic"}, { jsonpath.get, cond = function() return vim.bo.filetype == "json" end }},
+        lualine_c = {
+          {"navic"},
+          -- { jsonpath.get, cond = function() return vim.bo.filetype == "json" end },
+        },
         lualine_y = {{'filename', path = 1}},
       },
       inactive_winbar = {

@@ -531,12 +531,6 @@ local other_snippets = {
     },
     {condition = tex.in_math}
   ),
-  -- PARALLEL SYMBOL, i.e. \parallel
-  -- s({trig = "||", snippetType="autosnippet"},
-  --   {
-  --     t("\\parallel"),
-  --   }
-  -- ),
   -- CDOTS, i.e. \cdots
   s({trig = "cdd", snippetType="autosnippet"},
     {
@@ -584,12 +578,6 @@ local other_snippets = {
     },
     {condition = tex.in_math}
   ),
-  -- COLON, i.e. \colon
-  -- s({trig = "::", snippetType="autosnippet"},
-  --   {
-  --     t("\\colon "),
-  --   }
-  -- ),
   -- IMPLIES, i.e. \implies
   s({trig = ">>", snippetType="autosnippet"},
     {

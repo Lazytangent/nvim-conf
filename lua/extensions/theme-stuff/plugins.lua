@@ -3,6 +3,7 @@ local parent_module = (...):match("(.-)[^%.]+$")
 local modules = {}
 local children = {
   'catppuccin',
+  'citruszest',
   'lualine',
   'onedark',
   'oxocarbon',

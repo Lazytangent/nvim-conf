@@ -1,4 +1,5 @@
 local ls = require('luasnip')
+local utils = require('utils.ts')
 
 local autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" })
 
@@ -13,8 +14,32 @@ local function dynamic_copy(args, old_state)
   return snip
 end
 
+local function get_previous_minted_lang()
+  local lang = 'latex'
+  local query_strs = {
+    [[(minted_environment
+          (begin
+            (curly_group_text
+              (text
+                (word)))
+            (curly_group_text
+              (text
+                (word) @lang))))]],
+  }
+
+  local res = utils.find_match(lang, query_strs)
+
+  return res or 'lang'
+end
+
 local latex = {
-  autosnippet({ trig = ";beg", namr = "begin{} / end{}", dscr = "Create environment" },
+  autosnippet({ trig = "w/", name = "with", dscr = "Abbrevation" },
+    { t "with", }
+  ),
+  autosnippet({ trig = "w/o", name = "without", dscr = "Abbrevation" },
+    { t "without", }
+  ),
+  autosnippet({ trig = ";beg", name = "begin{} / end{}", dscr = "Create environment" },
     fmta(
       [[
       \begin{<>}
@@ -30,7 +55,7 @@ local latex = {
   autosnippet({ trig = ";...", wordTrig = false }, {
     t "\\dots",
   }),
-  s({ trig = "fig", namr = "Figure environment", dscr = "Figure environment" },
+  s({ trig = "fig", name = "Figure environment", dscr = "Figure environment" },
     fmta(
     [[
     \begin{figure}[<>]
@@ -48,7 +73,7 @@ local latex = {
       d(5, dynamic_copy, { 3 }, { user_args = { 3 } })
     })
   ),
-  s({ trig = ";table", namr = "Table environment", dscr = "Table environment", snippetType = "autosnippet" }, {
+  s({ trig = ";table", name = "Table environment", dscr = "Table environment", snippetType = "autosnippet" }, {
     t "\\begin{table}[",
     i(1, "htpb"),
     t { "]", "" },
@@ -149,20 +174,22 @@ local latex = {
     { condition = tex.in_math }
   ),
   s({ trig = '"' },
-  -- s({ trig = '"', snippetType = "autosnippet" },
     fmta("``<>''<>", { i(1), i(0) })
   ),
   s({ trig = ';tt', snippetType = "autosnippet" },
     fmta("\\texttt{<>}<>", { i(1, "teletype"), i(0) })
   ),
-  s({ trig = 'inline', dscr = "mintinline" },
+  s({ trig = 'nln', dscr = "mintinline" },
     fmta("\\mintinline{<>}{<>}<>", {
-      i(2, "lang"),
+      d(2, function()
+        local lang = get_previous_minted_lang()
+        return sn(nil, { i(1, lang) })
+      end),
       i(1),
       i(0),
     })
   ),
-  s({ trig = 'listing', dscr = 'Code listing' },
+  s({ trig = 'lstng', dscr = 'Code listing' },
     fmta([[
       \begin{listing}[H]
       <>
@@ -171,13 +198,16 @@ local latex = {
       i(0),
     })
   ),
-  s({ trig = 'minted', dscr = 'Minted environment' },
+  s({ trig = 'mntd', dscr = 'Minted environment' },
     fmta([[
       \begin{minted}{<>}
       <>
       \end{minted}<>
       ]], {
-        i(1, "lang"),
+        d(1, function()
+          local lang = get_previous_minted_lang()
+          return sn(nil, { i(1, lang) })
+        end),
         i(2, "code"),
         i(0),
       })
@@ -189,19 +219,25 @@ local latex = {
       \end{minted}<>
       ]], {
         i(1),
-        i(2, "lang"),
+        d(2, function()
+          local lang = get_previous_minted_lang()
+          return sn(nil, { i(1, lang) })
+        end),
         i(3, "code"),
         i(0),
       })
   ),
-  s({ trig = 'numbered', dscr = 'Minted environment with linenos starting from a firstnumber' },
+  s({ trig = 'nmbrd', dscr = 'Minted environment with linenos starting from a firstnumber' },
     fmta([[
       \begin{minted}[linenos,firstnumber=<>]{<>}
       <>
       \end{minted}<>
       ]], {
         i(1, "linenumber"),
-        i(2, "lang"),
+        d(2, function()
+          local lang = get_previous_minted_lang()
+          return sn(nil, { i(1, lang) })
+        end),
         i(3, "code"),
         i(0),
       })

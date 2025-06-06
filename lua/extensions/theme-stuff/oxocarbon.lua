@@ -1,3 +1,3 @@
 return {
-  "B4mbus/oxocarbon-lua.nvim"
+  "nyoom-engineering/oxocarbon.nvim",
 }
