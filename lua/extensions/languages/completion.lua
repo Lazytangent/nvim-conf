@@ -27,10 +27,10 @@ return {
         ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping({
-          i = cmp.mapping.confirm({ select = true }),
-          c = cmp.mapping.confirm({ select = false }),
-        }),
+        -- ['<C-Space>'] = cmp.mapping({
+        --   i = cmp.mapping.confirm({ select = true }),
+        --   c = cmp.mapping.confirm({ select = false }),
+        -- }),
         ['<C-g>'] = cmp.mapping.close(),
         ['<C-y>'] = cmp.mapping.confirm({
           behavior = cmp.ConfirmBehavior.Replace,
