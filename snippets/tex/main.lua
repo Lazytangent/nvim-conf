@@ -49,12 +49,6 @@ local latex = {
       { i(1), i(0), rep(1) }
     )
   ),
-  autosnippet({ trig = ";ldots", wordTrig = false }, {
-    t "\\ldots",
-  }),
-  autosnippet({ trig = ";...", wordTrig = false }, {
-    t "\\dots",
-  }),
   s({ trig = "fig", name = "Figure environment", dscr = "Figure environment" },
     fmta(
     [[
@@ -110,12 +104,6 @@ local latex = {
     i(3, "a_n z^n"),
     t "}",
   }),
-  s({ trig = ";sqrt", dscr = "\\sqrt{}", wordTrig = false, snippetType = "autosnippet" }, {
-    t "\\sqrt{",
-    i(1),
-    t "}",
-    i(0),
-  }),
   s({ trig = ";sq", dscr = "\\sqrt{}", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\sqrt{",
     i(1),
@@ -130,6 +118,7 @@ local latex = {
     t "\\nabla",
     i(0),
   }),
+
   ms({
     { trig = "verb", dscr = "Inline verbatim", name = "\\verb||" },
     "vb",
@@ -140,6 +129,7 @@ local latex = {
     t("|"),
     i(0),
   }),
+
   s({ trig = "sim", dscr = "Similar/Tilde", name = "Regular sim" }, {
     t("\\sim"),
     i(0),
@@ -241,6 +231,18 @@ local latex = {
         i(3, "code"),
         i(0),
       })
+  ),
+  s({ trig = 'fnm', dscr = 'Footnote mark' },
+    fmta("\\footnotemark[<>]<>", {
+      i(1, "num"),
+      i(0),
+    })
+  ),
+  s({ trig = 'fnt', dscr = 'Footnote text' },
+    fmta("\\footnotetext[<>]<>", {
+      i(1, "num"),
+      i(0),
+    })
   ),
 }
 
