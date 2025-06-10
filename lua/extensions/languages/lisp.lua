@@ -13,4 +13,10 @@ return {
       "tpope/vim-repeat",
     },
   },
+  {
+    "guns/vim-sexp",
+    init = function()
+      vim.g.sexp_filetypes = 'clojure,scheme,lisp,timl,fennel,commonlisp'
+    end,
+  },
 }
