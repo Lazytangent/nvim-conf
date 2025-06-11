@@ -245,6 +245,11 @@ local latex = {
       i(0)
     })
   ),
+  s({ trig = "-", dscr = "Item" }, c(1, {
+    fmta("\\item{<>}<>", { i(1), i(0) }),
+    fmta("\\item[<>]{<>}<>", { i(1), i(2), i(3) }),
+    t"testing",
+  })),
 }
 
 return latex
