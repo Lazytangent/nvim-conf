@@ -49,6 +49,16 @@ local latex = {
       { i(1), i(0), rep(1) }
     )
   ),
+  s({ trig = "vbm", name = "Verbatim environment", dscr = "Verbatim environment" },
+    fmta([[
+    \begin{verbatim}
+    <>
+    \end{verbatim}<>
+    ]], {
+      i(1),
+      i(0),
+    })
+  ),
   s({ trig = "fig", name = "Figure environment", dscr = "Figure environment" },
     fmta(
     [[
@@ -250,6 +260,7 @@ local latex = {
     fmta("\\item[<>]{<>}<>", { i(1), i(2), i(3) }),
     t"testing",
   })),
+
 }
 
 return latex
