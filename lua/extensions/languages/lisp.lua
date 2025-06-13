@@ -7,16 +7,28 @@ return {
     end,
   },
   {
-    "tpope/vim-sexp-mappings-for-regular-people",
-    dependencies = {
-      "guns/vim-sexp",
-      "tpope/vim-repeat",
+    "julienvincent/nvim-paredit",
+    opts = {
+      filetypes = {
+        "clojure",
+        "commonlisp",
+        "fennel",
+        "scheme",
+        "lisp",
+      },
     },
   },
-  {
-    "guns/vim-sexp",
-    init = function()
-      vim.g.sexp_filetypes = 'clojure,scheme,lisp,timl,fennel,commonlisp'
-    end,
-  },
+  -- {
+  --   "tpope/vim-sexp-mappings-for-regular-people",
+  --   dependencies = {
+  --     "guns/vim-sexp",
+  --     "tpope/vim-repeat",
+  --   },
+  -- },
+  -- {
+  --   "guns/vim-sexp",
+  --   init = function()
+  --     vim.g.sexp_filetypes = 'clojure,scheme,lisp,timl,fennel,commonlisp'
+  --   end,
+  -- },
 }
