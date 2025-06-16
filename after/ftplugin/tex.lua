@@ -9,6 +9,7 @@ local abbrevs = {
   ["procedure{,s}"] = { "proc{,s}" },
   ["gRPC"] = { "grpc" },
   ["for instance"] = { "finst" },
+  ["because"] = { "bce" },
 }
 
 for word, list in pairs(abbrevs) do
