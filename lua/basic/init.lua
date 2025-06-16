@@ -5,6 +5,8 @@ local modules = {
   "colorscheme",
   "mappings",
   "options",
+
+  "lsps",
 }
 
 utils.load_modules("basic", modules)

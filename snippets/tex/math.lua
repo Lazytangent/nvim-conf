@@ -664,6 +664,14 @@ local other_snippets = {
   s({trig = "oo"},
     fmta("$O(<>)$<>", { i(1, "n"), i(0) })
   ),
+  s({trig = "txt"},
+    fmta("\\text{<>}<>", { i(1), i(0) }),
+    {condition = tex.in_math}
+  ),
+  s({trig = "mr"},
+    fmta("\\mathrel{<>}<>", { i(1), i(0) }),
+    {condition = tex.in_math}
+  ),
 }
 
 return vim.list_extend(snippets, other_snippets)
