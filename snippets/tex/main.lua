@@ -144,17 +144,6 @@ local latex = {
     t("\\sim"),
     i(0),
   }),
-  s({ trig = "article", dscr = "Article Format", name = "Article Format" }, {
-    t({"\\documentclass[12pt]{article}",
-      "",
-      "\\usepackage{mathtools,graphicx,amssymb,amsthm,amsmath}",
-      "",
-      "\\begin{document}",
-      ""
-    }),
-    i(0),
-    t({"", "\\end{document}"}),
-  }),
   s({ trig = ";ddx", dscr = "Derivative notation", name = "Derivative", wordTrig = false, snippetType = "autosnippet" }, {
     t("\\frac{d}{dx}"),
     i(0),
