@@ -1,4 +1,7 @@
 return {
   'pwntester/octo.nvim',
-  config = true,
+  opts = {
+    use_local_fs = true,
+    enable_builtin = true,
+  },
 }
