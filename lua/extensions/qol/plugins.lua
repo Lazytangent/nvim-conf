@@ -26,6 +26,7 @@ local children = {
   'neogit',
   'octo',
   'oil',
+  'profile',
   'rainbow-csv',
   'rest',
   'surround',

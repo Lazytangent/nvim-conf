@@ -54,5 +54,6 @@ return {
     'Saecki/crates.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = true,
+    ft = "rust",
   },
 }

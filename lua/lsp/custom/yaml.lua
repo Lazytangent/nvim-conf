@@ -1,8 +1,9 @@
-local nvim_lsp = require("lspconfig")
 local on_attach = require('lsp.primary.on_attach')
 local capabilities = require('lsp.capabilities')
 
-nvim_lsp.yamlls.setup {
+local lsp = 'yamlls'
+
+vim.lsp.config(lsp, {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -12,4 +13,5 @@ nvim_lsp.yamlls.setup {
       },
     },
   },
-}
+})
+vim.lsp.enable(lsp)

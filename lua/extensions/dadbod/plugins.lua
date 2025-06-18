@@ -2,11 +2,11 @@ return {
   "tpope/vim-dadbod",
   {
     "kristijanhusak/vim-dadbod-ui",
-    init = function()
-      vim.g.db_ui_env_variable_url = 'DATABASE_URL'
-      vim.g.db_ui_env_variable_name = 'DATABASE_NAME'
-    end,
     cmd = "DBUI",
+    init = function()
+      vim.g.db_ui_tmp_query_location = '~/.local/share/queries'
+      vim.g.db_ui_winwidth = 60
+    end,
   },
   "kristijanhusak/vim-dadbod-completion",
 }

@@ -14,4 +14,5 @@ return {
       },
     },
   },
+  event = "VeryLazy",
 }

@@ -20,10 +20,13 @@ local function get_python_path(workspace)
   return vim.fn.exepath('python3') or vim.fn.exepath('python') or 'python'
 end
 
-require('lspconfig').pyright.setup {
+local lsp = 'pyright'
+
+vim.lsp.config(lsp, {
   on_attach = on_attach,
   on_init = function(client)
     client.config.settings.python.pythonPath = get_python_path(client.config.root_dir)
   end,
   capabilities = capabilities,
-}
+})
+vim.lsp.enable(lsp)
