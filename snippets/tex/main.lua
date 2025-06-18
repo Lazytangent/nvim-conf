@@ -33,6 +33,12 @@ local function get_previous_minted_lang()
 end
 
 local latex = {
+  autosnippet({ trig = ";latex", name = "LaTeX", dscr = "Special LaTeX command", wordTrig = false },
+    { t "\\LaTeX{}" }
+  ),
+  autosnippet({ trig = ";tex", name = "TeX", dscr = "Special TeX command", wordTrig = false },
+    { t "\\TeX{}", }
+  ),
   autosnippet({ trig = "w/", name = "with", dscr = "Abbrevation" },
     { t "with", }
   ),
@@ -249,7 +255,6 @@ local latex = {
     fmta("\\item[<>]{<>}<>", { i(1), i(2), i(3) }),
     t"testing",
   })),
-
 }
 
 return latex
