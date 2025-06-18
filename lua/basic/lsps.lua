@@ -1,6 +1,6 @@
 local lsps = {
   'tsgo',
-  'ty',
+  'uv_ty',
 }
 
 for _, lsp in ipairs(lsps) do
