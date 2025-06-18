@@ -1,7 +1,7 @@
 local config = {}
 
 config.Theming = {
-  colorscheme = "tokyonight",
+  colorscheme = "catppuccin",
 }
 
 config.LSP = {
@@ -28,7 +28,6 @@ config.LSP = {
       "stylelint_lsp",
       "texlab",
       "vimls",
-      "volar",
       "zls",
     },
     regular = {
