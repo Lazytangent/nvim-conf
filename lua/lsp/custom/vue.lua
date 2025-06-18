@@ -1,8 +1,9 @@
-local lsp = require('lspconfig')
 local on_attach = require('lsp.regular.on_attach')
 local capabilities = require('lsp.capabilities')
 
-lsp.vuels.setup {
+local lsp = 'vuels'
+
+vim.lsp.config(lsp, {
   on_attach = on_attach,
   capabilities = capabilities,
   init_options = {
@@ -21,4 +22,5 @@ lsp.vuels.setup {
       },
     },
   }
-}
+})
+vim.lsp.enable(lsp)
