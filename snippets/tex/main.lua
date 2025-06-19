@@ -140,10 +140,13 @@ local latex = {
     "vb",
     { trig = ";vb", snippetType = "autosnippet" }
   }, {
-    t("\\verb|"),
-    i(1),
-    t("|"),
-    i(0),
+    c(1, {
+      -- \verb char content char
+      -- delimiter 'char' just needs to match
+      fmta("\\verb|<>|<>", { i(1), i(0) }),
+      fmta("\\verb+<>+<>", { i(1), i(0) }),
+      fmta("\\verb-<>-<>", { i(1), i(0) }),
+    }),
   }),
 
   s({ trig = "sim", dscr = "Similar/Tilde", name = "Regular sim" }, {
