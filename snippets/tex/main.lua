@@ -255,12 +255,12 @@ local latex = {
   ),
   s({ trig = "-", dscr = "Item" }, c(1, {
     fmta([[
-    \\item{%
+    \item{%
       <>
     }<>
     ]], { i(1), i(0) }),
     fmta([[
-    \\item[<>]{%
+    \item[<>]{%
       <>
     }<>
     ]], { i(1), i(2), i(3) }),
