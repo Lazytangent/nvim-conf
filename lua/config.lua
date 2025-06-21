@@ -60,7 +60,6 @@ config.Completion = {
 }
 
 config.Treesitter = {
-  disabled_highlighting = { 'latex', 'tex' },
   languages = {
     "bash",
     "beancount",
