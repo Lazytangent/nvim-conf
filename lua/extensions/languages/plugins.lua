@@ -9,6 +9,7 @@ local children = {
   'go',
   'hcl',
   'helm',
+  'info',
   'java',
   'jsdoc',
   'kitty',
