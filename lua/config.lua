@@ -31,6 +31,7 @@ config.LSP = {
       "zls",
     },
     regular = {
+      "pyrefly",
       "basedpyright",
       "pylsp",
       "terraformls",
