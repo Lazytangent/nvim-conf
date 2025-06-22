@@ -19,7 +19,7 @@ local autosnippets = {
 
 local snippets = {
   s(
-    { trig = ";ch", name = "Chapter" },
+    { trig = "ch", name = "Chapter" },
     fmta([[
       @node <>
       @chapter <>
@@ -29,7 +29,7 @@ local snippets = {
     })
   ),
   s(
-    { trig = ";sec", name = "Section" },
+    { trig = "sec", name = "Section" },
     fmta([[
       @node <>
       @section <>
