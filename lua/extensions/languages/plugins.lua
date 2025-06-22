@@ -39,7 +39,7 @@ local children = {
   -- 'flutter',
   -- 'dart',
   -- 'plantuml',
-  -- 'typst',
+  'typst',
 }
 
 for _, name in ipairs(children) do

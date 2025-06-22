@@ -27,6 +27,7 @@ config.LSP = {
       "solargraph",
       "stylelint_lsp",
       "texlab",
+      "typst_lsp",
       "vimls",
       "zls",
     },
