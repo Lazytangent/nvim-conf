@@ -58,7 +58,8 @@ return {
       Rule('{% ', ' %', { 'html', 'htmldjango', 'htmljinja' }),
     }
 
-    npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex", "commonlisp" }
+    npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex", "commonlisp", "texinfo" }
+    npairs.get_rule("`").not_filetypes = { 'texinfo' }
 
     npairs.get_rule("[").not_filetypes = { "tex" }
     npairs.get_rule('"')[1].not_filetypes = { "tex" }

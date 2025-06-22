@@ -1,4 +1,4 @@
-local snippets = {
+local autosnippets = {
   autosnippet(
     { trig = ";latex", name = "LaTeX", dscr = "Special LaTeX command", wordTrig = false },
     { t "@LaTeX{}" }
@@ -7,6 +7,13 @@ local snippets = {
     { trig = ";tex", name = "TeX", dscr = "Special TeX command", wordTrig = false },
     { t "@TeX{}" }
   ),
+  autosnippet(
+    { trig = ";item", name = "@item" },
+    { t "@item" }
+  ),
+}
+
+local snippets = {
   s(
     { trig = ";ch", name = "Chapter" },
     fmta([[
@@ -27,6 +34,17 @@ local snippets = {
       rep(1),
     })
   ),
+  s({ trig = '"' },
+    fmta("``<>''<>", { i(1), i(0) })
+  ),
+  s(
+    { trig = "it", name = "Italics" },
+    fmta("@i{<>}<>", { i(1, "italics"), i(0) })
+  ),
+  s(
+    { trig = "bf", name = "Bold" },
+    fmta("@i{<>}<>", { i(1, "bold"), i(0) })
+  ),
 }
 
-return snippets
+return vim.tbl_extend('force', {}, autosnippets, snippets)
