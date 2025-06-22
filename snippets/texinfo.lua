@@ -11,6 +11,10 @@ local autosnippets = {
     { trig = ";item", name = "@item" },
     { t "@item" }
   ),
+  autosnippet(
+    { trig = ";tt", name = "Teletype", wordTrig = false },
+    fmta("@t{<>}<>", { i(1, "teletype"), i(0) })
+  ),
 }
 
 local snippets = {
@@ -45,6 +49,10 @@ local snippets = {
     { trig = "bf", name = "Bold" },
     fmta("@i{<>}<>", { i(1, "bold"), i(0) })
   ),
+  s(
+    { trig = "fn", name = "Footnote" },
+    fmta("@footnote{<>}<>", { i(1, "footnote"), i(0) })
+  ),
 }
 
-return vim.tbl_extend('force', {}, autosnippets, snippets)
+return require('utils.tables').concatenate_sequential_tables(autosnippets, snippets)
