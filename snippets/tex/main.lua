@@ -55,6 +55,10 @@ local latex = {
       { i(1), i(0), rep(1) }
     )
   ),
+  autosnippet(
+    { trig = ";fn", name = "footnote", wordTrig = false },
+    fmta("\\footnote{<>}<>", { i(1, "note"), i(0) })
+  ),
   s({ trig = "vbm", name = "Verbatim environment", dscr = "Verbatim environment" },
     fmta([[
     \begin{verbatim}
