@@ -27,10 +27,12 @@ config.LSP = {
       "solargraph",
       "stylelint_lsp",
       "texlab",
+      "typst_lsp",
       "vimls",
       "zls",
     },
     regular = {
+      "pyrefly",
       "basedpyright",
       -- "pylsp",
       "terraformls",
@@ -60,7 +62,6 @@ config.Completion = {
 }
 
 config.Treesitter = {
-  disabled_highlighting = { 'latex', 'tex' },
   languages = {
     "bash",
     "beancount",
@@ -103,6 +104,7 @@ config.Treesitter = {
     "swift",
     "toml",
     "typescript",
+    "typst",
     "tsx",
     "vim",
     "vimdoc",

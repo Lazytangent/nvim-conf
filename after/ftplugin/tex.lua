@@ -2,21 +2,7 @@
 vim.treesitter.start(0, 'latex')
 vim.bo.syntax = 'on'
 
-local abbrevs = {
-  ["representation{,s}"] = { "reprr{,s}" },
-  ["of course"] = { "ofc" },
-  ["for example"] = { "fex" },
-  ["procedure{,s}"] = { "proc{,s}" },
-  ["gRPC"] = { "grpc" },
-  ["for instance"] = { "finst" },
-  ["because"] = { "bce" },
-}
-
-for word, list in pairs(abbrevs) do
-  for _, shortcut in ipairs(list) do
-    vim.cmd("Abolish " .. shortcut .. " " .. word)
-  end
-end
+require('user.abbrevs').apply_abbrevs()
 
 require('nvim-surround').buffer_setup {
   surrounds = {

@@ -9,6 +9,7 @@ local children = {
   'go',
   'hcl',
   'helm',
+  'info',
   'java',
   'jsdoc',
   'kitty',
@@ -38,7 +39,7 @@ local children = {
   -- 'flutter',
   -- 'dart',
   -- 'plantuml',
-  -- 'typst',
+  'typst',
 }
 
 for _, name in ipairs(children) do
