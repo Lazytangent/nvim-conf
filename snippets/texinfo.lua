@@ -15,6 +15,29 @@ local autosnippets = {
     { trig = ";tt", name = "Teletype", wordTrig = false },
     fmta("@t{<>}<>", { i(1, "teletype"), i(0) })
   ),
+  autosnippet(
+    { trig = ";beg", name = "Environment" },
+    fmta([[
+      @<>
+      <>
+      @end <>
+    ]], {
+      i(1),
+      i(0),
+      rep(1),
+    })
+  ),
+  autosnippet(
+    { trig = ";ex", name = "Example" },
+    fmta([[
+      @example <>
+      <>
+      @end example
+    ]], {
+      i(1, "lang"),
+      i(0),
+    })
+  ),
 }
 
 local snippets = {
