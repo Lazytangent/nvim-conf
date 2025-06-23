@@ -32,7 +32,7 @@ config.LSP = {
     },
     regular = {
       "basedpyright",
-      "pylsp",
+      -- "pylsp",
       "terraformls",
       "terraform_lsp",
     },
