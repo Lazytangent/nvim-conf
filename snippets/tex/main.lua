@@ -251,7 +251,11 @@ local latex = {
     })
   ),
   s({ trig = 'fnt', dscr = 'Footnote text' },
-    fmta("\\footnotetext[<>]{<>}<>", {
+    fmta([[
+      \footnotetext[<>]{%
+        <>
+      }<>
+    ]], {
       i(1, "num"),
       i(2, "text"),
       i(0)
