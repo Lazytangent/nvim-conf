@@ -38,6 +38,10 @@ local autosnippets = {
       i(0),
     })
   ),
+  autosnippet(
+    { trig = ";fn", name = "Footnote", wordTrig = false },
+    fmta("@footnote{<>}<>", { i(1, "footnote"), i(0) })
+  ),
 }
 
 local snippets = {
@@ -70,11 +74,36 @@ local snippets = {
   ),
   s(
     { trig = "bf", name = "Bold" },
-    fmta("@i{<>}<>", { i(1, "bold"), i(0) })
+    fmta("@b{<>}<>", { i(1, "bold"), i(0) })
   ),
   s(
-    { trig = "fn", name = "Footnote" },
-    fmta("@footnote{<>}<>", { i(1, "footnote"), i(0) })
+    { trig = "lst", name = "Itemize List" },
+    fmta([[
+      @itemize
+      <>
+      @end itemize
+    ]], {
+      i(0),
+    })
+  ),
+  s(
+    { trig = "nlst", name = "Enumerate List" },
+    fmta([[
+      @enumerate
+      <>
+      @end enumerate
+    ]], {
+      i(0),
+    })
+  ),
+  s(
+    { trig = "-", name = "List item" },
+    fmta([[
+      @item
+      <>
+    ]], {
+      i(0),
+    })
   ),
 }
 
