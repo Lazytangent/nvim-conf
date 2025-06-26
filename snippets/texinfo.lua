@@ -42,6 +42,17 @@ local autosnippets = {
     { trig = ";fn", name = "Footnote", wordTrig = false },
     fmta("@footnote{<>}<>", { i(1, "footnote"), i(0) })
   ),
+  autosnippet(
+    { trig = ";src", name = "Example block" },
+    fmta([[
+      @example <>
+      <>
+      @end example
+    ]], {
+      i(1, "lang"),
+      i(0),
+    })
+  ),
 }
 
 local snippets = {
