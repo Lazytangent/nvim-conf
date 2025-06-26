@@ -20,7 +20,7 @@ config.LSP = {
       "helm_ls",
       "hls",
       "html",
-      "jedi_language_server",
+      -- "jedi_language_server",
       "kotlin_language_server",
       "ocamllsp",
       "prismals",
