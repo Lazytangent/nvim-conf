@@ -168,7 +168,7 @@ local latex = {
   s({ trig = ";deg", wordTrig = false, snippetType = "autosnippet" },
     { t("^{\\circ}"), i(0) }
   ),
-  s({ trig = ";mm", wordTrig = false, snippetType = "autosnippet" },
+  s({ trig = ";m", wordTrig = false, snippetType = "autosnippet" },
     fmt("${}${}", { i(1, "math mode"), i(0) })
   ),
   s({ trig = ";ff", wordTrig = false, snippetType = "autosnippet" },
