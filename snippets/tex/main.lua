@@ -115,15 +115,19 @@ local latex = {
   s({ trig = ";iff", dscr = "iff", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\iff",
   }),
-  s({ trig = ";sum", dscr = "sum", wordTrig = false, snippetType = "autosnippet" }, {
-    t "\\sum_{n=",
-    i(1, "1"),
-    t "}^{",
-    i(2, "\\infty"),
-    t "} ",
-    i(3, "a_n z^n"),
-    t "}",
-  }),
+  s(
+    { trig = ";sum", dscr = "sum", wordTrig = false, snippetType = "autosnippet" },
+    {
+      c(1, {
+        fmta([[
+          \sum_{<>}^{<>}<>
+        ]], { i(1, "n=0"), i(2, "\\infty"), i(0) }),
+        fmta([[
+          \sum <>
+        ]], { i(0) }),
+      })
+    }
+  ),
   s({ trig = ";sq", dscr = "\\sqrt{}", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\sqrt{",
     i(1),
