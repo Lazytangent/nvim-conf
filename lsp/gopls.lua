@@ -1,9 +1,8 @@
 local on_attach = require('lsp.primary.on_attach')
 local capabilities = require('lsp.capabilities')
 
-local lsp = 'gopls'
-
-vim.lsp.config(lsp, {
+-- @type vim.lsp.Config
+return {
   cmd = { "gopls", "serve" },
   settings = {
     gopls = {
@@ -24,5 +23,4 @@ vim.lsp.config(lsp, {
   },
   on_attach = on_attach,
   capabilities = capabilities,
-})
-vim.lsp.enable(lsp)
+}

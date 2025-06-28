@@ -4,7 +4,6 @@ local modules = {
   "formatting",
   "configure",
   "efm",
-  "custom",
 }
 
 utils.load_modules("lsp", modules)

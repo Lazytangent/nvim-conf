@@ -1,10 +1,10 @@
-local lsp = require('lspconfig')
 local on_attach = require('lsp.primary.on_attach')
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require('lsp.capabilities')
 
 capabilities.offsetEncoding = 'utf-16'
 
-lsp.ccls.setup {
+-- @type vim.lsp.Config
+return {
   on_attach = on_attach,
   capabilities = capabilities,
 }

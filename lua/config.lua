@@ -9,6 +9,8 @@ config.LSP = {
   highlight_word = true,
   virtual_text   = true,
   servers = {
+    -- Server groupings are just for me to know which servers have custom
+    -- settings.
     primary = {
       "angularls",
       "bashls",
@@ -42,15 +44,15 @@ config.LSP = {
       "beancount",
       "ccls",
       "clangd",
-      "deno",
-      "go",
+      "denols",
+      "gopls",
       "jsonls",
-      "lua",
+      "lua_ls",
       "ruff",
       "sourcekit",
-      "sql",
-      "vue",
-      "yaml",
+      "sqlls",
+      "vuels",
+      "yamlls",
     },
   },
 }
