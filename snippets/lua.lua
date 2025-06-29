@@ -3,12 +3,11 @@ local snippets = {
     fmta([[
     function <>(<>)
       <>
-    end<>
+    end
     ]], {
       i(1, "name"),
       i(2, "args"),
-      i(3, "body"),
-      i(0),
+      i(0, "body"),
     })
   ),
 }
