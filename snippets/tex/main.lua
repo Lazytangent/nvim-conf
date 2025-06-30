@@ -39,6 +39,22 @@ local latex = {
   autosnippet({ trig = ";tex", name = "TeX", dscr = "Special TeX command", wordTrig = false },
     { t "\\TeX{}", }
   ),
+  autosnippet(
+    { trig = ";luatex", name = "LuaTeX" },
+    { t "\\LuaTeX{}" }
+  ),
+  autosnippet(
+    { trig = ";lualatex", name = "LuaLaTeX" },
+    { t "\\LuaLaTeX{}" }
+  ),
+  autosnippet(
+    { trig = ";xetex", name = "XeTeX" },
+    { t "\\XeTeX{}" }
+  ),
+  autosnippet(
+    { trig = ";xelatex", name = "XeLaTeX" },
+    { t "\\XeLaTeX{}" }
+  ),
   autosnippet({ trig = "w/", name = "with", dscr = "Abbrevation" },
     { t "with", }
   ),
@@ -58,6 +74,10 @@ local latex = {
   autosnippet(
     { trig = ";fn", name = "footnote", wordTrig = false },
     fmta("\\footnote{<>}<>", { i(1, "note"), i(0) })
+  ),
+  autosnippet(
+    { trig = ";t\\", name = "textbackslash" },
+    { t "\\textbackslash" }
   ),
   s({ trig = "vbm", name = "Verbatim environment", dscr = "Verbatim environment" },
     fmta([[
@@ -115,15 +135,19 @@ local latex = {
   s({ trig = ";iff", dscr = "iff", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\iff",
   }),
-  s({ trig = ";sum", dscr = "sum", wordTrig = false, snippetType = "autosnippet" }, {
-    t "\\sum_{n=",
-    i(1, "1"),
-    t "}^{",
-    i(2, "\\infty"),
-    t "} ",
-    i(3, "a_n z^n"),
-    t "}",
-  }),
+  s(
+    { trig = ";sum", dscr = "sum", wordTrig = false, snippetType = "autosnippet" },
+    {
+      c(1, {
+        fmta([[
+          \sum_{<>}^{<>}<>
+        ]], { i(1, "n=0"), i(2, "\\infty"), i(0) }),
+        fmta([[
+          \sum <>
+        ]], { i(0) }),
+      })
+    }
+  ),
   s({ trig = ";sq", dscr = "\\sqrt{}", wordTrig = false, snippetType = "autosnippet" }, {
     t "\\sqrt{",
     i(1),
@@ -164,7 +188,7 @@ local latex = {
   s({ trig = ";deg", wordTrig = false, snippetType = "autosnippet" },
     { t("^{\\circ}"), i(0) }
   ),
-  s({ trig = ";mm", wordTrig = false, snippetType = "autosnippet" },
+  s({ trig = ";m", wordTrig = false, snippetType = "autosnippet" },
     fmt("${}${}", { i(1, "math mode"), i(0) })
   ),
   s({ trig = ";ff", wordTrig = false, snippetType = "autosnippet" },

@@ -76,6 +76,16 @@ local snippets = {
       rep(1),
     })
   ),
+  s(
+    { trig = "subsec", name = "Subsection" },
+    fmta([[
+      @node <>
+      @subsection <>
+    ]], {
+      i(1),
+      rep(1),
+    })
+  ),
   s({ trig = '"' },
     fmta("``<>''<>", { i(1), i(0) })
   ),

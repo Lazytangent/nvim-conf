@@ -1,9 +1,8 @@
 local on_attach = require('lsp.primary.on_attach')
 local capabilities = require('lsp.capabilities')
 
-local lsp = 'jsonls'
-
-vim.lsp.config(lsp, {
+-- @type vim.lsp.Config
+return {
   settings = {
     json = {
       schemas = require('schemastore').json.schemas(),
@@ -12,6 +11,4 @@ vim.lsp.config(lsp, {
   },
   on_attach = on_attach,
   capabilities = capabilities,
-})
-
-vim.lsp.enable(lsp)
+}

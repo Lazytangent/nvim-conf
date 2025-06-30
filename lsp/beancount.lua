@@ -1,8 +1,8 @@
-local lsp = require('lspconfig')
 local on_attach = require('lsp.primary.on_attach')
 local capabilities = require('lsp.capabilities')
 
-lsp.beancount.setup {
+-- @type vim.lsp.Config
+return {
   init_options = {
     journal_file = "~/.local/src/beancount/account.bean",
   },
