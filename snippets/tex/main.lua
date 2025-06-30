@@ -39,6 +39,22 @@ local latex = {
   autosnippet({ trig = ";tex", name = "TeX", dscr = "Special TeX command", wordTrig = false },
     { t "\\TeX{}", }
   ),
+  autosnippet(
+    { trig = ";luatex", name = "LuaTeX" },
+    { t "\\LuaTeX{}" }
+  ),
+  autosnippet(
+    { trig = ";lualatex", name = "LuaLaTeX" },
+    { t "\\LuaLaTeX{}" }
+  ),
+  autosnippet(
+    { trig = ";xetex", name = "XeTeX" },
+    { t "\\XeTeX{}" }
+  ),
+  autosnippet(
+    { trig = ";xelatex", name = "XeLaTeX" },
+    { t "\\XeLaTeX{}" }
+  ),
   autosnippet({ trig = "w/", name = "with", dscr = "Abbrevation" },
     { t "with", }
   ),
