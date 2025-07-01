@@ -1,4 +1,15 @@
 return {
+  {
+    "yp", -- Yank absolute Path of current buffer
+    function()
+      -- :help expand()
+      local path = vim.fn.expand("%:p")
+      -- :help setreg
+      vim.fn.setreg("+", path)
+    end,
+    desc = "Yank absolute path of current buffer",
+  },
+
   { "yo",  group = "option" },
   { "yob", desc = "background" },
   { "yoc", desc = "cursorline" },
