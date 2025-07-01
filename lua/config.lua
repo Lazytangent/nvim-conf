@@ -51,6 +51,8 @@ config.LSP = {
       "ruff",
       "sourcekit",
       -- "sqlls",
+      -- "tsgo",
+      "uv_ty",
       "vuels",
       "yamlls",
     },
