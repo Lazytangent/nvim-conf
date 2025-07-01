@@ -50,7 +50,7 @@ config.LSP = {
       "lua_ls",
       "ruff",
       "sourcekit",
-      "sqlls",
+      -- "sqlls",
       "vuels",
       "yamlls",
     },
