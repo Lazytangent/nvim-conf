@@ -5,6 +5,7 @@ require "utils.lazy"
 vim.g.mapleader = " "
 vim.g.maplocalleader = " m"
 
+-- Disable netrw in favor of oil.nvim
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
