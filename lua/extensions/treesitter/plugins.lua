@@ -38,17 +38,11 @@ return {
       },
     },
   },
+
   "brianhuster/treesitter-endwise.nvim",
   -- "RRethy/nvim-treesitter-endwise",
-  -- "theHamsta/nvim-treesitter-pairs",
+
   "windwp/nvim-ts-autotag",
-  -- "phelipetls/jsonpath.nvim",
-  -- {
-  --   "yioneko/vim-tmindent",
-  --   config = function()
-  --     require 'extensions.treesitter.configs.tmindent'
-  --   end,
-  -- },
   {
     "David-Kunz/treesitter-unit",
   },
