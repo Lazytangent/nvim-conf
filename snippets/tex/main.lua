@@ -76,8 +76,16 @@ local latex = {
     fmta("\\footnote{<>}<>", { i(1, "note"), i(0) })
   ),
   autosnippet(
-    { trig = ";t\\", name = "textbackslash" },
+    { trig = ";t\\", name = "textbackslash", wordTrig = false },
     { t "\\textbackslash" }
+  ),
+  autosnippet(
+    { trig = ";t<", name = "textlangle" },
+    { t "\\textlangle " }
+  ),
+  autosnippet(
+    { trig = ";t>", name = "textrangle" },
+    { t "\\textrangle " }
   ),
   s({ trig = "vbm", name = "Verbatim environment", dscr = "Verbatim environment" },
     fmta([[
