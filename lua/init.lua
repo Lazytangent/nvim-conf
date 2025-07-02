@@ -12,13 +12,6 @@ vim.g.loaded_netrwPlugin = 1
 -- Use GUI Pinentry for signing GPG keys
 vim.env.PINENTRY_USER_DATA = 'USE_QT'
 
--- TODO: Temp fix until `typescript-tools.nvim` merges in fix for Issue #266
-vim.tbl_add_reverse_lookup = function (tbl)
-  for k, v in pairs(tbl) do
-    tbl[v] = k
-  end
-end
-
 -- Load in extensions
 require "extensions"
 
