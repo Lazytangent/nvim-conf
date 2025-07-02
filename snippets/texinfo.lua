@@ -119,12 +119,21 @@ local snippets = {
   ),
   s(
     { trig = "-", name = "List item" },
-    fmta([[
-      @item
-      <>
-    ]], {
-      i(0),
-    })
+    {
+      c(1, {
+        fmta([[
+          @item
+          <><>
+        ]], {
+          i(1),
+          i(0),
+        }),
+        fmta([[
+          @item <>
+          <>
+        ]], { i(1, "item"), i(0, "desc") }),
+      })
+    }
   ),
 }
 
