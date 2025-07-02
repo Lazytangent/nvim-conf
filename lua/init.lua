@@ -1,5 +1,5 @@
 -- Set up Lazy
-require "utils.lazy"
+require "utils.load_lazy"
 
 -- Set up Leader and Local leader mappings
 vim.g.mapleader = " "
