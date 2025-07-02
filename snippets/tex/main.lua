@@ -305,6 +305,30 @@ local latex = {
     }<>
     ]], { i(1), i(2), i(3) }),
   })),
+  s(
+    { trig = ";*", name = "Heading" },
+    c(1, {
+      fmta("\\part{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\chapter{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\section{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\subsection{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\subsubsection{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\paragraph{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\subparagraph{<>}<>", { i(1, "heading"), i(0) }),
+    })
+  ),
+  s(
+    { trig = ";**", name = "Heading" },
+    c(1, {
+      fmta("\\part*{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\chapter*{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\section*{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\subsection*{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\subsubsection*{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\paragraph*{<>}<>", { i(1, "heading"), i(0) }),
+      fmta("\\subparagraph*{<>}<>", { i(1, "heading"), i(0) }),
+    })
+  ),
 }
 
 return latex
