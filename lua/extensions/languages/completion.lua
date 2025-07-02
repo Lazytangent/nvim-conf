@@ -164,7 +164,7 @@ return {
       },
       formatting = {
         format = require('lspkind').cmp_format({
-          mode = "test_symbol",
+          mode = "text_symbol",
           menu = ({
             buffer = "[Buffer]",
             ripgrep = "[Rg]",
