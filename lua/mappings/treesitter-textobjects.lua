@@ -116,19 +116,6 @@ wk.add {
           move.goto_previous_end("@class.outer", "textobjects")
         end,
       },
-
-      {
-        ']s',
-        function()
-          move.goto_next_start("@local.scope", "locals")
-        end,
-      },
-      {
-        '[s',
-        function()
-          move.goto_previous_start("@local.scope", "locals")
-        end,
-      },
     },
   },
 }
