@@ -11,15 +11,11 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-  vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
 
   vim.keymap.set("n", "K",     vim.lsp.buf.hover, opts)
   vim.keymap.set("n", "<C-h>", vim.lsp.buf.signature_help, opts)
 
   vim.keymap.set("n", "<localleader>pt", vim.lsp.buf.type_definition, opts)
-  vim.keymap.set("n", "<localleader>pr", vim.lsp.buf.rename,          opts)
-  vim.keymap.set("n", "<localleader>r",  vim.lsp.buf.rename,          opts)
-  vim.keymap.set("n", "<leader>la",      vim.lsp.buf.code_action,     opts)
 
   vim.keymap.set("n", "<space>,f", function() require('conform').format({ async = true, bufnr = bufnr }) end, opts)
 
