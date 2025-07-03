@@ -1,5 +1,7 @@
 local wk = require 'which-key'
+
 local select = require 'nvim-treesitter-textobjects.select'
+local move = require 'nvim-treesitter-textobjects.move'
 
 wk.add {
   {
@@ -34,6 +36,97 @@ wk.add {
         'as',
         function()
           select.select_textobject("@local.scope", "textobjects")
+        end,
+      },
+    },
+  },
+  {
+    -- move
+    mode = { 'n', 'x', 'o' },
+    {
+      {
+        ']m',
+        function()
+          move.goto_next_start("@function.outer", "textobjects")
+        end,
+      },
+      {
+        ']]',
+        function()
+          move.goto_next_start("@class.outer", "textobjects")
+        end,
+      },
+      {
+        ']o',
+        function()
+          move.goto_next_start({ "@loop.inner", "@loop.outer" }, "textobjects")
+        end,
+      },
+      {
+        ']z',
+        function()
+          move.goto_next_start("@fold", "folds")
+        end,
+      },
+      {
+        ']M',
+        function()
+          move.goto_next_end("@function.outer", "textobjects")
+        end,
+      },
+      {
+        '][',
+        function()
+          move.goto_next_end("@class.outer", "textobjects")
+        end,
+      },
+      {
+        '[m',
+        function()
+          move.goto_previous_start("@function.outer", "textobjects")
+        end,
+      },
+      {
+        '[[',
+        function()
+          move.goto_previous_start("@class.outer", "textobjects")
+        end,
+      },
+      {
+        '[o',
+        function()
+          move.goto_previous_start({ "@loop.inner", "@loop.outer" }, "textobjects")
+        end,
+      },
+      {
+        '[z',
+        function()
+          move.goto_previous_start("@fold", "folds")
+        end,
+      },
+      {
+        '[M',
+        function()
+          move.goto_previous_end("@function.outer", "textobjects")
+        end,
+      },
+      {
+        '[]',
+        function()
+          move.goto_previous_end("@class.outer", "textobjects")
+        end,
+      },
+
+      {
+        ']s',
+        function()
+          move.goto_next_start("@local.scope", "locals")
+        end,
+      },
+      {
+        '[s',
+        function()
+          move.goto_previous_start("@local.scope", "locals")
         end,
       },
     },
