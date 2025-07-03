@@ -52,3 +52,5 @@ wk.add {
     normal,
   },
 }
+
+require "mappings.treesitter-textobjects"
