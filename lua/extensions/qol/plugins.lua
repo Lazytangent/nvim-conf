@@ -21,6 +21,7 @@ local children = {
   'indent-blankline',
   'jq-playground',
   'kitty-scrollback',
+  'kubectl',
   'matchup',
   'navic',
   'neogit',

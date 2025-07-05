@@ -195,8 +195,8 @@ return {
         ["<C-x><C-n>"] = cmp.mapping.complete({
           config = {
             sources = cmp.config.sources({
-              { name = "sql" },
               { name = "vim-dadbod-completion" },
+              { name = "sql" },
               { name = 'nvim_lsp' },
               { name = 'nvim_lsp_document_symbol' },
             }),

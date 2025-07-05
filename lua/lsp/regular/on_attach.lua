@@ -6,9 +6,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<C-h>",            vim.lsp.buf.signature_help, opts)
 
   vim.keymap.set("n", "<localleader>pt", vim.lsp.buf.type_definition, opts)
-  vim.keymap.set("n", "<localleader>pr", vim.lsp.buf.rename,          opts)
-  vim.keymap.set("n", "<localleader>r",  vim.lsp.buf.rename,          opts)
-  vim.keymap.set("n", "<leader>la",      vim.lsp.buf.code_action,     opts)
 
   vim.keymap.set("n", "<space>,f", function() require('conform').format({ async = true, bufnr = bufnr }) end, opts)
 
