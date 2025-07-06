@@ -285,7 +285,7 @@ local latex = {
   s({ trig = 'fnt', dscr = 'Footnote text' },
     fmta([[
       \footnotetext[<>]{%
-        <>
+          <>
       }<>
     ]], {
       i(1, "num"),
