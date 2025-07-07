@@ -276,7 +276,7 @@ local latex = {
         i(0),
       })
   ),
-  s({ trig = 'fnm', dscr = 'Footnote mark' },
+  s({ trig = ';fnm', dscr = 'Footnote mark', wordTrig = false },
     fmta("\\footnotemark[<>]<>", {
       i(1, "num"),
       i(0),
@@ -285,7 +285,7 @@ local latex = {
   s({ trig = 'fnt', dscr = 'Footnote text' },
     fmta([[
       \footnotetext[<>]{%
-        <>
+          <>
       }<>
     ]], {
       i(1, "num"),
