@@ -72,7 +72,7 @@ local latex = {
     )
   ),
   autosnippet(
-    { trig = ";fn", name = "footnote", wordTrig = false },
+    { trig = ";fnn", name = "footnote", wordTrig = false },
     fmta("\\footnote{<>}<>", { i(1, "note"), i(0) })
   ),
   autosnippet(
