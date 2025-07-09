@@ -11,9 +11,9 @@ return {
   { "<leader>`",  "<C-^>", desc = "Prev buffer" },
 
   { "<leader>,d",  group = "Diagnostics" },
-  { "<leader>,dh", vim.diagnostic.hide,     desc = "Hide diagnostics in buffer" },
-  { "<leader>,ds", vim.diagnostic.show,     desc = "Show diagnostics in buffer" },
-  { "<leader>,f",  vim.lsp.buf.format,      desc = "Format" },
+  { "<leader>,dh", vim.diagnostic.hide,                 desc = "Hide diagnostics in buffer" },
+  { "<leader>,ds", vim.diagnostic.show,                 desc = "Show diagnostics in buffer" },
+  { "<leader>,f",  function() vim.lsp.buf.format() end, desc = "Format" },
 
   { "<leader>/",  telescope.current_buffer_fuzzy_find,  desc = "Search current buffer" },
 
