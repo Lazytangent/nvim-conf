@@ -13,6 +13,7 @@ return {
         ["[["] = "PreviousSection",
       },
     },
+    kind = "split_below_all",
   },
   event = "VeryLazy",
 }

@@ -306,7 +306,7 @@ local latex = {
     ]], { i(1), i(2), i(3) }),
   })),
   s(
-    { trig = "*", name = "Heading" },
+    { trig = "*g", name = "Heading" },
     c(1, {
       fmta("\\part{<>}<>", { i(1, "heading"), i(0) }),
       fmta("\\chapter{<>}<>", { i(1, "heading"), i(0) }),
