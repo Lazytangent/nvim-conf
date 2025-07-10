@@ -64,6 +64,7 @@ return {
     npairs.get_rule("[").not_filetypes = { "tex" }
     npairs.get_rule('"')[1].not_filetypes = { "tex", "texinfo" }
     npairs.get_rule('( ').not_filetypes = { "scheme", "lisp", "fennel", "commonlisp" }
+    npairs.get_rule('(').not_filetypes = { "commonlisp" }
   end,
   event = "VeryLazy",
 }
