@@ -12,6 +12,10 @@ local autosnippets = {
     { t "@item" }
   ),
   autosnippet(
+    { trig = ";tab", name = "@tab" },
+    { t "@tab" }
+  ),
+  autosnippet(
     { trig = ";tt", name = "Teletype", wordTrig = false },
     fmta("@t{<>}<>", { i(1, "teletype"), i(0) })
   ),
