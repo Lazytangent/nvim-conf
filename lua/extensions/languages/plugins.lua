@@ -25,7 +25,7 @@ local children = {
   'tailwindcss',
   'terraform',
   'typescript',
-  'vimtex',
+  'tex',
 
   'lsp',
   'completion',
