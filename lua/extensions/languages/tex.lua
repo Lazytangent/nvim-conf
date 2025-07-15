@@ -32,7 +32,16 @@ return {
     "pxwg/math-conceal.nvim",
     event = "VeryLazy",
     build = "make lua51",
-    config = true,
+    opts = {
+      conceal = {
+        "greek",
+        "script",
+        "math",
+        "font",
+        -- "delim",
+        "phy",
+      },
+    },
     main = "latex-conceal",
   },
 }
