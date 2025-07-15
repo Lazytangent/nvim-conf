@@ -48,6 +48,7 @@
   "lsp-colors.nvim": { "branch": "main", "commit": "2bbe7541747fd339bdd8923fc45631a09bb4f1e5" },
   "lspkind-nvim": { "branch": "master", "commit": "d79a1c3299ad0ef94e255d045bed9fa26025dab6" },
   "lualine.nvim": { "branch": "master", "commit": "a94fc68960665e54408fe37dcf573193c4ce82c9" },
+  "math-conceal.nvim": { "branch": "main", "commit": "de69deea42599dcf710494014d2c6aedc25a72da" },
   "moonscript-vim": { "branch": "master", "commit": "715c96c7c3b02adc507f84bf5754985460afc426" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "neogit": { "branch": "master", "commit": "59725524d25f9a8a9474f113d60db52bad8504d0" },
