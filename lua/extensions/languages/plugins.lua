@@ -28,7 +28,8 @@ local children = {
   'tex',
 
   'lsp',
-  'completion',
+  'blink-cmp',
+  -- 'completion',
   'neodev',
   'nonels',
 
