@@ -7,6 +7,7 @@
   "catppuccin": { "branch": "main", "commit": "fa42eb5e26819ef58884257d5ae95dd0552b9a66" },
   "citruszest.nvim": { "branch": "main", "commit": "ce6749e4c3a842679cc302ce1c2db76c2d07f700" },
   "clojure.vim": { "branch": "master", "commit": "128ccd4d1c84a7455757ba0a2249016fe5ee6640" },
+  "cmp-nvim-lsp": { "branch": "main", "commit": "32a511e862811db68c894b541bdc7546ce552e50" },
   "conform.nvim": { "branch": "master", "commit": "973f3cb73887d510321653044791d7937c7ec0fa" },
   "crates.nvim": { "branch": "main", "commit": "5d8b1bef686db0fabe5f1bb593744b617e8f1405" },
   "dial.nvim": { "branch": "master", "commit": "78bd73aaf2b9c8f80715a878feaf56f7ffa8b6ff" },
