@@ -70,6 +70,17 @@ return {
 
       -- Kotlin
       d.ktlint,
+
+      -- Vale.sh
+      d.vale.with({
+        filetypes = {
+          "markdown",
+          "tex",
+          "asciidoc",
+          "texinfo",
+          "latex",
+        },
+      }),
     }
 
     local code_actions = {

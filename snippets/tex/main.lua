@@ -36,6 +36,10 @@ local latex = {
   autosnippet({ trig = ";latex", name = "LaTeX", dscr = "Special LaTeX command", wordTrig = false },
     { t "\\LaTeX{}" }
   ),
+  -- \LaTeX{}2\textsubscript{\textgreek{ε}}
+  autosnippet({ trig = ";l2e", name = "LaTeX2e", dscr = "Special LaTeX command", wordTrig = false },
+    { t "\\LaTeX{}2\\textsubscript{\\textgreek{ε}}" }
+  ),
   autosnippet({ trig = ";tex", name = "TeX", dscr = "Special TeX command", wordTrig = false },
     { t "\\TeX{}", }
   ),
