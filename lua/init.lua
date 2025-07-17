@@ -14,6 +14,7 @@ vim.env.PINENTRY_USER_DATA = 'USE_QT'
 
 -- Load in extensions
 require "extensions"
+require "mappings"
 
 -- Configure LSP
 require "lsp"

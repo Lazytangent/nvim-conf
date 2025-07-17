@@ -298,16 +298,22 @@ local latex = {
     })
   ),
   s({ trig = "-", dscr = "Item" }, c(1, {
+    -- itemize/enumerate multi-line list item variant
     fmta([[
     \item{%
         <>
     }<>
     ]], { i(1), i(0) }),
+    -- description list item variant
     fmta([[
     \item[<>]{%
         <>
     }<>
     ]], { i(1), i(2), i(3) }),
+    -- itemize/enumerate single-line list item variant
+    fmta([[
+    \item <><>
+    ]], { i(1), i(0) }),
   })),
   s(
     { trig = "*g", name = "Heading" },

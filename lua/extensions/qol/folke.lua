@@ -18,18 +18,17 @@ return {
   },
   {
     "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {
-        plugins = {
-          spelling = {
-            enabled = true,
-            suggestions = 20,
-          },
+    opts = {
+      plugins = {
+        spelling = {
+          enabled = true,
+          suggestions = 20,
         },
-      }
-
-      require "mappings"
-    end,
+      },
+      win = {
+        no_overlap = false,
+      },
+    },
     event = "VeryLazy",
   },
   {
