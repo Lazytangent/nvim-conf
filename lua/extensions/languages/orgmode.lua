@@ -45,6 +45,7 @@ return {
     cmd = {
       "RoamUpdate",
       "RoamSave",
+      "RoamToday",
     },
   },
 }
