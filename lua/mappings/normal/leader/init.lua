@@ -28,6 +28,7 @@ return {
   require(current_module .. 'g'),
   require(current_module .. 'h'),
   require(current_module .. 'l'),
+  require(current_module .. 'n'),
   require(current_module .. 'o'),
   require(current_module .. 'p'),
   require(current_module .. 't'),
