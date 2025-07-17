@@ -88,6 +88,7 @@
   "rest.nvim": { "branch": "main", "commit": "de9726ab956e30202aafbcdea83c1d6bffe54227" },
   "rustaceanvim": { "branch": "master", "commit": "41d1e845ccbad1670fc32babe7fe7bf512d4ea16" },
   "schemastore.nvim": { "branch": "main", "commit": "1ec3867f463dfe4ca37001348953d810c716d4d9" },
+  "session-keys": { "branch": "main", "commit": "86ee37896ca2a6e3487c9ea7b73393298f2b5e90" },
   "slimv": { "branch": "master", "commit": "08f7dba91c3ecd0a62a852eca92258c7ceac4f0a" },
   "swift.nvim": { "branch": "master", "commit": "70dd8a554b54a3e70f7b94292f693caa83fb1406" },
   "swift.vim": { "branch": "master", "commit": "c76b52c68b633ad397ddab761c47efc7b5c1a6b9" },

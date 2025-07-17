@@ -31,6 +31,7 @@ local children = {
   'profile',
   'rainbow-csv',
   'rest',
+  'session-keys',
   'surround',
   'table-mode',
   'targets',
