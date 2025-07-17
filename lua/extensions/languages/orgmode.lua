@@ -21,6 +21,7 @@ return {
       org_todo_keyword_faces = {
         ['IN-PROGRESS'] = ':foreground blue :background #fefefe :weight bold',
         PROJ = ':background #FFFFFF :slant italic :underline on',
+        DONE = ':foreground #00ff00',
       },
       emacs_config = {
         config_path = "$HOME/.config/emacs/init.el",
