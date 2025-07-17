@@ -36,5 +36,10 @@ return {
     opts = {
       directory = "~/.local/src/org/",
     },
+    lazy = true,
+    cmd = {
+      "RoamUpdate",
+      "RoamSave",
+    },
   },
 }
