@@ -18,6 +18,10 @@ return {
         '|',
         'DONE(d)',
       },
+      org_todo_keyword_faces = {
+        ['IN PROGRESS'] = ':foreground blue :weight bold',
+        PROJ = ':background #FFFFFF :slant italic :underline on',
+      },
       emacs_config = {
         config_path = "$HOME/.config/emacs/init.el",
       },
