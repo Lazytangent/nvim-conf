@@ -14,7 +14,7 @@ return {
       org_src_window_setup = "botright new",
       org_startup_folded = 'showeverything',
       org_todo_keywords = {
-        'TODO(t)', 'PROJ(p)',
+        'TODO(t)', 'PROJ(p)', 'IN PROGRESS(i)',
         '|',
         'DONE(d)',
       },
