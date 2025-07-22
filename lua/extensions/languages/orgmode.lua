@@ -40,6 +40,13 @@ return {
     'chipsenkbeil/org-roam.nvim',
     opts = {
       directory = "~/.local/src/org/",
+      extensions = {
+        dailies = {
+          bindings = {
+            goto_today = "<localleader>nd.",
+          },
+        },
+      },
     },
     lazy = true,
     cmd = {
