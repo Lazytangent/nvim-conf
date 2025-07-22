@@ -1,3 +1,9 @@
+---@param path string
+local function org_files(path)
+  local org_directory = "~/.local/src/org"
+  return ('%s/%s'):format(org_directory, path)
+end
+
 return {
   {
     "nvim-orgmode/orgmode.nvim",
@@ -45,6 +51,16 @@ return {
           bindings = {
             goto_today = "<localleader>nd.",
           },
+        },
+      },
+      templates = {
+        d = {
+          description = "Default",
+          template = {
+            "#+title: %(return vim.fn.expand('%:t'))",
+            "%?",
+          },
+          target = org_files("%<%Y%m%d%H%M%S>-%[slug].org"),
         },
       },
     },
