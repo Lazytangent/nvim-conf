@@ -42,6 +42,6 @@ return {
         "phy",
       },
     },
-    main = "latex-conceal",
+    main = "math-conceal",
   },
 }
