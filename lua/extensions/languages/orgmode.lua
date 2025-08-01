@@ -60,14 +60,15 @@ return {
             w = {
               description = "Work Days",
               template = {
-                "* Work Items",
-                "** Tickets",
+                "* Work Items :work:",
+                "** Tickets :tickets:",
                 "- %?",
-                "** Meetings",
+                "** Meetings :meetings:",
                 "** Tangential Stuff",
                 "** Stand-up",
                 "** PR Reviews",
                 "** Documentation Reviews",
+                "** PD/NR Alerts :pd:nr:",
                 "* Non-Work Items",
               },
               target = "%<%Y-%m-%d>.org",
