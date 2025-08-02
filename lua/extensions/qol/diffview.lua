@@ -15,7 +15,7 @@ return {
     },
     keymaps = {
       view = {
-        { "n", "q", require("diffview.actions").close, { desc = "Close help menu" } },
+        { "n", "q", function() require("diffview.actions").close() end, { desc = "Close help menu" } },
       },
       file_panel = {
         { "n", "q", "<cmd>DiffviewClose<cr>", { desc = "Close help menu" } },
