@@ -72,6 +72,17 @@ vim.opt.formatoptions:append({ "t" })
 vim.opt.path:append({ "**" })
 vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, h = true, l = true })
 
+vim.opt.diffopt = {
+  "internal",
+  "filler",
+  "closeoff",
+  "context:12",
+  "algorithm:histogram",
+  "linematch:200",
+  "indent-heuristic",
+  "iwhite",
+}
+
 vim.cmd "filetype plugin indent on"
 vim.cmd "syntax keyword dbmlType string varbinary"
 
