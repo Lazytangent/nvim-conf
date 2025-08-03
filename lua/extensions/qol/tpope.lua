@@ -9,5 +9,5 @@ return {
       vim.g.sleuth_heuristics = 0
     end,
   },
-  { "tpope/vim-unimpaired", },
+  -- { "tpope/vim-unimpaired", },
 }
