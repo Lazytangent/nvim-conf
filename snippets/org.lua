@@ -55,7 +55,7 @@ local orgmode = {
   s({ trig = ";it", snippetType = "autosnippet" },
     fmt("/{}/{}", { i(1, "italics"), i(0) })
   ),
-  s({ trig = ";mm", wordTrig = false, snippetType = "autosnippet" },
+  s({ trig = ";m", wordTrig = false, snippetType = "autosnippet" },
     fmt("${}${}", { i(1, "math mode"), i(0) })
   ),
   s({ trig = "<s" },
@@ -71,6 +71,23 @@ local orgmode = {
           return sn(nil, { i(1, lang) })
         end),
         i(0)
+      }
+    )
+  ),
+  s(
+    { trig = "gid", dscr = "Org Roam ID", name = "Org Roam ID" },
+    fmta(
+      [[
+      :properties:
+      :id: <>
+      :end:
+      ]],
+      {
+        f(function()
+          local id = require('orgmode.org.id').new()
+          print('id is', id)
+          return id
+        end)
       }
     )
   ),
