@@ -34,6 +34,7 @@ config.LSP = {
       "zls",
     },
     regular = {
+      "ltex_plus",
       "pyrefly",
       "basedpyright",
       "pylsp",
