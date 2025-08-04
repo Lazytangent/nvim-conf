@@ -37,6 +37,7 @@ local children = {
   'targets',
   'tpope',
   'unicode',
+  'workspaces',
   'yanky',
 }
 
