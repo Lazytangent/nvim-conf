@@ -30,6 +30,7 @@ local children = {
   'printer',
   'profile',
   'rainbow-csv',
+  'render-markdown',
   'rest',
   'session-keys',
   'surround',
