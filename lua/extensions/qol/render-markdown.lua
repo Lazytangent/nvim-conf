@@ -95,28 +95,18 @@ local function parse_org(ctx)
         local bullet = bullets[((level - 1) % #bullets) + 1]
         left_buf_width = (level - 1) * 2
         virt_text[1] = {
-          string.rep(" ", left_buf_width) .. bullet,
+          string.rep(" ", left_buf_width - 1) .. bullet,
           { hl_group, bullet_hl_group },
         }
       end
 
+      -- -- Correctly align line's content first
       table.insert(marks, {
         start_row = start_row,
         start_col = 0,
         opts = {
           end_col = 0,
           end_row = start_row + 1,
-          hl_group = hl_group,
-          virt_text = virt_text,
-          virt_text_pos = "overlay",
-          hl_eol = true,
-        },
-      })
-
-      table.insert(marks, {
-        start_row = start_row,
-        start_col = 0,
-        opts = {
           virt_text = {
             {
               string.rep(" ", level - 1),
@@ -126,6 +116,21 @@ local function parse_org(ctx)
           virt_text_pos = "inline",
         },
       })
+
+      -- Use ext-marks as overlay to create pretty bullets
+      -- table.insert(marks, {
+      --   start_row = start_row,
+      --   start_col = level - 2,
+      --   conceal = true,
+      --   opts = {
+      --     end_col = 0,
+      --     end_row = start_row + 1,
+      --     hl_group = hl_group,
+      --     virt_text = virt_text,
+      --     virt_text_pos = "overlay",
+      --     hl_eol = true,
+      --   },
+      -- })
 
       if fat_headlines then
         local reverse_hl_group = make_reverse_highlight(hl_group)
@@ -279,11 +284,12 @@ return {
     'echasnovski/mini.icons',
   },
   opts = {
-    -- enabled = true,
+    enabled = true,
     file_types = {
-      -- 'markdown',
+      'markdown',
       'org',
     },
+    -- render_modes = { 'n', 'i', 'c', 'x', 'v' },
     custom_handlers = {
       org = {
         parse = parse_org,
@@ -291,12 +297,18 @@ return {
     },
     indent = {
       enabled = true,
-      render_modes = { 'i' },
     },
     heading = {
       enabled = true,
       sign = false,
     },
     log_level = 'trace',
+    overrides = {
+      filetype = {
+        org = {
+          render_modes = true,
+        },
+      },
+    },
   },
 }
