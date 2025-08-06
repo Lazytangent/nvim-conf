@@ -6,9 +6,10 @@ end
 
 return {
   {
-    "nvim-orgmode/orgmode.nvim",
+    "nvim-orgmode/orgmode",
     opts = {
       org_adapt_indentation = false,
+      -- org_startup_indented = true,
       org_agenda_files = {'~/Documents/org/*', '~/.local/src/org/*'},
       org_agenda_skip_deadline_if_done = true,
       org_agenda_skip_scheduled_if_done = true,

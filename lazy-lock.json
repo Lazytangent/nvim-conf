@@ -77,6 +77,7 @@
   "oil.nvim": { "branch": "master", "commit": "bbad9a76b2617ce1221d49619e4e4b659b3c61fc" },
   "onedark.nvim": { "branch": "master", "commit": "11de4da47f3e69cb70c3ae9816bd8af166cbe121" },
   "org-roam.nvim": { "branch": "main", "commit": "f7421ca00c47c4a35bffd61a1e57f8b75659eb7d" },
+  "orgmode": { "branch": "master", "commit": "2b91d9ab8688b5df9436aa7340b7a477c4b336d4" },
   "orgmode.nvim": { "branch": "master", "commit": "468570f42d7b0a402d407a993344e29dcb6f2c8e" },
   "oxocarbon.nvim": { "branch": "main", "commit": "1dc7b7ea9df60edd9547b667fd1f789ce9f028fb" },
   "pgsql.vim": { "branch": "master", "commit": "736c9899163a7f4e212c1675d8a1fe42570a027a" },
