@@ -95,10 +95,28 @@ local function parse_org(ctx)
         local bullet = bullets[((level - 1) % #bullets) + 1]
         left_buf_width = (level - 1) * 2
         virt_text[1] = {
-          string.rep(" ", left_buf_width - 1) .. bullet,
+          string.rep(" ", left_buf_width) .. bullet,
           { hl_group, bullet_hl_group },
         }
       end
+
+      -- Use ext-marks as overlay to create pretty bullets
+      table.insert(marks, {
+        start_row = start_row,
+        start_col = 0,
+        conceal = true,
+        opts = {
+          -- needs to be higher (renders later) priority than the line
+          -- alignment, I think
+          priority = 5,
+          end_col = 0,
+          end_row = start_row + 1,
+          hl_group = hl_group,
+          virt_text = virt_text,
+          virt_text_pos = "overlay",
+          hl_eol = true,
+        },
+      })
 
       -- -- Correctly align line's content first
       table.insert(marks, {
@@ -116,21 +134,6 @@ local function parse_org(ctx)
           virt_text_pos = "inline",
         },
       })
-
-      -- Use ext-marks as overlay to create pretty bullets
-      -- table.insert(marks, {
-      --   start_row = start_row,
-      --   start_col = level - 2,
-      --   conceal = true,
-      --   opts = {
-      --     end_col = 0,
-      --     end_row = start_row + 1,
-      --     hl_group = hl_group,
-      --     virt_text = virt_text,
-      --     virt_text_pos = "overlay",
-      --     hl_eol = true,
-      --   },
-      -- })
 
       if fat_headlines then
         local reverse_hl_group = make_reverse_highlight(hl_group)
