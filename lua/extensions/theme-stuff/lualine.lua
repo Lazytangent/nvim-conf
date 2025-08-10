@@ -17,9 +17,6 @@ return {
         -- theme = 'citruszest',
         -- theme = 'oxocarbon',
         icons_enabled = false,
-        disabled_filetypes = {
-          statusline = {'NvimTree'},
-        },
         globalstatus = true,
         refresh = {
           statusline = 500,

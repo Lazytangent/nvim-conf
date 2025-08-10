@@ -57,6 +57,25 @@ local autocmds = {
       buffer = true,
     })
   end}},
+
+  {'User', {
+    callback = function()
+      require('lualine').hide({
+        place = { 'winbar' },
+        unhide = false,
+      })
+    end,
+    pattern = 'DiffviewViewOpened',
+    group = group,
+  }},
+
+  {'User', {
+    callback = function()
+      require('lualine').hide({ unhide = true })
+    end,
+    pattern = 'DiffviewViewClosed',
+    group = group,
+  }},
 }
 
 for _, cmd in ipairs(autocmds) do
