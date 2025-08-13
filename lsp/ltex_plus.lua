@@ -6,6 +6,7 @@ return {
         ["en-US"] = {
           -- Use Neovim's existing spell list
           ":~/.config/nvim/spell/en.utf-8.add",
+          ":" .. vim.fn.stdpath("data") .. "/site/spell/en.utf-8.add",
         },
       },
 
