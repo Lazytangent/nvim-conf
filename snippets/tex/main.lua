@@ -34,6 +34,10 @@ end
 
 local latex = {
   autosnippet(
+    { trig = ";_", name = "Escaped Underscore", dscr = "Escaped underscore" },
+    { t "\\_" }
+  ),
+  autosnippet(
     { trig = ";q", name = 'Single quoted', dscr = 'Single quote something' },
     fmta("`<>'<>", { i(1), i(0) })
   ),
