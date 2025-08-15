@@ -194,19 +194,25 @@ local function parse_org(ctx)
       local hl_group = headline_highlights[math.min(level, #headline_highlights)]
       local bullet_hl_group = bullet_highlights[math.min(level, #bullet_highlights)]
 
-      table.insert(marks, {
-        start_row = start_row,
-        start_col = 0,
-        opts = {
-          virt_text = {
-            {
-              string.rep(" ", left_buf_width + 2),
-              { hl_group, bullet_hl_group },
+      local capture_text = vim.treesitter.get_node_text(node, ctx.buf)
+      local counter = 0
+      for _ in capture_text:gmatch("[^\r\n]+") do
+        table.insert(marks, {
+          start_row = start_row + counter,
+          start_col = 0,
+          opts = {
+            virt_text = {
+              {
+                string.rep(" ", left_buf_width + 2),
+                { hl_group, bullet_hl_group },
+              },
             },
+            virt_text_pos = "inline",
           },
-          virt_text_pos = "inline",
-        },
-      })
+        })
+        counter = counter + 1
+      end
+
     end
 
     if capture == "dash" then

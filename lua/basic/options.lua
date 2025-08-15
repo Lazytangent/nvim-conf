@@ -52,6 +52,8 @@ local settings = {
     shiftwidth   = 4,
     smartindent  = false,
     softtabstop  = 4,
+    -- Was originally the default, but got moved to stdpath('data')/site/
+    spellfile    = vim.fn.stdpath('config') .. "/spell/spell.en.utf-8.add",
     spelllang    = "en_us",
     swapfile     = false,
     syntax       = "off",
