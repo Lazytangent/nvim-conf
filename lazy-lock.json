@@ -45,6 +45,7 @@
   "kitty-scrollback.nvim": { "branch": "main", "commit": "36d19dc85c0a1d0193e7c52d41129c4aa28b72e8" },
   "kubectl.nvim": { "branch": "main", "commit": "ba9b692be2307ef2c2c55ec5ff461ad90d0c579d" },
   "kubediff": { "branch": "main", "commit": "650d8eec71e41c6e97213219b9c65b44b52d31d8" },
+  "kulala.nvim": { "branch": "main", "commit": "65d102f65cfee9f338ba8a0bd43187a7cac898e9" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lsp-colors.nvim": { "branch": "main", "commit": "2bbe7541747fd339bdd8923fc45631a09bb4f1e5" },
   "lspkind-nvim": { "branch": "master", "commit": "d79a1c3299ad0ef94e255d045bed9fa26025dab6" },
