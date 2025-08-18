@@ -315,7 +315,7 @@ return {
     overrides = {
       filetype = {
         org = {
-          render_modes = true,
+          -- render_modes = true,
         },
       },
     },
