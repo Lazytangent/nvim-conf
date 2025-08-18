@@ -300,9 +300,9 @@ return {
     },
     -- render_modes = { 'n', 'i', 'c', 'x', 'v' },
     custom_handlers = {
-      org = {
-        parse = parse_org,
-      },
+      -- org = {
+      --   parse = parse_org,
+      -- },
     },
     indent = {
       enabled = true,
@@ -315,7 +315,7 @@ return {
     overrides = {
       filetype = {
         org = {
-          -- render_modes = true,
+          render_modes = true,
         },
       },
     },
