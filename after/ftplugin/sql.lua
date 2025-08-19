@@ -14,3 +14,6 @@ wk.add({
   { "<leader>db", desc = "Execute selection" },
 })
 vim.treesitter.start()
+
+-- Takes stdin, puts output on stdout
+vim.bo.formatprg = 'sqlformat --reindent -'
