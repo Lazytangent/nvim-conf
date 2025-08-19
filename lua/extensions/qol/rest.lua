@@ -13,6 +13,9 @@ return {
   {
     "mistweaverco/kulala.nvim",
     ft = {"http", "rest"},
+    dependencies = {
+      "folke/snacks.nvim",
+    },
     opts = {
       default_env = "local",
     },
