@@ -35,6 +35,7 @@ config.LSP = {
     },
     regular = {
       -- "pyrefly",
+      "harper",
       "ltex_plus",
       "basedpyright",
       -- "pylsp",
