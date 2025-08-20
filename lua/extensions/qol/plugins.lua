@@ -19,6 +19,7 @@ local children = {
   'gitlinker',
   'gitsigns',
   'helpview',
+  'hydra',
   'indent-blankline',
   'jq-playground',
   'kitty-scrollback',
