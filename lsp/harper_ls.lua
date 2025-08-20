@@ -8,6 +8,12 @@ return {
       userDictPath = "~/.config/nvim/spell/en.utf-8.add",
     },
   },
+  filetypes = {
+    'org',
+    'markdown',
+    'latex',
+    'tex',
+  },
   on_attach = on_attach,
   capabilities = capabilities,
 }
