@@ -4,6 +4,8 @@ local nmap = function(lhs, rhs)
   })
 end
 
+local wk = require 'which-key'
+
 nmap('<localleader>.',  function() require('kulala').run() end)
 nmap('<localleader>mr', function() require('kulala').run() end)
 nmap('<localleader>mL', function() require('kulala').replay() end)
@@ -20,3 +22,22 @@ nmap('<localleader>]', function() require('kulala').jump_next() end)
 nmap('<localleader>[', function() require('kulala').jump_prev() end)
 nmap('<localleader>u', function() require('kulala.ui.auth_manager').open_auth_config() end)
 nmap('<localleader>g', function() require('kulala').download_graphql_schema() end)
+
+wk.add({
+  { '<localleader>.', desc = 'Run request' },
+  { '<localleader>mr', desc = 'Run request' },
+  { '<localleader>mL', desc = 'Replay' },
+  { '<localleader>ml', desc = 'Inspect' },
+  { '<localleader>me', desc = 'Set env' },
+  { '<localleader>t', desc = 'Toggle' },
+  { '<localleader>S', desc = 'Stats' },
+  { '<localleader>cc', desc = 'Copy' },
+  { '<localleader>cp', desc = 'From curl' },
+  { '<localleader>f', desc = 'Search' },
+  { '<localleader>n', desc = 'Next' },
+  { '<localleader>p', desc = 'Prev' },
+  { '<localleader>]', desc = 'Next' },
+  { '<localleader>[', desc = 'Prev' },
+  { '<localleader>u', desc = 'Open auth config' },
+  { '<localleader>g', desc = 'Download graphql schema' },
+})
