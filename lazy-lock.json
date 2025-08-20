@@ -2,6 +2,7 @@
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "LuaSnip": { "branch": "master", "commit": "de10d8414235b0a8cabfeba60d07c24304e71f5c" },
   "better-digraphs.nvim": { "branch": "master", "commit": "c895f619cbd2e23860285baea6d2933649a28b26" },
+  "browsher.nvim": { "branch": "main", "commit": "79aa87bd24ea6b2e79b82a32fcc332e78adee07b" },
   "catppuccin": { "branch": "main", "commit": "8e626da0cbb663d0afbf8dc7fedd458231bd2198" },
   "citruszest.nvim": { "branch": "main", "commit": "ce6749e4c3a842679cc302ce1c2db76c2d07f700" },
   "clojure.vim": { "branch": "master", "commit": "128ccd4d1c84a7455757ba0a2249016fe5ee6640" },

@@ -4,6 +4,7 @@ local modules = {}
 local children = {
   'autopairs',
   'better-digraphs',
+  'browsher',
   'comment',
   'conform',
   'dial',
