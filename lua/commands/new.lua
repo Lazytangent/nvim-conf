@@ -18,4 +18,5 @@ vim.api.nvim_create_user_command("New", function(opts)
   end
 end, {
   nargs = '+',
+  complete = 'filetype',
 })

@@ -4,6 +4,7 @@ local modules = {}
 local children = {
   'autopairs',
   'better-digraphs',
+  'browsher',
   'comment',
   'conform',
   'dial',
@@ -18,6 +19,7 @@ local children = {
   'gitlinker',
   'gitsigns',
   'helpview',
+  'hydra',
   'indent-blankline',
   'jq-playground',
   'kitty-scrollback',

@@ -31,7 +31,6 @@ vim.go.writebackup    = false
 vim.wo.cursorline     = true
 vim.wo.foldcolumn     = "3"
 vim.wo.foldexpr       = "v:lua.vim.treesitter.foldexpr()"
--- vim.wo.foldexpr       = "nvim_treesitter#foldexpr()"
 vim.wo.foldmethod     = "expr"
 vim.wo.list           = true
 vim.wo.number         = false
@@ -53,7 +52,7 @@ local settings = {
     smartindent  = false,
     softtabstop  = 4,
     -- Was originally the default, but got moved to stdpath('data')/site/
-    spellfile    = vim.fn.stdpath('config') .. "/spell/spell.en.utf-8.add",
+    spellfile    = vim.fn.stdpath('config') .. "/spell/en.utf-8.add",
     spelllang    = "en_us",
     swapfile     = false,
     syntax       = "off",
