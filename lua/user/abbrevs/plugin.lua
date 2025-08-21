@@ -1,38 +1,48 @@
-local Buffer = require('user.lib.buffer')
-
 local M = {}
-local buffer
+local buffer = -1
+local window
 
 -- create buffer
 M.create_abbrev_buffer = function()
-  buffer = Buffer.create {
-    name = "Abbrevs",
-    kind = "split_below",
-    modifiable = true,
-  }
+  if buffer == -1 then
+    buffer = vim.api.nvim_create_buf(false, false)
+    vim.api.nvim_buf_set_name(buffer, "Abbrevs")
+  end
+
+  window = vim.api.nvim_open_win(buffer, true, {
+    split = "below",
+    height = 30,
+  })
+
+  vim.api.nvim_create_autocmd('BufLeave', {
+    buffer = buffer,
+    callback = function()
+      M.apply_abbrevs()
+    end,
+  })
   return buffer
 end
 
--- remove buffer (and local abbrevs)
-M.remove_abbrev_buffer = function()
-
-end
+-- TODO: Better way to split short from long
+-- TODO: Would prefer having two quote delimited strings instead, like lam
 
 -- apply abbrevs when leaving buffer (AutoCmd event?)
 M.apply_abbrevs = function()
-  local number_of_lines = vim.api.nvim_buf_line_count(buffer.handle)
-  local lines = vim.api.nvim_buf_get_lines(buffer.handle, 0, number_of_lines, false)
+  local number_of_lines = vim.api.nvim_buf_line_count(buffer)
+  local lines = vim.api.nvim_buf_get_lines(buffer, 0, number_of_lines, false)
 
   for _, line in ipairs(lines) do
     if #line ~= 0 then
       local split_idx = line:find(",")
-      local short = line:sub(0, split_idx - 1)
-      local long = line:sub(split_idx + 1)
-      print(short, ":", long)
+      if split_idx ~= nil then
+        local short = line:sub(0, split_idx - 1)
+        local long = line:sub(split_idx + 1)
+
+        local cmd = "Abolish " .. short .. " " .. long
+        vim.cmd(cmd)
+      end
     end
   end
-
-  print(vim.inspect(lines))
 end
 
 vim.api.nvim_create_user_command('Abbrevs',
