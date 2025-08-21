@@ -25,8 +25,43 @@ M.create_abbrev_buffer = function()
   return buffer
 end
 
--- TODO: Better way to split short from long
--- TODO: Would prefer having two quote delimited strings instead, like lam
+local delimiters = {
+  -- squote
+  ["'"] = "'",
+  -- dquote
+  ['"'] = '"',
+}
+
+---@param line string
+---@return nil|table
+local function parse_quoted_strings(line)
+  if #line == 0 then
+    -- return nil when the line has no length
+    return nil
+  end
+
+  -- expect first delimiter to be first char
+  local first_delimiter = line:sub(1, 1)
+
+  -- find matching pair to first delimiter
+  local close_char = delimiters[first_delimiter]
+  local close_idx = line:find(close_char, 2)
+
+  local rest = line:sub(close_idx + 1)
+  local second_start_idx = rest:find("[^%s]")
+  if second_start_idx == nil then
+    print('Missing second word')
+    return nil
+  end
+  local second_start_char = rest:sub(second_start_idx, second_start_idx)
+  local second_close_char = delimiters[second_start_char]
+  local second_close_idx = rest:find(second_close_char, second_start_idx + 1)
+
+  local first = line:sub(2, close_idx - 1)
+  local second = rest:sub(second_start_idx + 1, second_close_idx - 1)
+
+  return { first, second }
+end
 
 -- apply abbrevs when leaving buffer (AutoCmd event?)
 M.apply_abbrevs = function()
@@ -35,12 +70,13 @@ M.apply_abbrevs = function()
 
   for _, line in ipairs(lines) do
     if #line ~= 0 then
-      local split_idx = line:find(",")
-      if split_idx ~= nil then
-        local short = line:sub(0, split_idx - 1)
-        local long = line:sub(split_idx + 1)
+      local split = parse_quoted_strings(line)
+      if split ~= nil then
+        local short = split[1]
+        local long = split[2]
 
         local cmd = "Abolish " .. short .. " " .. long
+        print('cmd', cmd)
         vim.cmd(cmd)
       end
     end
