@@ -36,4 +36,13 @@ vim.api.nvim_create_user_command("Term", function(opts)
   end
 end, {
   nargs = '?',
+  complete = function(arglead)
+    return vim.tbl_filter(function(arg)
+      return arg:match("^" .. arglead)
+    end, {
+      'half',
+      'third',
+      'fourth'
+    })
+  end,
 })
