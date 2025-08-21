@@ -7,6 +7,8 @@ M.create_abbrev_buffer = function()
   if buffer == -1 then
     buffer = vim.api.nvim_create_buf(false, false)
     vim.api.nvim_buf_set_name(buffer, "Abbrevs")
+    vim.api.nvim_set_option_value('swapfile', false, { buf = buffer })
+    vim.api.nvim_set_option_value('buftype', 'nofile', { buf = buffer })
   end
 
   window = vim.api.nvim_open_win(buffer, true, {
