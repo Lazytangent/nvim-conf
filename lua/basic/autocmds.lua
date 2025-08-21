@@ -23,7 +23,6 @@ local autocmds = {
 
   -- Terminal buffer defaults
   {'TermOpen', { command = [[setlocal filetype=terminal nonumber norelativenumber bufhidden="delete"]], group = group }},
-  -- {'TermOpen', { command = 'startinsert', group = group }},
 
   -- Update file if file has been updated outside of buffer
   {{'FocusGained', 'BufEnter'}, { command = 'checktime', group = group }},

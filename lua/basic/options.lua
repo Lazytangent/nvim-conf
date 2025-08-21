@@ -31,7 +31,6 @@ vim.go.writebackup    = false
 vim.wo.cursorline     = true
 vim.wo.foldcolumn     = "3"
 vim.wo.foldexpr       = "v:lua.vim.treesitter.foldexpr()"
--- vim.wo.foldexpr       = "nvim_treesitter#foldexpr()"
 vim.wo.foldmethod     = "expr"
 vim.wo.list           = true
 vim.wo.number         = false
