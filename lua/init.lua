@@ -26,5 +26,7 @@ require "commands"
 -- GUI Config
 require "guis"
 
+require "user.abbrevs.plugin"
+
 -- Start Cfilter for Quickfix list
 vim.api.nvim_command "packadd! cfilter"

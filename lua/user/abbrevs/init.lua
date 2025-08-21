@@ -18,20 +18,4 @@ M.apply_abbrevs = function()
   end
 end
 
--- create buffer
-local create_abbrev_buffer = function()
-
-end
-
--- remove buffer (and local abbrevs)
-local remove_abbrev_buffer = function()
-
-end
-
----@param abbrevs table
-local apply_abbrevs = function(abbrevs)
-
-end
-
-
 return M
