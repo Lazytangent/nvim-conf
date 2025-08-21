@@ -13,7 +13,7 @@ M.create_abbrev_buffer = function()
 
   window = vim.api.nvim_open_win(buffer, true, {
     split = "below",
-    height = 30,
+    height = 10,
   })
 
   vim.api.nvim_create_autocmd('BufLeave', {
