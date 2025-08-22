@@ -63,24 +63,38 @@ local function parse_quoted_strings(line)
   return { first, second }
 end
 
--- apply abbrevs when leaving buffer (AutoCmd event?)
+local abbrevs = {}
+
 M.apply_abbrevs = function()
   local number_of_lines = vim.api.nvim_buf_line_count(buffer)
   local lines = vim.api.nvim_buf_get_lines(buffer, 0, number_of_lines, false)
 
+  local curr_abbrevs = {}
   for _, line in ipairs(lines) do
     if #line ~= 0 then
       local split = parse_quoted_strings(line)
       if split ~= nil then
         local short = split[1]
         local long = split[2]
+        curr_abbrevs[short] = long
 
         local cmd = "Abolish " .. short .. " " .. long
-        print('cmd', cmd)
+        -- print(cmd)
         vim.cmd(cmd)
       end
     end
   end
+
+  -- remove any abbrevs no longer in the Abbrevs buffer
+  for short, _ in pairs(abbrevs) do
+    if curr_abbrevs[short] == nil then
+      local cmd = "Abolish -delete " .. short
+      -- print(cmd)
+      vim.cmd(cmd)
+    end
+  end
+
+  abbrevs = curr_abbrevs
 end
 
 vim.api.nvim_create_user_command('Abbrevs',
