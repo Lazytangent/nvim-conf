@@ -45,12 +45,28 @@ local function parse_quoted_strings(line)
 
   -- find matching pair to first delimiter
   local close_char = delimiters[first_delimiter]
+  if close_char == nil then
+    local space_idx = line:find(' ')
+    if space_idx == nil then
+      return nil
+    end
+
+    local short = line:sub(1, space_idx - 1)
+    local long_start = line:find('[^%s]', space_idx + 1)
+    if long_start == nil then
+      vim.notify('Missing second word')
+      return nil
+    end
+    local long = line:sub(long_start)
+    return { short, long }
+  end
+
   local close_idx = line:find(close_char, 2)
 
   local rest = line:sub(close_idx + 1)
   local second_start_idx = rest:find("[^%s]")
   if second_start_idx == nil then
-    print('Missing second word')
+    vim.notify('Missing second word')
     return nil
   end
   local second_start_char = rest:sub(second_start_idx, second_start_idx)
