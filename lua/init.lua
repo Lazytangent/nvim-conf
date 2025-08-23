@@ -27,6 +27,7 @@ require "commands"
 require "guis"
 
 require "user.abbrevs.plugin"
+require "user.hydras"
 
 -- Start Cfilter for Quickfix list
 vim.api.nvim_command "packadd! cfilter"
