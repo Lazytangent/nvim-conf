@@ -22,6 +22,7 @@ require "lsp"
 -- Personal config stuff
 require "basic"
 require "commands"
+require "experimental"
 
 -- GUI Config
 require "guis"
