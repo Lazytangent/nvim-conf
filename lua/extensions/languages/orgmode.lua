@@ -10,7 +10,13 @@ return {
     opts = {
       org_adapt_indentation = false,
       -- org_startup_indented = true,
-      org_agenda_files = {'~/Documents/org/*', '~/.local/src/org/*'},
+      org_agenda_files = {
+        '~/Documents/org/*',
+        org_files 'daily/*',
+        org_files 'work/tickets/index.org',
+        org_files 'tasks/repeated.org',
+        org_files 'tasks/todo.org',
+      },
       org_agenda_skip_deadline_if_done = true,
       org_agenda_skip_scheduled_if_done = true,
       org_agenda_span = 10,
