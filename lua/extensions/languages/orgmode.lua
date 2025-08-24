@@ -180,11 +180,11 @@ return {
         },
       },
     },
-    lazy = true,
     cmd = {
       "RoamUpdate",
       "RoamSave",
       "RoamToday",
+      "Roam",
     },
   },
 }
