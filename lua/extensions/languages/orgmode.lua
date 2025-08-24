@@ -186,5 +186,8 @@ return {
       "RoamToday",
       "Roam",
     },
+    keys = {
+      "<leader>n",
+    },
   },
 }
