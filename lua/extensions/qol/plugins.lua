@@ -20,6 +20,7 @@ local children = {
   'gitsigns',
   'helpview',
   'hydra',
+  'import',
   'indent-blankline',
   'jq-playground',
   'kitty-scrollback',
