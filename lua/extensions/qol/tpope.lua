@@ -1,7 +1,6 @@
 return {
   { "tpope/vim-abolish", },
   { "tpope/vim-eunuch" },
-  { "tpope/vim-fugitive" },
   { "tpope/vim-repeat" },
   {
     'tpope/vim-sleuth',

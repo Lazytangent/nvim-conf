@@ -43,6 +43,7 @@
   "import.nvim": { "branch": "main", "commit": "f6ac5e4629ca4dd63f0c945c8fcebdfb0e2e7e0d" },
   "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
   "info.vim": { "branch": "master", "commit": "b1acda75344f36b91d9c51a33201eada38cf33e9" },
+  "jj.nvim": { "branch": "main", "commit": "2d6df945d760bdf582e52c1572333d3e923da697" },
   "jq-playground.nvim": { "branch": "main", "commit": "1f86010c463bbede6b6259952c51b61aac184010" },
   "kitty-scrollback.nvim": { "branch": "main", "commit": "36d19dc85c0a1d0193e7c52d41129c4aa28b72e8" },
   "kubectl.nvim": { "branch": "main", "commit": "01bb1ec59eebd61cbab03a263a0c755fc4d5a0d1" },
