@@ -3,6 +3,7 @@ local current_module = parent_module .. 'hydras.'
 
 local hydras = {
   'git_submode',
+  'jujutsu',
   'magit',
 }
 
