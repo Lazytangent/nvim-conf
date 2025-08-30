@@ -53,4 +53,5 @@ wk.add {
   },
 }
 
-require "mappings.treesitter-textobjects"
+-- Trying out mini.ai for textobjects
+-- require "mappings.treesitter-textobjects"
