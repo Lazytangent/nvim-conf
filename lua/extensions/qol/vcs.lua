@@ -114,5 +114,8 @@ return {
       'DiffEditor',
     },
     config = true,
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+    },
   },
 }

@@ -63,6 +63,7 @@
   "none-ls-extras.nvim": { "branch": "main", "commit": "924fe88a9983c7d90dbb31fc4e3129a583ea0a90" },
   "none-ls-shellcheck.nvim": { "branch": "main", "commit": "0f84461241e76e376a95fb7391deac82dc3efdbf" },
   "none-ls.nvim": { "branch": "main", "commit": "5fcb73913a9290f78097e34420fe0e6130c5c33c" },
+  "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-FeMaco.lua": { "branch": "main", "commit": "96bbf843595dbe865838b3f2484b73557f34700c" },
   "nvim-autopairs": { "branch": "master", "commit": "23320e75953ac82e559c610bec5a90d9c6dfa743" },
   "nvim-cmp": { "branch": "main", "commit": "9faa8c4f4ac6beea6cb7921a73c3f60ad0c09974" },
