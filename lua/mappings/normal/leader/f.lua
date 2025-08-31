@@ -1,6 +1,9 @@
 local telescope = require 'telescope.builtin'
 local telescope_extensions = require('telescope').extensions
 
+local pick = require 'mini.pick'
+local utils = require 'user.utils'
+
 return {
   { "<leader>f",  group = "Telescope stuff" },
   { "<leader>f'", telescope.resume,                                                        desc = "Resume" },
@@ -21,7 +24,6 @@ return {
   { "<leader>fc", telescope.commands,                                                      desc = "Commands" },
   { "<leader>fd", function() telescope.diagnostics({ bufnr = 0 }) end,                     desc = "Local diagnostics" },
   { "<leader>fe", telescope.resume,                                                        desc = "Resume" },
-  { "<leader>ff", telescope.find_files,                                                    desc = "Files" },
   { "<leader>fg", telescope_extensions.live_grep_args.live_grep_args,                      desc = "Live grep" },
   { "<leader>fh", telescope.help_tags,                                                     desc = "Help tags" },
   { "<leader>fi", telescope.lsp_implementations,                                           desc = "LSP Implementations" },
@@ -35,6 +37,22 @@ return {
   { "<leader>fr", telescope.lsp_references,                                                desc = "LSP References" },
   { "<leader>ft", telescope.grep_string,                                                   desc = "This word" },
   { "<leader>fz", telescope.tags,                                                          desc = "Tags" },
+
+  {
+    "<leader>ff",
+    function()
+      pick.builtin.files(nil, {
+        mappings = {
+          choose = '<C-CR>',
+          create = {
+            char = '<CR>',
+            func = utils.open_file_action,
+          },
+        },
+      })
+    end,
+    desc = "Files",
+  },
 
   { "<leader>fl",  group = "LSP Stuff" },
   { "<leader>fld", telescope.diagnostics,          desc = "Diagnostics" },

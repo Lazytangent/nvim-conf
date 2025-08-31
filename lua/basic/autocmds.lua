@@ -75,6 +75,27 @@ local autocmds = {
     pattern = 'DiffviewViewClosed',
     group = group,
   }},
+
+  {
+    'BufWritePre',
+    {
+      pattern = "*",
+      callback = function()
+        local file_path = vim.fn.expand('<afile>:p:h')
+
+        if string.match(file_path, "^oil") ~= nil then
+          return
+        end
+
+        if vim.fn.isdirectory(file_path) == 0 then
+          local confirmation = vim.fn.input('Create parent directories for "' .. file_path .. '"? [y/N] ')
+          if string.lower(confirmation) == "y" then
+            vim.fn.mkdir(file_path, "p")
+          end
+        end
+      end,
+    },
+  },
 }
 
 for _, cmd in ipairs(autocmds) do
