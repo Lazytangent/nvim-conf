@@ -8,7 +8,6 @@ local children = {
   'conform',
   'dial',
   'dragvisuals',
-  -- 'easy-align',
   'emmet-vim',
   'endec',
   'femaco',
