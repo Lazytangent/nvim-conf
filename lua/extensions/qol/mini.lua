@@ -3,10 +3,11 @@ local configs = {
   ai = true,
   align = true,
   bracketed = true,
+  extra = true,
   pick = true,
 }
 
-local function setup_mini()
+local function setup()
   for module, config in pairs(configs) do
     local full_module_name = 'mini.' .. module
 
@@ -20,5 +21,5 @@ end
 
 return {
   'nvim-mini/mini.nvim',
-  config = setup_mini,
+  config = setup,
 }
