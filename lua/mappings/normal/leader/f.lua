@@ -1,9 +1,6 @@
 local telescope = require 'telescope.builtin'
 local telescope_extensions = require('telescope').extensions
 
-local pick = require 'mini.pick'
-local utils = require 'user.utils'
-
 return {
   { "<leader>f",  group = "Telescope stuff" },
   { "<leader>f'", telescope.resume,                                                        desc = "Resume" },
@@ -41,6 +38,9 @@ return {
   {
     "<leader>ff",
     function()
+      local pick = require 'mini.pick'
+      local utils = require 'user.utils'
+
       pick.builtin.files(nil, {
         mappings = {
           choose = '<C-CR>',
