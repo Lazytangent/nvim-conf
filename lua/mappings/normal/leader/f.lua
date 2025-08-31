@@ -18,7 +18,17 @@ local pickers = {
   end,
   grep_this_word = function()
     MiniPick.builtin.grep({ pattern = vim.fn.expand('<cword>') })
-  end
+  end,
+  files = function()
+    MiniPick.builtin.files(nil, {
+      mappings = {
+        create = {
+          char = '<CR>',
+          func = utils.open_file_action,
+        },
+      },
+    })
+  end,
 }
 
 local lsp_pickers = {
@@ -52,7 +62,7 @@ local git = {
 }
 
 return {
-  { "<leader>f",  group = "Telescope stuff" },
+  { "<leader>f",  group = "Finders" },
   { "<leader>fB", require('extensions.telescope.custom.java').build_files, desc = "Java Build Files" },
   { "<leader>fJ", require('extensions.telescope.custom.java').files,       desc = "Java Files" },
   { "<leader>fL", telescope_extensions.luasnip.luasnip,                    desc = "Luasnip" },
@@ -62,15 +72,18 @@ return {
   { "<leader>fp", telescope.pickers,         desc = "Pickers" },
   { "<leader>fz", telescope.tags,            desc = "Tags"    },
 
+  -- mini.pick
   { "<leader>fD", lsp_pickers.definition,       desc = "LSP Definitions" },
   { "<leader>fG", git.modified,                 desc = "Git" },
   { "<leader>fO", MiniExtra.pickers.oldfiles,   desc = "Old files (recent)" },
   { "<leader>fR", MiniExtra.pickers.registers,  desc = "Registers" },
   { "<leader>fS", lsp_pickers.document_symbol,  desc = "Symbols" },
   { "<leader>fT", MiniExtra.pickers.treesitter, desc = "Treesitter" },
+
   { "<leader>fb", MiniPick.builtin.buffers,     desc = "Buffers" },
   { "<leader>fc", MiniExtra.pickers.commands,   desc = "Commands" },
   { "<leader>fd", MiniExtra.pickers.dianostic,  desc = "Local diagnostics" },
+  { "<leader>ff", pickers.files,                desc = "Files" },
   { "<leader>fg", MiniPick.builtin.grep_live,   desc = "Live grep" },
   { "<leader>fh", MiniPick.builtin.help,        desc = "Help tags" },
   { "<leader>fi", lsp_pickers.implementation,   desc = "LSP Implementations" },
@@ -84,22 +97,6 @@ return {
   { "<leader>f'", MiniPick.builtin.resume, desc = "Resume" },
   { "<leader>f;", pickers.search_commands, desc = "Command history" },
   { "<leader>f?", pickers.search_history,  desc = "Search history" },
-
-  {
-    "<leader>ff",
-    function()
-      MiniPick.builtin.files(nil, {
-        mappings = {
-          choose = '<C-CR>',
-          create = {
-            char = '<CR>',
-            func = utils.open_file_action,
-          },
-        },
-      })
-    end,
-    desc = "Files",
-  },
 
   { "<leader>fl",  group = "LSP Stuff" },
   { "<leader>fld", telescope.diagnostics,          desc = "Diagnostics" },
