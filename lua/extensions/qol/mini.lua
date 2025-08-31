@@ -4,7 +4,11 @@ local configs = {
   align = true,
   bracketed = true,
   extra = true,
-  pick = true,
+  pick = {
+    mappings = {
+      choose_marked = '<C-CR>',
+    },
+  },
 }
 
 local function setup()
