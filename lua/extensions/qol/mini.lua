@@ -8,6 +8,9 @@ local configs = {
     mappings = {
       choose_marked = '<C-CR>',
     },
+    options = {
+      content_from_bottom = true,
+    },
   },
 }
 
