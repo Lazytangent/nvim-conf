@@ -190,7 +190,6 @@ return {
       "RoamUpdate",
       "RoamSave",
       "RoamToday",
-      "Roam",
     },
     keys = {
       "<leader>n",
