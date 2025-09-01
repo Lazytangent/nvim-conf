@@ -17,6 +17,7 @@ local spec = {
   require(current_module .. 'g'),
   require(current_module .. 'y'),
   require(current_module .. 'brackets'),
+  -- require(current_module .. 'brackets'),
 }
 
 return spec
