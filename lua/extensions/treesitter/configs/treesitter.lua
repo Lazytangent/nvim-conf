@@ -6,12 +6,12 @@ require("nvim-treesitter").setup({
 
 require('nvim-treesitter').install(Treesitter.languages)
 
-vim.treesitter.language.add(
-  'texinfo',
-  {
-    path = vim.fn.expand "~/.local/src/projects/tree-sitter-texinfo/texinfo.so",
-  }
-)
+-- vim.treesitter.language.add(
+--   'texinfo',
+--   {
+--     path = vim.fn.expand "~/.local/src/projects/tree-sitter-texinfo/texinfo.so",
+--   }
+-- )
 
 -- Custom languages
 vim.api.nvim_create_autocmd('User', {
