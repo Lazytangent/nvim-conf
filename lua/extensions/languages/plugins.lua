@@ -19,7 +19,7 @@ local children = {
   'orgmode',
   'postgresql',
   'prisma',
-  'python',
+  -- 'python',
   'rust',
   'schemastore',
   'swift',
