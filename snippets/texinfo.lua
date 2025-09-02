@@ -1,5 +1,9 @@
 local autosnippets = {
   autosnippet(
+    { trig = ";q", name = 'Single quoted', dscr = 'Single quote something' },
+    fmta("`<>'<>", { i(1), i(0) })
+  ),
+  autosnippet(
     { trig = ";latex", name = "LaTeX", dscr = "Special LaTeX command", wordTrig = false },
     { t "@LaTeX{}" }
   ),
