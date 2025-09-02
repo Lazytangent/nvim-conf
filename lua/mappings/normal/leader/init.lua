@@ -1,5 +1,3 @@
-local telescope = require 'telescope.builtin'
-
 local parent_module = (...):match("(.-)[^%.]+$")
 local current_module = parent_module .. 'leader.'
 
@@ -15,8 +13,6 @@ return {
   { "<leader>,ds", vim.diagnostic.show,                 desc = "Show diagnostics in buffer" },
   { "<leader>,f",  function() vim.lsp.buf.format() end, desc = "Format" },
 
-  { "<leader>/",  telescope.current_buffer_fuzzy_find,  desc = "Search current buffer" },
-
   { "<leader><Enter>", desc = "Org: Meta Return" }, -- Only in Orgmode
 
   { "<leader>e", desc = "Show line diagnostics" },
@@ -27,7 +23,6 @@ return {
   require(current_module .. 'f'),
   require(current_module .. 'g'),
   require(current_module .. 'h'),
-  require(current_module .. 'l'),
   require(current_module .. 'n'),
   require(current_module .. 'o'),
   require(current_module .. 'p'),

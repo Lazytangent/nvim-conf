@@ -34,4 +34,23 @@ M.get_or_create_buffer_by_name = function(name, opts)
   return { number = buffer, new = true }
 end
 
+M.open_file_action = function()
+  local matches = require('mini.pick').get_picker_matches()
+  local current_match = matches.current
+
+  local filename = ""
+  if current_match ~= nil and current_match ~= "" then
+    filename = current_match
+  else
+    local query = require('mini.pick').get_picker_query()
+    filename = table.concat(query)
+  end
+
+  vim.api.nvim_win_call(
+    require('mini.pick').get_picker_state().windows.target,
+    function() vim.cmd('edit ' .. filename) end
+  )
+  return true
+end
+
 return M

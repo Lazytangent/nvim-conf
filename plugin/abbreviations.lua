@@ -7,7 +7,6 @@ local abbrevs = {
 
 for word, list in pairs(abbrevs) do
   for _, shortcut in ipairs(list) do
-    -- vim.cmd("iabbrev " .. shortcut .. " " .. word)
     vim.keymap.set('ia', shortcut, word)
   end
 end

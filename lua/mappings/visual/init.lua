@@ -31,6 +31,8 @@ local visual = {
     desc = "Decrement with dial"
   },
 
+  { "gy", desc = "Gitlinker" },
+
   { "<C-k>", [[:<C-U>exec "'<,'>move '<-" . (1+v:count1)<cr>gv]], desc = "Move line up" },
   { "<C-j>", [[:<C-U>exec "'<,'>move '>+" . (0+v:count1)<cr>gv]], desc = "Move line down" },
 

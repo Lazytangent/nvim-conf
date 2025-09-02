@@ -1,7 +1,6 @@
 return {
   { "tpope/vim-abolish", },
   { "tpope/vim-eunuch" },
-  { "tpope/vim-fugitive" },
   { "tpope/vim-repeat" },
   {
     'tpope/vim-sleuth',
@@ -9,5 +8,5 @@ return {
       vim.g.sleuth_heuristics = 0
     end,
   },
-  { "tpope/vim-unimpaired", },
+  -- { "tpope/vim-unimpaired", },
 }

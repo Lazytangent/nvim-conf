@@ -20,18 +20,6 @@ wk.add {
           select.select_textobject("@function.inner", "textobjects")
         end,
       },
-      -- {
-      --   'ac',
-      --   function()
-      --     select.select_textobject("@class.outer", "textobjects")
-      --   end,
-      -- },
-      -- {
-      --   'ic',
-      --   function()
-      --     select.select_textobject("@class.inner", "textobjects")
-      --   end,
-      -- },
       {
         'as',
         function()
