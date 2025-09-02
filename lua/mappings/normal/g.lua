@@ -1,7 +1,6 @@
 local dial_map = require 'dial.map'
 
 return {
-  { "ga", "<Plug>(EasyAlign)", desc = "Easy Align" },
   {
     "g<C-a>",
     function()

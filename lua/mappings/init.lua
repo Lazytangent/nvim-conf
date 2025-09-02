@@ -4,10 +4,6 @@ local normal = require 'mappings.normal'
 local visual = require 'mappings.visual'
 local insert = require 'mappings.insert'
 
-local visual_only = {
-  { "ga", [[<Plug>(EasyAlign)]], desc = "Easy Align" },
-}
-
 local select = {
   { "<C-e>", function()
     if ls.choice_active() then
@@ -37,10 +33,6 @@ wk.add {
     terminal,
   },
   {
-    mode = "x",
-    visual_only,
-  },
-  {
     mode = "i",
     insert,
   },
@@ -53,4 +45,5 @@ wk.add {
   },
 }
 
-require "mappings.treesitter-textobjects"
+-- Trying out mini.ai for textobjects
+-- require "mappings.treesitter-textobjects"

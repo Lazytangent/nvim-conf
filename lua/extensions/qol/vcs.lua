@@ -106,6 +106,16 @@ return {
   },
   {
     'NicolasGB/jj.nvim',
-    opts = true,
+    config = true,
+  },
+  {
+    'julienvincent/hunk.nvim',
+    cmd = {
+      'DiffEditor',
+    },
+    config = true,
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+    },
   },
 }

@@ -1,7 +1,14 @@
-local telescope = require 'telescope.builtin'
+local diagnostics = {
+  document = function()
+    MiniExtra.pickers.diagnostic({ scope = "current" })
+  end,
+  workspace = function()
+    MiniExtra.pickers.diagnostic({ scope = "all" })
+  end,
+}
 
 return {
   { "<leader>pd",  group = "Diagnostics" },
-  { "<leader>pdd", telescope.lsp_document_diagnostics,  desc = "Document" },
-  { "<leader>pdw", telescope.lsp_workspace_diagnostics, desc = "Workspace" },
+  { "<leader>pdd", diagnostics.document,  desc = "Document" },
+  { "<leader>pdw", diagnostics.workspace, desc = "Workspace" },
 }
