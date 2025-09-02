@@ -1,5 +1,6 @@
 vim.go.completeopt    = "menuone,noselect"
 vim.go.foldlevelstart = 10
+vim.go.foldopen       = ""
 vim.go.grepprg        = "rg --vimgrep --smart-case --no-heading"
 vim.go.hlsearch       = true
 vim.go.ignorecase     = true
@@ -32,6 +33,7 @@ vim.wo.cursorline     = true
 vim.wo.foldcolumn     = "3"
 vim.wo.foldexpr       = "v:lua.vim.treesitter.foldexpr()"
 vim.wo.foldmethod     = "expr"
+vim.wo.foldnestmax    = 1
 vim.wo.list           = true
 vim.wo.number         = false
 vim.wo.numberwidth    = 5
@@ -88,7 +90,8 @@ vim.cmd "filetype plugin indent on"
 vim.cmd "syntax keyword dbmlType string varbinary"
 
 local python3_host_prog = "$HOME/.local/src/neovim-plugins/python-support/.venv/bin/python"
-vim.cmd("let g:python3_host_prog = '" .. python3_host_prog .. "'")
+-- vim.cmd("let g:python3_host_prog = '" .. python3_host_prog .. "'")
+vim.g.python3_host_prog = python3_host_prog
 
 -- Diagnostics
 vim.diagnostic.config({
