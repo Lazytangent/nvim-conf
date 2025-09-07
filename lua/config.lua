@@ -38,7 +38,7 @@ config.LSP = {
       "ltex_plus",
       "pyrefly",
       -- "basedpyright",
-      "pylsp",
+      -- "pylsp",
       "terraformls",
       "terraform_lsp",
     },
