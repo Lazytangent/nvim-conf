@@ -1,5 +1,9 @@
 local autosnippets = {
   autosnippet(
+    { trig = ";key", name = "Key", dscr = "Key" },
+    fmta("@key{<>}<>", { i(1), i(0) })
+  ),
+  autosnippet(
     { trig = ";q", name = 'Single quoted', dscr = 'Single quote something' },
     fmta("`<>'<>", { i(1), i(0) })
   ),
