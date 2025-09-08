@@ -36,7 +36,8 @@ config.LSP = {
     regular = {
       "harper_ls",
       "ltex_plus",
-      "basedpyright",
+      "pyrefly",
+      -- "basedpyright",
       -- "pylsp",
       "terraformls",
       "terraform_lsp",

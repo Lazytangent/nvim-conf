@@ -1,3 +1,8 @@
+---@param command string
+local function cmd(command)
+  vim.cmd(command)
+end
+
 return {
   {
     "yp", -- Yank absolute Path of current buffer
@@ -11,18 +16,10 @@ return {
   },
 
   { "yo",  group = "option" },
-  { "yob", desc = "background" },
-  { "yoc", desc = "cursorline" },
-  { "yod", desc = "diff" },
-  { "yoh", desc = "hlsearch" },
-  { "yoi", desc = "ignorecase" },
-  { "yol", desc = "list" },
-  { "yon", desc = "number" },
-  { "yor", desc = "relativenumber" },
-  { "yos", desc = "spell" },
-  { "you", desc = "cursorcolumn" },
-  { "yov", desc = "virtualedit" },
-  { "yow", desc = "wrap" },
+  { "yon", cmd "set number!", desc = "number" },
+  { "yor", cmd "set relativenumber!", desc = "relativenumber" },
+  { "yos", cmd "set spell!", desc = "spell" },
+  { "yow", cmd "set wrap!", desc = "wrap" },
   { "yox", desc = "crosshairs" },
 
   { "yom", "<cmd>set modifiable<cr>", desc = "Set modifiable" },

@@ -22,6 +22,8 @@ local insert = {
   { "<C-x><C-o>", desc = "Omni-complete" },
   { "<C-x><C-p>", desc = "Path" },
   { "<C-x><C-r>", desc = "Ripgrep" },
+
+  { "<C-Space", "<nop>", desc = "No-op" },
 }
 
 return insert
