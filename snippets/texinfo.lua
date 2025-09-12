@@ -1,5 +1,31 @@
 local autosnippets = {
   autosnippet(
+    { trig = ";__", name = "Skeleton", dscr = "Create basic TeXinfo skeleton" },
+    fmta([[
+    \input texinfo
+    @setfilename <>.info
+    @settitle <>
+    @documentencoding UTF-8
+
+    @titlepage
+    @end titlepage
+
+    @contents
+
+    @node Top
+    @top <>
+
+    <>
+
+    @bye
+    ]], {
+      i(1, "manual"),
+      i(2, "title"),
+      i(3, "top node"),
+      i(0),
+    })
+  ),
+  autosnippet(
     { trig = ";key", name = "Key", dscr = "Key" },
     fmta("@key{<>}<>", { i(1), i(0) })
   ),
