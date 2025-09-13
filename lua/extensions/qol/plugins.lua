@@ -6,6 +6,7 @@ local children = {
   'better-digraphs',
   'comment',
   'conform',
+  'databases',
   'dial',
   'dragvisuals',
   'emmet-vim',

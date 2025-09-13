@@ -1,4 +1,15 @@
 return {
+  {
+    'kndndrj/nvim-dbee',
+    dependencies = {
+      "MunifTanji/nui.nvim",
+    },
+    build = function()
+      require("dbee").install()
+    end,
+    config = true,
+  },
+
   "tpope/vim-dadbod",
   {
     "kristijanhusak/vim-dadbod-ui",
