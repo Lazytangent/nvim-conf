@@ -27,7 +27,12 @@ local autosnippets = {
   ),
   autosnippet(
     { trig = ";url", name = "Url" },
-    fmta("@url{<>, <>}<>", { i(1, "url"), i(2, "[displayed-text]"), i(0) })
+    {
+      c(1, {
+        fmta("@url{<>}<>", { i(1, "url"), i(0) }),
+        fmta("@url{<>, <>}<>", { i(1, "url"), i(2, "[displayed-text]"), i(0) }),
+      })
+    }
   ),
   autosnippet(
     { trig = ";key", name = "Key", dscr = "Key" },
