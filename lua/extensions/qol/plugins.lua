@@ -29,6 +29,7 @@ local children = {
   'oil',
   'printer',
   'profile',
+  'quickfix',
   'rainbow-csv',
   'render-markdown',
   'rest',
