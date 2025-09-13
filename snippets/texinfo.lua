@@ -26,6 +26,10 @@ local autosnippets = {
     })
   ),
   autosnippet(
+    { trig = ";url", name = "Url" },
+    fmta("@url{<>, <>}<>", { i(1, "url"), i(2, "[displayed-text]"), i(0) })
+  ),
+  autosnippet(
     { trig = ";key", name = "Key", dscr = "Key" },
     fmta("@key{<>}<>", { i(1), i(0) })
   ),
