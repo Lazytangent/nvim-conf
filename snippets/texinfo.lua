@@ -91,6 +91,10 @@ local autosnippets = {
     })
   ),
   autosnippet(
+    { trig = ";cmd", name = "@command" },
+    fmta("@command{<>}<>", { i(1, "cmd"), i(0) })
+  ),
+  autosnippet(
     { trig = ";ex", name = "Example" },
     fmta([[
       @example <>
