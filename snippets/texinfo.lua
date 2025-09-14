@@ -8,6 +8,7 @@ local autosnippets = {
     @documentencoding UTF-8
 
     @titlepage
+    @title <>
     @end titlepage
 
     @contents
@@ -21,6 +22,7 @@ local autosnippets = {
     ]], {
       i(1, "manual"),
       i(2, "title"),
+      rep(2),
       i(3, "top node"),
       i(0),
     })
@@ -72,6 +74,20 @@ local autosnippets = {
       i(1),
       i(0),
       rep(1),
+    })
+  ),
+  autosnippet(
+    { trig = ";tbl", name = "Table" },
+    fmta([[
+    @table <>
+    <>
+    @end table
+    ]], {
+      c(1, {
+        fmta("<>", { i(1, "@asis") }),
+        fmta("<>", { i(1, "@command") }),
+      }),
+      i(0),
     })
   ),
   autosnippet(
@@ -177,8 +193,12 @@ local snippets = {
         }),
         fmta([[
           @item <>
-          <>
-        ]], { i(1, "item"), i(0, "desc") }),
+          <><>
+        ]], {
+          i(1, "item"),
+          i(2, "desc"),
+          i(0),
+        }),
       })
     }
   ),
