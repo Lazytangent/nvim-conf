@@ -37,10 +37,6 @@ local autosnippets = {
     }
   ),
   autosnippet(
-    { trig = ";key", name = "Key", dscr = "Key" },
-    fmta("@key{<>}<>", { i(1), i(0) })
-  ),
-  autosnippet(
     { trig = ";q", name = 'Single quoted', dscr = 'Single quote something' },
     fmta("`<>'<>", { i(1), i(0) })
   ),
@@ -51,10 +47,6 @@ local autosnippets = {
   autosnippet(
     { trig = ";tex", name = "TeX", dscr = "Special TeX command", wordTrig = false },
     { t "@TeX{}" }
-  ),
-  autosnippet(
-    { trig = ";item", name = "@item" },
-    { t "@item" }
   ),
   autosnippet(
     { trig = ";tab", name = "@tab" },
@@ -95,6 +87,14 @@ local autosnippets = {
     fmta("@command{<>}<>", { i(1, "cmd"), i(0) })
   ),
   autosnippet(
+    { trig = ";opt", name = "@option" },
+    fmta("@option{<>}<>", { i(1, "opt"), i(0) })
+  ),
+  autosnippet(
+    { trig = ";key", name = "Key", dscr = "Key" },
+    fmta("@key{<>}<>", { i(1), i(0) })
+  ),
+  autosnippet(
     { trig = ";ex", name = "Example" },
     fmta([[
       @example <>
@@ -123,6 +123,14 @@ local autosnippets = {
 }
 
 local snippets = {
+  s(
+    { trig = ";cbc", name = "Generic command with curly braces for args" },
+    fmta("@<>{<>}<>", { i(1, "cmd"), i(2, "args"), i(0) })
+  ),
+  s(
+    { trig = ";cc", name = "Generic command" },
+    fmta("@<><>", { i(1, "cmd"), i(0) })
+  ),
   s(
     { trig = "ch", name = "Chapter" },
     fmta([[
@@ -203,6 +211,7 @@ local snippets = {
           i(2, "desc"),
           i(0),
         }),
+        fmta("@item <><>", { i(1, "item"), i(0) }),
       })
     }
   ),

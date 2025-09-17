@@ -5,8 +5,8 @@ return {
       require('leap').set_default_mappings()
     end,
   },
-  {
-    'ggandor/flit.nvim',
-    config = true,
-  },
+  -- {
+  --   'ggandor/flit.nvim',
+  --   config = true,
+  -- },
 }

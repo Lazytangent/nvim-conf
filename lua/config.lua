@@ -46,7 +46,7 @@ config.LSP = {
       "beancount",
       "ccls",
       "clangd",
-      "denols",
+      -- "denols",
       "efm",
       "gopls",
       "jsonls",
