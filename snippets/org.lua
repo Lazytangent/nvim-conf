@@ -91,6 +91,16 @@ local orgmode = {
       }
     )
   ),
+  s(
+    { trig = "<v" },
+    fmta([[
+    #+begin_verse
+    <>
+    #+end_verse
+    ]], {
+      i(0),
+    })
+  ),
 }
 
 return orgmode
