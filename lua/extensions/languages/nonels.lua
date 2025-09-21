@@ -11,7 +11,6 @@ return {
     local f = null_ls.builtins.formatting
     local d = null_ls.builtins.diagnostics
     local ca = null_ls.builtins.code_actions
-    local on_attach = require "lsp.regular.on_attach"
 
     local formatting = {
       -- JavaScript/TypeScript
@@ -93,7 +92,6 @@ return {
       sources = sources,
       save_after_format = false,
       diagnostics_format = "[#{c}] #{m} (#{s})",
-      on_attach = on_attach,
     }
   end,
 }

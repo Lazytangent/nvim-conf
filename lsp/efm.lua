@@ -1,5 +1,4 @@
 local capabilities = require("lsp.capabilities")
-local on_attach = require("lsp.regular.on_attach")
 
 local autopep8 = require("lsp.efm.autopep8")
 local black = require("lsp.efm.black")
@@ -10,7 +9,6 @@ local prettier = require("lsp.efm.prettier")
 -- @type vim.lsp.Config
 return {
   capabilities = capabilities,
-  on_attach = on_attach,
   init_options = { documentFormatting = true },
   root_dir = vim.loop.cwd,
   filetypes = {
