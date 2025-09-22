@@ -17,4 +17,17 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<space>q",  vim.diagnostic.setloclist, opts)
 end
 
+vim.api.nvim_create_autocmd('LspAttach', {
+  pattern = {
+    "*.py", -- python
+    "*.tf", -- terraform
+  },
+  callback = function(event)
+    local client = vim.lsp.get_client_by_id(event.data.client_id)
+    local buf = event.buf
+
+    on_attach(client, buf)
+  end,
+})
+
 return on_attach

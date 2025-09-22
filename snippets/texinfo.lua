@@ -37,6 +37,10 @@ local autosnippets = {
     }
   ),
   autosnippet(
+    { trig = ";m", name = "Math" },
+    fmta("@math{<>}<>", { i(1, "math"), i(0) })
+  ),
+  autosnippet(
     { trig = ";q", name = 'Single quoted', dscr = 'Single quote something' },
     fmta("`<>'<>", { i(1), i(0) })
   ),

@@ -33,7 +33,6 @@ vim.wo.cursorline     = true
 vim.wo.foldcolumn     = "3"
 vim.wo.foldexpr       = "v:lua.vim.treesitter.foldexpr()"
 vim.wo.foldmethod     = "expr"
-vim.wo.foldnestmax    = 1
 vim.wo.list           = true
 vim.wo.number         = false
 vim.wo.numberwidth    = 5

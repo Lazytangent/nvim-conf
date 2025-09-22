@@ -369,6 +369,7 @@ return {
         ls.filetype_extend("ruby", {"rails"})
         ls.filetype_extend("html", {"twig"})
         ls.filetype_extend("cpp", {"c"})
+        ls.filetype_extend("texinfo", {"tex", "latex"})
       end,
     },
     {

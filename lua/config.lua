@@ -1,7 +1,7 @@
 local config = {}
 
 config.Theming = {
-  colorscheme = "tokyonight",
+  colorscheme = "tokyonight-night",
 }
 
 config.LSP = {
