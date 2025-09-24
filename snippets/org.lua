@@ -9,7 +9,7 @@ local function get_previous_src_lang()
 end
 
 local orgmode = {
-  s({ trig = "__", dscr = "#+TITLE: ", name = "Create title", snippetType = "autosnippet" }, {
+  s({ trig = "__", dscr = "#+TITLE: ", name = "Create title" }, {
     t("#+title: "),
     i(1, "title"),
   }),
