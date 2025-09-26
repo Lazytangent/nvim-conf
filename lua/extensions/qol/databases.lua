@@ -7,7 +7,17 @@ return {
     build = function()
       require("dbee").install()
     end,
-    config = true,
+    config = function()
+      require("dbee").setup {
+        sources = {
+          require("dbee.sources").MemorySource:new(
+            require("user.database.utils").parse_databases_from_env(true)
+          ),
+          require("dbee.sources").EnvSource:new("DBEE_CONNECTIONS"),
+          require("dbee.sources").FileSource:new(vim.fn.stdpath("cache") .. "/dbee/persistence.json"),
+        },
+      }
+    end,
   },
 
   "tpope/vim-dadbod",
