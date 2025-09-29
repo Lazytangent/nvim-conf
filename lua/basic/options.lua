@@ -98,3 +98,6 @@ vim.diagnostic.config({
     current_line = true,
   },
 })
+
+-- Disable LSP logging
+vim.lsp.log.set_log_level(vim.log.levels.OFF)
