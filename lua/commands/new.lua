@@ -20,10 +20,6 @@ vim.api.nvim_create_user_command("New", function(opts)
 
   vim.api.nvim_open_win(buffer, true, {
     split = "below",
-
-    -- temporary default until https://github.com/neovim/neovim/issues/36080
-    -- gets fixed
-    height = 20,
   })
 
   -- Set other options with `setlocal` after moving focus to new split/window
