@@ -9,7 +9,7 @@ local wk = require 'which-key'
 nmap('<localleader>.',  function() require('kulala').run() end)
 nmap('<localleader>mr', function() require('kulala').run() end)
 nmap('<localleader>mL', function() require('kulala').replay() end)
-nmap('<localleader>ml', function() require('kualala').inspect() end)
+nmap('<localleader>ml', function() require('kulala').inspect() end)
 nmap('<localleader>me', function() require('kulala').set_selected_env() end)
 nmap('<localleader>t', function() require('kulala').toggle_view() end)
 nmap('<localleader>S', function() require('kulala').show_stats() end)
