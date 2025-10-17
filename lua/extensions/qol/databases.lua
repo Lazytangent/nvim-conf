@@ -14,7 +14,7 @@ return {
             require("user.database.utils").parse_databases_from_env(true)
           ),
           require("dbee.sources").EnvSource:new("DBEE_CONNECTIONS"),
-          require("dbee.sources").FileSource:new(vim.fn.stdpath("cache") .. "/dbee/persistence.json"),
+          require("dbee.sources").FileSource:new(vim.fn.stdpath("state") .. "/dbee/persistence.json"),
         },
       }
     end,
