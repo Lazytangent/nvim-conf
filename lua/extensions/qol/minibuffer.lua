@@ -18,5 +18,7 @@ return {
   end,
   dependencies = {
     "folke/which-key.nvim",
+    -- force minibuffer.nvim to load after mini.nvim
+    'nvim-mini/mini.nvim',
   },
 }
