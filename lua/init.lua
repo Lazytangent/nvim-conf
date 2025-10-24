@@ -32,4 +32,4 @@ require "user.hydras"
 
 -- Start Cfilter for Quickfix list
 vim.api.nvim_command "packadd! cfilter"
-vim.api.nvim_command "packadd nvim.undotree"
+-- vim.api.nvim_command "packadd nvim.undotree"
