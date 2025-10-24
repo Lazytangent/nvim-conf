@@ -37,7 +37,7 @@ vim.diagnostic.config {
 
 -- group, list
 for _, list in pairs(LSP.servers) do
-  vim.lsp.enable(list)
+  -- vim.lsp.enable(list)
 end
 
 -- Register LspAttach autocmds
