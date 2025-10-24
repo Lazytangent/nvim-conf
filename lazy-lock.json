@@ -59,6 +59,7 @@
   "math-conceal.nvim": { "branch": "main", "commit": "96dd92bd5b327cdec4a33da6bfa1840c03726564" },
   "mini.icons": { "branch": "main", "commit": "e8fae66cb400744daeedf6e387347df50271c252" },
   "mini.nvim": { "branch": "main", "commit": "228a8c34fae1d778e895ad06e4158f65e85828bc" },
+  "minibuffer.nvim": { "branch": "main", "commit": "21ea81ceb8c4c0f51a25a7c631f435d26ad8d112" },
   "moonscript-vim": { "branch": "master", "commit": "715c96c7c3b02adc507f84bf5754985460afc426" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "neogit": { "branch": "master", "commit": "add70101fab5913cad33ab2f84f1a6ee092e7220" },
