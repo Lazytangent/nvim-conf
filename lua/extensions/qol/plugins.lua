@@ -25,7 +25,7 @@ local children = {
   'marks',
   'matchup',
   'mini',
-  'minibuffer',
+  -- 'minibuffer',
   'navic',
   'octo',
   'oil',
