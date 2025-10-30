@@ -8,6 +8,10 @@ return {
       schemaStore = {
         enable = true,
       },
+      -- schemas = require('schemastore').yaml.schemas(),
+      schemas = {
+        ['https://raw.githubusercontent.com/harness/harness-schema/main/v0/pipeline.json'] = { 'pipeline.yaml', 'pipeline.tftpl' },
+      },
     },
   },
 }
