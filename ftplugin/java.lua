@@ -46,14 +46,10 @@ local config = {
     java = {
       configuration = {
         runtimes = {
-          {
-            name = "JavaSE-22",
-            path = "/usr/lib/jvm/java-22-openjdk/",
-          },
-          {
-            name = "JavaSE-17",
-            path = "/usr/lib/jvm/java-17-openjdk/",
-          },
+          -- {
+          --   name = "JavaSE-17",
+          --   path = "/usr/lib/jvm/java-17-openjdk/",
+          -- },
         },
       },
 

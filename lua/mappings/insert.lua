@@ -23,7 +23,8 @@ local insert = {
   { "<C-x><C-p>", desc = "Path" },
   { "<C-x><C-r>", desc = "Ripgrep" },
 
-  { "<C-Space", "<nop>", desc = "No-op" },
+  { "<C-Space>", "<nop>", desc = "No-op" },
+  { "<C-l><C-l>", "<C-g>u<Esc>[s1z=`]a<C-g>u" },
 }
 
 return insert
