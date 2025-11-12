@@ -12,7 +12,7 @@ config.LSP = {
     -- Server groupings are just for me to know which servers have custom
     -- settings.
     primary = {
-      "angularls",
+      -- "angularls",
       "bashls",
       "cmake",
       "cssls",
