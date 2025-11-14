@@ -44,6 +44,11 @@ return {
           org_todo = { "cit", "<localleader>mtt" },
           org_todo_prev = { "cit", "<localleader>mtd" },
           org_meta_return = { "<leader><cr>", "<C-CR>" },
+          -- I prefer the normal Vim mappings for navigating up and down the document.
+          org_backward_heading_same_level = false,
+          org_forward_heading_same_level = false,
+          org_previous_visible_heading = false,
+          org_next_visible_heading = false,
         },
       },
       win_split_mode = '40split',
