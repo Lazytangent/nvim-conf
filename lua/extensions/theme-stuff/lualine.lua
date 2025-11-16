@@ -13,8 +13,8 @@ return {
     require("lualine").setup {
       extensions = { 'quickfix', 'fugitive' },
       options = {
-        theme = 'tokyonight',
-        -- theme = 'auto',
+        -- theme = 'tokyonight',
+        theme = 'auto',
         -- theme = 'citruszest',
         -- theme = 'oxocarbon',
         icons_enabled = false,

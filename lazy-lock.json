@@ -88,6 +88,7 @@
   "octo.nvim": { "branch": "master", "commit": "aeee82dac023f03560111d056c88963d723d3cbe" },
   "oil.nvim": { "branch": "master", "commit": "7e1cd7703ff2924d7038476dcbc04b950203b902" },
   "onedark.nvim": { "branch": "master", "commit": "918e89e6993b2901eea47b9f4eb666d53c2542a6" },
+  "onedarkpro.nvim": { "branch": "main", "commit": "eeac8847a46a02c4de4e887c4c6d34b282060b5d" },
   "org-roam.nvim": { "branch": "main", "commit": "57ebbd05ef143b0ad09e6fae3cd3b8b584b3e5a6" },
   "orgmode": { "branch": "master", "commit": "b7bcb90ef446a3e846ac7e0a84391fd737e9b793" },
   "oxocarbon.nvim": { "branch": "main", "commit": "9f85f6090322f39b11ae04a343d4eb9d12a86897" },
