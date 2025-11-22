@@ -2,6 +2,7 @@ local utils = require("utils.core")
 
 local modules = {
   "cd",
+  "columns",
   "config",
   "edit_snippet",
   "format",
