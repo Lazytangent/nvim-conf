@@ -3,8 +3,8 @@ local config = {}
 config.Theming = {
   -- colorscheme = "tokyonight-night",
   -- colorscheme = "onedark_dark",
-  -- colorscheme = "onedark_vivid",
-  colorscheme = "oasis-night",
+  colorscheme = "onedark_vivid",
+  -- colorscheme = "oasis-night",
 }
 
 config.LSP = {
