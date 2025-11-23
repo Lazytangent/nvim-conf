@@ -104,9 +104,14 @@ return {
       end,
     },
   },
+  -- {
+  --   'NicolasGB/jj.nvim',
+  --   config = true,
+  -- },
   {
-    'NicolasGB/jj.nvim',
+    'sivansh11/jj',
     config = true,
+    dev = true,
   },
   {
     'julienvincent/hunk.nvim',
