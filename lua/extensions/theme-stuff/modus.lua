@@ -1,4 +1,7 @@
 return {
   'miikanissi/modus-themes.nvim',
-  config = true,
+  opts = {
+    style = "modus_vivendi",
+    variant = "tinted",
+  },
 }
