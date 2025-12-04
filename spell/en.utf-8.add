@@ -1886,5 +1886,9 @@ rasterization
 FreeType
 rasterize
 linearithmic
-configuration/!
-configuration
+reimplementing
+searchable
+Semistructured
+semistructured
+overrigid
+endian

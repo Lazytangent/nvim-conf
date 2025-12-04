@@ -34,4 +34,11 @@ return {
     end,
     desc = "Toggle syntax"
   },
+  {
+    "yb.",
+    function()
+      vim.wo.winfixbuf = not vim.wo.winfixbuf
+    end,
+    desc = "Pin buffer to window",
+  },
 }
