@@ -1886,3 +1886,5 @@ rasterization
 FreeType
 rasterize
 linearithmic
+configuration/!
+configuration
