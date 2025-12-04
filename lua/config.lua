@@ -36,8 +36,8 @@ config.LSP = {
       "zls",
     },
     regular = {
-      "harper_ls",
-      "ltex_plus",
+      -- "harper_ls",
+      -- "ltex_plus",
       "pyrefly",
       -- "basedpyright",
       -- "pylsp",
