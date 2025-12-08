@@ -14,6 +14,7 @@ local children = {
   'femaco',
   'fidget',
   'folke',
+  'fzf',
   'helpview',
   'hydra',
   'import',
