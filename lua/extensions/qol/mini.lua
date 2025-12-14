@@ -28,7 +28,11 @@ end
 
 -- will allow me to `require` configs per module later
 local configs = {
-  ai = true,
+  ai = {
+    custom_textobjects = {
+      f = require('mini.ai').gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
+    },
+  },
   align = true,
   bracketed = true,
   extra = true,
