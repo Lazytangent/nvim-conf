@@ -37,6 +37,7 @@ local function setup()
     align = true,
     bracketed = true,
     extra = true,
+    files = true,
     pick = {
       mappings = {
         choose_marked = '<C-CR>',
