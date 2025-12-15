@@ -47,8 +47,7 @@ local orgmode = {
       { i(1), i(0), rep(1) }
     )
   ),
-  s({ trig = ";ee", snippetType = "autosnippet" }, fmt("={}={}", { i(1, "code content"), i(0) })),
-  s({ trig = ";tt", snippetType = "autosnippet" }, fmt("~{}~{}", { i(1, "code content"), i(0) })),
+  s({ trig = ";tt", snippetType = "autosnippet" }, fmt("={}={}", { i(1, "code content"), i(0) })),
   s({ trig = ";bf", snippetType = "autosnippet" },
     fmt("*{}*{}", { i(1, "bold"), i(0) })
   ),
