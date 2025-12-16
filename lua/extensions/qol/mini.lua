@@ -36,6 +36,15 @@ local function setup()
     },
     align = true,
     bracketed = true,
+    -- enable mini.cmdline for peek
+    cmdline = {
+      autocomplete = {
+        enable = false,
+      },
+      autocorrect = {
+        enable = false,
+      },
+    },
     extra = true,
     files = true,
     pick = {
