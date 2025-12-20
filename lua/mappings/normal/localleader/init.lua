@@ -2,6 +2,8 @@ return {
   { "<leader>m",     group = "Local leader" },
   { "<leader>m<CR>", function() vim.cmd "nohlsearch" end,    desc = "Turn off highlight" },
 
+  { "<leader>mf", function() MiniFiles.open() end, desc = "Open mini.files" },
+
   { "<leader>mgt",  group = "Toggle" },
   { "<leader>mgtd", desc = "Toggle deleted" },
 

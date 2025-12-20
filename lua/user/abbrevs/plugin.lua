@@ -4,7 +4,8 @@ local window
 
 -- create buffer
 M.create_abbrev_buffer = function()
-  if buffer == -1 then
+  -- If the buffer doesn't exist or is invalid
+  if buffer == -1 or not vim.api.nvim_buf_is_valid(buffer) then
     buffer = vim.api.nvim_create_buf(false, false)
     vim.api.nvim_buf_set_name(buffer, "Abbrevs")
     vim.api.nvim_set_option_value('swapfile', false, { buf = buffer })

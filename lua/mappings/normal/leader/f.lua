@@ -4,6 +4,15 @@ local telescope_extensions = require('telescope').extensions
 local utils = require 'user.utils'
 
 local pickers = {
+  grep = function()
+    MiniPick.builtin.cli({
+      command = {
+        'rg',
+        -- respect gitignore everywhere
+        '--no-require-git',
+      },
+    })
+  end,
   commands = function()
     MiniExtra.pickers.history({ scope = ':' })
   end,

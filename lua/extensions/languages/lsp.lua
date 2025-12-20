@@ -15,4 +15,8 @@ return {
     end,
     event = "VeryLazy",
   },
+  {
+    "roobert/action-hints.nvim",
+    config = true,
+  },
 }

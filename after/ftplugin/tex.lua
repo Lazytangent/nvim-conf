@@ -71,6 +71,8 @@ local mappings = {
   { 'tsD', desc = 'Toggle delimiter' },
   { 'tsf', desc = 'Toggle inline fraction' },
   { 'tsb', desc = 'Toggle line-break' },
+
+  { '<localleader>.', '<plug>(vimtex-compile)', desc = 'Compile' },
 }
 
 require('which-key').add {

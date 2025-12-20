@@ -5,6 +5,8 @@ local children = {
   'catppuccin',
   'citruszest',
   'lualine',
+  'modus',
+  'oasis',
   'onedark',
   'oxocarbon',
   'tokyonight',

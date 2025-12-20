@@ -211,14 +211,6 @@ local latex = {
   s({ trig = ";m", wordTrig = false, snippetType = "autosnippet" },
     fmt("${}${}", { i(1, "math mode"), i(0) })
   ),
-  s({ trig = ";ff", wordTrig = false, snippetType = "autosnippet" },
-    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) }),
-    { condition = tex.in_math }
-  ),
-  s({ trig = ";[", wordTrig = false, snippetType = "autosnippet" },
-    fmta("\\left[<>\\right]<>", { i(1), i(0) }),
-    { condition = tex.in_math }
-  ),
   s({ trig = '"' },
     fmta("``<>''<>", { i(1), i(0) })
   ),

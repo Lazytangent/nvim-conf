@@ -1,5 +1,6 @@
 vim.go.completeopt    = "menuone,noselect"
 vim.go.foldlevelstart = 10
+vim.go.foldopen       = ""
 vim.go.grepprg        = "rg --vimgrep --smart-case --no-heading"
 vim.go.hlsearch       = true
 vim.go.ignorecase     = true
@@ -88,7 +89,8 @@ vim.cmd "filetype plugin indent on"
 vim.cmd "syntax keyword dbmlType string varbinary"
 
 local python3_host_prog = "$HOME/.local/src/neovim-plugins/python-support/.venv/bin/python"
-vim.cmd("let g:python3_host_prog = '" .. python3_host_prog .. "'")
+-- vim.cmd("let g:python3_host_prog = '" .. python3_host_prog .. "'")
+vim.g.python3_host_prog = python3_host_prog
 
 -- Diagnostics
 vim.diagnostic.config({
@@ -96,3 +98,6 @@ vim.diagnostic.config({
     current_line = true,
   },
 })
+
+-- Disable LSP logging
+vim.lsp.log.set_level(vim.log.levels.OFF)

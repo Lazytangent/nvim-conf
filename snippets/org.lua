@@ -9,7 +9,7 @@ local function get_previous_src_lang()
 end
 
 local orgmode = {
-  s({ trig = "__", dscr = "#+TITLE: ", name = "Create title", snippetType = "autosnippet" }, {
+  s({ trig = "__", dscr = "#+TITLE: ", name = "Create title" }, {
     t("#+title: "),
     i(1, "title"),
   }),
@@ -47,8 +47,7 @@ local orgmode = {
       { i(1), i(0), rep(1) }
     )
   ),
-  s({ trig = ";ee", snippetType = "autosnippet" }, fmt("={}={}", { i(1, "code content"), i(0) })),
-  s({ trig = ";tt", snippetType = "autosnippet" }, fmt("~{}~{}", { i(1, "code content"), i(0) })),
+  s({ trig = ";tt", snippetType = "autosnippet" }, fmt("={}={}", { i(1, "code content"), i(0) })),
   s({ trig = ";bf", snippetType = "autosnippet" },
     fmt("*{}*{}", { i(1, "bold"), i(0) })
   ),
@@ -90,6 +89,16 @@ local orgmode = {
         end)
       }
     )
+  ),
+  s(
+    { trig = "<v" },
+    fmta([[
+    #+begin_verse
+    <>
+    #+end_verse
+    ]], {
+      i(0),
+    })
   ),
 }
 

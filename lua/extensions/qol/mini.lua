@@ -26,27 +26,42 @@ local set_quickfixlist = function()
   return true
 end
 
--- will allow me to `require` configs per module later
-local configs = {
-  ai = true,
-  align = true,
-  bracketed = true,
-  extra = true,
-  pick = {
-    mappings = {
-      choose_marked = '<C-CR>',
-      set_quickfixlist = {
-        char = '<C-q>',
-        func = set_quickfixlist,
+local function setup()
+  -- will allow me to `require` configs per module later
+  local configs = {
+    ai = {
+      custom_textobjects = {
+        f = require('mini.ai').gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
+        I = require('mini.extra').gen_ai_spec.indent(),
       },
     },
-    options = {
-      content_from_bottom = true,
+    align = true,
+    bracketed = true,
+    -- enable mini.cmdline for peek
+    cmdline = {
+      autocomplete = {
+        enable = false,
+      },
+      autocorrect = {
+        enable = false,
+      },
     },
-  },
-}
+    extra = true,
+    files = true,
+    pick = {
+      mappings = {
+        choose_marked = '<C-CR>',
+        set_quickfixlist = {
+          char = '<C-q>',
+          func = set_quickfixlist,
+        },
+      },
+      options = {
+        content_from_bottom = true,
+      },
+    },
+  }
 
-local function setup()
   for module, config in pairs(configs) do
     local full_module_name = 'mini.' .. module
 

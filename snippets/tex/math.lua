@@ -19,6 +19,14 @@ local generate_matrix = function(_, snip)
 end
 
 local snippets = {
+  s({ trig = ";ff", wordTrig = false, snippetType = "autosnippet" },
+    fmta("\\frac{<>}{<>}<>", { i(1), i(2), i(0) }),
+    { condition = tex.in_math }
+  ),
+  s({ trig = ";[", wordTrig = false, snippetType = "autosnippet" },
+    fmta("\\left[<>\\right]<>", { i(1), i(0) }),
+    { condition = tex.in_math }
+  ),
   s({
       trig = "([%sbBpvV])Mat(%d+)x(%d+)",
       regTrig = true,

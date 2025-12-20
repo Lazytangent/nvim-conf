@@ -58,11 +58,16 @@ return {
       Rule('{% ', ' %', { 'html', 'htmldjango', 'htmljinja' }),
     }
 
+    -- ignore single quote
     npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex", "commonlisp", "texinfo" }
-    npairs.get_rule("`").not_filetypes = { 'texinfo' }
+    -- ignore backtick
+    npairs.get_rule("`").not_filetypes = { 'texinfo', "tex" }
 
+    -- ignore left square bracket
     npairs.get_rule("[").not_filetypes = { "tex" }
+    -- ignore double quote
     npairs.get_rule('"')[1].not_filetypes = { "tex", "texinfo" }
+    -- ignore left parentheses with space
     npairs.get_rule('( ').not_filetypes = { "scheme", "lisp", "fennel", "commonlisp" }
     -- npairs.get_rule('(').not_filetypes = { "commonlisp" }
   end,
