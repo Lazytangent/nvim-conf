@@ -5,4 +5,6 @@ return {
   },
   build = 'make build',
   opts = true,
+  -- disable on linux
+  enabled = false,
 }

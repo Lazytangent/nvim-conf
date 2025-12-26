@@ -3,7 +3,6 @@ local parent_module = (...):match("(.-)[^%.]+$")
 local modules = {}
 local children = {
   'autopairs',
-  'better-digraphs',
   'comment',
   'conform',
   'databases',

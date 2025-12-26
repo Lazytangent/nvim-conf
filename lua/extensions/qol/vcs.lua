@@ -53,11 +53,15 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
+    -- disable on linux
+    enabled = false,
   },
   {
     'claydugo/browsher.nvim',
     event = 'VeryLazy',
     config = true,
+    -- disable on linux
+    enabled = false,
   },
   {
     "lewis6991/gitsigns.nvim",

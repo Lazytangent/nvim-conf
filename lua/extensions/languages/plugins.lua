@@ -3,7 +3,7 @@ local parent_module = (...):match("(.-)[^%.]+$")
 local modules = {}
 local children = {
   'beancount',
-  'clojure',
+  -- 'clojure',
   'dbml',
   'fennel',
   'go',
