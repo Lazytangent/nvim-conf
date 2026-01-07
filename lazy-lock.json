@@ -111,6 +111,7 @@
   "swift.nvim": { "branch": "master", "commit": "70dd8a554b54a3e70f7b94292f693caa83fb1406" },
   "swift.vim": { "branch": "master", "commit": "75990ecbcaccae5cfb77fb847a7bfa0b925b858d" },
   "targets.vim": { "branch": "master", "commit": "6325416da8f89992b005db3e4517aaef0242602e" },
+  "teide.nvim": { "branch": "main", "commit": "c9cd84e59c57651be7cc6b0f981011c247b6d233" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c" },
   "telescope-live-grep-args.nvim": { "branch": "master", "commit": "b80ec2c70ec4f32571478b501218c8979fab5201" },
   "telescope-luasnip.nvim": { "branch": "master", "commit": "07a2a2936a7557404c782dba021ac0a03165b343" },
