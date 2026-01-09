@@ -7,6 +7,12 @@ return {
       javascript = {
         extends = 'jsx',
       },
+      typescript = {
+        extends = 'tsx',
+      },
+      typescriptreact = {
+        extends = 'javascript',
+      },
     }
   end,
 }
