@@ -52,5 +52,6 @@ return {
     opts = {
       conceal_cursor = "",
     },
+    ft = "tex",
   },
 }
