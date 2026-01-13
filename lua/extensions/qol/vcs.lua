@@ -127,4 +127,14 @@ return {
       'MunifTanjim/nui.nvim',
     },
   },
+  {
+    'kokusenz/deltaview.nvim',
+  },
+  {
+    'clabby/difftastic.nvim',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+    },
+    config = true,
+  },
 }
