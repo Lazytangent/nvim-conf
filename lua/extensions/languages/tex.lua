@@ -28,20 +28,30 @@ return {
       "Vimtex",
     },
   },
+  -- {
+  --   "pxwg/math-conceal.nvim",
+  --   event = "VeryLazy",
+  --   dev = true,
+  --   opts = {
+  --     conceal = {
+  --       "greek",
+  --       "script",
+  --       "math",
+  --       "font",
+  --       -- "delim",
+  --       "phy",
+  --     },
+  --   },
+  --   main = "math-conceal",
+  -- },
   {
-    "pxwg/math-conceal.nvim",
-    event = "VeryLazy",
-    build = "make lua51",
-    opts = {
-      conceal = {
-        "greek",
-        "script",
-        "math",
-        "font",
-        -- "delim",
-        "phy",
-      },
+    'dirichy/latex_concealer.nvim',
+    dependencies = {
+      'dirichy/nvimtex.nvim',
     },
-    main = "math-conceal",
+    opts = {
+      conceal_cursor = "",
+    },
+    ft = "tex",
   },
 }

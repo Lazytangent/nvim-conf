@@ -32,10 +32,20 @@ local function setup()
     ai = {
       custom_textobjects = {
         f = require('mini.ai').gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
+        I = require('mini.extra').gen_ai_spec.indent(),
       },
     },
     align = true,
     bracketed = true,
+    -- enable mini.cmdline for peek
+    cmdline = {
+      autocomplete = {
+        enable = false,
+      },
+      autocorrect = {
+        enable = false,
+      },
+    },
     extra = true,
     files = true,
     pick = {

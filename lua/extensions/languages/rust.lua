@@ -39,7 +39,7 @@ return {
 
       vim.g.rustaceanvim = {
         server = {
-          cmd = { "rustup", "run", "stable", "rust-analyzer" },
+          -- cmd = { "rustup", "run", "stable", "rust-analyzer" },
           on_attach = function(client, bufnr)
             on_attach(client, bufnr)
 

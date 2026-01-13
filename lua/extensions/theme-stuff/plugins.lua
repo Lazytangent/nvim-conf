@@ -9,6 +9,7 @@ local children = {
   'oasis',
   'onedark',
   'oxocarbon',
+  'teide',
   'tokyonight',
 }
 

@@ -3,9 +3,9 @@ local parent_module = (...):match("(.-)[^%.]+$")
 local modules = {}
 local children = {
   'autopairs',
-  'better-digraphs',
   'comment',
   'conform',
+  'csv',
   'databases',
   'dial',
   'dragvisuals',
@@ -33,7 +33,6 @@ local children = {
   'printer',
   'profile',
   'quickfix',
-  'rainbow-csv',
   'render-markdown',
   'rest',
   'session-keys',
