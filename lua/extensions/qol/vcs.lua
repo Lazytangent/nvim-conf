@@ -108,11 +108,11 @@ return {
   --   'NicolasGB/jj.nvim',
   --   config = true,
   -- },
-  {
-    'sivansh11/jj',
-    config = true,
-    dev = true,
-  },
+  -- {
+  --   'sivansh11/jj',
+  --   config = true,
+  --   dev = true,
+  -- },
   {
     'julienvincent/hunk.nvim',
     cmd = {
