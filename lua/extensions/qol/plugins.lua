@@ -2,7 +2,7 @@ local parent_module = (...):match("(.-)[^%.]+$")
 
 local modules = {}
 local children = {
-  -- 'autopairs',
+  'autopairs',
   'comment',
   'conform',
   'csv',
