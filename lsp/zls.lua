@@ -13,7 +13,7 @@ return {
       inlay_hints_show_builtin = false,
       warn_style = true,
       skip_std_references = true,
-      zig_exe_path = vim.fn.expand("~/") .. ".local/bin/zigm",
+      zig_exe_path = "/usr/bin/anyzig",
     },
   },
 }
