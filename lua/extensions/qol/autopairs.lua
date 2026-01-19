@@ -7,6 +7,7 @@ return {
 
     npairs.setup {
       enable_abbr = true,
+      enable_afterquote = false,
       enable_check_bracket_line = false,
     }
 
