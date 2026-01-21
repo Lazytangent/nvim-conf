@@ -14,6 +14,12 @@ return {
   },
   {
     'ywpkwon/yank-path.nvim',
-    config = true,
+    config = function()
+      require('yank-path').setup {
+        default_mapping = false,
+      }
+
+      vim.keymap.set("n", "gY", "<cmd>YankPath<cr>", { desc = "Yank file path" })
+    end,
   },
 }
