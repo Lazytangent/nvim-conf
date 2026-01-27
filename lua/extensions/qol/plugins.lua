@@ -28,6 +28,7 @@ local children = {
   'mini',
   'minibuffer',
   'navic',
+  'nnn',
   'octo',
   'oil',
   'printer',
