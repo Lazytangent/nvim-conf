@@ -17,6 +17,9 @@ return {
 
   { "<leader>e", desc = "Show line diagnostics" },
   { "<leader>q", desc = "Set diagnostics into location list" }, -- Set via LSP on_attach
+  { "<leader>Np", "<cmd>NnnPicker<cr>", desc = "Open NNN picker" },
+  { "<leader>Ne", "<cmd>NnnExplorer<cr>", desc = "Open NNN explorer" },
+  { "<leader>N.", "<cmd>NnnExplorer %:p:h<cr>", desc = "Open NNN explorer in cwd" },
 
   require(current_module .. 'leader'),
   require(current_module .. 'd'),
