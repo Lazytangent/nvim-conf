@@ -7,6 +7,7 @@ return {
 
     npairs.setup {
       enable_abbr = true,
+      enable_afterquote = false,
       enable_check_bracket_line = false,
     }
 
@@ -30,14 +31,18 @@ return {
       :with_del(function(opts)
         local col = vim.api.nvim_win_get_cursor(0)[2]
         local context = opts.line:sub(col - 1, col + 2)
-        return vim.tbl_contains({ "(  )", "{  }", "[  ]" }, context)
+        return vim.tbl_contains({
+          -- "(  )",
+          "{  }",
+          "[  ]",
+        }, context)
       end),
-      Rule('( ', ' )', '-fennel')
-      :with_pair(function() return false end)
-      :with_move(function(opts)
-        return opts.prev_char:match('.%)') ~= nil
-      end)
-      :use_key(')'),
+      -- Rule('( ', ' )', '-fennel')
+      -- :with_pair(function() return false end)
+      -- :with_move(function(opts)
+      --   return opts.prev_char:match('.%)') ~= nil
+      -- end)
+      -- :use_key(')'),
       Rule('{ ', ' }')
       :with_pair(function() return false end)
       :with_move(function(opts)
@@ -68,7 +73,7 @@ return {
     -- ignore double quote
     npairs.get_rule('"')[1].not_filetypes = { "tex", "texinfo" }
     -- ignore left parentheses with space
-    npairs.get_rule('( ').not_filetypes = { "scheme", "lisp", "fennel", "commonlisp" }
+    -- npairs.get_rule('( ').not_filetypes = { "scheme", "lisp", "fennel", "commonlisp" }
     -- npairs.get_rule('(').not_filetypes = { "commonlisp" }
   end,
   event = "VeryLazy",
