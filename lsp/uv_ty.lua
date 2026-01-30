@@ -1,6 +1,6 @@
 -- @type vim.lsp.Config
 return {
-  cmd = { 'uvx', 'ty', 'server' },
+  cmd = { 'uvx', '--native-tls', 'ty', 'server' },
   filetypes = {
     'python',
   },
