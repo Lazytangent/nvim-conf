@@ -5,5 +5,5 @@ return {
     enable_builtin = true,
   },
   -- disable on linux
-  enabled = false,
+  -- enabled = false,
 }
