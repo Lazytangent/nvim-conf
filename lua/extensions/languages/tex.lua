@@ -28,30 +28,31 @@ return {
       "Vimtex",
     },
   },
-  {
-    "pxwg/math-conceal.nvim",
-    event = "VeryLazy",
-    dev = true,
-    opts = {
-      conceal = {
-        "greek",
-        "script",
-        "math",
-        "font",
-        -- "delim",
-        "phy",
-      },
-    },
-    main = "math-conceal",
-  },
   -- {
-  --   'dirichy/latex_concealer.nvim',
-  --   dependencies = {
-  --     'dirichy/nvimtex.nvim',
-  --   },
+  --   "pxwg/math-conceal.nvim",
+  --   event = "VeryLazy",
+  --   dev = true,
   --   opts = {
-  --     conceal_cursor = "",
+  --     conceal = {
+  --       "greek",
+  --       "script",
+  --       "math",
+  --       "font",
+  --       -- "delim",
+  --       "phy",
+  --     },
+  --     ft = { 'tex', 'markdown', 'typst' },
   --   },
-  --   ft = "tex",
+  --   main = "math-conceal",
   -- },
+  {
+    'dirichy/latex_concealer.nvim',
+    dependencies = {
+      'dirichy/nvimtex.nvim',
+    },
+    opts = {
+      conceal_cursor = "",
+    },
+    ft = "tex",
+  },
 }
