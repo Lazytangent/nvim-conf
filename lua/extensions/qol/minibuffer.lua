@@ -11,14 +11,15 @@ return {
       minibuffer.resume(true)
     end)
 
-    local wk_mb = require("minibuffer.integrations.which-key")
-    local wk_view = require('which-key.view')
-    wk_view.show = wk_mb.show
-    wk_view.hide = wk_mb.hide
+    -- local wk_mb = require("minibuffer.integrations.which-key")
+    -- local wk_view = require('which-key.view')
+    -- wk_view.show = wk_mb.show
+    -- wk_view.hide = wk_mb.hide
   end,
   dependencies = {
     "folke/which-key.nvim",
     -- force minibuffer.nvim to load after mini.nvim
     'nvim-mini/mini.nvim',
   },
+  -- dev = true,
 }
