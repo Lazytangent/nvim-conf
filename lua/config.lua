@@ -101,7 +101,7 @@ config.LSP = {
       "dockerls",
       "html",
       "kotlin_language_server",
-      "org", -- from nvim-orgmode
+      -- "org", -- from nvim-orgmode
       "stylelint_lsp",
       "texlab",
       "vimls",
