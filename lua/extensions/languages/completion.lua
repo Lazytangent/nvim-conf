@@ -353,8 +353,8 @@ return {
           end
 
           local all = {
-            s("bash", p(bash, {}, { user_args = { "ls" } })),
-            s("year", p(os.date, "%Y")),
+            s(";bash", p(bash, {}, { user_args = { "ls" } })),
+            s(";year", p(os.date, "%Y")),
             s("today", p(os.date, "%Y-%m-%d")),
             s("yesterday", p(yesterday)),
           }
