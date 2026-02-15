@@ -34,6 +34,51 @@ end
 
 local latex = {
   autosnippet(
+    { trig = ";dc", name = "documentclass" },
+    {
+      c(1, {
+        fmta([[
+          \documentclass{<>}<>
+        ]], { i(1, "class"), i(0) }),
+        fmta([[
+          \documentclass[<>]{<>}<>
+        ]], { i(1, "opt"), i(2, "class"), i(0) }),
+      })
+    }
+  ),
+  autosnippet(
+    { trig = ";subfile", name = "subfile" },
+    fmta(
+      [[
+      \documentclass[<>]{subfiles}
+
+      \begin{document}
+      \<>{<>}
+      <>
+      \end{document}
+      ]],
+      {
+        i(1, "../book.tex"),
+        i(2, "chapter"),
+        i(3, "TITLE"),
+        i(0),
+      }
+    )
+  ),
+  autosnippet(
+    { trig = ";usep", name = "usepackage" },
+    {
+      c(1, {
+        fmta([[
+          \usepackage{<>}<>
+        ]], { i(1, "pkg"), i(0) }),
+        fmta([[
+          \usepackage[<>]{<>}<>
+        ]], { i(1, "opt"), i(2, "pkg"), i(0) }),
+      })
+    }
+  ),
+  autosnippet(
     { trig = ";_", name = "Escaped Underscore", dscr = "Escaped underscore" },
     { t "\\_" }
   ),
