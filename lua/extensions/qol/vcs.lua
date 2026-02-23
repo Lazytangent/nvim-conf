@@ -140,4 +140,7 @@ return {
   {
     "jceb/jiejie.nvim",
   },
+  {
+    'rafikdraoui/jj-diffconflicts',
+  },
 }
