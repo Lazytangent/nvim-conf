@@ -21,4 +21,5 @@ return {
     -- force minibuffer.nvim to load after mini.nvim
     'nvim-mini/mini.nvim',
   },
+  -- dev = true,
 }

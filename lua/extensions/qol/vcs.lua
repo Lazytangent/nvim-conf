@@ -137,4 +137,10 @@ return {
     },
     config = true,
   },
+  {
+    "jceb/jiejie.nvim",
+  },
+  {
+    'rafikdraoui/jj-diffconflicts',
+  },
 }

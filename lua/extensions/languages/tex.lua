@@ -41,6 +41,7 @@ return {
   --       -- "delim",
   --       "phy",
   --     },
+  --     ft = { 'tex', 'markdown', 'typst' },
   --   },
   --   main = "math-conceal",
   -- },

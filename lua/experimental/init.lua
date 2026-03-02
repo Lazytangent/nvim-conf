@@ -1,4 +1,4 @@
-require('vim._extui').enable {
+require('vim._core.ui2').enable {
   enable = true,
   msg = {
     target = "msg",
