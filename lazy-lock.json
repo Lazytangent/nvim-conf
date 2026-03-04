@@ -54,7 +54,7 @@
   "kubectl.nvim": { "branch": "main", "commit": "095e56e206ee73e25aef9ff3af5fa4f15a64913c" },
   "kulala.nvim": { "branch": "main", "commit": "6656c9d332735ca6a27725e0fb45a1715c4372d9" },
   "latex_concealer.nvim": { "branch": "main", "commit": "7eaa22bcf47c8ee7280828c5f29aa436339e6f45" },
-  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
   "leap.nvim": { "branch": "main", "commit": "9a26da7a14c09cd84c05a4e8326890ef0f92a590" },
   "lsp-colors.nvim": { "branch": "main", "commit": "2bbe7541747fd339bdd8923fc45631a09bb4f1e5" },
   "lspkind-nvim": { "branch": "master", "commit": "c7274c48137396526b59d86232eabcdc7fed8a32" },
