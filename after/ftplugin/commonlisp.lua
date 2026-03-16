@@ -1,2 +1,2 @@
 vim.bo.lisp = true
-vim.treesitter.start()
+-- vim.treesitter.start()
