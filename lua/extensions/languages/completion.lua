@@ -469,7 +469,10 @@ return {
         completion = {
           -- ghost_text = { enabled = true },
           menu = {
-            auto_show = false,
+            auto_show = function(ctx, items)
+              -- only enable menu for sql filetype
+              return vim.tbl_contains({ 'sql' }, vim.bo.filetype)
+            end,
           },
         },
         keymap = {
