@@ -27,6 +27,7 @@
   "conform.nvim": { "branch": "master", "commit": "086a40dc7ed8242c03be9f47fbcee68699cc2395" },
   "crates.nvim": { "branch": "main", "commit": "ac9fa498a9edb96dc3056724ff69d5f40b898453" },
   "csvview.nvim": { "branch": "main", "commit": "7022e18a0fbae9aecf99a3ba02b2a541edc2b8a1" },
+  "delta.lua": { "branch": "main", "commit": "51eb4f27fd4bff4268dac8b77f8c69ec25af2a67" },
   "deltaview.nvim": { "branch": "main", "commit": "d9a530e7b55d035a5341efaba65b47a6d893bc43" },
   "dial.nvim": { "branch": "master", "commit": "f2634758455cfa52a8acea6f142dcd6271a1bf57" },
   "difftastic.nvim": { "branch": "main", "commit": "6041ef0244b3fecf3b7f07de9af8cfbf8dbc4945" },
