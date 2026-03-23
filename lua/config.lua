@@ -1,12 +1,16 @@
 local config = {}
 
 config.Theming = {
-  -- colorscheme = "tokyonight-night",
+  colorscheme = "tokyonight-night",
   -- colorscheme = "onedark_dark",
+  -- colorscheme = "onedark_vivid",
+  -- colorscheme = "onedark_vivid",
   -- colorscheme = "onedark_vivid",
   -- colorscheme = "oasis-night",
   -- colorscheme = "oasis-abyss",
-  colorscheme = "oasis-twilight",
+  -- colorscheme = "oasis-abyss",
+  -- colorscheme = "oasis-abyss",
+  -- colorscheme = "oasis-twilight",
   -- colorscheme = 'modus',
   options = {
     -- :lua= vim.fn.getcompletion("", "color")
@@ -118,7 +122,9 @@ config.LSP = {
       -- "typst_lsp",
     },
     regular = {
-      "harper_ls",
+      -- "harper_ls",
+      -- "ltex_plus",
+      -- "ltex_plus",
       "pyrefly",
       -- "basedpyright",
       -- "ltex_plus",

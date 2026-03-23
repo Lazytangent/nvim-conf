@@ -22,13 +22,14 @@ require "lsp"
 -- Personal config stuff
 require "basic"
 require "commands"
-require "experimental"
+-- require "experimental"
 
 -- GUI Config
 require "guis"
 
 require "user.abbrevs.plugin"
 require "user.hydras"
+require "user.database_connections"
 
 -- Start Cfilter for Quickfix list
 vim.api.nvim_command "packadd! cfilter"
