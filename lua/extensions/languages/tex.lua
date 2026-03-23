@@ -48,7 +48,10 @@ return {
   {
     'dirichy/latex_concealer.nvim',
     dependencies = {
-      'dirichy/nvimtex.nvim',
+      {
+        'dirichy/nvimtex.nvim',
+        commit = '86233ae82d48c35ddd665a058f60248f89cc0f39',
+      },
     },
     opts = {
       conceal_cursor = "",
