@@ -54,14 +54,14 @@ return {
       "nvim-lua/plenary.nvim",
     },
     -- disable on linux
-    enabled = false,
+    -- enabled = false,
   },
   {
     'claydugo/browsher.nvim',
     event = 'VeryLazy',
     config = true,
     -- disable on linux
-    enabled = false,
+    -- enabled = false,
   },
   {
     "lewis6991/gitsigns.nvim",
