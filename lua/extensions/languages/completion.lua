@@ -492,26 +492,26 @@ return {
           ['<Tab>'] = {
             function(cmp)
               if cmp.is_visible() then
-                cmp.show_and_insert()
+                return cmp.show_and_insert()
               elseif luasnip.expand_or_locally_jumpable() then
-                luasnip.expand_or_jump()
+                return luasnip.expand_or_jump()
               elseif cmp.snippet_active() then
                 return cmp.accept()
               else
                 return cmp.select_and_accept()
               end
             end,
-            'snippet_forward',
+            -- 'snippet_forward',
             'fallback',
           },
           ['<S-Tab>'] = {
             function(cmp)
               if cmp.is_visible() then
-                cmp.select_prev()
+                return cmp.select_prev()
               elseif luasnip.jumpable(-1) then
-                luasnip.jump(-1)
+                return luasnip.jump(-1)
               else
-                cmp.fallback()
+                return cmp.fallback()
               end
             end,
           },
