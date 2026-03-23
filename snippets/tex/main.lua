@@ -34,6 +34,10 @@ end
 
 local latex = {
   autosnippet(
+    { trig = ";ref", name = "reference" },
+    fmta("\\ref{<>}<>", { i(1), i(0) })
+  ),
+  autosnippet(
     { trig = ";dc", name = "documentclass" },
     {
       c(1, {
