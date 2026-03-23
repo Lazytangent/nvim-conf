@@ -501,6 +501,8 @@ return {
                 return cmp.select_and_accept()
               end
             end,
+            'snippet_forward',
+            'fallback',
           },
           ['<S-Tab>'] = {
             function(cmp)
@@ -511,7 +513,7 @@ return {
               else
                 cmp.fallback()
               end
-            end
+            end,
           },
         },
         signature = { enabled = true },
