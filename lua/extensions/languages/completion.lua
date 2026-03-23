@@ -457,61 +457,90 @@ return {
 
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
-    opts = {
-      cmdline = {
-        keymap = { preset = 'inherit' },
-        completion = { menu = { auto_show = true } },
-      },
-      completion = {
-        ghost_text = { enabled = true },
-        menu = {
-          auto_show = false,
+    config = function()
+      local cmp = require('blink-cmp')
+      local luasnip = require('luasnip')
+
+      cmp.setup {
+        cmdline = {
+          keymap = { preset = 'inherit' },
+          completion = { menu = { auto_show = true } },
         },
-      },
-      keymap = {
-        preset = 'default',
-        ["<C-x><C-n>"] = {
-          function (cmp)
-            cmp.show({ providers = { 'lsp' } })
-          end
-        },
-        ["<C-x><C-b>"] = {
-          function (cmp)
-            cmp.show({ providers = { 'buffer' } })
-          end
-        },
-        ["<C-x><C-p>"] = {
-          function (cmp)
-            cmp.show({ providers = { 'path' } })
-          end
-        },
-      },
-      signature = { enabled = true },
-      snippets = {
-        preset = 'luasnip',
-      },
-      sources = {
-        default = { "lsp", "path", "snippets", "buffer", "ripgrep", "omni" },
-        per_filetype = {
-          sql = { 'snippets', 'dadbod', 'buffer' },
-          lua = { inherit_defaults = true, 'lazydev' },
-        },
-        providers = {
-          ripgrep = {
-            module = "blink-cmp-rg",
-            name = "Ripgrep",
-          },
-          lazydev = {
-            name = "LazyDev",
-            module = "lazydev.integrations.blink",
-            score_offset = 100,
-          },
-          dadbod = {
-            name = "Dadbod",
-            module = "vim_dadbod_completion.blink",
+        completion = {
+          -- ghost_text = { enabled = true },
+          menu = {
+            auto_show = false,
           },
         },
-      },
-    },
+        keymap = {
+          preset = 'default',
+          ["<C-x><C-n>"] = {
+            function (cmp)
+              cmp.show({ providers = { 'lsp' } })
+            end
+          },
+          ["<C-x><C-b>"] = {
+            function (cmp)
+              cmp.show({ providers = { 'buffer' } })
+            end
+          },
+          ["<C-x><C-p>"] = {
+            function (cmp)
+              cmp.show({ providers = { 'path' } })
+            end
+          },
+          ['<Tab>'] = {
+            function(cmp)
+              if cmp.is_visible() then
+                cmp.show_and_insert()
+              elseif luasnip.expand_or_locally_jumpable() then
+                luasnip.expand_or_jump()
+              elseif cmp.snippet_active() then
+                return cmp.accept()
+              else
+                return cmp.select_and_accept()
+              end
+            end,
+          },
+          ['<S-Tab>'] = {
+            function(cmp)
+              if cmp.is_visible() then
+                cmp.select_prev()
+              elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+              else
+                cmp.fallback()
+              end
+            end
+          },
+        },
+        signature = { enabled = true },
+        snippets = {
+          preset = 'luasnip',
+        },
+        sources = {
+          default = { "lsp", "path", "snippets", "buffer", "ripgrep", "omni" },
+          per_filetype = {
+            sql = { 'snippets', 'dadbod', 'buffer' },
+            lua = { inherit_defaults = true, 'lazydev' },
+          },
+          providers = {
+            ripgrep = {
+              module = "blink-cmp-rg",
+              name = "Ripgrep",
+            },
+            lazydev = {
+              name = "LazyDev",
+              module = "lazydev.integrations.blink",
+              score_offset = 100,
+            },
+            dadbod = {
+              name = "Dadbod",
+              module = "vim_dadbod_completion.blink",
+            },
+          },
+        },
+      }
+    end,
   },
 }
