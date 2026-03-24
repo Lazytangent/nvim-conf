@@ -460,7 +460,10 @@ return {
 
       blink_cmp.setup {
         cmdline = {
-          keymap = { preset = 'inherit' },
+          keymap = {
+            preset = 'inherit',
+            ['<CR>'] = { 'fallback' },
+          },
           completion = { menu = { auto_show = true } },
         },
         completion = {
@@ -533,6 +536,10 @@ return {
                 return cmp.fallback()
               end
             end,
+          },
+          ['<CR>'] = {
+            'accept',
+            'fallback'
           },
         },
         signature = { enabled = true },
