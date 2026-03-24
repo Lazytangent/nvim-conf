@@ -511,7 +511,7 @@ return {
           ['<Tab>'] = {
             function(cmp)
               if cmp.is_visible() then
-                return cmp.show_and_insert()
+                return cmp.select_next()
               elseif luasnip.expand_or_locally_jumpable() then
                 return luasnip.expand_or_jump()
               elseif cmp.snippet_active() then
