@@ -30,7 +30,6 @@ local children = {
 
   'lsp',
   'completion',
-  'neodev',
   'nonels',
 
   -- 'haskell',
