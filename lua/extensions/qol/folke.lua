@@ -41,4 +41,9 @@ return {
     event = "VeryLazy",
     config = true,
   },
+  {
+    "folke/lazydev.nvim",
+    config = true,
+    -- ft = "lua",
+  },
 }
