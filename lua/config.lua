@@ -118,7 +118,7 @@ config.LSP = {
       -- "typst_lsp",
     },
     regular = {
-      "harper_ls",
+      -- "harper_ls",
       "pyrefly",
       -- "basedpyright",
       -- "ltex_plus",
