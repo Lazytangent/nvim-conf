@@ -458,10 +458,10 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     config = function()
-      local cmp = require('blink-cmp')
+      local blink_cmp = require('blink-cmp')
       local luasnip = require('luasnip')
 
-      cmp.setup {
+      blink_cmp.setup {
         cmdline = {
           keymap = { preset = 'inherit' },
           completion = { menu = { auto_show = true } },
@@ -479,17 +479,17 @@ return {
           preset = 'default',
           ["<C-x><C-n>"] = {
             function (cmp)
-              cmp.show({ providers = { 'lsp' } })
+              return cmp.show({ providers = { 'lsp' } })
             end
           },
           ["<C-x><C-b>"] = {
             function (cmp)
-              cmp.show({ providers = { 'buffer' } })
+              return cmp.show({ providers = { 'buffer' } })
             end
           },
           ["<C-x><C-p>"] = {
             function (cmp)
-              cmp.show({ providers = { 'path' } })
+              return cmp.show({ providers = { 'path' } })
             end
           },
           ['<Tab>'] = {
