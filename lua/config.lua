@@ -102,6 +102,7 @@ config.LSP = {
       "html",
       "kotlin_language_server",
       -- "org", -- from nvim-orgmode
+      "qmlls",
       "stylelint_lsp",
       "texlab",
       "vimls",
@@ -186,6 +187,7 @@ config.Treesitter = {
     "nu",
     "ocaml",
     "python",
+    "qmljs",
     "query",
     "regex",
     "ruby",
