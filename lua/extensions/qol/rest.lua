@@ -18,6 +18,9 @@ return {
     },
     opts = {
       default_env = "local",
+      additional_curl_options = {
+        "--location", -- follow redirects
+      },
     },
   },
 }
