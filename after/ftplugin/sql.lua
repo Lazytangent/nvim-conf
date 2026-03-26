@@ -1,6 +1,7 @@
 local wk = require "which-key"
 
 vim.keymap.set({'n', 'x'}, '<leader>db', 'db#op_exec()', { expr = true })
+vim.keymap.set({'n', 'x'}, '<localleader>.', 'db#op_exec()', { expr = true })
 
 vim.keymap.set('n', '<leader>de', "db#op_exec() . '_", { expr = true })
 
