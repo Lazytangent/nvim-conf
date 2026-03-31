@@ -464,10 +464,18 @@ return {
             preset = 'inherit',
             ['<CR>'] = { 'fallback' },
           },
-          completion = { menu = { auto_show = true } },
+          completion = {
+            list = { selection = { preselect = false } },
+            menu = { auto_show = true },
+          },
         },
         completion = {
           -- ghost_text = { enabled = true },
+          list = {
+            selection = {
+              preselect = false,
+            },
+          },
           menu = {
             auto_show = function(ctx, items)
               -- only enable menu for sql filetype
