@@ -21,6 +21,9 @@ return {
       additional_curl_options = {
         "--location", -- follow redirects
       },
+      lsp = {
+        formatter = true,
+      },
     },
   },
 }
