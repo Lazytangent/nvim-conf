@@ -1,6 +1,6 @@
 local config = {}
 
-config.Theming = {
+config.theming = {
   -- colorscheme = "tokyonight-night",
   -- colorscheme = "onedark_dark",
   -- colorscheme = "onedark_vivid",
@@ -87,7 +87,7 @@ config.Theming = {
   },
 }
 
-config.LSP = {
+config.lsp = {
   enabled        = true,
   highlight_word = true,
   virtual_text   = true,
@@ -147,13 +147,7 @@ config.LSP = {
   },
 }
 
-config.Completion = {
-  enabled = true,
-  autopairs = true,
-  items = 10,
-}
-
-config.Treesitter = {
+config.treesitter = {
   languages = {
     "bash",
     "beancount",

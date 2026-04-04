@@ -1,10 +1,10 @@
-local Treesitter = require("config").Treesitter
+local treesitter = require("config").treesitter
 
 require("nvim-treesitter").setup({
   install_dir = vim.fn.stdpath('data') .. '/site',
 })
 
-require('nvim-treesitter').install(Treesitter.languages)
+require('nvim-treesitter').install(treesitter.languages)
 
 -- vim.treesitter.language.add(
 --   'texinfo',

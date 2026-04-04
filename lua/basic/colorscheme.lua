@@ -1,6 +1,6 @@
-local Theming = require("config").Theming
+local theming = require("config").theming
 
-local C = Theming.colorscheme
+local C = theming.colorscheme
 vim.g.catppuccin_flavour = "mocha"
 
 if C ~= nil then

@@ -27,16 +27,16 @@ vim.g.format_options_css = {
 vim.g.format_options_yaml = format_options_prettier
 
 -- LSP Config
-local LSP = require("config").LSP
+local lsp = require("config").lsp
 
 vim.diagnostic.config {
-  virtual_text = LSP.virtual_text,
+  virtual_text = lsp.virtual_text,
   signs = true,
   update_in_insert = false,
 }
 
 -- group, list
-for _, list in pairs(LSP.servers) do
+for _, list in pairs(lsp.servers) do
   vim.lsp.enable(list)
 end
 
