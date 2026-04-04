@@ -1,5 +1,6 @@
 local get_python_path = require('user.utils').get_python_path
 
+---@type vim.lsp.Config
 return {
   cmd = { 'uvx', 'ty', 'server' },
   filetypes = {

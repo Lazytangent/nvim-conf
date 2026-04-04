@@ -1,6 +1,6 @@
 local capabilities = require('lsp.capabilities')
 
--- @type vim.lsp.Config
+---@type vim.lsp.Config
 return {
   settings = {
     json = {

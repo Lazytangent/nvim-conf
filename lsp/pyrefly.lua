@@ -1,7 +1,7 @@
 local capabilities = require('lsp.capabilities')
 local get_python_path = require('user.utils').get_python_path
 
--- @type vim.lsp.Config
+---@type vim.lsp.Config
 return {
   capabilities = capabilities,
   settings = {
