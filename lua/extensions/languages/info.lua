@@ -1,3 +1,3 @@
 return {
-  'HiPhish/info.vim',
+  "HiPhish/info.vim",
 }

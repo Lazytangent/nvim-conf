@@ -1,12 +1,12 @@
 if vim.g.vv == 1 then
-  require("guis.vv")
+  require "guis.vv"
 end
 
 if vim.g.goneovim == 1 then
-  require("guis.goneovim")
+  require "guis.goneovim"
 end
 
-if vim.fn.has("gui_vimr") == 1 then
+if vim.fn.has "gui_vimr" == 1 then
   vim.cmd [[ echo "in vimr block" ]]
 
   vim.cmd [[
@@ -18,6 +18,6 @@ end
 if vim.g.neovide then
   vim.schedule(function()
     vim.cmd [[set guifont=FiraCode\ Nerd\ Font:h16]]
-    require('guis.neovide')
+    require "guis.neovide"
   end)
 end

@@ -13,7 +13,7 @@ return {
       "benfowler/telescope-luasnip.nvim",
     },
     config = function()
-      require 'extensions.telescope.configs.telescope'
+      require "extensions.telescope.configs.telescope"
     end,
     event = "VeryLazy",
   },

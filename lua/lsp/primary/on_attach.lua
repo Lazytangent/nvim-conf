@@ -12,22 +12,28 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
-  vim.keymap.set("n", "K",     vim.lsp.buf.hover, opts)
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
   vim.keymap.set("n", "<C-h>", vim.lsp.buf.signature_help, opts)
 
   vim.keymap.set("n", "<localleader>pt", vim.lsp.buf.type_definition, opts)
 
-  vim.keymap.set("n", "<space>,f", function() require('conform').format({ async = true, bufnr = bufnr }) end, opts)
+  vim.keymap.set("n", "<space>,f", function()
+    require("conform").format { async = true, bufnr = bufnr }
+  end, opts)
 
   vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
 
-  vim.keymap.set("n", "[e", function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR }) end, opts)
-  vim.keymap.set("n", "]e", function() vim.diagnostic.jump({ count =  1, severity = vim.diagnostic.severity.ERROR }) end, opts)
+  vim.keymap.set("n", "[e", function()
+    vim.diagnostic.jump { count = -1, severity = vim.diagnostic.severity.ERROR }
+  end, opts)
+  vim.keymap.set("n", "]e", function()
+    vim.diagnostic.jump { count = 1, severity = vim.diagnostic.severity.ERROR }
+  end, opts)
 
-  vim.keymap.set("n", "<space>q",  vim.diagnostic.setloclist, opts)
+  vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 end
 
-vim.api.nvim_create_autocmd('LspAttach', {
+vim.api.nvim_create_autocmd("LspAttach", {
   pattern = {
     "*.bean",
     "*.js",

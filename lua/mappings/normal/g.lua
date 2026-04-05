@@ -1,4 +1,4 @@
-local dial_map = require 'dial.map'
+local dial_map = require "dial.map"
 
 return {
   {

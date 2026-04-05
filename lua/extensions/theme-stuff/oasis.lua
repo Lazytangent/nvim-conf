@@ -1,4 +1,4 @@
 return {
-  'uhs-robert/oasis.nvim',
+  "uhs-robert/oasis.nvim",
   config = true,
 }

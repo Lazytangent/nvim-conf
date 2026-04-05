@@ -1,6 +1,6 @@
-local Hydra = require('hydra')
+local Hydra = require "hydra"
 
-Hydra({
+Hydra {
   hint = [[
   _b_ Bookmarks
   _d_ Describe
@@ -13,24 +13,32 @@ Hydra({
   body = "<leader>jk",
   heads = {
     {
-      'l',
-      function() vim.notify('Log') end,
+      "l",
+      function()
+        vim.notify "Log"
+      end,
       { exit = true },
     },
     {
-      'b',
-      function() vim.notify('Bookmarks') end,
+      "b",
+      function()
+        vim.notify "Bookmarks"
+      end,
       { exit = true },
     },
     {
-      'd',
-      function() vim.notify('Describe') end,
+      "d",
+      function()
+        vim.notify "Describe"
+      end,
       { exit = true },
     },
     {
-      's',
-      function() vim.notify('Status') end,
+      "s",
+      function()
+        vim.notify "Status"
+      end,
       { exit = true },
     },
   },
-})
+}

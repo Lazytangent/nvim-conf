@@ -12,7 +12,7 @@ end
 M.build_files = function()
   builtin.find_files {
     prompt_title = "Java Build Files",
-    find_command = { "fd", "--type", "file", "build.gradle|Makefile" }
+    find_command = { "fd", "--type", "file", "build.gradle|Makefile" },
   }
 end
 

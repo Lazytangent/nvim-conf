@@ -1,15 +1,19 @@
-local ls = require 'luasnip'
+local ls = require "luasnip"
 
-local normal = require 'mappings.normal'
-local visual = require 'mappings.visual'
-local insert = require 'mappings.insert'
+local normal = require "mappings.normal"
+local visual = require "mappings.visual"
+local insert = require "mappings.insert"
 
 local select = {
-  { "<C-e>", function()
-    if ls.choice_active() then
-      ls.change_choice(1)
-    end
-  end, desc = "Select Choice Node" },
+  {
+    "<C-e>",
+    function()
+      if ls.choice_active() then
+        ls.change_choice(1)
+      end
+    end,
+    desc = "Select Choice Node",
+  },
 }
 
 local util = function(str)
@@ -17,8 +21,8 @@ local util = function(str)
 end
 
 local terminal = {
-  { "<C-W>", util('<C-\\><C-N><C-W>'),    desc = "Window movement" },
-  { "<C-#>", util('<C-\\><C-N>:bd!<cr>'), desc = "Close terminal" },
+  { "<C-W>", util "<C-\\><C-N><C-W>", desc = "Window movement" },
+  { "<C-#>", util "<C-\\><C-N>:bd!<cr>", desc = "Close terminal" },
 }
 
 local wk = require "which-key"

@@ -8,14 +8,14 @@ return {
     "yp", -- Yank absolute Path of current buffer
     function()
       -- :help expand()
-      local path = vim.fn.expand("%:p")
+      local path = vim.fn.expand "%:p"
       -- :help setreg
       vim.fn.setreg("+", path)
     end,
     desc = "Yank absolute path of current buffer",
   },
 
-  { "yo",  group = "option" },
+  { "yo", group = "option" },
   { "yon", cmd "set number!", desc = "number" },
   { "yor", cmd "set relativenumber!", desc = "relativenumber" },
   { "yos", cmd "set spell!", desc = "spell" },
@@ -32,7 +32,7 @@ return {
         vim.cmd "syntax enable"
       end
     end,
-    desc = "Toggle syntax"
+    desc = "Toggle syntax",
   },
   {
     "yb.",

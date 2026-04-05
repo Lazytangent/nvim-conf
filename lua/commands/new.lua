@@ -2,7 +2,7 @@ local function slice(tbl, first, last, step)
   local sliced = {}
 
   for i = first or 1, last or #tbl, step or 1 do
-    sliced[#sliced+1] = tbl[i]
+    sliced[#sliced + 1] = tbl[i]
   end
 
   return sliced
@@ -13,10 +13,10 @@ vim.api.nvim_create_user_command("New", function(opts)
   local filetype = args[1]
 
   local buffer = vim.api.nvim_create_buf(false, false)
-  vim.api.nvim_buf_set_name(buffer, filetype .. '-temp')
-  vim.api.nvim_set_option_value('swapfile', false, { buf = buffer })
-  vim.api.nvim_set_option_value('buftype', 'nofile', { buf = buffer })
-  vim.api.nvim_set_option_value('filetype', filetype, { buf = buffer })
+  vim.api.nvim_buf_set_name(buffer, filetype .. "-temp")
+  vim.api.nvim_set_option_value("swapfile", false, { buf = buffer })
+  vim.api.nvim_set_option_value("buftype", "nofile", { buf = buffer })
+  vim.api.nvim_set_option_value("filetype", filetype, { buf = buffer })
 
   vim.api.nvim_open_win(buffer, true, {
     split = "below",
@@ -27,7 +27,7 @@ vim.api.nvim_create_user_command("New", function(opts)
     vim.cmd("setlocal " .. thing)
   end
 
-  vim.api.nvim_create_autocmd('BufLeave', {
+  vim.api.nvim_create_autocmd("BufLeave", {
     buffer = buffer,
     callback = function()
       local number_of_lines = vim.api.nvim_buf_line_count(buffer)
@@ -37,6 +37,6 @@ vim.api.nvim_create_user_command("New", function(opts)
     end,
   })
 end, {
-  nargs = '+',
-  complete = 'filetype',
+  nargs = "+",
+  complete = "filetype",
 })

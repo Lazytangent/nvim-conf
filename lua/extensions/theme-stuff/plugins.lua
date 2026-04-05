@@ -1,16 +1,16 @@
-local parent_module = (...):match("(.-)[^%.]+$")
+local parent_module = (...):match "(.-)[^%.]+$"
 
 local modules = {}
 local children = {
-  'catppuccin',
-  'citruszest',
-  'lualine',
-  'modus',
-  'oasis',
-  'onedark',
-  'oxocarbon',
-  'teide',
-  'tokyonight',
+  "catppuccin",
+  "citruszest",
+  "lualine",
+  "modus",
+  "oasis",
+  "onedark",
+  "oxocarbon",
+  "teide",
+  "tokyonight",
 }
 
 for _, name in ipairs(children) do

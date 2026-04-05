@@ -1,3 +1,3 @@
 return {
-  'jaawerth/fennel.vim',
+  "jaawerth/fennel.vim",
 }

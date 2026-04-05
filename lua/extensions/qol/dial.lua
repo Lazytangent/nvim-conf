@@ -2,8 +2,8 @@ return {
   "monaqa/dial.nvim",
   event = "VeryLazy",
   config = function()
-    local augend = require("dial.augend")
-    local config = require("dial.config")
+    local augend = require "dial.augend"
+    local config = require "dial.config"
 
     config.augends:register_group {
       default = {

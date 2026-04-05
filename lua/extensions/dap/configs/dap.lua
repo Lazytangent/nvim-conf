@@ -1,9 +1,9 @@
 local dap = require "dap"
-local utils = require("utils.core")
+local utils = require "utils.core"
 dap.set_log_level "DEBUG"
 
 local modules = {
-  'dap_python',
+  "dap_python",
 }
 
 utils.load_modules("extensions.dap.configs", modules)
@@ -14,14 +14,14 @@ local custom_python_configs = {
     type = "python",
     request = "launch",
     module = "flask",
-    args = {"run", "--no-debugger", "--no-reload"},
+    args = { "run", "--no-debugger", "--no-reload" },
   },
   {
-    name = 'Generic Remote',
-    type = 'python',
-    request = 'attach',
+    name = "Generic Remote",
+    type = "python",
+    request = "attach",
     port = 5678,
-    host = 'localhost',
+    host = "localhost",
     pathMappings = {
       {
         localRoot = vim.fn.getcwd(),
@@ -30,11 +30,11 @@ local custom_python_configs = {
     },
   },
   {
-    name = 'FastAPI',
-    type = 'python',
-    request = 'launch',
-    module = 'uvicorn',
-    args = {'main:app'},
+    name = "FastAPI",
+    type = "python",
+    request = "launch",
+    module = "uvicorn",
+    args = { "main:app" },
   },
 }
 

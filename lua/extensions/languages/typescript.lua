@@ -6,7 +6,7 @@ return {
     "SmiteshP/nvim-navic",
   },
   opts = {
-    on_attach = require('lsp.primary.on_attach'),
+    on_attach = require "lsp.primary.on_attach",
     settings = {
       expose_as_code_action = {
         "fix_all",

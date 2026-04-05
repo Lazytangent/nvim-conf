@@ -1,10 +1,10 @@
 local treesitter = require("config").treesitter
 
-require("nvim-treesitter").setup({
-  install_dir = vim.fn.stdpath('data') .. '/site',
-})
+require("nvim-treesitter").setup {
+  install_dir = vim.fn.stdpath "data" .. "/site",
+}
 
-require('nvim-treesitter').install(treesitter.languages)
+require("nvim-treesitter").install(treesitter.languages)
 
 -- vim.treesitter.language.add(
 --   'texinfo',
@@ -14,13 +14,13 @@ require('nvim-treesitter').install(treesitter.languages)
 -- )
 
 -- Custom languages
-vim.api.nvim_create_autocmd('User', {
-  pattern = 'TSUpdate',
+vim.api.nvim_create_autocmd("User", {
+  pattern = "TSUpdate",
   callback = function()
-    require('nvim-treesitter.parsers').ghactions = {
+    require("nvim-treesitter.parsers").ghactions = {
       install_info = {
-        url = 'https://github.com/rmuir/tree-sitter-ghactions',
-        queries = 'queries',
+        url = "https://github.com/rmuir/tree-sitter-ghactions",
+        queries = "queries",
       },
     }
   end,

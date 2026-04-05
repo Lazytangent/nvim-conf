@@ -1,7 +1,7 @@
-local utils = require('user.utils')
+local utils = require "user.utils"
 
 local name = "Messages"
-vim.api.nvim_create_user_command(name, function ()
+vim.api.nvim_create_user_command(name, function()
   local buf = utils.get_or_create_buffer_by_name(name)
 
   if buf.new then
@@ -10,14 +10,14 @@ vim.api.nvim_create_user_command(name, function ()
     })
   end
 
-  local content = vim.api.nvim_exec2('messages', { output = true })
+  local content = vim.api.nvim_exec2("messages", { output = true })
 
   if content == nil then
     return
   end
 
   local lines = {}
-  for line in content.output:gmatch("(.-)\n") do
+  for line in content.output:gmatch "(.-)\n" do
     table.insert(lines, line)
   end
 

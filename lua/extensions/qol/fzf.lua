@@ -1,6 +1,6 @@
 return {
-  'ibhagwan/fzf-lua',
+  "ibhagwan/fzf-lua",
   opts = {
-    'fzf-vim',
+    "fzf-vim",
   },
 }

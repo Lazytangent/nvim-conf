@@ -1,7 +1,7 @@
 ---@param path string
 local function org_files(path)
   local org_directory = "~/.local/src/org"
-  return ('%s/%s'):format(org_directory, path)
+  return ("%s/%s"):format(org_directory, path)
 end
 
 return {
@@ -11,30 +11,32 @@ return {
       org_adapt_indentation = false,
       -- org_startup_indented = true,
       org_agenda_files = {
-        '~/Documents/org/*',
-        org_files 'daily/*',
-        org_files 'work/tickets/index.org',
-        org_files 'tasks/repeated.org',
-        org_files 'tasks/todo.org',
+        "~/Documents/org/*",
+        org_files "daily/*",
+        org_files "work/tickets/index.org",
+        org_files "tasks/repeated.org",
+        org_files "tasks/todo.org",
       },
       org_agenda_skip_deadline_if_done = true,
       org_agenda_skip_scheduled_if_done = true,
       org_agenda_span = 10,
-      org_agenda_start_day = '+0d',
-      org_default_notes_file = '~/.local/src/org/default.org',
+      org_agenda_start_day = "+0d",
+      org_default_notes_file = "~/.local/src/org/default.org",
       org_hide_emphasis_markers = true,
       org_highlight_latex_and_related = "entities",
       org_src_window_setup = "botright new",
-      org_startup_folded = 'showeverything',
+      org_startup_folded = "showeverything",
       org_todo_keywords = {
-        'TODO(t)', 'PROJ(p)', 'IN-PROGRESS(i)',
-        '|',
-        'DONE(d)',
+        "TODO(t)",
+        "PROJ(p)",
+        "IN-PROGRESS(i)",
+        "|",
+        "DONE(d)",
       },
       org_todo_keyword_faces = {
-        ['IN-PROGRESS'] = ':foreground blue :background #fefefe :weight bold',
-        PROJ = ':background #FFFFFF :slant italic :underline on',
-        DONE = ':foreground #00ff00',
+        ["IN-PROGRESS"] = ":foreground blue :background #fefefe :weight bold",
+        PROJ = ":background #FFFFFF :slant italic :underline on",
+        DONE = ":foreground #00ff00",
       },
       emacs_config = {
         config_path = "$HOME/.config/emacs/init.el",
@@ -51,11 +53,11 @@ return {
           org_next_visible_heading = false,
         },
       },
-      win_split_mode = '40split',
-    }
+      win_split_mode = "40split",
+    },
   },
   {
-    'chipsenkbeil/org-roam.nvim',
+    "chipsenkbeil/org-roam.nvim",
     opts = {
       directory = "~/.local/src/org/",
       extensions = {
@@ -98,39 +100,39 @@ return {
         d = {
           description = "Default",
           template = "%?",
-          target = org_files("%<%Y%m%d%H%M%S>-%[slug].org"),
+          target = org_files "%<%Y%m%d%H%M%S>-%[slug].org",
         },
         c = {
           description = "Comp-sci",
           template = "%?",
-          target = org_files("comp-sci/%<%Y%m%d%H%M%S>-%[slug].org"),
+          target = org_files "comp-sci/%<%Y%m%d%H%M%S>-%[slug].org",
         },
         i = {
           description = "item",
           template = "%?",
-          target = org_files("items/%<%Y%m%d%H%M%S>-%[slug].org"),
+          target = org_files "items/%<%Y%m%d%H%M%S>-%[slug].org",
         },
         b = {
           description = "Browsers",
           q = {
             description = "Qutebrowser",
             template = "%?",
-            target = org_files("browsers/qutebrowser/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "browsers/qutebrowser/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           l = {
             description = "Lynx",
             template = "%?",
-            target = org_files("browsers/lynx/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "browsers/lynx/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           f = {
             description = "Firefox",
             template = "%?",
-            target = org_files("browsers/firefox%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "browsers/firefox%<%Y%m%d%H%M%S>-%[slug].org",
           },
           a = {
             description = "Arc",
             template = "%?",
-            target = org_files("browsers/arc/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "browsers/arc/%<%Y%m%d%H%M%S>-%[slug].org",
           },
         },
         w = {
@@ -138,27 +140,27 @@ return {
           g = {
             description = "General",
             template = "%?",
-            target = org_files("work/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "work/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           o = {
             description = "Off-Topic",
             template = "%?",
-            target = org_files("work/off-topic/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "work/off-topic/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           t = {
             description = "Tickets",
             template = "%?",
-            target = org_files("work/tickets/%[slug].org"),
+            target = org_files "work/tickets/%[slug].org",
           },
           p = {
             description = "PR Reviews",
             template = "%?",
-            target = org_files("work/pr-reviews/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "work/pr-reviews/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           m = {
             description = "Meetings",
             template = "%?",
-            target = org_files("work/meetings/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "work/meetings/%<%Y%m%d%H%M%S>-%[slug].org",
           },
         },
         l = {
@@ -166,27 +168,27 @@ return {
           r = {
             description = "Rust",
             template = "%?",
-            target = org_files("languages/rust/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "languages/rust/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           r = {
             description = "Zig",
             template = "%?",
-            target = org_files("languages/zig/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "languages/zig/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           r = {
             description = "TeX",
             template = "%?",
-            target = org_files("languages/tex/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "languages/tex/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           r = {
             description = "Lua",
             template = "%?",
-            target = org_files("languages/lua/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "languages/lua/%<%Y%m%d%H%M%S>-%[slug].org",
           },
           r = {
             description = "Python",
             template = "%?",
-            target = org_files("languages/python/%<%Y%m%d%H%M%S>-%[slug].org"),
+            target = org_files "languages/python/%<%Y%m%d%H%M%S>-%[slug].org",
           },
         },
       },

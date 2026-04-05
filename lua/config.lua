@@ -88,9 +88,9 @@ config.theming = {
 }
 
 config.lsp = {
-  enabled        = true,
+  enabled = true,
   highlight_word = true,
-  virtual_text   = true,
+  virtual_text = true,
   servers = {
     -- Server groupings are just for me to know which servers have custom
     -- settings.
@@ -199,7 +199,7 @@ config.treesitter = {
     "vue",
     "yaml",
     "zig",
-  }
+  },
 }
 
 return config

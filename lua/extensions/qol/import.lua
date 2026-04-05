@@ -1,10 +1,10 @@
 return {
-  'piersolenski/import.nvim',
+  "piersolenski/import.nvim",
   dependencies = {
-    'nvim-telescope/telescope.nvim',
+    "nvim-telescope/telescope.nvim",
   },
   opts = {
-    picker = 'telescope',
+    picker = "telescope",
   },
   keys = {
     {

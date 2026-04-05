@@ -37,7 +37,7 @@ return {
 --disable redundantPattern
 --enable redundantReturn
     ]],
-      }
-    }
+      },
+    },
   },
 }

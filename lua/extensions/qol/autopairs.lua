@@ -1,9 +1,9 @@
 return {
   "windwp/nvim-autopairs",
   config = function()
-    local npairs = require('nvim-autopairs')
-    local Rule = require('nvim-autopairs.rule')
-    local cond = require('nvim-autopairs.conds')
+    local npairs = require "nvim-autopairs"
+    local Rule = require "nvim-autopairs.rule"
+    local cond = require "nvim-autopairs.conds"
 
     npairs.setup {
       enable_abbr = true,
@@ -11,62 +11,64 @@ return {
       enable_check_bracket_line = false,
     }
 
-    npairs.add_rules(require('nvim-autopairs.rules.endwise-elixir'))
-    npairs.add_rules(require('nvim-autopairs.rules.endwise-lua'))
-    npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))
+    npairs.add_rules(require "nvim-autopairs.rules.endwise-elixir")
+    npairs.add_rules(require "nvim-autopairs.rules.endwise-lua")
+    npairs.add_rules(require "nvim-autopairs.rules.endwise-ruby")
 
     npairs.add_rules {
       -- From https://github.com/windwp/nvim-autopairs/issues/314
       Rule(" ", " ", "-commonlisp")
-      :with_pair(cond.done())
-      :replace_endpair(function(opts)
-        local pair = opts.line:sub(opts.col - 1, opts.col)
-        if vim.tbl_contains({ "()", "{}", "[]" }, pair) then
-          return " " -- it return space here
-        end
-        return ""-- return empty
-      end)
-      :with_move(cond.none())
-      :with_cr(cond.none())
-      :with_del(function(opts)
-        local col = vim.api.nvim_win_get_cursor(0)[2]
-        local context = opts.line:sub(col - 1, col + 2)
-        return vim.tbl_contains({
-          -- "(  )",
-          "{  }",
-          "[  ]",
-        }, context)
-      end),
+        :with_pair(cond.done())
+        :replace_endpair(function(opts)
+          local pair = opts.line:sub(opts.col - 1, opts.col)
+          if vim.tbl_contains({ "()", "{}", "[]" }, pair) then
+            return " " -- it return space here
+          end
+          return "" -- return empty
+        end)
+        :with_move(cond.none())
+        :with_cr(cond.none())
+        :with_del(function(opts)
+          local col = vim.api.nvim_win_get_cursor(0)[2]
+          local context = opts.line:sub(col - 1, col + 2)
+          return vim.tbl_contains({
+            -- "(  )",
+            "{  }",
+            "[  ]",
+          }, context)
+        end),
       -- Rule('( ', ' )', '-fennel')
       -- :with_pair(function() return false end)
       -- :with_move(function(opts)
       --   return opts.prev_char:match('.%)') ~= nil
       -- end)
       -- :use_key(')'),
-      Rule('{ ', ' }')
-      :with_pair(function() return false end)
-      :with_move(function(opts)
-        return opts.prev_char:match('.%}') ~= nil
-      end)
-      :use_key('}'),
-      Rule('[ ', ' ]')
-      :with_pair(function() return false end)
-      :with_move(function(opts)
-        return opts.prev_char:match('.%]') ~= nil
-      end)
-      :use_key(']'),
-      Rule('~', '~', 'org')
-      :with_pair(cond.not_before_regex("%g"))
-      :with_move(function(opts)
+      Rule("{ ", " }")
+        :with_pair(function()
+          return false
+        end)
+        :with_move(function(opts)
+          return opts.prev_char:match ".%}" ~= nil
+        end)
+        :use_key "}",
+      Rule("[ ", " ]")
+        :with_pair(function()
+          return false
+        end)
+        :with_move(function(opts)
+          return opts.prev_char:match ".%]" ~= nil
+        end)
+        :use_key "]",
+      Rule("~", "~", "org"):with_pair(cond.not_before_regex "%g"):with_move(function(opts)
         return opts.next_char == opts.char
       end),
-      Rule('{% ', ' %', { 'html', 'htmldjango', 'htmljinja' }),
+      Rule("{% ", " %", { "html", "htmldjango", "htmljinja" }),
     }
 
     -- ignore single quote
     npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex", "commonlisp", "texinfo" }
     -- ignore backtick
-    npairs.get_rule("`").not_filetypes = { 'texinfo', "tex" }
+    npairs.get_rule("`").not_filetypes = { "texinfo", "tex" }
 
     -- ignore left square bracket
     npairs.get_rule("[").not_filetypes = { "tex" }

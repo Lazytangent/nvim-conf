@@ -1,4 +1,4 @@
 return {
-  'LhKipp/nvim-nu',
+  "LhKipp/nvim-nu",
   config = true,
 }

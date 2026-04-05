@@ -8,7 +8,7 @@ local M = {}
 M.find_match = function(lang, table)
   local node = vim.treesitter.get_node()
   if node == nil then
-    vim.notify("Node was nil")
+    vim.notify "Node was nil"
     return nil
   end
   local tree = node:tree()

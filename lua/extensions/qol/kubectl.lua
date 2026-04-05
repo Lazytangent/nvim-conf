@@ -1,9 +1,9 @@
 return {
-  'Ramilito/kubectl.nvim',
+  "Ramilito/kubectl.nvim",
   dependencies = {
-    'Ramilito/kubediff',
+    "Ramilito/kubediff",
   },
-  build = 'make build',
+  build = "make build",
   opts = true,
   -- disable on linux
   enabled = false,

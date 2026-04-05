@@ -17,20 +17,20 @@ return {
       f.prettier,
 
       -- JSON
-      require("none-ls.formatting.jq"),
+      require "none-ls.formatting.jq",
 
       -- Lua
       f.stylua,
 
       -- Rust
-      require("none-ls.formatting.rustfmt"),
+      require "none-ls.formatting.rustfmt",
 
       -- SQL
       f.sqlformat,
 
       -- Python
       f.yapf,
-      require("none-ls.formatting.autopep8"),
+      require "none-ls.formatting.autopep8",
       f.black,
       f.isort,
 
@@ -58,7 +58,7 @@ return {
       d.rubocop,
 
       -- Shell
-      require("none-ls-shellcheck.diagnostics"),
+      require "none-ls-shellcheck.diagnostics",
 
       -- Codespell
       d.codespell,
@@ -71,7 +71,7 @@ return {
       d.ktlint,
 
       -- Vale.sh
-      d.vale.with({
+      d.vale.with {
         filetypes = {
           "markdown",
           "tex",
@@ -79,7 +79,7 @@ return {
           "texinfo",
           "latex",
         },
-      }),
+      },
     }
 
     local code_actions = {

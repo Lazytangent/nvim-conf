@@ -1,4 +1,4 @@
 return {
-  'kjvdven/teide.nvim',
+  "kjvdven/teide.nvim",
   config = true,
 }

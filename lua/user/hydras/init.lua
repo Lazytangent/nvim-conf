@@ -1,10 +1,10 @@
-local parent_module = (...):match("(.-)[^%.]+$")
-local current_module = parent_module .. 'hydras.'
+local parent_module = (...):match "(.-)[^%.]+$"
+local current_module = parent_module .. "hydras."
 
 local hydras = {
-  'git_submode',
-  'jujutsu',
-  'magit',
+  "git_submode",
+  "jujutsu",
+  "magit",
 }
 
 for _, hydra in ipairs(hydras) do

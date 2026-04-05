@@ -10,7 +10,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- Use GUI Pinentry for signing GPG keys
-vim.env.PINENTRY_USER_DATA = 'USE_QT'
+vim.env.PINENTRY_USER_DATA = "USE_QT"
 
 -- Load in extensions
 require "extensions"

@@ -6,7 +6,7 @@ utils.join_paths = function(...)
 end
 
 utils.get_separator = function()
-  return '/'
+  return "/"
 end
 
 return utils
