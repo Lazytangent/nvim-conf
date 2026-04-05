@@ -3,7 +3,7 @@ local enabled_langs = {
   "python",
 }
 
-require("tmindent").setup {
+require("tmindent").setup({
   enabled = function()
     return vim.tbl_contains(enabled_langs, vim.bo.filetype)
   end,
@@ -12,4 +12,4 @@ require("tmindent").setup {
   end,
   default_rule = {},
   rules = {},
-}
+})

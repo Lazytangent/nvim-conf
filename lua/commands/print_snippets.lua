@@ -52,11 +52,11 @@ vim.api.nvim_create_user_command("DescribeSnippetsTable", function(args)
 
   vim.cmd.vsplit()
   vim.api.nvim_win_set_buf(0, bufnr)
-  vim.cmd "%:EasyAlign *|"
+  vim.cmd("%:EasyAlign *|")
 end, {})
 
 vim.api.nvim_create_user_command("ListSnippets", function()
-  local sl = require "luasnip.extras.snippet_list"
+  local sl = require("luasnip.extras.snippet_list")
   local function printer(snippets)
     local res = ""
 
@@ -73,7 +73,7 @@ vim.api.nvim_create_user_command("ListSnippets", function()
     return res
   end
 
-  sl.open { printer = printer }
+  sl.open({ printer = printer })
 end, {})
 
 vim.api.nvim_create_user_command("ListSnippetFts", function()

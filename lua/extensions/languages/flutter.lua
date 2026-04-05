@@ -6,7 +6,7 @@ return {
   },
   opts = {
     lsp = {
-      on_attach = require "lsp.primary.on_attach",
+      on_attach = require("lsp.primary.on_attach"),
     },
   },
   event = "VeryLazy",

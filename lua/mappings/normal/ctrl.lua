@@ -1,4 +1,4 @@
-local dial_map = require "dial.map"
+local dial_map = require("dial.map")
 
 return {
   {
@@ -12,7 +12,7 @@ return {
   {
     "<C-w>d",
     function()
-      vim.cmd "vsplit"
+      vim.cmd("vsplit")
       vim.lsp.buf.definition()
     end,
     desc = "Vertical split and Go to definition",

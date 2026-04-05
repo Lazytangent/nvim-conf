@@ -116,7 +116,7 @@ return {
         map("n", "<leader>gtp", gs.preview_hunk)
         map("n", "<leader>gd", gs.diffthis)
         map("n", "<leader>gD", function()
-          gs.diffthis "~"
+          gs.diffthis("~")
         end)
         map("n", "<leader>gtd", gs.toggle_deleted)
 

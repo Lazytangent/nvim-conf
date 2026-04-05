@@ -15,13 +15,13 @@ local autocmds = {
     {
       callback = function()
         if
-          vim.fn.line "'\"" >= 1
-          and vim.fn.line "'\"" <= vim.fn.line "$"
+          vim.fn.line("'\"") >= 1
+          and vim.fn.line("'\"") <= vim.fn.line("$")
           and vim.bo.filetype ~= "gitcommit"
           and vim.bo.filetype ~= "commit"
           and vim.fn.index({ "xxd", "gitrebase" }, vim.bo.filetype) == -1
         then
-          vim.cmd [[exec "normal! g'\""]]
+          vim.cmd([[exec "normal! g'\""]])
         end
       end,
       group = group,
@@ -47,7 +47,7 @@ local autocmds = {
     "ModeChanged",
     {
       callback = function()
-        local luasnip = require "luasnip"
+        local luasnip = require("luasnip")
         if
           ((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
           and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
@@ -82,10 +82,10 @@ local autocmds = {
     "User",
     {
       callback = function()
-        require("lualine").hide {
+        require("lualine").hide({
           place = { "winbar" },
           unhide = false,
-        }
+        })
       end,
       pattern = "DiffviewViewOpened",
       group = group,
@@ -96,7 +96,7 @@ local autocmds = {
     "User",
     {
       callback = function()
-        require("lualine").hide { unhide = true }
+        require("lualine").hide({ unhide = true })
       end,
       pattern = "DiffviewViewClosed",
       group = group,
@@ -108,7 +108,7 @@ local autocmds = {
     {
       pattern = "*",
       callback = function()
-        local file_path = vim.fn.expand "<afile>:p:h"
+        local file_path = vim.fn.expand("<afile>:p:h")
 
         if string.match(file_path, "^oil") ~= nil then
           return

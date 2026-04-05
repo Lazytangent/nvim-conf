@@ -1,6 +1,6 @@
-local Hydra = require "hydra"
+local Hydra = require("hydra")
 
-local gitignore = Hydra {
+local gitignore = Hydra({
   hint = [[
   _t_ shared at toplevel (.gitignore)
   _s_ shared in subdirectory (path/to/.gitignore)
@@ -15,7 +15,7 @@ local gitignore = Hydra {
       "t",
       function()
         -- TODO: Open .gitignore file at the root of the current repository
-        vim.notify "toplevel"
+        vim.notify("toplevel")
       end,
       {
         exit = true,
@@ -25,7 +25,7 @@ local gitignore = Hydra {
       "s",
       function()
         -- TODO: Open .gitignore file in subdirectory of open file
-        vim.notify "subdirectory"
+        vim.notify("subdirectory")
       end,
       {
         exit = true,
@@ -35,7 +35,7 @@ local gitignore = Hydra {
       "p",
       function()
         -- TODO: Open .git/info/exclude file
-        vim.notify "private"
+        vim.notify("private")
       end,
       {
         exit = true,
@@ -45,13 +45,13 @@ local gitignore = Hydra {
       "g",
       function()
         -- TODO: Get file for git setting 'core.excludesfile' and open that
-        vim.notify "global"
+        vim.notify("global")
       end,
       {
         exit = true,
       },
     },
   },
-}
+})
 
 return gitignore

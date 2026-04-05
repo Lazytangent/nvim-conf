@@ -1,8 +1,8 @@
-local telescope = require "telescope"
-local lga_actions = require "telescope-live-grep-args.actions"
+local telescope = require("telescope")
+local lga_actions = require("telescope-live-grep-args.actions")
 
-telescope.setup {
-  defaults = require("telescope.themes").get_ivy {
+telescope.setup({
+  defaults = require("telescope.themes").get_ivy({
     file_ignore_patterns = { "^node_modules/", "%.class" },
     mappings = {
       i = {
@@ -15,7 +15,7 @@ telescope.setup {
         ["<C-t>"] = require("trouble.sources.telescope").open,
       },
     },
-  },
+  }),
   pickers = {
     find_files = {
       previewer = false,
@@ -27,18 +27,18 @@ telescope.setup {
       mappings = {
         i = {
           ["<C-k>"] = lga_actions.quote_prompt(),
-          ["<C-i>"] = lga_actions.quote_prompt { postfix = " --iglob " },
+          ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
         },
       },
     },
     ["ui-select"] = {
-      require("telescope.themes").get_dropdown {},
+      require("telescope.themes").get_dropdown({}),
     },
     workspaces = {
       keep_insert = true,
     },
   },
-}
+})
 
 local extensions = {
   "fzf",

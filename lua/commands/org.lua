@@ -1,7 +1,7 @@
 local M = {}
 
 M.today = function()
-  local today = os.date "%Y-%m-%d"
+  local today = os.date("%Y-%m-%d")
   require("org-roam").ext.dailies.goto_date({ date = today }):next(function(date)
     if date then
       print("Opened date " .. date:to_string())
@@ -11,12 +11,12 @@ end
 
 ---@param prefix? string
 M.find = function(prefix)
-  require("org-roam").api.find_node { title = prefix }
+  require("org-roam").api.find_node({ title = prefix })
 end
 
 ---@param title? string
 M.capture = function(title)
-  require("org-roam").api.capture_node { title = title }
+  require("org-roam").api.capture_node({ title = title })
 end
 
 vim.api.nvim_create_user_command("RoamToday", M.today, {})

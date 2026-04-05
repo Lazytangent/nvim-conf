@@ -1,4 +1,4 @@
-require("vim._core.ui2").enable {
+require("vim._core.ui2").enable({
   enable = true,
   msg = {
     targets = {
@@ -43,4 +43,4 @@ require("vim._core.ui2").enable {
       height = 0.5,
     },
   },
-}
+})

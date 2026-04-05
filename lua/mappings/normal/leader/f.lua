@@ -1,32 +1,32 @@
-local telescope = require "telescope.builtin"
+local telescope = require("telescope.builtin")
 local telescope_extensions = require("telescope").extensions
 
-local utils = require "user.utils"
+local utils = require("user.utils")
 
 local pickers = {
   grep = function()
-    MiniPick.builtin.cli {
+    MiniPick.builtin.cli({
       command = {
         "rg",
         -- respect gitignore everywhere
         "--no-require-git",
       },
-    }
+    })
   end,
   commands = function()
-    MiniExtra.pickers.history { scope = ":" }
+    MiniExtra.pickers.history({ scope = ":" })
   end,
   search_history = function()
-    MiniExtra.pickers.history { scope = "?" }
+    MiniExtra.pickers.history({ scope = "?" })
   end,
   quickfix = function()
-    MiniExtra.pickers.list { scope = "quickfix" }
+    MiniExtra.pickers.list({ scope = "quickfix" })
   end,
   jumplist = function()
-    MiniExtra.pickers.list { scope = "jump" }
+    MiniExtra.pickers.list({ scope = "jump" })
   end,
   grep_this_word = function()
-    MiniPick.builtin.grep { pattern = vim.fn.expand "<cword>" }
+    MiniPick.builtin.grep({ pattern = vim.fn.expand("<cword>") })
   end,
   files = function()
     MiniPick.builtin.files(nil, {
@@ -41,7 +41,7 @@ local pickers = {
   config = function()
     MiniPick.builtin.files(nil, {
       source = {
-        cwd = vim.fn.stdpath "config",
+        cwd = vim.fn.stdpath("config"),
       },
     })
   end,
@@ -49,31 +49,31 @@ local pickers = {
 
 local lsp_pickers = {
   declaration = function()
-    MiniExtra.pickers.lsp { scope = "declaration" }
+    MiniExtra.pickers.lsp({ scope = "declaration" })
   end,
   definition = function()
-    MiniExtra.pickers.lsp { scope = "definition" }
+    MiniExtra.pickers.lsp({ scope = "definition" })
   end,
   document_symbol = function()
-    MiniExtra.pickers.lsp { scope = "document_symbol" }
+    MiniExtra.pickers.lsp({ scope = "document_symbol" })
   end,
   implementation = function()
-    MiniExtra.pickers.lsp { scope = "implementation" }
+    MiniExtra.pickers.lsp({ scope = "implementation" })
   end,
   references = function()
-    MiniExtra.pickers.lsp { scope = "references" }
+    MiniExtra.pickers.lsp({ scope = "references" })
   end,
   type_definition = function()
-    MiniExtra.pickers.lsp { scope = "type_definition" }
+    MiniExtra.pickers.lsp({ scope = "type_definition" })
   end,
   workspace_symbol = function()
-    MiniExtra.pickers.lsp { scope = "workspace_symbol" }
+    MiniExtra.pickers.lsp({ scope = "workspace_symbol" })
   end,
 }
 
 local git = {
   modified = function()
-    MiniExtra.pickers.git_files { scope = "modified" }
+    MiniExtra.pickers.git_files({ scope = "modified" })
   end,
 }
 

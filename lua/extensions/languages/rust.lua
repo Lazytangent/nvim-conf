@@ -3,7 +3,7 @@ return {
     "mrcjkb/rustaceanvim",
     config = function()
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      local utils = require "mappings.utils"
+      local utils = require("mappings.utils")
 
       local on_attach = function(client, bufnr)
         if client.server_capabilities.documentSymbols then
@@ -25,23 +25,23 @@ return {
         vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
 
         vim.keymap.set("n", "<space>,f", function()
-          require("conform").format { async = true, bufnr = bufnr }
+          require("conform").format({ async = true, bufnr = bufnr })
         end, opts)
 
         vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
 
         vim.keymap.set("n", "[d", function()
-          vim.diagnostic.jump { count = -1 }
+          vim.diagnostic.jump({ count = -1 })
         end, opts)
         vim.keymap.set("n", "]d", function()
-          vim.diagnostic.jump { count = 1 }
+          vim.diagnostic.jump({ count = 1 })
         end, opts)
 
         vim.keymap.set("n", "[e", function()
-          vim.diagnostic.jump { count = -1, severity = vim.diagnostic.severity.ERROR }
+          vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
         end, opts)
         vim.keymap.set("n", "]e", function()
-          vim.diagnostic.jump { count = 1, severity = vim.diagnostic.severity.ERROR }
+          vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
         end, opts)
 
         vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
@@ -54,7 +54,7 @@ return {
             on_attach(client, bufnr)
 
             vim.keymap.set("n", "<Leader>as", function()
-              vim.cmd.RustLsp "codeAction"
+              vim.cmd.RustLsp("codeAction")
             end, { buffer = bufnr })
           end,
           capabilities = capabilities,

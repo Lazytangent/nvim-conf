@@ -1,22 +1,22 @@
 local luasnip_config = {
   "L3MON4D3/LuaSnip",
   config = function()
-    local ls = require "luasnip"
+    local ls = require("luasnip")
     local s = ls.snippet
     local p = require("luasnip.extras").partial
     local i = ls.insert_node
     local sn = ls.snippet_node
 
-    ls.setup {
+    ls.setup({
       enable_autosnippets = true,
       history = true,
       update_events = "TextChangedI",
       store_selection_keys = "<Tab>",
-      load_ft_func = require("luasnip.extras.filetype_functions").extend_load_ft {
+      load_ft_func = require("luasnip.extras.filetype_functions").extend_load_ft({
         cpp = { "c" },
         typescript = { "javascript" },
         typescriptreact = { "javascript" },
-      },
+      }),
       snip_env = {
         autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" }),
         tex = {
@@ -32,9 +32,9 @@ local luasnip_config = {
           end
         end,
       },
-    }
+    })
 
-    ls.log.set_loglevel "info"
+    ls.log.set_loglevel("info")
 
     local function bash(_, _, command)
       local file = io.popen(command, "r")
@@ -65,7 +65,7 @@ local luasnip_config = {
 
     require("luasnip.loaders.from_vscode").lazy_load()
     require("luasnip.loaders.from_snipmate").lazy_load()
-    require("luasnip.loaders.from_lua").lazy_load { paths = { "~/.config/nvim/snippets" } }
+    require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/snippets" } })
 
     ls.filetype_extend("ruby", { "rails" })
     ls.filetype_extend("html", { "twig" })
@@ -457,10 +457,10 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     config = function()
-      local blink_cmp = require "blink-cmp"
-      local luasnip = require "luasnip"
+      local blink_cmp = require("blink-cmp")
+      local luasnip = require("luasnip")
 
-      blink_cmp.setup {
+      blink_cmp.setup({
         cmdline = {
           keymap = {
             preset = "inherit",
@@ -508,17 +508,17 @@ return {
           preset = "default",
           ["<C-x><C-n>"] = {
             function(cmp)
-              return cmp.show { providers = { "lsp" } }
+              return cmp.show({ providers = { "lsp" } })
             end,
           },
           ["<C-x><C-b>"] = {
             function(cmp)
-              return cmp.show { providers = { "buffer" } }
+              return cmp.show({ providers = { "buffer" } })
             end,
           },
           ["<C-x><C-p>"] = {
             function(cmp)
-              return cmp.show { providers = { "path" } }
+              return cmp.show({ providers = { "path" } })
             end,
           },
           ["<Tab>"] = {
@@ -578,7 +578,7 @@ return {
             },
           },
         },
-      }
+      })
     end,
   },
 }

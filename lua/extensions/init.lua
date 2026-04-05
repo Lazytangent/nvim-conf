@@ -1,4 +1,4 @@
-local lazy = require "lazy"
+local lazy = require("lazy")
 
 local lazy_opts = {
   concurrency = 50,

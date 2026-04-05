@@ -30,7 +30,7 @@ local function setup()
   local configs = {
     ai = {
       custom_textobjects = {
-        f = require("mini.ai").gen_spec.treesitter { a = "@function.outer", i = "@function.inner" },
+        f = require("mini.ai").gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }),
         I = require("mini.extra").gen_ai_spec.indent(),
       },
     },

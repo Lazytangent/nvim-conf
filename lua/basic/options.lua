@@ -53,7 +53,7 @@ local settings = {
     smartindent = false,
     softtabstop = 4,
     -- Was originally the default, but got moved to stdpath('data')/site/
-    spellfile = vim.fn.stdpath "config" .. "/spell/en.utf-8.add",
+    spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add",
     spelllang = "en_us",
     swapfile = false,
     syntax = "off",
@@ -68,11 +68,11 @@ for k, v in pairs(settings.buffer) do
   vim.o[k] = v
 end
 
-vim.opt.clipboard:append { "unnamedplus" }
-vim.opt.errorformat:append { "%f" }
-vim.opt.formatoptions:append { "t" }
-vim.opt.path:append { "**" }
-vim.opt.whichwrap:append { ["<"] = true, [">"] = true, h = true, l = true }
+vim.opt.clipboard:append({ "unnamedplus" })
+vim.opt.errorformat:append({ "%f" })
+vim.opt.formatoptions:append({ "t" })
+vim.opt.path:append({ "**" })
+vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, h = true, l = true })
 
 vim.opt.diffopt = {
   "internal",
@@ -85,19 +85,19 @@ vim.opt.diffopt = {
   "iwhite",
 }
 
-vim.cmd "filetype plugin indent on"
-vim.cmd "syntax keyword dbmlType string varbinary"
+vim.cmd("filetype plugin indent on")
+vim.cmd("syntax keyword dbmlType string varbinary")
 
 local python3_host_prog = "$HOME/.local/src/neovim-plugins/python-support/.venv/bin/python"
 -- vim.cmd("let g:python3_host_prog = '" .. python3_host_prog .. "'")
 vim.g.python3_host_prog = python3_host_prog
 
 -- Diagnostics
-vim.diagnostic.config {
+vim.diagnostic.config({
   virtual_text = {
     current_line = true,
   },
-}
+})
 
 -- Disable LSP logging
 vim.lsp.log.set_level(vim.log.levels.OFF)

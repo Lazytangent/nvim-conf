@@ -1,5 +1,5 @@
-local Hydra = require "hydra"
-local gitsigns = require "gitsigns"
+local Hydra = require("hydra")
+local gitsigns = require("gitsigns")
 
 local hint = [[
 _J_: next hunk   _s_: stage hunk        _d_: show deleted   _b_: blame line
@@ -9,7 +9,7 @@ _K_: prev hunk   _u_: undo stage hunk   _p_: preview hunk   _B_: blame show full
 ^ ^              _<Enter>_: Neogit              _q_: exit
 ]]
 
-Hydra {
+Hydra({
   hint = hint,
   config = {
     color = "pink",
@@ -26,7 +26,7 @@ Hydra {
       gitsigns.toggle_signs(false)
       gitsigns.toggle_linehl(false)
       gitsigns.toggle_deleted(false)
-      vim.cmd "echo" -- clear the echo area
+      vim.cmd("echo") -- clear the echo area
     end,
   },
   mode = { "n", "x" },
@@ -67,11 +67,11 @@ Hydra {
     {
       "B",
       function()
-        gitsigns.blame_line { full = true }
+        gitsigns.blame_line({ full = true })
       end,
     },
     { "/", gitsigns.show, { exit = true } }, -- show the base of the file
     { "<Enter>", "<cmd>Neogit<CR>", { exit = true } },
     { "q", nil, { exit = true, nowait = true } },
   },
-}
+})

@@ -1,9 +1,9 @@
-local wk = require "which-key"
+local wk = require("which-key")
 
-local select = require "nvim-treesitter-textobjects.select"
-local move = require "nvim-treesitter-textobjects.move"
+local select = require("nvim-treesitter-textobjects.select")
+local move = require("nvim-treesitter-textobjects.move")
 
-wk.add {
+wk.add({
   {
     -- select
     mode = { "x", "o" },
@@ -106,4 +106,4 @@ wk.add {
       },
     },
   },
-}
+})

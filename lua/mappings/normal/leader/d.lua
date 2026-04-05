@@ -1,4 +1,4 @@
-local dap = require "dap"
+local dap = require("dap")
 
 return {
   { "<leader>d", group = "Debugger" },

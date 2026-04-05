@@ -1,4 +1,4 @@
-local gitsigns = require "gitsigns"
+local gitsigns = require("gitsigns")
 
 return {
   { "<leader>g", group = "Git" },

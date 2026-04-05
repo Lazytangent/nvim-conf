@@ -3,7 +3,7 @@ return {
   {
     "<leader>m<CR>",
     function()
-      vim.cmd "nohlsearch"
+      vim.cmd("nohlsearch")
     end,
     desc = "Turn off highlight",
   },

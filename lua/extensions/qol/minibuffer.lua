@@ -1,12 +1,12 @@
 return {
   "simifalaye/minibuffer.nvim",
   init = function()
-    local minibuffer = require "minibuffer"
+    local minibuffer = require("minibuffer")
 
-    vim.ui.select = require "minibuffer.builtin.ui_select"
-    vim.ui.input = require "minibuffer.builtin.ui_input"
+    vim.ui.select = require("minibuffer.builtin.ui_select")
+    vim.ui.input = require("minibuffer.builtin.ui_input")
 
-    vim.keymap.set("n", "<leader>;", require "minibuffer.builtin.cmdline")
+    vim.keymap.set("n", "<leader>;", require("minibuffer.builtin.cmdline"))
     vim.keymap.set("n", "<leader>.", function()
       minibuffer.resume(true)
     end)

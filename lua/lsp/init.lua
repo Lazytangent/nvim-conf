@@ -29,11 +29,11 @@ vim.g.format_options_yaml = format_options_prettier
 -- LSP Config
 local lsp = require("config").lsp
 
-vim.diagnostic.config {
+vim.diagnostic.config({
   virtual_text = lsp.virtual_text,
   signs = true,
   update_in_insert = false,
-}
+})
 
 -- group, list
 for _, list in pairs(lsp.servers) do
@@ -41,5 +41,5 @@ for _, list in pairs(lsp.servers) do
 end
 
 -- Register LspAttach autocmds
-require "lsp.primary.on_attach"
-require "lsp.regular.on_attach"
+require("lsp.primary.on_attach")
+require("lsp.regular.on_attach")

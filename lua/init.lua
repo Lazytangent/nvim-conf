@@ -1,5 +1,5 @@
 -- Set up Lazy
-require "utils.load_lazy"
+require("utils.load_lazy")
 
 -- Set up Leader and Local leader mappings
 vim.g.mapleader = " "
@@ -13,23 +13,23 @@ vim.g.loaded_netrwPlugin = 1
 vim.env.PINENTRY_USER_DATA = "USE_QT"
 
 -- Load in extensions
-require "extensions"
-require "mappings"
+require("extensions")
+require("mappings")
 
 -- Configure LSP
-require "lsp"
+require("lsp")
 
 -- Personal config stuff
-require "basic"
-require "commands"
-require "experimental"
+require("basic")
+require("commands")
+require("experimental")
 
 -- GUI Config
-require "guis"
+require("guis")
 
-require "user.abbrevs.plugin"
-require "user.hydras"
+require("user.abbrevs.plugin")
+require("user.hydras")
 
 -- Start Cfilter for Quickfix list
-vim.api.nvim_command "packadd! cfilter"
-vim.api.nvim_command "packadd nvim.undotree"
+vim.api.nvim_command("packadd! cfilter")
+vim.api.nvim_command("packadd nvim.undotree")

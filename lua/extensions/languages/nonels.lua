@@ -7,7 +7,7 @@ return {
     "gbprod/none-ls-shellcheck.nvim",
   },
   config = function()
-    local null_ls = require "null-ls"
+    local null_ls = require("null-ls")
     local f = null_ls.builtins.formatting
     local d = null_ls.builtins.diagnostics
     local ca = null_ls.builtins.code_actions
@@ -17,20 +17,20 @@ return {
       f.prettier,
 
       -- JSON
-      require "none-ls.formatting.jq",
+      require("none-ls.formatting.jq"),
 
       -- Lua
       f.stylua,
 
       -- Rust
-      require "none-ls.formatting.rustfmt",
+      require("none-ls.formatting.rustfmt"),
 
       -- SQL
       f.sqlformat,
 
       -- Python
       f.yapf,
-      require "none-ls.formatting.autopep8",
+      require("none-ls.formatting.autopep8"),
       f.black,
       f.isort,
 
@@ -45,9 +45,9 @@ return {
       f.goimports,
 
       -- C/C++
-      f.clang_format.with {
+      f.clang_format.with({
         filetypes = { "c", "c++", "cpp" },
-      },
+      }),
 
       -- Kotlin
       f.ktlint,
@@ -58,7 +58,7 @@ return {
       d.rubocop,
 
       -- Shell
-      require "none-ls-shellcheck.diagnostics",
+      require("none-ls-shellcheck.diagnostics"),
 
       -- Codespell
       d.codespell,
@@ -71,7 +71,7 @@ return {
       d.ktlint,
 
       -- Vale.sh
-      d.vale.with {
+      d.vale.with({
         filetypes = {
           "markdown",
           "tex",
@@ -79,7 +79,7 @@ return {
           "texinfo",
           "latex",
         },
-      },
+      }),
     }
 
     local code_actions = {
@@ -88,10 +88,10 @@ return {
 
     local sources = vim.tbl_extend("force", {}, linting, formatting, code_actions)
 
-    null_ls.setup {
+    null_ls.setup({
       sources = sources,
       save_after_format = false,
       diagnostics_format = "[#{c}] #{m} (#{s})",
-    }
+    })
   end,
 }

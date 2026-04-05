@@ -1,6 +1,6 @@
-local dap = require "dap"
-local utils = require "utils.core"
-dap.set_log_level "DEBUG"
+local dap = require("dap")
+local utils = require("utils.core")
+dap.set_log_level("DEBUG")
 
 local modules = {
   "dap_python",

@@ -1,11 +1,11 @@
-local Hydra = require "hydra"
+local Hydra = require("hydra")
 
-local parent = (...):match "(.-)[^%.]+$"
+local parent = (...):match("(.-)[^%.]+$")
 local current = parent .. "magit."
 
 local gitignore = require(current .. "ignore")
 
-Hydra {
+Hydra({
   hint = [[
   ^
   _A_ Apply         _i_ Ignore         r Rebase
@@ -34,91 +34,91 @@ Hydra {
     {
       "A",
       function()
-        vim.notify "Apply"
+        vim.notify("Apply")
       end,
       { exit = true },
     },
     {
       "b",
       function()
-        vim.notify "Branch"
+        vim.notify("Branch")
       end,
       { exit = true },
     },
     {
       "B",
       function()
-        vim.notify "Bisect"
+        vim.notify("Bisect")
       end,
       { exit = true },
     },
     {
       "c",
       function()
-        vim.notify "Commit"
+        vim.notify("Commit")
       end,
       { exit = true },
     },
     {
       "C",
       function()
-        vim.notify "Clone"
+        vim.notify("Clone")
       end,
       { exit = true },
     },
     {
       "d",
       function()
-        vim.notify "Diff"
+        vim.notify("Diff")
       end,
       { exit = true },
     },
     {
       "D",
       function()
-        vim.notify "Diff (change)"
+        vim.notify("Diff (change)")
       end,
       { exit = true },
     },
     {
       "e",
       function()
-        vim.notify "Ediff (dwim)"
+        vim.notify("Ediff (dwim)")
       end,
       { exit = true },
     },
     {
       "E",
       function()
-        vim.notify "Ediff"
+        vim.notify("Ediff")
       end,
       { exit = true },
     },
     {
       "f",
       function()
-        vim.notify "Fetch"
+        vim.notify("Fetch")
       end,
       { exit = true },
     },
     {
       "F",
       function()
-        vim.notify "Pull"
+        vim.notify("Pull")
       end,
       { exit = true },
     },
     {
       "h",
       function()
-        vim.notify "Help"
+        vim.notify("Help")
       end,
       { exit = true },
     },
     {
       "H",
       function()
-        vim.notify "Section info"
+        vim.notify("Section info")
       end,
       { exit = true },
     },
@@ -133,4 +133,4 @@ Hydra {
       },
     },
   },
-}
+})

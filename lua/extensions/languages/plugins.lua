@@ -1,4 +1,4 @@
-local parent_module = (...):match "(.-)[^%.]+$"
+local parent_module = (...):match("(.-)[^%.]+$")
 
 local modules = {}
 local children = {

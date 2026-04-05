@@ -196,7 +196,7 @@ local function parse_org(ctx)
 
       local capture_text = vim.treesitter.get_node_text(node, ctx.buf)
       local counter = 0
-      for _ in capture_text:gmatch "[^\r\n]+" do
+      for _ in capture_text:gmatch("[^\r\n]+") do
         table.insert(marks, {
           start_row = start_row + counter,
           start_col = 0,
@@ -251,7 +251,7 @@ local function parse_org(ctx)
       })
 
       local start_line = vim.api.nvim_buf_get_lines(ctx.buf, start_row, start_row + 1, false)[1]
-      local _, padding = start_line:find "^ +"
+      local _, padding = start_line:find("^ +")
       local codeblock_padding = math.max((padding or 0) - left_offset, 0)
 
       if codeblock_padding > 0 then

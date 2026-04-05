@@ -10,7 +10,7 @@ return {
       return "sts=" .. softtabstop .. ", sw=" .. shiftwidth
     end
 
-    require("lualine").setup {
+    require("lualine").setup({
       extensions = { "quickfix", "fugitive" },
       options = {
         -- theme = 'tokyonight',
@@ -67,7 +67,7 @@ return {
           },
         },
       },
-    }
+    })
   end,
   lazy = false,
 }

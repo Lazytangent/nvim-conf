@@ -1,4 +1,4 @@
-local utils = require "utils.core"
+local utils = require("utils.core")
 
 local modules = {
   "cd",

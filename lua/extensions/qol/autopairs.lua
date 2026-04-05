@@ -1,21 +1,21 @@
 return {
   "windwp/nvim-autopairs",
   config = function()
-    local npairs = require "nvim-autopairs"
-    local Rule = require "nvim-autopairs.rule"
-    local cond = require "nvim-autopairs.conds"
+    local npairs = require("nvim-autopairs")
+    local Rule = require("nvim-autopairs.rule")
+    local cond = require("nvim-autopairs.conds")
 
-    npairs.setup {
+    npairs.setup({
       enable_abbr = true,
       enable_afterquote = false,
       enable_check_bracket_line = false,
-    }
+    })
 
-    npairs.add_rules(require "nvim-autopairs.rules.endwise-elixir")
-    npairs.add_rules(require "nvim-autopairs.rules.endwise-lua")
-    npairs.add_rules(require "nvim-autopairs.rules.endwise-ruby")
+    npairs.add_rules(require("nvim-autopairs.rules.endwise-elixir"))
+    npairs.add_rules(require("nvim-autopairs.rules.endwise-lua"))
+    npairs.add_rules(require("nvim-autopairs.rules.endwise-ruby"))
 
-    npairs.add_rules {
+    npairs.add_rules({
       -- From https://github.com/windwp/nvim-autopairs/issues/314
       Rule(" ", " ", "-commonlisp")
         :with_pair(cond.done())
@@ -48,22 +48,22 @@ return {
           return false
         end)
         :with_move(function(opts)
-          return opts.prev_char:match ".%}" ~= nil
+          return opts.prev_char:match(".%}") ~= nil
         end)
-        :use_key "}",
+        :use_key("}"),
       Rule("[ ", " ]")
         :with_pair(function()
           return false
         end)
         :with_move(function(opts)
-          return opts.prev_char:match ".%]" ~= nil
+          return opts.prev_char:match(".%]") ~= nil
         end)
-        :use_key "]",
-      Rule("~", "~", "org"):with_pair(cond.not_before_regex "%g"):with_move(function(opts)
+        :use_key("]"),
+      Rule("~", "~", "org"):with_pair(cond.not_before_regex("%g")):with_move(function(opts)
         return opts.next_char == opts.char
       end),
       Rule("{% ", " %", { "html", "htmldjango", "htmljinja" }),
-    }
+    })
 
     -- ignore single quote
     npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex", "commonlisp", "texinfo" }

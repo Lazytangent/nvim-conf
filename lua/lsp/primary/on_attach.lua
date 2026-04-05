@@ -18,16 +18,16 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<localleader>pt", vim.lsp.buf.type_definition, opts)
 
   vim.keymap.set("n", "<space>,f", function()
-    require("conform").format { async = true, bufnr = bufnr }
+    require("conform").format({ async = true, bufnr = bufnr })
   end, opts)
 
   vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
 
   vim.keymap.set("n", "[e", function()
-    vim.diagnostic.jump { count = -1, severity = vim.diagnostic.severity.ERROR }
+    vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
   end, opts)
   vim.keymap.set("n", "]e", function()
-    vim.diagnostic.jump { count = 1, severity = vim.diagnostic.severity.ERROR }
+    vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
   end, opts)
 
   vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)

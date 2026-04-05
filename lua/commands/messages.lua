@@ -1,4 +1,4 @@
-local utils = require "user.utils"
+local utils = require("user.utils")
 
 local name = "Messages"
 vim.api.nvim_create_user_command(name, function()
@@ -17,7 +17,7 @@ vim.api.nvim_create_user_command(name, function()
   end
 
   local lines = {}
-  for line in content.output:gmatch "(.-)\n" do
+  for line in content.output:gmatch("(.-)\n") do
     table.insert(lines, line)
   end
 

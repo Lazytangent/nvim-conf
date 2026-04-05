@@ -6,7 +6,7 @@ return {
     branch = "main",
     config = function()
       vim.g.skip_ts_context_commentstring_module = true
-      require "extensions.treesitter.configs.treesitter"
+      require("extensions.treesitter.configs.treesitter")
 
       -- require 'extensions.treesitter.configs.http-parser'
     end,
