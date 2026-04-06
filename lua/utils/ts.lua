@@ -50,7 +50,7 @@ M.inspect_node = function()
   if node ~= nil then
     print(node:sexpr())
   else
-    print "Node was nil"
+    print("Node was nil")
   end
 end
 

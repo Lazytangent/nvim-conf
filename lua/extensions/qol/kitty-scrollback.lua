@@ -3,10 +3,10 @@ return {
   enabled = true,
   lazy = true,
   cmd = {
-    'KittyScrollbackGenerateKittens',
-    'KittyScrollbackCheckHealth',
+    "KittyScrollbackGenerateKittens",
+    "KittyScrollbackCheckHealth",
   },
   config = function()
-    require('kitty-scrollback').setup()
+    require("kitty-scrollback").setup()
   end,
 }

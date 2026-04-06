@@ -13,16 +13,15 @@ local set_quickfixlist = function()
   end
   local list_data = {
     items = list,
-    title = 'List',
-    nr = '$',
+    title = "List",
+    nr = "$",
   }
 
-  vim.fn.setqflist({}, ' ', list_data)
+  vim.fn.setqflist({}, " ", list_data)
   vim.cmd.copen()
-  vim.api.nvim_win_call(
-    MiniPick.get_picker_state().windows.target,
-    function() vim.cmd.crewind() end
-  )
+  vim.api.nvim_win_call(MiniPick.get_picker_state().windows.target, function()
+    vim.cmd.crewind()
+  end)
   return true
 end
 
@@ -31,8 +30,8 @@ local function setup()
   local configs = {
     ai = {
       custom_textobjects = {
-        f = require('mini.ai').gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
-        I = require('mini.extra').gen_ai_spec.indent(),
+        f = require("mini.ai").gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }),
+        I = require("mini.extra").gen_ai_spec.indent(),
       },
     },
     align = true,
@@ -50,9 +49,9 @@ local function setup()
     files = true,
     pick = {
       mappings = {
-        choose_marked = '<C-CR>',
+        choose_marked = "<C-CR>",
         set_quickfixlist = {
-          char = '<C-q>',
+          char = "<C-q>",
           func = set_quickfixlist,
         },
       },
@@ -63,7 +62,7 @@ local function setup()
   }
 
   for module, config in pairs(configs) do
-    local full_module_name = 'mini.' .. module
+    local full_module_name = "mini." .. module
 
     if config == true then
       require(full_module_name).setup()
@@ -74,6 +73,6 @@ local function setup()
 end
 
 return {
-  'nvim-mini/mini.nvim',
+  "nvim-mini/mini.nvim",
   config = setup,
 }

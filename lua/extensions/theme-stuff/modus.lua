@@ -1,5 +1,5 @@
 return {
-  'miikanissi/modus-themes.nvim',
+  "miikanissi/modus-themes.nvim",
   opts = {
     style = "modus_vivendi",
     variants = {

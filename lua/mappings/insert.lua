@@ -1,16 +1,24 @@
 local ls = require("luasnip")
 
 local insert = {
-  { "<C-e>", function()
-    if ls.choice_active() then
-      ls.change_choice(1)
-    end
-  end, desc = "Select Choice Node"},
-  { "<C-S-e>", function()
-    if ls.choice_active() then
-      ls.change_choice(-1)
-    end
-  end, desc = "Select Choice Node (backwards)"},
+  {
+    "<C-e>",
+    function()
+      if ls.choice_active() then
+        ls.change_choice(1)
+      end
+    end,
+    desc = "Select Choice Node",
+  },
+  {
+    "<C-S-e>",
+    function()
+      if ls.choice_active() then
+        ls.change_choice(-1)
+      end
+    end,
+    desc = "Select Choice Node (backwards)",
+  },
   -- { "<C-k>", ls.expand_or_jump, silent = true },
   { "<C-j>", ls.expand_or_jump, silent = true }, -- Doesn't seem to also overwrite <CR> (RET)
 

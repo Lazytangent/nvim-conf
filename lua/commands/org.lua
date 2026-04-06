@@ -1,6 +1,6 @@
 local M = {}
 
-M.today = function ()
+M.today = function()
   local today = os.date("%Y-%m-%d")
   require("org-roam").ext.dailies.goto_date({ date = today }):next(function(date)
     if date then
@@ -16,7 +16,7 @@ end
 
 ---@param title? string
 M.capture = function(title)
-  require('org-roam').api.capture_node({ title = title })
+  require("org-roam").api.capture_node({ title = title })
 end
 
 vim.api.nvim_create_user_command("RoamToday", M.today, {})
@@ -32,7 +32,7 @@ M.roam_cmd = function(o)
 end
 
 vim.api.nvim_create_user_command("Roam", M.roam_cmd, {
-  nargs = '*',
+  nargs = "*",
   complete = function(arglead)
     return vim.tbl_filter(function(arg)
       return arg:match("^" .. arglead)

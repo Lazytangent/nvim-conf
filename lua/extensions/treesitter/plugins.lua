@@ -3,23 +3,23 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     lazy = false,
-    branch = 'main',
+    branch = "main",
     config = function()
       vim.g.skip_ts_context_commentstring_module = true
-      require 'extensions.treesitter.configs.treesitter'
+      require("extensions.treesitter.configs.treesitter")
 
       -- require 'extensions.treesitter.configs.http-parser'
     end,
   },
   {
     "MeanderingProgrammer/treesitter-modules.nvim",
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = true,
   },
   -- "nvim-treesitter/nvim-treesitter-refactor",
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    branch = 'main',
+    branch = "main",
     config = true,
   },
 
@@ -29,11 +29,11 @@ return {
       enable_autocmd = false,
       languages = {
         javascript = {
-          __default = '// %s',
-          jsx_element = '{/* %s */}',
-          jsx_fragment = '{/* %s */}',
-          jsx_attribute = '// %s',
-          comment = '// %s',
+          __default = "// %s",
+          jsx_element = "{/* %s */}",
+          jsx_fragment = "{/* %s */}",
+          jsx_attribute = "// %s",
+          comment = "// %s",
         },
       },
     },
@@ -48,7 +48,7 @@ return {
   },
   {
     url = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
-    main = 'rainbow-delimiters.setup',
+    main = "rainbow-delimiters.setup",
     config = true,
   },
 }

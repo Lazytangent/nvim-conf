@@ -1,4 +1,4 @@
-local dial_map = require "dial.map"
+local dial_map = require("dial.map")
 
 local visual = {
   {
@@ -6,14 +6,14 @@ local visual = {
     function()
       dial_map.manipulate("increment", "gvisual")
     end,
-    desc = "Increment with dial"
+    desc = "Increment with dial",
   },
   {
     "g<C-x>",
     function()
       dial_map.manipulate("decrement", "gvisual")
     end,
-    desc = "Decrement with dial"
+    desc = "Decrement with dial",
   },
 
   {
@@ -28,7 +28,7 @@ local visual = {
     function()
       dial_map.manipulate("decrement", "visual")
     end,
-    desc = "Decrement with dial"
+    desc = "Decrement with dial",
   },
 
   { "gy", desc = "Gitlinker" },
@@ -39,7 +39,7 @@ local visual = {
   { "<S-h>", [[<cmd>DVB_Drag('left')]], desc = "Drag left" },
   { "<S-l>", [[<cmd>DVB_Drag('right')]], desc = "Drag right" },
   { "<S-j>", [[<cmd>DVB_Drag('down')]], desc = "Drag down" },
-  { "<S-k>", [[<cmd>DVB_Drag('up')]],  desc = "Drag up" },
+  { "<S-k>", [[<cmd>DVB_Drag('up')]], desc = "Drag up" },
 }
 
 return visual

@@ -1,5 +1,5 @@
 return {
-  'dimtion/guttermarks.nvim',
+  "dimtion/guttermarks.nvim",
   event = "VeryLazy",
   config = true,
 }

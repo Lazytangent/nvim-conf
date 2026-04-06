@@ -1,13 +1,25 @@
 return {
-  { "<leader>m",     group = "Local leader" },
-  { "<leader>m<CR>", function() vim.cmd "nohlsearch" end,    desc = "Turn off highlight" },
+  { "<leader>m", group = "Local leader" },
+  {
+    "<leader>m<CR>",
+    function()
+      vim.cmd("nohlsearch")
+    end,
+    desc = "Turn off highlight",
+  },
 
-  { "<leader>mf", function() MiniFiles.open() end, desc = "Open mini.files" },
+  {
+    "<leader>mf",
+    function()
+      MiniFiles.open()
+    end,
+    desc = "Open mini.files",
+  },
 
-  { "<leader>mgt",  group = "Toggle" },
+  { "<leader>mgt", group = "Toggle" },
   { "<leader>mgtd", desc = "Toggle deleted" },
 
-  { "<leader>ml",  group = "LaTeX" },
+  { "<leader>ml", group = "LaTeX" },
   { "<leader>mlC", desc = "Clean full" },
   { "<leader>mlG", desc = "Status all" },
   { "<leader>mlI", desc = "Full Info" },
@@ -33,20 +45,20 @@ return {
 
   { "<leader>mo", require("oil").open },
 
-  { "<leader>mp",  group = "LSP Pickers" },
+  { "<leader>mp", group = "LSP Pickers" },
   { "<leader>mpc", desc = "LSP Code Actions" },
   { "<leader>mpe", desc = "LSP References" },
   { "<leader>mpi", desc = "LSP Implementations" },
   { "<leader>mpr", desc = "LSP Rename" },
   { "<leader>mpt", desc = "LSP Type Definition" },
 
-  { "<leader>mpw",  group = "Workspace Folders" },
+  { "<leader>mpw", group = "Workspace Folders" },
   { "<leader>mpwa", desc = "Add workspace folder" },
   { "<leader>mpwl", desc = "List workspace folders" },
   { "<leader>mpwr", desc = "Remove workspace folder" },
-  { "<leader>mr",   desc = "Rename" },
+  { "<leader>mr", desc = "Rename" },
 
-  { "<leader>mt",  group = "TableMode" },
+  { "<leader>mt", group = "TableMode" },
   { "<leader>mtm", desc = "Toggle table mode" },
   { "<leader>mtt", desc = "Tableize" },
 }

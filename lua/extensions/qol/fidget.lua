@@ -1,5 +1,5 @@
 return {
   "j-hui/fidget.nvim",
   event = "VeryLazy",
-  config = true
+  config = true,
 }

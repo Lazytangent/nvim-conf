@@ -10,11 +10,11 @@ return {
       return "sts=" .. softtabstop .. ", sw=" .. shiftwidth
     end
 
-    require("lualine").setup {
-      extensions = { 'quickfix', 'fugitive' },
+    require("lualine").setup({
+      extensions = { "quickfix", "fugitive" },
       options = {
         -- theme = 'tokyonight',
-        theme = 'auto',
+        theme = "auto",
         -- theme = 'citruszest',
         -- theme = 'oxocarbon',
         icons_enabled = false,
@@ -27,42 +27,47 @@ return {
       },
       sections = {
         lualine_a = {
-          { 'mode', fmt = function(str) return str:sub(1, 1) end },
+          {
+            "mode",
+            fmt = function(str)
+              return str:sub(1, 1)
+            end,
+          },
         },
         lualine_b = {
-          'branch',
-          {'diagnostics', sources = { 'nvim_diagnostic', 'nvim_lsp' }}
+          "branch",
+          { "diagnostics", sources = { "nvim_diagnostic", "nvim_lsp" } },
         },
         lualine_c = {
           "os.date('%c')",
-          { 'filename', file_status = true },
-          'diff',
+          { "filename", file_status = true },
+          "diff",
         },
         lualine_x = {
           indent,
-          'encoding',
-          'fileformat',
-          'filetype',
+          "encoding",
+          "fileformat",
+          "filetype",
         },
       },
       winbar = {
         lualine_c = {
-          {"navic"},
+          { "navic" },
           -- { jsonpath.get, cond = function() return vim.bo.filetype == "json" end },
         },
-        lualine_y = {{'filename', path = 1}},
+        lualine_y = { { "filename", path = 1 } },
       },
       inactive_winbar = {
-        lualine_y = {{'filename', path = 1}},
+        lualine_y = { { "filename", path = 1 } },
       },
       tabline = {
         lualine_a = {
           {
-            'tabs',
+            "tabs",
           },
         },
       },
-    }
+    })
   end,
   lazy = false,
 }

@@ -129,7 +129,7 @@ local function parse_org(ctx)
             {
               string.rep(" ", level - 1),
               { hl_group, bullet_hl_group },
-            }
+            },
           },
           virt_text_pos = "inline",
         },
@@ -212,7 +212,6 @@ local function parse_org(ctx)
         })
         counter = counter + 1
       end
-
     end
 
     if capture == "dash" then
@@ -252,7 +251,7 @@ local function parse_org(ctx)
       })
 
       local start_line = vim.api.nvim_buf_get_lines(ctx.buf, start_row, start_row + 1, false)[1]
-      local _, padding = start_line:find "^ +"
+      local _, padding = start_line:find("^ +")
       local codeblock_padding = math.max((padding or 0) - left_offset, 0)
 
       if codeblock_padding > 0 then
@@ -286,17 +285,17 @@ local function parse_org(ctx)
 end
 
 return {
-  'MeanderingProgrammer/render-markdown.nvim',
+  "MeanderingProgrammer/render-markdown.nvim",
   dependencies = {
-    'nvim-orgmode/orgmode',
-    'nvim-treesitter/nvim-treesitter',
-    'echasnovski/mini.icons',
+    "nvim-orgmode/orgmode",
+    "nvim-treesitter/nvim-treesitter",
+    "echasnovski/mini.icons",
   },
   opts = {
     enabled = true,
     file_types = {
-      'markdown',
-      'org',
+      "markdown",
+      "org",
     },
     -- render_modes = { 'n', 'i', 'c', 'x', 'v' },
     custom_handlers = {
@@ -311,7 +310,7 @@ return {
       enabled = true,
       sign = false,
     },
-    log_level = 'trace',
+    log_level = "trace",
     overrides = {
       filetype = {
         org = {

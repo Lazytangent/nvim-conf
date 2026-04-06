@@ -2,7 +2,7 @@ local telescope = require("telescope")
 local lga_actions = require("telescope-live-grep-args.actions")
 
 telescope.setup({
-  defaults = require('telescope.themes').get_ivy({
+  defaults = require("telescope.themes").get_ivy({
     file_ignore_patterns = { "^node_modules/", "%.class" },
     mappings = {
       i = {
@@ -13,7 +13,7 @@ telescope.setup({
       },
       n = {
         ["<C-t>"] = require("trouble.sources.telescope").open,
-      }
+      },
     },
   }),
   pickers = {
@@ -32,7 +32,7 @@ telescope.setup({
       },
     },
     ["ui-select"] = {
-      require("telescope.themes").get_dropdown {}
+      require("telescope.themes").get_dropdown({}),
     },
     workspaces = {
       keep_insert = true,
@@ -41,10 +41,10 @@ telescope.setup({
 })
 
 local extensions = {
-  'fzf',
-  'live_grep_args',
-  'luasnip',
-  'ui-select',
+  "fzf",
+  "live_grep_args",
+  "luasnip",
+  "ui-select",
 }
 
 for _, extension in ipairs(extensions) do

@@ -1,7 +1,7 @@
 local utils = {}
 
 utils.cmd = function(command)
-  return table.concat({ "<cmd>", command, "<cr>"})
+  return table.concat({ "<cmd>", command, "<cr>" })
 end
 
 utils.lua_cmd = function(command)

@@ -1,9 +1,9 @@
-local Hydra = require('hydra')
+local Hydra = require("hydra")
 
 local parent = (...):match("(.-)[^%.]+$")
-local current = parent .. 'magit.'
+local current = parent .. "magit."
 
-local gitignore = require(current .. 'ignore')
+local gitignore = require(current .. "ignore")
 
 Hydra({
   hint = [[
@@ -32,72 +32,98 @@ Hydra({
   body = "<leader>gx",
   heads = {
     {
-      'A',
-      function () vim.notify("Apply") end,
+      "A",
+      function()
+        vim.notify("Apply")
+      end,
       { exit = true },
     },
     {
-      'b',
-      function () vim.notify("Branch") end,
+      "b",
+      function()
+        vim.notify("Branch")
+      end,
       { exit = true },
     },
     {
-      'B',
-      function () vim.notify("Bisect") end,
+      "B",
+      function()
+        vim.notify("Bisect")
+      end,
       { exit = true },
     },
     {
-      'c',
-      function () vim.notify("Commit") end,
+      "c",
+      function()
+        vim.notify("Commit")
+      end,
       { exit = true },
     },
     {
-      'C',
-      function () vim.notify("Clone") end,
+      "C",
+      function()
+        vim.notify("Clone")
+      end,
       { exit = true },
     },
     {
-      'd',
-      function () vim.notify("Diff") end,
+      "d",
+      function()
+        vim.notify("Diff")
+      end,
       { exit = true },
     },
     {
-      'D',
-      function () vim.notify("Diff (change)") end,
+      "D",
+      function()
+        vim.notify("Diff (change)")
+      end,
       { exit = true },
     },
     {
-      'e',
-      function () vim.notify("Ediff (dwim)") end,
+      "e",
+      function()
+        vim.notify("Ediff (dwim)")
+      end,
       { exit = true },
     },
     {
-      'E',
-      function () vim.notify("Ediff") end,
+      "E",
+      function()
+        vim.notify("Ediff")
+      end,
       { exit = true },
     },
     {
-      'f',
-      function () vim.notify("Fetch") end,
+      "f",
+      function()
+        vim.notify("Fetch")
+      end,
       { exit = true },
     },
     {
-      'F',
-      function () vim.notify("Pull") end,
+      "F",
+      function()
+        vim.notify("Pull")
+      end,
       { exit = true },
     },
     {
-      'h',
-      function () vim.notify("Help") end,
+      "h",
+      function()
+        vim.notify("Help")
+      end,
       { exit = true },
     },
     {
-      'H',
-      function () vim.notify("Section info") end,
+      "H",
+      function()
+        vim.notify("Section info")
+      end,
       { exit = true },
     },
     {
-      'i',
+      "i",
       function()
         Hydra.activate(gitignore)
       end,

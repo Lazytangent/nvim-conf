@@ -12,7 +12,7 @@ return {
 
   {
     "mistweaverco/kulala.nvim",
-    ft = {"http", "rest"},
+    ft = { "http", "rest" },
     dependencies = {
       "folke/snacks.nvim",
     },

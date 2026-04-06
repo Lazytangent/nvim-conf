@@ -6,7 +6,7 @@ local eslint = require("lsp.efm.eslint")
 local isort = require("lsp.efm.isort")
 local prettier = require("lsp.efm.prettier")
 
--- @type vim.lsp.Config
+---@type vim.lsp.Config
 return {
   capabilities = capabilities,
   init_options = { documentFormatting = true },

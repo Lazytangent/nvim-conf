@@ -1,6 +1,6 @@
 return {
   -- Debug printing
-  'rareitems/printer.nvim',
+  "rareitems/printer.nvim",
   opts = {
     keymap = "gp",
   },

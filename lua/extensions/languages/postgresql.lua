@@ -1,8 +1,8 @@
 return {
   {
-    'lifepillar/pgsql.vim',
+    "lifepillar/pgsql.vim",
     init = function()
-      vim.g.sql_type_default = 'pgsql' -- Prefer Postgres's dialect
+      vim.g.sql_type_default = "pgsql" -- Prefer Postgres's dialect
     end,
   },
 }

@@ -1,4 +1,4 @@
-local lazy = require('lazy')
+local lazy = require("lazy")
 
 local lazy_opts = {
   concurrency = 50,
@@ -8,18 +8,18 @@ local lazy_opts = {
 }
 
 local items = {
-  'dap',
-  'languages',
-  'qol',
-  'telescope',
-  'theme-stuff',
-  'treesitter',
+  "dap",
+  "languages",
+  "qol",
+  "telescope",
+  "theme-stuff",
+  "treesitter",
 }
 
 local plugins = {}
 
 for _, item in ipairs(items) do
-  local config = require('extensions.' .. item .. '.plugins')
+  local config = require("extensions." .. item .. ".plugins")
   table.insert(plugins, config)
 end
 

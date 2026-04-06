@@ -1,5 +1,5 @@
 return {
-  'simifalaye/minibuffer.nvim',
+  "simifalaye/minibuffer.nvim",
   init = function()
     local minibuffer = require("minibuffer")
 
@@ -19,7 +19,7 @@ return {
   dependencies = {
     "folke/which-key.nvim",
     -- force minibuffer.nvim to load after mini.nvim
-    'nvim-mini/mini.nvim',
+    "nvim-mini/mini.nvim",
   },
   -- dev = true,
 }

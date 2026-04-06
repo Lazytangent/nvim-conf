@@ -12,7 +12,7 @@ local luasnip_config = {
       history = true,
       update_events = "TextChangedI",
       store_selection_keys = "<Tab>",
-      load_ft_func = require('luasnip.extras.filetype_functions').extend_load_ft({
+      load_ft_func = require("luasnip.extras.filetype_functions").extend_load_ft({
         cpp = { "c" },
         typescript = { "javascript" },
         typescriptreact = { "javascript" },
@@ -20,13 +20,15 @@ local luasnip_config = {
       snip_env = {
         autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" }),
         tex = {
-          in_math = function() return vim.fn["vimtex#syntax#in_mathzone"]() == 1 end,
+          in_math = function()
+            return vim.fn["vimtex#syntax#in_mathzone"]() == 1
+          end,
         },
         get_visual = function(_, parent)
-          if (#parent.snippet.env.LS_SELECT_RAW > 0) then
+          if #parent.snippet.env.LS_SELECT_RAW > 0 then
             return sn(nil, i(1, parent.snippet.env.LS_SELECT_RAW))
           else
-            return sn(nil, i(1, ''))
+            return sn(nil, i(1, ""))
           end
         end,
       },
@@ -59,15 +61,15 @@ local luasnip_config = {
       s("yesterday", p(yesterday)),
     }
 
-    ls.add_snippets('all', all)
+    ls.add_snippets("all", all)
 
     require("luasnip.loaders.from_vscode").lazy_load()
     require("luasnip.loaders.from_snipmate").lazy_load()
     require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/snippets" } })
 
-    ls.filetype_extend("ruby", {"rails"})
-    ls.filetype_extend("html", {"twig"})
-    ls.filetype_extend("cpp", {"c"})
+    ls.filetype_extend("ruby", { "rails" })
+    ls.filetype_extend("html", { "twig" })
+    ls.filetype_extend("cpp", { "c" })
   end,
 }
 
@@ -440,29 +442,29 @@ return {
   -- },
 
   {
-    'saghen/blink.cmp',
-    build = 'cargo build --release',
+    "saghen/blink.cmp",
+    build = "cargo build --release",
     dependencies = {
-      'saghen/blink.lib',
+      "saghen/blink.lib",
       luasnip_config,
-      'niuiic/blink-cmp-rg.nvim',
-      'folke/lazydev.nvim',
-      'kristijanhusak/vim-dadbod-completion',
-      'nvim-tree/nvim-web-devicons',
-      'onsails/lspkind.nvim',
+      "niuiic/blink-cmp-rg.nvim",
+      "folke/lazydev.nvim",
+      "kristijanhusak/vim-dadbod-completion",
+      "nvim-tree/nvim-web-devicons",
+      "onsails/lspkind.nvim",
     },
 
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     config = function()
-      local blink_cmp = require('blink-cmp')
-      local luasnip = require('luasnip')
+      local blink_cmp = require("blink-cmp")
+      local luasnip = require("luasnip")
 
-      blink_cmp.setup {
+      blink_cmp.setup({
         cmdline = {
           keymap = {
-            preset = 'inherit',
-            ['<CR>'] = { 'fallback' },
+            preset = "inherit",
+            ["<CR>"] = { "fallback" },
           },
           completion = {
             list = { selection = { preselect = false } },
@@ -479,7 +481,7 @@ return {
           menu = {
             auto_show = function(ctx, items)
               -- only enable menu for sql filetype
-              return vim.tbl_contains({ 'sql' }, vim.bo.filetype)
+              return vim.tbl_contains({ "sql" }, vim.bo.filetype)
             end,
             draw = {
               components = {
@@ -503,23 +505,23 @@ return {
           },
         },
         keymap = {
-          preset = 'default',
+          preset = "default",
           ["<C-x><C-n>"] = {
-            function (cmp)
-              return cmp.show({ providers = { 'lsp' } })
-            end
+            function(cmp)
+              return cmp.show({ providers = { "lsp" } })
+            end,
           },
           ["<C-x><C-b>"] = {
-            function (cmp)
-              return cmp.show({ providers = { 'buffer' } })
-            end
+            function(cmp)
+              return cmp.show({ providers = { "buffer" } })
+            end,
           },
           ["<C-x><C-p>"] = {
-            function (cmp)
-              return cmp.show({ providers = { 'path' } })
-            end
+            function(cmp)
+              return cmp.show({ providers = { "path" } })
+            end,
           },
-          ['<Tab>'] = {
+          ["<Tab>"] = {
             function(cmp)
               if cmp.is_visible() then
                 return cmp.select_next()
@@ -532,9 +534,9 @@ return {
               end
             end,
             -- 'snippet_forward',
-            'fallback',
+            "fallback",
           },
-          ['<S-Tab>'] = {
+          ["<S-Tab>"] = {
             function(cmp)
               if cmp.is_visible() then
                 return cmp.select_prev()
@@ -545,20 +547,20 @@ return {
               end
             end,
           },
-          ['<CR>'] = {
-            'accept',
-            'fallback'
+          ["<CR>"] = {
+            "accept",
+            "fallback",
           },
         },
         signature = { enabled = true },
         snippets = {
-          preset = 'luasnip',
+          preset = "luasnip",
         },
         sources = {
           default = { "lsp", "path", "snippets", "buffer", "ripgrep", "omni" },
           per_filetype = {
-            sql = { 'snippets', 'dadbod', 'buffer' },
-            lua = { inherit_defaults = true, 'lazydev' },
+            sql = { "snippets", "dadbod", "buffer" },
+            lua = { inherit_defaults = true, "lazydev" },
           },
           providers = {
             ripgrep = {
@@ -576,7 +578,7 @@ return {
             },
           },
         },
-      }
+      })
     end,
   },
 }

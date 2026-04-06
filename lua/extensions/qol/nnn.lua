@@ -5,10 +5,10 @@ return {
   -- },
 
   {
-    'mcchrish/nnn.vim',
+    "mcchrish/nnn.vim",
     init = function()
-      vim.g['nnn#set_default_mappings'] = 0
-      vim.g['nnn#layout'] = 'new'
+      vim.g["nnn#set_default_mappings"] = 0
+      vim.g["nnn#layout"] = "new"
     end,
   },
 }

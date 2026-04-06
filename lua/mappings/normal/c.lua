@@ -1,5 +1,5 @@
 return {
-  { "ci",  group = "Inner" },
+  { "ci", group = "Inner" },
   { "ciR", desc = "Org: Decrease priority of headline" },
   { "ciT", desc = "Org: Cycle TODO backwards" },
   { "cid", desc = "Org: Change inner date" },

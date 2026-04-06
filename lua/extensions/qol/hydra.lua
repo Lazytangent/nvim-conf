@@ -1,5 +1,5 @@
 return {
-  'nvimtools/hydra.nvim',
+  "nvimtools/hydra.nvim",
   opts = {
     hint = {
       position = "bottom-left",

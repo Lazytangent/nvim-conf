@@ -1,5 +1,5 @@
-local util = require('utils')
-local lazy_completion = require('lazy.view.commands')
+local util = require("utils")
+local lazy_completion = require("lazy.view.commands")
 
 local M = {}
 
@@ -34,9 +34,7 @@ M.rm_dir = function(path)
 end
 
 local nuke = function()
-  vim.notify(
-    "Warning, this command deletes all of your plugins and causes a re-install on next launch."
-  )
+  vim.notify("Warning, this command deletes all of your plugins and causes a re-install on next launch.")
 
   local plugin_dir = util.join_paths(vim.fn.stdpath("data"), "site", "pack")
   M.rm_dir(plugin_dir)
@@ -62,7 +60,7 @@ end
 local reinstall_plugin = function(opts)
   nuke_plugin(opts)
 
-  vim.cmd [[PackerSync]]
+  vim.cmd([[PackerSync]])
 end
 
 vim.api.nvim_create_user_command("NukePlugins", nuke, {})

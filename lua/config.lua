@@ -1,6 +1,6 @@
 local config = {}
 
-config.Theming = {
+config.theming = {
   colorscheme = "tokyonight-night",
   -- colorscheme = "onedark_dark",
   -- colorscheme = "onedark_vivid",
@@ -91,10 +91,10 @@ config.Theming = {
   },
 }
 
-config.LSP = {
-  enabled        = true,
+config.lsp = {
+  enabled = true,
   highlight_word = true,
-  virtual_text   = true,
+  virtual_text = true,
   servers = {
     -- Server groupings are just for me to know which servers have custom
     -- settings.
@@ -151,13 +151,7 @@ config.LSP = {
   },
 }
 
-config.Completion = {
-  enabled = true,
-  autopairs = true,
-  items = 10,
-}
-
-config.Treesitter = {
+config.treesitter = {
   languages = {
     "bash",
     "beancount",
@@ -209,7 +203,7 @@ config.Treesitter = {
     "vue",
     "yaml",
     "zig",
-  }
+  },
 }
 
 return config

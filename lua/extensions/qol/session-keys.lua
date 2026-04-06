@@ -1,3 +1,3 @@
 return {
-  'shmerl/session-keys',
+  "shmerl/session-keys",
 }

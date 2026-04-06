@@ -23,7 +23,7 @@ return {
     "sindrets/diffview.nvim",
     event = "VeryLazy",
     dependencies = {
-      'nvim-tree/nvim-web-devicons',
+      "nvim-tree/nvim-web-devicons",
     },
     opts = {
       view = {
@@ -36,7 +36,14 @@ return {
       },
       keymaps = {
         view = {
-          { "n", "q", function() require("diffview.actions").close() end, { desc = "Close help menu" } },
+          {
+            "n",
+            "q",
+            function()
+              require("diffview.actions").close()
+            end,
+            { desc = "Close help menu" },
+          },
         },
         file_panel = {
           { "n", "q", "<cmd>DiffviewClose<cr>", { desc = "Close help menu" } },
@@ -57,8 +64,8 @@ return {
     -- enabled = false,
   },
   {
-    'claydugo/browsher.nvim',
-    event = 'VeryLazy',
+    "claydugo/browsher.nvim",
+    event = "VeryLazy",
     config = true,
     -- disable on linux
     -- enabled = false,
@@ -69,11 +76,11 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       signs = {
-        add          = { text = '+' },
-        change       = { text = '~' },
-        delete       = { text = '_' },
-        topdelete    = { text = '¯' },
-        changedelete = { text = '~' },
+        add = { text = "+" },
+        change = { text = "~" },
+        delete = { text = "_" },
+        topdelete = { text = "¯" },
+        changedelete = { text = "~" },
       },
       on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
@@ -85,26 +92,36 @@ return {
         end
 
         -- Navigation
-        map('n', ']h', function()
-          if vim.wo.diff then return ']h' end
-          vim.schedule(function() gs.next_hunk() end)
-          return '<Ignore>'
+        map("n", "]h", function()
+          if vim.wo.diff then
+            return "]h"
+          end
+          vim.schedule(function()
+            gs.next_hunk()
+          end)
+          return "<Ignore>"
         end)
 
-        map('n', '[h', function()
-          if vim.wo.diff then return '[h' end
-          vim.schedule(function() gs.prev_hunk() end)
-          return '<Ignore>'
+        map("n", "[h", function()
+          if vim.wo.diff then
+            return "[h"
+          end
+          vim.schedule(function()
+            gs.prev_hunk()
+          end)
+          return "<Ignore>"
         end)
 
         --[[ -- Actions ]]
-        map('n', '<leader>gtp', gs.preview_hunk)
-        map('n', '<leader>gd', gs.diffthis)
-        map('n', '<leader>gD', function() gs.diffthis('~') end)
-        map('n', '<leader>gtd', gs.toggle_deleted)
+        map("n", "<leader>gtp", gs.preview_hunk)
+        map("n", "<leader>gd", gs.diffthis)
+        map("n", "<leader>gD", function()
+          gs.diffthis("~")
+        end)
+        map("n", "<leader>gtd", gs.toggle_deleted)
 
         -- Text object
-        map({'o', 'x'}, 'ih', '<cmd>Gitsigns select_hunk<cr>')
+        map({ "o", "x" }, "ih", "<cmd>Gitsigns select_hunk<cr>")
       end,
     },
   },
@@ -118,25 +135,25 @@ return {
   --   dev = true,
   -- },
   {
-    'julienvincent/hunk.nvim',
+    "julienvincent/hunk.nvim",
     cmd = {
-      'DiffEditor',
+      "DiffEditor",
     },
     config = true,
     dependencies = {
-      'MunifTanjim/nui.nvim',
+      "MunifTanjim/nui.nvim",
     },
   },
   {
-    'kokusenz/deltaview.nvim',
+    "kokusenz/deltaview.nvim",
     dependencies = {
-      'kokusenz/delta.lua',
+      "kokusenz/delta.lua",
     },
   },
   {
-    'clabby/difftastic.nvim',
+    "clabby/difftastic.nvim",
     dependencies = {
-      'MunifTanjim/nui.nvim',
+      "MunifTanjim/nui.nvim",
     },
     config = true,
   },
@@ -144,6 +161,6 @@ return {
     "jceb/jiejie.nvim",
   },
   {
-    'rafikdraoui/jj-diffconflicts',
+    "rafikdraoui/jj-diffconflicts",
   },
 }

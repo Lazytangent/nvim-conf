@@ -1,4 +1,4 @@
-local Hydra = require('hydra')
+local Hydra = require("hydra")
 
 local gitignore = Hydra({
   hint = [[
@@ -12,40 +12,40 @@ local gitignore = Hydra({
   },
   heads = {
     {
-      't',
+      "t",
       function()
         -- TODO: Open .gitignore file at the root of the current repository
-        vim.notify('toplevel')
+        vim.notify("toplevel")
       end,
       {
         exit = true,
       },
     },
     {
-      's',
+      "s",
       function()
         -- TODO: Open .gitignore file in subdirectory of open file
-        vim.notify('subdirectory')
+        vim.notify("subdirectory")
       end,
       {
         exit = true,
       },
     },
     {
-      'p',
+      "p",
       function()
         -- TODO: Open .git/info/exclude file
-        vim.notify('private')
+        vim.notify("private")
       end,
       {
         exit = true,
       },
     },
     {
-      'g',
+      "g",
       function()
         -- TODO: Get file for git setting 'core.excludesfile' and open that
-        vim.notify('global')
+        vim.notify("global")
       end,
       {
         exit = true,

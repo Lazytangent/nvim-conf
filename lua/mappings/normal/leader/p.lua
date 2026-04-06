@@ -8,7 +8,7 @@ local diagnostics = {
 }
 
 return {
-  { "<leader>pd",  group = "Diagnostics" },
-  { "<leader>pdd", diagnostics.document,  desc = "Document" },
+  { "<leader>pd", group = "Diagnostics" },
+  { "<leader>pdd", diagnostics.document, desc = "Document" },
   { "<leader>pdw", diagnostics.workspace, desc = "Workspace" },
 }

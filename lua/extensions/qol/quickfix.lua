@@ -1,5 +1,5 @@
 return {
-  'stevearc/quicker.nvim',
+  "stevearc/quicker.nvim",
   opts = {
     keys = {
       {

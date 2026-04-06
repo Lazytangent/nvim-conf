@@ -7,17 +7,17 @@ if vim.g.goneovim == 1 then
 end
 
 if vim.fn.has("gui_vimr") == 1 then
-  vim.cmd [[ echo "in vimr block" ]]
+  vim.cmd([[ echo "in vimr block" ]])
 
-  vim.cmd [[
+  vim.cmd([[
     colorscheme oxocarbon-lua
     colorscheme catppuccin
-  ]]
+  ]])
 end
 
 if vim.g.neovide then
   vim.schedule(function()
-    vim.cmd [[set guifont=FiraCode\ Nerd\ Font:h16]]
-    require('guis.neovide')
+    vim.cmd([[set guifont=FiraCode\ Nerd\ Font:h16]])
+    require("guis.neovide")
   end)
 end
