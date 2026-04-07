@@ -1,5 +1,4 @@
 {
-  "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "LuaSnip": { "branch": "master", "commit": "642b0c595e11608b4c18219e93b88d7637af27bc" },
   "action-hints.nvim": { "branch": "main", "commit": "ab10fef255dd4bc933c92d8f9969828f2f856e71" },
   "blink-cmp-rg.nvim": { "branch": "main", "commit": "722d8ab5d29369d604133064816657203cf24540" },
