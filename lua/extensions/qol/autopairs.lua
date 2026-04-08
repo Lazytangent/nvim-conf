@@ -68,7 +68,7 @@ return {
     -- ignore single quote
     npairs.get_rule("'")[1].not_filetypes = { "scheme", "lisp", "elisp", "rust", "tex", "commonlisp", "texinfo" }
     -- ignore backtick
-    npairs.get_rule("`").not_filetypes = { "texinfo", "tex" }
+    npairs.get_rule("`").not_filetypes = { "texinfo", "tex", "lisp" }
 
     -- ignore left square bracket
     npairs.get_rule("[").not_filetypes = { "tex" }
