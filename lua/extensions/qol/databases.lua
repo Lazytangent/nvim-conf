@@ -20,4 +20,9 @@ return {
     end,
   },
   "kristijanhusak/vim-dadbod-completion",
+  {
+    "xemptuous/sqlua.nvim",
+    cmd = "SQLua",
+    config = true,
+  },
 }

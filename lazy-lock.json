@@ -95,6 +95,7 @@
   "session-keys": { "branch": "main", "commit": "e50ce76349f144d0712e0238fc70ea0974604ef6" },
   "slimv": { "branch": "master", "commit": "dfa79147c1be5694475f1240d57c7052b72b53a4" },
   "snacks.nvim": { "branch": "main", "commit": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e" },
+  "sqlua.nvim": { "branch": "master", "commit": "e4db0e1e16741e1ea42c620d0b8ce3347cc02c51" },
   "swift.nvim": { "branch": "master", "commit": "70dd8a554b54a3e70f7b94292f693caa83fb1406" },
   "swift.vim": { "branch": "master", "commit": "75990ecbcaccae5cfb77fb847a7bfa0b925b858d" },
   "targets.vim": { "branch": "master", "commit": "6325416da8f89992b005db3e4517aaef0242602e" },
