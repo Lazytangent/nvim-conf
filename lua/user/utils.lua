@@ -55,6 +55,8 @@ end
 M.get_python_path = function(workspace)
   if vim.env.VIRTUAL_ENV then
     return vim.fs.joinpath(vim.env.VIRTUAL_ENV, "bin", "python")
+  elseif vim.env.PIP_PYTHON_PATH then
+    return vim.env.PIP_PYTHON_PATH
   end
   if workspace then
     local poetry_lock_path = vim.fs.joinpath(workspace, "poetry.lock")
