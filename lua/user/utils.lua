@@ -63,7 +63,7 @@ M.get_python_path = function(workspace)
       local venv = vim.fn.trim(vim.fn.system("poetry env info -p"))
       return vim.fs.joinpath(venv, "bin", "python")
     elseif vim.uv.fs_stat(pipfile_path) then
-      local venv = vim.fn.trim(vim.fn.system("pipenv --venv"))
+      local venv = vim.fn.trim(vim.fn.system("pipenv --venv --quiet"))
       return vim.fs.joinpath(venv, "bin", "python")
     end
   end
