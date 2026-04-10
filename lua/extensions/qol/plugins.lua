@@ -23,7 +23,7 @@ local children = {
   "kitty-scrollback",
   "kubectl",
   "leap",
-  "logs",
+  -- "logs",
   "marks",
   "matchup",
   "mini",

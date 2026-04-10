@@ -34,7 +34,6 @@
   "jiejie.nvim": { "branch": "main", "commit": "f5266ab122de8a8d90e1c61b08f45c12a3546af1" },
   "jj-diffconflicts": { "branch": "main", "commit": "58163ae8fe7646179dfd7741206dd9a2b4cdadc0" },
   "jq-playground.nvim": { "branch": "main", "commit": "8bf7d17677d837e62575ddaa48906f4cc21e89bc" },
-  "juan-logs.nvim": { "branch": "main", "commit": "615dddd3ebb2e6176fe0cd305fe3810860182323" },
   "kitty-scrollback.nvim": { "branch": "main", "commit": "9342a0e0e5556ce0b7f9dc41c4bdd39ae9dc85dd" },
   "kubectl.nvim": { "branch": "main", "commit": "095e56e206ee73e25aef9ff3af5fa4f15a64913c" },
   "kulala.nvim": { "branch": "main", "commit": "6656c9d332735ca6a27725e0fb45a1715c4372d9" },
