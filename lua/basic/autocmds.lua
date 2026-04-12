@@ -10,23 +10,23 @@ local autocmds = {
   } },
 
   -- Remember cursor position
-  {
-    "BufEnter",
-    {
-      callback = function()
-        if
-          vim.fn.line("'\"") >= 1
-          and vim.fn.line("'\"") <= vim.fn.line("$")
-          and vim.bo.filetype ~= "gitcommit"
-          and vim.bo.filetype ~= "commit"
-          and vim.fn.index({ "xxd", "gitrebase" }, vim.bo.filetype) == -1
-        then
-          vim.cmd([[exec "normal! g'\""]])
-        end
-      end,
-      group = group,
-    },
-  },
+  -- {
+  --   "BufEnter",
+  --   {
+  --     callback = function()
+  --       if
+  --         vim.fn.line("'\"") >= 1
+  --         and vim.fn.line("'\"") <= vim.fn.line("$")
+  --         and vim.bo.filetype ~= "gitcommit"
+  --         and vim.bo.filetype ~= "commit"
+  --         and vim.fn.index({ "xxd", "gitrebase" }, vim.bo.filetype) == -1
+  --       then
+  --         vim.cmd([[exec "normal! g'\""]])
+  --       end
+  --     end,
+  --     group = group,
+  --   },
+  -- },
 
   -- Remove trailing whitespace
   { "BufWritePre", { command = [[%s/\s\+$//e]], group = group } },
