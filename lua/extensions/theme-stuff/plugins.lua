@@ -4,6 +4,7 @@ local modules = {}
 local children = {
   "catppuccin",
   "citruszest",
+  "lake-dweller",
   "lualine",
   "modus",
   "oasis",
