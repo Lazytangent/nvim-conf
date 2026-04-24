@@ -443,7 +443,11 @@ return {
 
   {
     "saghen/blink.cmp",
-    build = "cargo build --release",
+    build = function()
+      -- build the fuzzy matcher, wait up to 60 seconds
+      -- you can use `gb` in `:Lazy` to rebuild the plugin as needed
+      require('blink.cmp').build():wait(60000)
+    end,
     dependencies = {
       "saghen/blink.lib",
       luasnip_config,
