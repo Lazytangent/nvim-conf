@@ -485,7 +485,7 @@ return {
           menu = {
             auto_show = function(ctx, items)
               -- only enable menu for sql filetype
-              return vim.tbl_contains({ "sql" }, vim.bo.filetype)
+              return vim.bo.filetype == 'sql'
             end,
             draw = {
               components = {
