@@ -507,6 +507,11 @@ return {
               },
             },
           },
+          trigger = {
+            show_on_trigger_character = false,
+            show_on_insert = false,
+            show_in_snippet = false,
+          },
         },
         keymap = {
           preset = "default",
