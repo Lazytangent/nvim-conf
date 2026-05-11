@@ -7,8 +7,9 @@ config.theming = {
   -- colorscheme = "oasis-night",
   -- colorscheme = "oasis-abyss",
   -- colorscheme = "oasis-twilight",
-  colorscheme = "lake-dweller",
+  -- colorscheme = "lake-dweller",
   -- colorscheme = 'modus',
+  colorscheme = 'catppuccin',
   options = {
     -- :lua= vim.fn.getcompletion("", "color")
     "blue",
