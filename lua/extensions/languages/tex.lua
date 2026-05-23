@@ -50,7 +50,7 @@ return {
     dependencies = {
       {
         "dirichy/nvimtex.nvim",
-        commit = "86233ae82d48c35ddd665a058f60248f89cc0f39",
+        -- commit = "86233ae82d48c35ddd665a058f60248f89cc0f39",
       },
     },
     opts = {
